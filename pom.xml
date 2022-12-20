@@ -3,18 +3,23 @@
   ~ Zenlayer.com Inc.
   ~ Copyright (c) 2014-2022 All Rights Reserved.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zenlayer</groupId>
     <artifactId>zenlayercloud-sdk-java</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.6.1</version>
+
+    <name>zenlayercloud-sdk-java</name>
+    <url>https://console.zenlayer.com/</url>
+    <description>Zelayer Cloud Open API SDK for Java</description>
 
     <properties>
         <maven.compiler.source>7</maven.compiler.source>
         <maven.compiler.target>7</maven.compiler.target>
+        <additionalparam>-Xdoclint:none</additionalparam>
     </properties>
 
     <dependencies>
@@ -24,11 +29,7 @@
             <version>1.7.25</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.aliyun</groupId>
-            <artifactId>cms20190101</artifactId>
-            <version>7.0.46</version>
-        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -45,8 +46,43 @@
             <artifactId>tea-util</artifactId>
             <version>0.2.14</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
-
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+            <comments>zenlayercloud java sdk</comments>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>zenlayercloudapi</id>
+            <name>Zenlayercloud API SDK</name>
+            <email>zenlayersdk@zenlayercloud.com</email>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:https://github.com/zenlayer/zenlayercloud-sdk-java.git</connection>
+        <developerConnection>scm:git:https://github.com/zenlayer/zenlayercloud-sdk-java.git</developerConnection>
+        <url>https://github.com/zenlayer/zenlayercloud-sdk-java</url>
+    </scm>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
     <build>
         <plugins>
             <plugin>
@@ -58,6 +94,49 @@
                     <target>${maven.compiler.target}</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.3</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

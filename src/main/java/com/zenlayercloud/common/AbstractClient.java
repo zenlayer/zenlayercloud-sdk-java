@@ -6,25 +6,18 @@ package com.zenlayercloud.common;
 
 import com.aliyun.tea.Tea;
 import com.aliyun.tea.TeaConverter;
-import com.aliyun.tea.TeaException;
 import com.aliyun.tea.TeaModel;
 import com.aliyun.tea.TeaPair;
 import com.aliyun.tea.TeaRequest;
 import com.aliyun.tea.TeaResponse;
-import com.aliyun.tea.TeaUnretryableException;
 import com.aliyun.tea.interceptor.InterceptorChain;
 import com.aliyun.tea.interceptor.RequestInterceptor;
 import com.aliyun.tea.interceptor.ResponseInterceptor;
 import com.aliyun.tea.interceptor.RuntimeOptionsInterceptor;
-import com.aliyun.teaopenapi.Client;
 import com.aliyun.teautil.Common;
 import com.aliyun.teautil.models.RuntimeOptions;
 
-import javax.xml.bind.DatatypeConverter;
-import java.nio.charset.StandardCharsets;
 import java.util.Map;
-
-import static com.zenlayercloud.common.ApiUtil.getCanonicalQueryString;
 
 /**
  * @author wolfgang
@@ -32,26 +25,27 @@ import static com.zenlayercloud.common.ApiUtil.getCanonicalQueryString;
  * @version $ Id: AbstractClient.java, v 0.1  wolfgang Exp $
  */
 public class AbstractClient {
-    private final static InterceptorChain interceptorChain = InterceptorChain.create();
+    private final       InterceptorChain interceptorChain = InterceptorChain.create();
+    public static final String           SDK_VERSION      = "0.6.1";
 
-    private Credential _credential;
-    private String _endpoint;
-    private String _protocol;
-    private String _method;
-    private String _userAgent;
-    private Integer _readTimeout;
-    private Integer _connectTimeout;
-    private String _httpProxy;
-    private String _httpsProxy;
-    private String _noProxy;
-    private String _socks5Proxy;
-    private String _socks5NetWork;
-    private Integer _maxIdleConns;
-    private String _signatureVersion;
-    private String _signatureAlgorithm;
-    private String _service;
-    private String _apiVersion;
-    private String _path;
+    private final Credential _credential;
+    private final String     _endpoint;
+    private final String     _protocol;
+    private final String     _method;
+    private final String     _userAgent;
+    private final Integer    _readTimeout;
+    private final Integer    _connectTimeout;
+    private final String     _httpProxy;
+    private final String     _httpsProxy;
+    private final String     _noProxy;
+    private final String     _socks5Proxy;
+    private final String     _socks5NetWork;
+    private final Integer    _maxIdleConns;
+    private final String     _signatureVersion;
+    private final String     _signatureAlgorithm;
+    private final String     _service;
+    private final String     _apiVersion;
+    private final String     _path;
 
     public AbstractClient(Credential credential, Config config, String endpoint, String apiVersion, String path) {
         this._credential = credential;
@@ -70,21 +64,17 @@ public class AbstractClient {
         this._signatureAlgorithm = config.signatureAlgorithm;
         this._endpoint = endpoint;
         this._apiVersion = apiVersion;
-        this._service = path.replace("/api/","");
+        this._service = path.replace("/api/v2/", "");
         this._path = path;
 
     }
 
-    protected java.util.Map<String, ?> callApi(TeaModel request, String actionName, RuntimeOptions runtime) throws Exception {
+    protected java.util.Map<String, ?> callApi(TeaModel request, String actionName, RuntimeOptions runtime) {
         if (com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request))) {
-            throw new TeaException(TeaConverter.buildMap(
-                    new TeaPair("code", "ParameterMissing"),
-                    new TeaPair("message", "'request' can not be unset")
-            ));
+            throw new ZenlayerSdkException("'request' can not be unset");
         }
-        TeaModel.validateParams(request, "request");
-        java.util.Map<String, Object> runtime_ = TeaConverter.buildMap(
-                new TeaPair("timeouted", "retry"),
+        validateParams(request);
+        java.util.Map<String, Object> runtime_ = TeaConverter.buildMap(new TeaPair("timeouted", "retry"),
                 new TeaPair("readTimeout", Common.defaultNumber(runtime.readTimeout, _readTimeout)),
                 new TeaPair("connectTimeout", Common.defaultNumber(runtime.connectTimeout, _connectTimeout)),
                 new TeaPair("httpProxy", Common.defaultString(runtime.httpProxy, _httpProxy)),
@@ -92,17 +82,12 @@ public class AbstractClient {
                 new TeaPair("noProxy", Common.defaultString(runtime.noProxy, _noProxy)),
                 new TeaPair("socks5Proxy", Common.defaultString(runtime.socks5Proxy, _socks5Proxy)),
                 new TeaPair("socks5NetWork", Common.defaultString(runtime.socks5NetWork, _socks5NetWork)),
-                new TeaPair("maxIdleConns", Common.defaultNumber(runtime.maxIdleConns, _maxIdleConns)),
-                new TeaPair("retry", TeaConverter.buildMap(
-                        new TeaPair("retryable", runtime.autoretry),
-                        new TeaPair("maxAttempts", com.aliyun.teautil.Common.defaultNumber(runtime.maxAttempts, 3))
-                )),
-                new TeaPair("backoff", TeaConverter.buildMap(
-                        new TeaPair("policy", Common.defaultString(runtime.backoffPolicy, "no")),
-                        new TeaPair("period", Common.defaultNumber(runtime.backoffPeriod, 1))
-                )),
-                new TeaPair("ignoreSSL", runtime.ignoreSSL)
-        );
+                new TeaPair("maxIdleConns", Common.defaultNumber(runtime.maxIdleConns, _maxIdleConns)), new TeaPair("retry",
+                        TeaConverter.buildMap(new TeaPair("retryable", runtime.autoretry),
+                                new TeaPair("maxAttempts", com.aliyun.teautil.Common.defaultNumber(runtime.maxAttempts, 3)))),
+                new TeaPair("backoff", TeaConverter.buildMap(new TeaPair("policy", Common.defaultString(runtime.backoffPolicy, "no")),
+                        new TeaPair("period", Common.defaultNumber(runtime.backoffPeriod, 1)))),
+                new TeaPair("ignoreSSL", runtime.ignoreSSL));
 
         TeaRequest _lastRequest = null;
         Exception _lastException = null;
@@ -123,17 +108,14 @@ public class AbstractClient {
                 request_.method = _method;
                 request_.pathname = _path;
 
-                request_.headers = TeaConverter.buildMap(
-                        new TeaPair("date", com.aliyun.teautil.Common.getDateUTCString()),
-                        new TeaPair("host", _endpoint),
-                        new TeaPair("accept", "application/json"),
-                        new TeaPair("x-zc-signature-method", _signatureAlgorithm),
-                        new TeaPair("x-zc-signature-version", _signatureVersion),
-                        new TeaPair("x-zc-version", _apiVersion),
-                        new TeaPair("x-zc-action", actionName),
-                        new TeaPair("x-zc-service", _service),
-                        new TeaPair("user-agent", com.aliyun.teautil.Common.getUserAgent(_userAgent))
-                );
+                request_.headers = TeaConverter.buildMap(new TeaPair("date", com.aliyun.teautil.Common.getDateUTCString()),
+                        new TeaPair("host", _endpoint), new TeaPair("accept", "application/json"),
+                        new TeaPair("x-zc-signature-method", _signatureAlgorithm), new TeaPair("x-zc-signature-version", _signatureVersion),
+                        new TeaPair("x-zc-version", _apiVersion), new TeaPair("x-zc-action", actionName),
+                        new TeaPair("x-zc-service", _service), new TeaPair("x-zc-sdk-lang", "java"),
+                        new TeaPair("x-zc-sdk-version", SDK_VERSION),
+
+                        new TeaPair("user-agent", com.aliyun.teautil.Common.getUserAgent(_userAgent)));
 
                 Map<String, Object> param = request.toMap();
                 String bodyString = Common.toJSONString(param);
@@ -142,7 +124,8 @@ public class AbstractClient {
 
                 // build authorization header
 
-                String authorization = ApiUtil.getAuthorization(request_, _endpoint,_signatureAlgorithm,bodyString, _credential.getAccessKeyId(), _credential.getAccessKeyPassword());
+                String authorization = ApiUtil.getAuthorization(request_, _endpoint, _signatureAlgorithm, bodyString,
+                        _credential.getAccessKeyId(), _credential.getAccessKeyPassword());
 
                 request_.headers.put("Authorization", authorization);
 
@@ -151,46 +134,46 @@ public class AbstractClient {
                 _lastResponse = response_;
 
                 if (com.aliyun.teautil.Common.equalNumber(response_.statusCode, 204)) {
-                    return TeaConverter.buildMap(
-                            new TeaPair("headers", response_.headers)
-                    );
+                    return TeaConverter.buildMap(new TeaPair("headers", response_.headers));
                 }
 
                 if (Common.is4xx(response_.statusCode) || com.aliyun.teautil.Common.is5xx(response_.statusCode)) {
                     Object _res = Common.readAsJSON(response_.body);
                     java.util.Map<String, Object> err = Common.assertAsMap(_res);
-                    Object requestId = Client.defaultAny(err.get("RequestId"), err.get("requestId"));
-                    requestId = Client.defaultAny(requestId, err.get("requestid"));
-                    throw new TeaException(TeaConverter.buildMap(
-                            new TeaPair("code", "" + Client.defaultAny(err.get("Code"), err.get("code")) + ""),
-                            new TeaPair("message", "code: " + response_.statusCode + ", " + Client.defaultAny(err.get("Message"), err.get("message")) + " request id: " + requestId + ""),
-                            new TeaPair("data", err)
-                    ));
+                    Object errorCode = err.get("code");
+                    Object requestId = err.get("requestId");
+                    throw new ZenlayerSdkException(requestId + "",
+                            "HTTP Status: " + response_.statusCode + ", ErrorCode: " + errorCode + ", Message: " + err.get("message")
+                                    + ", RequestId: " + requestId, errorCode + "");
                 }
 
                 Object obj = com.aliyun.teautil.Common.readAsJSON(response_.body);
                 java.util.Map<String, Object> res = com.aliyun.teautil.Common.assertAsMap(obj);
-                return TeaConverter.buildMap(
-                        new TeaPair("body", res),
-                        new TeaPair("headers", response_.headers)
-                );
+                return (Map<String, ?>) res.get("response");
 
             } catch (Exception e) {
                 if (Tea.isRetryable(e)) {
                     _lastException = e;
                     continue;
                 }
-                throw e;
+                throw new ZenlayerSdkException(e);
             } finally {
-                if (!Common.isUnset(_lastResponse)
-                        && !Common.isUnset(_lastResponse.response)
-                        && !Common.isUnset(_lastResponse.response.body())){
+                if (!Common.isUnset(_lastResponse) && !Common.isUnset(_lastResponse.response) && !Common.isUnset(
+                        _lastResponse.response.body())) {
                     _lastResponse.response.close();
                 }
             }
         }
-        throw new TeaUnretryableException(_lastRequest, _lastException);
+        throw new ZenlayerSdkException("request is unreachable", _lastException);
 
+    }
+
+    private void validateParams(TeaModel request) {
+        try {
+            request.validate();
+        } catch (Exception e) {
+            throw new ZenlayerSdkException("Parameter illegal", e);
+        }
     }
 
     public void addRuntimeOptionsInterceptor(RuntimeOptionsInterceptor interceptor) {

@@ -4,8 +4,8 @@
  */
 package com.zenlayercloud.common;
 
+import com.aliyun.tea.TeaException;
 import com.aliyun.tea.TeaRequest;
-import com.aliyun.teautil.Common;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -27,41 +27,40 @@ import static com.zenlayercloud.common.Config.REQ_POST;
  */
 public class ApiUtil {
 
-
-    public static String getCanonicalQueryString(Map<String, String> params, String method) throws ZenlayerSdkException {
+    public static String getCanonicalQueryString(Map<String, String> params, String method) {
         if (method != null && method.equals(REQ_POST)) {
             return "";
         }
-        StringBuilder queryString = new StringBuilder("");
+        StringBuilder queryString = new StringBuilder();
         for (Map.Entry<String, String> entry : params.entrySet()) {
             String v;
             try {
                 v = URLEncoder.encode(entry.getValue(), StandardCharsets.UTF_8.name());
             } catch (UnsupportedEncodingException e) {
-                throw new ZenlayerSdkException("UTF8 is not supported." + e.getMessage());
+                throw new TeaException("UTF8 is not supported.", e);
             }
             queryString.append("&").append(entry.getKey()).append("=").append(v);
         }
         if (queryString.length() == 0) {
             return "";
         } else {
-            return queryString.toString().substring(1);
+            return queryString.substring(1);
         }
     }
 
-    public static String sha256Hex(String bodyString) throws ZenlayerSdkException {
+    public static String sha256Hex(String bodyString) {
         MessageDigest md;
         try {
             md = MessageDigest.getInstance("SHA-256");
         } catch (NoSuchAlgorithmException e) {
-            throw new ZenlayerSdkException("SHA-256 is not supported." + e.getMessage());
+            throw new TeaException("SHA-256 is not supported.", e);
         }
         byte[] d = md.digest(bodyString.getBytes(StandardCharsets.UTF_8));
         return DatatypeConverter.printHexBinary(d).toLowerCase();
     }
 
-    public static String getAuthorization(TeaRequest request, String endpoint, String signatureAlgorithm, String bodyString, String accessKeyId, String accessKeyPassword)
-            throws ZenlayerSdkException {
+    public static String getAuthorization(TeaRequest request, String endpoint, String signatureAlgorithm, String bodyString,
+                                          String accessKeyId, String accessKeyPassword) {
         String method = request.method;
         String canonicalUri = "/";
         Map<String, String> headers = request.headers;
@@ -72,52 +71,35 @@ public class ApiUtil {
         String canonicalHeaders = "content-type:" + contentType + "\nhost:" + endpoint + "\n";
         String signedHeaders = "content-type;host";
 
-        String canonicalRequest = method + "\n"
-                + canonicalUri + "\n"
-                + canonicalQueryString + "\n"
-                + canonicalHeaders + "\n"
-                + signedHeaders + "\n"
-                + hashedRequestPayload;
-        String hashedCanonicalRequest =
-                ApiUtil.sha256Hex(canonicalRequest);
+        String canonicalRequest = method + "\n" + canonicalUri + "\n" + canonicalQueryString + "\n" + canonicalHeaders + "\n"
+                + signedHeaders + "\n" + hashedRequestPayload;
+        String hashedCanonicalRequest = ApiUtil.sha256Hex(canonicalRequest);
 
         String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
         request.headers.put("x-zc-timestamp", timestamp);
 
-        String stringToSign = signatureAlgorithm + "\n" +
-                timestamp + "\n" +
-                hashedCanonicalRequest;
-        String signature =
-                DatatypeConverter.printHexBinary(hmac256(accessKeyPassword.getBytes(StandardCharsets.UTF_8), stringToSign)).toLowerCase();
-        String authorization =
-                signatureAlgorithm + " "
-                        + "Credential="
-                        + accessKeyId
-                        + ", "
-                        + "SignedHeaders="
-                        + signedHeaders
-                        + ", "
-                        + "Signature="
-                        + signature;
+        String stringToSign = signatureAlgorithm + "\n" + timestamp + "\n" + hashedCanonicalRequest;
+        String signature = DatatypeConverter.printHexBinary(hmac256(accessKeyPassword.getBytes(StandardCharsets.UTF_8), stringToSign))
+                .toLowerCase();
+        String authorization = signatureAlgorithm + " " + "Credential=" + accessKeyId + ", " + "SignedHeaders=" + signedHeaders + ", "
+                + "Signature=" + signature;
         return authorization;
     }
 
-    public static byte[] hmac256(byte[] key, String msg) throws ZenlayerSdkException {
+    public static byte[] hmac256(byte[] key, String msg) {
         Mac mac;
         try {
             mac = Mac.getInstance("HmacSHA256");
         } catch (NoSuchAlgorithmException e) {
-            throw new ZenlayerSdkException("HmacSHA256 is not supported." + e.getMessage());
+            throw new TeaException("HmacSHA256 is not supported.", e);
         }
         SecretKeySpec secretKeySpec = new SecretKeySpec(key, mac.getAlgorithm());
         try {
             mac.init(secretKeySpec);
         } catch (InvalidKeyException e) {
-            throw new ZenlayerSdkException(e.getClass().getName() + "-" + e.getMessage());
+            throw new TeaException(e.getClass().getName() + "-" + e.getMessage(), e);
         }
         return mac.doFinal(msg.getBytes(StandardCharsets.UTF_8));
     }
-    public String getAuthorization(){
-        return null;
-    }
+
 }
