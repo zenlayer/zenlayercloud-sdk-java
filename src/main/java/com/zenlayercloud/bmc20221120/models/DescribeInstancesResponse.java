@@ -19,7 +19,16 @@ public class DescribeInstancesResponse extends TeaModel {
      * 定位问题时需要提供该次请求的requestId。
      */
     public String             requestId;
+
+    /**
+     * 符合条件的数据总数。
+     */
     public Integer            totalCount;
+
+    /**
+     * 结果集。
+     */
+
     public List<InstanceInfo> dataSet;
 
     public static class InstanceInfo extends TeaModel {

@@ -22,9 +22,9 @@
 
 <dependency>
     <groupId>com.zenlayer</groupId>
-    <artifactId>zenlayercloud-sdk-java</artifactId>
-    <!-- 请到https://search.maven.org/search?q=zenlayercloud-java-sdk查询所有版本，最新版本如下 -->
-    <version>0.6.0</version>
+   <artifactId>zenlayercloud-sdk-java</artifactId>
+   <!-- 请到https://search.maven.org/search?q=zenlayercloud-sdk-java查询所有版本，最新版本如下 -->
+   <version>0.6.0</version>
 </dependency>
 
 ```

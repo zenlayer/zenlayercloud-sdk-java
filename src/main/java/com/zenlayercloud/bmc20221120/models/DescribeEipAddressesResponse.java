@@ -20,44 +20,52 @@ public class DescribeEipAddressesResponse extends TeaModel {
      * 定位问题时需要提供该次请求的requestId。
      */
     public String           requestId;
+
+    /**
+     * EIP列表。
+     */
     public List<EipAddress> dataSet;
+
+    /**
+     * 符合条件的EIP总数量。
+     */
     public Integer          totalCount;
 
     public static class EipAddress extends TeaModel {
         /**
-         * EIP唯一ID
+         * EIP唯一ID。
          */
         public String eipId;
 
         /**
-         * EIP所属的可用区ID
+         * EIP所属的可用区ID。
          */
         public String zoneId;
 
         /**
-         * IP地址
+         * IP地址。
          */
         public String ipAddress;
 
         /**
-         * 机器实例ID
+         * 机器实例ID。
          */
         public String instanceId;
 
         /**
-         * 机器实例名称
+         * 机器实例名称。
          */
         public String instanceName;
 
         /**
          *  PREPAID：预付费，即包年包月
-         *  POSTPAID：后付费
+         *  POSTPAID：后付费。
          */
         public String eipChargeType;
 
         /**
          * 购买EIP的时长，单位：月
-         * 后付费EIP该字段为null
+         * 后付费EIP该字段为null。
          */
         public Integer period;
 
@@ -72,12 +80,12 @@ public class DescribeEipAddressesResponse extends TeaModel {
         public String expiredTime;
 
         /**
-         * 资源组ID
+         * 资源组ID。
          */
         public String resourceGroupId;
 
         /**
-         * 资源组名称
+         * 资源组名称。
          */
         public String resourceGroupName;
 

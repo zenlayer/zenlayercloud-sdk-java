@@ -17,7 +17,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
 
     /**
      * EIP ID 取值可以由多个EIP ID组成一个
-     * 最多支持100个ID查询
+     * 最多支持100个ID查询。
      */
     public List<String> eipIds;
 
@@ -28,20 +28,19 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public String eipChargeType;
 
     /**
-     * IP地址
+     * IP地址。
      */
     public String ipAddress;
 
     /**
-     * EIP所属的可用区ID
+     * EIP所属的可用区ID。
      */
     public String zoneId;
 
     /**
      * 资源组的ID
-     * 如果不传，则返回该用户可见的所有资源组内的EIP
+     * 如果不传，则返回该用户可见的所有资源组内的EIP。
      */
-
     public String resourceGroupId;
 
     /**
@@ -58,24 +57,24 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public String eipStatus;
 
     /**
-     * 机器实例ID
+     * 机器实例ID。
      */
     public String instanceId;
 
     /**
-     * 机器实例名称
+     * 机器实例名称。
      */
     public String instanceName;
 
     /**
      * 返回的分页大小
-     * 默认为20。最大为1000
+     * 默认为20。最大为1000。
      */
     public Integer pageSize;
 
     /**
      * 返回的分页数
-     * 默认为1
+     * 默认为1。
      */
     public Integer pageNum;
 }

@@ -20,7 +20,15 @@ public class DescribeDdosIpAddressesResponse extends TeaModel {
      * 定位问题时需要提供该次请求的requestId
      */
     public String              requestId;
+
+    /**
+     * Ddos IP列表。
+     */
     public List<DdosIpAddress> dataSet;
+
+    /**
+     * 符合条件的Ddos IP总数量。
+     */
     public Integer             totalCount;
 
     public static class DdosIpAddress extends TeaModel {

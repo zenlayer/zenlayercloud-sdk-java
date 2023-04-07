@@ -22,7 +22,7 @@ public class InquiryPriceInstanceTrafficPackageResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 流量包价格
+     * 流量包价格。
      */
     public List<Price> trafficPackagePrice;
 }

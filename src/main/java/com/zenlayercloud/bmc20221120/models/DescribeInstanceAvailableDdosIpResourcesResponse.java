@@ -20,6 +20,10 @@ public class DescribeInstanceAvailableDdosIpResourcesResponse extends TeaModel {
      * 定位问题时需要提供该次请求的requestId。
      */
     public String                        requestId;
+
+    /**
+     * 实例可用Ddos IP列表。
+     */
     public List<InstanceAvailableDdosIp> instanceDdosIpResources;
 
     public static class InstanceAvailableDdosIp extends TeaModel {

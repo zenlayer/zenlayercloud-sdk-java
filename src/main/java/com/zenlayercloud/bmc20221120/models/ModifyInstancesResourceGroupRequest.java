@@ -24,6 +24,9 @@ public class ModifyInstancesResourceGroupRequest extends TeaModel {
     @Validation(required = true)
     public List<String> instanceIds;
 
+    /**
+     * 资源组ID。
+     */
     @Validation(required = true)
     public String resourceGroupId;
 

@@ -14,9 +14,15 @@ import com.aliyun.tea.Validation;
  */
 public class AssociateVpcSubnetRequest extends TeaModel {
 
+    /**
+     * Subnet的ID。
+     */
     @Validation(required = true)
     public String subnetId;
 
+    /**
+     * VPC的ID。
+     */
     @Validation(required = true)
     public String vpcId;
 }

@@ -24,6 +24,9 @@ public class ModifyDdosIpAddressesResourceGroupRequest extends TeaModel {
     @Validation(required = true)
     public List<String> ddosIpIds;
 
+    /**
+     * 资源组ID。
+     */
     @Validation(required = true)
     public String resourceGroupId;
 
