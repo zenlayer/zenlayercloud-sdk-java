@@ -20,6 +20,10 @@ public class DescribeInstanceAvailableEipResourcesResponse extends TeaModel {
      * 定位问题时需要提供该次请求的requestId。
      */
     public String                     requestId;
+
+    /**
+     * 实例可用EIP列表。
+     */
     public List<InstanceAvailableEip> instanceEipResources;
 
     public static class InstanceAvailableEip extends TeaModel {

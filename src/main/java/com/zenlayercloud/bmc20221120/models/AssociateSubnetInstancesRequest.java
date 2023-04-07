@@ -22,16 +22,22 @@ public class AssociateSubnetInstancesRequest extends TeaModel {
     @Validation(required = true)
     public String subnetId;
 
+    /**
+     * Subnet绑定实例集合。
+     */
     @Validation(required = true)
     public List<AssociateSubnetInstance> subnetInstanceList;
 
     public static class AssociateSubnetInstance {
         /**
-         * Instance ID
+         * 实例ID。
          */
         @Validation(required = true)
         public String instanceId;
 
+        /**
+         * 内网IPv4地址。该地址必须在子网的CIDR范围内。 如果不指定内网地址，系统会会寻找CIDR中未用的内网地址下发到实例。
+         */
         public String privateIpAddress;
     }
 

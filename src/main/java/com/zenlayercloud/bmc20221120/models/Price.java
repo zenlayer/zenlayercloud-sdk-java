@@ -33,10 +33,12 @@ public class Price extends TeaModel {
      * 单位价格原价，后付费模式使用。如果是阶梯价格，无当前值
      */
     public Double unitPrice;
+
     /**
      * 单位价格折后价，后付费模式使用。如果是阶梯价格，无当前值
      */
     public Double discountUnitPrice;
+
     /**
      * 计价单元。后付费模式使用。有HOUR, DAY, MONTH 分别代表小时，日，月
      */
@@ -53,10 +55,21 @@ public class Price extends TeaModel {
          */
         public Double stepStart;
 
+        /**
+         * 阶梯用量的结束。
+         */
         public Double stepEnd;
 
+        /**
+         * 当前阶梯的单元原始价格。
+         * 后付费模式使用。
+         */
         public Double unitPrice;
 
+        /**
+         * 当前阶梯的单元折后价格。
+         * 后付费模式使用。
+         */
         public Double discountUnitPrice;
 
     }

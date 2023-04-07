@@ -24,6 +24,9 @@ public class ModifyEipAddressesResourceGroupRequest extends TeaModel {
     @Validation(required = true)
     public List<String> eipIds;
 
+    /**
+     * 资源组ID。
+     */
     @Validation(required = true)
     public String resourceGroupId;
 

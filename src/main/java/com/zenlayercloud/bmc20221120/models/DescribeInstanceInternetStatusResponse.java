@@ -22,43 +22,43 @@ public class DescribeInstanceInternetStatusResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 实例ID
+     * 实例ID。
      */
     public String instanceId;
 
     /**
-     * 实例名称
+     * 实例名称。
      */
     public String instanceName;
 
     /**
-     * 当前实例的带宽
+     * 当前实例的带宽。
      */
     public Integer internetMaxBandwidthOut;
 
     /**
-     * 修改实例的带宽
+     * 修改实例的带宽。
      */
     public Integer modifiedInternetMaxBandwidthOut;
 
     /**
-     * 带宽状态
-     * Process, Enable, WaitToEnable
+     * 带宽状态。
+     * Process, Enable, WaitToEnable。
      */
     public String modifiedBandwidthStatus;
 
     /**
-     * 当前实例的流量包
+     * 当前实例的流量包。
      */
     public Double trafficPackageSize;
 
     /**
-     * 修改实例的流量包
+     * 修改实例的流量包。
      */
     public Double modifiedTrafficPackageSize;
 
     /**
-     * Process, Enable, WaitToEnable
+     * Process, Enable, WaitToEnable。
      */
     public String modifiedTrafficPackageStatus;
 }

@@ -21,6 +21,9 @@ public class DescribeZonesResponse extends TeaModel {
      */
     public String requestId;
 
+    /**
+     * 可用区列表
+     */
     public List<Zone> zoneSet;
 
     public static class Zone extends TeaModel {

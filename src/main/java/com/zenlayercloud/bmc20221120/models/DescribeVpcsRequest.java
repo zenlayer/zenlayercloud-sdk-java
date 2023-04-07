@@ -18,7 +18,6 @@ public class DescribeVpcsRequest extends TeaModel {
      * VPC ID 取值可以由多个VPC ID组成一个
      * 最多支持100个ID查询
      */
-
     public List<String> vpcIds;
 
     /**
