@@ -31,6 +31,8 @@ import com.zenlayercloud.bmc20221120.models.CreateIpv4BlockRequest;
 import com.zenlayercloud.bmc20221120.models.CreateIpv4BlockResponse;
 import com.zenlayercloud.bmc20221120.models.CreateIpv6BlockRequest;
 import com.zenlayercloud.bmc20221120.models.CreateIpv6BlockResponse;
+import com.zenlayercloud.bmc20221120.models.DescribeInstanceTrafficRequest;
+import com.zenlayercloud.bmc20221120.models.DescribeInstanceTrafficResponse;
 import com.zenlayercloud.bmc20221120.models.InquiryPriceCreateDdosIpAddressResponse;
 import com.zenlayercloud.bmc20221120.models.DescribeAvailableIpv4ResourcesRequest;
 import com.zenlayercloud.bmc20221120.models.DescribeAvailableIpv4ResourcesResponse;
@@ -360,6 +362,14 @@ public class BmcClient extends AbstractClient {
     public ModifyInstancesResourceGroupResponse modifyInstancesResourceGroup(ModifyInstancesResourceGroupRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "ModifyInstancesResourceGroup", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new ModifyInstancesResourceGroupResponse());
+    }
+
+    /**
+     * 查询实例流量包用量
+     */
+    public DescribeInstanceTrafficResponse describeInstanceTraffic(DescribeInstanceTrafficRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeInstanceTraffic", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeInstanceTrafficResponse());
     }
 
     /*************** EIP ****************/

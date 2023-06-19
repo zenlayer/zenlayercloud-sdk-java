@@ -23,7 +23,18 @@ public class DataDisk extends TeaModel {
      */
     public Integer diskSize;
 
+    /**
+     * 数据盘名称
+     */
     public String diskName;
 
+    /**
+     * 云硬盘种类
+     */
+    public String diskCategory;
+
+    /**
+     * 是否可拆卸
+     */
     public Boolean portable;
 }

@@ -146,6 +146,12 @@ public class DescribeInstancesResponse extends TeaModel {
          */
         public List<DataDisk> dataDisks;
 
+        /**
+         * 是否自动续费。
+         * 对于预付费实例，取消订阅后，该字段值将返回false
+         */
+        public Boolean  autoRenew;
+
 
     }
 }

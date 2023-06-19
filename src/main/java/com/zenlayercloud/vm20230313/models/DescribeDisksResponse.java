@@ -96,5 +96,11 @@ public class DescribeDisksResponse extends TeaModel {
          * 后付费DISK该字段为null
          */
         public Integer period;
+
+        /**
+         * 是否自动续费。
+         * 对于预付费实例，取消订阅后，该字段值将返回 false
+         */
+        public Boolean autoRenew;
     }
 }

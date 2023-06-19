@@ -26,14 +26,15 @@ public class DescribeSubnetsResponse extends TeaModel {
     public Integer totalCount;
 
     public static class SubnetInfo extends TeaModel {
-        public String subnetId;
-        public String zoneId;
-        public String subnetName;
-        public String subnetStatus;
-        public String cidrBlock;
-        public Integer usageIpCount;
-        public Integer totalIpCount;
-        public String createTime;
+        public String       subnetId;
+        public String       zoneId;
+        public String       subnetName;
+        public String       subnetStatus;
+        public String       cidrBlock;
+        public List<String> cidrBlockList;
+        public Integer      usageIpCount;
+        public Integer      totalIpCount;
+        public String       createTime;
         public List<String> instanceIdList;
     }
 }

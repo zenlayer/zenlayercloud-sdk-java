@@ -114,7 +114,6 @@ public class AbstractClient {
                         new TeaPair("x-zc-version", _apiVersion), new TeaPair("x-zc-action", actionName),
                         new TeaPair("x-zc-service", _service), new TeaPair("x-zc-sdk-lang", "java"),
                         new TeaPair("x-zc-sdk-version", SDK_VERSION),
-
                         new TeaPair("user-agent", com.aliyun.teautil.Common.getUserAgent(_userAgent)));
 
                 Map<String, Object> param = request.toMap();

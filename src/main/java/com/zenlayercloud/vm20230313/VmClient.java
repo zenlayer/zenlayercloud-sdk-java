@@ -16,8 +16,16 @@ import com.zenlayercloud.vm20230313.models.CancelInstanceTrafficPackageDowngrade
 import com.zenlayercloud.vm20230313.models.CancelInstanceTrafficPackageDowngradeResponse;
 import com.zenlayercloud.vm20230313.models.CreateInstancesRequest;
 import com.zenlayercloud.vm20230313.models.CreateInstancesResponse;
+import com.zenlayercloud.vm20230313.models.DescribeDiskCategoryRequest;
+import com.zenlayercloud.vm20230313.models.DescribeDiskCategoryResponse;
+import com.zenlayercloud.vm20230313.models.DescribeImageRequest;
+import com.zenlayercloud.vm20230313.models.DescribeImageResponse;
+import com.zenlayercloud.vm20230313.models.DescribeInstanceCpuMonitorRequest;
+import com.zenlayercloud.vm20230313.models.DescribeInstanceCpuMonitorResponse;
 import com.zenlayercloud.vm20230313.models.DescribeInstanceInternetStatusRequest;
 import com.zenlayercloud.vm20230313.models.DescribeInstanceInternetStatusResponse;
+import com.zenlayercloud.vm20230313.models.DescribeInstanceTrafficRequest;
+import com.zenlayercloud.vm20230313.models.DescribeInstanceTrafficResponse;
 import com.zenlayercloud.vm20230313.models.DescribeInstancesRequest;
 import com.zenlayercloud.vm20230313.models.DescribeInstancesResponse;
 import com.zenlayercloud.vm20230313.models.DescribeInstancesStatusRequest;
@@ -30,6 +38,8 @@ import com.zenlayercloud.vm20230313.models.InquiryPriceInstanceBandwidthRequest;
 import com.zenlayercloud.vm20230313.models.InquiryPriceInstanceBandwidthResponse;
 import com.zenlayercloud.vm20230313.models.InquiryPriceInstanceTrafficPackageRequest;
 import com.zenlayercloud.vm20230313.models.InquiryPriceInstanceTrafficPackageResponse;
+import com.zenlayercloud.vm20230313.models.ModifyDisksResourceGroupRequest;
+import com.zenlayercloud.vm20230313.models.ModifyDisksResourceGroupResponse;
 import com.zenlayercloud.vm20230313.models.ModifyInstanceBandwidthRequest;
 import com.zenlayercloud.vm20230313.models.ModifyInstanceBandwidthResponse;
 import com.zenlayercloud.vm20230313.models.ModifyInstanceTrafficPackageRequest;
@@ -142,6 +152,12 @@ public class VmClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribeZonesResponse());
     }
 
+    public DescribeImageResponse describeImages(DescribeImageRequest request) {
+        Map<String, ?> rspStr = callApi(request, "DescribeImage", new RuntimeOptions());
+
+        return TeaModel.toModel(rspStr, new DescribeImageResponse());
+    }
+
     public DescribeImagesResponse describeImages(DescribeImagesRequest request) {
         Map<String, ?> rspStr = callApi(request, "DescribeImages", new RuntimeOptions());
 
@@ -226,6 +242,11 @@ public class VmClient extends AbstractClient {
         return TeaModel.toModel(resp, new UnAssociateSecurityGroupInstanceResponse());
     }
 
+    public ModifyDisksResourceGroupResponse modifyDisksResourceGroup(ModifyDisksResourceGroupRequest request) {
+        Map<String, ?> resp = super.callApi(request, "ModifyDisksResourceGroup", new RuntimeOptions());
+        return TeaModel.toModel(resp, new ModifyDisksResourceGroupResponse());
+    }
+
     public CreateDisksResponse createDisks(CreateDisksRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "CreateDisks", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new CreateDisksResponse());
@@ -277,6 +298,10 @@ public class VmClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new RenewDiskResponse());
     }
 
+    public DescribeDiskCategoryResponse describeDiskCategory(DescribeDiskCategoryRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeDiskCategory", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeDiskCategoryResponse());
+    }
 
     public CreateSubnetResponse createSubnet(CreateSubnetRequest request) {
         Map<String, ?> resp = super.callApi(request, "CreateSubnet", new RuntimeOptions());
@@ -406,4 +431,15 @@ public class VmClient extends AbstractClient {
         Map<String, ?> resp = super.callApi(request, "ModifyInstancesResourceGroup", new RuntimeOptions());
         return TeaModel.toModel(resp, new ModifyInstancesResourceGroupResponse());
     }
+
+    public DescribeInstanceTrafficResponse describeInstanceTraffic(DescribeInstanceTrafficRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeInstanceTraffic", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeInstanceTrafficResponse());
+    }
+
+    public DescribeInstanceCpuMonitorResponse describeInstanceCpuMonitor(DescribeInstanceCpuMonitorRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeInstanceCpuMonitor", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeInstanceCpuMonitorResponse());
+    }
+
 }

@@ -22,4 +22,9 @@ public class SystemDisk extends TeaModel {
      * 系统盘大小
      */
     public Integer diskSize;
+
+    /**
+     * 云硬盘种类
+     */
+    public String diskCategory;
 }

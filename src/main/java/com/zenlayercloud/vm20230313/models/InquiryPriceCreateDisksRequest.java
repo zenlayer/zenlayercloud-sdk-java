@@ -47,4 +47,9 @@ public class InquiryPriceCreateDisksRequest extends TeaModel {
      */
     public ChargePrePaid chargePrepaid;
 
+    /**
+     * 云硬盘种类
+     */
+    public String diskCategory;
+
 }

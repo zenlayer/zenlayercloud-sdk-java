@@ -42,6 +42,11 @@ public class DescribeDisksRequest extends TeaModel {
     public Integer diskSize;
 
     /**
+     * 云硬盘种类
+     */
+    public String diskCategory;
+
+    /**
      * 是否可插拔
      */
     public Boolean portable;

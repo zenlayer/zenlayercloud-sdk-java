@@ -5,7 +5,6 @@
 package com.zenlayercloud.common;
 
 import com.aliyun.tea.NameInMap;
-import com.aliyun.tea.TeaModel;
 
 /**
  * @author wolfgang
@@ -72,6 +71,9 @@ public class Config  {
 
     @NameInMap("signatureAlgorithm")
     public String signatureAlgorithm;
+
+    @NameInMap("requestClient")
+    public String requestClient;
 
     public Config() {
         this.method = REQ_POST;

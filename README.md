@@ -2,6 +2,11 @@ Quick Start[(中文)](./README-CN.md)
 
 --- 
 
+# Zenlayer Cloud SDK Java
+
+[![Maven Central](https://img.shields.io/maven-central/v/com.zenlayer/zenlayercloud-sdk-java.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:com.zenlayer%20AND%20a:zenlayercloud-sdk-java)
+[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+
 # Introduction
 
 Welcome to Zenlayer Cloud API Software Developer Kit (SDK). SDK is a supporting tool for Zenlayer Cloud API. It currently supports Bare
