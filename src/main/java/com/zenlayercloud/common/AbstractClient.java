@@ -26,7 +26,7 @@ import java.util.Map;
  */
 public class AbstractClient {
     private final       InterceptorChain interceptorChain = InterceptorChain.create();
-    public static final String           SDK_VERSION      = "0.6.1";
+    public static final String           SDK_VERSION      = "0.6.5";
 
     private final Credential _credential;
     private final String     _endpoint;
