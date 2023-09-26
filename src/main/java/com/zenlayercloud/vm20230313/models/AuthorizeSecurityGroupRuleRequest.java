@@ -23,11 +23,7 @@ public class AuthorizeSecurityGroupRuleRequest extends TeaModel {
     @Validation(required = true)
     public String direction;
 
-    @Validation(required = true)
     public String policy;
-
-    @Validation(required = true)
-    public Integer priority;
 
     @Validation(required = true)
     public String ipProtocol;

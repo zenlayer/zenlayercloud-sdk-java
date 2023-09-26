@@ -24,8 +24,10 @@ public class DescribeZonesResponse extends TeaModel {
 
     public static class ZoneInfo extends TeaModel {
 
-        public String zoneId;
-        public String zoneName;
+        public String  zoneId;
+        public String  zoneName;
+        public Boolean supportSecurityGroup;
+        public String  supportNetworkType;
 
     }
 }

@@ -24,11 +24,6 @@ public class RuleInfoResponse extends TeaModel {
     public String policy;
 
     /**
-     * 规则优先级
-     */
-    public Integer priority;
-
-    /**
      * 传输层协议
      */
     public String ipProtocol;

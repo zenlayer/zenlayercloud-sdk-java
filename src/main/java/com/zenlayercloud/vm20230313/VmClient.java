@@ -12,10 +12,20 @@ import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
 import com.zenlayercloud.vm20230313.models.CancelInstanceBandwidthDowngradeRequest;
 import com.zenlayercloud.vm20230313.models.CancelInstanceBandwidthDowngradeResponse;
+import com.zenlayercloud.vm20230313.models.CancelInstanceDowngradeRequest;
+import com.zenlayercloud.vm20230313.models.CancelInstanceDowngradeResponse;
 import com.zenlayercloud.vm20230313.models.CancelInstanceTrafficPackageDowngradeRequest;
 import com.zenlayercloud.vm20230313.models.CancelInstanceTrafficPackageDowngradeResponse;
 import com.zenlayercloud.vm20230313.models.CreateInstancesRequest;
 import com.zenlayercloud.vm20230313.models.CreateInstancesResponse;
+import com.zenlayercloud.vm20230313.models.CreateVpcRequest;
+import com.zenlayercloud.vm20230313.models.CreateVpcResponse;
+import com.zenlayercloud.vm20230313.models.CreateVpcSubnetRequest;
+import com.zenlayercloud.vm20230313.models.CreateVpcSubnetResponse;
+import com.zenlayercloud.vm20230313.models.DeleteVpcRequest;
+import com.zenlayercloud.vm20230313.models.DeleteVpcResponse;
+import com.zenlayercloud.vm20230313.models.DeleteVpcSubnetRequest;
+import com.zenlayercloud.vm20230313.models.DeleteVpcSubnetResponse;
 import com.zenlayercloud.vm20230313.models.DescribeDiskCategoryRequest;
 import com.zenlayercloud.vm20230313.models.DescribeDiskCategoryResponse;
 import com.zenlayercloud.vm20230313.models.DescribeImageRequest;
@@ -26,10 +36,16 @@ import com.zenlayercloud.vm20230313.models.DescribeInstanceInternetStatusRequest
 import com.zenlayercloud.vm20230313.models.DescribeInstanceInternetStatusResponse;
 import com.zenlayercloud.vm20230313.models.DescribeInstanceTrafficRequest;
 import com.zenlayercloud.vm20230313.models.DescribeInstanceTrafficResponse;
+import com.zenlayercloud.vm20230313.models.DescribeInstanceTypeStatusRequest;
+import com.zenlayercloud.vm20230313.models.DescribeInstanceTypeStatusResponse;
 import com.zenlayercloud.vm20230313.models.DescribeInstancesRequest;
 import com.zenlayercloud.vm20230313.models.DescribeInstancesResponse;
 import com.zenlayercloud.vm20230313.models.DescribeInstancesStatusRequest;
 import com.zenlayercloud.vm20230313.models.DescribeInstancesStatusResponse;
+import com.zenlayercloud.vm20230313.models.DescribeVpcSubnetsRequest;
+import com.zenlayercloud.vm20230313.models.DescribeVpcSubnetsResponse;
+import com.zenlayercloud.vm20230313.models.DescribeVpcsRequest;
+import com.zenlayercloud.vm20230313.models.DescribeVpcsResponse;
 import com.zenlayercloud.vm20230313.models.DescribeZoneInstanceConfigInfosRequest;
 import com.zenlayercloud.vm20230313.models.DescribeZoneInstanceConfigInfosResponse;
 import com.zenlayercloud.vm20230313.models.InquiryPriceCreateInstanceRequest;
@@ -44,10 +60,16 @@ import com.zenlayercloud.vm20230313.models.ModifyInstanceBandwidthRequest;
 import com.zenlayercloud.vm20230313.models.ModifyInstanceBandwidthResponse;
 import com.zenlayercloud.vm20230313.models.ModifyInstanceTrafficPackageRequest;
 import com.zenlayercloud.vm20230313.models.ModifyInstanceTrafficPackageResponse;
+import com.zenlayercloud.vm20230313.models.ModifyInstanceTypeRequest;
+import com.zenlayercloud.vm20230313.models.ModifyInstanceTypeResponse;
 import com.zenlayercloud.vm20230313.models.ModifyInstancesAttributeRequest;
 import com.zenlayercloud.vm20230313.models.ModifyInstancesAttributeResponse;
 import com.zenlayercloud.vm20230313.models.ModifyInstancesResourceGroupRequest;
 import com.zenlayercloud.vm20230313.models.ModifyInstancesResourceGroupResponse;
+import com.zenlayercloud.vm20230313.models.ModifyVpcSubnetsAttributeRequest;
+import com.zenlayercloud.vm20230313.models.ModifyVpcSubnetsAttributeResponse;
+import com.zenlayercloud.vm20230313.models.ModifyVpcsAttributeRequest;
+import com.zenlayercloud.vm20230313.models.ModifyVpcsAttributeResponse;
 import com.zenlayercloud.vm20230313.models.RebootInstancesRequest;
 import com.zenlayercloud.vm20230313.models.RebootInstancesResponse;
 import com.zenlayercloud.vm20230313.models.ReleaseInstancesRequest;
@@ -303,6 +325,46 @@ public class VmClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribeDiskCategoryResponse());
     }
 
+    public CreateVpcResponse createVpc(CreateVpcRequest request) {
+        Map<String, ?> resp = super.callApi(request, "CreateVpc", new RuntimeOptions());
+        return TeaModel.toModel(resp, new CreateVpcResponse());
+    }
+
+    public DeleteVpcResponse deleteVpc(DeleteVpcRequest request) {
+        Map<String, ?> resp = super.callApi(request, "DeleteVpc", new RuntimeOptions());
+        return TeaModel.toModel(resp, new DeleteVpcResponse());
+    }
+
+    public ModifyVpcsAttributeResponse modifyVpcsAttribute(ModifyVpcsAttributeRequest request) {
+        Map<String, ?> resp = super.callApi(request, "ModifyVpcsAttribute", new RuntimeOptions());
+        return TeaModel.toModel(resp, new ModifyVpcsAttributeResponse());
+    }
+
+    public DescribeVpcsResponse describeVpcs(DescribeVpcsRequest request) {
+        Map<String, ?> resp = super.callApi(request, "DescribeVpcs", new RuntimeOptions());
+        return TeaModel.toModel(resp, new DescribeVpcsResponse());
+    }
+
+    public CreateVpcSubnetResponse createVpcSubnet(CreateVpcSubnetRequest request) {
+        Map<String, ?> resp = super.callApi(request, "CreateVpcSubnet", new RuntimeOptions());
+        return TeaModel.toModel(resp, new CreateVpcSubnetResponse());
+    }
+
+    public ModifyVpcSubnetsAttributeResponse modifyVpcSubnetsAttribute(ModifyVpcSubnetsAttributeRequest request) {
+        Map<String, ?> resp = super.callApi(request, "ModifyVpcSubnetsAttribute", new RuntimeOptions());
+        return TeaModel.toModel(resp, new ModifyVpcSubnetsAttributeResponse());
+    }
+
+    public DescribeVpcSubnetsResponse describeVpcSubnets(DescribeVpcSubnetsRequest request) {
+        Map<String, ?> resp = super.callApi(request, "DescribeVpcSubnets", new RuntimeOptions());
+        return TeaModel.toModel(resp, new DescribeVpcSubnetsResponse());
+    }
+
+    public DeleteVpcSubnetResponse deleteVpcSubnet(DeleteVpcSubnetRequest request) {
+        Map<String, ?> resp = super.callApi(request, "DeleteVpcSubnet", new RuntimeOptions());
+        return TeaModel.toModel(resp, new DeleteVpcSubnetResponse());
+    }
+
     public CreateSubnetResponse createSubnet(CreateSubnetRequest request) {
         Map<String, ?> resp = super.callApi(request, "CreateSubnet", new RuntimeOptions());
         return TeaModel.toModel(resp, new CreateSubnetResponse());
@@ -440,6 +502,21 @@ public class VmClient extends AbstractClient {
     public DescribeInstanceCpuMonitorResponse describeInstanceCpuMonitor(DescribeInstanceCpuMonitorRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeInstanceCpuMonitor", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeInstanceCpuMonitorResponse());
+    }
+
+    public ModifyInstanceTypeResponse modifyInstanceType(ModifyInstanceTypeRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifyInstanceType", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ModifyInstanceTypeResponse());
+    }
+
+    public CancelInstanceDowngradeResponse cancelInstanceDowngrade(CancelInstanceDowngradeRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "CancelInstanceDowngrade", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new CancelInstanceDowngradeResponse());
+    }
+
+    public DescribeInstanceTypeStatusResponse describeInstanceTypeStatus(DescribeInstanceTypeStatusRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeInstanceTypeStatus", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeInstanceTypeStatusResponse());
     }
 
 }

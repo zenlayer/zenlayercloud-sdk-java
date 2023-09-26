@@ -6,7 +6,6 @@ package com.zenlayercloud.vm20230313.models;
 
 import com.aliyun.tea.TeaModel;
 import com.aliyun.tea.Validation;
-import com.zenlayercloud.bmc20221120.models.ChargePrePaid;
 
 /**
  * @author alicat.xu
