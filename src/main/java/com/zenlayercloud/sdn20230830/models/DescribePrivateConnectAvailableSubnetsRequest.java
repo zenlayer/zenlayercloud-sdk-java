@@ -11,6 +11,7 @@ import com.aliyun.tea.TeaModel;
  * @date 2023-08-30 11:15:19
  * @version $ Id: DescribeCreatePrivateConnectAvailableSubnetsRequest.java, v 0.1  alicat.xu Exp $
  */
+@Deprecated
 public class DescribePrivateConnectAvailableSubnetsRequest extends TeaModel {
 
     /**

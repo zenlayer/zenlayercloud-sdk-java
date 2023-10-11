@@ -14,8 +14,9 @@ import com.aliyun.tea.TeaModel;
 public class CreateEndpointParam extends TeaModel {
 
     /**
-     * 二层专线网络ID。
+     * 二层专线网络ID。子网专线已废弃,该字段将在未来一段时间彻底删除。
      */
+    @Deprecated
     public String subnetId;
 
     /**

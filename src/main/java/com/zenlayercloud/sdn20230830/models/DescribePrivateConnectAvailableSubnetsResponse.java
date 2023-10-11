@@ -13,6 +13,7 @@ import java.util.List;
  * @date 2023-08-30 11:15:09
  * @version $ Id: DescribeCreatePrivateConnectAvailableSubnetsResponse.java, v 0.1  alicat.xu Exp $
  */
+@Deprecated
 public class DescribePrivateConnectAvailableSubnetsResponse extends TeaModel {
 
     /**

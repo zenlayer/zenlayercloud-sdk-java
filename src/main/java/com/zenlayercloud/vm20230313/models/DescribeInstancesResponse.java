@@ -150,8 +150,12 @@ public class DescribeInstancesResponse extends TeaModel {
          * 是否自动续费。
          * 对于预付费实例，取消订阅后，该字段值将返回false
          */
-        public Boolean  autoRenew;
+        public Boolean autoRenew;
 
+        /**
+         * 密钥对ID
+         */
+        public String keyId;
 
     }
 }

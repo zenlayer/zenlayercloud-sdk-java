@@ -68,6 +68,11 @@ public class DescribeInstancesRequest extends TeaModel {
     public String securityGroupId;
 
     /**
+     * 密钥对ID
+     */
+    public String keyId;
+
+    /**
      * 公网IP地址集合
      */
     public List<String> publicIpAddresses;

@@ -65,6 +65,11 @@ public class CreateInstancesRequest extends TeaModel {
     public String password;
 
     /**
+     * 密钥对ID
+     */
+    public String keyId;
+
+    /**
      * 网络计费类型
      */
     @Validation(required = true)
@@ -101,7 +106,6 @@ public class CreateInstancesRequest extends TeaModel {
      * 安全组ID
      */
     public String securityGroupId;
-
 
 }
 

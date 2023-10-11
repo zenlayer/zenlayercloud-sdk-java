@@ -31,5 +31,8 @@ public class ResetInstanceRequest extends TeaModel {
     @Validation(minLength = 8, maxLength = 16)
     public String password;
 
-
+    /**
+     * 密钥对ID
+     */
+    public String keyId;
 }

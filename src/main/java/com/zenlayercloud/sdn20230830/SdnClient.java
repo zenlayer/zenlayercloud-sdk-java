@@ -126,6 +126,10 @@ public class SdnClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribePrivateConnectsResponse());
     }
 
+    /**
+     * 子网专线已废弃,该字段将在未来一段时间彻底删除。
+     */
+    @Deprecated
     public DescribePrivateConnectAvailableSubnetsResponse describePrivateConnectAvailableSubnets(
             DescribePrivateConnectAvailableSubnetsRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribePrivateConnectAvailableSubnets", new RuntimeOptions());
