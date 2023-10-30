@@ -10,12 +10,28 @@ import com.aliyun.teautil.models.RuntimeOptions;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
+import com.zenlayercloud.sdn20230830.models.AddCloudRouterEdgePointsRequest;
+import com.zenlayercloud.sdn20230830.models.AddCloudRouterEdgePointsResponse;
+import com.zenlayercloud.sdn20230830.models.CreateCloudRouterRequest;
+import com.zenlayercloud.sdn20230830.models.CreateCloudRouterResponse;
 import com.zenlayercloud.sdn20230830.models.CreatePortRequest;
 import com.zenlayercloud.sdn20230830.models.CreatePortResponse;
 import com.zenlayercloud.sdn20230830.models.CreatePrivateConnectRequest;
 import com.zenlayercloud.sdn20230830.models.CreatePrivateConnectResponse;
+import com.zenlayercloud.sdn20230830.models.DeleteCloudRouterEdgePointRequest;
+import com.zenlayercloud.sdn20230830.models.DeleteCloudRouterEdgePointResponse;
+import com.zenlayercloud.sdn20230830.models.DeleteCloudRouterRequest;
+import com.zenlayercloud.sdn20230830.models.DeleteCloudRouterResponse;
 import com.zenlayercloud.sdn20230830.models.DeletePrivateConnectRequest;
 import com.zenlayercloud.sdn20230830.models.DeletePrivateConnectResponse;
+import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterAvailablePortsRequest;
+import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterAvailablePortsResponse;
+import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterAvailableVpcsRequest;
+import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterAvailableVpcsResponse;
+import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterEdgePointTrafficRequest;
+import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterEdgePointTrafficResponse;
+import com.zenlayercloud.sdn20230830.models.DescribeCloudRoutersRequest;
+import com.zenlayercloud.sdn20230830.models.DescribeCloudRoutersResponse;
 import com.zenlayercloud.sdn20230830.models.DescribeDataCenterPortPriceRequest;
 import com.zenlayercloud.sdn20230830.models.DescribeDataCenterPortPriceResponse;
 import com.zenlayercloud.sdn20230830.models.DescribeDatacentersRequest;
@@ -34,18 +50,28 @@ import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectTrafficRequest
 import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectTrafficResponse;
 import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectsRequest;
 import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectsResponse;
+import com.zenlayercloud.sdn20230830.models.DestroyCloudRouterRequest;
+import com.zenlayercloud.sdn20230830.models.DestroyCloudRouterResponse;
 import com.zenlayercloud.sdn20230830.models.DestroyPortRequest;
 import com.zenlayercloud.sdn20230830.models.DestroyPortResponse;
 import com.zenlayercloud.sdn20230830.models.DestroyPrivateConnectRequest;
 import com.zenlayercloud.sdn20230830.models.DestroyPrivateConnectResponse;
 import com.zenlayercloud.sdn20230830.models.InquiryCreatePrivateConnectPriceRequest;
 import com.zenlayercloud.sdn20230830.models.InquiryCreatePrivateConnectPriceResponse;
+import com.zenlayercloud.sdn20230830.models.ModifyCloudRouterEdgePointBandwidthRequest;
+import com.zenlayercloud.sdn20230830.models.ModifyCloudRouterEdgePointBandwidthResponse;
+import com.zenlayercloud.sdn20230830.models.ModifyCloudRouterEdgePointRequest;
+import com.zenlayercloud.sdn20230830.models.ModifyCloudRouterEdgePointResponse;
+import com.zenlayercloud.sdn20230830.models.ModifyCloudRoutersAttributeRequest;
+import com.zenlayercloud.sdn20230830.models.ModifyCloudRoutersAttributeResponse;
 import com.zenlayercloud.sdn20230830.models.ModifyPortAttributeRequest;
 import com.zenlayercloud.sdn20230830.models.ModifyPortAttributeResponse;
 import com.zenlayercloud.sdn20230830.models.ModifyPrivateConnectBandwidthRequest;
 import com.zenlayercloud.sdn20230830.models.ModifyPrivateConnectBandwidthResponse;
 import com.zenlayercloud.sdn20230830.models.ModifyPrivateConnectsAttributeRequest;
 import com.zenlayercloud.sdn20230830.models.ModifyPrivateConnectsAttributeResponse;
+import com.zenlayercloud.sdn20230830.models.RenewCloudRouterRequest;
+import com.zenlayercloud.sdn20230830.models.RenewCloudRouterResponse;
 import com.zenlayercloud.sdn20230830.models.RenewPortRequest;
 import com.zenlayercloud.sdn20230830.models.RenewPortResponse;
 import com.zenlayercloud.sdn20230830.models.RenewPrivateConnectRequest;
@@ -187,4 +213,84 @@ public class SdnClient extends AbstractClient {
         Map<String, ?> rspStr = super.callApi(request, "ModifyPrivateConnectBandwidth", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new ModifyPrivateConnectBandwidthResponse());
     }
+
+
+    public DescribeCloudRoutersResponse describeCloudRouters(
+            DescribeCloudRoutersRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeCloudRouters", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeCloudRoutersResponse());
+    }
+
+    public DescribeCloudRouterAvailableVpcsResponse describeCloudRouterAvailableVpcs(
+            DescribeCloudRouterAvailableVpcsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeCloudRouterAvailableVpcs", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeCloudRouterAvailableVpcsResponse());
+    }
+
+
+    public DescribeCloudRouterAvailablePortsResponse describeCloudRouterAvailablePorts(
+            DescribeCloudRouterAvailablePortsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeCloudRouterAvailablePorts", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeCloudRouterAvailablePortsResponse());
+    }
+
+    public CreateCloudRouterResponse createCloudRouter(
+            CreateCloudRouterRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "CreateCloudRouter", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new CreateCloudRouterResponse());
+    }
+
+    public ModifyCloudRoutersAttributeResponse modifyCloudRoutersAttribute(
+            ModifyCloudRoutersAttributeRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifyCloudRoutersAttribute", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ModifyCloudRoutersAttributeResponse());
+    }
+
+    public AddCloudRouterEdgePointsResponse addCloudRouterEdgePoints(
+            AddCloudRouterEdgePointsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "AddCloudRouterEdgePoints", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new AddCloudRouterEdgePointsResponse());
+    }
+
+    public DeleteCloudRouterEdgePointResponse deleteCloudRouterEdgePoint(
+            DeleteCloudRouterEdgePointRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DeleteCloudRouterEdgePoint", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DeleteCloudRouterEdgePointResponse());
+    }
+
+    public DeleteCloudRouterResponse deleteCloudRouter(
+            DeleteCloudRouterRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DeleteCloudRouter", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DeleteCloudRouterResponse());
+    }
+
+    public DestroyCloudRouterResponse destroyCloudRouter(
+            DestroyCloudRouterRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DestroyCloudRouter", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DestroyCloudRouterResponse());
+    }
+
+    public RenewCloudRouterResponse renewCloudRouter(
+            RenewCloudRouterRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "RenewCloudRouter", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new RenewCloudRouterResponse());
+    }
+
+    public ModifyCloudRouterEdgePointBandwidthResponse modifyCloudRouterEdgePointBandwidth(
+            ModifyCloudRouterEdgePointBandwidthRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifyCloudRouterEdgePointBandwidth", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ModifyCloudRouterEdgePointBandwidthResponse());
+    }
+
+    public DescribeCloudRouterEdgePointTrafficResponse describeCloudRouterEdgePointTraffic(
+            DescribeCloudRouterEdgePointTrafficRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeCloudRouterEdgePointTraffic", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeCloudRouterEdgePointTrafficResponse());
+    }
+
+    public ModifyCloudRouterEdgePointResponse modifyCloudRouterEdgePoint(ModifyCloudRouterEdgePointRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifyCloudRouterEdgePoint", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ModifyCloudRouterEdgePointResponse());
+    }
+
 }
