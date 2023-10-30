@@ -42,4 +42,14 @@ public class DatacenterInfo extends TeaModel {
      * 地区名称。
      */
     public String areaName;
+
+    /**
+     * 数据中心所在地理位置纬度。
+     */
+    public Double latitude;
+
+    /**
+     * 数据中心所在地理位置经度。
+     */
+    public Double longitude;
 }

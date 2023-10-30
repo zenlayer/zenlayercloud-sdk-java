@@ -24,6 +24,10 @@ import com.zenlayercloud.sdn20230830.models.DeleteCloudRouterRequest;
 import com.zenlayercloud.sdn20230830.models.DeleteCloudRouterResponse;
 import com.zenlayercloud.sdn20230830.models.DeletePrivateConnectRequest;
 import com.zenlayercloud.sdn20230830.models.DeletePrivateConnectResponse;
+import com.zenlayercloud.sdn20230830.models.DescribeAWSRegionsRequest;
+import com.zenlayercloud.sdn20230830.models.DescribeAWSRegionsResponse;
+import com.zenlayercloud.sdn20230830.models.DescribeAWSVlanUsageRequest;
+import com.zenlayercloud.sdn20230830.models.DescribeAWSVlanUsageResponse;
 import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterAvailablePortsRequest;
 import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterAvailablePortsResponse;
 import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterAvailableVpcsRequest;
@@ -36,6 +40,10 @@ import com.zenlayercloud.sdn20230830.models.DescribeDataCenterPortPriceRequest;
 import com.zenlayercloud.sdn20230830.models.DescribeDataCenterPortPriceResponse;
 import com.zenlayercloud.sdn20230830.models.DescribeDatacentersRequest;
 import com.zenlayercloud.sdn20230830.models.DescribeDatacentersResponse;
+import com.zenlayercloud.sdn20230830.models.DescribeGoogleRegionsRequest;
+import com.zenlayercloud.sdn20230830.models.DescribeGoogleRegionsResponse;
+import com.zenlayercloud.sdn20230830.models.DescribeGoogleVlanUsageRequest;
+import com.zenlayercloud.sdn20230830.models.DescribeGoogleVlanUsageResponse;
 import com.zenlayercloud.sdn20230830.models.DescribePortTrafficRequest;
 import com.zenlayercloud.sdn20230830.models.DescribePortTrafficResponse;
 import com.zenlayercloud.sdn20230830.models.DescribePortUsableVlanRequest;
@@ -50,6 +58,10 @@ import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectTrafficRequest
 import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectTrafficResponse;
 import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectsRequest;
 import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectsResponse;
+import com.zenlayercloud.sdn20230830.models.DescribeTencentRegionsRequest;
+import com.zenlayercloud.sdn20230830.models.DescribeTencentRegionsResponse;
+import com.zenlayercloud.sdn20230830.models.DescribeTencentVlanUsageRequest;
+import com.zenlayercloud.sdn20230830.models.DescribeTencentVlanUsageResponse;
 import com.zenlayercloud.sdn20230830.models.DestroyCloudRouterRequest;
 import com.zenlayercloud.sdn20230830.models.DestroyCloudRouterResponse;
 import com.zenlayercloud.sdn20230830.models.DestroyPortRequest;
@@ -153,7 +165,7 @@ public class SdnClient extends AbstractClient {
     }
 
     /**
-     * 子网专线已废弃,该字段将在未来一段时间彻底删除。
+     * 子网专线已废弃,该接口将在未来一段时间彻底删除。
      */
     @Deprecated
     public DescribePrivateConnectAvailableSubnetsResponse describePrivateConnectAvailableSubnets(
@@ -291,6 +303,36 @@ public class SdnClient extends AbstractClient {
     public ModifyCloudRouterEdgePointResponse modifyCloudRouterEdgePoint(ModifyCloudRouterEdgePointRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "ModifyCloudRouterEdgePoint", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new ModifyCloudRouterEdgePointResponse());
+    }
+
+    public DescribeGoogleRegionsResponse describeGoogleRegions(DescribeGoogleRegionsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeGoogleRegions", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeGoogleRegionsResponse());
+    }
+
+    public DescribeGoogleVlanUsageResponse describeGoogleVlanUsage(DescribeGoogleVlanUsageRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeGoogleVlanUsage", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeGoogleVlanUsageResponse());
+    }
+
+    public DescribeTencentRegionsResponse describeTencentRegions(DescribeTencentRegionsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeTencentRegions", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeTencentRegionsResponse());
+    }
+
+    public DescribeTencentVlanUsageResponse describeTencentVlanUsage(DescribeTencentVlanUsageRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeTencentVlanUsage", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeTencentVlanUsageResponse());
+    }
+
+    public DescribeAWSRegionsResponse describeAWSRegions(DescribeAWSRegionsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeAWSRegions", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeAWSRegionsResponse());
+    }
+
+    public DescribeAWSVlanUsageResponse describeAWSVlanUsage(DescribeAWSVlanUsageRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeAWSVlanUsage", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeAWSVlanUsageResponse());
     }
 
 }

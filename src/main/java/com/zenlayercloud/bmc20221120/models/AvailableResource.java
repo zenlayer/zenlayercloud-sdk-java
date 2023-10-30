@@ -53,4 +53,8 @@ public class AvailableResource extends TeaModel {
      * 单位：TB。
      */
     public Double       defaultTrafficPackageSize;
+    /**
+     * 库存数量。
+     */
+    public Integer      qty;
 }

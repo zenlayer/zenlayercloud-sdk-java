@@ -36,6 +36,36 @@ public class CreateCloudRouterEdgePoint extends TeaModel {
     public Integer vlanId;
 
     /**
+     * 公有云区域ID。
+     */
+    public String cloudRegionId;
+
+    /**
+     * 连接点名称, 仅支持类型为云连接时指定名称。<br/>
+     * 如果是端口, 则会使用端口名作为接入点名称。<br/>
+     * 如果是VPC, 则会使用VPC名作为接入点名称。
+     */
+    public String edgePointName;
+
+    /**
+     * 公有云账号ID。Google 云此处为 pairing key。
+     */
+    public String cloudAccountId;
+
+    /**
+     * 接入点数据中心ID。
+     */
+    public String dcId;
+
+    /**
+     * 云连接类型。可选值：
+     * - AWS
+     * - TENCENT
+     * - GOOGLE
+     */
+    public String cloudType;
+
+    /**
      * IP地址信息。
      */
     public String ipAddress;

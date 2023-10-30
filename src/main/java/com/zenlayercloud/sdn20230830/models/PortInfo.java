@@ -92,4 +92,9 @@ public class PortInfo extends TeaModel {
      * 商业实体名称
      */
     public String businessEntityName;
+
+    /**
+     * 是否允许创建业务
+     */
+    public Boolean isCreateBusinessAllowed;
 }

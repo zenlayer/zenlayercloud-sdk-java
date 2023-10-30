@@ -23,4 +23,14 @@ public class InquiryCreatePrivateConnectPriceResponse extends TeaModel {
      * 二层网络专线带宽价格。
      */
     public Price privateConnectPrice;
+
+    /**
+     * A端的接入价格。
+     */
+    public Price endpointAPrice;
+
+    /**
+     * Z端的接入价格。
+     */
+    public Price endpointZPrice;
 }

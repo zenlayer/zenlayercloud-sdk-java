@@ -61,6 +61,16 @@ public class CloudRouterEdgePoint extends TeaModel {
     public Integer vlanId;
 
     /**
+     * 公有云区域ID。
+     */
+    public String cloudRegionId;
+
+    /**
+     * 公有云账号ID。Google 云此处为 pairing key.
+     */
+    public String cloudAccountId;
+
+    /**
      * 带宽大小。
      */
     public Integer bandwidthMbps;

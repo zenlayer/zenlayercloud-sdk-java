@@ -127,6 +127,15 @@ public class DescribePrivateConnectsResponse extends TeaModel {
              */
             public String connectivityStatus;
 
+            /**
+             * 公有云区域ID。
+             */
+            public String cloudRegionId;
+            /**
+             * 公有云账号ID。Google 云此处为 pairing key.
+             */
+            public String cloudAccountId;
+ 
         }
 
     }
