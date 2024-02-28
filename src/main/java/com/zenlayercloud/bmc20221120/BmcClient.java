@@ -71,6 +71,8 @@ import com.zenlayercloud.bmc20221120.models.DescribeInstanceTrafficRequest;
 import com.zenlayercloud.bmc20221120.models.DescribeInstanceTrafficResponse;
 import com.zenlayercloud.bmc20221120.models.DescribeInstanceTypesRequest;
 import com.zenlayercloud.bmc20221120.models.DescribeInstanceTypesResponse;
+import com.zenlayercloud.bmc20221120.models.DescribeInstancesMonitorHealthRequest;
+import com.zenlayercloud.bmc20221120.models.DescribeInstancesMonitorHealthResponse;
 import com.zenlayercloud.bmc20221120.models.DescribeInstancesRequest;
 import com.zenlayercloud.bmc20221120.models.DescribeInstancesResponse;
 import com.zenlayercloud.bmc20221120.models.DescribeSubnetAvailableResourcesRequest;
@@ -327,7 +329,8 @@ public class BmcClient extends AbstractClient {
     /**
      * 取消流量包降配订单。
      */
-    public CancelInstanceTrafficPackageDowngradeResponse cancelInstanceTrafficPackageDowngrade(CancelInstanceTrafficPackageDowngradeRequest request) {
+    public CancelInstanceTrafficPackageDowngradeResponse cancelInstanceTrafficPackageDowngrade(
+            CancelInstanceTrafficPackageDowngradeRequest request) {
         Map<String, ?> resp = super.callApi(request, "CancelInstanceTrafficPackageDowngrade", new RuntimeOptions());
         return TeaModel.toModel(resp, new CancelInstanceTrafficPackageDowngradeResponse());
     }
@@ -343,7 +346,8 @@ public class BmcClient extends AbstractClient {
     /**
      * 实例修改流量包询价。
      */
-    public InquiryPriceInstanceTrafficPackageResponse inquiryPriceInstanceTrafficPackage(InquiryPriceInstanceTrafficPackageRequest request) {
+    public InquiryPriceInstanceTrafficPackageResponse inquiryPriceInstanceTrafficPackage(
+            InquiryPriceInstanceTrafficPackageRequest request) {
         Map<String, ?> resp = super.callApi(request, "InquiryPriceInstanceTrafficPackage", new RuntimeOptions());
         return TeaModel.toModel(resp, new InquiryPriceInstanceTrafficPackageResponse());
     }
@@ -370,6 +374,14 @@ public class BmcClient extends AbstractClient {
     public DescribeInstanceTrafficResponse describeInstanceTraffic(DescribeInstanceTrafficRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeInstanceTraffic", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeInstanceTrafficResponse());
+    }
+
+    /**
+     * 调用本接口用于查询实例的硬件状态信息。
+     */
+    public DescribeInstancesMonitorHealthResponse describeInstancesMonitorHealth(DescribeInstancesMonitorHealthRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeInstancesMonitorHealth", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeInstancesMonitorHealthResponse());
     }
 
     /*************** EIP ****************/
@@ -449,7 +461,8 @@ public class BmcClient extends AbstractClient {
     /**
      * 查询实例可绑定的EIP列表。
      */
-    public DescribeInstanceAvailableEipResourcesResponse describeInstanceAvailableEipResources(DescribeInstanceAvailableEipResourcesRequest request) {
+    public DescribeInstanceAvailableEipResourcesResponse describeInstanceAvailableEipResources(
+            DescribeInstanceAvailableEipResourcesRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeInstanceAvailableEipResources", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeInstanceAvailableEipResourcesResponse());
     }
@@ -466,7 +479,9 @@ public class BmcClient extends AbstractClient {
 
     /**
      * 查询一台或多台指定Ddos IP的信息。用户可以根据Ddos IP ID、IP或者计费模式等信息来搜索Ddos IP信息。
+     * DDoS产品已下架
      */
+    @Deprecated
     public DescribeDdosIpAddressesResponse describeDdosIpAddresses(DescribeDdosIpAddressesRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeDdosIpAddresses", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeDdosIpAddressesResponse());
@@ -474,7 +489,9 @@ public class BmcClient extends AbstractClient {
 
     /**
      * 查询区域可购买Ddos IP资源。
+     * DDoS产品已下架
      */
+    @Deprecated
     public DescribeDdosIpAvailableResourcesResponse describeDdosIpAvailableResources(DescribeDdosIpAvailableResourcesRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeDdosIpAvailableResources", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeDdosIpAvailableResourcesResponse());
@@ -482,7 +499,9 @@ public class BmcClient extends AbstractClient {
 
     /**
      * 创建一个或多个Ddos IP。
+     * DDoS产品已下架
      */
+    @Deprecated
     public AllocateDdosIpAddressesResponse allocateDdosIpAddresses(AllocateDdosIpAddressesRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "AllocateDdosIpAddresses", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new AllocateDdosIpAddressesResponse());
@@ -490,7 +509,9 @@ public class BmcClient extends AbstractClient {
 
     /**
      * 退还一个Ddos IP。
+     * DDoS产品已下架
      */
+    @Deprecated
     public TerminateDdosIpAddressResponse terminateDdosIpAddress(TerminateDdosIpAddressRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "TerminateDdosIpAddress", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new TerminateDdosIpAddressResponse());
@@ -498,23 +519,29 @@ public class BmcClient extends AbstractClient {
 
     /**
      * 释放一个或多个Ddos IP。
+     * DDoS产品已下架
      */
+    @Deprecated
     public ReleaseDdosIpAddressesResponse releaseDdosIpAddresses(ReleaseDdosIpAddressesRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "ReleaseDdosIpAddresses", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new ReleaseDdosIpAddressesResponse());
     }
 
     /**
-     * 续费一个Ddos IP。
+     * 续费一个DDoS IP。
+     * DDoS产品已下架。
      */
+    @Deprecated
     public RenewDdosIpAddressResponse renewDdosIpAddress(RenewDdosIpAddressRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "RenewDdosIpAddress", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new RenewDdosIpAddressResponse());
     }
 
     /**
-     * Ddos IP绑定到同区域的机器实例上。
+     * DDoS IP绑定到同区域的机器实例上。
+     * DDoS产品已下架。
      */
+    @Deprecated
     public AssociateDdosIpAddressResponse associateDdosIpAddress(AssociateDdosIpAddressRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "AssociateDdosIpAddress", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new AssociateDdosIpAddressResponse());
@@ -522,7 +549,9 @@ public class BmcClient extends AbstractClient {
 
     /**
      * Ddos IP上已绑定的机器解绑。
+     * DDoS产品已下架。
      */
+    @Deprecated
     public UnAssociateDdosIpAddressResponse unAssociateDdosIpAddress(UnAssociateDdosIpAddressRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "UnAssociateDdosIpAddress", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new UnAssociateDdosIpAddressResponse());
@@ -530,7 +559,9 @@ public class BmcClient extends AbstractClient {
 
     /**
      * 创建Ddos IP询价。
+     * DDoS产品已下架。
      */
+    @Deprecated
     public InquiryPriceCreateDdosIpAddressResponse inquiryPriceCreateDdosIpAddress(InquiryPriceCreateDdosIpAddressRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "InquiryPriceCreateDdosIpAddress", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new InquiryPriceCreateDdosIpAddressResponse());
@@ -538,16 +569,22 @@ public class BmcClient extends AbstractClient {
 
     /**
      * 查询实例可绑定的Ddos IP列表。
+     * DDoS产品已下架。
      */
-    public DescribeInstanceAvailableDdosIpResourcesResponse describeInstanceAvailableDdosIpResources(DescribeInstanceAvailableDdosIpResourcesRequest request) {
+    @Deprecated
+    public DescribeInstanceAvailableDdosIpResourcesResponse describeInstanceAvailableDdosIpResources(
+            DescribeInstanceAvailableDdosIpResourcesRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeInstanceAvailableDdosIpResources", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeInstanceAvailableDdosIpResourcesResponse());
     }
 
     /**
      * 修改DDoS防护IP所属的资源组。
+     *  DDoS产品已下架。
      */
-    public ModifyDdosIpAddressesResourceGroupResponse modifyDdosIpAddressesResourceGroup(ModifyDdosIpAddressesResourceGroupRequest request) {
+    @Deprecated
+    public ModifyDdosIpAddressesResourceGroupResponse modifyDdosIpAddressesResourceGroup(
+            ModifyDdosIpAddressesResourceGroupRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "ModifyDdosIpAddressesResourceGroup", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new ModifyDdosIpAddressesResourceGroupResponse());
     }
@@ -667,7 +704,6 @@ public class BmcClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new UnbindCidrBlockIpsResponse());
     }
 
-
     /*************** VPC ***************/
 
     /**
@@ -775,6 +811,5 @@ public class BmcClient extends AbstractClient {
         Map<String, ?> rspStr = super.callApi(request, "AssociateVpcSubnet", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new AssociateVpcSubnetResponse());
     }
-
 
 }

@@ -23,10 +23,23 @@ public class DescribeZonesResponse extends TeaModel {
     public List<ZoneInfo> zoneSet;
 
     public static class ZoneInfo extends TeaModel {
-
+        /**
+         * 区域ID。
+         */
         public String  zoneId;
+        /**
+         * 区域名称。
+         */
         public String  zoneName;
+        /**
+         * 是否支持安全组。
+         */
         public Boolean supportSecurityGroup;
+        /**
+         * 支持的网络类型。<br/>
+         * CLASSICS：经典网络。<br/>
+         * VPC: VPC网络
+         */
         public String  supportNetworkType;
 
     }

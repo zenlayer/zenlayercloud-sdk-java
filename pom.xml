@@ -10,11 +10,11 @@
 
     <groupId>com.zenlayer</groupId>
     <artifactId>zenlayercloud-sdk-java</artifactId>
-    <version>0.6.9</version>
+    <version>0.6.10</version>
 
     <name>zenlayercloud-sdk-java</name>
     <url>https://console.zenlayer.com/</url>
-    <description>Zelayer Cloud Open API SDK for Java</description>
+    <description>Zenlayer Cloud Open API SDK for Java</description>
 
     <properties>
         <maven.compiler.source>7</maven.compiler.source>
