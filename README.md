@@ -29,8 +29,8 @@ Add the following Maven dependency to install the core library of Zenlayer Cloud
 
 <dependency>
     <groupId>com.zenlayer</groupId>
-    <artifactId>zenlayercloud-sdk-java</artifactId>
-   <!-- Go to https://search.maven.org/search?q=zenlayercloud-java-sdk to check all new versions. The latest version: -->
+   <artifactId>zenlayercloud-sdk-java</artifactId>
+   <!-- Go to https://search.maven.org/search?q=zenlayercloud-sdk-java to check all new versions. The latest version: -->
    <version>0.6.1</version>
 </dependency>
 
