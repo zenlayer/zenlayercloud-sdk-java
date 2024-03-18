@@ -69,6 +69,12 @@ public class DescribeInstancesResponse extends TeaModel {
         public String imageName;
 
         /**
+         * IpxeUrl。
+         * 传入参数后，imageId不生效。
+         */
+        public String ipxeUrl;
+
+        /**
          * 实例计费类型。取值范围：
          * PREPAID: 表示预付费，即包年包月
          * POSTPAID: 表示后付费，即按量计费

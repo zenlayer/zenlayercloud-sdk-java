@@ -49,6 +49,12 @@ public class CreateInstancesRequest extends TeaModel {
     public String          imageId;
 
     /**
+     * IpxeUrl。
+     * 传入参数后，imageId不生效。
+     */
+    public String          ipxeUrl;
+
+    /**
      * 实例所在的资源组ID。
      */
     public String          resourceGroupId;

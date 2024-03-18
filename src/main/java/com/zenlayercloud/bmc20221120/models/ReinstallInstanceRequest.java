@@ -30,6 +30,12 @@ public class ReinstallInstanceRequest extends TeaModel {
     public String imageId;
 
     /**
+     * IpxeUrl。
+     * 传入参数后，imageId不生效。
+     */
+    public String ipxeUrl;
+
+    /**
      * 实例的主机名。不得超过64个字符。
      * 仅支持输入字母、数字、-和英文句点(.)
      */
