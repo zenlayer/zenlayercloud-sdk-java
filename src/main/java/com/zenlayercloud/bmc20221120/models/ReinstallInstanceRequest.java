@@ -46,7 +46,7 @@ public class ReinstallInstanceRequest extends TeaModel {
      * 实例的密码。必须是 8-16 个字符，包含大写字母、小写字母、数字和特殊字符。特殊符号可以是：
      * `~!@$^*\-_=+|;:,.?
      * 密钥与密码不能同时指定。
-     * 如果不指定密码，默认情况下会随机生成密码，并以邮件的方式通知给创建者。
+     * 密钥与密码必须并且只能指定其中一个。
      */
     @Validation(minLength = 8, maxLength = 16)
     public String password;

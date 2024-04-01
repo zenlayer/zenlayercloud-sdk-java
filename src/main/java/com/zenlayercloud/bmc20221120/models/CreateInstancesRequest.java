@@ -87,7 +87,7 @@ public class CreateInstancesRequest extends TeaModel {
     /**
      * 实例的密码。
      * 必须是 8-16 个字符，包含大写字母、小写字母、数字和特殊字符。特殊符号可以是：1~!@$^*-_=+。该密码也是作为IPMI登录的密码。请妥善保管。
-     * 如果未指定密码，且未设置sshKeys，那么系统将生成一个随机密码并在机器安装成功后发送至创建者的邮箱。
+     * 密钥与密码必须并且只能指定其中一个。
      */
     @Validation(minLength = 8, maxLength = 16)
     public String          password;
