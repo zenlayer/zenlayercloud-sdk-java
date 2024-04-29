@@ -25,9 +25,21 @@ public class CreateInstancesResponse extends TeaModel {
      * 实例ID集合
      */
     public List<String> instanceIdSet;
+    /**
+     * 实例ID带数据盘集合
+     */
+    public List<InnerInstance> instances;
 
     /**
      * 订单编号
      */
     public  String       orderNumber;
+
+    public static class InnerInstance {
+        public String       instanceId;
+        /**
+         * 随实例创建的数据盘
+         */
+        public List<String> diskIdSet;
+    }
 }

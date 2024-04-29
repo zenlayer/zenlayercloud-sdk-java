@@ -26,7 +26,6 @@ public class DescribeDataCenterPortPriceResponse extends TeaModel {
      */
     public List<PortPrice> portPriceSet;
 
-
     public static class PortPrice extends TeaModel {
         /**
          * 数据中心 的Id，如SIN1。
@@ -41,11 +40,18 @@ public class DescribeDataCenterPortPriceResponse extends TeaModel {
         /**
          * 端口 天价格。
          */
+        @Deprecated
         public Double portDailyPrice;
 
         /**
          * 端口 月价格。
          */
+        @Deprecated
         public Double portMonthlyPrice;
+
+        /**
+         * 端口价格。
+         */
+        public Price portPrice;
     }
 }
