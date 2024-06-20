@@ -62,6 +62,8 @@ public class CreateCloudRouterEdgePoint extends TeaModel {
      * - AWS
      * - TENCENT
      * - GOOGLE
+     * - ALI_CLOUD
+     * - AZURE
      */
     public String cloudType;
 
@@ -79,4 +81,9 @@ public class CreateCloudRouterEdgePoint extends TeaModel {
      * 静态路由配置信息。
      */
     public List<IPRoute> staticRoutes;
+
+    /**
+     * 高可用类型
+     */
+    public String haType;
 }

@@ -49,6 +49,8 @@ public class CreateEndpointParam extends TeaModel {
      * - AWS
      * - TENCENT
      * - GOOGLE
+     * - ALI_CLOUD
+     * - AZURE
      */
     public String cloudType;
 
@@ -57,4 +59,9 @@ public class CreateEndpointParam extends TeaModel {
      * 如果是端口, 则会使用端口名作为接入点名称。
      */
     public String endpointName;
+
+    /**
+     * 高可用类型
+     */
+    public String haType;
 }

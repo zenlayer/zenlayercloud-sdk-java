@@ -52,4 +52,11 @@ public class DatacenterInfo extends TeaModel {
      * 数据中心所在地理位置经度。
      */
     public Double longitude;
+
+    /**
+     * 数据中心是否支持物理端口。
+     * 该字段仅在 DescribeDatacenters 可取值。
+     */
+    public Boolean isPortAvailable;
+
 }
