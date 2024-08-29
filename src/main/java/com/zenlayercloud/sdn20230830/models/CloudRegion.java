@@ -5,7 +5,6 @@
 package com.zenlayercloud.sdn20230830.models;
 
 import com.aliyun.tea.TeaModel;
-import com.zenlayercloud.sdn20230830.HAType;
 
 import java.util.List;
 

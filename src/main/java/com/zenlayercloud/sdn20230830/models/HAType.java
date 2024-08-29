@@ -1,4 +1,8 @@
-package com.zenlayercloud.sdn20230830;
+/*
+ * Zenlayer.com Inc.
+ * Copyright (c) 2014-2024 All Rights Reserved.
+ */
+package com.zenlayercloud.sdn20230830.models;
 
 import com.aliyun.tea.TeaModel;
 

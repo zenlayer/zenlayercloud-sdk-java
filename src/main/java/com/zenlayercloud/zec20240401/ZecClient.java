@@ -10,8 +10,7 @@ import com.aliyun.teautil.models.RuntimeOptions;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
-import com.zenlayercloud.zec20240401.models.DescribeInstanceMonitorDataRequest;
-import com.zenlayercloud.zec20240401.models.DescribeInstanceMonitorDataResponse;
+import com.zenlayercloud.zec20240401.models.*;
 
 import java.util.Map;
 
@@ -40,4 +39,68 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribeInstanceMonitorDataResponse());
     }
 
+    public CreateVpcResponse createVpc(CreateVpcRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "CreateVpc", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new CreateVpcResponse());
+    }
+
+    public DeleteVpcResponse deleteVpc(DeleteVpcRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DeleteVpc", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DeleteVpcResponse());
+    }
+
+    public ModifyVpcsAttributeResponse modifyVpcsAttribute(ModifyVpcsAttributeRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifyVpcsAttribute", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ModifyVpcsAttributeResponse());
+    }
+
+    public DescribeVpcsResponse describeVpcs(DescribeVpcsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeVpcs", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeVpcsResponse());
+    }
+
+    public DescribeSubnetRegionsResponse describeSubnetRegions(DescribeSubnetRegionsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeSubnetRegions", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeSubnetRegionsResponse());
+    }
+
+    public CreateSubnetResponse createSubnet(CreateSubnetRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "CreateSubnet", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new CreateSubnetResponse());
+    }
+
+    public DeleteSubnetResponse deleteSubnet(DeleteSubnetRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DeleteSubnet", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DeleteSubnetResponse());
+    }
+
+    public ModifySubnetsAttributeResponse modifySubnetsAttribute(ModifySubnetsAttributeRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifySubnetsAttribute", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ModifySubnetsAttributeResponse());
+    }
+
+    public DescribeSubnetsResponse describeSubnets(DescribeSubnetsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeSubnets", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeSubnetsResponse());
+    }
+
+    public ModifySubnetStackTypeResponse modifySubnetStackType(ModifySubnetStackTypeRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifySubnetStackType", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ModifySubnetStackTypeResponse());
+    }
+
+    public CreateRouteResponse createRoute(CreateRouteRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "CreateRoute", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new CreateRouteResponse());
+    }
+
+    public DeleteRouteResponse deleteRoute(DeleteRouteRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DeleteRoute", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DeleteRouteResponse());
+    }
+
+    public DescribeRoutesResponse describeRoutes(DescribeRoutesRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeRoutes", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeRoutesResponse());
+    }
 }

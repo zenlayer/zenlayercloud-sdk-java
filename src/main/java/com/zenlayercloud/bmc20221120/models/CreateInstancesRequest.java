@@ -142,4 +142,11 @@ public class CreateInstancesRequest extends TeaModel {
      * 网卡配置信息，包括公网和内网名称等。
      */
     public Nic             nic;
+
+    /**
+     * 是否启用实例主IPv6。
+     * false为不启用主IPv6，此时将不能为实例配置弹性IPv6。默认为true。
+     */
+    public Boolean enablePrimaryIPv6;
+
 }
