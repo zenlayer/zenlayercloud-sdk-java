@@ -52,6 +52,8 @@ import com.zenlayercloud.zga20230706.models.ModifyAcceleratorProtocolOptsRequest
 import com.zenlayercloud.zga20230706.models.ModifyAcceleratorProtocolOptsResponse;
 import com.zenlayercloud.zga20230706.models.ModifyAcceleratorRuleRequest;
 import com.zenlayercloud.zga20230706.models.ModifyAcceleratorRuleResponse;
+import com.zenlayercloud.zga20230706.models.ModifyCertificateRequest;
+import com.zenlayercloud.zga20230706.models.ModifyCertificateResponse;
 import com.zenlayercloud.zga20230706.models.OpenAcceleratorAccessControlRequest;
 import com.zenlayercloud.zga20230706.models.OpenAcceleratorAccessControlResponse;
 import com.zenlayercloud.zga20230706.models.PauseAcceleratorRequest;
@@ -106,6 +108,12 @@ public class ZgaClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new CreateCertificateResponse());
     }
 
+    public ModifyCertificateResponse modifyCertificate(ModifyCertificateRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifyCertificate", new RuntimeOptions());
+
+        return TeaModel.toModel(rspStr, new ModifyCertificateResponse());
+    }
+    
     public DeleteCertificateResponse deleteCertificate(DeleteCertificateRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DeleteCertificate", new RuntimeOptions());
 
