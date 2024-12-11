@@ -18,12 +18,12 @@ public class DescribeInstancesResponse extends TeaModel {
      * 唯一请求 ID，每次请求都会返回。
      * 定位问题时需要提供该次请求的requestId。
      */
-    public String             requestId;
+    public String requestId;
 
     /**
      * 符合条件的数据总数。
      */
-    public Integer            totalCount;
+    public Integer totalCount;
 
     /**
      * 结果集。
@@ -57,6 +57,11 @@ public class DescribeInstancesResponse extends TeaModel {
          * 实例机型
          */
         public String instanceTypeId;
+
+        /**
+         * 实例机型配置信息。
+         */
+        public InstanceType instanceType;
 
         /**
          * 镜像ID
