@@ -16,52 +16,52 @@ import java.util.List;
 public class InstanceType extends TeaModel {
 
     /**
-     * 机型支持的镜像ID。
+     * 机型支持的镜像ID。 仅在 `DescribeInstanceType` 可取到值
      */
-    public List<String>     imageIds;
+    public List<String> imageIds;
 
     /**
      * 实例机型ID。
      */
-    public String           instanceTypeId;
+    public String instanceTypeId;
 
     /**
      * 机型描述。
      * 一般包括内存大小，硬盘。
      */
-    public String           description;
+    public String description;
 
     /**
      * CPU内核数目。
      */
-    public Integer          cpuCoreCount;
+    public Integer cpuCoreCount;
 
     /**
      * 内存大小。
      * 单位：GB。
      */
-    public Integer          memorySize;
+    public Integer memorySize;
 
     /**
      * 机型支持的最大出口带宽。
      * 单位：Mbps。
      */
-    public Integer          maximumBandwidth;
+    public Integer maximumBandwidth;
 
     /**
      * 机型支持的raid。
      */
-    public List<Integer>    supportRaids;
+    public List<Integer> supportRaids;
 
     /**
      * 是否支持内网组网。
      */
-    public Boolean          supportSubnet;
+    public Boolean supportSubnet;
 
     /**
      * 是否高可用机型。
      */
-    public Boolean          isHA;
+    public Boolean isHA;
 
     /**
      * 硬盘配置。
