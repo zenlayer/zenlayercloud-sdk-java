@@ -37,4 +37,6 @@ public class RuleInfoResponse extends TeaModel {
      * 源端IP地址范围
      */
     public String cidrIp;
+
+    public String description;
 }

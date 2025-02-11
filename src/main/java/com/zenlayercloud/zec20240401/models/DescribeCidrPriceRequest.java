@@ -8,13 +8,7 @@ public class DescribeCidrPriceRequest extends TeaModel {
     public String regionId;
 
     @Validation(required = true)
-    public String chargeType;
-
-    @Validation
-    public ChargePrePaid instanceChargePrepaid;
-
-    @Validation(required = true)
-    public String networkType;
+    public String eipV4Type;
 
     @Validation(required = true)
     public NetmaskInfo netmask;

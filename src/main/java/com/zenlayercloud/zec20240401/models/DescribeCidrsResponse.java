@@ -21,12 +21,10 @@ public class DescribeCidrsResponse extends TeaModel {
         public Integer      totalCount;
         public Integer      usedCount;
         public String       source;
-        public String       networkType;
+        public String       eipV4Type;
         public Integer      netmask;
         public String       createTime;
         public String       expiredTime;
-        public Integer      period;
-        public String       instanceChargeType;
         public String       resourceGroupId;
         public String       resourceGroupName;
     }

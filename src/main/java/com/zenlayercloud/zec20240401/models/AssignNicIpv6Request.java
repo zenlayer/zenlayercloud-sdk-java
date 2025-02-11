@@ -11,5 +11,7 @@ public class AssignNicIpv6Request extends TeaModel {
 
     public String internetChargeType;
 
+    public Integer bandwidth;
+
     public BigDecimal packageSize;
 }

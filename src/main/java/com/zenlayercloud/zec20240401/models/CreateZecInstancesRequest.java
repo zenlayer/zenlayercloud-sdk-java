@@ -30,6 +30,8 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     public BigDecimal trafficPackageSize;
 
+    public Integer bandwidth;
+
     @Validation(required = true)
     public String subnetId;
 
