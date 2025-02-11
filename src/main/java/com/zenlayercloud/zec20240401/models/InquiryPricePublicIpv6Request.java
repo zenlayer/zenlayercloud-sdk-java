@@ -9,6 +9,7 @@ public class InquiryPricePublicIpv6Request extends TeaModel {
     @Validation(required = true)
     public String regionId;
 
-    @Validation(required = true)
     public BigDecimal packageSize;
+
+    public Integer bandwidth;
 }

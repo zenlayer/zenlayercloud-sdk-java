@@ -26,6 +26,8 @@ public class DescribeImagesResponse extends TeaModel {
 
         public String imageStatus;
 
+        public List<String> nicNetworkType;
+
         public String category;
 
         public String osType;

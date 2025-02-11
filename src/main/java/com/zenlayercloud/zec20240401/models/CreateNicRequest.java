@@ -14,6 +14,8 @@ public class CreateNicRequest extends TeaModel {
 
     public BigDecimal packageSize;
 
+    public Integer bandwidth;
+
     public String internetChargeType;
 
     public String resourceGroupId;

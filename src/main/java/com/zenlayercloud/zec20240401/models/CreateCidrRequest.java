@@ -8,16 +8,10 @@ public class CreateCidrRequest extends TeaModel {
     public String regionId;
 
     @Validation(required = true)
-    public String chargeType;
-
-    public String resourceGroupId;
-
-    public ChargePrePaid instanceChargePrepaid;
-
-    @Validation(required = true)
-    public String networkType;
+    public String eipV4Type;
 
     @Validation(required = true)
     public NetmaskInfo netmask;
 
+    public String resourceGroupId;
 }

@@ -9,7 +9,5 @@ public class DescribeCidrPriceResponse extends TeaModel {
      */
     public String       requestId;
 
-    public Price bandwidthPrice;
-
     public Price cidrPrice;
 }

@@ -53,8 +53,8 @@ import com.zenlayercloud.zec20240401.models.RebootInstancesRequest;
 import com.zenlayercloud.zec20240401.models.RebootInstancesResponse;
 import com.zenlayercloud.zec20240401.models.ResetInstanceRequest;
 import com.zenlayercloud.zec20240401.models.ResetInstanceResponse;
-import com.zenlayercloud.zec20240401.models.ResetInstancesPasswordRequest;
-import com.zenlayercloud.zec20240401.models.ResetInstancesPasswordResponse;
+import com.zenlayercloud.zec20240401.models.ResetInstancePasswordRequest;
+import com.zenlayercloud.zec20240401.models.ResetInstancePasswordResponse;
 import com.zenlayercloud.zec20240401.models.StartInstancesRequest;
 import com.zenlayercloud.zec20240401.models.StartInstancesResponse;
 import com.zenlayercloud.zec20240401.models.StopInstancesRequest;
@@ -172,21 +172,6 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new ModifyInstancesAttributeResponse());
     }
 
-    public RebootInstancesResponse rebootInstances(RebootInstancesRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "RebootInstances", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new RebootInstancesResponse());
-    }
-
-    public ResetInstanceResponse resetInstance(ResetInstanceRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "ResetInstance", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new ResetInstanceResponse());
-    }
-
-    public ResetInstancesPasswordResponse resetInstancesPassword(ResetInstancesPasswordRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "ResetInstancesPassword", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new ResetInstancesPasswordResponse());
-    }
-
     public StartInstancesResponse startInstances(StartInstancesRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "StartInstances", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new StartInstancesResponse());
@@ -198,9 +183,75 @@ public class ZecClient extends AbstractClient {
     }
 
 
+    public RebootInstancesResponse rebootInstances(RebootInstancesRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "RebootInstances", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new RebootInstancesResponse());
+    }
+
+    public ResetInstancePasswordResponse resetInstancePassword(ResetInstancePasswordRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ResetInstancePassword", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ResetInstancePasswordResponse());
+    }
+
+    public ResetInstanceResponse resetInstance(ResetInstanceRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ResetInstance", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ResetInstanceResponse());
+    }
+
+    public ReleaseInstancesResponse releaseInstances(ReleaseInstancesRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ReleaseInstances", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ReleaseInstancesResponse());
+    }
+
+    public ModifyInstanceTypeResponse modifyInstanceType(ModifyInstanceTypeRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifyInstanceType", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ModifyInstanceTypeResponse());
+    }
+
+    public DescribeTimeZonesResponse describeTimeZones(DescribeTimeZonesRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeTimeZones", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeTimeZonesResponse());
+    }
+
+    public StartIpForwardResponse startIpForward(StartIpForwardRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "StartIpForward", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new StartIpForwardResponse());
+    }
+
+    public StopIpForwardResponse stopIpForward(StopIpForwardRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "StopIpForward", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new StopIpForwardResponse());
+    }
+
+    public StartAgentMonitorResponse startAgentMonitor(StartAgentMonitorRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "StartAgentMonitor", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new StartAgentMonitorResponse());
+    }
+
+    public StopAgentMonitorResponse stopAgentMonitor(StopAgentMonitorRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "StopAgentMonitor", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new StopAgentMonitorResponse());
+    }
+
+    public DescribeVncUrlResponse describeVncUrl(DescribeVncUrlRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeVncUrl", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeVncUrlResponse());
+    }
+
+    public ChangeNicNetworkTypeResponse changeNicNetworkType(ChangeNicNetworkTypeRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ChangeNicNetworkType", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ChangeNicNetworkTypeResponse());
+    }
+
+
     public DescribeCidrsResponse describeCidrs(DescribeCidrsRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeCidrs", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeCidrsResponse());
+    }
+
+    public DescribePoolsResponse describePools(DescribePoolsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribePools", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribePoolsResponse());
     }
 
     public DescribeCidrRegionsResponse describeCidrRegions(DescribeCidrRegionsRequest request) {
@@ -208,24 +259,9 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribeCidrRegionsResponse());
     }
 
-    public DescribeOwnCidrPriceResponse describeOwnCidrPrice(DescribeOwnCidrPriceRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "DescribeOwnCidrPrice", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new DescribeOwnCidrPriceResponse());
-    }
-
     public DescribeCidrPriceResponse describeCidrPrice(DescribeCidrPriceRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeCidrPrice", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeCidrPriceResponse());
-    }
-
-    public DescribeCidrUsedIpsResponse describeCidrUsedIps(DescribeCidrUsedIpsRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "DescribeCidrUsedIps", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new DescribeCidrUsedIpsResponse());
-    }
-
-    public CreateOwnCidrResponse createOwnCidr(CreateOwnCidrRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "CreateOwnCidr", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new CreateOwnCidrResponse());
     }
 
     public CreateCidrResponse createCidr(CreateCidrRequest request) {
@@ -233,47 +269,17 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new CreateCidrResponse());
     }
 
-    public DeleteCidrResponse deleteCidr(SingleCidrRequest request) {
+    public DeleteCidrResponse deleteCidr(DeleteCidrRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DeleteCidr", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DeleteCidrResponse());
     }
 
-    public RenewCidrResponse renewCidr(SingleCidrRequest request) {
+    public RenewCidrResponse renewCidr(RenewCidrRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "RenewCidr", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new RenewCidrResponse());
     }
 
-    public UnAssignCidrIpResponse unAssignCidrIp(UnAssignCidrIpRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "UnAssignCidrIp", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new UnAssignCidrIpResponse());
-    }
-
-    public AssignCidrIpResponse assignCidrIp(AssignCidrIpRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "AssignCidrIp", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new AssignCidrIpResponse());
-    }
-
-    public BatchAssignCidrIpResponse batchAssignCidrIp(BatchAssignCidrIpRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "BatchAssignCidrIp", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new BatchAssignCidrIpResponse());
-    }
-
-    public AvailableCidrIpResponse availableCidrIp(AvailableCidrIpRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "AvailableCidrIp", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new AvailableCidrIpResponse());
-    }
-
-    public ConfigEgressIpResponse configEgressIp(ConfigEgressIpRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "ConfigEgressIp", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new ConfigEgressIpResponse());
-    }
-
-    public DescribeOwnCidrsResponse describeOwnCidrs(DescribeOwnCidrsRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "DescribeOwnCidrs", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new DescribeOwnCidrsResponse());
-    }
-
-    public AvailableLanIpResponse availableLanIp(SingleCidrRequest request) {
+    public AvailableLanIpResponse availableLanIp(AvailableLanIpRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "AvailableLanIp", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new AvailableLanIpResponse());
     }
@@ -476,5 +482,66 @@ public class ZecClient extends AbstractClient {
     public DescribeKeyPairsResponse describeKeyPairs(DescribeKeyPairsRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeKeyPairs", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeKeyPairsResponse());
+    }
+
+    public DescribeEipRegionsResponse describeEipRegions(DescribeEipRegionsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeEipRegions", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeEipRegionsResponse());
+    }
+
+    public DescribeEipInternetChargeTypesResponse describeEipInternetChargeTypes(DescribeEipInternetChargeTypesRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeEipInternetChargeTypes", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeEipInternetChargeTypesResponse());
+    }
+
+    public DescribeEipsResponse describeEips(DescribeEipsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeEips", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeEipsResponse());
+    }
+
+    public CreateEipsResponse createEips(CreateEipsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "CreateEips", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new CreateEipsResponse());
+    }
+
+    public DeleteEipResponse deleteEip(DeleteEipRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DeleteEip", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DeleteEipResponse());
+    }
+
+    public RenewEipResponse renewEip(RenewEipRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "RenewEip", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new RenewEipResponse());
+    }
+
+    public BatchAttachEipLanIpResponse batchAttachEipLanIp(BatchAttachEipLanIpRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "BatchAttachEipLanIp", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new BatchAttachEipLanIpResponse());
+    }
+
+    public DetachEipLanIpResponse detachEipLanIp(DetachEipLanIpRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DetachEipLanIp", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DetachEipLanIpResponse());
+    }
+
+    public ConfigEipEgressIpResponse configEipEgressIp(ConfigEipEgressIpRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ConfigEipEgressIp", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ConfigEipEgressIpResponse());
+    }
+
+    public DescribeEipPriceResponse describeEipPrice(DescribeEipPriceRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeEipPrice", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeEipPriceResponse());
+    }
+
+    public ChangeEipInternetChargeTypeResponse changeEipInternetChargeType(ChangeEipInternetChargeTypeRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ChangeEipInternetChargeType", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ChangeEipInternetChargeTypeResponse());
+    }
+
+
+    public InquiryPriceCreateInstanceResponse inquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "InquiryPriceCreateInstance", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new InquiryPriceCreateInstanceResponse());
     }
 }

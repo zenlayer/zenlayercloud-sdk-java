@@ -27,4 +27,6 @@ public class RuleInfoRequest extends TeaModel {
 
     @Validation(required = true)
     public String cidrIp;
+
+    public String description;
 }
