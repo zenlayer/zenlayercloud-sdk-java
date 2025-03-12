@@ -13,12 +13,10 @@ public class CreateSubnetRequest extends TeaModel {
     @Validation(required = true)
     public String stackType;
 
-    @Validation
     public String ipv6Type;
 
     @Validation(required = true)
     public String name;
 
-    @Validation(required = true)
     public String cidrBlock;
 }

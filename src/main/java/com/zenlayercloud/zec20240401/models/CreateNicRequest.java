@@ -19,4 +19,6 @@ public class CreateNicRequest extends TeaModel {
     public String internetChargeType;
 
     public String resourceGroupId;
+
+    public String clusterId;
 }

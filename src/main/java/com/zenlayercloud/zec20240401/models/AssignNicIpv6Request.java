@@ -14,4 +14,6 @@ public class AssignNicIpv6Request extends TeaModel {
     public Integer bandwidth;
 
     public BigDecimal packageSize;
+
+    public String clusterId;
 }
