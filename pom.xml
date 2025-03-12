@@ -10,7 +10,7 @@
 
     <groupId>com.zenlayer</groupId>
     <artifactId>zenlayercloud-sdk-java</artifactId>
-    <version>0.6.19</version>
+    <version>0.6.20</version>
 
     <name>zenlayercloud-sdk-java</name>
     <url>https://console.zenlayer.com/</url>

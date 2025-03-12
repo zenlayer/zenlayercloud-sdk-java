@@ -9,4 +9,6 @@ public class ChangeEipInternetChargeTypeRequest extends TeaModel {
 
     @Validation(required = true)
     public String internetChargeType;
+
+    public String clusterId;
 }
