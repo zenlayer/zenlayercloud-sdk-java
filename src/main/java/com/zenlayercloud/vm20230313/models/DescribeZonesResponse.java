@@ -42,5 +42,15 @@ public class DescribeZonesResponse extends TeaModel {
          */
         public String  supportNetworkType;
 
+        /**
+         * 是否支持IPv6
+         */
+        public Boolean supportIpv6;
+
+        /**
+         * 是否支持CPU透传
+         */
+        public Boolean supportCpuPassThrough;
+
     }
 }

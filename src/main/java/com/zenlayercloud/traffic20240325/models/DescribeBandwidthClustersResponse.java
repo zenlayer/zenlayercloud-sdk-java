@@ -44,10 +44,20 @@ public class DescribeBandwidthClustersResponse extends TeaModel {
         public String location;
 
         /**
+         * 带宽组包含的城市信息。
+         */
+        public List<CityInfo> cities;
+
+        /**
          * 创建时间。
          * 格式为：YYYY-MM-DDThh:mm:ssZ。
          */
         public String createTime;
 
+    }
+
+    public static class CityInfo extends TeaModel {
+        public String cityName;
+        public String cityCode;
     }
 }

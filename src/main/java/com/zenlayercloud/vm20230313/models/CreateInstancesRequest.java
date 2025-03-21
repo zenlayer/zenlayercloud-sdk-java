@@ -93,6 +93,21 @@ public class CreateInstancesRequest extends TeaModel {
     public String subnetId;
 
     /**
+     * 是否开启CIDR IPv6
+     */
+    public Boolean enableIpv6;
+
+    /**
+     * 是否开启CPU 透传
+     */
+    public Boolean cpuPassThrough;
+
+    /**
+     * 初始化脚本
+     */
+    public String initScript;
+
+    /**
      * 系统盘配置
      */
     public SystemDisk systemDisk;
@@ -106,6 +121,20 @@ public class CreateInstancesRequest extends TeaModel {
      * 安全组ID
      */
     public String securityGroupId;
+
+    /**
+     * 网卡
+     */
+    public Nic nic;
+
+    /**
+     * 带宽组ID
+     */
+    public String clusterId;
+
+    public String networkMode;
+
+    public Boolean diskPreAllocated;
 
 }
 
