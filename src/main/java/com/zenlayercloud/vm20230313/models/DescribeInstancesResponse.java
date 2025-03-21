@@ -92,6 +92,11 @@ public class DescribeInstancesResponse extends TeaModel {
         public List<String> publicIpAddresses;
 
         /**
+         * 公网IPv6集合
+         */
+        public List<String> publicIpv6Addresses;
+
+        /**
          * 内网IP集合
          */
         public List<String>  privateIpAddresses;
@@ -156,6 +161,11 @@ public class DescribeInstancesResponse extends TeaModel {
          * 密钥对ID
          */
         public String keyId;
+
+        /**
+         * 网卡
+         */
+        public Nic nic;
 
     }
 }

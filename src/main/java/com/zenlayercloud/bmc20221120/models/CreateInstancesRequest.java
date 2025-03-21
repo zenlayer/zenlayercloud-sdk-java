@@ -149,4 +149,9 @@ public class CreateInstancesRequest extends TeaModel {
      */
     public Boolean enablePrimaryIPv6;
 
+    /**
+     * 带宽组ID。
+     */
+    public String clusterId;
+
 }

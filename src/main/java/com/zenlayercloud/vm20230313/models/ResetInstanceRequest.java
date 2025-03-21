@@ -35,4 +35,14 @@ public class ResetInstanceRequest extends TeaModel {
      * 密钥对ID
      */
     public String keyId;
+
+    /**
+     * 公网网卡名
+     */
+    public String wanName;
+
+    /**
+     * 内网网卡名
+     */
+    public String lanName;
 }
