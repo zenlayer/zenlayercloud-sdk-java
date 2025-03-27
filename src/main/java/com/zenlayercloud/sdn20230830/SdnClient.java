@@ -10,94 +10,7 @@ import com.aliyun.teautil.models.RuntimeOptions;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
-import com.zenlayercloud.sdn20230830.models.AddCloudRouterEdgePointsRequest;
-import com.zenlayercloud.sdn20230830.models.AddCloudRouterEdgePointsResponse;
-import com.zenlayercloud.sdn20230830.models.CreateCloudRouterRequest;
-import com.zenlayercloud.sdn20230830.models.CreateCloudRouterResponse;
-import com.zenlayercloud.sdn20230830.models.CreatePortRequest;
-import com.zenlayercloud.sdn20230830.models.CreatePortResponse;
-import com.zenlayercloud.sdn20230830.models.CreatePrivateConnectRequest;
-import com.zenlayercloud.sdn20230830.models.CreatePrivateConnectResponse;
-import com.zenlayercloud.sdn20230830.models.DeleteCloudRouterEdgePointRequest;
-import com.zenlayercloud.sdn20230830.models.DeleteCloudRouterEdgePointResponse;
-import com.zenlayercloud.sdn20230830.models.DeleteCloudRouterRequest;
-import com.zenlayercloud.sdn20230830.models.DeleteCloudRouterResponse;
-import com.zenlayercloud.sdn20230830.models.DeletePrivateConnectRequest;
-import com.zenlayercloud.sdn20230830.models.DeletePrivateConnectResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeAWSRegionsRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeAWSRegionsResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeAWSVlanUsageRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeAWSVlanUsageResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeAliCloudRegionsRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeAliCloudRegionsResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeAliCloudVlanUsageRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeAliCloudVlanUsageResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeAzureRegionsRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeAzureRegionsResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeAzureVlanUsageRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeAzureVlanUsageResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterAvailablePortsRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterAvailablePortsResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterAvailableVpcsRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterAvailableVpcsResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterEdgePointTrafficRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeCloudRouterEdgePointTrafficResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeCloudRoutersRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeCloudRoutersResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeDataCenterPortPriceRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeDataCenterPortPriceResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeDatacentersRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeDatacentersResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeGoogleRegionsRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeGoogleRegionsResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeGoogleVlanUsageRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeGoogleVlanUsageResponse;
-import com.zenlayercloud.sdn20230830.models.DescribePortTrafficRequest;
-import com.zenlayercloud.sdn20230830.models.DescribePortTrafficResponse;
-import com.zenlayercloud.sdn20230830.models.DescribePortUsableVlanRequest;
-import com.zenlayercloud.sdn20230830.models.DescribePortUsableVlanResponse;
-import com.zenlayercloud.sdn20230830.models.DescribePortsRequest;
-import com.zenlayercloud.sdn20230830.models.DescribePortsResponse;
-import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectAvailablePortsRequest;
-import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectAvailablePortsResponse;
-import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectAvailableSubnetsRequest;
-import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectAvailableSubnetsResponse;
-import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectTrafficRequest;
-import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectTrafficResponse;
-import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectsRequest;
-import com.zenlayercloud.sdn20230830.models.DescribePrivateConnectsResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeTencentRegionsRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeTencentRegionsResponse;
-import com.zenlayercloud.sdn20230830.models.DescribeTencentVlanUsageRequest;
-import com.zenlayercloud.sdn20230830.models.DescribeTencentVlanUsageResponse;
-import com.zenlayercloud.sdn20230830.models.DestroyCloudRouterRequest;
-import com.zenlayercloud.sdn20230830.models.DestroyCloudRouterResponse;
-import com.zenlayercloud.sdn20230830.models.DestroyPortRequest;
-import com.zenlayercloud.sdn20230830.models.DestroyPortResponse;
-import com.zenlayercloud.sdn20230830.models.DestroyPrivateConnectRequest;
-import com.zenlayercloud.sdn20230830.models.DestroyPrivateConnectResponse;
-import com.zenlayercloud.sdn20230830.models.InquiryCreatePrivateConnectPriceRequest;
-import com.zenlayercloud.sdn20230830.models.InquiryCreatePrivateConnectPriceResponse;
-import com.zenlayercloud.sdn20230830.models.ModifyCloudRouterEdgePointBandwidthRequest;
-import com.zenlayercloud.sdn20230830.models.ModifyCloudRouterEdgePointBandwidthResponse;
-import com.zenlayercloud.sdn20230830.models.ModifyCloudRouterEdgePointRequest;
-import com.zenlayercloud.sdn20230830.models.ModifyCloudRouterEdgePointResponse;
-import com.zenlayercloud.sdn20230830.models.ModifyCloudRoutersAttributeRequest;
-import com.zenlayercloud.sdn20230830.models.ModifyCloudRoutersAttributeResponse;
-import com.zenlayercloud.sdn20230830.models.ModifyPortAttributeRequest;
-import com.zenlayercloud.sdn20230830.models.ModifyPortAttributeResponse;
-import com.zenlayercloud.sdn20230830.models.ModifyPrivateConnectBandwidthRequest;
-import com.zenlayercloud.sdn20230830.models.ModifyPrivateConnectBandwidthResponse;
-import com.zenlayercloud.sdn20230830.models.ModifyPrivateConnectsAttributeRequest;
-import com.zenlayercloud.sdn20230830.models.ModifyPrivateConnectsAttributeResponse;
-import com.zenlayercloud.sdn20230830.models.RenewCloudRouterRequest;
-import com.zenlayercloud.sdn20230830.models.RenewCloudRouterResponse;
-import com.zenlayercloud.sdn20230830.models.RenewPortRequest;
-import com.zenlayercloud.sdn20230830.models.RenewPortResponse;
-import com.zenlayercloud.sdn20230830.models.RenewPrivateConnectRequest;
-import com.zenlayercloud.sdn20230830.models.RenewPrivateConnectResponse;
-import com.zenlayercloud.sdn20230830.models.TerminatePortRequest;
-import com.zenlayercloud.sdn20230830.models.TerminatePortResponse;
+import com.zenlayercloud.sdn20230830.models.*;
 
 import java.util.Map;
 
@@ -118,6 +31,37 @@ public class SdnClient extends AbstractClient {
     public DescribeDatacentersResponse describeDatacenters(DescribeDatacentersRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeDatacenters", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeDatacentersResponse());
+    }
+
+    public DescribeDatacentersWithServiceResponse describeDatacentersWithService(DescribeDatacentersWithServiceRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeDatacentersWithService", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeDatacentersWithServiceResponse());
+    }
+
+    public DescribeVirtualEdgeDatacentersResponse describeVirtualEdgeDatacenters(DescribeVirtualEdgeDatacentersRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeVirtualEdgeDatacenters", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeVirtualEdgeDatacentersResponse());
+    }
+
+    public QueryDataCenterPortPriceResponse queryDataCenterPortPrice(QueryDataCenterPortPriceRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "QueryDataCenterPortPrice", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new QueryDataCenterPortPriceResponse());
+    }
+
+    public QueryPrivateConnectBandwidthPriceResponse queryPrivateConnectBandwidthPrice(QueryPrivateConnectBandwidthPriceRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "QueryPrivateConnectBandwidthPrice", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new QueryPrivateConnectBandwidthPriceResponse());
+    }
+
+
+    public QueryCloudRouterBandwidthPriceResponse queryCloudRouterBandwidthPrice(QueryCloudRouterBandwidthPriceRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "QueryCloudRouterBandwidthPrice", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new QueryCloudRouterBandwidthPriceResponse());
+    }
+
+    public QueryCloudOnrampPriceResponse queryCloudOnrampPrice(QueryCloudOnrampPriceRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "QueryCloudOnrampPrice", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new QueryCloudOnrampPriceResponse());
     }
 
     public CreatePortResponse createPort(CreatePortRequest request) {

@@ -54,6 +54,12 @@ public class Price extends TeaModel {
      */
     public String chargeUnit;
 
+    public Double excessUnitPrice;
+
+    public Double excessDiscountUnitPrice;
+
+    public String excessAmountUnit;
+
     /**
      * 后付费阶梯价格。
      * 后付费模式使用，如果非阶梯价格，该项为null。
