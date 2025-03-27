@@ -59,4 +59,10 @@ public class DatacenterInfo extends TeaModel {
      */
     public Boolean isPortAvailable;
 
+    /**
+     * 数据中心最大可用的带宽。单位：Mbps。
+     * 该字段仅在 DescribeVirtualEdgeDatacenters 可取值。
+     */
+    public Integer availableBandwidth;
+
 }

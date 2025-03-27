@@ -26,6 +26,11 @@ public class CreateCloudRouterEdgePoint extends TeaModel {
     public Integer bandwidthMbps;
 
     /**
+     * 弹性算力产品内边界网关 ID。
+     */
+    public String zbgId;
+
+    /**
      * 物理端口ID。
      */
     public String portId;
@@ -86,4 +91,55 @@ public class CreateCloudRouterEdgePoint extends TeaModel {
      * 高可用类型
      */
     public String haType;
+
+    /**
+     * IPSec隧道。可选值：
+     * FQDN
+     * RemoteIP
+     */
+    public String ipSecTunnel;
+
+    /**
+     * 预共享密钥。
+     */
+    public String psk;
+
+    /**
+     * 您的公网IP地址。
+     * 当 ipSecTunnel 为 RemoteIP 时必传。
+     */
+    public String customerPublicIP;
+
+    /**
+     * 您的内网IP地址。
+     */
+    public String customerPrivateIP;
+
+    /**
+     * 边缘网关内网IP地址。
+     */
+    public String virtualEdgePrivateIP;
+
+    /**
+     * 是否启用健康检查。
+     * 默认值为 false 不开启。
+     */
+    public Boolean enableHealthCheck;
+
+    /**
+     * BGP连接配置信息。
+     * BGP和静态路由配置二者二选其一。
+     */
+    public IPSecBGPConnection ipSecBgpConnection;
+
+    /**
+     * 静态路由配置信息。
+     * BGP和静态路由配置二者二选其一。
+     */
+    public List<IPSecStaticRoute> ipSecStaticRoutes;
+
+    /**
+     * 备用IPSec配置。
+     */
+    public BackupIPSecConfig backupIpSec;
 }
