@@ -21,5 +21,7 @@ public class DescribeEipTrafficRequest extends TeaModel {
 
     public String endTime;
 
+    public Integer step;
+
     public String wanIp;
 }

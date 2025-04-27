@@ -21,6 +21,8 @@ public class DescribeEipsResponse extends TeaModel {
 
         public String regionId;
 
+        public String peerRegionId;
+
         public Boolean isDefault;
 
         public String status;

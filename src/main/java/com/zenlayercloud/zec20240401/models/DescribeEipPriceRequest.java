@@ -21,4 +21,8 @@ public class DescribeEipPriceRequest extends TeaModel {
     public BigDecimal flowPackage;
 
     public String cidrId;
+
+    public String clusterId;
+
+    public String peerRegionId;
 }

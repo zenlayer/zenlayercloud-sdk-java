@@ -48,6 +48,17 @@ public class SdnClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new QueryDataCenterPortPriceResponse());
     }
 
+    public QueryDataCenterPortPricesResponse queryDataCenterPortPrices(QueryDataCenterPortPricesRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "QueryDataCenterPortPrices", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new QueryDataCenterPortPricesResponse());
+    }
+
+
+    public QueryPrivateConnectPriceResponse queryPrivateConnectPrice(QueryPrivateConnectPriceRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "QueryPrivateConnectPrice", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new QueryPrivateConnectPriceResponse());
+    }
+
     public QueryPrivateConnectBandwidthPriceResponse queryPrivateConnectBandwidthPrice(QueryPrivateConnectBandwidthPriceRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "QueryPrivateConnectBandwidthPrice", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new QueryPrivateConnectBandwidthPriceResponse());

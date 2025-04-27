@@ -23,4 +23,6 @@ public class StopInstancesRequest extends TeaModel {
      */
     @Validation(required = true)
     public List<String> instanceIds;
+
+    public Boolean forceShutdown;
 }

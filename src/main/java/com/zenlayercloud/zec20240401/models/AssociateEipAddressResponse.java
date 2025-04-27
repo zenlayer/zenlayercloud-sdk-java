@@ -2,7 +2,7 @@
  * Zenlayer.com Inc.
  * Copyright (c) 2014-2023 All Rights Reserved.
  */
-package com.zenlayercloud.bmc20221120.models;
+package com.zenlayercloud.zec20240401.models;
 
 import com.aliyun.tea.TeaModel;
 
