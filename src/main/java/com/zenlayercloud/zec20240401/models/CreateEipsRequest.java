@@ -32,4 +32,6 @@ public class CreateEipsRequest extends TeaModel {
     public String resourceGroupId;
 
     public String clusterId;
+
+    public String peerRegionId;
 }

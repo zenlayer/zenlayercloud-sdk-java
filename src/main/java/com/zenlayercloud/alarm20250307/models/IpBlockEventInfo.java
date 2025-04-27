@@ -5,6 +5,8 @@ import com.aliyun.tea.TeaModel;
 public class IpBlockEventInfo extends TeaModel {
     public String ip;
 
+    public String internalIps;
+
     public String region;
 
     public String resourceGroup;

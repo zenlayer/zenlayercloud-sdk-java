@@ -35,6 +35,8 @@ public class CreateZecInstancesRequest extends TeaModel {
     @Validation(required = true)
     public String subnetId;
 
+    public String lanIp;
+
     public SystemDisk systemDisk;
 
     public List<DataDisk> dataDisks;

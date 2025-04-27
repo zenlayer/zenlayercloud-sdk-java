@@ -10,190 +10,9 @@ import com.aliyun.teautil.models.RuntimeOptions;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
-import com.zenlayercloud.zec20240401.models.AssignNicIpv4Request;
-import com.zenlayercloud.zec20240401.models.AssignNicIpv4Response;
-import com.zenlayercloud.zec20240401.models.AssignNicIpv6Request;
-import com.zenlayercloud.zec20240401.models.AssignNicIpv6Response;
-import com.zenlayercloud.zec20240401.models.AssignSecurityGroupVpcRequest;
-import com.zenlayercloud.zec20240401.models.AssignSecurityGroupVpcResponse;
-import com.zenlayercloud.zec20240401.models.AttachDisksRequest;
-import com.zenlayercloud.zec20240401.models.AttachDisksResponse;
-import com.zenlayercloud.zec20240401.models.AttachNicRequest;
-import com.zenlayercloud.zec20240401.models.AttachNicResponse;
-import com.zenlayercloud.zec20240401.models.AvailableLanIpRequest;
-import com.zenlayercloud.zec20240401.models.AvailableLanIpResponse;
-import com.zenlayercloud.zec20240401.models.BatchAssignNicIpv4Request;
-import com.zenlayercloud.zec20240401.models.BatchAssignNicIpv4Response;
-import com.zenlayercloud.zec20240401.models.BatchAttachEipLanIpRequest;
-import com.zenlayercloud.zec20240401.models.BatchAttachEipLanIpResponse;
-import com.zenlayercloud.zec20240401.models.ChangeDisksAttachRequest;
-import com.zenlayercloud.zec20240401.models.ChangeDisksAttachResponse;
-import com.zenlayercloud.zec20240401.models.ChangeEipInternetChargeTypeRequest;
-import com.zenlayercloud.zec20240401.models.ChangeEipInternetChargeTypeResponse;
-import com.zenlayercloud.zec20240401.models.ChangeNicNetworkTypeRequest;
-import com.zenlayercloud.zec20240401.models.ChangeNicNetworkTypeResponse;
-import com.zenlayercloud.zec20240401.models.ConfigEipEgressIpRequest;
-import com.zenlayercloud.zec20240401.models.ConfigEipEgressIpResponse;
-import com.zenlayercloud.zec20240401.models.ConfigureSecurityGroupRulesRequest;
-import com.zenlayercloud.zec20240401.models.ConfigureSecurityGroupRulesResponse;
-import com.zenlayercloud.zec20240401.models.CreateCidrRequest;
-import com.zenlayercloud.zec20240401.models.CreateCidrResponse;
-import com.zenlayercloud.zec20240401.models.CreateDisksRequest;
-import com.zenlayercloud.zec20240401.models.CreateDisksResponse;
-import com.zenlayercloud.zec20240401.models.CreateEipsRequest;
-import com.zenlayercloud.zec20240401.models.CreateEipsResponse;
-import com.zenlayercloud.zec20240401.models.CreateInstancesRequest;
-import com.zenlayercloud.zec20240401.models.CreateInstancesResponse;
-import com.zenlayercloud.zec20240401.models.CreateNicRequest;
-import com.zenlayercloud.zec20240401.models.CreateNicResponse;
-import com.zenlayercloud.zec20240401.models.CreateRouteRequest;
-import com.zenlayercloud.zec20240401.models.CreateRouteResponse;
-import com.zenlayercloud.zec20240401.models.CreateSecurityGroupRequest;
-import com.zenlayercloud.zec20240401.models.CreateSecurityGroupResponse;
-import com.zenlayercloud.zec20240401.models.CreateSubnetRequest;
-import com.zenlayercloud.zec20240401.models.CreateSubnetResponse;
-import com.zenlayercloud.zec20240401.models.CreateVpcRequest;
-import com.zenlayercloud.zec20240401.models.CreateVpcResponse;
-import com.zenlayercloud.zec20240401.models.CreateZecInstancesRequest;
-import com.zenlayercloud.zec20240401.models.CreateZecInstancesResponse;
-import com.zenlayercloud.zec20240401.models.DeleteCidrRequest;
-import com.zenlayercloud.zec20240401.models.DeleteCidrResponse;
-import com.zenlayercloud.zec20240401.models.DeleteEipRequest;
-import com.zenlayercloud.zec20240401.models.DeleteEipResponse;
-import com.zenlayercloud.zec20240401.models.DeleteNicRequest;
-import com.zenlayercloud.zec20240401.models.DeleteNicResponse;
-import com.zenlayercloud.zec20240401.models.DeleteRouteRequest;
-import com.zenlayercloud.zec20240401.models.DeleteRouteResponse;
-import com.zenlayercloud.zec20240401.models.DeleteSecurityGroupRequest;
-import com.zenlayercloud.zec20240401.models.DeleteSecurityGroupResponse;
-import com.zenlayercloud.zec20240401.models.DeleteSubnetRequest;
-import com.zenlayercloud.zec20240401.models.DeleteSubnetResponse;
-import com.zenlayercloud.zec20240401.models.DeleteVpcRequest;
-import com.zenlayercloud.zec20240401.models.DeleteVpcResponse;
-import com.zenlayercloud.zec20240401.models.DescribeCidrPriceRequest;
-import com.zenlayercloud.zec20240401.models.DescribeCidrPriceResponse;
-import com.zenlayercloud.zec20240401.models.DescribeCidrRegionsRequest;
-import com.zenlayercloud.zec20240401.models.DescribeCidrRegionsResponse;
-import com.zenlayercloud.zec20240401.models.DescribeCidrsRequest;
-import com.zenlayercloud.zec20240401.models.DescribeCidrsResponse;
-import com.zenlayercloud.zec20240401.models.DescribeDiskCategoryRequest;
-import com.zenlayercloud.zec20240401.models.DescribeDiskCategoryResponse;
-import com.zenlayercloud.zec20240401.models.DescribeDiskRegionsRequest;
-import com.zenlayercloud.zec20240401.models.DescribeDiskRegionsResponse;
-import com.zenlayercloud.zec20240401.models.DescribeDisksRequest;
-import com.zenlayercloud.zec20240401.models.DescribeDisksResponse;
-import com.zenlayercloud.zec20240401.models.DescribeEipInternetChargeTypesRequest;
-import com.zenlayercloud.zec20240401.models.DescribeEipInternetChargeTypesResponse;
-import com.zenlayercloud.zec20240401.models.DescribeEipPriceRequest;
-import com.zenlayercloud.zec20240401.models.DescribeEipPriceResponse;
-import com.zenlayercloud.zec20240401.models.DescribeEipRegionsRequest;
-import com.zenlayercloud.zec20240401.models.DescribeEipRegionsResponse;
-import com.zenlayercloud.zec20240401.models.DescribeEipTrafficRequest;
-import com.zenlayercloud.zec20240401.models.DescribeEipTrafficResponse;
-import com.zenlayercloud.zec20240401.models.DescribeEipsRequest;
-import com.zenlayercloud.zec20240401.models.DescribeEipsResponse;
-import com.zenlayercloud.zec20240401.models.DescribeImagesRequest;
-import com.zenlayercloud.zec20240401.models.DescribeImagesResponse;
-import com.zenlayercloud.zec20240401.models.DescribeInstanceMonitorDataRequest;
-import com.zenlayercloud.zec20240401.models.DescribeInstanceMonitorDataResponse;
-import com.zenlayercloud.zec20240401.models.DescribeInstancesRequest;
-import com.zenlayercloud.zec20240401.models.DescribeInstancesResponse;
-import com.zenlayercloud.zec20240401.models.DescribeInstancesStatusRequest;
-import com.zenlayercloud.zec20240401.models.DescribeInstancesStatusResponse;
-import com.zenlayercloud.zec20240401.models.DescribeKeyPairsRequest;
-import com.zenlayercloud.zec20240401.models.DescribeKeyPairsResponse;
-import com.zenlayercloud.zec20240401.models.DescribeNicRegionsRequest;
-import com.zenlayercloud.zec20240401.models.DescribeNicRegionsResponse;
-import com.zenlayercloud.zec20240401.models.DescribeNicsRequest;
-import com.zenlayercloud.zec20240401.models.DescribeNicsResponse;
-import com.zenlayercloud.zec20240401.models.DescribePoolsRequest;
-import com.zenlayercloud.zec20240401.models.DescribePoolsResponse;
-import com.zenlayercloud.zec20240401.models.DescribeRoutesRequest;
-import com.zenlayercloud.zec20240401.models.DescribeRoutesResponse;
-import com.zenlayercloud.zec20240401.models.DescribeSecurityGroupRuleRequest;
-import com.zenlayercloud.zec20240401.models.DescribeSecurityGroupRuleResponse;
-import com.zenlayercloud.zec20240401.models.DescribeSecurityGroupsRequest;
-import com.zenlayercloud.zec20240401.models.DescribeSecurityGroupsResponse;
-import com.zenlayercloud.zec20240401.models.DescribeSubnetRegionsRequest;
-import com.zenlayercloud.zec20240401.models.DescribeSubnetRegionsResponse;
-import com.zenlayercloud.zec20240401.models.DescribeSubnetsRequest;
-import com.zenlayercloud.zec20240401.models.DescribeSubnetsResponse;
-import com.zenlayercloud.zec20240401.models.DescribeTimeZonesRequest;
-import com.zenlayercloud.zec20240401.models.DescribeTimeZonesResponse;
-import com.zenlayercloud.zec20240401.models.DescribeVncUrlRequest;
-import com.zenlayercloud.zec20240401.models.DescribeVncUrlResponse;
-import com.zenlayercloud.zec20240401.models.DescribeVpcsRequest;
-import com.zenlayercloud.zec20240401.models.DescribeVpcsResponse;
-import com.zenlayercloud.zec20240401.models.DescribeZoneInstanceConfigInfosRequest;
-import com.zenlayercloud.zec20240401.models.DescribeZoneInstanceConfigInfosResponse;
-import com.zenlayercloud.zec20240401.models.DescribeZonesRequest;
-import com.zenlayercloud.zec20240401.models.DescribeZonesResponse;
-import com.zenlayercloud.zec20240401.models.DetachDisksRequest;
-import com.zenlayercloud.zec20240401.models.DetachDisksResponse;
-import com.zenlayercloud.zec20240401.models.DetachEipLanIpRequest;
-import com.zenlayercloud.zec20240401.models.DetachEipLanIpResponse;
-import com.zenlayercloud.zec20240401.models.DetachNicRequest;
-import com.zenlayercloud.zec20240401.models.DetachNicResponse;
-import com.zenlayercloud.zec20240401.models.InquiryPriceCreateDisksRequest;
-import com.zenlayercloud.zec20240401.models.InquiryPriceCreateDisksResponse;
-import com.zenlayercloud.zec20240401.models.InquiryPriceCreateInstanceRequest;
-import com.zenlayercloud.zec20240401.models.InquiryPriceCreateInstanceResponse;
-import com.zenlayercloud.zec20240401.models.InquiryPricePublicIpv6Request;
-import com.zenlayercloud.zec20240401.models.InquiryPricePublicIpv6Response;
-import com.zenlayercloud.zec20240401.models.ModifyDisksAttributesRequest;
-import com.zenlayercloud.zec20240401.models.ModifyDisksAttributesResponse;
-import com.zenlayercloud.zec20240401.models.ModifyDisksResourceGroupRequest;
-import com.zenlayercloud.zec20240401.models.ModifyDisksResourceGroupResponse;
-import com.zenlayercloud.zec20240401.models.ModifyInstanceTypeRequest;
-import com.zenlayercloud.zec20240401.models.ModifyInstanceTypeResponse;
-import com.zenlayercloud.zec20240401.models.ModifyInstancesAttributeRequest;
-import com.zenlayercloud.zec20240401.models.ModifyInstancesAttributeResponse;
-import com.zenlayercloud.zec20240401.models.ModifyInstancesResourceGroupRequest;
-import com.zenlayercloud.zec20240401.models.ModifyInstancesResourceGroupResponse;
-import com.zenlayercloud.zec20240401.models.ModifyNicsAttributeRequest;
-import com.zenlayercloud.zec20240401.models.ModifyNicsAttributeResponse;
-import com.zenlayercloud.zec20240401.models.ModifySecurityGroupsAttributeRequest;
-import com.zenlayercloud.zec20240401.models.ModifySecurityGroupsAttributeResponse;
-import com.zenlayercloud.zec20240401.models.ModifySubnetStackTypeRequest;
-import com.zenlayercloud.zec20240401.models.ModifySubnetStackTypeResponse;
-import com.zenlayercloud.zec20240401.models.ModifySubnetsAttributeRequest;
-import com.zenlayercloud.zec20240401.models.ModifySubnetsAttributeResponse;
-import com.zenlayercloud.zec20240401.models.ModifyVpcsAttributeRequest;
-import com.zenlayercloud.zec20240401.models.ModifyVpcsAttributeResponse;
-import com.zenlayercloud.zec20240401.models.RebootInstancesRequest;
-import com.zenlayercloud.zec20240401.models.RebootInstancesResponse;
-import com.zenlayercloud.zec20240401.models.ReleaseDiskRequest;
-import com.zenlayercloud.zec20240401.models.ReleaseDiskResponse;
-import com.zenlayercloud.zec20240401.models.ReleaseInstancesRequest;
-import com.zenlayercloud.zec20240401.models.ReleaseInstancesResponse;
-import com.zenlayercloud.zec20240401.models.RenewCidrRequest;
-import com.zenlayercloud.zec20240401.models.RenewCidrResponse;
-import com.zenlayercloud.zec20240401.models.RenewDiskRequest;
-import com.zenlayercloud.zec20240401.models.RenewDiskResponse;
-import com.zenlayercloud.zec20240401.models.RenewEipRequest;
-import com.zenlayercloud.zec20240401.models.RenewEipResponse;
+import com.zenlayercloud.zec20240401.models.*;
 import com.zenlayercloud.zec20240401.models.ResetInstancePasswordRequest;
 import com.zenlayercloud.zec20240401.models.ResetInstancePasswordResponse;
-import com.zenlayercloud.zec20240401.models.ResetInstanceRequest;
-import com.zenlayercloud.zec20240401.models.ResetInstanceResponse;
-import com.zenlayercloud.zec20240401.models.StartAgentMonitorRequest;
-import com.zenlayercloud.zec20240401.models.StartAgentMonitorResponse;
-import com.zenlayercloud.zec20240401.models.StartInstancesRequest;
-import com.zenlayercloud.zec20240401.models.StartInstancesResponse;
-import com.zenlayercloud.zec20240401.models.StartIpForwardRequest;
-import com.zenlayercloud.zec20240401.models.StartIpForwardResponse;
-import com.zenlayercloud.zec20240401.models.StopAgentMonitorRequest;
-import com.zenlayercloud.zec20240401.models.StopAgentMonitorResponse;
-import com.zenlayercloud.zec20240401.models.StopInstancesRequest;
-import com.zenlayercloud.zec20240401.models.StopInstancesResponse;
-import com.zenlayercloud.zec20240401.models.StopIpForwardRequest;
-import com.zenlayercloud.zec20240401.models.StopIpForwardResponse;
-import com.zenlayercloud.zec20240401.models.TerminateDiskRequest;
-import com.zenlayercloud.zec20240401.models.TerminateDiskResponse;
-import com.zenlayercloud.zec20240401.models.UnAssignNicIpv4Request;
-import com.zenlayercloud.zec20240401.models.UnAssignNicIpv4Response;
-import com.zenlayercloud.zec20240401.models.UnAssignSecurityGroupVpcRequest;
-import com.zenlayercloud.zec20240401.models.UnAssignSecurityGroupVpcResponse;
 
 import java.util.Map;
 
@@ -317,6 +136,7 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new StopInstancesResponse());
     }
 
+
     public RebootInstancesResponse rebootInstances(RebootInstancesRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "RebootInstances", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new RebootInstancesResponse());
@@ -376,6 +196,7 @@ public class ZecClient extends AbstractClient {
         Map<String, ?> rspStr = super.callApi(request, "ChangeNicNetworkType", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new ChangeNicNetworkTypeResponse());
     }
+
 
     public DescribeCidrsResponse describeCidrs(DescribeCidrsRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeCidrs", new RuntimeOptions());
@@ -617,6 +438,12 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribeEipRegionsResponse());
     }
 
+
+    public DescribeEipRemoteRegionsResponse describeEipRemoteRegions(DescribeEipRemoteRegionsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeEipRemoteRegions", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeEipRemoteRegionsResponse());
+    }
+
     public DescribeEipInternetChargeTypesResponse describeEipInternetChargeTypes(DescribeEipInternetChargeTypesRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeEipInternetChargeTypes", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeEipInternetChargeTypesResponse());
@@ -652,6 +479,16 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DetachEipLanIpResponse());
     }
 
+    public AssociateEipAddressResponse associateEipAddress(AssociateEipAddressRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "AssociateEipAddress", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new AssociateEipAddressResponse());
+    }
+
+    public UnAssociateEipAddressResponse unAssociateEipAddress(UnassociateEipAddressRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "UnassociateEipAddress", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new UnAssociateEipAddressResponse());
+    }
+
     public ConfigEipEgressIpResponse configEipEgressIp(ConfigEipEgressIpRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "ConfigEipEgressIp", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new ConfigEipEgressIpResponse());
@@ -667,13 +504,41 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new ChangeEipInternetChargeTypeResponse());
     }
 
+
     public InquiryPriceCreateInstanceResponse inquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "InquiryPriceCreateInstance", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new InquiryPriceCreateInstanceResponse());
     }
 
+
     public DescribeEipTrafficResponse describeEipTraffic(DescribeEipTrafficRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeEipTraffic", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeEipTrafficResponse());
+    }
+
+
+    public CreateBorderGatewayResponse createBorderGateway(CreateBorderGatewayRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "CreateBorderGateway", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new CreateBorderGatewayResponse());
+    }
+
+    public DeleteBorderGatewayResponse deleteBorderGateway(DeleteBorderGatewayRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DeleteBorderGateway", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DeleteBorderGatewayResponse());
+    }
+
+    public DescribeBorderGatewaysResponse describeBorderGateways(DescribeBorderGatewaysRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeBorderGateways", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeBorderGatewaysResponse());
+    }
+
+    public ModifyBorderGatewaysAttributeResponse modifyBorderGatewaysAttribute(ModifyBorderGatewaysAttributeRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifyBorderGatewaysAttribute", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ModifyBorderGatewaysAttributeResponse());
+    }
+
+    public ModifyBorderGatewayAsnResponse modifyBorderGatewayAsn(ModifyBorderGatewayAsnRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifyBorderGatewayAsn", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ModifyBorderGatewayAsnResponse());
     }
 }
