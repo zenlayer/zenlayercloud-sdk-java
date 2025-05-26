@@ -29,6 +29,8 @@ import com.zenlayercloud.zga20230706.models.DescribeAcceleratorLogsRequest;
 import com.zenlayercloud.zga20230706.models.DescribeAcceleratorLogsResponse;
 import com.zenlayercloud.zga20230706.models.DescribeAcceleratorTrafficRequest;
 import com.zenlayercloud.zga20230706.models.DescribeAcceleratorTrafficResponse;
+import com.zenlayercloud.zga20230706.models.DescribeAcceleratorMetricsRequest;
+import com.zenlayercloud.zga20230706.models.DescribeAcceleratorMetricsResponse;
 import com.zenlayercloud.zga20230706.models.DescribeAcceleratorsRequest;
 import com.zenlayercloud.zga20230706.models.DescribeAcceleratorsResponse;
 import com.zenlayercloud.zga20230706.models.DescribeCertificatesRequest;
@@ -247,5 +249,12 @@ public class ZgaClient extends AbstractClient {
         Map<String, ?> rspStr = super.callApi(request, "DescribeAcceleratorTraffic", new RuntimeOptions());
 
         return TeaModel.toModel(rspStr, new DescribeAcceleratorTrafficResponse());
+    }
+
+    public DescribeAcceleratorMetricsResponse describeAcceleratorMetrics(
+            DescribeAcceleratorMetricsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeAcceleratorMetrics", new RuntimeOptions());
+
+        return TeaModel.toModel(rspStr, new DescribeAcceleratorMetricsResponse());
     }
 }

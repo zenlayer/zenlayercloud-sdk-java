@@ -7,154 +7,7 @@ package com.zenlayercloud.bmc20221120;
 import com.aliyun.tea.TeaModel;
 import com.aliyun.teautil.Common;
 import com.aliyun.teautil.models.RuntimeOptions;
-import com.zenlayercloud.bmc20221120.models.AllocateDdosIpAddressesRequest;
-import com.zenlayercloud.bmc20221120.models.AllocateDdosIpAddressesResponse;
-import com.zenlayercloud.bmc20221120.models.AllocateEipAddressesRequest;
-import com.zenlayercloud.bmc20221120.models.AllocateEipAddressesResponse;
-import com.zenlayercloud.bmc20221120.models.AssociateDdosIpAddressRequest;
-import com.zenlayercloud.bmc20221120.models.AssociateDdosIpAddressResponse;
-import com.zenlayercloud.bmc20221120.models.AssociateEipAddressRequest;
-import com.zenlayercloud.bmc20221120.models.AssociateEipAddressResponse;
-import com.zenlayercloud.bmc20221120.models.AssociateSubnetInstanceResponse;
-import com.zenlayercloud.bmc20221120.models.AssociateSubnetInstancesRequest;
-import com.zenlayercloud.bmc20221120.models.AssociateVpcSubnetRequest;
-import com.zenlayercloud.bmc20221120.models.AssociateVpcSubnetResponse;
-import com.zenlayercloud.bmc20221120.models.BindCidrBlockIpsRequest;
-import com.zenlayercloud.bmc20221120.models.BindCidrBlockIpsResponse;
-import com.zenlayercloud.bmc20221120.models.CancelInstanceBandwidthDowngradeRequest;
-import com.zenlayercloud.bmc20221120.models.CancelInstanceBandwidthDowngradeResponse;
-import com.zenlayercloud.bmc20221120.models.CancelInstanceTrafficPackageDowngradeRequest;
-import com.zenlayercloud.bmc20221120.models.CancelInstanceTrafficPackageDowngradeResponse;
-import com.zenlayercloud.bmc20221120.models.CreateInstancesRequest;
-import com.zenlayercloud.bmc20221120.models.CreateInstancesResponse;
-import com.zenlayercloud.bmc20221120.models.CreateIpv4BlockRequest;
-import com.zenlayercloud.bmc20221120.models.CreateIpv4BlockResponse;
-import com.zenlayercloud.bmc20221120.models.CreateIpv6BlockRequest;
-import com.zenlayercloud.bmc20221120.models.CreateIpv6BlockResponse;
-import com.zenlayercloud.bmc20221120.models.CreateSubnetRequest;
-import com.zenlayercloud.bmc20221120.models.CreateSubnetResponse;
-import com.zenlayercloud.bmc20221120.models.CreateVpcRequest;
-import com.zenlayercloud.bmc20221120.models.CreateVpcResponse;
-import com.zenlayercloud.bmc20221120.models.DeleteSubnetRequest;
-import com.zenlayercloud.bmc20221120.models.DeleteSubnetResponse;
-import com.zenlayercloud.bmc20221120.models.DeleteVpcRequest;
-import com.zenlayercloud.bmc20221120.models.DeleteVpcResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeAvailableIpv4ResourcesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeAvailableIpv4ResourcesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeAvailableIpv6ResourcesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeAvailableIpv6ResourcesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeAvailableResourcesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeAvailableResourcesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeCidrBlockIpsRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeCidrBlockIpsResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeCidrBlocksRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeCidrBlocksResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeDdosIpAddressesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeDdosIpAddressesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeDdosIpAvailableResourcesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeDdosIpAvailableResourcesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeEipAddressesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeEipAddressesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeEipAvailableResourcesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeEipAvailableResourcesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeImagesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeImagesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeInstanceAvailableCidrBlockRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeInstanceAvailableCidrBlockResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeInstanceAvailableDdosIpResourcesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeInstanceAvailableDdosIpResourcesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeInstanceAvailableEipResourcesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeInstanceAvailableEipResourcesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeInstanceInternetStatusRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeInstanceInternetStatusResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeInstanceTrafficRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeInstanceTrafficResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeInstanceTypesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeInstanceTypesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeInstancesMonitorHealthRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeInstancesMonitorHealthResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeInstancesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeInstancesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeSubnetAvailableResourcesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeSubnetAvailableResourcesResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeSubnetsRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeSubnetsResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeVpcAvailableRegionsRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeVpcAvailableRegionsResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeVpcsRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeVpcsResponse;
-import com.zenlayercloud.bmc20221120.models.DescribeZonesRequest;
-import com.zenlayercloud.bmc20221120.models.DescribeZonesResponse;
-import com.zenlayercloud.bmc20221120.models.InquiryPriceCreateDdosIpAddressRequest;
-import com.zenlayercloud.bmc20221120.models.InquiryPriceCreateDdosIpAddressResponse;
-import com.zenlayercloud.bmc20221120.models.InquiryPriceCreateEipAddressRequest;
-import com.zenlayercloud.bmc20221120.models.InquiryPriceCreateEipAddressResponse;
-import com.zenlayercloud.bmc20221120.models.InquiryPriceCreateInstanceRequest;
-import com.zenlayercloud.bmc20221120.models.InquiryPriceCreateInstanceResponse;
-import com.zenlayercloud.bmc20221120.models.InquiryPriceCreateIpv4BlockRequest;
-import com.zenlayercloud.bmc20221120.models.InquiryPriceCreateIpv4BlockResponse;
-import com.zenlayercloud.bmc20221120.models.InquiryPriceInstanceBandwidthRequest;
-import com.zenlayercloud.bmc20221120.models.InquiryPriceInstanceBandwidthResponse;
-import com.zenlayercloud.bmc20221120.models.InquiryPriceInstanceTrafficPackageRequest;
-import com.zenlayercloud.bmc20221120.models.InquiryPriceInstanceTrafficPackageResponse;
-import com.zenlayercloud.bmc20221120.models.ModifyCidrBlocksAttributeRequest;
-import com.zenlayercloud.bmc20221120.models.ModifyCidrBlocksAttributeResponse;
-import com.zenlayercloud.bmc20221120.models.ModifyDdosIpAddressesResourceGroupRequest;
-import com.zenlayercloud.bmc20221120.models.ModifyDdosIpAddressesResourceGroupResponse;
-import com.zenlayercloud.bmc20221120.models.ModifyEipAddressesResourceGroupRequest;
-import com.zenlayercloud.bmc20221120.models.ModifyEipAddressesResourceGroupResponse;
-import com.zenlayercloud.bmc20221120.models.ModifyInstanceBandwidthRequest;
-import com.zenlayercloud.bmc20221120.models.ModifyInstanceBandwidthResponse;
-import com.zenlayercloud.bmc20221120.models.ModifyInstanceTrafficPackageRequest;
-import com.zenlayercloud.bmc20221120.models.ModifyInstanceTrafficPackageResponse;
-import com.zenlayercloud.bmc20221120.models.ModifyInstancesAttributeRequest;
-import com.zenlayercloud.bmc20221120.models.ModifyInstancesAttributeResponse;
-import com.zenlayercloud.bmc20221120.models.ModifyInstancesResourceGroupRequest;
-import com.zenlayercloud.bmc20221120.models.ModifyInstancesResourceGroupResponse;
-import com.zenlayercloud.bmc20221120.models.ModifySubnetsAttributeRequest;
-import com.zenlayercloud.bmc20221120.models.ModifySubnetsAttributeResponse;
-import com.zenlayercloud.bmc20221120.models.ModifyVpcsAttributeRequest;
-import com.zenlayercloud.bmc20221120.models.ModifyVpcsAttributeResponse;
-import com.zenlayercloud.bmc20221120.models.RebootInstancesRequest;
-import com.zenlayercloud.bmc20221120.models.RebootInstancesResponse;
-import com.zenlayercloud.bmc20221120.models.ReinstallInstanceRequest;
-import com.zenlayercloud.bmc20221120.models.ReinstallInstanceResponse;
-import com.zenlayercloud.bmc20221120.models.ReleaseCidrBlocksRequest;
-import com.zenlayercloud.bmc20221120.models.ReleaseCidrBlocksResponse;
-import com.zenlayercloud.bmc20221120.models.ReleaseDdosIpAddressesRequest;
-import com.zenlayercloud.bmc20221120.models.ReleaseDdosIpAddressesResponse;
-import com.zenlayercloud.bmc20221120.models.ReleaseEipAddressesRequest;
-import com.zenlayercloud.bmc20221120.models.ReleaseEipAddressesResponse;
-import com.zenlayercloud.bmc20221120.models.ReleaseInstancesRequest;
-import com.zenlayercloud.bmc20221120.models.ReleaseInstancesResponse;
-import com.zenlayercloud.bmc20221120.models.RenewCidrBlockRequest;
-import com.zenlayercloud.bmc20221120.models.RenewCidrBlockResponse;
-import com.zenlayercloud.bmc20221120.models.RenewDdosIpAddressRequest;
-import com.zenlayercloud.bmc20221120.models.RenewDdosIpAddressResponse;
-import com.zenlayercloud.bmc20221120.models.RenewEipAddressRequest;
-import com.zenlayercloud.bmc20221120.models.RenewEipAddressResponse;
-import com.zenlayercloud.bmc20221120.models.RenewInstanceRequest;
-import com.zenlayercloud.bmc20221120.models.RenewInstanceResponse;
-import com.zenlayercloud.bmc20221120.models.StartInstancesRequest;
-import com.zenlayercloud.bmc20221120.models.StartInstancesResponse;
-import com.zenlayercloud.bmc20221120.models.StopInstancesRequest;
-import com.zenlayercloud.bmc20221120.models.StopInstancesResponse;
-import com.zenlayercloud.bmc20221120.models.TeminateInstanceRequest;
-import com.zenlayercloud.bmc20221120.models.TerminateCidrBlockRequest;
-import com.zenlayercloud.bmc20221120.models.TerminateCidrBlockResponse;
-import com.zenlayercloud.bmc20221120.models.TerminateDdosIpAddressRequest;
-import com.zenlayercloud.bmc20221120.models.TerminateDdosIpAddressResponse;
-import com.zenlayercloud.bmc20221120.models.TerminateEipAddressRequest;
-import com.zenlayercloud.bmc20221120.models.TerminateEipAddressResponse;
-import com.zenlayercloud.bmc20221120.models.TerminateInstanceResponse;
-import com.zenlayercloud.bmc20221120.models.UnAssociateDdosIpAddressRequest;
-import com.zenlayercloud.bmc20221120.models.UnAssociateDdosIpAddressResponse;
-import com.zenlayercloud.bmc20221120.models.UnAssociateEipAddressRequest;
-import com.zenlayercloud.bmc20221120.models.UnAssociateEipAddressResponse;
-import com.zenlayercloud.bmc20221120.models.UnAssociateSubnetInstanceRequest;
-import com.zenlayercloud.bmc20221120.models.UnAssociateSubnetInstanceResponse;
-import com.zenlayercloud.bmc20221120.models.UnbindCidrBlockIpsRequest;
-import com.zenlayercloud.bmc20221120.models.UnbindCidrBlockIpsResponse;
+import com.zenlayercloud.bmc20221120.models.*;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
@@ -812,4 +665,21 @@ public class BmcClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new AssociateVpcSubnetResponse());
     }
 
+
+    /**
+     * 查询一台或多台实例的信息。
+     * 用户可以根据实例ID、实例名称等条件来查询实例的详细信息。
+     */
+    public DescribeManagedInstancesResponse describeManagedInstances(DescribeManagedInstancesRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "DescribeManagedInstances", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new DescribeManagedInstancesResponse());
+    }
+
+    /**
+     * 查询托管实例流量包用量
+     */
+    public DescribeInstanceTrafficResponse describeManagedInstanceTraffic(DescribeInstanceTrafficRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeManagedInstanceTraffic", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeInstanceTrafficResponse());
+    }
 }
