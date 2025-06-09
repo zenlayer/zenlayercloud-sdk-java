@@ -9,10 +9,9 @@ public class DescribeEipsResponse extends TeaModel {
      * 唯一请求 ID，每次请求都会返回。
      * 定位问题时需要提供该次请求的requestId
      */
-    public String         requestId;
-    public List<EipInfo>  dataSet;
-    public Integer        totalCount;
-
+    public String        requestId;
+    public List<EipInfo> dataSet;
+    public Integer       totalCount;
 
     public static class EipInfo extends TeaModel {
         public String eipId;
@@ -48,5 +47,9 @@ public class DescribeEipsResponse extends TeaModel {
         public String resourceGroupId;
 
         public String resourceGroupName;
+
+        public String associatedId;
+        // 关联的资源类型 LB / NAT / NIC
+        public String associatedType;
     }
 }

@@ -136,7 +136,6 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new StopInstancesResponse());
     }
 
-
     public RebootInstancesResponse rebootInstances(RebootInstancesRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "RebootInstances", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new RebootInstancesResponse());
@@ -196,7 +195,6 @@ public class ZecClient extends AbstractClient {
         Map<String, ?> rspStr = super.callApi(request, "ChangeNicNetworkType", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new ChangeNicNetworkTypeResponse());
     }
-
 
     public DescribeCidrsResponse describeCidrs(DescribeCidrsRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeCidrs", new RuntimeOptions());
@@ -291,6 +289,15 @@ public class ZecClient extends AbstractClient {
     public RenewDiskResponse renewDisk(RenewDiskRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "RenewDisk", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new RenewDiskResponse());
+    }
+
+    /**
+     * 将一个云硬盘扩容到指定大小。
+
+     */
+    public ResizeDiskResponse resizeDisk(ResizeDiskRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "ResizeDisk", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new ResizeDiskResponse());
     }
 
     public ModifyDisksResourceGroupResponse modifyDisksResourceGroup(ModifyDisksResourceGroupRequest request) {
@@ -438,7 +445,6 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribeEipRegionsResponse());
     }
 
-
     public DescribeEipRemoteRegionsResponse describeEipRemoteRegions(DescribeEipRemoteRegionsRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeEipRemoteRegions", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeEipRemoteRegionsResponse());
@@ -504,18 +510,15 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new ChangeEipInternetChargeTypeResponse());
     }
 
-
     public InquiryPriceCreateInstanceResponse inquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "InquiryPriceCreateInstance", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new InquiryPriceCreateInstanceResponse());
     }
 
-
     public DescribeEipTrafficResponse describeEipTraffic(DescribeEipTrafficRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeEipTraffic", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeEipTrafficResponse());
     }
-
 
     public CreateBorderGatewayResponse createBorderGateway(CreateBorderGatewayRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "CreateBorderGateway", new RuntimeOptions());

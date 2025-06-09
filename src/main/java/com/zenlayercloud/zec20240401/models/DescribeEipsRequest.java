@@ -18,4 +18,12 @@ public class DescribeEipsRequest extends TeaModel {
     public Integer pageSize;
 
     public Integer pageNum;
+
+    public String privateIpAddress;
+
+    public String ipAddress;
+
+    public String instanceId;
+
+    public String associatedId;
 }
