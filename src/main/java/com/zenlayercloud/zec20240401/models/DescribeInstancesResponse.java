@@ -24,6 +24,8 @@ public class DescribeInstancesResponse extends TeaModel {
 
         public Integer memory;
 
+        public String instanceType;
+
         public String imageId;
 
         public String imageName;
@@ -47,7 +49,6 @@ public class DescribeInstancesResponse extends TeaModel {
         public String resourceGroupId;
 
         public String resourceGroupName;
-
 
     }
 }

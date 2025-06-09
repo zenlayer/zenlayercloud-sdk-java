@@ -87,8 +87,19 @@ public class DescribeDisksResponse extends TeaModel {
          */
         public Integer period;
 
+        /**
+         * 云盘所属资源组ID。
+         */
         public String resourceGroupId;
 
+        /**
+         * 云盘所属资源组名称。
+         */
         public String resourceGroupName;
+
+        /**
+         * 云盘对应的序号。
+         */
+        public String serial;
     }
 }

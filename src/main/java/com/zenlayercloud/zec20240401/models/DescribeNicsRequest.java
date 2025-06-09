@@ -22,6 +22,9 @@ public class DescribeNicsRequest extends TeaModel {
     public String subnetId;
 
     @Validation
+    public String instanceId;
+
+    @Validation
     public String status;
 
     @Validation(maximum = 1000, minimum = 1)

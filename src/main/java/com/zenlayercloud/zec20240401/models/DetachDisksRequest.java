@@ -23,4 +23,9 @@ public class DetachDisksRequest extends TeaModel {
     @Validation(required = true)
     public List<String> diskIds;
 
+    /**
+     * 是否检查实例状态。
+     * 默认为true，则机器关机，才能进行解绑。
+     */
+    public Boolean instanceCheckFlag;
 }
