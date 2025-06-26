@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
-public class DescribeEipsResponse extends TeaModel {
+public class DescribeNatGatewaysResponse extends TeaModel {
 
 
     /**
@@ -13,14 +13,14 @@ public class DescribeEipsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 满足过滤条件的EIP总数
+     * 满足过滤条件的NAT网关总数
      */
     public Integer totalCount;
 
     /**
-     * 返回的EIP列表
+     * 返回的NAT网关列表
      */
-    public List<EipInfo> dataSet;
+    public List<NatGateway> dataSet;
 
     public String getRequestId() {
         return this.requestId;
@@ -38,11 +38,11 @@ public class DescribeEipsResponse extends TeaModel {
         this.totalCount = totalCount;
     }
 
-    public List<EipInfo> getDataSet() {
+    public List<NatGateway> getDataSet() {
         return this.dataSet;
     }
 
-    public void setDataSet(List<EipInfo> dataSet) {
+    public void setDataSet(List<NatGateway> dataSet) {
         this.dataSet = dataSet;
     }
 

@@ -2,6 +2,8 @@ package com.zenlayercloud.zec20240401.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
+
 public class CreateEipsResponse extends TeaModel {
     /**
      * 唯一请求 ID，每次请求都会返回。
@@ -9,7 +11,7 @@ public class CreateEipsResponse extends TeaModel {
      */
     public String       requestId;
 
-    public String       eipIds;
+    public List<String> eipIds;
 
     public String       orderNumber;
 }

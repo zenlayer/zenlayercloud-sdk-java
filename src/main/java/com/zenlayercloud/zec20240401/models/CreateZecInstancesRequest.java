@@ -48,6 +48,8 @@ public class CreateZecInstancesRequest extends TeaModel {
     public Boolean enableIpForward;
 
     public String eipV4Type;
+    
+    public String eipBindType;
 
     public String clusterId;
 }

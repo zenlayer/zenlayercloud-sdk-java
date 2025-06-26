@@ -4,18 +4,18 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 查询实例监控指标请求。
+ * 查询弹性公网IP监控指标请求。
  */
-public class DescribeInstanceMonitorDataRequest extends TeaModel {
+public class DescribeEipMonitorDataRequest extends TeaModel {
 
 
     /**
-     * 实例唯一标识ID
+     * EIP唯一标识ID
      */
-    public String instanceId;
+    public String eipId;
 
     /**
-     * 实例监控指标类型
+     * EIP监控指标类型
      */
     public String metricType;
 
@@ -31,12 +31,12 @@ public class DescribeInstanceMonitorDataRequest extends TeaModel {
      */
     public String endTime;
 
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getEipId() {
+        return this.eipId;
     }
 
-    public void setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public void setEipId(String eipId) {
+        this.eipId = eipId;
     }
 
     public String getMetricType() {

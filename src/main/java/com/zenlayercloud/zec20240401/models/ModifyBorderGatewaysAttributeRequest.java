@@ -8,4 +8,8 @@ public class ModifyBorderGatewaysAttributeRequest extends TeaModel {
     public List<String> zbgIds;
 
     public String name;
+
+    public String advertisedSubnet;
+
+    public List<String> advertisedCidrs;
 }

@@ -35,12 +35,6 @@ public class ZecClient extends AbstractClient {
         this(credential, new Config());
     }
 
-    public DescribeInstanceMonitorDataResponse describeInstanceMonitorData(DescribeInstanceMonitorDataRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "DescribeInstanceMonitorData", new RuntimeOptions());
-
-        return TeaModel.toModel(rspStr, new DescribeInstanceMonitorDataResponse());
-    }
-
     public CreateVpcResponse createVpc(CreateVpcRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "CreateVpc", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new CreateVpcResponse());
@@ -495,6 +489,11 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new UnAssociateEipAddressResponse());
     }
 
+    public ReplaceEipAddressResponse replaceEipAddress(ReplaceEipAddressRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ReplaceEipAddress", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ReplaceEipAddressResponse());
+    }
+
     public ConfigEipEgressIpResponse configEipEgressIp(ConfigEipEgressIpRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "ConfigEipEgressIp", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new ConfigEipEgressIpResponse());
@@ -544,4 +543,165 @@ public class ZecClient extends AbstractClient {
         Map<String, ?> rspStr = super.callApi(request, "ModifyBorderGatewayAsn", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new ModifyBorderGatewayAsnResponse());
     }
+
+    public DescribeAvailableNatsResponse describeAvailableNats(DescribeAvailableNatsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeAvailableNats", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeAvailableNatsResponse());
+    }
+
+    public AssignBorderGatewayResponse assignBorderGateway(AssignBorderGatewayRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "AssignBorderGateway", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new AssignBorderGatewayResponse());
+    }
+
+    public UnassignBorderGatewayResponse unassignBorderGateway(UnassignBorderGatewayRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "UnassignBorderGateway", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new UnassignBorderGatewayResponse());
+    }
+
+    /**
+     * 创建NAT网关。
+
+     */
+    public CreateNatGatewayResponse createNatGateway(CreateNatGatewayRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "CreateNatGateway", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new CreateNatGatewayResponse());
+    }
+
+    /**
+     * 查询NAT网关列表。
+
+     */
+    public DescribeNatGatewaysResponse describeNatGateways(DescribeNatGatewaysRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "DescribeNatGateways", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new DescribeNatGatewaysResponse());
+    }
+
+    /**
+     * 查询NAT网关详情规则表。
+
+     */
+    public DescribeNatGatewayDetailResponse describeNatGatewayDetail(DescribeNatGatewayDetailRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "DescribeNatGatewayDetail", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new DescribeNatGatewayDetailResponse());
+    }
+
+    /**
+     * 删除一个指定的NAT网关。
+
+     */
+    public DeleteNatGatewayResponse deleteNatGateway(DeleteNatGatewayRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "DeleteNatGateway", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new DeleteNatGatewayResponse());
+    }
+
+    /**
+     * 续费一个指定的NAT网关。
+
+     */
+    public RenewNatGatewayResponse renewNatGateway(RenewNatGatewayRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "RenewNatGateway", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new RenewNatGatewayResponse());
+    }
+
+    /**
+     * 查询创建NAT网关的价格。
+
+     */
+    public InquiryPriceCreateNatGatewayResponse inquiryPriceCreateNatGateway(InquiryPriceCreateNatGatewayRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "InquiryPriceCreateNatGateway", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new InquiryPriceCreateNatGatewayResponse());
+    }
+
+    /**
+     * 创建SNAT规则。
+
+     */
+    public CreateSnatEntryResponse createSnatEntry(CreateSnatEntryRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "CreateSnatEntry", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new CreateSnatEntryResponse());
+    }
+
+    /**
+     * 修改SNAT规则。
+
+     */
+    public ModifySnatEntryResponse modifySnatEntry(ModifySnatEntryRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "ModifySnatEntry", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new ModifySnatEntryResponse());
+    }
+
+    /**
+     * 删除SNAT规则。
+
+     */
+    public DeleteSnatEntryResponse deleteSnatEntry(DeleteSnatEntryRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "DeleteSnatEntry", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new DeleteSnatEntryResponse());
+    }
+
+    /**
+     * 创建DNAT规则。
+
+     */
+    public CreateDnatEntryResponse createDnatEntry(CreateDnatEntryRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "CreateDnatEntry", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new CreateDnatEntryResponse());
+    }
+
+    /**
+     * 修改DNAT规则。
+
+     */
+    public ModifyDnatEntryResponse modifyDnatEntry(ModifyDnatEntryRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "ModifyDnatEntry", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new ModifyDnatEntryResponse());
+    }
+
+    /**
+     * 删除DNAT规则。
+
+     */
+    public DeleteDnatEntryResponse deleteDnatEntry(DeleteDnatEntryRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "DeleteDnatEntry", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new DeleteDnatEntryResponse());
+    }
+
+    public DescribeServiceCityResponse innerDescribeServiceCityCodes(DescribeServiceCityRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeServiceCityCodes", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeServiceCityResponse());
+    }
+
+    public DescribeNatGatewayRegionsResponse describeNatGatewayRegions(DescribeNatGatewayRegionsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeNatGatewayRegions", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeNatGatewayRegionsResponse());
+    }
+
+    /**
+     * 调整弹性公网IP的带宽限速。
+
+     */
+    public ModifyEipBandwidthResponse modifyEipBandwidth(ModifyEipBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "ModifyEipBandwidth", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new ModifyEipBandwidthResponse());
+    }
+
+    /**
+     * 查询弹性公网IP监控指标。
+
+     */
+    public DescribeEipMonitorDataResponse describeEipMonitorData(DescribeEipMonitorDataRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "DescribeEipMonitorData", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new DescribeEipMonitorDataResponse());
+    }
+
+    /**
+     * 查询实例监控指标。
+
+     */
+    public DescribeInstanceMonitorDataResponse describeInstanceMonitorData(DescribeInstanceMonitorDataRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "DescribeInstanceMonitorData", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new DescribeInstanceMonitorDataResponse());
+    }
+
 }

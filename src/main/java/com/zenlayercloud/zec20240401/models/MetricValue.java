@@ -1,23 +1,38 @@
-/*
- * Zenlayer.com Inc.
- * Copyright (c) 2014-2024 All Rights Reserved.
- */
 package com.zenlayercloud.zec20240401.models;
 
 import com.aliyun.tea.TeaModel;
 
+
 /**
- * @author wolfgang
- * @date 2024-03-20 10:54:38
- * @version $ Id: MetricValue.java, v 0.1  wolfgang Exp $
+ * 描述实例监控指标的数据值。
  */
 public class MetricValue extends TeaModel {
+
+
     /**
-     * 监控指标值。
+     * 数据点时间
      */
-    public Double  value;
+    public String time;
+
     /**
-     * 数据时间戳，单位秒
+     * 数据点的值
      */
-    public Integer timeInSecond;
+    public Double value;
+
+    public String getTime() {
+        return this.time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public Double getValue() {
+        return this.value;
+    }
+
+    public void setValue(Double value) {
+        this.value = value;
+    }
+
 }

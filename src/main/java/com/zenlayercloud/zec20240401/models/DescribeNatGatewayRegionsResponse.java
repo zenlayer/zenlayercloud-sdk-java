@@ -4,10 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
-/**
- * EIP绑定云产品的响应信息。
- */
-public class AssociateEipAddressResponse extends TeaModel {
+public class DescribeNatGatewayRegionsResponse extends TeaModel {
 
 
     /**
@@ -16,9 +13,9 @@ public class AssociateEipAddressResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 绑定失败的IP
+     * 节点ID集合
      */
-    public List<String> failedEipIds;
+    public List<String> regionIds;
 
     public String getRequestId() {
         return this.requestId;
@@ -28,12 +25,12 @@ public class AssociateEipAddressResponse extends TeaModel {
         this.requestId = requestId;
     }
 
-    public List<String> getFailedEipIds() {
-        return this.failedEipIds;
+    public List<String> getRegionIds() {
+        return this.regionIds;
     }
 
-    public void setFailedEipIds(List<String> failedEipIds) {
-        this.failedEipIds = failedEipIds;
+    public void setRegionIds(List<String> regionIds) {
+        this.regionIds = regionIds;
     }
 
 }
