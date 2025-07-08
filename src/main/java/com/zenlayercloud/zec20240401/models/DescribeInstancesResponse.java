@@ -30,6 +30,8 @@ public class DescribeInstancesResponse extends TeaModel {
 
         public String imageName;
 
+        public String nicNetworkType;
+
         public String status;
 
         public SystemDisk systemDisk;

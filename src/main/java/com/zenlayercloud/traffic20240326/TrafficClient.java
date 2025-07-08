@@ -26,6 +26,7 @@ public class TrafficClient extends AbstractClient {
     /**
      * 查询一个或多个共享带宽包的信息。
      * 用户可以根据共享带宽包ID、名称或者城市名称等条件来查询共享带宽包的详细信息。
+
      */
     public DescribeBandwidthClustersResponse describeBandwidthClusters(DescribeBandwidthClustersRequest request) {
         Map<String, ?> rsp = super.callApi(request, "DescribeBandwidthClusters", new RuntimeOptions());
@@ -33,7 +34,17 @@ public class TrafficClient extends AbstractClient {
     }
 
     /**
+     * 查询一个共享带宽包里的资源。
+
+     */
+    public DescribeBandwidthClusterResourcesResponse describeBandwidthClusterResources(DescribeBandwidthClusterResourcesRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "DescribeBandwidthClusterResources", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new DescribeBandwidthClusterResourcesResponse());
+    }
+
+    /**
      * 查询共享带宽包的地区信息。
+
      */
     public DescribeBandwidthClusterAreasResponse describeBandwidthClusterAreas(DescribeBandwidthClusterAreasRequest request) {
         Map<String, ?> rsp = super.callApi(request, "DescribeBandwidthClusterAreas", new RuntimeOptions());
@@ -42,6 +53,7 @@ public class TrafficClient extends AbstractClient {
 
     /**
      * 查询带宽组指定时间段内的流量信息。
+
      */
     public DescribeBandwidthClusterTrafficResponse describeBandwidthClusterTraffic(DescribeBandwidthClusterTrafficRequest request) {
         Map<String, ?> rsp = super.callApi(request, "DescribeBandwidthClusterTraffic", new RuntimeOptions());
@@ -50,6 +62,7 @@ public class TrafficClient extends AbstractClient {
 
     /**
      * 查询共享带宽包价格。
+
      */
     public InquiryBandwidthClusterPriceResponse inquiryBandwidthClusterPrice(InquiryBandwidthClusterPriceRequest request) {
         Map<String, ?> rsp = super.callApi(request, "InquiryBandwidthClusterPrice", new RuntimeOptions());
@@ -58,6 +71,7 @@ public class TrafficClient extends AbstractClient {
 
     /**
      * 创建一个共享带宽包。
+
      */
     public CreateBandwidthClusterResponse createBandwidthCluster(CreateBandwidthClusterRequest request) {
         Map<String, ?> rsp = super.callApi(request, "CreateBandwidthCluster", new RuntimeOptions());
@@ -66,6 +80,7 @@ public class TrafficClient extends AbstractClient {
 
     /**
      * 删除一个或多个共享带宽包。
+
      */
     public DeleteBandwidthClustersResponse deleteBandwidthClusters(DeleteBandwidthClustersRequest request) {
         Map<String, ?> rsp = super.callApi(request, "DeleteBandwidthClusters", new RuntimeOptions());
@@ -74,11 +89,21 @@ public class TrafficClient extends AbstractClient {
 
     /**
      * 修改带宽包的保底带宽。
+
      */
     public UpdateBandwidthClusterCommitBandwidthResponse updateBandwidthClusterCommitBandwidth(
             UpdateBandwidthClusterCommitBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(request, "UpdateBandwidthClusterCommitBandwidth", new RuntimeOptions());
         return TeaModel.toModel(rsp, new UpdateBandwidthClusterCommitBandwidthResponse());
+    }
+
+    /**
+     * 共享带宽包之间的资源迁移。
+
+     */
+    public MigrateBandwidthClusterResourcesResponse migrateBandwidthClusterResources(MigrateBandwidthClusterResourcesRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "MigrateBandwidthClusterResources", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new MigrateBandwidthClusterResourcesResponse());
     }
 
 }
