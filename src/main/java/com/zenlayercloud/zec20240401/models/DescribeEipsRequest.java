@@ -75,6 +75,8 @@ public class DescribeEipsRequest extends TeaModel {
      */
     public List<String> cidrIds;
 
+    public String resourceGroupId;
+
     public List<String> getEipIds() {
         return this.eipIds;
     }

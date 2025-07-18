@@ -32,4 +32,6 @@ public class DescribeNicsRequest extends TeaModel {
 
     @Validation(minimum = 1)
     public Integer pageNum;
+
+    public String resourceGroupId;
 }

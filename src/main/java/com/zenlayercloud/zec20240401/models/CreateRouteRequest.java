@@ -12,6 +12,11 @@ public class CreateRouteRequest extends TeaModel {
     public String ipVersion;
 
     @Validation(required = true)
+    public String routeType;
+
+    public String sourceCidrBlock;
+
+    @Validation(required = true)
     public String cidrBlock;
 
     @Validation(required = true)

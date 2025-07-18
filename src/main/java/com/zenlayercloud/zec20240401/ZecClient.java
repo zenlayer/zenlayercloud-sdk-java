@@ -704,4 +704,17 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rsp, new DescribeInstanceMonitorDataResponse());
     }
 
+    /**
+     * 获取可绑定NAT的边界网关。
+
+     */
+    public DescribeAvailableBorderGatewayResponse describeAvailableBorderGateway(DescribeAvailableBorderGatewayRequest request) {
+        Map<String, ?> rsp = super.callApi(
+                request,
+                "DescribeAvailableBorderGateway",
+                new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeAvailableBorderGatewayResponse());
+    }
+
 }

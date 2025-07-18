@@ -46,6 +46,8 @@ public class DescribeNatGatewaysRequest extends TeaModel {
      */
     public Integer pageNum;
 
+    public String resourceGroupId;
+
     public String getRegionId() {
         return this.regionId;
     }

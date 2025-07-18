@@ -26,4 +26,6 @@ public class DescribeCidrsRequest extends TeaModel {
 
     @Validation(minimum = 1)
     public Integer pageNum;
+
+    public String resourceGroupId;
 }

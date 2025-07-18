@@ -20,6 +20,7 @@ public class DescribeRoutesResponse extends TeaModel {
         public String       vpcName;
         public String       ipVersion;
         public String       type;
+        public String       sourceCidrBlock;
         public String       cidrBlock;
         public Integer      priority;
         public String       nextHopId;

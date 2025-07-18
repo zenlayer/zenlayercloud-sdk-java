@@ -22,4 +22,6 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     public Integer pageNum;
+
+    public String resourceGroupId;
 }
