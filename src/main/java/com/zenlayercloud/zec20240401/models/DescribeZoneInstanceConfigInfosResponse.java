@@ -44,6 +44,8 @@ public class DescribeZoneInstanceConfigInfosResponse extends TeaModel {
          */
         public Integer memory;
 
+        public Boolean withStock;
+
         /**
          * CPU主频
          */

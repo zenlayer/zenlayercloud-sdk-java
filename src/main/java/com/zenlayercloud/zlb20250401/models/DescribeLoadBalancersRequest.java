@@ -79,5 +79,4 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     public void setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
     }
-
 }
