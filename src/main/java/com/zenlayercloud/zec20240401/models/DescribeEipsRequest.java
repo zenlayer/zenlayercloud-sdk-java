@@ -75,7 +75,11 @@ public class DescribeEipsRequest extends TeaModel {
      */
     public List<String> cidrIds;
 
+    /**
+     * 按照 资源组ID 过滤
+     */
     public String resourceGroupId;
+
 
     public List<String> getEipIds() {
         return this.eipIds;

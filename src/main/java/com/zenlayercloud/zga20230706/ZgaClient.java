@@ -64,6 +64,7 @@ import com.zenlayercloud.zga20230706.models.RedeployAcceleratorRequest;
 import com.zenlayercloud.zga20230706.models.RedeployAcceleratorResponse;
 import com.zenlayercloud.zga20230706.models.StartAcceleratorRequest;
 import com.zenlayercloud.zga20230706.models.StartAcceleratorResponse;
+import com.zenlayercloud.zga20230706.models.*;
 
 import java.util.Map;
 
@@ -256,5 +257,19 @@ public class ZgaClient extends AbstractClient {
         Map<String, ?> rspStr = super.callApi(request, "DescribeAcceleratorMetrics", new RuntimeOptions());
 
         return TeaModel.toModel(rspStr, new DescribeAcceleratorMetricsResponse());
+    }
+
+    public DescribeResourceGroupsBandwidthLimitResponse describeResourceGroupsBandwidthLimit(
+            DescribeResourceGroupsBandwidthLimitRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeResourceGroupsBandwidthLimit", new RuntimeOptions());
+
+        return TeaModel.toModel(rspStr, new DescribeResourceGroupsBandwidthLimitResponse());
+    }
+
+    public ModifyResourceGroupBandwidthLimitResponse modifyResourceGroupBandwidthLimit(
+            ModifyResourceGroupBandwidthLimitRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifyResourceGroupBandwidthLimit", new RuntimeOptions());
+
+        return TeaModel.toModel(rspStr, new ModifyResourceGroupBandwidthLimitResponse());
     }
 }
