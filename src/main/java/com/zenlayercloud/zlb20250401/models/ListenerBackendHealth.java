@@ -2,12 +2,24 @@ package com.zenlayercloud.zlb20250401.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
 
 /**
- * 描述监听器后端服务器信息。
+ * 描述监听器后端服务器的健康检查。
  */
-public class ListenerBackend extends TeaModel {
+public class ListenerBackendHealth extends TeaModel {
 
+
+    /**
+     * 后端服务健康检查状态
+     */
+    public String healthStatus;
+
+    /**
+     * 后端服务健康检查对应端口的健康检查状态。
+     * 当`healthStatus`为`Close` 或 `Unknown`时，无详情信息
+     */
+    public List<BackendHealthStatusDetail> healthStatusDetail;
 
     /**
      * 实例ID。
@@ -55,6 +67,22 @@ public class ListenerBackend extends TeaModel {
      * 当端口是范围时用`-`连接，例如：10000-10005
      */
     public String listenerPort;
+
+    public String getHealthStatus() {
+        return this.healthStatus;
+    }
+
+    public void setHealthStatus(String healthStatus) {
+        this.healthStatus = healthStatus;
+    }
+
+    public List<BackendHealthStatusDetail> getHealthStatusDetail() {
+        return this.healthStatusDetail;
+    }
+
+    public void setHealthStatusDetail(List<BackendHealthStatusDetail> healthStatusDetail) {
+        this.healthStatusDetail = healthStatusDetail;
+    }
 
     public String getInstanceId() {
         return this.instanceId;

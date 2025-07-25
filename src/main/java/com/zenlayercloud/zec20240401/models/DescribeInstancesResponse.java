@@ -1,6 +1,7 @@
 package com.zenlayercloud.zec20240401.models;
 
 import com.aliyun.tea.TeaModel;
+import com.zenlayercloud.zec20240401.models.DescribeNicsResponse.NicInfo;
 
 import java.util.List;
 
@@ -52,5 +53,6 @@ public class DescribeInstancesResponse extends TeaModel {
 
         public String resourceGroupName;
 
+        public List<NicInfo> nics;
     }
 }

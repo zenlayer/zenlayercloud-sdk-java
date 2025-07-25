@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
-public class DescribeLoadBalancerRegionsResponse extends TeaModel {
+public class DescribeBackendHealthResponse extends TeaModel {
 
 
     /**
@@ -13,9 +13,9 @@ public class DescribeLoadBalancerRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 节点列表
+     * 负载均衡的后端服务器状态
      */
-    public List<Region> regions;
+    public List<ListenerBackendHealth> backends;
 
     public String getRequestId() {
         return this.requestId;
@@ -25,12 +25,12 @@ public class DescribeLoadBalancerRegionsResponse extends TeaModel {
         this.requestId = requestId;
     }
 
-    public List<Region> getRegions() {
-        return this.regions;
+    public List<ListenerBackendHealth> getBackends() {
+        return this.backends;
     }
 
-    public void setRegions(List<Region> regions) {
-        this.regions = regions;
+    public void setBackends(List<ListenerBackendHealth> backends) {
+        this.backends = backends;
     }
 
 }
