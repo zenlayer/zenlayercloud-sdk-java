@@ -155,6 +155,9 @@ public class AbstractClient {
                     _lastException = e;
                     continue;
                 }
+                if (e instanceof ZenlayerSdkException) {
+                    throw e;
+                }
                 throw new ZenlayerSdkException(e);
             } finally {
                 if (!Common.isUnset(_lastResponse) && !Common.isUnset(_lastResponse.response) && !Common.isUnset(
