@@ -62,6 +62,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
      */
     public Integer number;
 
+    public MarketingInfo marketingOptions;
+
+
     public String getRegionId() {
         return this.regionId;
     }
@@ -142,4 +145,11 @@ public class CreateLoadBalancerRequest extends TeaModel {
         this.number = number;
     }
 
+    public MarketingInfo getMarketingOptions() {
+        return marketingOptions;
+    }
+
+    public void setMarketingOptions(MarketingInfo marketingOptions) {
+        this.marketingOptions = marketingOptions;
+    }
 }

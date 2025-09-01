@@ -15,6 +15,8 @@ public class DescribeSubnetsRequest extends TeaModel {
     @Validation
     public String cidrBlock;
 
+    public String regionId;
+
     @Validation(maximum = 1000, minimum = 1)
     public Integer pageSize;
 

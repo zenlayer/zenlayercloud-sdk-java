@@ -80,6 +80,20 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribeSubnetsResponse());
     }
 
+    /**
+     * 修改子网属性。
+     * 包括名称，CIDR等。
+
+     */
+    public ModifySubnetAttributeResponse modifySubnetAttribute(ModifySubnetAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+                request,
+                "ModifySubnetAttribute",
+                new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifySubnetAttributeResponse());
+    }
+
     public ModifySubnetStackTypeResponse modifySubnetStackType(ModifySubnetStackTypeRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "ModifySubnetStackType", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new ModifySubnetStackTypeResponse());
@@ -270,11 +284,6 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new InquiryPriceCreateDisksResponse());
     }
 
-    public TerminateDiskResponse terminateDisk(TerminateDiskRequest request) {
-        Map<String, ?> rspStr = super.callApi(request, "TerminateDisk", new RuntimeOptions());
-        return TeaModel.toModel(rspStr, new TerminateDiskResponse());
-    }
-
     public ReleaseDiskResponse releaseDisk(ReleaseDiskRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "ReleaseDisk", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new ReleaseDiskResponse());
@@ -459,6 +468,20 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new CreateEipsResponse());
     }
 
+
+    /**
+     * 修改弹性公网IP属性。
+
+     */
+    public ModifyEipAttributeResponse modifyEipAttribute(ModifyEipAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+                request,
+                "ModifyEipAttribute",
+                new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyEipAttributeResponse());
+    }
+
     public DeleteEipResponse deleteEip(DeleteEipRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DeleteEip", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DeleteEipResponse());
@@ -482,6 +505,16 @@ public class ZecClient extends AbstractClient {
     public AssociateEipAddressResponse associateEipAddress(AssociateEipAddressRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "AssociateEipAddress", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new AssociateEipAddressResponse());
+    }
+
+
+    /**
+     * 弹性公网IP（EIP）更换绑定模式。
+
+     */
+    public ChangeEipBindTypeResponse changeEipBindType(ChangeEipBindTypeRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "ChangeEipBindType", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new ChangeEipBindTypeResponse());
     }
 
     public UnAssociateEipAddressResponse unAssociateEipAddress(UnassociateEipAddressRequest request) {
@@ -557,6 +590,17 @@ public class ZecClient extends AbstractClient {
     public UnassignBorderGatewayResponse unassignBorderGateway(UnassignBorderGatewayRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "UnassignBorderGateway", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new UnassignBorderGatewayResponse());
+    }
+
+    public AssignBorderGatewayRouteResponse assignBorderGatewayRoute(AssignBorderGatewayRouteRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "AssignBorderGatewayRoute", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new AssignBorderGatewayRouteResponse());
+    }
+
+
+    public UnassignBorderGatewayRouteResponse unassignBorderGatewayRoute(UnassignBorderGatewayRouteRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "UnassignBorderGatewayRoute", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new UnassignBorderGatewayRouteResponse());
     }
 
     /**
@@ -709,12 +753,110 @@ public class ZecClient extends AbstractClient {
 
      */
     public DescribeAvailableBorderGatewayResponse describeAvailableBorderGateway(DescribeAvailableBorderGatewayRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "DescribeAvailableBorderGateway", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new DescribeAvailableBorderGatewayResponse());
+    }
+
+    /**
+     * 修改私有网络（VPC）的相关属性。
+
+     */
+    public ModifyVpcAttributeResponse modifyVpcAttribute(ModifyVpcAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(request, "ModifyVpcAttribute", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new ModifyVpcAttributeResponse());
+    }
+
+    /**
+     * 用于对指定云盘创建快照。
+
+     */
+    public CreateSnapshotResponse createSnapshot(CreateSnapshotRequest request) {
         Map<String, ?> rsp = super.callApi(
                 request,
-                "DescribeAvailableBorderGateway",
+                "CreateSnapshot",
                 new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new DescribeAvailableBorderGatewayResponse());
+        return TeaModel.toModel(rsp, new CreateSnapshotResponse());
+    }
+
+    /**
+     * 用于修改指定快照的属性。
+
+     */
+    public ModifySnapshotsAttributeResponse modifySnapshotsAttribute(ModifySnapshotsAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+                request,
+                "ModifySnapshotsAttribute",
+                new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifySnapshotsAttributeResponse());
+    }
+
+    /**
+     * 用于删除指定快照集合。
+
+     */
+    public DeleteSnapshotsResponse deleteSnapshots(DeleteSnapshotsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+                request,
+                "DeleteSnapshots",
+                new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteSnapshotsResponse());
+    }
+
+    /**
+     * 用于查询快照的详细信息。
+
+     */
+    public DescribeSnapshotsResponse describeSnapshots(DescribeSnapshotsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+                request,
+                "DescribeSnapshots",
+                new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeSnapshotsResponse());
+    }
+
+    /**
+     * 用于回滚快照到原云盘。
+
+     */
+    public ApplySnapshotResponse applySnapshot(ApplySnapshotRequest request) {
+        Map<String, ?> rsp = super.callApi(
+                request,
+                "ApplySnapshot",
+                new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ApplySnapshotResponse());
+    }
+
+    /**
+     * 修改NAT网关属性。
+
+     */
+    public ModifyNatGatewaysAttributeResponse modifyNatGatewaysAttribute(ModifyNatGatewaysAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+                request,
+                "ModifyNatGatewaysAttribute",
+                new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyNatGatewaysAttributeResponse());
+    }
+
+
+
+    /**
+     * 修改NAT网关。
+
+     */
+    public ModifyNatGatewayResponse modifyNatGateway(ModifyNatGatewayRequest request) {
+        Map<String, ?> rsp = super.callApi(
+                request,
+                "ModifyNatGateway",
+                new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyNatGatewayResponse());
     }
 
 }

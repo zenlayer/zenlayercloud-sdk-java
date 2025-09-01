@@ -25,6 +25,11 @@ public class SnatEntry extends TeaModel {
      */
     public List<String> eipIds;
 
+    /**
+     * SNAT规则添加的eip ID集合
+     */
+    public List<SnatSubnetRef> snatSubnets;
+
     public String getSnatEntryId() {
         return this.snatEntryId;
     }
@@ -47,6 +52,14 @@ public class SnatEntry extends TeaModel {
 
     public void setEipIds(List<String> eipIds) {
         this.eipIds = eipIds;
+    }
+
+    public List<SnatSubnetRef> getSnatSubnets() {
+        return this.snatSubnets;
+    }
+
+    public void setSnatSubnets(List<SnatSubnetRef> snatSubnets) {
+        this.snatSubnets = snatSubnets;
     }
 
 }

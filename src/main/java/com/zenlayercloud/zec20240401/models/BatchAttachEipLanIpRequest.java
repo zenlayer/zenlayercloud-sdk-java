@@ -14,4 +14,12 @@ public class BatchAttachEipLanIpRequest extends TeaModel {
 
     @Validation(required = true)
     public List<String> eipIds;
+
+    /**
+     * 绑定类型。
+     * 当绑定的是网卡时生效。
+     * 默认为普通NAT模式
+     */
+    public String bindType;
+
 }

@@ -21,4 +21,6 @@ public class CreateNicRequest extends TeaModel {
     public String resourceGroupId;
 
     public String clusterId;
+
+    public MarketingInfo marketingOptions;
 }

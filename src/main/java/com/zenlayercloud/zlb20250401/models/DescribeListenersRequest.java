@@ -22,11 +22,6 @@ public class DescribeListenersRequest extends TeaModel {
      */
     public String protocol;
 
-    /**
-     * resourceGroupId
-     */
-    public String resourceGroupId;
-
     public String getLoadBalancerId() {
         return this.loadBalancerId;
     }
@@ -50,13 +45,5 @@ public class DescribeListenersRequest extends TeaModel {
     public void setProtocol(String protocol) {
         this.protocol = protocol;
     }
-
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public void setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-    }
-
+    
 }

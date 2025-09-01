@@ -12,4 +12,6 @@ public class ModifyBorderGatewaysAttributeRequest extends TeaModel {
     public String advertisedSubnet;
 
     public List<String> advertisedCidrs;
+
+    public Integer asn;
 }

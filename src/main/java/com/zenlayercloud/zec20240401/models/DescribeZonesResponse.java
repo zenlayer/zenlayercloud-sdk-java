@@ -14,8 +14,20 @@ public class DescribeZonesResponse extends TeaModel {
     public List<ZoneInfo> zoneSet;
 
     public static class ZoneInfo extends TeaModel {
+
+        /**
+         * 可用区ID
+         */
         public String zoneId;
 
+        /**
+         * 可用区所在的节点ID
+         */
+        public String regionId;
+
+        /**
+         * 可用区名称
+         */
         public String zoneName;
     }
 }

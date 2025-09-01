@@ -20,6 +20,7 @@ public class ZbgInfo extends TeaModel {
     public String       advertisedSubnet;
     public String       routingMode;
     public List<String> advertisedCidrs;
+    public List<String> advertisedRouteIds;
     public String       natId;
 
 }

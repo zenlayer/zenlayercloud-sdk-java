@@ -23,6 +23,12 @@ public class ModifySnatEntryRequest extends TeaModel {
      */
     public List<String> eipIds;
 
+
+    /**
+     * by Subnet的情况，subnet的id集合
+     */
+    public List<String> subnetIds;
+
     public String getSnatEntryId() {
         return this.snatEntryId;
     }
@@ -45,6 +51,14 @@ public class ModifySnatEntryRequest extends TeaModel {
 
     public void setEipIds(List<String> eipIds) {
         this.eipIds = eipIds;
+    }
+
+    public List<String> getSubnetIds() {
+        return this.subnetIds;
+    }
+
+    public void setSubnetIds(List<String> subnetIds) {
+        this.subnetIds = subnetIds;
     }
 
 }

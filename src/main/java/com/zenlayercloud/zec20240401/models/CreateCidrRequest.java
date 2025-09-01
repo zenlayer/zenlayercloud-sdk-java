@@ -14,4 +14,6 @@ public class CreateCidrRequest extends TeaModel {
     public NetmaskInfo netmask;
 
     public String resourceGroupId;
+
+    public MarketingInfo marketingOptions;
 }

@@ -101,5 +101,7 @@ public class DescribeDisksResponse extends TeaModel {
          * 云盘对应的序号。
          */
         public String serial;
+
+        public Boolean snapshotAbility;
     }
 }

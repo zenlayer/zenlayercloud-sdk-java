@@ -56,6 +56,11 @@ public class LoadBalancer extends TeaModel {
      */
     public String createTime;
 
+    /**
+     * 关联的资源组信息
+     */
+    public ResourceGroupInfo resourceGroup;
+
     public String getRegionId() {
         return this.regionId;
     }
@@ -126,6 +131,14 @@ public class LoadBalancer extends TeaModel {
 
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
+    }
+
+    public ResourceGroupInfo getResourceGroup() {
+        return this.resourceGroup;
+    }
+
+    public void setResourceGroup(ResourceGroupInfo resourceGroup) {
+        this.resourceGroup = resourceGroup;
     }
 
 }

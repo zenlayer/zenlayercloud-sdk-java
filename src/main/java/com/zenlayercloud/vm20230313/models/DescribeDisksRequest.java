@@ -72,4 +72,6 @@ public class DescribeDisksRequest extends TeaModel {
      * 默认为1
      */
     public Integer pageNum;
+
+    public String resourceGroupId;
 }

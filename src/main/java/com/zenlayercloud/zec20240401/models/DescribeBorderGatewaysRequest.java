@@ -11,6 +11,8 @@ public class DescribeBorderGatewaysRequest extends TeaModel {
 
     public String regionId;
 
+    public String vpcId;
+
     public Integer pageSize;
 
     public Integer pageNum;

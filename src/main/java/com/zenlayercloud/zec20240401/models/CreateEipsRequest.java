@@ -34,4 +34,6 @@ public class CreateEipsRequest extends TeaModel {
     public String clusterId;
 
     public String peerRegionId;
+
+    public MarketingInfo marketingOptions;
 }

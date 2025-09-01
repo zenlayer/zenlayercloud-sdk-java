@@ -11,6 +11,7 @@ public class CreateBorderGatewayRequest extends TeaModel {
     public Integer      asn;
     public String       advertisedSubnet;
     public List<String> advertisedCidrs;
+    public List<String> advertisedRouteIds;
     public String       routingMode;
 
 }

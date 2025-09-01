@@ -41,4 +41,7 @@ public class CreatePortRequest extends TeaModel {
      * 贵司商业实体名称。
      */
     public String businessEntityName;
+
+    public MarketingInfo marketingOptions;
 }
+

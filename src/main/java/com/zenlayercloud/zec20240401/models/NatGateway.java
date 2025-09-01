@@ -41,6 +41,11 @@ public class NatGateway extends TeaModel {
     public List<String> subnetIds;
 
     /**
+     * 是否节点内所有子网关联了NAT网关
+     */
+    public Boolean isAllSubnets;
+
+    /**
      * NAT网关所关联的EIP ID集合
      */
     public List<String> eipIds;
@@ -118,6 +123,14 @@ public class NatGateway extends TeaModel {
 
     public void setSubnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
+    }
+
+    public Boolean getIsAllSubnets() {
+        return this.isAllSubnets;
+    }
+
+    public void setIsAllSubnets(Boolean isAllSubnets) {
+        this.isAllSubnets = isAllSubnets;
     }
 
     public List<String> getEipIds() {

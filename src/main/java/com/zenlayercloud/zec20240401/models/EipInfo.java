@@ -102,6 +102,8 @@ public class EipInfo extends TeaModel {
      */
     public Integer bandwidth;
 
+    public List<EipGeoRef> eipGeoRefs;
+
     /**
      * EIP 的创建时间
      */
@@ -122,6 +124,11 @@ public class EipInfo extends TeaModel {
      * EIP 关联的资源组名称
      */
     public String resourceGroupName;
+
+    /**
+     * EIP 关联的带宽组ID
+     */
+    public BandwidthClusterInfo bandwidthCluster;
 
     public String getEipId() {
         return this.eipId;
@@ -289,6 +296,14 @@ public class EipInfo extends TeaModel {
 
     public void setResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
+    }
+
+    public BandwidthClusterInfo getBandwidthCluster() {
+        return this.bandwidthCluster;
+    }
+
+    public void setBandwidthCluster(BandwidthClusterInfo bandwidthCluster) {
+        this.bandwidthCluster = bandwidthCluster;
     }
 
 }

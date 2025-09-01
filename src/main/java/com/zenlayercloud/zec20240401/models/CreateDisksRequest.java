@@ -21,4 +21,8 @@ public class CreateDisksRequest extends TeaModel {
     public String resourceGroupId;
 
     public String diskCategory;
+
+    public String snapshotId;
+
+    public MarketingInfo marketingOptions;
 }

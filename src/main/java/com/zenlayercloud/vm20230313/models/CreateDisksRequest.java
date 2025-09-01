@@ -66,4 +66,5 @@ public class CreateDisksRequest extends TeaModel {
      */
     public String resourceGroupId;
 
+    public MarketingInfo  marketingOptions;
 }

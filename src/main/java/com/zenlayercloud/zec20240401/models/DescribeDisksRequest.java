@@ -20,6 +20,8 @@ public class DescribeDisksRequest extends TeaModel {
 
     public String zoneId;
 
+    public Boolean snapshotAbility;
+
     public Integer pageSize;
 
     public Integer pageNum;

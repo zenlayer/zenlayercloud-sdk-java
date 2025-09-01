@@ -136,5 +136,7 @@ public class CreateInstancesRequest extends TeaModel {
 
     public Boolean diskPreAllocated;
 
+    public MarketingInfo  marketingOptions;
+
 }
 

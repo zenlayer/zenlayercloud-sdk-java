@@ -52,4 +52,6 @@ public class CreateZecInstancesRequest extends TeaModel {
     public String eipBindType;
 
     public String clusterId;
+
+    public MarketingInfo marketingOptions;
 }

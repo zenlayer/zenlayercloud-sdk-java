@@ -43,4 +43,5 @@ public class CreatePrivateConnectRequest extends TeaModel {
      */
     public String resourceGroupId;
 
+    public MarketingInfo marketingOptions;
 }

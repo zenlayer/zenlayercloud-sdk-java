@@ -34,4 +34,6 @@ public class CreateCloudRouterRequest extends TeaModel {
      * 资源组的ID。
      */
     public String resourceGroupId;
+
+    public MarketingInfo marketingOptions;
 }

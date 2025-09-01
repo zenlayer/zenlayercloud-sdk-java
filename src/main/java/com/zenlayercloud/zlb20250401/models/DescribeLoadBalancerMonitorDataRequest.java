@@ -12,8 +12,7 @@ public class DescribeLoadBalancerMonitorDataRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * 负载均衡器的监听器ID。
-     * 公网IP数据包指标（`INGRESS_PACKETS`, `EGRESS_PACKETS`) 该字段无效
+     * 负载均衡器的监听器ID
      */
     public String listenerId;
 
