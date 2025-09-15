@@ -23,7 +23,7 @@ public class ModifyEipBandwidthRequest extends TeaModel {
     /**
      * 保底带宽。
      * 单位Mbps。
-     * 有且仅当为95计费时, 需要指定
+     * 有且仅当为Remote IP，且为选择带宽包计费, 需要指定专线部分的保底带宽
      */
     public Integer commitBandwidth;
 

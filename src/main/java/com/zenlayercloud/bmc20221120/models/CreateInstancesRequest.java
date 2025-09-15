@@ -49,6 +49,11 @@ public class CreateInstancesRequest extends TeaModel {
     public String imageId;
 
     /**
+     * 密钥ID。
+     */
+    public String keyId;
+
+    /**
      * IpxeUrl。
      * 传入参数后，imageId不生效。
      */
@@ -154,4 +159,5 @@ public class CreateInstancesRequest extends TeaModel {
      */
     public String clusterId;
 
+    public MarketingInfo marketingOptions;
 }

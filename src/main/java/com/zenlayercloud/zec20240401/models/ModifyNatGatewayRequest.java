@@ -17,6 +17,12 @@ public class ModifyNatGatewayRequest extends TeaModel {
      */
     public List<String> subnetIds;
 
+    /**
+     * 是否开启ICMP代回。
+     * 默认值：true
+     */
+    public Boolean icmpReplyEnabled;
+
     public String getNatGatewayId() {
         return this.natGatewayId;
     }
@@ -33,4 +39,12 @@ public class ModifyNatGatewayRequest extends TeaModel {
         this.subnetIds = subnetIds;
     }
 
+
+    public Boolean getIcmpReplyEnabled() {
+        return icmpReplyEnabled;
+    }
+
+    public void setIcmpReplyEnabled(Boolean icmpReplyEnabled) {
+        this.icmpReplyEnabled = icmpReplyEnabled;
+    }
 }

@@ -17,10 +17,14 @@ import com.zenlayercloud.zec20240401.models.ResetInstancePasswordResponse;
 import java.util.Map;
 
 /**
+ * For maintaining enhanced SDK consistency. This client is no longer in use, please use {@link  com.zenlayercloud.zec20250901.ZecClient}.
+ *
+ * @see com.zenlayercloud.zec20250901.ZecClient
  * @author wolfgang
  * @version $ Id: ZecClient.java, v 0.1  wolfang Exp $
  * @date 2024-04-01 12:12:01
  */
+@Deprecated
 public class ZecClient extends AbstractClient {
 
     private static final String VERSION  = "2024-04-01";
@@ -86,11 +90,7 @@ public class ZecClient extends AbstractClient {
 
      */
     public ModifySubnetAttributeResponse modifySubnetAttribute(ModifySubnetAttributeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-                request,
-                "ModifySubnetAttribute",
-                new RuntimeOptions()
-        );
+        Map<String, ?> rsp = super.callApi(request, "ModifySubnetAttribute", new RuntimeOptions());
         return TeaModel.toModel(rsp, new ModifySubnetAttributeResponse());
     }
 
@@ -383,9 +383,22 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new AssignNicIpv6Response());
     }
 
+    /**
+     * 过时的。
+     * @see ZecClient#unassignNetworkInterfaceIpv4(UnassignNetworkInterfaceIpv4Request)
+     */
+    @Deprecated
     public UnAssignNicIpv4Response unassignNetworkInterfaceIpv4(UnAssignNicIpv4Request request) {
         Map<String, ?> rspStr = super.callApi(request, "UnassignNetworkInterfaceIpv4", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new UnAssignNicIpv4Response());
+    }
+
+    /**
+     * 将网卡上的内网IPv4地址解绑。
+     */
+    public UnassignNetworkInterfaceIpv4Response unassignNetworkInterfaceIpv4(UnassignNetworkInterfaceIpv4Request request) {
+        Map<String, ?> rsp = super.callApi(request, "UnassignNetworkInterfaceIpv4", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new UnassignNetworkInterfaceIpv4Response());
     }
 
     public AssignNicIpv4Response assignNetworkInterfaceIpv4(AssignNicIpv4Request request) {
@@ -393,9 +406,23 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new AssignNicIpv4Response());
     }
 
+    /**
+     * 过时的
+     * @see ZecClient#batchAssignNetworkInterfaceIpv4(BatchAssignNetworkInterfaceIpv4Request)
+     */
+    @Deprecated
     public BatchAssignNicIpv4Response batchAssignNetworkInterfaceIpv4(BatchAssignNicIpv4Request request) {
         Map<String, ?> rspStr = super.callApi(request, "BatchAssignNetworkInterfaceIpv4", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new BatchAssignNicIpv4Response());
+    }
+
+    /**
+     * 将一张网卡额外添加内网IPv4地址。
+
+     */
+    public BatchAssignNetworkInterfaceIpv4Response batchAssignNetworkInterfaceIpv4(BatchAssignNetworkInterfaceIpv4Request request) {
+        Map<String, ?> rsp = super.callApi(request, "BatchAssignNetworkInterfaceIpv4", new RuntimeOptions());
+        return TeaModel.toModel(rsp, new BatchAssignNetworkInterfaceIpv4Response());
     }
 
     public DetachNicResponse detachNetworkInterface(DetachNicRequest request) {
@@ -468,17 +495,12 @@ public class ZecClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new CreateEipsResponse());
     }
 
-
     /**
      * 修改弹性公网IP属性。
 
      */
     public ModifyEipAttributeResponse modifyEipAttribute(ModifyEipAttributeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-                request,
-                "ModifyEipAttribute",
-                new RuntimeOptions()
-        );
+        Map<String, ?> rsp = super.callApi(request, "ModifyEipAttribute", new RuntimeOptions());
         return TeaModel.toModel(rsp, new ModifyEipAttributeResponse());
     }
 
@@ -506,7 +528,6 @@ public class ZecClient extends AbstractClient {
         Map<String, ?> rspStr = super.callApi(request, "AssociateEipAddress", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new AssociateEipAddressResponse());
     }
-
 
     /**
      * 弹性公网IP（EIP）更换绑定模式。
@@ -596,7 +617,6 @@ public class ZecClient extends AbstractClient {
         Map<String, ?> rspStr = super.callApi(request, "AssignBorderGatewayRoute", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new AssignBorderGatewayRouteResponse());
     }
-
 
     public UnassignBorderGatewayRouteResponse unassignBorderGatewayRoute(UnassignBorderGatewayRouteRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "UnassignBorderGatewayRoute", new RuntimeOptions());
@@ -771,11 +791,7 @@ public class ZecClient extends AbstractClient {
 
      */
     public CreateSnapshotResponse createSnapshot(CreateSnapshotRequest request) {
-        Map<String, ?> rsp = super.callApi(
-                request,
-                "CreateSnapshot",
-                new RuntimeOptions()
-        );
+        Map<String, ?> rsp = super.callApi(request, "CreateSnapshot", new RuntimeOptions());
         return TeaModel.toModel(rsp, new CreateSnapshotResponse());
     }
 
@@ -784,11 +800,7 @@ public class ZecClient extends AbstractClient {
 
      */
     public ModifySnapshotsAttributeResponse modifySnapshotsAttribute(ModifySnapshotsAttributeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-                request,
-                "ModifySnapshotsAttribute",
-                new RuntimeOptions()
-        );
+        Map<String, ?> rsp = super.callApi(request, "ModifySnapshotsAttribute", new RuntimeOptions());
         return TeaModel.toModel(rsp, new ModifySnapshotsAttributeResponse());
     }
 
@@ -797,11 +809,7 @@ public class ZecClient extends AbstractClient {
 
      */
     public DeleteSnapshotsResponse deleteSnapshots(DeleteSnapshotsRequest request) {
-        Map<String, ?> rsp = super.callApi(
-                request,
-                "DeleteSnapshots",
-                new RuntimeOptions()
-        );
+        Map<String, ?> rsp = super.callApi(request, "DeleteSnapshots", new RuntimeOptions());
         return TeaModel.toModel(rsp, new DeleteSnapshotsResponse());
     }
 
@@ -810,11 +818,7 @@ public class ZecClient extends AbstractClient {
 
      */
     public DescribeSnapshotsResponse describeSnapshots(DescribeSnapshotsRequest request) {
-        Map<String, ?> rsp = super.callApi(
-                request,
-                "DescribeSnapshots",
-                new RuntimeOptions()
-        );
+        Map<String, ?> rsp = super.callApi(request, "DescribeSnapshots", new RuntimeOptions());
         return TeaModel.toModel(rsp, new DescribeSnapshotsResponse());
     }
 
@@ -823,11 +827,7 @@ public class ZecClient extends AbstractClient {
 
      */
     public ApplySnapshotResponse applySnapshot(ApplySnapshotRequest request) {
-        Map<String, ?> rsp = super.callApi(
-                request,
-                "ApplySnapshot",
-                new RuntimeOptions()
-        );
+        Map<String, ?> rsp = super.callApi(request, "ApplySnapshot", new RuntimeOptions());
         return TeaModel.toModel(rsp, new ApplySnapshotResponse());
     }
 
@@ -836,26 +836,16 @@ public class ZecClient extends AbstractClient {
 
      */
     public ModifyNatGatewaysAttributeResponse modifyNatGatewaysAttribute(ModifyNatGatewaysAttributeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-                request,
-                "ModifyNatGatewaysAttribute",
-                new RuntimeOptions()
-        );
+        Map<String, ?> rsp = super.callApi(request, "ModifyNatGatewaysAttribute", new RuntimeOptions());
         return TeaModel.toModel(rsp, new ModifyNatGatewaysAttributeResponse());
     }
-
-
 
     /**
      * 修改NAT网关。
 
      */
     public ModifyNatGatewayResponse modifyNatGateway(ModifyNatGatewayRequest request) {
-        Map<String, ?> rsp = super.callApi(
-                request,
-                "ModifyNatGateway",
-                new RuntimeOptions()
-        );
+        Map<String, ?> rsp = super.callApi(request, "ModifyNatGateway", new RuntimeOptions());
         return TeaModel.toModel(rsp, new ModifyNatGatewayResponse());
     }
 

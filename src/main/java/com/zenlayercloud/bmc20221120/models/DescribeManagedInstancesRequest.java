@@ -52,6 +52,8 @@ public class DescribeManagedInstancesRequest extends TeaModel {
      */
     public Integer pageSize;
 
+    public String resourceGroupId;
+
     public List<String> getInstanceIds() {
         return this.instanceIds;
     }
@@ -116,4 +118,11 @@ public class DescribeManagedInstancesRequest extends TeaModel {
         this.pageSize = pageSize;
     }
 
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
 }

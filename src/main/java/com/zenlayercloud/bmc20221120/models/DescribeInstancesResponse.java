@@ -74,6 +74,11 @@ public class DescribeInstancesResponse extends TeaModel {
         public String imageName;
 
         /**
+         * 安装的SSH密钥ID。
+         */
+        public String keyId;
+
+        /**
          * IpxeUrl。
          * 传入参数后，imageId不生效。
          */

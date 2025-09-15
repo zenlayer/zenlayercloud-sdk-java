@@ -47,4 +47,36 @@ public class UserClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribeResourcesByGroupResponse());
     }
 
+
+    public CreateResourceGroupResponse createResourceGroup(CreateResourceGroupRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "CreateResourceGroup", new RuntimeOptions());
+
+        return TeaModel.toModel(rspStr, new CreateResourceGroupResponse());
+    }
+
+
+
+    public ModifyResourceGroupResponse modifyResourceGroup(ModifyResourceGroupRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifyResourceGroup", new RuntimeOptions());
+
+        return TeaModel.toModel(rspStr, new ModifyResourceGroupResponse());
+    }
+
+
+    public DeleteResourceGroupResponse deleteResourceGroup(DeleteResourceGroupRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DeleteResourceGroup", new RuntimeOptions());
+
+        return TeaModel.toModel(rspStr, new DeleteResourceGroupResponse());
+    }
+
+
+    public AddResourceResourceGroupResponse addResourceResourceGroup(AddResourceResourceGroupRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "AddResourceResourceGroup", new RuntimeOptions());
+
+        return TeaModel.toModel(rspStr, new AddResourceResourceGroupResponse());
+    }
+
+
+
+
 }

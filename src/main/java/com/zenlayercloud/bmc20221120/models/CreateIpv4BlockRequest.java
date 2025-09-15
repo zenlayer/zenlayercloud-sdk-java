@@ -56,4 +56,5 @@ public class CreateIpv4BlockRequest extends TeaModel {
      */
     public String resourceGroupId;
 
+    public MarketingInfo marketingOptions;
 }

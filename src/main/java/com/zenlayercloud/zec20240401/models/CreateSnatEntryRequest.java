@@ -15,7 +15,7 @@ public class CreateSnatEntryRequest extends TeaModel {
     /**
      * CIDR网段，不传默认是0.0.0.0/0
      */
-    public List<String> cidrs;
+    public String cidr;
 
     /**
      * SNAT规则添加的eip ID集合。
@@ -36,12 +36,12 @@ public class CreateSnatEntryRequest extends TeaModel {
         this.natGatewayId = natGatewayId;
     }
 
-    public List<String> getCidrs() {
-        return this.cidrs;
+    public String getCidr() {
+        return cidr;
     }
 
-    public void setCidrs(List<String> cidrs) {
-        this.cidrs = cidrs;
+    public void setCidr(String cidr) {
+        this.cidr = cidr;
     }
 
     public List<String> getEipIds() {

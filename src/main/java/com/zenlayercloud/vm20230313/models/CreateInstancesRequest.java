@@ -98,6 +98,11 @@ public class CreateInstancesRequest extends TeaModel {
     public Boolean enableIpv6;
 
     /**
+     * 是否开启CIDR IPv4
+     */
+    public Boolean enableIpv4;
+
+    /**
      * 是否开启CPU 透传
      */
     public Boolean cpuPassThrough;
