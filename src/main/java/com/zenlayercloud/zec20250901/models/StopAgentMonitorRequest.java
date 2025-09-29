@@ -4,9 +4,9 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 开启IP转发的请求信息。
+ * 关闭Agent监控采集的请求信息。
  */
-public class StartIpForwardRequest extends TeaModel {
+public class StopAgentMonitorRequest extends TeaModel {
 
 
     /**

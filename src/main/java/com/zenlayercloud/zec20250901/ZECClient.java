@@ -5,10 +5,8 @@
 package com.zenlayercloud.zec20250901;
 
 import com.aliyun.tea.TeaModel;
+import com.aliyun.teautil.Common;
 import com.aliyun.teautil.models.RuntimeOptions;
-import com.zenlayercloud.zec20240401.models.StartAgentMonitorRequest;
-import com.zenlayercloud.zec20240401.models.StopAgentMonitorRequest;
-import com.zenlayercloud.zec20240401.models.StopIpForwardRequest;
 import com.zenlayercloud.zec20250901.models.*;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
@@ -17,12 +15,12 @@ import com.zenlayercloud.common.Credential;
 import java.util.Map;
 
 
-public class ZecClient extends AbstractClient {
+public class ZECClient extends AbstractClient {
     private static final String VERSION = "2025-09-01";
     private static final String ENDPOINT = "console.zenlayer.com";
     private static final String PATH = "/api/v2/zec";
 
-    public ZecClient(Credential credential, Config config) {
+    public ZECClient(Credential credential, Config config) {
         super(credential, config,
             config.getEndpoint() != null ? config.getEndpoint() : ENDPOINT,
             VERSION, PATH);
@@ -511,6 +509,19 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 修改一张网卡的属性。
+         
+         */
+    public ModifyNetworkInterfaceAttributeResponse modifyNetworkInterfaceAttribute(ModifyNetworkInterfaceAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyNetworkInterfaceAttribute",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyNetworkInterfaceAttributeResponse());
+    }
+
+        /**
          * 修改网卡的属性，目前只支持修改网卡的名称。
          
          */
@@ -754,6 +765,19 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new AssignSecurityGroupVpcResponse());
+    }
+
+        /**
+         * VPC解绑安全组。
+         
+         */
+    public UnAssignSecurityGroupVpcResponse unAssignSecurityGroupVpc(UnAssignSecurityGroupVpcRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "UnAssignSecurityGroupVpc",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new UnAssignSecurityGroupVpcResponse());
     }
 
         /**
@@ -1521,6 +1545,19 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 修改NAT网关的属性。
+         
+         */
+    public ModifyNatGatewayAttributeResponse modifyNatGatewayAttribute(ModifyNatGatewayAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyNatGatewayAttribute",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyNatGatewayAttributeResponse());
+    }
+
+        /**
          * 支持售卖NAT网关的区域信息。
          
          */
@@ -1688,8 +1725,6 @@ public class ZecClient extends AbstractClient {
         );
         return TeaModel.toModel(rsp, new DescribeAvailableBorderGatewayResponse());
     }
-
-
 
         /**
          * 创建一个自定义路由。

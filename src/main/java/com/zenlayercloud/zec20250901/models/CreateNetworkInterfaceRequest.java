@@ -35,6 +35,13 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * 指定安全组ID。
+     * 目前一个网卡只能关联1个安全组。
+     * 如果未指定，会默认用VPC关联下的安全组
+     */
+    public String securityGroupId;
+
+    /**
      * 公网IPv6的网络计费方式。
      * 当子网的堆栈类型包括V6且为公网时，需要指定
      */
@@ -96,6 +103,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     public void setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
+    }
+
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
 
     public String getInternetChargeType() {

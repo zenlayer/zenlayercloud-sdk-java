@@ -64,6 +64,11 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
      */
     public String resourceGroupId;
 
+    /**
+     * 根据网卡所属的安全组ID过滤
+     */
+    public String securityGroupId;
+
     public List<String> getNicIds() {
         return this.nicIds;
     }
@@ -150,6 +155,14 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     public void setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
+    }
+
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
 
 }

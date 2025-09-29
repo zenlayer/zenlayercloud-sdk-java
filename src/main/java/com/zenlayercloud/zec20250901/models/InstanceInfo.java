@@ -99,6 +99,11 @@ public class InstanceInfo extends TeaModel {
     public String subnetId;
 
     /**
+     * 实例主网卡关联的安全组ID
+     */
+    public String securityGroupId;
+
+    /**
      * 是否开启QGA Agent
      */
     public Boolean enableAgent;
@@ -272,6 +277,14 @@ public class InstanceInfo extends TeaModel {
 
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
+    }
+
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
 
     public Boolean getEnableAgent() {

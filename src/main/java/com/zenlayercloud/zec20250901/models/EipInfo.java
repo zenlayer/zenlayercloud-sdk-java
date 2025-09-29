@@ -108,6 +108,11 @@ public class EipInfo extends TeaModel {
     public List<EipGeoInfo> eipGeoRefs;
 
     /**
+     * EIP的封堵阈值。
+     */
+    public List<BlockInfo> blockInfoList;
+
+    /**
      * EIP 的创建时间
      */
     public String createTime;

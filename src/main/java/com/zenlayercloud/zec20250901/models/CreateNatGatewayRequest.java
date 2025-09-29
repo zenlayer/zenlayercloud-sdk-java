@@ -30,6 +30,12 @@ public class CreateNatGatewayRequest extends TeaModel {
     public List<String> subnetIds;
 
     /**
+     * 安全组ID。
+     * 如果未指定，则指定VPC所属的安全组ID
+     */
+    public String securityGroupId;
+
+    /**
      * 资源组ID。
      * 如果不指定，则会创建在默认资源组
      */
@@ -65,6 +71,14 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     public void setSubnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
+    }
+
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
 
     public String getResourceGroupId() {

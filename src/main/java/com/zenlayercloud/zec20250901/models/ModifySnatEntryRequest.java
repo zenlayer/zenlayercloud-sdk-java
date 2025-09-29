@@ -13,18 +13,20 @@ public class ModifySnatEntryRequest extends TeaModel {
     public String snatEntryId;
 
     /**
-     * CIDR网段，不传默认是0.0.0.0/0
+     * CIDR网段。
+     * 与subnetIds必须指定其中的一种
      */
-    public List<String> cidrs;
+    public String cidr;
 
     /**
      * SNAT规则添加的eip ID集合。
-     * 为空代表加入网关的所有eip
+     * 为空则代表与该NAT网关绑定的所有eip
      */
     public List<String> eipIds;
 
     /**
-     * by Subnet的情况，subnet的id集合
+     * Subnet ID集合。
+     * 与cidr必须指定其中的一种
      */
     public List<String> subnetIds;
 
@@ -36,12 +38,12 @@ public class ModifySnatEntryRequest extends TeaModel {
         this.snatEntryId = snatEntryId;
     }
 
-    public List<String> getCidrs() {
-        return this.cidrs;
+    public String getCidr() {
+        return this.cidr;
     }
 
-    public void setCidrs(List<String> cidrs) {
-        this.cidrs = cidrs;
+    public void setCidr(String cidr) {
+        this.cidr = cidr;
     }
 
     public List<String> getEipIds() {

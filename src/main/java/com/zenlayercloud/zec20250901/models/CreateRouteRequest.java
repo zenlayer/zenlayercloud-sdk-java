@@ -23,16 +23,24 @@ public class CreateRouteRequest extends TeaModel {
     public String routeType;
 
     /**
-     * 源IP地址。
+     * 源IP地址CIDR。
      * `路由类型`配置`RouteTypePolicy(策略路由)`时需指定
      */
-    public String sourceIp;
+    public String sourceCidrBlock;
 
     /**
      * IPv4或IPv6的目标网段。
-     * 例如：10.0.1.0/24
+     * 例如：10.0.1.0/24。
+     * 该字段必填
      */
     public String destinationCidrBlock;
+
+    /**
+     * IPv4或IPv6的目标网段。
+     * 例如：10.0.1.0/24。
+     * 该字段已废弃，请使用`destinationCidrBlock`
+     */
+    public String cidrBlock;
 
     /**
      * 路由优先级。
@@ -42,9 +50,17 @@ public class CreateRouteRequest extends TeaModel {
 
     /**
      * 下一跳资源ID。
-     * 目前只支持网卡ID
+     * 目前只支持网卡ID。
+     * 该字段必填
      */
     public String nextHopId;
+
+    /**
+     * 下一跳资源ID。
+     * 目前只支持网卡ID。
+     * 该字段已废弃， 请使用`nextHopId`
+     */
+    public String nextHotId;
 
     /**
      * 路由名称。
@@ -76,12 +92,12 @@ public class CreateRouteRequest extends TeaModel {
         this.routeType = routeType;
     }
 
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getSourceCidrBlock() {
+        return this.sourceCidrBlock;
     }
 
-    public void setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public void setSourceCidrBlock(String sourceCidrBlock) {
+        this.sourceCidrBlock = sourceCidrBlock;
     }
 
     public String getDestinationCidrBlock() {
@@ -90,6 +106,14 @@ public class CreateRouteRequest extends TeaModel {
 
     public void setDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
+    }
+
+    public String getCidrBlock() {
+        return this.cidrBlock;
+    }
+
+    public void setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
     }
 
     public Integer getPriority() {
@@ -106,6 +130,14 @@ public class CreateRouteRequest extends TeaModel {
 
     public void setNextHopId(String nextHopId) {
         this.nextHopId = nextHopId;
+    }
+
+    public String getNextHotId() {
+        return this.nextHotId;
+    }
+
+    public void setNextHotId(String nextHotId) {
+        this.nextHotId = nextHotId;
     }
 
     public String getName() {

@@ -41,6 +41,16 @@ public class SecurityGroupInfo extends TeaModel {
      */
     public Boolean isDefault;
 
+    /**
+     * 关联安全组的网卡ID列表
+     */
+    public List<String> nicIdList;
+
+    /**
+     * 关联安全组的NAT网关ID列表
+     */
+    public List<String> natIdList;
+
     public String getSecurityGroupId() {
         return this.securityGroupId;
     }
@@ -87,6 +97,22 @@ public class SecurityGroupInfo extends TeaModel {
 
     public void setIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
+    }
+
+    public List<String> getNicIdList() {
+        return this.nicIdList;
+    }
+
+    public void setNicIdList(List<String> nicIdList) {
+        this.nicIdList = nicIdList;
+    }
+
+    public List<String> getNatIdList() {
+        return this.natIdList;
+    }
+
+    public void setNatIdList(List<String> natIdList) {
+        this.natIdList = natIdList;
     }
 
 }

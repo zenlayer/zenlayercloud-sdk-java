@@ -21,7 +21,8 @@ public class CreateSnapshotRequest extends TeaModel {
 
     /**
      * 保留的到期时间。
-     * 格式为：yyyy-MM-ddTHH:mm:ssZ如果不传，则代表永久保留。
+     * 格式为：yyyy-MM-ddTHH:mm:ssZ。
+     * 如果不传，则代表永久保留。
      * 指定时间必须在当前时间24小时后
      */
     public String retentionTime;

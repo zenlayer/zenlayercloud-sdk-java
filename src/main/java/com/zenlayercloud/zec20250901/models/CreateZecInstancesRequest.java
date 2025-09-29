@@ -83,6 +83,13 @@ public class CreateZecInstancesRequest extends TeaModel {
     public List<DataDisk> dataDisks;
 
     /**
+     * 要配置在实例主网卡的安全组ID。
+     * 目前只能关联1个安全组。
+     * 如果未指定，会默认用VPC关联的安全组
+     */
+    public String securityGroupId;
+
+    /**
      * 子网ID
      */
     public String subnetId;
@@ -231,6 +238,14 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     public void setDataDisks(List<DataDisk> dataDisks) {
         this.dataDisks = dataDisks;
+    }
+
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
 
     public String getSubnetId() {

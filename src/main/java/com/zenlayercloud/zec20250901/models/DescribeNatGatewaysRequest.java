@@ -34,6 +34,11 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String status;
 
     /**
+     * 安全组ID
+     */
+    public String securityGroupId;
+
+    /**
      * 返回的分页大小。
      * 默认为20，最大为1000
      */
@@ -88,6 +93,14 @@ public class DescribeNatGatewaysRequest extends TeaModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getSecurityGroupId() {
+        return securityGroupId;
+    }
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
 
     public Integer getPageSize() {

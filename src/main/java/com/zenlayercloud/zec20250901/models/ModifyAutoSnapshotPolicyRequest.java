@@ -35,7 +35,8 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * 自动快照的保留时间，单位为天。
-     * 如果该值设置-1，则代表永久保留
+     * 如果该值设置-1，则代表永久保留。
+     * 可选值范围：-1 或 [1, 65535]
      */
     public Integer retentionDays;
 

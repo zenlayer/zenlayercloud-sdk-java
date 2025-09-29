@@ -3,16 +3,19 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
-public class SnatSubnetRef extends TeaModel {
+/**
+ * Snat规则添加的子网集合。
+ */
+public class SnatSubnet extends TeaModel {
 
 
     /**
-     * subnetId
+     * 子网的ID
      */
     public String subnetId;
 
     /**
-     * cidr
+     * 子网的CIDR
      */
     public String cidr;
 

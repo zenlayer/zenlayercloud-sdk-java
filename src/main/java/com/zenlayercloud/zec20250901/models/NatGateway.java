@@ -56,6 +56,16 @@ public class NatGateway extends TeaModel {
     public String zbgId;
 
     /**
+     * 是否开启ICMP代回
+     */
+    public Boolean icmpReplyEnabled;
+
+    /**
+     * 边界网关关联的安全组ID
+     */
+    public String securityGroupId;
+
+    /**
      * 资源组ID
      */
     public String resourceGroupId;
@@ -147,6 +157,22 @@ public class NatGateway extends TeaModel {
 
     public void setZbgId(String zbgId) {
         this.zbgId = zbgId;
+    }
+
+    public Boolean getIcmpReplyEnabled() {
+        return this.icmpReplyEnabled;
+    }
+
+    public void setIcmpReplyEnabled(Boolean icmpReplyEnabled) {
+        this.icmpReplyEnabled = icmpReplyEnabled;
+    }
+
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
 
     public String getResourceGroupId() {

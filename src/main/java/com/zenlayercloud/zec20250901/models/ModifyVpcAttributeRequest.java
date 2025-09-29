@@ -36,6 +36,12 @@ public class ModifyVpcAttributeRequest extends TeaModel {
      */
     public Boolean enableIPv6;
 
+    /**
+     * 修改VPC绑定的安全组ID。
+     * 如果不指定，则不会修改
+     */
+    public String securityGroupId;
+
     public String getVpcId() {
         return this.vpcId;
     }
@@ -66,6 +72,14 @@ public class ModifyVpcAttributeRequest extends TeaModel {
 
     public void setEnableIPv6(Boolean enableIPv6) {
         this.enableIPv6 = enableIPv6;
+    }
+
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
 
 }

@@ -83,6 +83,11 @@ public class CidrInfo extends TeaModel {
      */
     public String resourceGroupName;
 
+    /**
+     * CIDR的状态
+     */
+    public String status;
+
     public String getCidrId() {
         return this.cidrId;
     }
@@ -193,6 +198,14 @@ public class CidrInfo extends TeaModel {
 
     public void setResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
+    }
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 }

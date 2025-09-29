@@ -44,13 +44,20 @@ public class RouteInfo extends TeaModel {
      * 源IP地址。
      * 当`路由类型`是`RouteTypePolicy(策略路由)`时可取值
      */
-    public String sourceIp;
+    public String sourceCidrBlock;
 
     /**
      * IPv4或IPv6的目标网段。
      * 例如：10.0.1.0/24
      */
     public String destinationCidrBlock;
+
+    /**
+     * IPv4或IPv6的目标网段。
+     * 例如：10.0.1.0/24。
+     * 该字段已废弃，请使用`destinationCidrBlock`
+     */
+    public String cidrBlock;
 
     /**
      * 路由优先级
@@ -125,12 +132,12 @@ public class RouteInfo extends TeaModel {
         this.type = type;
     }
 
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getSourceCidrBlock() {
+        return this.sourceCidrBlock;
     }
 
-    public void setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public void setSourceCidrBlock(String sourceCidrBlock) {
+        this.sourceCidrBlock = sourceCidrBlock;
     }
 
     public String getDestinationCidrBlock() {
@@ -139,6 +146,14 @@ public class RouteInfo extends TeaModel {
 
     public void setDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
+    }
+
+    public String getCidrBlock() {
+        return this.cidrBlock;
+    }
+
+    public void setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
     }
 
     public Integer getPriority() {

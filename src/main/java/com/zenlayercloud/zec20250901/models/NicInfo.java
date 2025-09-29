@@ -107,6 +107,11 @@ public class NicInfo extends TeaModel {
      */
     public ResourceGroupInfo resourceGroup;
 
+    /**
+     * 网卡关联的安全组ID
+     */
+    public String securityGroupId;
+
     public String getNicId() {
         return this.nicId;
     }
@@ -257,6 +262,14 @@ public class NicInfo extends TeaModel {
 
     public void setResourceGroup(ResourceGroupInfo resourceGroup) {
         this.resourceGroup = resourceGroup;
+    }
+
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
 
 }
