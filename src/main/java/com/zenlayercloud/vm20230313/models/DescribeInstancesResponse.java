@@ -167,5 +167,10 @@ public class DescribeInstancesResponse extends TeaModel {
          */
         public Nic nic;
 
+        /**
+         * 该机器关联的标签
+         */
+        public Tags tags;
+
     }
 }

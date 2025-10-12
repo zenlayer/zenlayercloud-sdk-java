@@ -143,5 +143,11 @@ public class CreateInstancesRequest extends TeaModel {
 
     public MarketingInfo  marketingOptions;
 
+    /**
+     * 创建机器时关联的标签。
+     * 注意：关联`标签键`不能重复
+     */
+    public TagAssociation tags;
+
 }
 
