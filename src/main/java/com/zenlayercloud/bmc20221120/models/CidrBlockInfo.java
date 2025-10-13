@@ -95,4 +95,9 @@ public class CidrBlockInfo extends TeaModel {
      */
     public String resourceGroupName;
 
+    /**
+     * 该CIDR关联的标签
+     */
+    public Tags tags;
+
 }
