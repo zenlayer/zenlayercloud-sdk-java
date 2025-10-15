@@ -20,7 +20,7 @@ public class DescribeTagsResponse extends TeaModel {
     /**
      * 数据列表
      */
-    public List<Tag> dataSet;
+    public List<TagInfo> dataSet;
 
     public String getRequestId() {
         return this.requestId;
@@ -38,11 +38,11 @@ public class DescribeTagsResponse extends TeaModel {
         this.totalCount = totalCount;
     }
 
-    public List<Tag> getDataSet() {
+    public List<TagInfo> getDataSet() {
         return this.dataSet;
     }
 
-    public void setDataSet(List<Tag> dataSet) {
+    public void setDataSet(List<TagInfo> dataSet) {
         this.dataSet = dataSet;
     }
 

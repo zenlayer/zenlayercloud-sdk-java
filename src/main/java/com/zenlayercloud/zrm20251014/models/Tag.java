@@ -4,30 +4,22 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 描述标签的基本信息
+ * 描述一个标签键值对的信息。
  */
 public class Tag extends TeaModel {
 
 
     /**
-     * 标签键
+     * 标签键。
+     * 长度限制：1～64个字符
      */
     public String key;
 
     /**
-     * 标签值
+     * 标签值。
+     * 长度限制：1～64个字符
      */
     public String value;
-
-    /**
-     * 标签下绑定的资源总数
-     */
-    public Integer bindResourceCount;
-
-    /**
-     * 创建时间
-     */
-    public String createdDate;
 
     public String getKey() {
         return this.key;
@@ -43,22 +35,6 @@ public class Tag extends TeaModel {
 
     public void setValue(String value) {
         this.value = value;
-    }
-
-    public Integer getBindResourceCount() {
-        return this.bindResourceCount;
-    }
-
-    public void setBindResourceCount(Integer bindResourceCount) {
-        this.bindResourceCount = bindResourceCount;
-    }
-
-    public String getCreatedDate() {
-        return this.createdDate;
-    }
-
-    public void setCreatedDate(String createdDate) {
-        this.createdDate = createdDate;
     }
 
 }

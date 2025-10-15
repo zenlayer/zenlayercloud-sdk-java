@@ -3,6 +3,9 @@ package com.zenlayercloud.zrm20251014.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 资源信息的请求参数。
+ */
 public class Resource extends TeaModel {
 
 
