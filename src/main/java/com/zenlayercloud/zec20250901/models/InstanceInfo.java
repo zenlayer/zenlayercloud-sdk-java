@@ -143,6 +143,11 @@ public class InstanceInfo extends TeaModel {
      */
     public List<NicInfo> nics;
 
+    /**
+     * 实例关联的标签
+     */
+    public Tags tags;
+
     public String getInstanceId() {
         return this.instanceId;
     }
@@ -349,6 +354,14 @@ public class InstanceInfo extends TeaModel {
 
     public void setNics(List<NicInfo> nics) {
         this.nics = nics;
+    }
+
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    public void setTags(Tags tags) {
+        this.tags = tags;
     }
 
 }

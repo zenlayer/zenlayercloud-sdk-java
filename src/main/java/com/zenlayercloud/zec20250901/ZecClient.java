@@ -5,7 +5,6 @@
 package com.zenlayercloud.zec20250901;
 
 import com.aliyun.tea.TeaModel;
-import com.aliyun.teautil.Common;
 import com.aliyun.teautil.models.RuntimeOptions;
 import com.zenlayercloud.zec20250901.models.*;
 import com.zenlayercloud.common.AbstractClient;
@@ -15,12 +14,12 @@ import com.zenlayercloud.common.Credential;
 import java.util.Map;
 
 
-public class ZECClient extends AbstractClient {
+public class ZecClient extends AbstractClient {
     private static final String VERSION = "2025-09-01";
     private static final String ENDPOINT = "console.zenlayer.com";
     private static final String PATH = "/api/v2/zec";
 
-    public ZECClient(Credential credential, Config config) {
+    public ZecClient(Credential credential, Config config) {
         super(credential, config,
             config.getEndpoint() != null ? config.getEndpoint() : ENDPOINT,
             VERSION, PATH);
@@ -677,6 +676,45 @@ public class ZECClient extends AbstractClient {
     }
 
         /**
+         * 用实例创建自定义镜像。
+         
+         */
+    public CreateImageResponse createImage(CreateImageRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateImage",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateImageResponse());
+    }
+
+        /**
+         * 修改自定义镜像属性。
+         
+         */
+    public ModifyImagesAttributesResponse modifyImagesAttributes(ModifyImagesAttributesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyImagesAttributes",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyImagesAttributesResponse());
+    }
+
+        /**
+         * 删除一个或多个镜像。
+         
+         */
+    public DeleteImagesResponse deleteImages(DeleteImagesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteImages",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteImagesResponse());
+    }
+
+        /**
          * 查询安全组列表。
          
          */
@@ -1103,6 +1141,20 @@ public class ZECClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new CreateCidrResponse());
+    }
+
+        /**
+         * 修改CIDR地址段的属性。
+         * 目前只能修改名称。
+         
+         */
+    public ModifyCidrAttributeResponse modifyCidrAttribute(ModifyCidrAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyCidrAttribute",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyCidrAttributeResponse());
     }
 
         /**

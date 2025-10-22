@@ -42,6 +42,12 @@ public class CreateVpcRequest extends TeaModel {
      */
     public String resourceGroupId;
 
+    /**
+     * 创建VPC时关联的标签。
+     * 注意：·关联`标签键`不能重复
+     */
+    public TagAssociation tags;
+
     public String getName() {
         return this.name;
     }
@@ -80,6 +86,14 @@ public class CreateVpcRequest extends TeaModel {
 
     public void setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
+    }
+
+    public TagAssociation getTags() {
+        return this.tags;
+    }
+
+    public void setTags(TagAssociation tags) {
+        this.tags = tags;
     }
 
 }

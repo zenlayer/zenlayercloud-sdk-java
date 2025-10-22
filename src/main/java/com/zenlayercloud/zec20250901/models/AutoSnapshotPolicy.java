@@ -65,6 +65,11 @@ public class AutoSnapshotPolicy extends TeaModel {
      */
     public List<String> diskIdSet;
 
+    /**
+     * tags
+     */
+    public Tags tags;
+
     public String getAutoSnapshotPolicyId() {
         return this.autoSnapshotPolicyId;
     }
@@ -143,6 +148,14 @@ public class AutoSnapshotPolicy extends TeaModel {
 
     public void setDiskIdSet(List<String> diskIdSet) {
         this.diskIdSet = diskIdSet;
+    }
+
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    public void setTags(Tags tags) {
+        this.tags = tags;
     }
 
 }

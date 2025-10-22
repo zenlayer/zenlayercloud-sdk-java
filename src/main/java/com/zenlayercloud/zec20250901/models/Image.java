@@ -60,6 +60,11 @@ public class Image extends TeaModel {
      */
     public String osType;
 
+    /**
+     * 实例关联的标签
+     */
+    public Tags tags;
+
     public String getImageId() {
         return this.imageId;
     }
@@ -138,6 +143,14 @@ public class Image extends TeaModel {
 
     public void setOsType(String osType) {
         this.osType = osType;
+    }
+
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    public void setTags(Tags tags) {
+        this.tags = tags;
     }
 
 }

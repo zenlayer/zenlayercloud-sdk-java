@@ -73,6 +73,12 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
      */
     public MarketingInfo marketingOptions;
 
+    /**
+     * 创建网卡时关联的标签。
+     * 注意：·关联`标签键`不能重复
+     */
+    public TagAssociation tags;
+
     public String getName() {
         return this.name;
     }
@@ -151,6 +157,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     public void setMarketingOptions(MarketingInfo marketingOptions) {
         this.marketingOptions = marketingOptions;
+    }
+
+    public TagAssociation getTags() {
+        return this.tags;
+    }
+
+    public void setTags(TagAssociation tags) {
+        this.tags = tags;
     }
 
 }

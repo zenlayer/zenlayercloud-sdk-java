@@ -16,8 +16,7 @@ public class DescribeImagesRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * 镜像ID列表。
-     * 可以通过 DescribeImages 返回的`imageId`获取
+     * 镜像ID列表
      */
     public List<String> imageIds;
 
@@ -48,14 +47,28 @@ public class DescribeImagesRequest extends TeaModel {
     public String imageStatus;
 
     /**
-     * 返回的分页数
+     * 返回的分页页码。
+     * 默认为1
      */
     public Integer pageNum;
 
     /**
-     * 返回的分页大小
+     * 返回的分页大小。
+     * 默认为20，最大为1000
      */
     public Integer pageSize;
+
+    /**
+     * 根据标签键进行搜索。
+     * 最长不得超过20个标签键
+     */
+    public List<String> tagKeys;
+
+    /**
+     * 根据标签进行搜索。
+     * 最长不得超过20个标签
+     */
+    public List<Tag> tags;
 
     public String getZoneId() {
         return this.zoneId;
@@ -127,6 +140,22 @@ public class DescribeImagesRequest extends TeaModel {
 
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+    }
+
+    public List<String> getTagKeys() {
+        return this.tagKeys;
+    }
+
+    public void setTagKeys(List<String> tagKeys) {
+        this.tagKeys = tagKeys;
+    }
+
+    public List<Tag> getTags() {
+        return this.tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
     }
 
 }

@@ -25,6 +25,15 @@ public class CreateCidrRequest extends TeaModel {
     public NetmaskInfo netmask;
 
     /**
+     * CIDR名称。
+     * 范围2到63个字符。
+     * 仅支持输入字母、数字、-/_和英文句点(.)。
+     * 且必须以数字或字母开头和结尾。
+     * 默认会将分配的CIDR地址作为名称
+     */
+    public String name;
+
+    /**
      * 资源组ID。
      * 如果不指定，则会加入默认资源组
      */
@@ -34,6 +43,12 @@ public class CreateCidrRequest extends TeaModel {
      * 市场营销相关的选项
      */
     public MarketingInfo marketingOptions;
+
+    /**
+     * 创建CIDR时关联的标签。
+     * 注意：关联`标签键`不能重复
+     */
+    public TagAssociation tags;
 
     public String getRegionId() {
         return this.regionId;
@@ -59,6 +74,14 @@ public class CreateCidrRequest extends TeaModel {
         this.netmask = netmask;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getResourceGroupId() {
         return this.resourceGroupId;
     }
@@ -73,6 +96,14 @@ public class CreateCidrRequest extends TeaModel {
 
     public void setMarketingOptions(MarketingInfo marketingOptions) {
         this.marketingOptions = marketingOptions;
+    }
+
+    public TagAssociation getTags() {
+        return this.tags;
+    }
+
+    public void setTags(TagAssociation tags) {
+        this.tags = tags;
     }
 
 }

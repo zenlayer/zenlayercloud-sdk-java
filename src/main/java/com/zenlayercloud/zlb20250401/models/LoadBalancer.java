@@ -61,6 +61,11 @@ public class LoadBalancer extends TeaModel {
      */
     public ResourceGroupInfo resourceGroup;
 
+    /**
+     * 该负载均衡器关联的标签
+     */
+    public Tags tags;
+
     public String getRegionId() {
         return this.regionId;
     }
@@ -139,6 +144,14 @@ public class LoadBalancer extends TeaModel {
 
     public void setResourceGroup(ResourceGroupInfo resourceGroup) {
         this.resourceGroup = resourceGroup;
+    }
+
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    public void setTags(Tags tags) {
+        this.tags = tags;
     }
 
 }

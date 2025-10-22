@@ -74,15 +74,21 @@ public class EipInfo extends TeaModel {
 
     /**
      * EIP 绑定的资源ID。
-     * 可能为实例ID、网卡ID或者NAT网关ID
+     * 可能为负载均衡ID、网卡ID或者NAT网关ID
      */
     public String associatedId;
 
     /**
      * EIP 资源类型。
-     * 可能为实例ID、网卡ID或者NAT网关ID
+     * 可能为负载均衡ID、网卡ID或者NAT网关ID
      */
     public String associatedType;
+
+    /**
+     * EIP 绑定的实例ID。
+     * 当且仅当`associatedType`字段为`NIC`时可能有值
+     */
+    public String instanceId;
 
     /**
      * EIP 绑定类型
@@ -108,7 +114,7 @@ public class EipInfo extends TeaModel {
     public List<EipGeoInfo> eipGeoRefs;
 
     /**
-     * EIP的封堵阈值。
+     * EIP的封堵阈值
      */
     public List<BlockInfo> blockInfoList;
 
@@ -137,6 +143,11 @@ public class EipInfo extends TeaModel {
      * EIP 关联的带宽组ID
      */
     public BandwidthClusterInfo bandwidthCluster;
+
+    /**
+     * EIP关联的标签
+     */
+    public Tags tags;
 
     public String getEipId() {
         return this.eipId;
@@ -250,6 +261,14 @@ public class EipInfo extends TeaModel {
         this.associatedType = associatedType;
     }
 
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public void setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+    }
+
     public String getBindType() {
         return this.bindType;
     }
@@ -280,6 +299,14 @@ public class EipInfo extends TeaModel {
 
     public void setEipGeoRefs(List<EipGeoInfo> eipGeoRefs) {
         this.eipGeoRefs = eipGeoRefs;
+    }
+
+    public List<BlockInfo> getBlockInfoList() {
+        return this.blockInfoList;
+    }
+
+    public void setBlockInfoList(List<BlockInfo> blockInfoList) {
+        this.blockInfoList = blockInfoList;
     }
 
     public String getCreateTime() {
@@ -320,6 +347,14 @@ public class EipInfo extends TeaModel {
 
     public void setBandwidthCluster(BandwidthClusterInfo bandwidthCluster) {
         this.bandwidthCluster = bandwidthCluster;
+    }
+
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    public void setTags(Tags tags) {
+        this.tags = tags;
     }
 
 }

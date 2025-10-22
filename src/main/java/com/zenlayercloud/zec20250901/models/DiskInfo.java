@@ -106,6 +106,11 @@ public class DiskInfo extends TeaModel {
      */
     public String autoSnapshotPolicyId;
 
+    /**
+     * 该云盘关联的标签
+     */
+    public Tags tags;
+
     public String getDiskId() {
         return this.diskId;
     }
@@ -256,6 +261,14 @@ public class DiskInfo extends TeaModel {
 
     public void setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
         this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+    }
+
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    public void setTags(Tags tags) {
+        this.tags = tags;
     }
 
 }

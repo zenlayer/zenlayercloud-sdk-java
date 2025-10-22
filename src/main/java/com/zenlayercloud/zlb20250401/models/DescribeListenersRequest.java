@@ -45,5 +45,5 @@ public class DescribeListenersRequest extends TeaModel {
     public void setProtocol(String protocol) {
         this.protocol = protocol;
     }
-    
+
 }

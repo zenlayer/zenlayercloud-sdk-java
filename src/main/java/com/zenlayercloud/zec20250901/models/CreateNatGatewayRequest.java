@@ -41,6 +41,12 @@ public class CreateNatGatewayRequest extends TeaModel {
      */
     public String resourceGroupId;
 
+    /**
+     * 创建NAT网关时关联的标签。
+     * 注意：·关联`标签键`不能重复
+     */
+    public TagAssociation tags;
+
     public String getRegionId() {
         return this.regionId;
     }
@@ -87,6 +93,14 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     public void setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
+    }
+
+    public TagAssociation getTags() {
+        return this.tags;
+    }
+
+    public void setTags(TagAssociation tags) {
+        this.tags = tags;
     }
 
 }

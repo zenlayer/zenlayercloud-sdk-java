@@ -46,6 +46,18 @@ public class DescribeLoadBalancersRequest extends TeaModel {
      */
     public String resourceGroupId;
 
+    /**
+     * 根据标签键进行搜索。
+     * 最长不得超过20个标签键
+     */
+    public List<String> tagKeys;
+
+    /**
+     * 根据标签进行搜索。
+     * 最长不得超过20个标签
+     */
+    public List<Tag> tags;
+
     public String getRegionId() {
         return this.regionId;
     }
@@ -100,6 +112,22 @@ public class DescribeLoadBalancersRequest extends TeaModel {
 
     public void setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
+    }
+
+    public List<String> getTagKeys() {
+        return this.tagKeys;
+    }
+
+    public void setTagKeys(List<String> tagKeys) {
+        this.tagKeys = tagKeys;
+    }
+
+    public List<Tag> getTags() {
+        return this.tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
     }
 
 }

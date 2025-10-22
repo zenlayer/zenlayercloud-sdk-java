@@ -62,8 +62,16 @@ public class CreateLoadBalancerRequest extends TeaModel {
      */
     public Integer number;
 
+    /**
+     * marketingOptions
+     */
     public MarketingInfo marketingOptions;
 
+    /**
+     * 创建负载均衡时关联的标签。
+     * 注意：·关联`标签键`不能重复
+     */
+    public TagAssociation tags;
 
     public String getRegionId() {
         return this.regionId;
@@ -146,10 +154,19 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
 
     public MarketingInfo getMarketingOptions() {
-        return marketingOptions;
+        return this.marketingOptions;
     }
 
     public void setMarketingOptions(MarketingInfo marketingOptions) {
         this.marketingOptions = marketingOptions;
     }
+
+    public TagAssociation getTags() {
+        return this.tags;
+    }
+
+    public void setTags(TagAssociation tags) {
+        this.tags = tags;
+    }
+
 }

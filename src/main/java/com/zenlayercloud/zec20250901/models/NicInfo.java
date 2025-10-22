@@ -112,6 +112,11 @@ public class NicInfo extends TeaModel {
      */
     public String securityGroupId;
 
+    /**
+     * 该网卡关联的标签
+     */
+    public Tags tags;
+
     public String getNicId() {
         return this.nicId;
     }
@@ -270,6 +275,14 @@ public class NicInfo extends TeaModel {
 
     public void setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
+    }
+
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    public void setTags(Tags tags) {
+        this.tags = tags;
     }
 
 }

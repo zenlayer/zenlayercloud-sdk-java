@@ -90,6 +90,12 @@ public class CreateEipsRequest extends TeaModel {
      */
     public MarketingInfo marketingOptions;
 
+    /**
+     * 弹性公网IP绑定的标签。
+     * 注意：实例关联`标签键`不能重复
+     */
+    public TagAssociation tags;
+
     public String getRegionId() {
         return this.regionId;
     }
@@ -200,6 +206,14 @@ public class CreateEipsRequest extends TeaModel {
 
     public void setMarketingOptions(MarketingInfo marketingOptions) {
         this.marketingOptions = marketingOptions;
+    }
+
+    public TagAssociation getTags() {
+        return this.tags;
+    }
+
+    public void setTags(TagAssociation tags) {
+        this.tags = tags;
     }
 
 }

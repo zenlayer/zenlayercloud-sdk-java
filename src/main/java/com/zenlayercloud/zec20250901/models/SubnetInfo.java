@@ -30,10 +30,20 @@ public class SubnetInfo extends TeaModel {
     public String cidrBlock;
 
     /**
+     * 网关地址
+     */
+    public String gatewayIpAddress;
+
+    /**
      * 子网的IPv6 CIDR地址段。
      * 如果子网的IP堆栈类型不包括V6,该字段取不到值
      */
     public String ipv6CidrBlock;
+
+    /**
+     * IPv6的网关地址
+     */
+    public String ipv6GatewayIpAddress;
 
     /**
      * 子网的IP堆栈类型
@@ -108,12 +118,28 @@ public class SubnetInfo extends TeaModel {
         this.cidrBlock = cidrBlock;
     }
 
+    public String getGatewayIpAddress() {
+        return this.gatewayIpAddress;
+    }
+
+    public void setGatewayIpAddress(String gatewayIpAddress) {
+        this.gatewayIpAddress = gatewayIpAddress;
+    }
+
     public String getIpv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
 
     public void setIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
+    }
+
+    public String getIpv6GatewayIpAddress() {
+        return this.ipv6GatewayIpAddress;
+    }
+
+    public void setIpv6GatewayIpAddress(String ipv6GatewayIpAddress) {
+        this.ipv6GatewayIpAddress = ipv6GatewayIpAddress;
     }
 
     public String getStackType() {

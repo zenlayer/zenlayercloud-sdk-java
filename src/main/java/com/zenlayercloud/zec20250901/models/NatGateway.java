@@ -87,6 +87,11 @@ public class NatGateway extends TeaModel {
      */
     public String expiredTime;
 
+    /**
+     * 该CIDR地址段关联的标签
+     */
+    public Tags tags;
+
     public String getNatGatewayId() {
         return this.natGatewayId;
     }
@@ -205,6 +210,14 @@ public class NatGateway extends TeaModel {
 
     public void setExpiredTime(String expiredTime) {
         this.expiredTime = expiredTime;
+    }
+
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    public void setTags(Tags tags) {
+        this.tags = tags;
     }
 
 }

@@ -65,6 +65,11 @@ public class VpcInfo extends TeaModel {
      */
     public ResourceGroupInfo resourceGroup;
 
+    /**
+     * 该VPC关联的标签
+     */
+    public Tags tags;
+
     public String getVpcId() {
         return this.vpcId;
     }
@@ -151,6 +156,14 @@ public class VpcInfo extends TeaModel {
 
     public void setResourceGroup(ResourceGroupInfo resourceGroup) {
         this.resourceGroup = resourceGroup;
+    }
+
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    public void setTags(Tags tags) {
+        this.tags = tags;
     }
 
 }

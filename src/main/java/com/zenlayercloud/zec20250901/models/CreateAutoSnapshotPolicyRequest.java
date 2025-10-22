@@ -40,7 +40,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
      * 自动快照的保留时间，单位为天。
      * 如果该值设置-1，则代表永久保留。
      * 默认为永久保存。
-     * 可选值范围：-1 或 [1, 65535]
+     * 取值范围：-1或[1,65535]
      */
     public Integer retentionDays;
 
@@ -48,6 +48,12 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
      * 资源组ID
      */
     public String resourceGroupId;
+
+    /**
+     * 创建自动快照时关联的标签。
+     * 注意：·关联`标签键`不能重复
+     */
+    public TagAssociation tags;
 
     public String getZoneId() {
         return this.zoneId;
@@ -95,6 +101,14 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     public void setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
+    }
+
+    public TagAssociation getTags() {
+        return this.tags;
+    }
+
+    public void setTags(TagAssociation tags) {
+        this.tags = tags;
     }
 
 }

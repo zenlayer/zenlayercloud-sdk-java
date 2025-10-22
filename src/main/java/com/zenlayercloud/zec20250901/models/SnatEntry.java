@@ -22,9 +22,14 @@ public class SnatEntry extends TeaModel {
     public List<String> cidrs;
 
     /**
-     * SNAT规则添加的eip ID集合
+     * SNAT规则添加的弹性公网IP ID集合
      */
     public List<String> eipIds;
+
+    /**
+     * 弹性公网IP是否为所有的NAT网关上的公网弹性IP
+     */
+    public Boolean isAllEip;
 
     /**
      * SNAT规则添加的subnet ID集合
@@ -53,6 +58,14 @@ public class SnatEntry extends TeaModel {
 
     public void setEipIds(List<String> eipIds) {
         this.eipIds = eipIds;
+    }
+
+    public Boolean getIsAllEip() {
+        return this.isAllEip;
+    }
+
+    public void setIsAllEip(Boolean isAllEip) {
+        this.isAllEip = isAllEip;
     }
 
     public List<SnatSubnet> getSnatSubnets() {

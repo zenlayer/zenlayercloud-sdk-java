@@ -88,6 +88,11 @@ public class CidrInfo extends TeaModel {
      */
     public String status;
 
+    /**
+     * 该CIDR地址段关联的标签
+     */
+    public Tags tags;
+
     public String getCidrId() {
         return this.cidrId;
     }
@@ -206,6 +211,14 @@ public class CidrInfo extends TeaModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    public void setTags(Tags tags) {
+        this.tags = tags;
     }
 
 }
