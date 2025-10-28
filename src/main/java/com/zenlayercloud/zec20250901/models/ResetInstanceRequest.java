@@ -52,6 +52,12 @@ public class ResetInstanceRequest extends TeaModel {
      */
     public String instanceName;
 
+
+    /**
+     * 初始化命令
+     */
+    public String userData;
+
     public String getInstanceId() {
         return this.instanceId;
     }
@@ -106,6 +112,14 @@ public class ResetInstanceRequest extends TeaModel {
 
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
+    }
+
+    public String getUserData() {
+        return this.userData;
+    }
+
+    public void setUserData(String userData) {
+        this.userData = userData;
     }
 
 }

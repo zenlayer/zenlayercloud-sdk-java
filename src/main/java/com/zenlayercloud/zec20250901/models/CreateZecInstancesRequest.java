@@ -166,6 +166,11 @@ public class CreateZecInstancesRequest extends TeaModel {
      */
     public TagAssociation tags;
 
+    /**
+     * 初始化命令
+     */
+    public String userData;
+
     public String getZoneId() {
         return this.zoneId;
     }
@@ -356,6 +361,14 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     public void setTags(TagAssociation tags) {
         this.tags = tags;
+    }
+
+    public String getUserData() {
+        return this.userData;
+    }
+
+    public void setUserData(String userData) {
+        this.userData = userData;
     }
 
 }
