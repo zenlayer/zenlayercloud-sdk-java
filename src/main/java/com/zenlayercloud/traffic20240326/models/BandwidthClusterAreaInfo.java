@@ -25,6 +25,11 @@ public class BandwidthClusterAreaInfo extends TeaModel {
      */
     public List<String> networkTypes;
 
+    /**
+     * 该地区支持的产品线
+     */
+    public List<String> products;
+
     public String getAreaCode() {
         return this.areaCode;
     }
@@ -47,6 +52,14 @@ public class BandwidthClusterAreaInfo extends TeaModel {
 
     public void setNetworkTypes(List<String> networkTypes) {
         this.networkTypes = networkTypes;
+    }
+
+    public List<String> getProducts() {
+        return this.products;
+    }
+
+    public void setProducts(List<String> products) {
+        this.products = products;
     }
 
 }

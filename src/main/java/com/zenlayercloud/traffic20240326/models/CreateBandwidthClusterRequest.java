@@ -39,6 +39,11 @@ public class CreateBandwidthClusterRequest extends TeaModel {
      */
     public String name;
 
+    /**
+     * 城市带宽包所包含的的产品线范围
+     */
+    public String product;
+
     public String getAreaCode() {
         return this.areaCode;
     }
@@ -77,6 +82,14 @@ public class CreateBandwidthClusterRequest extends TeaModel {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getProduct() {
+        return this.product;
+    }
+
+    public void setProduct(String product) {
+        this.product = product;
     }
 
 }
