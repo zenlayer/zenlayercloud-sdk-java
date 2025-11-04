@@ -32,6 +32,11 @@ public class InquiryBandwidthClusterPriceRequest extends TeaModel {
      */
     public String internetChargeType;
 
+    /**
+     * 产品线
+     */
+    public String product;
+
     public String getAreaCode() {
         return this.areaCode;
     }
@@ -62,6 +67,14 @@ public class InquiryBandwidthClusterPriceRequest extends TeaModel {
 
     public void setInternetChargeType(String internetChargeType) {
         this.internetChargeType = internetChargeType;
+    }
+
+    public String getProduct() {
+        return this.product;
+    }
+
+    public void setProduct(String product) {
+        this.product = product;
     }
 
 }
