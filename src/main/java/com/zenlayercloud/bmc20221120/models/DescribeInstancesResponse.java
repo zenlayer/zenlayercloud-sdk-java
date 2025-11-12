@@ -205,5 +205,10 @@ public class DescribeInstancesResponse extends TeaModel {
          */
         public Boolean autoRenew;
 
+
+        /**
+         * 该机器关联的标签
+         */
+        public Tags tags;
     }
 }

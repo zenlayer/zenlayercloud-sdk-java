@@ -101,6 +101,12 @@ public class DescribeEipAddressesResponse extends TeaModel {
          * RECYCLE：表示在回收站
          */
         public String eipStatus;
+
+
+        /**
+         * 该EIP关联的标签
+         */
+        public Tags tags;
     }
 
 }

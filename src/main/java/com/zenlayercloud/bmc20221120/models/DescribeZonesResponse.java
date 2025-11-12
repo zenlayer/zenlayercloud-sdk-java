@@ -47,5 +47,10 @@ public class DescribeZonesResponse extends TeaModel {
          * 可用区所在大区名称
          */
         public String areaName;
+
+        /**
+         * 可用区是否支持SDN三层网络。
+         */
+        public Boolean isCloudRouterAvailable;
     }
 }

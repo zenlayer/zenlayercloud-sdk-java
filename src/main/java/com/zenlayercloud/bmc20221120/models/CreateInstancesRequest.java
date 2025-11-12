@@ -160,4 +160,16 @@ public class CreateInstancesRequest extends TeaModel {
     public String clusterId;
 
     public MarketingInfo marketingOptions;
+
+    /**
+     * 用户数据。
+     */
+    public String userData;
+
+
+    /**
+     * 创建机器时关联的标签。
+     * 注意：关联`标签键`不能重复
+     */
+    public TagAssociation tags;
 }

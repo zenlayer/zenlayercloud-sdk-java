@@ -33,4 +33,10 @@ public class CreateIpv6BlockRequest extends TeaModel {
      */
     public String resourceGroupId;
 
+    /**
+     * 创建CIDR时关联的标签。
+     * 注意：关联`标签键`不能重复
+     */
+    public TagAssociation tags;
+
 }

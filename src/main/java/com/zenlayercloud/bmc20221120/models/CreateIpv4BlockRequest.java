@@ -57,4 +57,10 @@ public class CreateIpv4BlockRequest extends TeaModel {
     public String resourceGroupId;
 
     public MarketingInfo marketingOptions;
+
+    /**
+     * 创建CIDR时关联的标签。
+     * 注意：关联`标签键`不能重复
+     */
+    public TagAssociation tags;
 }
