@@ -102,5 +102,11 @@ public class DescribeDisksResponse extends TeaModel {
          * 对于预付费实例，取消订阅后，该字段值将返回 false
          */
         public Boolean autoRenew;
+
+
+        /**
+         * 该DISK关联的标签
+         */
+        public Tags tags;
     }
 }

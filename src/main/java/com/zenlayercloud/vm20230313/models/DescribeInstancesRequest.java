@@ -94,5 +94,15 @@ public class DescribeInstancesRequest extends TeaModel {
      */
     public Integer pageNum;
 
+    /**
+     * 根据标签键进行搜索。
+     * 最长不得超过20个标签键
+     */
+    public List<String> tagKeys;
 
+    /**
+     * 根据标签进行搜索。
+     * 最长不得超过20个标签
+     */
+    public List<Tag> tags;
 }
