@@ -2,6 +2,7 @@ package com.zenlayercloud.zec20250901.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
 
 /**
  * 创建EIP的请求参数。
@@ -95,6 +96,19 @@ public class CreateEipsRequest extends TeaModel {
      * 注意：实例关联`标签键`不能重复
      */
     public TagAssociation tags;
+
+    /**
+     * 要绑定的实例ID集合。
+     * 数量需要与`amount`字段一致
+     */
+    public List<String> instanceIds;
+
+    /**
+     * 绑定类型。
+     * 当指定定`instanceIds`时生效。
+     * 默认为普通NAT模式
+     */
+    public String bindType;
 
     public String getRegionId() {
         return this.regionId;
@@ -214,6 +228,22 @@ public class CreateEipsRequest extends TeaModel {
 
     public void setTags(TagAssociation tags) {
         this.tags = tags;
+    }
+
+    public List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public void setInstanceIds(List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+    }
+
+    public String getBindType() {
+        return this.bindType;
+    }
+
+    public void setBindType(String bindType) {
+        this.bindType = bindType;
     }
 
 }

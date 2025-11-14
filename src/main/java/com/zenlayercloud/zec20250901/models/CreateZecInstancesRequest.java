@@ -64,6 +64,11 @@ public class CreateZecInstancesRequest extends TeaModel {
     public String keyId;
 
     /**
+     * 网卡模式
+     */
+    public String nicNetworkType;
+
+    /**
      * 要创建的实例数量
      */
     public Integer instanceCount;
@@ -225,6 +230,14 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     public void setKeyId(String keyId) {
         this.keyId = keyId;
+    }
+
+    public String getNicNetworkType() {
+        return this.nicNetworkType;
+    }
+
+    public void setNicNetworkType(String nicNetworkType) {
+        this.nicNetworkType = nicNetworkType;
     }
 
     public Integer getInstanceCount() {

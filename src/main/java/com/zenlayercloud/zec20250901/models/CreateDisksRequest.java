@@ -2,6 +2,7 @@ package com.zenlayercloud.zec20250901.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
 
 /**
  * 创建云硬盘的请求信息。
@@ -67,6 +68,12 @@ public class CreateDisksRequest extends TeaModel {
      * 注意：·关联`标签键`不能重复
      */
     public TagAssociation tags;
+
+    /**
+     * 要绑定的实例ID。
+     * 数量需要与`diskAmount`字段一致
+     */
+    public List<String> instanceIds;
 
     public String getZoneId() {
         return this.zoneId;
@@ -146,6 +153,14 @@ public class CreateDisksRequest extends TeaModel {
 
     public void setTags(TagAssociation tags) {
         this.tags = tags;
+    }
+
+    public List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public void setInstanceIds(List<String> instanceIds) {
+        this.instanceIds = instanceIds;
     }
 
 }

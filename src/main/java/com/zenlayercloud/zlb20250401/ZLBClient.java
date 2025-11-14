@@ -5,6 +5,7 @@
 package com.zenlayercloud.zlb20250401;
 
 import com.aliyun.tea.TeaModel;
+import com.aliyun.teautil.Common;
 import com.aliyun.teautil.models.RuntimeOptions;
 import com.zenlayercloud.zlb20250401.models.*;
 import com.zenlayercloud.common.AbstractClient;
@@ -14,12 +15,12 @@ import com.zenlayercloud.common.Credential;
 import java.util.Map;
 
 
-public class ZLBClient extends AbstractClient {
+public class ZlbClient extends AbstractClient {
     private static final String VERSION = "2025-04-01";
     private static final String ENDPOINT = "console.zenlayer.com";
     private static final String PATH = "/api/v2/zlb";
 
-    public ZLBClient(Credential credential, Config config) {
+    public ZlbClient(Credential credential, Config config) {
         super(credential, config,
             config.getEndpoint() != null ? config.getEndpoint() : ENDPOINT,
             VERSION, PATH);

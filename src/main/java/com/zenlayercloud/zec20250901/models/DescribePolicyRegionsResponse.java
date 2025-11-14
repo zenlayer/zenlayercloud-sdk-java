@@ -5,9 +5,9 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 云硬盘从实例解绑的响应信息。
+ * 区域封禁可选区域列表
  */
-public class DetachDisksResponse extends TeaModel {
+public class DescribePolicyRegionsResponse extends TeaModel {
 
 
     /**
@@ -16,9 +16,9 @@ public class DetachDisksResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 解绑失败的云硬盘
+     * 区域可选列表
      */
-    public List<String> failedDiskIds;
+    public List<PolicyRegion> regions;
 
     public String getRequestId() {
         return this.requestId;
@@ -28,12 +28,12 @@ public class DetachDisksResponse extends TeaModel {
         this.requestId = requestId;
     }
 
-    public List<String> getFailedDiskIds() {
-        return this.failedDiskIds;
+    public List<PolicyRegion> getRegions() {
+        return this.regions;
     }
 
-    public void setFailedDiskIds(List<String> failedDiskIds) {
-        this.failedDiskIds = failedDiskIds;
+    public void setRegions(List<PolicyRegion> regions) {
+        this.regions = regions;
     }
 
 }

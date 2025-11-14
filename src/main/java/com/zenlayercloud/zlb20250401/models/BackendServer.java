@@ -31,7 +31,8 @@ public class BackendServer extends TeaModel {
     /**
      * 请求转发和健康检查的目标端口。
      * 如果为空，将跟随监听器端口配置。
-     * 删除时不需要指定该参数
+     * 删除时不需要指定该参数。
+     * 如果监听器转发模式为`DR`，不支持指定目标端口，跟随监听器端口
      */
     public Integer port;
 
