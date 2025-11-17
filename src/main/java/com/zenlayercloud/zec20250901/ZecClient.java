@@ -5,6 +5,7 @@
 package com.zenlayercloud.zec20250901;
 
 import com.aliyun.tea.TeaModel;
+import com.aliyun.teautil.Common;
 import com.aliyun.teautil.models.RuntimeOptions;
 import com.zenlayercloud.zec20250901.models.*;
 import com.zenlayercloud.common.AbstractClient;
@@ -179,6 +180,19 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeDiskCategoryResponse());
+    }
+
+        /**
+         * 查询一段时间的云硬盘的监控指标数据。
+         
+         */
+    public DescribeDiskMonitorDataResponse describeDiskMonitorData(DescribeDiskMonitorDataRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeDiskMonitorData",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeDiskMonitorDataResponse());
     }
 
         /**
@@ -715,6 +729,114 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 创建防护策略。
+         */
+    public CreatePolicyResponse createPolicy(CreatePolicyRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreatePolicy",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreatePolicyResponse());
+    }
+
+        /**
+         * 删除防护策略。
+         */
+    public DeletePolicyResponse deletePolicy(DeletePolicyRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeletePolicy",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeletePolicyResponse());
+    }
+
+        /**
+         * 修改防护策略。
+         */
+    public ModifyPolicyResponse modifyPolicy(ModifyPolicyRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyPolicy",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyPolicyResponse());
+    }
+
+        /**
+         * 获取防护策略列表。
+         */
+    public DescribePolicysResponse describePolicys(DescribePolicysRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribePolicys",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribePolicysResponse());
+    }
+
+        /**
+         * 获取防护策略详情。
+         */
+    public DescribePolicyDetailResponse describePolicyDetail(DescribePolicyDetailRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribePolicyDetail",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribePolicyDetailResponse());
+    }
+
+        /**
+         * 防护对象关联防护策略。
+         */
+    public AttachToPolicyResponse attachToPolicy(AttachToPolicyRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "AttachToPolicy",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new AttachToPolicyResponse());
+    }
+
+        /**
+         * 防护对象取消关联防护策略。
+         */
+    public DetachFromPolicyResponse detachFromPolicy(DetachFromPolicyRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DetachFromPolicy",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DetachFromPolicyResponse());
+    }
+
+        /**
+         * 获取区域封禁可选区域列表。
+         */
+    public DescribePolicyRegionsResponse describePolicyRegions(DescribePolicyRegionsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribePolicyRegions",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribePolicyRegionsResponse());
+    }
+
+        /**
+         * 获取默认UDP反射源端口列表。
+         */
+    public DescribeReflectUdpPortOptionsResponse describeReflectUdpPortOptions(DescribeReflectUdpPortOptionsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeReflectUdpPortOptions",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeReflectUdpPortOptionsResponse());
+    }
+
+        /**
          * 查询安全组列表。
          
          */
@@ -1063,6 +1185,30 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeEipMonitorDataResponse());
+    }
+
+        /**
+         * 获取攻击事件列表。
+         */
+    public DescribeDDosAllEventListResponse describeDDosAllEventList(DescribeDDosAllEventListRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeDDosAllEventList",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeDDosAllEventListResponse());
+    }
+
+        /**
+         * 获取攻击事件详情。
+         */
+    public DescribeDDosEventDetailResponse describeDDosEventDetail(DescribeDDosEventDetailRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeDDosEventDetail",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeDDosEventDetailResponse());
     }
 
         /**

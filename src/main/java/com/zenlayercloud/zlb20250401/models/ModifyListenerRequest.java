@@ -44,7 +44,8 @@ public class ModifyListenerRequest extends TeaModel {
     public String port;
 
     /**
-     * 工作模式
+     * 工作模式。
+     * 如果修改为`DR`模式，如果后端服务器指定了端口将失效，将跟随监听器的端口
      */
     public String kind;
 

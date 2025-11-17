@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 描述实例监控指标的数据值。
+ * 描述监控指标的数据值。
  */
 public class MetricValue extends TeaModel {
 
