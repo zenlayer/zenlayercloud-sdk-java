@@ -46,4 +46,10 @@ public class AllocateEipAddressesRequest extends TeaModel {
     public Integer amount = 1;
 
     public MarketingInfo marketingOptions;
+
+    /**
+     * 创建EIP时关联的标签。
+     * 注意：关联`标签键`不能重复
+     */
+    public TagAssociation tags;
 }

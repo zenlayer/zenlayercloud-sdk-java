@@ -17,4 +17,9 @@ public class DescribeZonesRequest extends TeaModel {
      * 区域地域的语言
      */
     public String acceptLanguage;
+
+    /**
+     * 根据可用区是否支持SDN三层网络进行筛选。
+     */
+    public Boolean isCloudRouterAvailable;
 }

@@ -36,4 +36,10 @@ public class CreateVpcRequest extends TeaModel {
      * VPC所属的资源组ID。
      */
     public String resourceGroupId;
+
+    /**
+     * 创建VPC时关联的标签。
+     * 注意：关联`标签键`不能重复
+     */
+    public TagAssociation tags;
 }

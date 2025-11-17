@@ -79,5 +79,10 @@ public class DescribeVpcsResponse extends TeaModel {
          * 所属资源组的名称。
          */
         public String resourceGroupName;
+
+        /**
+         * 该VPC关联的标签
+         */
+        public Tags tags;
     }
 }
