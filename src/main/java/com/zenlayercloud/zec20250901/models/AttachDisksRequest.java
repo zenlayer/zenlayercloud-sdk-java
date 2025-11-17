@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 云硬盘挂在到实例的请求信息。
+ * 云硬盘挂载到实例的请求信息。
  */
 public class AttachDisksRequest extends TeaModel {
 

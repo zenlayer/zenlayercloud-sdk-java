@@ -52,7 +52,6 @@ public class ResetInstanceRequest extends TeaModel {
      */
     public String instanceName;
 
-
     /**
      * 初始化命令
      */

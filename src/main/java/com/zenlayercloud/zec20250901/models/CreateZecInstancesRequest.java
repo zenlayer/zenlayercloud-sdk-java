@@ -232,6 +232,14 @@ public class CreateZecInstancesRequest extends TeaModel {
         this.keyId = keyId;
     }
 
+    public String getNicNetworkType() {
+        return this.nicNetworkType;
+    }
+
+    public void setNicNetworkType(String nicNetworkType) {
+        this.nicNetworkType = nicNetworkType;
+    }
+
     public Integer getInstanceCount() {
         return this.instanceCount;
     }

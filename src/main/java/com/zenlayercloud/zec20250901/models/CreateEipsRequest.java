@@ -99,7 +99,7 @@ public class CreateEipsRequest extends TeaModel {
 
     /**
      * 要绑定的实例ID集合。
-     * 大小需要与`amount`字段一致
+     * 数量需要与`amount`字段一致
      */
     public List<String> instanceIds;
 

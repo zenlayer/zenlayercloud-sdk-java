@@ -148,6 +148,11 @@ public class InstanceInfo extends TeaModel {
      */
     public Tags tags;
 
+    /**
+     * 实例上绑定的负载均衡ID列表
+     */
+    public List<String> loadBalancerIds;
+
     public String getInstanceId() {
         return this.instanceId;
     }
@@ -362,6 +367,14 @@ public class InstanceInfo extends TeaModel {
 
     public void setTags(Tags tags) {
         this.tags = tags;
+    }
+
+    public List<String> getLoadBalancerIds() {
+        return this.loadBalancerIds;
+    }
+
+    public void setLoadBalancerIds(List<String> loadBalancerIds) {
+        this.loadBalancerIds = loadBalancerIds;
     }
 
 }
