@@ -18,7 +18,7 @@ public class DeleteCidrsResponse extends TeaModel {
     /**
      * 操作失败的CIDR ID列表
      */
-    public List<String> cidrIds;
+    public List<String> failedCidrIds;
 
     public String getRequestId() {
         return this.requestId;
@@ -28,12 +28,12 @@ public class DeleteCidrsResponse extends TeaModel {
         this.requestId = requestId;
     }
 
-    public List<String> getCidrIds() {
-        return this.cidrIds;
+    public List<String> getFailedCidrIds() {
+        return this.failedCidrIds;
     }
 
-    public void setCidrIds(List<String> cidrIds) {
-        this.cidrIds = cidrIds;
+    public void setFailedCidrIds(List<String> failedCidrIds) {
+        this.failedCidrIds = failedCidrIds;
     }
 
 }

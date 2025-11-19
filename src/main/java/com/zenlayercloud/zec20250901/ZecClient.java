@@ -1330,7 +1330,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 删除一个或CIDR地址段。
+         * 删除一个或多个CIDR地址段。
          
          */
     public DeleteCidrsResponse deleteCidrs(DeleteCidrsRequest request) {
