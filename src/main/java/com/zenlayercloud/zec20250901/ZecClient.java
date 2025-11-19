@@ -79,7 +79,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 云硬盘挂在到实例上。
+         * 云硬盘挂载到实例上。
          
          */
     public AttachDisksResponse attachDisks(AttachDisksRequest request) {
@@ -1327,6 +1327,19 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new RenewCidrResponse());
+    }
+
+        /**
+         * 删除一个或CIDR地址段。
+         
+         */
+    public DeleteCidrsResponse deleteCidrs(DeleteCidrsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteCidrs",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteCidrsResponse());
     }
 
         /**

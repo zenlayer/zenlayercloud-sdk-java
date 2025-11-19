@@ -34,7 +34,7 @@ public class CreateDisksRequest extends TeaModel {
     public Integer diskAmount;
 
     /**
-     * 云硬盘挂在的实例ID
+     * 云硬盘挂载的实例ID
      */
     public String instanceId;
 

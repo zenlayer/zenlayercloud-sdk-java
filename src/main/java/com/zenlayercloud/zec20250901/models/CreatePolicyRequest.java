@@ -11,14 +11,15 @@ public class CreatePolicyRequest extends TeaModel {
 
 
     /**
-     * 防护策略名称。
-     * 2～63个字符。
-     * 仅支持输入字母、数字、-和英文句点(.)
+     * 防护策略的名称。
+     * 范围2到63个字符。
+     * 仅支持输入字母、数字、-和英文句点(.)。
+     * 且必须以数字或字母开头和结尾
      */
     public String policyName;
 
     /**
-     * resourceGroupId
+     * 创建后防护策略所在的资源组ID，如不指定则放入默认资源组
      */
     public String resourceGroupId;
 
@@ -38,7 +39,7 @@ public class CreatePolicyRequest extends TeaModel {
     public Integer ipBlackTimeout;
 
     /**
-     * 端口封禁
+     * 端口封禁, 支持TCP和UDP
      */
     public List<DdosPolicyPort> ports;
 

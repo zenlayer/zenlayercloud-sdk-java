@@ -17,7 +17,7 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     /**
      * 指定有效的镜像ID。
-     * 可以通过[DescribeImages](describeimages.md)取返回信息中的imageId字段
+     * 可以通过[DescribeImages](../image/describeimages.md)取返回信息中的imageId字段
      */
     public String imageId;
 
