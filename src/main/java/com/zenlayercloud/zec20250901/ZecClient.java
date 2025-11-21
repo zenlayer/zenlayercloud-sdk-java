@@ -1343,6 +1343,136 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 创建内网跨区域带宽。
+         
+         */
+    public CreateCrossRegionBandwidthResponse createCrossRegionBandwidth(CreateCrossRegionBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateCrossRegionBandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateCrossRegionBandwidthResponse());
+    }
+
+        /**
+         * 创建内网跨区域带宽询价。
+         
+         */
+    public InquiryPriceCreateCrossRegionBandwidthResponse inquiryPriceCreateCrossRegionBandwidth(InquiryPriceCreateCrossRegionBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceCreateCrossRegionBandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceCreateCrossRegionBandwidthResponse());
+    }
+
+        /**
+         * 修改内网跨区域带宽属性（名称）。
+         
+         */
+    public ModifyCrossRegionBandwidthAttributeResponse modifyCrossRegionBandwidthAttribute(ModifyCrossRegionBandwidthAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyCrossRegionBandwidthAttribute",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyCrossRegionBandwidthAttributeResponse());
+    }
+
+        /**
+         * 删除内网跨区域带宽。
+         
+         */
+    public DeleteCrossRegionBandwidthResponse deleteCrossRegionBandwidth(DeleteCrossRegionBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteCrossRegionBandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteCrossRegionBandwidthResponse());
+    }
+
+        /**
+         * 查询内网跨区域带宽监控指标数据。
+         
+         */
+    public DescribeCrossRegionBandwidthMonitorDataResponse describeCrossRegionBandwidthMonitorData(DescribeCrossRegionBandwidthMonitorDataRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeCrossRegionBandwidthMonitorData",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeCrossRegionBandwidthMonitorDataResponse());
+    }
+
+        /**
+         * 调整内网跨区域带宽询价。
+         
+         */
+    public InquiryPriceModifyCrossRegionBandwidthResponse inquiryPriceModifyCrossRegionBandwidth(InquiryPriceModifyCrossRegionBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceModifyCrossRegionBandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceModifyCrossRegionBandwidthResponse());
+    }
+
+        /**
+         * 查询支持售卖内网跨区域带宽的区域信息。
+         
+         */
+    public DescribeCrossRegionBandwidthRegionsResponse describeCrossRegionBandwidthRegions(DescribeCrossRegionBandwidthRegionsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeCrossRegionBandwidthRegions",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeCrossRegionBandwidthRegionsResponse());
+    }
+
+        /**
+         * 调整内网跨区域带宽。
+         
+         */
+    public ModifyCrossRegionBandwidthResponse modifyCrossRegionBandwidth(ModifyCrossRegionBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyCrossRegionBandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyCrossRegionBandwidthResponse());
+    }
+
+        /**
+         * 恢复内网跨区域带宽。
+         
+         */
+    public RenewCrossRegionBandwidthResponse renewCrossRegionBandwidth(RenewCrossRegionBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "RenewCrossRegionBandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new RenewCrossRegionBandwidthResponse());
+    }
+
+        /**
+         * 查询内网跨区域带宽列表。
+         
+         */
+    public DescribeCrossRegionBandwidthResponse describeCrossRegionBandwidth(DescribeCrossRegionBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeCrossRegionBandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeCrossRegionBandwidthResponse());
+    }
+
+        /**
          * 在某节点为VPC创建一个边界网关。
          
          */
