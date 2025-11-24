@@ -250,4 +250,43 @@ public class ZLBClient extends AbstractClient {
         return TeaModel.toModel(rsp, new DescribeLoadBalancerMonitorDataResponse());
     }
 
+        /**
+         * 批量更换负载器均衡的安全组。
+         
+         */
+    public SetSecurityGroupForLoadBalancersResponse setSecurityGroupForLoadBalancers(SetSecurityGroupForLoadBalancersRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "SetSecurityGroupForLoadBalancers",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new SetSecurityGroupForLoadBalancersResponse());
+    }
+
+        /**
+         * 为负载均衡器实例添加内网IP。
+         
+         */
+    public AddLoadBalancersPrivateIpsResponse addLoadBalancersPrivateIps(AddLoadBalancersPrivateIpsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "AddLoadBalancersPrivateIps",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new AddLoadBalancersPrivateIpsResponse());
+    }
+
+        /**
+         * 为负载均衡器实例删除内网IP。
+         
+         */
+    public DeleteLoadBalancersPrivateIpsResponse deleteLoadBalancersPrivateIps(DeleteLoadBalancersPrivateIpsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteLoadBalancersPrivateIps",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteLoadBalancersPrivateIpsResponse());
+    }
+
 }

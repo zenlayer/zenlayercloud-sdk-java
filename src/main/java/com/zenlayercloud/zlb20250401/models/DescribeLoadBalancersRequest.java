@@ -58,6 +58,11 @@ public class DescribeLoadBalancersRequest extends TeaModel {
      */
     public List<Tag> tags;
 
+    /**
+     * 负载均衡实例绑定的安全组ID
+     */
+    public String securityGroupId;
+
     public String getRegionId() {
         return this.regionId;
     }
@@ -128,6 +133,14 @@ public class DescribeLoadBalancersRequest extends TeaModel {
 
     public void setTags(List<Tag> tags) {
         this.tags = tags;
+    }
+
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
 
 }
