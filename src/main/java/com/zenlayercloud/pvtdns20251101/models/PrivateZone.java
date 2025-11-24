@@ -32,6 +32,11 @@ public class PrivateZone extends TeaModel {
     public String remark;
 
     /**
+     * 解析记录数
+     */
+    public Integer recordCount;
+
+    /**
      * 绑定的VPC ID列表
      */
     public List<String> vpcIds;
@@ -81,6 +86,14 @@ public class PrivateZone extends TeaModel {
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public Integer getRecordCount() {
+        return this.recordCount;
+    }
+
+    public void setRecordCount(Integer recordCount) {
+        this.recordCount = recordCount;
     }
 
     public List<String> getVpcIds() {

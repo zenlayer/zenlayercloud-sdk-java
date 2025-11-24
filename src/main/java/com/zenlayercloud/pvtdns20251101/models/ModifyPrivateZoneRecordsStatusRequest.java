@@ -2,6 +2,7 @@ package com.zenlayercloud.pvtdns20251101.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
 
 /**
  * 
@@ -17,7 +18,7 @@ public class ModifyPrivateZoneRecordsStatusRequest extends TeaModel {
     /**
      * 要修改生效状态的内网权威域名解析记录ID
      */
-    public String recordId;
+    public List<String> recordIds;
 
     /**
      * 生效状态
@@ -32,12 +33,12 @@ public class ModifyPrivateZoneRecordsStatusRequest extends TeaModel {
         this.zoneId = zoneId;
     }
 
-    public String getRecordId() {
-        return this.recordId;
+    public List<String> getRecordIds() {
+        return this.recordIds;
     }
 
-    public void setRecordId(String recordId) {
-        this.recordId = recordId;
+    public void setRecordIds(List<String> recordIds) {
+        this.recordIds = recordIds;
     }
 
     public String getStatus() {
