@@ -32,7 +32,7 @@ public class InstanceType extends TeaModel {
     public String description;
 
     /**
-     * CPU内核数目。
+     * CPU数量。
      */
     public Integer cpuCoreCount;
 
@@ -42,14 +42,14 @@ public class InstanceType extends TeaModel {
     public String cpuDetail;
 
     /**
-     * CPU内核大小。
+     * CPU核大小。
      */
-    public String cpuCores;
+    public Integer cpuCores;
 
     /**
      * CPU线程。
      */
-    public String cpuThreads;
+    public Integer cpuThreads;
 
     /**
      * CPU基础频率。
