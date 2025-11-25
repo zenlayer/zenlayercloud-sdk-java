@@ -2,6 +2,7 @@ package com.zenlayercloud.zec20250901.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
 
 /**
  * 描述VPC的基本信息。
@@ -59,6 +60,11 @@ public class VpcInfo extends TeaModel {
      * 关联的安全组ID
      */
     public String securityGroupId;
+
+    /**
+     * VPC关联的DNS内网权威域名ID
+     */
+    public List<String> dnsZoneIds;
 
     /**
      * VPC关联的资源组信息
@@ -148,6 +154,14 @@ public class VpcInfo extends TeaModel {
 
     public void setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
+    }
+
+    public List<String> getDnsZoneIds() {
+        return this.dnsZoneIds;
+    }
+
+    public void setDnsZoneIds(List<String> dnsZoneIds) {
+        this.dnsZoneIds = dnsZoneIds;
     }
 
     public ResourceGroupInfo getResourceGroup() {
