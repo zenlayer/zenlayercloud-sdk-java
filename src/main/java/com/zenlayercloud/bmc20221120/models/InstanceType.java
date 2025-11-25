@@ -37,6 +37,26 @@ public class InstanceType extends TeaModel {
     public Integer cpuCoreCount;
 
     /**
+     * CPU详情。
+     */
+    public String cpuDetail;
+
+    /**
+     * CPU内核大小。
+     */
+    public String cpuCores;
+
+    /**
+     * CPU线程。
+     */
+    public String cpuThreads;
+
+    /**
+     * CPU基础频率。
+     */
+    public String baseFrequency;
+
+    /**
      * 内存大小。
      * 单位：GB。
      */
