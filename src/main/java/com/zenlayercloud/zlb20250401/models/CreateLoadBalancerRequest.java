@@ -82,7 +82,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * 健康检查内网IP地址。
-     * 指定`subnetId`时，此参数必填。
+     * 指定`subnetId`时，此参数必填，且数量必须为2。
      * 不指定`subnetId`时，此参数无效。
      * 不填时系统将自动分配
      */

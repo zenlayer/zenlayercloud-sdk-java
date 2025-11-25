@@ -8,7 +8,8 @@ public class AddLoadBalancersPrivateIpsRequest extends TeaModel {
 
 
     /**
-     * 要加入的内网Ip
+     * 要加入的内网Ip。
+     * 单次最多20个
      */
     public List<String> privateIps;
 
