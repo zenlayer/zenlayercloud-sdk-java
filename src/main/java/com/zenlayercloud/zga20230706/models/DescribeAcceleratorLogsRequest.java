@@ -18,12 +18,13 @@ public class DescribeAcceleratorLogsRequest extends TeaModel {
     @Validation(required = true)
     public String acceleratorId;
 
-    @Validation(required = true, minLength = 1)
-    public List<String> vips;
-
     @Validation(required = true)
     public String startTime;
 
     @Validation(required = true)
     public String endTime;
+
+    public List<String> vips;
+
+    public List<String> domains;
 }
