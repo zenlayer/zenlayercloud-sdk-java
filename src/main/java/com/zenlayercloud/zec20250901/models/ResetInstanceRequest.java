@@ -16,14 +16,14 @@ public class ResetInstanceRequest extends TeaModel {
 
     /**
      * 实例的新密码。
-     * 与keyId不能同时指定。
+     * 与keyId必须指定其中的一种（Windows和Generic类型的镜像无法指定密码和key）。
      * 必须包含以下3种格式的字符：大小写字母: [a-zA-Z]数字: 0-9特殊字符: ~!@$^*-_=+
      */
     public String password;
 
     /**
      * 密钥ID。
-     * 与password必须指定其中的一种。
+     * 与password必须指定其中的一种（Windows和Generic类型的镜像无法指定密码和key）。
      * 可调用接口DescribeKeyPairs来获得最新的密钥对信息。
      * 关联密钥后，就可以通过对应的私钥来访问实例；密钥与密码不能同时指定，同时Windows操作系统不支持指定密钥。
      * 示例值：key-YWD2QFOl
