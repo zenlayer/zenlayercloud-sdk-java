@@ -4,27 +4,28 @@
  */
 package com.zenlayercloud.zga20230706.models;
 
-import java.util.List;
-
 import com.aliyun.tea.TeaModel;
 import com.aliyun.tea.Validation;
 
+import java.util.List;
+
 /**
  * @author otis.lin
- * @date 2024-03-13 10:11:00
- * @version $ Id: DescribeAcceleratorLogsRequest.java, v 0.1 otis.lin Exp $
+ * @date 2025-11-24 17:56:00
+ * @version $ Id: DescribeStatusCodeRequest.java, v 0.1 otis.lin Exp $
  */
-public class DescribeAcceleratorLogsRequest extends TeaModel {
-    @Validation(required = true)
-    public String acceleratorId;
+public class DescribeStatusCodeRequest extends TeaModel {
+    public List<String> acceleratorIds;
+
+    public String originRegionId;
+
+    public String accelerateRegionId;
+
+    public String resourceGroupId;
 
     @Validation(required = true)
     public String startTime;
 
     @Validation(required = true)
     public String endTime;
-
-    public List<String> vips;
-
-    public List<String> domains;
 }

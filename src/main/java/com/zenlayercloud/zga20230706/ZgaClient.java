@@ -272,4 +272,18 @@ public class ZgaClient extends AbstractClient {
 
         return TeaModel.toModel(rspStr, new ModifyResourceGroupBandwidthLimitResponse());
     }
+
+    public DescribeTrafficResponse describeTraffic(
+            DescribeTrafficRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeTraffic", new RuntimeOptions());
+
+        return TeaModel.toModel(rspStr, new DescribeTrafficResponse());
+    }
+
+    public DescribeStatusCodeResponse describeStatusCode(
+            DescribeStatusCodeRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeStatusCode", new RuntimeOptions());
+
+        return TeaModel.toModel(rspStr, new DescribeStatusCodeResponse());
+    }
 }
