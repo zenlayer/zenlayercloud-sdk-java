@@ -1758,6 +1758,19 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 重装多台虚拟机实例操作系统。
+         
+         */
+    public ResetInstancesResponse resetInstances(ResetInstancesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ResetInstances",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ResetInstancesResponse());
+    }
+
+        /**
          * 开启IP转发。
          */
     public StartIpForwardResponse startIpForward(StartIpForwardRequest request) {

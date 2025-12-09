@@ -76,7 +76,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * 健康检查内网源IP所属的subnetId。
-     * 可以通过[DescribeSubnets](../../../compute/zec/vpc-network/describesubnets.md)接口获取
+     * 可以通过[DescribeSubnets](../../zec/vpc-network/describesubnets.md)接口获取
      */
     public String subnetId;
 
@@ -90,7 +90,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * 负载均衡实例绑定的安全组ID。
-     * 可以通过[DescribeSecurityGroups](../../../compute/zec/security-group/describesecuritygroups.md)接口获取
+     * 可以通过[DescribeSecurityGroups](../../zec/security-group/describesecuritygroups.md)接口获取
      */
     public String securityGroupId;
 

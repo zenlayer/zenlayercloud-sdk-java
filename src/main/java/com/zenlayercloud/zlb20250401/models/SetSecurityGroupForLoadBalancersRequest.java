@@ -9,7 +9,7 @@ public class SetSecurityGroupForLoadBalancersRequest extends TeaModel {
 
     /**
      * 要更换的安全组Id。
-     * 可以通过[DescribeSecurityGroups](../../../compute/zec/security-group/describesecuritygroups.md)接口获取
+     * 可以通过[DescribeSecurityGroups](../../zec/security-group/describesecuritygroups.md)接口获取
      */
     public String securityGroupId;
 
