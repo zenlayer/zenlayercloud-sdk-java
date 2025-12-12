@@ -43,6 +43,12 @@ public class SdnClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribeVirtualEdgeDatacentersResponse());
     }
 
+
+    public DescribeBorderGatewayDatacentersResponse describeBorderGatewayDatacenters(DescribeBorderGatewayDatacentersRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeBorderGatewayDatacenters", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeBorderGatewayDatacentersResponse());
+    }
+
     public QueryDataCenterPortPriceResponse queryDataCenterPortPrice(QueryDataCenterPortPriceRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "QueryDataCenterPortPrice", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new QueryDataCenterPortPriceResponse());
