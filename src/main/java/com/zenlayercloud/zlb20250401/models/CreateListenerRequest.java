@@ -43,7 +43,9 @@ public class CreateListenerRequest extends TeaModel {
     public String port;
 
     /**
-     * 工作模式
+     * 工作模式。
+     * 如果不传则会根据负载均衡实例所在的区域设定默认值。
+     * 默认值可能为DNAT、FNAT
      */
     public String kind;
 

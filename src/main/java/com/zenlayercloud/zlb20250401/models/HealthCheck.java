@@ -62,6 +62,11 @@ public class HealthCheck extends TeaModel {
      */
     public Integer checkHttpStatusCode;
 
+    /**
+     * 开启后，当所有后端健康检查均失败时，负载均衡器将暂视所有节点为健康，继续转发流量，以保障业务连续性
+     */
+    public Boolean failOpen;
+
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -132,6 +137,14 @@ public class HealthCheck extends TeaModel {
 
     public void setCheckHttpStatusCode(Integer checkHttpStatusCode) {
         this.checkHttpStatusCode = checkHttpStatusCode;
+    }
+
+    public Boolean getFailOpen() {
+        return this.failOpen;
+    }
+
+    public void setFailOpen(Boolean failOpen) {
+        this.failOpen = failOpen;
     }
 
 }

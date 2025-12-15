@@ -92,6 +92,11 @@ public class DescribeEipsRequest extends TeaModel {
      */
     public List<Tag> tags;
 
+    /**
+     * 按照 EIP 的网络计费方式过滤
+     */
+    public String internetChargeType;
+
     public List<String> getEipIds() {
         return this.eipIds;
     }
@@ -218,6 +223,14 @@ public class DescribeEipsRequest extends TeaModel {
 
     public void setTags(List<Tag> tags) {
         this.tags = tags;
+    }
+
+    public String getInternetChargeType() {
+        return this.internetChargeType;
+    }
+
+    public void setInternetChargeType(String internetChargeType) {
+        this.internetChargeType = internetChargeType;
     }
 
 }

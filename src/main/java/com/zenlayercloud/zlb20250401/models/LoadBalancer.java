@@ -46,6 +46,11 @@ public class LoadBalancer extends TeaModel {
     public List<String> privateIpAddress;
 
     /**
+     * 负载均衡实例的健康检查内网IP列表
+     */
+    public List<String> healthCheckPrivateIps;
+
+    /**
      * 负载均衡器下监听器的数量
      */
     public Long listenerCount;
@@ -65,6 +70,11 @@ public class LoadBalancer extends TeaModel {
      * 该负载均衡器关联的标签
      */
     public Tags tags;
+
+    /**
+     * 负载均衡实例绑定的安全组ID
+     */
+    public String securityGroupId;
 
     public String getRegionId() {
         return this.regionId;
@@ -122,6 +132,14 @@ public class LoadBalancer extends TeaModel {
         this.privateIpAddress = privateIpAddress;
     }
 
+    public List<String> getHealthCheckPrivateIps() {
+        return this.healthCheckPrivateIps;
+    }
+
+    public void setHealthCheckPrivateIps(List<String> healthCheckPrivateIps) {
+        this.healthCheckPrivateIps = healthCheckPrivateIps;
+    }
+
     public Long getListenerCount() {
         return this.listenerCount;
     }
@@ -152,6 +170,14 @@ public class LoadBalancer extends TeaModel {
 
     public void setTags(Tags tags) {
         this.tags = tags;
+    }
+
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
 
 }

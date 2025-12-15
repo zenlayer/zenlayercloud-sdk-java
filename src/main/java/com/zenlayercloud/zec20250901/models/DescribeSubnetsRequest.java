@@ -41,6 +41,11 @@ public class DescribeSubnetsRequest extends TeaModel {
      */
     public Integer pageNum;
 
+    /**
+     * VPC的ID集合
+     */
+    public List<String> vpcIds;
+
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
@@ -87,6 +92,14 @@ public class DescribeSubnetsRequest extends TeaModel {
 
     public void setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
+    }
+
+    public List<String> getVpcIds() {
+        return this.vpcIds;
+    }
+
+    public void setVpcIds(List<String> vpcIds) {
+        this.vpcIds = vpcIds;
     }
 
 }
