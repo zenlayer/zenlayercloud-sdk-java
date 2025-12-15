@@ -22,7 +22,8 @@ public class ModifyPrivateZoneRecordRequest extends TeaModel {
     public String value;
 
     /**
-     * 解析记录权重
+     * 解析记录权重。
+     * 仅A或者AAAA支持
      */
     public Integer weight;
 
