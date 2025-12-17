@@ -51,6 +51,11 @@ public class SecurityGroupInfo extends TeaModel {
      */
     public List<String> natIdList;
 
+    /**
+     * 关联安全组的负载均衡ID列表
+     */
+    public List<String> loadBalancerIdList;
+
     public String getSecurityGroupId() {
         return this.securityGroupId;
     }
@@ -113,6 +118,14 @@ public class SecurityGroupInfo extends TeaModel {
 
     public void setNatIdList(List<String> natIdList) {
         this.natIdList = natIdList;
+    }
+
+    public List<String> getLoadBalancerIdList() {
+        return this.loadBalancerIdList;
+    }
+
+    public void setLoadBalancerIdList(List<String> loadBalancerIdList) {
+        this.loadBalancerIdList = loadBalancerIdList;
     }
 
 }

@@ -37,6 +37,11 @@ public class DescribeImagesRequest extends TeaModel {
     public String imageType;
 
     /**
+     * 镜像来源
+     */
+    public String imageSource;
+
+    /**
      * 操作系统类型
      */
     public String osType;
@@ -108,6 +113,14 @@ public class DescribeImagesRequest extends TeaModel {
 
     public void setImageType(String imageType) {
         this.imageType = imageType;
+    }
+
+    public String getImageSource() {
+        return this.imageSource;
+    }
+
+    public void setImageSource(String imageSource) {
+        this.imageSource = imageSource;
     }
 
     public String getOsType() {

@@ -1,9 +1,9 @@
-package com.zenlayercloud.zec20250901.models;
+package com.zenlayercloud.vm20230313.models;
 
 import com.aliyun.tea.TeaModel;
 
 
-public class ModifyInstanceTypeResponse extends TeaModel {
+public class ResizeDiskResponse extends TeaModel {
 
 
     /**

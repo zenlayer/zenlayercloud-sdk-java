@@ -2,17 +2,15 @@ package com.zenlayercloud.zec20250901.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
 
-/**
- * 重装一台虚拟机实例操作系统的请求参数。
- */
-public class ResetInstanceRequest extends TeaModel {
+public class ResetInstancesRequest extends TeaModel {
 
 
     /**
-     * 要重装的实例ID
+     * 待重装的实例ID
      */
-    public String instanceId;
+    public List<String> instanceIds;
 
     /**
      * 实例的新密码。
@@ -57,12 +55,12 @@ public class ResetInstanceRequest extends TeaModel {
      */
     public String userData;
 
-    public String getInstanceId() {
-        return this.instanceId;
+    public List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
-    public void setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public void setInstanceIds(List<String> instanceIds) {
+        this.instanceIds = instanceIds;
     }
 
     public String getPassword() {

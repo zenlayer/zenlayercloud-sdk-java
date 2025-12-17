@@ -1,9 +1,9 @@
-package com.zenlayercloud.zec20250901.models;
+package com.zenlayercloud.zlb20250401.models;
 
 import com.aliyun.tea.TeaModel;
 
 
-public class ModifyInstanceTypeResponse extends TeaModel {
+public class AddLoadBalancersPrivateIpsResponse extends TeaModel {
 
 
     /**

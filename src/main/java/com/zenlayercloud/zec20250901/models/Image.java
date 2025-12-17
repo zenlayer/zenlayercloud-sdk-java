@@ -26,6 +26,11 @@ public class Image extends TeaModel {
     public String imageType;
 
     /**
+     * 镜像的来源
+     */
+    public String imageSource;
+
+    /**
      * 镜像的大小
      */
     public String imageSize;
@@ -87,6 +92,14 @@ public class Image extends TeaModel {
 
     public void setImageType(String imageType) {
         this.imageType = imageType;
+    }
+
+    public String getImageSource() {
+        return this.imageSource;
+    }
+
+    public void setImageSource(String imageSource) {
+        this.imageSource = imageSource;
     }
 
     public String getImageSize() {

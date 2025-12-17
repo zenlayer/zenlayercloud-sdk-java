@@ -25,6 +25,11 @@ public class DescribeEipPriceResponse extends TeaModel {
      */
     public PriceItem bandwidthPrice;
 
+    /**
+     * Remote IPT的带宽价格
+     */
+    public PriceItem remoteBandwidthPrice;
+
     public String getRequestId() {
         return this.requestId;
     }
@@ -47,6 +52,14 @@ public class DescribeEipPriceResponse extends TeaModel {
 
     public void setBandwidthPrice(PriceItem bandwidthPrice) {
         this.bandwidthPrice = bandwidthPrice;
+    }
+
+    public PriceItem getRemoteBandwidthPrice() {
+        return this.remoteBandwidthPrice;
+    }
+
+    public void setRemoteBandwidthPrice(PriceItem remoteBandwidthPrice) {
+        this.remoteBandwidthPrice = remoteBandwidthPrice;
     }
 
 }

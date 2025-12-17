@@ -2,6 +2,7 @@ package com.zenlayercloud.zlb20250401.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
 
 public class CreateLoadBalancerRequest extends TeaModel {
 
@@ -72,6 +73,26 @@ public class CreateLoadBalancerRequest extends TeaModel {
      * 注意：·关联`标签键`不能重复
      */
     public TagAssociation tags;
+
+    /**
+     * 健康检查内网源IP所属的subnetId。
+     * 可以通过[DescribeSubnets](../../zec/vpc-network/describesubnets.md)接口获取
+     */
+    public String subnetId;
+
+    /**
+     * 健康检查内网IP地址。
+     * 指定`subnetId`时，此参数必填，且数量必须为2。
+     * 不指定`subnetId`时，此参数无效。
+     * 不填时系统将自动分配
+     */
+    public List<String> healthCheckPrivateIps;
+
+    /**
+     * 负载均衡实例绑定的安全组ID。
+     * 可以通过[DescribeSecurityGroups](../../zec/security-group/describesecuritygroups.md)接口获取
+     */
+    public String securityGroupId;
 
     public String getRegionId() {
         return this.regionId;
@@ -167,6 +188,30 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public void setTags(TagAssociation tags) {
         this.tags = tags;
+    }
+
+    public String getSubnetId() {
+        return this.subnetId;
+    }
+
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+    }
+
+    public List<String> getHealthCheckPrivateIps() {
+        return this.healthCheckPrivateIps;
+    }
+
+    public void setHealthCheckPrivateIps(List<String> healthCheckPrivateIps) {
+        this.healthCheckPrivateIps = healthCheckPrivateIps;
+    }
+
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
 
 }

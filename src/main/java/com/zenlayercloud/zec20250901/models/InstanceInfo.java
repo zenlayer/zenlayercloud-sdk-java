@@ -74,7 +74,7 @@ public class InstanceInfo extends TeaModel {
     public SystemDisk systemDisk;
 
     /**
-     * 实例上挂在的数据盘信息
+     * 实例上挂载的数据盘信息
      */
     public List<DataDisk> dataDisks;
 
