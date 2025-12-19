@@ -65,4 +65,5 @@ public class DatacenterInfo extends TeaModel {
      */
     public Integer availableBandwidth;
 
+    public String regionId;
 }
