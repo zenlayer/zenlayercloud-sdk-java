@@ -21,12 +21,13 @@ public class DescribeTagsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * 标签键排序
+     * 标签键排序方式：ascend（正序），descend（倒序）
      */
     public String keySort;
 
     /**
-     * 创建时间排序，默认倒序
+     * 创建时间排序方式：ascend（正序），descend（倒序）。
+     * 默认倒序
      */
     public String createdDateSort;
 
