@@ -46,11 +46,17 @@ public class PrivateZoneRecord extends TeaModel {
     public Integer ttl;
 
     /**
-     * 解析线路。
-     * `default` 为默认线路，即全局线路。
+     * 解析请求来源。
+     * `default` 为默认，即全局。
      * 也可以指定某个节点ID，例如asia-east-1
      */
     public String line;
+
+    /**
+     * 解析请求来源详细信息。
+     * 仅当line为节点时存在
+     */
+    public LineInfo lineInfo;
 
     /**
      * `MX`记录的优先级。
@@ -135,6 +141,14 @@ public class PrivateZoneRecord extends TeaModel {
 
     public void setLine(String line) {
         this.line = line;
+    }
+
+    public LineInfo getLineInfo() {
+        return this.lineInfo;
+    }
+
+    public void setLineInfo(LineInfo lineInfo) {
+        this.lineInfo = lineInfo;
     }
 
     public Integer getPriority() {

@@ -55,8 +55,8 @@ public class AddPrivateZoneRecordRequest extends TeaModel {
     public String remark;
 
     /**
-     * 解析线路。
-     * `default` 为默认线路，即全局线路。
+     * 解析请求来源。
+     * `default` 为默认，即全局。
      * 也可以指定某个节点ID，例如asia-east-1
      */
     public String line;

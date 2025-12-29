@@ -19,7 +19,7 @@ public class CreateVpcRequest extends TeaModel {
 
     /**
      * VPC的CIDR地址段。
-     * 需要满足以下3种内网段内(10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16)
+     * 需要满足以下4种内网段内(10.0.0.0/9, 10.128.0.0/9, 172.16.0.0/12以及192.168.0.0/16)
      */
     public String cidrBlock;
 

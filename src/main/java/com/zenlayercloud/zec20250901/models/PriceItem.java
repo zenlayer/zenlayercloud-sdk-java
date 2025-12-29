@@ -77,6 +77,11 @@ public class PriceItem extends TeaModel {
      */
     public String excessAmountUnit;
 
+    /**
+     * 价格所属类别
+     */
+    public String category;
+
     public Double getDiscount() {
         return this.discount;
     }
@@ -163,6 +168,14 @@ public class PriceItem extends TeaModel {
 
     public void setExcessAmountUnit(String excessAmountUnit) {
         this.excessAmountUnit = excessAmountUnit;
+    }
+
+    public String getCategory() {
+        return this.category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
 }

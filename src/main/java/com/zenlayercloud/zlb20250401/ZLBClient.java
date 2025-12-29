@@ -264,6 +264,19 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
+         * 批量解绑负载器均衡的安全组。
+         
+         */
+    public UnbindSecurityGroupFromLoadBalancersResponse unbindSecurityGroupFromLoadBalancers(UnbindSecurityGroupFromLoadBalancersRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "UnbindSecurityGroupFromLoadBalancers",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new UnbindSecurityGroupFromLoadBalancersResponse());
+    }
+
+        /**
          * 为负载均衡器实例添加内网IP。
          
          */

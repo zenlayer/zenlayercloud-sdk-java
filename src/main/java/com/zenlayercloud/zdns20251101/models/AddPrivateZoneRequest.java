@@ -9,7 +9,7 @@ public class AddPrivateZoneRequest extends TeaModel {
 
     /**
      * 域名。
-     * 格式必须域名，最长不超过253个字符，也可以是单独的不带点的域名后缀（长度2-63）。
+     * 格式必须域名，最长不超过252个字符，也可以是单独的不带点的域名后缀（长度2-63）。
      * 不区分大小写
      */
     public String zoneName;

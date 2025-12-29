@@ -172,4 +172,6 @@ public class CreateInstancesRequest extends TeaModel {
      * 注意：关联`标签键`不能重复
      */
     public TagAssociation tags;
+
+    public Boolean enableGatewayMode;
 }

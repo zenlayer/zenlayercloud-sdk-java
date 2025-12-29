@@ -210,5 +210,7 @@ public class DescribeInstancesResponse extends TeaModel {
          * 该机器关联的标签
          */
         public Tags tags;
+
+        public Boolean enableGatewayMode;
     }
 }
