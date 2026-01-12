@@ -75,6 +75,11 @@ public class CreateDisksRequest extends TeaModel {
      */
     public List<String> instanceIds;
 
+    /**
+     * 是否开启性能突发
+     */
+    public Boolean burstingEnabled;
+
     public String getZoneId() {
         return this.zoneId;
     }
@@ -161,6 +166,14 @@ public class CreateDisksRequest extends TeaModel {
 
     public void setInstanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
+    }
+
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
+    }
+
+    public void setBurstingEnabled(Boolean burstingEnabled) {
+        this.burstingEnabled = burstingEnabled;
     }
 
 }

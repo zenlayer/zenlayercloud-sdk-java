@@ -42,7 +42,7 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * resourceGroupId
+     * 根据资源组ID进行过滤
      */
     public String resourceGroupId;
 

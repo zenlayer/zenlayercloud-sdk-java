@@ -16,6 +16,7 @@ public class UnassignNetworkInterfaceIpv4Request extends TeaModel {
      * 需要解绑的IPv4地址。
      * 该字段已过时，请使用`ipAddresses`，如果两者均指定， 则以`ipAddresses`为准
      */
+    @Deprecated
     public String ipAddress;
 
     /**
@@ -31,10 +32,12 @@ public class UnassignNetworkInterfaceIpv4Request extends TeaModel {
         this.nicId = nicId;
     }
 
+    @Deprecated
     public String getIpAddress() {
         return this.ipAddress;
     }
 
+    @Deprecated
     public void setIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
     }

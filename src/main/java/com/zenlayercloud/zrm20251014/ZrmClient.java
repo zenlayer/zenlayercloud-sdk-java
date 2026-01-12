@@ -99,4 +99,17 @@ public class ZrmClient extends AbstractClient {
         return TeaModel.toModel(rsp, new DescribeResourceTagsResponse());
     }
 
+        /**
+         * 修改某个资源的标签。
+         
+         */
+    public ModifyResourceTagsResponse modifyResourceTags(ModifyResourceTagsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyResourceTags",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyResourceTagsResponse());
+    }
+
 }

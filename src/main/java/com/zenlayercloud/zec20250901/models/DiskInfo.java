@@ -111,6 +111,11 @@ public class DiskInfo extends TeaModel {
      */
     public Tags tags;
 
+    /**
+     * 是否开启 Burst
+     */
+    public Boolean burstingEnabled;
+
     public String getDiskId() {
         return this.diskId;
     }
@@ -269,6 +274,14 @@ public class DiskInfo extends TeaModel {
 
     public void setTags(Tags tags) {
         this.tags = tags;
+    }
+
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
+    }
+
+    public void setBurstingEnabled(Boolean burstingEnabled) {
+        this.burstingEnabled = burstingEnabled;
     }
 
 }

@@ -86,6 +86,11 @@ public class SubnetInfo extends TeaModel {
      */
     public Boolean isDefault;
 
+    /**
+     * DHCP选项集ID
+     */
+    public String dhcpOptionsSetId;
+
     public String getSubnetId() {
         return this.subnetId;
     }
@@ -204,6 +209,14 @@ public class SubnetInfo extends TeaModel {
 
     public void setIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
+    }
+
+    public String getDhcpOptionsSetId() {
+        return this.dhcpOptionsSetId;
+    }
+
+    public void setDhcpOptionsSetId(String dhcpOptionsSetId) {
+        this.dhcpOptionsSetId = dhcpOptionsSetId;
     }
 
 }

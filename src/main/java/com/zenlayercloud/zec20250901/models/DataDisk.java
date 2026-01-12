@@ -42,6 +42,11 @@ public class DataDisk extends TeaModel {
     public Boolean portable;
 
     /**
+     * 是否开启性能突发
+     */
+    public Boolean burstingEnabled;
+
+    /**
      * 云硬盘种类。
      * Basic NVMe SSD: 经济型 NVMe SSD。
      * Standard NVMe SSD: 标准型 NVMe SSD。
@@ -87,6 +92,14 @@ public class DataDisk extends TeaModel {
 
     public void setPortable(Boolean portable) {
         this.portable = portable;
+    }
+
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
+    }
+
+    public void setBurstingEnabled(Boolean burstingEnabled) {
+        this.burstingEnabled = burstingEnabled;
     }
 
     public String getDiskCategory() {

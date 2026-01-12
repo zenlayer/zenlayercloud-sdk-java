@@ -28,6 +28,7 @@ public class ZoneInfo extends TeaModel {
      * 可用区是否支持安全组。
      * 该字段已废弃，当前所有节点均支持安全组
      */
+    @Deprecated
     public Boolean supportSecurityGroup;
 
     public String getZoneId() {
@@ -54,10 +55,12 @@ public class ZoneInfo extends TeaModel {
         this.zoneName = zoneName;
     }
 
+    @Deprecated
     public Boolean getSupportSecurityGroup() {
         return this.supportSecurityGroup;
     }
 
+    @Deprecated
     public void setSupportSecurityGroup(Boolean supportSecurityGroup) {
         this.supportSecurityGroup = supportSecurityGroup;
     }

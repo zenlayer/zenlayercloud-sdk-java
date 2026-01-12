@@ -29,6 +29,11 @@ public class SystemDisk extends TeaModel {
      */
     public String diskCategory;
 
+    /**
+     * 是否开启性能突发
+     */
+    public Boolean burstingEnabled;
+
     public String getDiskId() {
         return this.diskId;
     }
@@ -51,6 +56,14 @@ public class SystemDisk extends TeaModel {
 
     public void setDiskCategory(String diskCategory) {
         this.diskCategory = diskCategory;
+    }
+
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
+    }
+
+    public void setBurstingEnabled(Boolean burstingEnabled) {
+        this.burstingEnabled = burstingEnabled;
     }
 
 }

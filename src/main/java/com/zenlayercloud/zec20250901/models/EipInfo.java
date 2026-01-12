@@ -70,6 +70,7 @@ public class EipInfo extends TeaModel {
      * EIP 关联的网卡ID。
      * 该字段已废弃，请使用 `associatedId` 字段
      */
+    @Deprecated
     public String nicId;
 
     /**
@@ -237,10 +238,12 @@ public class EipInfo extends TeaModel {
         this.cidrId = cidrId;
     }
 
+    @Deprecated
     public String getNicId() {
         return this.nicId;
     }
 
+    @Deprecated
     public void setNicId(String nicId) {
         this.nicId = nicId;
     }

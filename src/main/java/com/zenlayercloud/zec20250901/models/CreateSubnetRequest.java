@@ -45,6 +45,11 @@ public class CreateSubnetRequest extends TeaModel {
      */
     public String ipv6Type;
 
+    /**
+     * 要绑定的DHCP 选项集ID
+     */
+    public String dhcpOptionsSetId;
+
     public String getVpcId() {
         return this.vpcId;
     }
@@ -91,6 +96,14 @@ public class CreateSubnetRequest extends TeaModel {
 
     public void setIpv6Type(String ipv6Type) {
         this.ipv6Type = ipv6Type;
+    }
+
+    public String getDhcpOptionsSetId() {
+        return this.dhcpOptionsSetId;
+    }
+
+    public void setDhcpOptionsSetId(String dhcpOptionsSetId) {
+        this.dhcpOptionsSetId = dhcpOptionsSetId;
     }
 
 }

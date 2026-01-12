@@ -1188,6 +1188,84 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 创建DHCP选项集。
+         
+         */
+    public CreateDhcpOptionsSetResponse createDhcpOptionsSet(CreateDhcpOptionsSetRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateDhcpOptionsSet",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateDhcpOptionsSetResponse());
+    }
+
+        /**
+         * 删除DHCP选项集。
+         
+         */
+    public DeleteDhcpOptionsSetResponse deleteDhcpOptionsSet(DeleteDhcpOptionsSetRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteDhcpOptionsSet",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteDhcpOptionsSetResponse());
+    }
+
+        /**
+         * 将DHCP选项集关联到Subnet。
+         
+         */
+    public AttachDhcpOptionsSetToSubnetResponse attachDhcpOptionsSetToSubnet(AttachDhcpOptionsSetToSubnetRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "AttachDhcpOptionsSetToSubnet",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new AttachDhcpOptionsSetToSubnetResponse());
+    }
+
+        /**
+         * 将DHCP选项集与Subnet取消关联。
+         
+         */
+    public DetachDhcpOptionsSetFromSubnetResponse detachDhcpOptionsSetFromSubnet(DetachDhcpOptionsSetFromSubnetRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DetachDhcpOptionsSetFromSubnet",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DetachDhcpOptionsSetFromSubnetResponse());
+    }
+
+        /**
+         * 查询已创建的DHCP选项集列表。
+         
+         */
+    public DescribeDhcpOptionsSetsResponse describeDhcpOptionsSets(DescribeDhcpOptionsSetsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeDhcpOptionsSets",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeDhcpOptionsSetsResponse());
+    }
+
+        /**
+         * 修改DHCP选项集配置信息。
+         
+         */
+    public ModifyDhcpOptionsSetAttributesResponse modifyDhcpOptionsSetAttributes(ModifyDhcpOptionsSetAttributesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyDhcpOptionsSetAttributes",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyDhcpOptionsSetAttributesResponse());
+    }
+
+        /**
          * 获取攻击事件列表。
          */
     public DescribeDDosAllEventListResponse describeDDosAllEventList(DescribeDDosAllEventListRequest request) {

@@ -46,6 +46,11 @@ public class DescribeSubnetsRequest extends TeaModel {
      */
     public List<String> vpcIds;
 
+    /**
+     * 子网绑定的DHCP 选项集ID
+     */
+    public String dhcpOptionsSetId;
+
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
@@ -100,6 +105,14 @@ public class DescribeSubnetsRequest extends TeaModel {
 
     public void setVpcIds(List<String> vpcIds) {
         this.vpcIds = vpcIds;
+    }
+
+    public String getDhcpOptionsSetId() {
+        return this.dhcpOptionsSetId;
+    }
+
+    public void setDhcpOptionsSetId(String dhcpOptionsSetId) {
+        this.dhcpOptionsSetId = dhcpOptionsSetId;
     }
 
 }
