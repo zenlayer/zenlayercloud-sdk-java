@@ -3,6 +3,9 @@ package com.zenlayercloud.traffic20240326.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 描述阶梯价格的信息。
+ */
 public class StepPrice extends TeaModel {
 
 

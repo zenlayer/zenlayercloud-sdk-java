@@ -33,7 +33,7 @@ public class InquiryBandwidthClusterPriceRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * 产品线
+     * 城市带宽包所属的产品线范围
      */
     public String product;
 
