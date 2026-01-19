@@ -25,6 +25,13 @@ public class CreateBandwidthClusterRequest extends TeaModel {
      * IP网络类型。
      * 城市共享带宽包该字段必填
      */
+    public String networkLineType;
+
+    /**
+     * IP网络类型。
+     * 请使用`networkLineType`代替
+     */
+    @Deprecated
     public String networkType;
 
     /**
@@ -40,7 +47,7 @@ public class CreateBandwidthClusterRequest extends TeaModel {
     public String name;
 
     /**
-     * 城市带宽包所包含的的产品线范围
+     * 城市带宽包所属的产品线范围
      */
     public String product;
 
@@ -60,10 +67,20 @@ public class CreateBandwidthClusterRequest extends TeaModel {
         this.commitBandwidthMbps = commitBandwidthMbps;
     }
 
+    public String getNetworkLineType() {
+        return this.networkLineType;
+    }
+
+    public void setNetworkLineType(String networkLineType) {
+        this.networkLineType = networkLineType;
+    }
+
+    @Deprecated
     public String getNetworkType() {
         return this.networkType;
     }
 
+    @Deprecated
     public void setNetworkType(String networkType) {
         this.networkType = networkType;
     }

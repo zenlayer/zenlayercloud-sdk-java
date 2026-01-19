@@ -21,9 +21,16 @@ public class BandwidthClusterInfo extends TeaModel {
     public String bandwidthClusterName;
 
     /**
-     * IP 网络类型
+     * IP 网络类型。
+     * 请使用`ipNetworkType`
      */
+    @Deprecated
     public String networkType;
+
+    /**
+     * 网络线路类型
+     */
+    public String networkLineType;
 
     /**
      * 产品范围
@@ -83,12 +90,22 @@ public class BandwidthClusterInfo extends TeaModel {
         this.bandwidthClusterName = bandwidthClusterName;
     }
 
+    @Deprecated
     public String getNetworkType() {
         return this.networkType;
     }
 
+    @Deprecated
     public void setNetworkType(String networkType) {
         this.networkType = networkType;
+    }
+
+    public String getNetworkLineType() {
+        return this.networkLineType;
+    }
+
+    public void setNetworkLineType(String networkLineType) {
+        this.networkLineType = networkLineType;
     }
 
     public String getProduct() {
