@@ -729,6 +729,30 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 获取攻击事件列表。
+         */
+    public DescribeDDosAllEventListResponse describeDDosAllEventList(DescribeDDosAllEventListRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeDDosAllEventList",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeDDosAllEventListResponse());
+    }
+
+        /**
+         * 获取攻击事件详情。
+         */
+    public DescribeDDosEventDetailResponse describeDDosEventDetail(DescribeDDosEventDetailRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeDDosEventDetail",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeDDosEventDetailResponse());
+    }
+
+        /**
          * 创建防护策略。
          */
     public CreatePolicyResponse createPolicy(CreatePolicyRequest request) {
@@ -1263,30 +1287,6 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new ModifyDhcpOptionsSetAttributesResponse());
-    }
-
-        /**
-         * 获取攻击事件列表。
-         */
-    public DescribeDDosAllEventListResponse describeDDosAllEventList(DescribeDDosAllEventListRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeDDosAllEventList",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeDDosAllEventListResponse());
-    }
-
-        /**
-         * 获取攻击事件详情。
-         */
-    public DescribeDDosEventDetailResponse describeDDosEventDetail(DescribeDDosEventDetailRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeDDosEventDetail",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeDDosEventDetailResponse());
     }
 
         /**

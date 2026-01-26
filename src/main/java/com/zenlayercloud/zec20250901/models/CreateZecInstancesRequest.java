@@ -145,9 +145,19 @@ public class CreateZecInstancesRequest extends TeaModel {
      * 公网IPv4的线路类型。
      * 当分配公网IP时需要指定。
      * 请确保所选子网的堆栈类型支持`IPv4`。
+     * 目前不支持三线IP随实例一起创建。
+     * 已废弃，请使用`networkLineType`
+     */
+    @Deprecated
+    public String eipV4Type;
+
+    /**
+     * 公网IPv4的线路类型。
+     * 当分配公网IP时需要指定。
+     * 请确保所选子网的堆栈类型支持`IPv4`。
      * 目前不支持三线IP随实例一起创建
      */
-    public String eipV4Type;
+    public String networkLineType;
 
     /**
      * 共享带宽包ID。
@@ -336,12 +346,22 @@ public class CreateZecInstancesRequest extends TeaModel {
         this.eipBindType = eipBindType;
     }
 
+    @Deprecated
     public String getEipV4Type() {
         return this.eipV4Type;
     }
 
+    @Deprecated
     public void setEipV4Type(String eipV4Type) {
         this.eipV4Type = eipV4Type;
+    }
+
+    public String getNetworkLineType() {
+        return this.networkLineType;
+    }
+
+    public void setNetworkLineType(String networkLineType) {
+        this.networkLineType = networkLineType;
     }
 
     public String getClusterId() {

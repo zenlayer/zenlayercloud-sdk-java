@@ -49,6 +49,11 @@ public class SdnClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribeBorderGatewayDatacentersResponse());
     }
 
+    public DescribeVPCDatacentersResponse describeVPCDatacenters(DescribeVPCDatacentersRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeVPCDatacenters", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeVPCDatacentersResponse());
+    }
+
     public QueryDataCenterPortPriceResponse queryDataCenterPortPrice(QueryDataCenterPortPriceRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "QueryDataCenterPortPrice", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new QueryDataCenterPortPriceResponse());
@@ -247,6 +252,12 @@ public class SdnClient extends AbstractClient {
             DescribeCloudRouterEdgePointTrafficRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeCloudRouterEdgePointTraffic", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeCloudRouterEdgePointTrafficResponse());
+    }
+
+    public DescribeCloudRouterDCToDCTrafficResponse describeCloudRouterDCToDCTraffic(
+            DescribeCloudRouterDCToDCTrafficRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeCloudRouterDCToDCTraffic", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeCloudRouterDCToDCTrafficResponse());
     }
 
     public ModifyCloudRouterEdgePointResponse modifyCloudRouterEdgePoint(ModifyCloudRouterEdgePointRequest request) {

@@ -19,9 +19,17 @@ public class InquiryPriceCreateInstanceRequest extends TeaModel {
 
     /**
      * 公网IPv4的线路类型。
+     * 目前不支持三线IP(`ThreeLine`)。
+     * 已废弃，请使用`networkLineType`
+     */
+    @Deprecated
+    public String eipV4Type;
+
+    /**
+     * 公网IPv4的线路类型。
      * 目前不支持三线IP(`ThreeLine`)
      */
-    public String eipV4Type;
+    public String networkLineType;
 
     /**
      * 公网IP的网络计费类型
@@ -72,12 +80,22 @@ public class InquiryPriceCreateInstanceRequest extends TeaModel {
         this.instanceType = instanceType;
     }
 
+    @Deprecated
     public String getEipV4Type() {
         return this.eipV4Type;
     }
 
+    @Deprecated
     public void setEipV4Type(String eipV4Type) {
         this.eipV4Type = eipV4Type;
+    }
+
+    public String getNetworkLineType() {
+        return this.networkLineType;
+    }
+
+    public void setNetworkLineType(String networkLineType) {
+        this.networkLineType = networkLineType;
     }
 
     public String getInternetChargeType() {

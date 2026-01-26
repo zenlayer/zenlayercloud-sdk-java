@@ -47,9 +47,17 @@ public class CidrInfo extends TeaModel {
 
     /**
      * EIP网络类型。
+     * 表示该CIDR支持的公网IP线路类型。
+     * 已废弃，请参考`networkLineType`
+     */
+    @Deprecated
+    public String eipV4Type;
+
+    /**
+     * EIP网络类型。
      * 表示该CIDR支持的公网IP线路类型
      */
-    public String eipV4Type;
+    public String networkLineType;
 
     /**
      * 子网掩码。
@@ -149,12 +157,22 @@ public class CidrInfo extends TeaModel {
         this.source = source;
     }
 
+    @Deprecated
     public String getEipV4Type() {
         return this.eipV4Type;
     }
 
+    @Deprecated
     public void setEipV4Type(String eipV4Type) {
         this.eipV4Type = eipV4Type;
+    }
+
+    public String getNetworkLineType() {
+        return this.networkLineType;
+    }
+
+    public void setNetworkLineType(String networkLineType) {
+        this.networkLineType = networkLineType;
     }
 
     public Integer getNetmask() {

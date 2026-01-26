@@ -52,9 +52,18 @@ public class EipInfo extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * EIP 的类型
+     * EIP网络类型。
+     * 表示该CIDR支持的公网IP线路类型。
+     * 已废弃，请参考`networkLineType`
      */
+    @Deprecated
     public String eipV4Type;
+
+    /**
+     * EIP网络类型。
+     * 表示该CIDR支持的公网IP线路类型
+     */
+    public String networkLineType;
 
     /**
      * EIP 的网络计费方式
@@ -214,12 +223,22 @@ public class EipInfo extends TeaModel {
         this.privateIpAddress = privateIpAddress;
     }
 
+    @Deprecated
     public String getEipV4Type() {
         return this.eipV4Type;
     }
 
+    @Deprecated
     public void setEipV4Type(String eipV4Type) {
         this.eipV4Type = eipV4Type;
+    }
+
+    public String getNetworkLineType() {
+        return this.networkLineType;
+    }
+
+    public void setNetworkLineType(String networkLineType) {
+        this.networkLineType = networkLineType;
     }
 
     public String getInternetChargeType() {

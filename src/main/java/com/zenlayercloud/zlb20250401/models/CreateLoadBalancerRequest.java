@@ -29,9 +29,16 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String internetChargeType;
 
     /**
+     * IP 的网络类型。
+     * 已废弃，请使用`networkLineType`
+     */
+    @Deprecated
+    public String ipNetworkType;
+
+    /**
      * IP 的网络类型
      */
-    public String ipNetworkType;
+    public String networkLineType;
 
     /**
      * EIP的最大出带宽。
@@ -126,12 +133,22 @@ public class CreateLoadBalancerRequest extends TeaModel {
         this.internetChargeType = internetChargeType;
     }
 
+    @Deprecated
     public String getIpNetworkType() {
         return this.ipNetworkType;
     }
 
+    @Deprecated
     public void setIpNetworkType(String ipNetworkType) {
         this.ipNetworkType = ipNetworkType;
+    }
+
+    public String getNetworkLineType() {
+        return this.networkLineType;
+    }
+
+    public void setNetworkLineType(String networkLineType) {
+        this.networkLineType = networkLineType;
     }
 
     public Integer getBandwidthMbps() {

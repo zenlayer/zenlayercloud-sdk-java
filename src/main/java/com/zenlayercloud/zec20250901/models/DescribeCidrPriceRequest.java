@@ -15,9 +15,16 @@ public class DescribeCidrPriceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * 查询CIDR的IP线路类型。
+     * 已废弃，请使用`networkLineType`
+     */
+    @Deprecated
+    public String eipV4Type;
+
+    /**
      * 查询CIDR的IP线路类型
      */
-    public String eipV4Type;
+    public String networkLineType;
 
     /**
      * 需要查询的CIDR子网数量和掩码信息
@@ -32,12 +39,22 @@ public class DescribeCidrPriceRequest extends TeaModel {
         this.regionId = regionId;
     }
 
+    @Deprecated
     public String getEipV4Type() {
         return this.eipV4Type;
     }
 
+    @Deprecated
     public void setEipV4Type(String eipV4Type) {
         this.eipV4Type = eipV4Type;
+    }
+
+    public String getNetworkLineType() {
+        return this.networkLineType;
+    }
+
+    public void setNetworkLineType(String networkLineType) {
+        this.networkLineType = networkLineType;
     }
 
     public NetmaskInfo getNetmask() {

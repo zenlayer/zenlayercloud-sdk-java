@@ -15,9 +15,16 @@ public class DescribeEipInternetChargeTypesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * EIP IP线路类型。
+     * 已废弃，请使用`networkLineType`
+     */
+    @Deprecated
+    public String eipV4Type;
+
+    /**
      * EIP IP线路类型
      */
-    public String eipV4Type;
+    public String networkLineType;
 
     public String getRegionId() {
         return this.regionId;
@@ -27,12 +34,22 @@ public class DescribeEipInternetChargeTypesRequest extends TeaModel {
         this.regionId = regionId;
     }
 
+    @Deprecated
     public String getEipV4Type() {
         return this.eipV4Type;
     }
 
+    @Deprecated
     public void setEipV4Type(String eipV4Type) {
         this.eipV4Type = eipV4Type;
+    }
+
+    public String getNetworkLineType() {
+        return this.networkLineType;
+    }
+
+    public void setNetworkLineType(String networkLineType) {
+        this.networkLineType = networkLineType;
     }
 
 }

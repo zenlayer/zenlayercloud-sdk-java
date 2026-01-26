@@ -25,9 +25,16 @@ public class DescribeEipPriceRequest extends TeaModel {
     public Integer amount;
 
     /**
+     * 公网弹性IP的线路类型。
+     * 已废弃，请使用`networkLineType`
+     */
+    @Deprecated
+    public String eipV4Type;
+
+    /**
      * 公网弹性IP的线路类型
      */
-    public String eipV4Type;
+    public String networkLineType;
 
     /**
      * 公网弹性IP的带宽限速。
@@ -84,12 +91,22 @@ public class DescribeEipPriceRequest extends TeaModel {
         this.amount = amount;
     }
 
+    @Deprecated
     public String getEipV4Type() {
         return this.eipV4Type;
     }
 
+    @Deprecated
     public void setEipV4Type(String eipV4Type) {
         this.eipV4Type = eipV4Type;
+    }
+
+    public String getNetworkLineType() {
+        return this.networkLineType;
+    }
+
+    public void setNetworkLineType(String networkLineType) {
+        this.networkLineType = networkLineType;
     }
 
     public Integer getBandwidth() {
