@@ -11,19 +11,19 @@ public class BandwidthClusterTrafficData extends TeaModel {
 
     /**
      * 入口带宽。
-     * 单位：bps
+     * 单位：bps。
      */
     public Long internetRX;
 
     /**
      * 出口带宽。
-     * 单位：bps
+     * 单位：bps。
      */
     public Long internetTX;
 
     /**
      * 数据时间。
-     * 格式为：YYYY-MM-DDThh:mm:ssZ
+     * 格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String time;
 

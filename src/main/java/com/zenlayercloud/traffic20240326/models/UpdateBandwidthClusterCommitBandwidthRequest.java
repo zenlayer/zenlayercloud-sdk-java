@@ -7,12 +7,12 @@ public class UpdateBandwidthClusterCommitBandwidthRequest extends TeaModel {
 
 
     /**
-     * 共享带宽包ID
+     * 共享带宽包ID。
      */
     public String bandwidthClusterId;
 
     /**
-     * 保底带宽
+     * 保底带宽。
      */
     public Integer commitBandwidthMbps;
 

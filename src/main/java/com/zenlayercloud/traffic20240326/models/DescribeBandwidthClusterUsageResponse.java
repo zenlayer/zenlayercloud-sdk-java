@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
-public class DescribeBandwidthClusterResourcesResponse extends TeaModel {
+public class DescribeBandwidthClusterUsageResponse extends TeaModel {
 
 
     /**
@@ -13,14 +13,14 @@ public class DescribeBandwidthClusterResourcesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 共享带宽包里的资源信息。
-     */
-    public List<BandwidthClusterResource> resources;
-
-    /**
-     * 共享带宽包里的资源数量。
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
+
+    /**
+     * 带宽用量数据集。
+     */
+    public List<BandwidthClusterUsageData> dataSet;
 
     public String getRequestId() {
         return this.requestId;
@@ -30,20 +30,20 @@ public class DescribeBandwidthClusterResourcesResponse extends TeaModel {
         this.requestId = requestId;
     }
 
-    public List<BandwidthClusterResource> getResources() {
-        return this.resources;
-    }
-
-    public void setResources(List<BandwidthClusterResource> resources) {
-        this.resources = resources;
-    }
-
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
     public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
+    }
+
+    public List<BandwidthClusterUsageData> getDataSet() {
+        return this.dataSet;
+    }
+
+    public void setDataSet(List<BandwidthClusterUsageData> dataSet) {
+        this.dataSet = dataSet;
     }
 
 }

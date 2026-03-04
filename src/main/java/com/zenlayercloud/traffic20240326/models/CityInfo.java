@@ -10,12 +10,12 @@ public class CityInfo extends TeaModel {
 
 
     /**
-     * 城市名称
+     * 城市名称。
      */
     public String cityName;
 
     /**
-     * 城市三字码代号
+     * 城市三字码代号。
      */
     public String cityCode;
 

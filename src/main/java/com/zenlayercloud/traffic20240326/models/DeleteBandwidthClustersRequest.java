@@ -9,7 +9,7 @@ public class DeleteBandwidthClustersRequest extends TeaModel {
 
     /**
      * 共享带宽包ID列表。
-     * 最多一次可传20个
+     * 最多一次可传20个。
      */
     public List<String> bandwidthClusterIds;
 
