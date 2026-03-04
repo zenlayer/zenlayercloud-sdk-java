@@ -49,6 +49,11 @@ public class ModifyListenerRequest extends TeaModel {
      */
     public String kind;
 
+    /**
+     * 会话保持时间，单位秒
+     */
+    public Integer persistent;
+
     public String getLoadBalancerId() {
         return this.loadBalancerId;
     }
@@ -103,6 +108,14 @@ public class ModifyListenerRequest extends TeaModel {
 
     public void setKind(String kind) {
         this.kind = kind;
+    }
+
+    public Integer getPersistent() {
+        return this.persistent;
+    }
+
+    public void setPersistent(Integer persistent) {
+        this.persistent = persistent;
     }
 
 }

@@ -37,5 +37,10 @@ public class DescribeInstanceAvailableEipResourcesResponse extends TeaModel {
          * IP地址
          */
         public String ipAddress;
+
+        /**
+         * 掩码
+         */
+        public Integer netmask;
     }
 }

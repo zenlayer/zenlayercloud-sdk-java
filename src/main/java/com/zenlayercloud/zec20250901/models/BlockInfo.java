@@ -34,6 +34,11 @@ public class BlockInfo extends TeaModel {
      */
     public Long outCps;
 
+    /**
+     * 是否启用特定阈值
+     */
+    public Boolean enable;
+
     public String getIp() {
         return this.ip;
     }
@@ -72,6 +77,14 @@ public class BlockInfo extends TeaModel {
 
     public void setOutCps(Long outCps) {
         this.outCps = outCps;
+    }
+
+    public Boolean getEnable() {
+        return this.enable;
+    }
+
+    public void setEnable(Boolean enable) {
+        this.enable = enable;
     }
 
 }

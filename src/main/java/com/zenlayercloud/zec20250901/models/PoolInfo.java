@@ -29,6 +29,16 @@ public class PoolInfo extends TeaModel {
      */
     public String createTime;
 
+    /**
+     * CIDR IPv4的数量
+     */
+    public Integer ipv4CidrCount;
+
+    /**
+     * CIDR IPv6的数量
+     */
+    public Integer ipv6CidrCount;
+
     public String getPoolId() {
         return this.poolId;
     }
@@ -59,6 +69,22 @@ public class PoolInfo extends TeaModel {
 
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
+    }
+
+    public Integer getIpv4CidrCount() {
+        return this.ipv4CidrCount;
+    }
+
+    public void setIpv4CidrCount(Integer ipv4CidrCount) {
+        this.ipv4CidrCount = ipv4CidrCount;
+    }
+
+    public Integer getIpv6CidrCount() {
+        return this.ipv6CidrCount;
+    }
+
+    public void setIpv6CidrCount(Integer ipv6CidrCount) {
+        this.ipv6CidrCount = ipv6CidrCount;
     }
 
 }

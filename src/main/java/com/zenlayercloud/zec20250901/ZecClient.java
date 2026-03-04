@@ -1199,6 +1199,19 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 弹性公网IP（EIP）探测配置。
+         
+         */
+    public ConfigEipProbeResponse configEipProbe(ConfigEipProbeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ConfigEipProbe",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ConfigEipProbeResponse());
+    }
+
+        /**
          * 查询一段时间的弹性公网IP监控指标数据。
          
          */
@@ -1330,7 +1343,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询CIDR地址块售卖价格。
+         * 查询IPv4 CIDR地址块售卖价格。
          
          */
     public DescribeCidrPriceResponse describeCidrPrice(DescribeCidrPriceRequest request) {
@@ -1343,7 +1356,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询CIDR地址块列表。
+         * 查询IPv4 CIDR地址块列表。
          */
     public DescribeCidrsResponse describeCidrs(DescribeCidrsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1355,7 +1368,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 创建CIDR地址段。
+         * 创建IPv6/IPv4 CIDR地址段。
          
          */
     public CreateCidrResponse createCidr(CreateCidrRequest request) {
@@ -1368,7 +1381,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 修改CIDR地址段的属性。
+         * 修改IPv4 CIDR地址段的属性。
          * 目前只能修改名称。
          
          */
@@ -1382,7 +1395,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 删除CIDR地址段。
+         * 删除IPv4 CIDR地址段。
          
          */
     public DeleteCidrResponse deleteCidr(DeleteCidrRequest request) {
@@ -1395,7 +1408,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 将一个处于回收站的CIDR地址段恢复回正常。
+         * 将一个处于回收站的IPv4 CIDR地址段恢复回正常。
          
          */
     public RenewCidrResponse renewCidr(RenewCidrRequest request) {
@@ -1408,7 +1421,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 删除一个或多个CIDR地址段。
+         * 删除一个或多个IPv4 CIDR地址块。
          
          */
     public DeleteCidrsResponse deleteCidrs(DeleteCidrsRequest request) {
@@ -1418,6 +1431,45 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DeleteCidrsResponse());
+    }
+
+        /**
+         * 查询IPV6 CIDR地址块列表。
+         
+         */
+    public DescribeIpv6CidrsResponse describeIpv6Cidrs(DescribeIpv6CidrsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeIpv6Cidrs",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeIpv6CidrsResponse());
+    }
+
+        /**
+         * 删除IPv6 CIDR地址块。
+         
+         */
+    public DeleteIpv6CidrResponse deleteIpv6Cidr(DeleteIpv6CidrRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteIpv6Cidr",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteIpv6CidrResponse());
+    }
+
+        /**
+         * 将一个处于回收站的IPv6 CIDR地址段恢复回正常。
+         
+         */
+    public RenewIpv6CidrResponse renewIpv6Cidr(RenewIpv6CidrRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "RenewIpv6Cidr",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new RenewIpv6CidrResponse());
     }
 
         /**

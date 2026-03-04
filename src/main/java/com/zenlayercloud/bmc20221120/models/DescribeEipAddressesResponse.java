@@ -47,6 +47,8 @@ public class DescribeEipAddressesResponse extends TeaModel {
          */
         public String ipAddress;
 
+        public Integer netmask;
+
         /**
          * 机器实例ID。
          */

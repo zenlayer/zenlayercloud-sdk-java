@@ -40,5 +40,8 @@ public class DescribeEipAvailableResourcesResponse extends TeaModel {
          * SOLD_OUT：表示实例已售罄。
          */
         public String status;
+
+
+        public Integer netmask;
     }
 }

@@ -30,8 +30,7 @@ public class CreateRouteRequest extends TeaModel {
 
     /**
      * IPv4或IPv6的目标网段。
-     * 例如：10.0.1.0/24。
-     * 该字段必填
+     * 例如：10.0.1.0/24
      */
     public String destinationCidrBlock;
 
@@ -50,8 +49,7 @@ public class CreateRouteRequest extends TeaModel {
 
     /**
      * 下一跳资源ID。
-     * 目前只支持网卡ID。
-     * 该字段必填
+     * 目前只支持网卡ID
      */
     public String nextHopId;
 

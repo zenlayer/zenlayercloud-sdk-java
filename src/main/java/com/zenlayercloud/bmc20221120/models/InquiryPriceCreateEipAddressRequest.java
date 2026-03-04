@@ -39,4 +39,6 @@ public class InquiryPriceCreateEipAddressRequest extends TeaModel {
      */
     @Validation(minimum = 1, maximum = 100)
     public Integer amount = 1;
+
+    public Integer netmask;
 }

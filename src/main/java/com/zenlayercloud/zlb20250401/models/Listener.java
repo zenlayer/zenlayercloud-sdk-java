@@ -54,6 +54,11 @@ public class Listener extends TeaModel {
      */
     public String createTime;
 
+    /**
+     * 会话保持时间，单位秒
+     */
+    public Integer persistent;
+
     public String getListenerId() {
         return this.listenerId;
     }
@@ -116,6 +121,14 @@ public class Listener extends TeaModel {
 
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
+    }
+
+    public Integer getPersistent() {
+        return this.persistent;
+    }
+
+    public void setPersistent(Integer persistent) {
+        this.persistent = persistent;
     }
 
 }
