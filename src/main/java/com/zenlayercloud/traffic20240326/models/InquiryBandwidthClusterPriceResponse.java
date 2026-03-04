@@ -12,7 +12,7 @@ public class InquiryBandwidthClusterPriceResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 描述带宽包的价格信息
+     * 描述带宽包的价格信息。
      */
     public PriceItem price;
 

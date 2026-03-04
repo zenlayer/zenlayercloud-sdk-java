@@ -13,87 +13,87 @@ public class DescribeBandwidthClusterTrafficResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 带宽数据列表
+     * 带宽数据列表。
      */
     public List<BandwidthClusterTrafficData> dataList;
 
     /**
-     * 入口带宽95值
+     * 入口带宽95值。
      */
     public Long in95;
 
     /**
      * 入口带宽95值时间。
-     * 格式为：YYYY-MM-DDThh:mm:ssZ
+     * 格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String in95Time;
 
     /**
-     * 入口带宽平均值
+     * 入口带宽平均值。
      */
     public Long inAvg;
 
     /**
-     * 入口带宽最大值
+     * 入口带宽最大值。
      */
     public Long inMax;
 
     /**
-     * 入口带宽最小值
+     * 入口带宽最小值。
      */
     public Long inMin;
 
     /**
-     * 入口带宽总流量
+     * 入口带宽总流量。
      */
     public Long inTotal;
 
     /**
-     * 出口带宽95值
+     * 出口带宽95值。
      */
     public Long out95;
 
     /**
      * 出口带宽95值时间。
-     * 格式为：YYYY-MM-DDThh:mm:ssZ
+     * 格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String out95Time;
 
     /**
-     * 出口带宽平均值
+     * 出口带宽平均值。
      */
     public Long outAvg;
 
     /**
-     * 出口带宽最大值
+     * 出口带宽最大值。
      */
     public Long outMax;
 
     /**
-     * 出口带宽最小值
+     * 出口带宽最小值。
      */
     public Long outMin;
 
     /**
-     * 出口带宽总流量
+     * 出口带宽总流量。
      */
     public Long outTotal;
 
     /**
      * 最大带宽95值。
-     * 单位：Mbps
+     * 单位：Mbps。
      */
     public Double maxBandwidth95ValueMbps;
 
     /**
      * 总流量单位。
-     * 例如：B
+     * 例如：B。
      */
     public String totalUnit;
 
     /**
      * 带宽值单位。
-     * 例如：bps
+     * 例如：bps。
      */
     public String unit;
 

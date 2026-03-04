@@ -16,7 +16,7 @@ public class DescribeBandwidthClusterAreasResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 可开通共享流量包区域列表
+     * 可开通共享流量包区域列表。
      */
     public List<BandwidthClusterAreaInfo> areas;
 

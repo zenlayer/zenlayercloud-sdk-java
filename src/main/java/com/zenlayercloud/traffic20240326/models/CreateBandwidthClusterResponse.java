@@ -15,12 +15,12 @@ public class CreateBandwidthClusterResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 订单编号
+     * 订单编号。
      */
     public String orderNumber;
 
     /**
-     * 创建的共享带宽包ID
+     * 创建的共享带宽包ID。
      */
     public String bandwidthClusterId;
 

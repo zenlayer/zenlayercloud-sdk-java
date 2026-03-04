@@ -16,12 +16,12 @@ public class DescribeBandwidthClustersResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * 共享带宽包结果集
+     * 共享带宽包结果集。
      */
     public List<BandwidthClusterInfo> dataSet;
 

@@ -4,19 +4,19 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 修改共享带宽包属性的请求信息。
+ * 
  */
 public class ModifyBandwidthClusterAttributeRequest extends TeaModel {
 
 
     /**
-     * 共享带宽包ID
+     * 共享带宽包ID。
      */
     public String bandwidthClusterId;
 
     /**
      * 要许改的共享带宽包显示名称。
-     * 最长不超过255个字符
+     * 最长不超过255个字符。
      */
     public String name;
 

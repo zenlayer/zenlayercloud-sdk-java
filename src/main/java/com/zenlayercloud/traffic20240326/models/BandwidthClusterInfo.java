@@ -11,66 +11,66 @@ public class BandwidthClusterInfo extends TeaModel {
 
 
     /**
-     * 共享带宽包唯一ID
+     * 共享带宽包唯一ID。
      */
     public String bandwidthClusterId;
 
     /**
-     * 共享带宽包显示名称
+     * 共享带宽包显示名称。
      */
     public String bandwidthClusterName;
 
     /**
      * IP 网络类型。
-     * 请使用`ipNetworkType`
+     * 请使用`ipNetworkType`。
      */
     @Deprecated
     public String networkType;
 
     /**
-     * 网络线路类型
+     * 网络线路类型。
      */
     public String networkLineType;
 
     /**
-     * 产品范围
+     * 产品范围。
      */
     public String product;
 
     /**
-     * 区域代号
+     * 区域代号。
      */
     public String areaCode;
 
     /**
-     * 带宽计费方式
+     * 带宽计费方式。
      */
     public String internetChargeType;
 
     /**
      * 保底带宽。
-     * 单位：Mbps
+     * 单位：Mbps。
      */
     public Integer commitBandwidthMbps;
 
     /**
-     * 所属区域
+     * 所属区域。
      */
     public String location;
 
     /**
      * 创建时间。
-     * 格式为：YYYY-MM-DDThh:mm:ssZ
+     * 格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String createTime;
 
     /**
-     * 带宽包内的资源数量
+     * 带宽包内的资源数量。
      */
     public Integer resourceNumber;
 
     /**
-     * 城市信息
+     * 城市信息。
      */
     public List<CityInfo> cities;
 

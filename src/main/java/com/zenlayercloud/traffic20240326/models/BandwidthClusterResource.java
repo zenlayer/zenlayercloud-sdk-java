@@ -10,12 +10,12 @@ public class BandwidthClusterResource extends TeaModel {
 
 
     /**
-     * 资源ID
+     * 资源ID。
      */
     public String resourceId;
 
     /**
-     * 资源类型
+     * 资源类型。
      */
     public String resourceType;
 

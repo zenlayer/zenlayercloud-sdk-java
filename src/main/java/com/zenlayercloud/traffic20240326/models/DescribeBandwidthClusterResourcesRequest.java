@@ -7,7 +7,7 @@ public class DescribeBandwidthClusterResourcesRequest extends TeaModel {
 
 
     /**
-     * 共享带宽包ID
+     * 共享带宽包ID。
      */
     public String bandwidthClusterId;
 

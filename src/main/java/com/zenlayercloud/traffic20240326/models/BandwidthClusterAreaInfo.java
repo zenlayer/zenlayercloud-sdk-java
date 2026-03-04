@@ -11,22 +11,22 @@ public class BandwidthClusterAreaInfo extends TeaModel {
 
 
     /**
-     * 带宽包区域代码
+     * 带宽包区域代码。
      */
     public String areaCode;
 
     /**
-     * 带宽包区域名称
+     * 带宽包区域名称。
      */
     public String areaName;
 
     /**
-     * 该地区支持的IP网络类型
+     * 该地区支持的IP网络类型。
      */
     public List<String> networkTypes;
 
     /**
-     * 该地区支持的产品线
+     * 该地区支持的产品线。
      */
     public List<String> products;
 
