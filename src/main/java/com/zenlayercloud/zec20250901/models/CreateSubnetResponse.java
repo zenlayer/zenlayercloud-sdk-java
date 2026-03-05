@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建子网的响应结果。
+ * 
  */
 public class CreateSubnetResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class CreateSubnetResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 创建的子网ID
+     * 创建的子网ID。
      */
     public String subnetId;
 

@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 恢复弹性公网IP的请求参数。
+ * 
  */
 public class RenewEipRequest extends TeaModel {
 
 
     /**
-     * 要恢复弹性公网IP的ID
+     * 要恢复弹性公网IP的ID。
      */
     public String eipId;
 

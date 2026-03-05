@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 修改子网堆栈类型的响应结果。
+ * 
  */
 public class ModifySubnetStackTypeResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class ModifySubnetStackTypeResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 分配的IPv6地址段
+     * 分配的IPv6地址段。
      */
     public String ipv6CidrBlock;
 

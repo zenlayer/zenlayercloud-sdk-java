@@ -3,58 +3,61 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * DDoS 指纹过滤的相关配置
+ */
 public class DdosFingerprintRule extends TeaModel {
 
 
     /**
-     * 设置指纹的协议
+     * 设置指纹的协议。
      */
     public String protocol;
 
     /**
-     * 指纹源端口的范围起始值
+     * 指纹源端口的范围起始值。
      */
     public Integer srcPortStart;
 
     /**
-     * 指纹源端口的范围结束值
+     * 指纹源端口的范围结束值。
      */
     public Integer srcPortEnd;
 
     /**
-     * 指纹目的端口的范围起始值
+     * 指纹目的端口的范围起始值。
      */
     public Integer dstPortStart;
 
     /**
-     * 指纹目的端口的范围结束值
+     * 指纹目的端口的范围结束值。
      */
     public Integer dstPortEnd;
 
     /**
-     * 需要过滤出的最小包长
+     * 需要过滤出的最小包长。
      */
     public Integer minPktLength;
 
     /**
-     * 需要过滤出的最大包长
+     * 需要过滤出的最大包长。
      */
     public Integer maxPktLength;
 
     /**
      * 报文载荷特征的偏移量。
-     * TCP/UDP payload 的偏移 [0-1500]
+     * TCP/UDP payload 的偏移 [0-1500]。
      */
     public Integer offset;
 
     /**
      * 检测载荷。
-     * 不含0x 的16进制 小写 补足2位
+     * 不含0x 的16进制 小写 补足2位。
      */
     public String matchBytes;
 
     /**
-     * 设置指纹匹配后的动作
+     * 设置指纹匹配后的动作。
      */
     public String action;
 

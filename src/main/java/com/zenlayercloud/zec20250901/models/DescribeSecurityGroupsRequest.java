@@ -5,29 +5,29 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询安全组列表的请求参数。
+ * 
  */
 public class DescribeSecurityGroupsRequest extends TeaModel {
 
 
     /**
-     * 根据安全组ID列表筛选
+     * 根据安全组ID列表筛选。
      */
     public List<String> securityGroupIds;
 
     /**
      * 根据安全组名称筛选。
-     * 支持模糊搜索
+     * 支持模糊搜索。
      */
     public String securityGroupName;
 
     /**
-     * 返回的分页大小
+     * 返回的分页大小。
      */
     public Integer pageSize;
 
     /**
-     * 返回的分页数
+     * 返回的分页数。
      */
     public Integer pageNum;
 

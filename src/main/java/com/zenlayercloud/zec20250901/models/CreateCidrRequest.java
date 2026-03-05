@@ -4,30 +4,30 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建CIDR请求参数
+ * 
  */
 public class CreateCidrRequest extends TeaModel {
 
 
     /**
-     * 节点ID
+     * 节点ID。
      */
     public String regionId;
 
     /**
      * 公网IPv4的网络类型。
-     * 已废弃，请使用`networkLineType`
+     * 已废弃，请使用`networkLineType`。
      */
     @Deprecated
     public String eipV4Type;
 
     /**
-     * 公网IPv4的网络类型
+     * 公网IPv4的网络类型。
      */
     public String networkLineType;
 
     /**
-     * CIDR掩码、数量
+     * CIDR掩码、数量。
      */
     public NetmaskInfo netmask;
 
@@ -36,24 +36,24 @@ public class CreateCidrRequest extends TeaModel {
      * 范围2到63个字符。
      * 仅支持输入字母、数字、-/_和英文句点(.)。
      * 且必须以数字或字母开头和结尾。
-     * 默认会将分配的CIDR地址作为名称
+     * 默认会将分配的CIDR地址作为名称。
      */
     public String name;
 
     /**
      * 资源组ID。
-     * 如果不指定，则会加入默认资源组
+     * 如果不指定，则会加入默认资源组。
      */
     public String resourceGroupId;
 
     /**
-     * 市场营销相关的选项
+     * 市场营销相关的选项。
      */
     public MarketingInfo marketingOptions;
 
     /**
      * 创建CIDR时关联的标签。
-     * 注意：关联`标签键`不能重复
+     * 注意：关联`标签键`不能重复。
      */
     public TagAssociation tags;
 

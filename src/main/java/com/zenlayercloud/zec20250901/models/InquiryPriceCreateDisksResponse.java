@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 云硬盘的询价响应值。
+ * 
  */
 public class InquiryPriceCreateDisksResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class InquiryPriceCreateDisksResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 云硬盘的价格
+     * 云硬盘的价格。
      */
     public PriceItem dataDiskPrice;
 

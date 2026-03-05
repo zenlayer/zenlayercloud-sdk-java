@@ -10,13 +10,13 @@ public class MetricValue extends TeaModel {
 
 
     /**
-     * 数据点时间
+     * 数据点时间。
      */
     public String time;
 
     /**
      * 数据点的值。
-     * 如果该值为null,表示取不到相应的值
+     * 如果该值为null,表示取不到相应的值。
      */
     public Double value;
 

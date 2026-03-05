@@ -5,49 +5,49 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询子网列表的请求信息。
+ * 
  */
 public class DescribeSubnetsRequest extends TeaModel {
 
 
     /**
-     * 根据子网的ID进行筛选
+     * 根据子网的ID进行筛选。
      */
     public List<String> subnetIds;
 
     /**
      * 根据子网的名称进行筛选。
-     * 该字段支持模糊搜索
+     * 该字段支持模糊搜索。
      */
     public String name;
 
     /**
-     * 根据子网的CIDR进行筛选
+     * 根据子网的CIDR进行筛选。
      */
     public String cidrBlock;
 
     /**
-     * 根据子网所在的节点进行筛选
+     * 根据子网所在的节点进行筛选。
      */
     public String regionId;
 
     /**
-     * 返回的分页大小
+     * 返回的分页大小。
      */
     public Integer pageSize;
 
     /**
-     * 返回的分页数
+     * 返回的分页数。
      */
     public Integer pageNum;
 
     /**
-     * VPC的ID集合
+     * VPC的ID集合。
      */
     public List<String> vpcIds;
 
     /**
-     * 子网绑定的DHCP 选项集ID
+     * 子网绑定的DHCP 选项集ID。
      */
     public String dhcpOptionsSetId;
 

@@ -7,12 +7,12 @@ public class AssignSecurityGroupVpcRequest extends TeaModel {
 
 
     /**
-     * 要操作的VPC ID
+     * 要操作的VPC ID。
      */
     public String vpcId;
 
     /**
-     * 要更换的目标安全组ID
+     * 要更换的目标安全组ID。
      */
     public String securityGroupId;
 

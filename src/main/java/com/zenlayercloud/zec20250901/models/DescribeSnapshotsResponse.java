@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述快照列表的响应信息。
+ * 
  */
 public class DescribeSnapshotsResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeSnapshotsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 满足过滤条件的快照总数
+     * 满足过滤条件的快照总数。
      */
     public Integer totalCount;
 
     /**
-     * 返回的快照列表数据
+     * 返回的快照列表数据。
      */
     public List<SnapshotInfo> dataSet;
 

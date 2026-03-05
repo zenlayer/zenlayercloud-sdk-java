@@ -13,12 +13,12 @@ public class DescribeDhcpOptionsSetsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * DHCP 选项集列表的数据
+     * DHCP 选项集列表的数据。
      */
     public List<DhcpOptionsSet> dataSet;
 

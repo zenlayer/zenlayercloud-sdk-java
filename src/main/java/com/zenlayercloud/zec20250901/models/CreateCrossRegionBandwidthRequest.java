@@ -4,18 +4,18 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建内网跨区域带宽请求参数。
+ * 
  */
 public class CreateCrossRegionBandwidthRequest extends TeaModel {
 
 
     /**
-     * 创建内网跨区域带宽所在的VPC ID
+     * 创建内网跨区域带宽所在的VPC ID。
      */
     public String vpcId;
 
     /**
-     * 网络计费类型
+     * 网络计费类型。
      */
     public String internetChargeType;
 
@@ -23,35 +23,35 @@ public class CreateCrossRegionBandwidthRequest extends TeaModel {
      * 内网跨区域带宽的名称。
      * 范围2到63个字符。
      * 仅支持输入字母、数字、-/_和英文句点(.)。
-     * 且必须以数字或字母开头和结尾
+     * 且必须以数字或字母开头和结尾。
      */
     public String crossRegionBandwidthName;
 
     /**
-     * 市场营销的相关选项
+     * 市场营销的相关选项。
      */
     public MarketingInfo marketingInfo;
 
     /**
-     * 其中一端的区域连接点（A）
+     * 其中一端的区域连接点（A）。
      */
     public String regionA;
 
     /**
-     * 另一端的区域连接点（Z）
+     * 另一端的区域连接点（Z）。
      */
     public String regionZ;
 
     /**
      * 带宽|保底带宽。
-     * 单位：Mbps
+     * 单位：Mbps。
      */
     public Integer bandwidth;
 
     /**
      * 突发带宽。
      * 单位：Mbps。
-     * 当且仅当internetChargeType为`ByInstanceBandwidth95`时此字段必填
+     * 当且仅当internetChargeType为`ByInstanceBandwidth95`时此字段必填。
      */
     public Integer bandwidthCap;
 

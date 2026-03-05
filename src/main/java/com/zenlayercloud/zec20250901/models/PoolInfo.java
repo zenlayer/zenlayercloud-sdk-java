@@ -10,32 +10,32 @@ public class PoolInfo extends TeaModel {
 
 
     /**
-     * 公网IP池的ID
+     * 公网IP池的ID。
      */
     public String poolId;
 
     /**
-     * 公网IP池所在的节点ID
+     * 公网IP池所在的节点ID。
      */
     public String regionId;
 
     /**
-     * 公网IP池的名称
+     * 公网IP池的名称。
      */
     public String name;
 
     /**
-     * 公网IP池的创建时间
+     * 公网IP池的创建时间。
      */
     public String createTime;
 
     /**
-     * CIDR IPv4的数量
+     * CIDR IPv4的数量。
      */
     public Integer ipv4CidrCount;
 
     /**
-     * CIDR IPv6的数量
+     * CIDR IPv6的数量。
      */
     public Integer ipv6CidrCount;
 

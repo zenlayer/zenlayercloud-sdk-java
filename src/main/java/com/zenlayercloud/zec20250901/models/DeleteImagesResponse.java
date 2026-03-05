@@ -13,7 +13,7 @@ public class DeleteImagesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 操作失败的镜像ID列表
+     * 操作失败的镜像ID列表。
      */
     public List<String> imageIds;
 

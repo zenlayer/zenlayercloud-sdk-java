@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述镜像列表的响应信息。
+ * 
  */
 public class DescribeImagesResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeImagesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * 镜像列表数据
+     * 镜像列表数据。
      */
     public List<Image> dataSet;
 

@@ -13,7 +13,7 @@ public class DescribeNetworkInterfacePublicIPv6Response extends TeaModel {
 
     /**
      * 公网IPv6信息。
-     * 网卡如果没有公网IPv6,则取值为空
+     * 网卡如果没有公网IPv6,则取值为空。
      */
     public PublicIpv6CidrAddress address;
 

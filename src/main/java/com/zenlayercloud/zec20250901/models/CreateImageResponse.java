@@ -12,12 +12,12 @@ public class CreateImageResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 镜像ID
+     * 镜像ID。
      */
     public String imageId;
 
     /**
-     * 镜像名称
+     * 镜像名称。
      */
     public String imageName;
 

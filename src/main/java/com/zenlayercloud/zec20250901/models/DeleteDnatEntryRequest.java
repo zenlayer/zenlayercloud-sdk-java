@@ -7,7 +7,7 @@ public class DeleteDnatEntryRequest extends TeaModel {
 
 
     /**
-     * DNAT规则 ID
+     * DNAT规则 ID。
      */
     public String dnatEntryId;
 

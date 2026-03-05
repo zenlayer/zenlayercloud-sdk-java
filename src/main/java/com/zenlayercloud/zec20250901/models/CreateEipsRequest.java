@@ -5,13 +5,13 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 创建EIP的请求参数。
+ * 
  */
 public class CreateEipsRequest extends TeaModel {
 
 
     /**
-     * 创建EIP所在的节点ID
+     * 创建EIP所在的节点ID。
      */
     public String regionId;
 
@@ -19,58 +19,58 @@ public class CreateEipsRequest extends TeaModel {
      * EIP的名称。
      * 范围2到63个字符。
      * 仅支持输入字母、数字、-/_和英文句点(.)。
-     * 且必须以数字或字母开头和结尾
+     * 且必须以数字或字母开头和结尾。
      */
     public String name;
 
     /**
-     * 公网弹性IP的网络计费方式
+     * 公网弹性IP的网络计费方式。
      */
     public String internetChargeType;
 
     /**
-     * 需要创建EIP的数量
+     * 需要创建EIP的数量。
      */
     public Integer amount;
 
     /**
      * 公网弹性IP的线路类型。
-     * 已废弃，请使用`networkLineType`
+     * 已废弃，请使用`networkLineType`。
      */
     @Deprecated
     public String eipV4Type;
 
     /**
-     * 公网弹性IP的线路类型
+     * 公网弹性IP的线路类型。
      */
     public String networkLineType;
 
     /**
      * 主公网IP的运营商。
-     * 该字段仅作用于三线IP(`ThreeLine`)
+     * 该字段仅作用于三线IP(`ThreeLine`)。
      */
     public String primaryIsp;
 
     /**
      * 公网弹性IP的带宽限速。
-     * 单位：Mbps
+     * 单位：Mbps。
      */
     public Integer bandwidth;
 
     /**
      * 指定CIDR ID，使用CIDR内分配弹性IP。
-     * 该字段和`eipV4Type`不能同时指定
+     * 该字段和`eipV4Type`不能同时指定。
      */
     public String cidrId;
 
     /**
      * 从CIDR里指定公网起始IP地址开始创建弹性IP。
-     * 该字段仅在指定`cidrId`时生效
+     * 该字段仅在指定`cidrId`时生效。
      */
     public String publicIp;
 
     /**
-     * 弹性公网IP所放的资源组ID，如不指定则放入默认资源组
+     * 弹性公网IP所放的资源组ID，如不指定则放入默认资源组。
      */
     public String resourceGroupId;
 
@@ -78,42 +78,42 @@ public class CreateEipsRequest extends TeaModel {
      * 公网IPv6的流量包大小。
      * 单位为TB。
      * 值要求为0或0.1的倍数。
-     * 当子网的堆栈类型包括V6且为公网时，且网络计费方式是流量计费(`ByTrafficPackage`)需要指定
+     * 当子网的堆栈类型包括V6且为公网时，且网络计费方式是流量计费(`ByTrafficPackage`)需要指定。
      */
     public Double flowPackage;
 
     /**
      * 公网IPv6所指定的共享带宽包ID。
-     * 当子网的堆栈类型包括V6且为公网时，且网络计费方式是共享带宽包计费(`BandwidthCluster`)需要指定
+     * 当子网的堆栈类型包括V6且为公网时，且网络计费方式是共享带宽包计费(`BandwidthCluster`)需要指定。
      */
     public String clusterId;
 
     /**
-     * 远端的节点ID
+     * 远端的节点ID。
      */
     public String peerRegionId;
 
     /**
-     * 市场营销的相关选项
+     * 市场营销的相关选项。
      */
     public MarketingInfo marketingOptions;
 
     /**
      * 弹性公网IP绑定的标签。
-     * 注意：实例关联`标签键`不能重复
+     * 注意：实例关联`标签键`不能重复。
      */
     public TagAssociation tags;
 
     /**
      * 要绑定的实例ID集合。
-     * 数量需要与`amount`字段一致
+     * 数量需要与`amount`字段一致。
      */
     public List<String> instanceIds;
 
     /**
      * 绑定类型。
      * 当指定定`instanceIds`时生效。
-     * 默认为普通NAT模式
+     * 默认为普通NAT模式。
      */
     public String bindType;
 

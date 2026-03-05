@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 删除防护策略的请求信息。
+ * 
  */
 public class DeletePolicyRequest extends TeaModel {
 
 
     /**
-     * 防护策略ID
+     * 防护策略ID。
      */
     public String policyId;
 

@@ -7,7 +7,7 @@ public class DeleteSnatEntryRequest extends TeaModel {
 
 
     /**
-     * SNAT规则 ID
+     * SNAT规则 ID。
      */
     public String snatEntryId;
 

@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建安全组的响应信息。
+ * 
  */
 public class CreateSecurityGroupResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class CreateSecurityGroupResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 创建的安全组ID
+     * 创建的安全组ID。
      */
     public String securityGroupId;
 

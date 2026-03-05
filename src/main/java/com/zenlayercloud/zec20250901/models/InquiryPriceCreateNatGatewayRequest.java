@@ -7,7 +7,7 @@ public class InquiryPriceCreateNatGatewayRequest extends TeaModel {
 
 
     /**
-     * 区域节点ID
+     * 区域节点ID。
      */
     public String regionId;
 

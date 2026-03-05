@@ -5,13 +5,13 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 修改防护策略请求参数
+ * 
  */
 public class ModifyPolicyRequest extends TeaModel {
 
 
     /**
-     * 防护策略ID
+     * 防护策略ID。
      */
     public String policyId;
 
@@ -19,64 +19,64 @@ public class ModifyPolicyRequest extends TeaModel {
      * 防护策略的名称。
      * 范围2到63个字符。
      * 仅支持输入字母、数字、-和英文句点(.)。
-     * 且必须以数字或字母开头和结尾
+     * 且必须以数字或字母开头和结尾。
      */
     public String policyName;
 
     /**
-     * 配置类型
+     * 配置类型。
      */
     public String configType;
 
     /**
-     * 黑名单列表
+     * 黑名单列表。
      */
     public List<String> blackIpList;
 
     /**
-     * 白名单列表
+     * 白名单列表。
      */
     public List<String> whiteIpList;
 
     /**
-     * 黑名单超时时间, 单位:分钟
+     * 黑名单超时时间, 单位:分钟。
      */
     public Integer ipBlackTimeout;
 
     /**
-     * 端口封禁, 支持TCP和UDP
+     * 端口封禁, 支持TCP和UDP。
      */
     public List<DdosPolicyPort> ports;
 
     /**
      * 开启的封禁协议。
-     * 不能同时开启UDP和TCP
+     * 不能同时开启UDP和TCP。
      */
     public List<String> blockProtocol;
 
     /**
-     * 封禁的区域
+     * 封禁的区域。
      */
     public List<String> blockRegions;
 
     /**
-     * 指纹过滤相关配置
+     * 指纹过滤相关配置。
      */
     public List<DdosFingerprintRule> finger;
 
     /**
-     * 反射攻击防护过滤的端口列表
+     * 反射攻击防护过滤的端口列表。
      */
     public List<DdosReflectUdpPort> reflectUdpPort;
 
     /**
-     * 源限速配置
+     * 源限速配置。
      */
     public DdosTrafficControl trafficControl;
 
     /**
      * 创建DDoS时关联的标签。
-     * 注意：·关联`标签键`不能重复
+     * 注意：·关联`标签键`不能重复。
      */
     public TagAssociation tags;
 

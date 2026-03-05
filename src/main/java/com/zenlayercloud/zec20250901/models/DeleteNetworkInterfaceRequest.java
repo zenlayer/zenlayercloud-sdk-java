@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 删除网卡的请求参数。
+ * 
  */
 public class DeleteNetworkInterfaceRequest extends TeaModel {
 
 
     /**
-     * 要删除的网卡ID
+     * 要删除的网卡ID。
      */
     public String nicId;
 

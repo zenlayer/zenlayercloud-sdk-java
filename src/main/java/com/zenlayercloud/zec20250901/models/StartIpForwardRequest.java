@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 开启IP转发的请求信息。
+ * 
  */
 public class StartIpForwardRequest extends TeaModel {
 
 
     /**
-     * 要操作的实例ID
+     * 要操作的实例ID。
      */
     public String instanceId;
 

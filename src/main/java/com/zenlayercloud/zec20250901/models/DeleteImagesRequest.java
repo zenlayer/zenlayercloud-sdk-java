@@ -8,7 +8,7 @@ public class DeleteImagesRequest extends TeaModel {
 
 
     /**
-     * 镜像ID列表
+     * 镜像ID列表。
      */
     public List<String> imageIds;
 

@@ -7,18 +7,18 @@ public class ConfigEipProbeRequest extends TeaModel {
 
 
     /**
-     * 要更换绑定模式的EIP ID
+     * 配置公网探测的EIP ID。
      */
     public String eipId;
 
     /**
-     * 是否禁用ICMP
+     * 是否禁用ICMP。
      */
     public Boolean disableIcmp;
 
     /**
      * TCP探测端口, [1-65535]。
-     * 不传表示不开启
+     * 不传表示不开启。
      */
     public Integer tcpPort;
 

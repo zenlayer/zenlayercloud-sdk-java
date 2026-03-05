@@ -10,27 +10,27 @@ public class PrivateIpInfo extends TeaModel {
 
 
     /**
-     * 网卡上的内网IP地址
+     * 网卡上的内网IP地址。
      */
     public String lanIp;
 
     /**
-     * 网卡ID
+     * 网卡ID。
      */
     public String nicId;
 
     /**
-     * 网卡的名称
+     * 网卡的名称。
      */
     public String nicName;
 
     /**
-     * 网卡关联的实例ID
+     * 网卡关联的实例ID。
      */
     public String instanceId;
 
     /**
-     * 网卡关联的实例名称
+     * 网卡关联的实例名称。
      */
     public String instanceName;
 

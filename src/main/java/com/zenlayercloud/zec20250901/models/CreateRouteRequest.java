@@ -7,62 +7,62 @@ public class CreateRouteRequest extends TeaModel {
 
 
     /**
-     * VPC的ID
+     * VPC的ID。
      */
     public String vpcId;
 
     /**
      * IP类型。
-     * 支持`IPv4`和`IPv6`两种类型
+     * 支持`IPv4`和`IPv6`两种类型。
      */
     public String ipVersion;
 
     /**
-     * 路由类型
+     * 路由类型。
      */
     public String routeType;
 
     /**
      * 源IP地址CIDR。
-     * `路由类型`配置`RouteTypePolicy(策略路由)`时需指定
+     * `路由类型`配置`RouteTypePolicy(策略路由)`时需指定。
      */
     public String sourceCidrBlock;
 
     /**
      * IPv4或IPv6的目标网段。
-     * 例如：10.0.1.0/24
+     * 例如：10.0.1.0/24。
      */
     public String destinationCidrBlock;
 
     /**
      * IPv4或IPv6的目标网段。
      * 例如：10.0.1.0/24。
-     * 该字段已废弃，请使用`destinationCidrBlock`
+     * 该字段已废弃，请使用`destinationCidrBlock`。
      */
     public String cidrBlock;
 
     /**
      * 路由优先级。
-     * 数值越小，优先级越高
+     * 数值越小，优先级越高。
      */
     public Integer priority;
 
     /**
      * 下一跳资源ID。
-     * 目前只支持网卡ID
+     * 目前只支持网卡ID。
      */
     public String nextHopId;
 
     /**
      * 下一跳资源ID。
      * 目前只支持网卡ID。
-     * 该字段已废弃， 请使用`nextHopId`
+     * 该字段已废弃， 请使用`nextHopId`。
      */
     public String nextHotId;
 
     /**
      * 路由名称。
-     * 名称长度为 2 到 63 个字符，仅支持字母、数字、连字符 (-) 、下划线(_) 、斜杠(/) 、和句点 (.)，且开头和结尾必须是字母或数字
+     * 名称长度为 2 到 63 个字符，仅支持字母、数字、连字符 (-) 、下划线(_) 、斜杠(/) 、和句点 (.)，且开头和结尾必须是字母或数字。
      */
     public String name;
 

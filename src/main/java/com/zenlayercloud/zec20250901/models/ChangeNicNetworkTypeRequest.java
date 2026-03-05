@@ -4,18 +4,18 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 更改网卡模式的请求参数。
+ * 
  */
 public class ChangeNicNetworkTypeRequest extends TeaModel {
 
 
     /**
-     * 待操作的实例ID
+     * 待操作的实例ID。
      */
     public String instanceId;
 
     /**
-     * 要更改的网卡模式
+     * 要更改的网卡模式。
      */
     public String nicNetworkType;
 

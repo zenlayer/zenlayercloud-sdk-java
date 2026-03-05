@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询边界网关列表的响应结果。
+ * 
  */
 public class DescribeBorderGatewaysResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeBorderGatewaysResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * 边界网关的列表数据
+     * 边界网关的列表数据。
      */
     public List<ZbgInfo> dataSet;
 

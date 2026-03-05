@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 支持售卖云硬盘的节点响应结果。
+ * 
  */
 public class DescribeDiskRegionsResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DescribeDiskRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 支持售卖云硬盘的节点ID列表
+     * 支持售卖云硬盘的节点ID列表。
      */
     public List<String> regionIds;
 

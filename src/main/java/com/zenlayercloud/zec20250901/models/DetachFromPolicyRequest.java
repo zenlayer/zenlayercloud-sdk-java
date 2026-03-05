@@ -5,18 +5,18 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 防护对象取消关联防护策略的请求参数
+ * 
  */
 public class DetachFromPolicyRequest extends TeaModel {
 
 
     /**
-     * 防护策略ID
+     * 防护策略ID。
      */
     public String policyId;
 
     /**
-     * 防护对象列表
+     * 防护对象列表。
      */
     public List<String> ipv4IdList;
 

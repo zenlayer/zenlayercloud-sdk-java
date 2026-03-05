@@ -11,13 +11,13 @@ public class SystemDisk extends TeaModel {
 
     /**
      * 系统盘ID。
-     * 该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`CreateInstances`等写接口的入参
+     * 该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`CreateInstances`等写接口的入参。
      */
     public String diskId;
 
     /**
      * 系统盘大小。
-     * 单位：GiB
+     * 单位：GiB。
      */
     public Integer diskSize;
 
@@ -25,12 +25,12 @@ public class SystemDisk extends TeaModel {
      * 云硬盘种类。
      * Basic NVMe SSD: 经济型 NVMe SSD。
      * Standard NVMe SSD: 标准型 NVMe SSD。
-     * 默认为Standard NVMe SSD
+     * 默认为Standard NVMe SSD。
      */
     public String diskCategory;
 
     /**
-     * 是否开启性能突发
+     * 是否开启性能突发。
      */
     public Boolean burstingEnabled;
 

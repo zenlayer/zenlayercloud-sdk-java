@@ -3,37 +3,40 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * DDoS端口封禁规则。
+ */
 public class DdosPolicyPort extends TeaModel {
 
 
     /**
      * 协议类型。
-     * 只支持 `UDP` / `TCP` 两种协议
+     * 只支持 `UDP` / `TCP` 两种协议。
      */
     public String protocol;
 
     /**
-     * 源端口范围的起始值
+     * 源端口范围的起始值。
      */
     public Integer srcPortStart;
 
     /**
-     * 源端口范围的结束值
+     * 源端口范围的结束值。
      */
     public Integer srcPortEnd;
 
     /**
-     * 目的端口范围的起始值
+     * 目的端口范围的起始值。
      */
     public Integer dstPortStart;
 
     /**
-     * 目的端口范围的结束值
+     * 目的端口范围的结束值。
      */
     public Integer dstPortEnd;
 
     /**
-     * 匹配后的动作
+     * 匹配后的动作。
      */
     public String action;
 

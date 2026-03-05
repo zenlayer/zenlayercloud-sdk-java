@@ -8,12 +8,12 @@ public class CancelAutoSnapshotPolicyRequest extends TeaModel {
 
 
     /**
-     * 自动快照策略ID
+     * 自动快照策略ID。
      */
     public String autoSnapshotPolicyId;
 
     /**
-     * 要移除的磁盘ID列表
+     * 要移除的磁盘ID列表。
      */
     public List<String> diskIds;
 

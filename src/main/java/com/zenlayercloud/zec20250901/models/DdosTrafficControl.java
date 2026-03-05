@@ -3,46 +3,49 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * DDoS源限速相关设置
+ */
 public class DdosTrafficControl extends TeaModel {
 
 
     /**
-     * 是否开启 bps 限速
+     * 是否开启 bps 限速。
      */
     public Boolean bpsEnabled;
 
     /**
-     * bps 限速值
+     * bps 限速值。
      */
     public Long bps;
 
     /**
-     * 是否开启 pps 限速
+     * 是否开启 pps 限速。
      */
     public Boolean ppsEnabled;
 
     /**
-     * pps 限速值
+     * pps 限速值。
      */
     public Long pps;
 
     /**
-     * 是否开启 sync bps 限速
+     * 是否开启 sync bps 限速。
      */
     public Boolean synBPSEnabled;
 
     /**
-     * syn bps 限速值
+     * syn bps 限速值。
      */
     public Long synBPS;
 
     /**
-     * 是否开启 sync pps 限速
+     * 是否开启 sync pps 限速。
      */
     public Boolean synPPSEnabled;
 
     /**
-     * syn pps 限速值
+     * syn pps 限速值。
      */
     public Long synPPS;
 

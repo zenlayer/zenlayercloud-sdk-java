@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述Vpc列表的响应结果。
+ * 
  */
 public class DescribeVpcsResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeVpcsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 匹配筛选条件的vpc总数量
+     * 匹配筛选条件的vpc总数量。
      */
     public Integer totalCount;
 
     /**
-     * 返回分页的vpc集合数据
+     * 返回分页的vpc集合数据。
      */
     public List<VpcInfo> dataSet;
 

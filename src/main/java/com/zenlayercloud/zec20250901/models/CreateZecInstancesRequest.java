@@ -5,30 +5,30 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 创建虚拟机实例的请求参数。
+ * 
  */
 public class CreateZecInstancesRequest extends TeaModel {
 
 
     /**
-     * 可用区ID
+     * 可用区ID。
      */
     public String zoneId;
 
     /**
      * 指定有效的镜像ID。
-     * 可以通过[DescribeImages](../image/describeimages.md)取返回信息中的imageId字段
+     * 可以通过[DescribeImages](../image/describeimages.md)取返回信息中的imageId字段。
      */
     public String imageId;
 
     /**
-     * 设置操作系统的时区
+     * 设置操作系统的时区。
      */
     public String timeZone;
 
     /**
      * 实例机型。
-     * 具体取值可通过调用接口[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)来获得最新的规格表
+     * 具体取值可通过调用接口[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)来获得最新的规格表。
      */
     public String instanceType;
 
@@ -43,14 +43,14 @@ public class CreateZecInstancesRequest extends TeaModel {
      * 注意模式串中不得有空格。
      * 购买1台时，例如server-[3,3]实例显示为server003；购买2台时，实例显示名分别为server003，server004。
      * 支持指定多个模式串，如server-[3,3]-[1,1]。
-     * 默认值为 instance
+     * 默认值为 instance。
      */
     public String instanceName;
 
     /**
      * 实例的密码。
      * 与keyId必须指定其中的一种（Windows和Generic类型的镜像无法指定密码和key）。
-     * 必须包含以下3种格式的字符：大小写字母: [a-zA-Z]数字: 0-9特殊字符: ~!@$^*-_=+
+     * 必须包含以下3种格式的字符：大小写字母: [a-zA-Z]数字: 0-9特殊字符: ~!@$^*-_=+。
      */
     public String password;
 
@@ -59,85 +59,85 @@ public class CreateZecInstancesRequest extends TeaModel {
      * 与password必须指定其中的一种（Windows和Generic类型的镜像无法指定密码和key）。
      * 可调用接口DescribeKeyPairs来获得最新的密钥对信息。
      * 关联密钥后，就可以通过对应的私钥来访问实例；密钥与密码不能同时指定，同时Windows操作系统不支持指定密钥。
-     * 示例值：key-YWD2QFOl
+     * 示例值：key-YWD2QFOl。
      */
     public String keyId;
 
     /**
-     * 网卡模式
+     * 网卡模式。
      */
     public String nicNetworkType;
 
     /**
-     * 要创建的实例数量
+     * 要创建的实例数量。
      */
     public Integer instanceCount;
 
     /**
      * 实例系统盘配置信息。
      * 若不指定该参数，则按照系统默认值进行分配。
-     * 即操作系统要求的最小大小
+     * 即操作系统要求的最小大小。
      */
     public SystemDisk systemDisk;
 
     /**
      * 实例数据盘配置信息。
      * 若不指定该参数，则默认不额外购买数据盘。
-     * 目前只能附带1个数据盘
+     * 目前只能附带1个数据盘。
      */
     public List<DataDisk> dataDisks;
 
     /**
      * 要配置在实例主网卡的安全组ID。
      * 目前只能关联1个安全组。
-     * 如果未指定，会默认用VPC关联的安全组
+     * 如果未指定，会默认用VPC关联的安全组。
      */
     public String securityGroupId;
 
     /**
-     * 子网ID
+     * 子网ID。
      */
     public String subnetId;
 
     /**
      * 分配的内网起始IP。
-     * 如果内网IP被使用,则会往后分配
+     * 如果内网IP被使用,则会往后分配。
      */
     public String lanIp;
 
     /**
-     * 是否安装启动Agent
+     * 是否安装启动Agent。
      */
     public Boolean enableAgent;
 
     /**
-     * 是否开启IP转发
+     * 是否开启IP转发。
      */
     public Boolean enableIpForward;
 
     /**
      * 公网IP的网络计费类型。
-     * 如果不指定，则不会分配公网IP地址
+     * 如果不指定，则不会分配公网IP地址。
      */
     public String internetChargeType;
 
     /**
      * 流量包订购大小。
      * 单位为TB。
-     * 该值必须在`internetChargeType = ByTrafficPackage`时才会生效
+     * 该值必须在`internetChargeType = ByTrafficPackage`时才会生效。
      */
     public Double trafficPackageSize;
 
     /**
      * 公网出带宽上限。
      * 单位：Mbps。
-     * 当分配公网IP时需要指定
+     * 当分配公网IP时需要指定。
      */
     public Integer bandwidth;
 
     /**
      * 公网IP的绑定模式。
-     * 当分配公网IP时需要指定
+     * 当分配公网IP时需要指定。
      */
     public String eipBindType;
 
@@ -146,43 +146,57 @@ public class CreateZecInstancesRequest extends TeaModel {
      * 当分配公网IP时需要指定。
      * 请确保所选子网的堆栈类型支持`IPv4`。
      * 目前不支持三线IP随实例一起创建。
-     * 已废弃，请使用`networkLineType`
+     * 已废弃，请使用`networkLineType`。
      */
     @Deprecated
     public String eipV4Type;
 
     /**
+     * 设置IP堆栈类型。
+     * 如果不指定，子网堆栈类型IPv4或IPv4_IPv6，默认使用IPv4。
+     */
+    public String ipStackType;
+
+    /**
      * 公网IPv4的线路类型。
      * 当分配公网IP时需要指定。
      * 请确保所选子网的堆栈类型支持`IPv4`。
-     * 目前不支持三线IP随实例一起创建
+     * 目前不支持三线IP随实例一起创建。
      */
     public String networkLineType;
 
     /**
      * 共享带宽包ID。
-     * 当网络计费方式是共享带宽包计费(`BandwidthCluster`)时需要指定
+     * 当网络计费方式是共享带宽包计费(`BandwidthCluster`)时需要指定。
      */
     public String clusterId;
 
     /**
-     * 创建后实例所在的资源组ID，如不指定则放入默认资源组
+     * 公网IPv6加入的共享带宽包ID。
+     * 网络计费方式是共享带宽包计费(`BandwidthCluster`)时且`ipStackType`设定为IPv4_IPv6时需要指定。
+     * 如果不指定，则默认使用`clusterId`。
+     * 该字段一般用于IPv4/IPv6所属不同共享带宽包。
+     */
+    public String ipv6ClusterId;
+
+    /**
+     * 创建后实例所在的资源组ID，如不指定则放入默认资源组。
      */
     public String resourceGroupId;
 
     /**
-     * 市场营销的相关选项
+     * 市场营销的相关选项。
      */
     public MarketingInfo marketingOptions;
 
     /**
      * 创建实例时关联的标签。
-     * 注意：·关联`标签键`不能重复
+     * 注意：·关联`标签键`不能重复。
      */
     public TagAssociation tags;
 
     /**
-     * 初始化命令
+     * 初始化命令。
      */
     public String userData;
 
@@ -356,6 +370,14 @@ public class CreateZecInstancesRequest extends TeaModel {
         this.eipV4Type = eipV4Type;
     }
 
+    public String getIpStackType() {
+        return this.ipStackType;
+    }
+
+    public void setIpStackType(String ipStackType) {
+        this.ipStackType = ipStackType;
+    }
+
     public String getNetworkLineType() {
         return this.networkLineType;
     }
@@ -370,6 +392,14 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     public void setClusterId(String clusterId) {
         this.clusterId = clusterId;
+    }
+
+    public String getIpv6ClusterId() {
+        return this.ipv6ClusterId;
+    }
+
+    public void setIpv6ClusterId(String ipv6ClusterId) {
+        this.ipv6ClusterId = ipv6ClusterId;
     }
 
     public String getResourceGroupId() {

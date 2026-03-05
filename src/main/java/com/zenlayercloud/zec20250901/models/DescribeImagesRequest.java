@@ -5,73 +5,72 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述镜像的请求信息
+ * 
  */
 public class DescribeImagesRequest extends TeaModel {
 
 
     /**
-     * 查询镜像所在的可用区ID
+     * 查询镜像所在的可用区ID。
      */
     public String zoneId;
 
     /**
-     * 镜像ID列表
+     * 镜像ID列表。
      */
     public List<String> imageIds;
 
     /**
      * 根据镜像名称过滤。
-     * 该字段支持模糊搜索
+     * 该字段支持模糊搜索。
      */
     public String imageName;
 
     /**
-     * 镜像所属分类
+     * 镜像所属分类。
      */
     public String category;
 
     /**
-     * 镜像类型
+     * 镜像类型。
      */
     public String imageType;
 
     /**
-     * 镜像来源
+     * 镜像来源。
      */
     public String imageSource;
 
     /**
-     * 操作系统类型
+     * 操作系统类型。
      */
     public String osType;
 
     /**
-     * 镜像的状态
+     * 镜像的状态。
      */
     public String imageStatus;
 
     /**
      * 返回的分页页码。
-     * 默认为1
      */
     public Integer pageNum;
 
     /**
      * 返回的分页大小。
-     * 默认为20，最大为1000
+     * 默认为20，最大为1000。
      */
     public Integer pageSize;
 
     /**
      * 根据标签键进行搜索。
-     * 最长不得超过20个标签键
+     * 最长不得超过20个标签键。
      */
     public List<String> tagKeys;
 
     /**
      * 根据标签进行搜索。
-     * 最长不得超过20个标签
+     * 最长不得超过20个标签。
      */
     public List<Tag> tags;
 

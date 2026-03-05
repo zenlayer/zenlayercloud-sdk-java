@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 创建弹性公网IP的响应结果
+ * 
  */
 public class CreateEipsResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class CreateEipsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 创建的弹性公网IP ID列表
+     * 创建的弹性公网IP ID列表。
      */
     public List<String> eipIds;
 
     /**
-     * 本次创建的订单编号
+     * 本次创建的订单编号。
      */
     public String orderNumber;
 

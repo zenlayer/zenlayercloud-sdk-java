@@ -4,19 +4,19 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 网卡绑定内网IPv4的请求参数。
+ * 
  */
 public class AssignNetworkInterfaceIpv4Request extends TeaModel {
 
 
     /**
-     * 需要绑定的网卡ID
+     * 需要绑定的网卡ID。
      */
     public String nicId;
 
     /**
      * 绑定的内网IP地址。
-     * 该地址必须属于子网的CIDR内，且未被使用
+     * 该地址必须属于子网的CIDR内，且未被使用。
      */
     public String ipAddress;
 

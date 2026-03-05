@@ -4,38 +4,39 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 切换子网堆栈类型的请求参数。
+ * 
  */
 public class ModifySubnetStackTypeRequest extends TeaModel {
 
 
     /**
-     * 要操作的子网的ID
+     * 要操作的子网的ID。
      */
     public String subnetId;
 
     /**
      * 子网堆栈类型。
-     * 目前只支持`IPv4_IPv6`
+     * 目前只支持`IPv4_IPv6`。
      */
     public String stackType;
 
     /**
-     * IPv6的类型
+     * IPv6的类型。
      */
     public String ipv6Type;
 
     /**
      * 公网IPv6 CIDR ID。
      * 该字段仅当`ipv6Type`是公网(`Public`)时允许指定。
-     * 如果不指定，将从系统默认IP池里分配
+     * 如果不指定，将从系统默认IP池里分配。
      */
     public String ipv6CidrBlockId;
 
     /**
-     * 分配给虚拟机（VM）的IPv6 CIDR子网的大小。
-     * 该参数仅当`ipv6CidrBlockId`时生效。
-     * 当未显式传递时，默认值为96
+     * 分配给虚拟机（VM）的IPv6 CIDR前缀的大小。
+     * 该参数必须与`ipv6CidrBlockId`参数配合使用。
+     * 当未显式传递时，默认值为96。
+     * 最小必须大于或等于指定`ipv6CidrBlockId`的前缀，最大不能超过96。
      */
     public Integer ipv6MaskLength;
 

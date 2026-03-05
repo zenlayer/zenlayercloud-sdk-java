@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述公网IP池的请求参数。
+ * 
  */
 public class DescribePoolsResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribePoolsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * 公网IP池列表的结果数据
+     * 公网IP池列表的结果数据。
      */
     public List<PoolInfo> dataSet;
 

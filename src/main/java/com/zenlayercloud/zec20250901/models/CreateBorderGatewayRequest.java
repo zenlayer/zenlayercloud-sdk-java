@@ -5,18 +5,18 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 创建边界网关的请求参数。
+ * 
  */
 public class CreateBorderGatewayRequest extends TeaModel {
 
 
     /**
-     * 节点ID
+     * 节点ID。
      */
     public String regionId;
 
     /**
-     * VPC ID
+     * VPC ID。
      */
     public String vpcId;
 
@@ -24,32 +24,32 @@ public class CreateBorderGatewayRequest extends TeaModel {
      * 名称。
      * 范围2到63个字符。
      * 仅支持输入字母、数字、-/_和英文句点(.)。
-     * 且必须以数字或字母开头和结尾
+     * 且必须以数字或字母开头和结尾。
      */
     public String label;
 
     /**
-     * ASN号
+     * ASN号。
      */
     public Integer asn;
 
     /**
-     * 路由级别
+     * 路由级别。
      */
     public String routingMode;
 
     /**
-     * 子网宣告控制
+     * 子网宣告控制。
      */
     public String advertisedSubnet;
 
     /**
-     * IPv4 Cidr集合
+     * IPv4 Cidr集合。
      */
     public List<String> advertisedCidrs;
 
     /**
-     * 自定义路由ID集合
+     * 自定义路由ID集合。
      */
     public List<String> advertisedRouteIds;
 

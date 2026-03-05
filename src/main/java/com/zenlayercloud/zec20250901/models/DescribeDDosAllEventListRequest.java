@@ -4,38 +4,40 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 获取攻击事件列表的请求参数。
+ * 
  */
 public class DescribeDDosAllEventListRequest extends TeaModel {
 
 
     /**
-     * 攻击状态
+     * 攻击状态。
      */
     public String status;
 
     /**
-     * 被攻击的IP
+     * 被攻击的IP。
      */
     public String ipAddress;
 
     /**
-     * 攻击开始时间
+     * 攻击开始时间。
+     * 时间格式：yyyy-MM-ddTHH:mm:ssZ。
      */
     public String startTime;
 
     /**
-     * 攻击结束时间
+     * 攻击结束时间。
+     * 时间格式：yyyy-MM-ddTHH:mm:ssZ。
      */
     public String endTime;
 
     /**
-     * 返回的分页大小
+     * 返回的分页大小。
      */
     public Integer pageSize;
 
     /**
-     * 返回的分页数
+     * 返回的分页数。
      */
     public Integer pageNum;
 

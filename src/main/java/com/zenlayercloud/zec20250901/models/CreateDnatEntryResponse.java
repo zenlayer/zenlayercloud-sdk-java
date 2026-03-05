@@ -12,7 +12,7 @@ public class CreateDnatEntryResponse extends TeaModel {
     public String requestId;
 
     /**
-     * DNAT规则唯一ID
+     * DNAT规则唯一ID。
      */
     public String dnatEntryId;
 

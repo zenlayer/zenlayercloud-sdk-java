@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 修改CIDR地址段的属性的请求信息
+ * 
  */
 public class ModifyCidrAttributeRequest extends TeaModel {
 
 
     /**
-     * 要修改CIDR地址段的ID
+     * 要修改CIDR地址段的ID。
      */
     public String cidrId;
 
@@ -18,7 +18,7 @@ public class ModifyCidrAttributeRequest extends TeaModel {
      * 要修改的名称。
      * 范围2到63个字符。
      * 仅支持输入字母、数字、-/_和英文句点(.)。
-     * 且必须以数字或字母开头和结尾
+     * 且必须以数字或字母开头和结尾。
      */
     public String name;
 

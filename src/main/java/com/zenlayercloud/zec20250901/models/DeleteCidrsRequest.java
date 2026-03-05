@@ -8,7 +8,7 @@ public class DeleteCidrsRequest extends TeaModel {
 
 
     /**
-     * 要删除的cidrId列表
+     * 要删除的cidrId列表。
      */
     public List<String> cidrIds;
 

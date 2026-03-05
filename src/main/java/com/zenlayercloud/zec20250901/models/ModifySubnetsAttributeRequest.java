@@ -5,13 +5,13 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 批量修改子网的请求参数。
+ * 
  */
 public class ModifySubnetsAttributeRequest extends TeaModel {
 
 
     /**
-     * 需要修改的子网ID列表
+     * 需要修改的子网ID列表。
      */
     public List<String> subnetIds;
 
@@ -19,7 +19,7 @@ public class ModifySubnetsAttributeRequest extends TeaModel {
      * 修改的子网名称。
      * 范围2到63个字符。
      * 仅支持输入字母、数字、-/_和英文句点(.)。
-     * 且必须以数字或字母开头和结尾
+     * 且必须以数字或字母开头和结尾。
      */
     public String name;
 

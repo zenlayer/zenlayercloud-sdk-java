@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 支持网卡的区域信息。
+ * 
  */
 public class DescribeNetworkInterfaceRegionsResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DescribeNetworkInterfaceRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 支持网卡的节点ID
+     * 支持网卡的节点ID。
      */
     public List<String> regionIds;
 

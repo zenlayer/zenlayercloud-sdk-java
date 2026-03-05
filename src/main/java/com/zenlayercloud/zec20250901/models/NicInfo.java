@@ -11,109 +11,109 @@ public class NicInfo extends TeaModel {
 
 
     /**
-     * 网卡的ID
+     * 网卡的ID。
      */
     public String nicId;
 
     /**
-     * 网卡的名称
+     * 网卡的名称。
      */
     public String name;
 
     /**
-     * 网卡状态
+     * 网卡状态。
      */
     public String status;
 
     /**
-     * 网卡类型
+     * 网卡类型。
      */
     public String nicType;
 
     /**
-     * 所属节点ID
+     * 所属节点ID。
      */
     public String regionId;
 
     /**
-     * 网卡的IP堆栈类型
+     * 网卡的IP堆栈类型。
      */
     public String nicSubnetType;
 
     /**
-     * 关联的公网IP
+     * 关联的公网IP。
      */
     public List<String> publicIpList;
 
     /**
-     * 关联的内网IP
+     * 关联的内网IP。
      */
     public List<String> privateIpList;
 
     /**
-     * 主的内网IPv4地址
+     * 主的内网IPv4地址。
      */
     public String primaryIpv4;
 
     /**
      * 网卡上的主IPv6地址。
-     * 如果堆栈类型是V4,该值取值为空
+     * 如果堆栈类型是V4,该值取值为空。
      */
     public String primaryIpv6;
 
     /**
      * 网卡上的IPv6地址。
-     * 如果堆栈类型是V4,该值取值为空
+     * 如果堆栈类型是V4,该值取值为空。
      */
     public String ipv6Cidr;
 
     /**
-     * 网卡上的辅助 IPv4 地址
+     * 网卡上的辅助 IPv4 地址。
      */
     public List<String> secondaryIpv4s;
 
     /**
-     * 网卡的MAC地址
+     * 网卡的MAC地址。
      */
     public String macAddress;
 
     /**
-     * 所绑定的实例ID
+     * 所绑定的实例ID。
      */
     public String instanceId;
 
     /**
-     * 所关联VPC ID
+     * 所关联VPC ID。
      */
     public String vpcId;
 
     /**
-     * 所关联的子网ID
+     * 所关联的子网ID。
      */
     public String subnetId;
 
     /**
-     * 网卡的创建时间
+     * 网卡的创建时间。
      */
     public String createTime;
 
     /**
-     * 网卡的更新时间
+     * 网卡的更新时间。
      */
     public String updateTime;
 
     /**
-     * 网卡所属的资源组信息
+     * 网卡所属的资源组信息。
      */
     public ResourceGroupInfo resourceGroup;
 
     /**
-     * 网卡关联的安全组ID
+     * 网卡关联的安全组ID。
      */
     public String securityGroupId;
 
     /**
-     * 该网卡关联的标签
+     * 该网卡关联的标签。
      */
     public Tags tags;
 

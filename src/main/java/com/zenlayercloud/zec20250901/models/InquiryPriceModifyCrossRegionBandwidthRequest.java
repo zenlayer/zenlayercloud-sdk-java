@@ -4,19 +4,19 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 修改内网跨区域带宽询价请求参数
+ * 
  */
 public class InquiryPriceModifyCrossRegionBandwidthRequest extends TeaModel {
 
 
     /**
-     * 要修改的内网跨区域带宽ID
+     * 要修改的内网跨区域带宽ID。
      */
     public String crossRegionBandwidthId;
 
     /**
      * 带宽|保底带宽。
-     * 单位：Mbps
+     * 单位：Mbps。
      */
     public Integer bandwidth;
 

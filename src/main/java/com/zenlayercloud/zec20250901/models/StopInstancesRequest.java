@@ -5,18 +5,18 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 关闭虚拟机实例的请求信息。
+ * 
  */
 public class StopInstancesRequest extends TeaModel {
 
 
     /**
-     * 待关闭的实例ID
+     * 待关闭的实例ID。
      */
     public List<String> instanceIds;
 
     /**
-     * 是否强制关机
+     * 是否强制关机。
      */
     public Boolean forceShutdown;
 

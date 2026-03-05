@@ -5,55 +5,54 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询内网跨区域带宽列表请求参数。
+ * 
  */
 public class DescribeCrossRegionBandwidthRequest extends TeaModel {
 
 
     /**
-     * 按照唯一ID过滤
+     * 按照唯一ID过滤。
      */
     public List<String> crossRegionBandwidthIds;
 
     /**
-     * 按照显示名称过滤，该字段支持模糊匹配
+     * 按照显示名称过滤，该字段支持模糊匹配。
      */
     public String crossRegionBandwidthName;
 
     /**
-     * 按照所属的VPC的ID过滤
+     * 按照所属的VPC的ID过滤。
      */
     public String vpcId;
 
     /**
-     * 按照其中一端的区域连接点（A）过滤
+     * 按照其中一端的区域连接点（A）过滤。
      */
     public String regionA;
 
     /**
-     * 按照另一端的区域连接点（Z）过滤
+     * 按照另一端的区域连接点（Z）过滤。
      */
     public String regionZ;
 
     /**
-     * 按照状态过滤
+     * 按照状态过滤。
      */
     public String status;
 
     /**
      * 返回的分页大小。
-     * 默认为20，最大为1000
+     * 默认为20，最大为1000。
      */
     public Integer pageSize;
 
     /**
      * 返回的分页页码。
-     * 默认为1
      */
     public Integer pageNum;
 
     /**
-     * 根据资源组ID过滤
+     * 根据资源组ID过滤。
      */
     public String resourceGroupId;
 

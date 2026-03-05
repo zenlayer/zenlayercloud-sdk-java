@@ -4,18 +4,18 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 修改边界网关ASN的请求信息。
+ * 
  */
 public class ModifyBorderGatewayAsnRequest extends TeaModel {
 
 
     /**
-     * 要修改的边界网关ID
+     * 要修改的边界网关ID。
      */
     public String zbgId;
 
     /**
-     * ASN
+     * ASN。
      */
     public Integer asn;
 

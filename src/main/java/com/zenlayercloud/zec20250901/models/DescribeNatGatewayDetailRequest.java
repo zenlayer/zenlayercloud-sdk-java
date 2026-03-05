@@ -7,7 +7,7 @@ public class DescribeNatGatewayDetailRequest extends TeaModel {
 
 
     /**
-     * NAT网关 ID
+     * NAT网关 ID。
      */
     public String natGatewayId;
 

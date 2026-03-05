@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 变更弹性公网IP更网络计费模式
+ * 
  */
 public class ChangeEipInternetChargeTypeResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class ChangeEipInternetChargeTypeResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 变更可能产生的订单号
+     * 变更可能产生的订单号。
      */
     public String orderNumber;
 

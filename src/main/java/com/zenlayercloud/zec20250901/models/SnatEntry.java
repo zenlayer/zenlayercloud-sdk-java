@@ -11,28 +11,28 @@ public class SnatEntry extends TeaModel {
 
 
     /**
-     * SNAT规则 ID
+     * SNAT规则 ID。
      */
     public String snatEntryId;
 
     /**
      * CIDR网段，不传默认是0.0.0.0/0。
-     * `cidrs` 和 `snatSubnets` 不会同时存在
+     * `cidrs` 和 `snatSubnets` 不会同时存在。
      */
     public List<String> cidrs;
 
     /**
-     * SNAT规则添加的弹性公网IP ID集合
+     * SNAT规则添加的弹性公网IP ID集合。
      */
     public List<String> eipIds;
 
     /**
-     * 弹性公网IP是否为所有的NAT网关上的公网弹性IP
+     * 弹性公网IP是否为所有的NAT网关上的公网弹性IP。
      */
     public Boolean isAllEip;
 
     /**
-     * SNAT规则添加的subnet ID集合
+     * SNAT规则添加的subnet ID集合。
      */
     public List<SnatSubnet> snatSubnets;
 

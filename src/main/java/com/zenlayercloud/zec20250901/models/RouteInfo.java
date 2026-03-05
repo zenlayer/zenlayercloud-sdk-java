@@ -10,77 +10,77 @@ public class RouteInfo extends TeaModel {
 
 
     /**
-     * 路由ID
+     * 路由ID。
      */
     public String routeId;
 
     /**
-     * 路由的名称
+     * 路由的名称。
      */
     public String name;
 
     /**
-     * 路由关联的VPC的ID
+     * 路由关联的VPC的ID。
      */
     public String vpcId;
 
     /**
-     * 路由关联的VPC的名称
+     * 路由关联的VPC的名称。
      */
     public String vpcName;
 
     /**
      * IP类型。
-     * 支持`IPv4`和`IPv6`两种类型
+     * 支持`IPv4`和`IPv6`两种类型。
      */
     public String ipVersion;
 
     /**
-     * 路由类型
+     * 路由类型。
      */
     public String type;
 
     /**
      * 源IP地址。
-     * 当`路由类型`是`RouteTypePolicy(策略路由)`时可取值
+     * 当`路由类型`是`RouteTypePolicy(策略路由)`时可取值。
      */
     public String sourceCidrBlock;
 
     /**
      * IPv4或IPv6的目标网段。
-     * 例如：10.0.1.0/24
+     * 例如：10.0.1.0/24。
      */
     public String destinationCidrBlock;
 
     /**
      * IPv4或IPv6的目标网段。
      * 例如：10.0.1.0/24。
-     * 该字段已废弃，请使用`destinationCidrBlock`
+     * 该字段已废弃，请使用`destinationCidrBlock`。
      */
     public String cidrBlock;
 
     /**
-     * 路由优先级
+     * 路由优先级。
      */
     public Integer priority;
 
     /**
-     * 下一跳资源ID
+     * 下一跳资源ID。
      */
     public String nextHopId;
 
     /**
-     * 下一跳资源名称
+     * 下一跳资源名称。
      */
     public String nextHopName;
 
     /**
-     * 下一跳的类型
+     * 下一跳的类型。
      */
     public String nextHopType;
 
     /**
-     * 路由的创建时间
+     * 路由的创建时间。
      */
     public String createTime;
 

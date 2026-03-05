@@ -9,45 +9,45 @@ public class DescribeDhcpOptionsSetsRequest extends TeaModel {
 
     /**
      * DHCP 选项集的 ID。
-     * 最多支持输入 20 个 DHCP 选项集的 ID
+     * 最多支持输入 20 个 DHCP 选项集的 ID。
      */
     public List<String> dhcpOptionsSetIds;
 
     /**
      * DHCP 选项集的名称。
-     * 该字段支持模糊搜索
+     * 该字段支持模糊搜索。
      */
     public String dhcpOptionsSetName;
 
     /**
-     * 关联的子网 ID
+     * 关联的子网 ID。
      */
     public String subnetId;
 
     /**
-     * 返回的分页大小，默认为20，最大为1000
+     * 返回的分页大小，默认为20，最大为1000。
      */
     public Integer pageSize;
 
     /**
-     * 返回的分页数，默认为1
+     * 返回的分页数。
      */
     public Integer pageNum;
 
     /**
-     * 根据资源组ID过滤
+     * 根据资源组ID过滤。
      */
     public String resourceGroupId;
 
     /**
      * 根据标签键进行搜索。
-     * 最长不得超过20个标签键
+     * 最长不得超过20个标签键。
      */
     public List<String> tagKeys;
 
     /**
      * 根据标签进行搜索。
-     * 最长不得超过20个标签
+     * 最长不得超过20个标签。
      */
     public List<Tag> tags;
 

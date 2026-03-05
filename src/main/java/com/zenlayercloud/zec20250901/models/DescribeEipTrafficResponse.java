@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询弹性公网IP指定时间段内的流量信息的响应值。
+ * 
  */
 public class DescribeEipTrafficResponse extends TeaModel {
 
@@ -16,67 +16,67 @@ public class DescribeEipTrafficResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 查询的数据点
+     * 查询的数据点。
      */
     public List<EipTrafficData> dataList;
 
     /**
      * 入方向带宽95值。
-     * 单位：bps
+     * 单位：bps。
      */
     public Long in95;
 
     /**
      * 入方向带宽平均值。
-     * 单位：bps
+     * 单位：bps。
      */
     public Long inAvg;
 
     /**
      * 入方向带宽的最大值。
-     * 单位：bps
+     * 单位：bps。
      */
     public Long inMax;
 
     /**
      * 入方向带宽的最小值。
-     * 单位：bps
+     * 单位：bps。
      */
     public Long inMin;
 
     /**
      * 入方向的总字节。
-     * 单位：Byte
+     * 单位：Byte。
      */
     public Long inTotal;
 
     /**
      * 出方向带宽95值。
-     * 单位：bps
+     * 单位：bps。
      */
     public Long out95;
 
     /**
      * 出方向带宽平均值。
-     * 单位：bps
+     * 单位：bps。
      */
     public Long outAvg;
 
     /**
      * 出方向带宽最大值。
-     * 单位：bps
+     * 单位：bps。
      */
     public Long outMax;
 
     /**
      * 出方向带宽最小值。
-     * 单位：bps
+     * 单位：bps。
      */
     public Long outMin;
 
     /**
      * 入方向的总字节。
-     * 单位：bps
+     * 单位：bps。
      */
     public Long outTotal;
 

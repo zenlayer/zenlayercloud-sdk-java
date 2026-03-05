@@ -9,46 +9,46 @@ public class DescribeVpcsRequest extends TeaModel {
 
     /**
      * VPC的ID列表。
-     * 最多可传100个ID
+     * 最多可传100个ID。
      */
     public List<String> vpcIds;
 
     /**
      * 根据VPC名称过滤。
-     * 支持模糊查询
+     * 支持模糊查询。
      */
     public String name;
 
     /**
      * 根据VPC的IPv4 CIDR过滤。
-     * 支持模糊查询
+     * 支持模糊查询。
      */
     public String cidrBlock;
 
     /**
-     * 返回的分页大小
+     * 返回的分页大小。
      */
     public Integer pageSize;
 
     /**
-     * 返回的分页数
+     * 返回的分页数。
      */
     public Integer pageNum;
 
     /**
-     * 根据资源组ID过滤
+     * 根据资源组ID过滤。
      */
     public String resourceGroupId;
 
     /**
      * 根据标签键进行搜索。
-     * 最长不得超过20个标签键
+     * 最长不得超过20个标签键。
      */
     public List<String> tagKeys;
 
     /**
      * 根据标签进行搜索。
-     * 最长不得超过20个标签
+     * 最长不得超过20个标签。
      */
     public List<Tag> tags;
 

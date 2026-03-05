@@ -10,19 +10,19 @@ public class DescribeEipRemoteRegionsRequest extends TeaModel {
 
 
     /**
-     * 查询的节点ID
+     * 查询的节点ID。
      */
     public String regionId;
 
     /**
      * EIP IP线路类型。
-     * 已废弃，请使用`networkLineType`
+     * 已废弃，请使用`networkLineType`。
      */
     @Deprecated
     public String eipV4Type;
 
     /**
-     * EIP IP线路类型
+     * EIP IP线路类型。
      */
     public String networkLineType;
 

@@ -8,12 +8,12 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
 
 
     /**
-     * 自动快照策略ID
+     * 自动快照策略ID。
      */
     public String autoSnapshotPolicyId;
 
     /**
-     * 要添加的磁盘ID列表
+     * 要添加的磁盘ID列表。
      */
     public List<String> diskIds;
 

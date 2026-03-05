@@ -11,67 +11,67 @@ public class ZbgInfo extends TeaModel {
 
 
     /**
-     * 边界网关ID
+     * 边界网关ID。
      */
     public String zbgId;
 
     /**
-     * 边界网关名称
+     * 边界网关名称。
      */
     public String name;
 
     /**
-     * VPC的ID
+     * VPC的ID。
      */
     public String vpcId;
 
     /**
-     * 节点的ID
+     * 节点的ID。
      */
     public String regionId;
 
     /**
-     * ASN号
+     * ASN号。
      */
     public Integer asn;
 
     /**
-     * 互联IP地址段
+     * 互联IP地址段。
      */
     public String interConnectCidr;
 
     /**
-     * 创建时间
+     * 创建时间。
      */
     public String createTime;
 
     /**
-     * 关联的三层网络ID集合
+     * 关联的三层网络ID集合。
      */
     public List<String> cloudRouterIds;
 
     /**
-     * 路由模式
+     * 路由模式。
      */
     public String routingMode;
 
     /**
-     * NAT的ID
+     * NAT的ID。
      */
     public String natId;
 
     /**
-     * 子网控制
+     * 子网控制。
      */
     public String advertisedSubnet;
 
     /**
-     * IPv4 Cidr集合
+     * IPv4 Cidr集合。
      */
     public List<String> advertisedCidrs;
 
     /**
-     * 自定义路由集合
+     * 自定义路由集合。
      */
     public List<String> advertisedRouteIds;
 

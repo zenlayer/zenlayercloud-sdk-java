@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建自动快照策略的响应信息。
+ * 
  */
 public class CreateAutoSnapshotPolicyResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class CreateAutoSnapshotPolicyResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 自动快照策略的ID
+     * 自动快照策略的ID。
      */
     public String autoSnapshotPolicyId;
 

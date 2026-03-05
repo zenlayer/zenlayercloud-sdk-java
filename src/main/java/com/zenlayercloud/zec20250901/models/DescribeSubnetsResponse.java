@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 子网列表的响应信息。
+ * 
  */
 public class DescribeSubnetsResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeSubnetsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * 子网的结果集
+     * 子网的结果集。
      */
     public List<SubnetInfo> dataSet;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询可以绑定边界网关的NAT响应信息。
+ * 
  */
 public class DescribeAvailableNatsResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DescribeAvailableNatsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 可以绑定边界网关的NAT ID集合
+     * 可以绑定边界网关的NAT ID集合。
      */
     public List<String> natIds;
 

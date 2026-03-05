@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 删除实例的响应结果。
+ * 
  */
 public class ReleaseInstancesResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class ReleaseInstancesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 操作失败的实例ID列表
+     * 操作失败的实例ID列表。
      */
     public List<String> instanceIds;
 

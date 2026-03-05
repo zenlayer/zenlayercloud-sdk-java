@@ -10,27 +10,27 @@ public class EipMetricValue extends TeaModel {
 
 
     /**
-     * 数据点时间
+     * 数据点时间。
      */
     public String time;
 
     /**
-     * 入方向值
+     * 入方向值。
      */
     public Double inValue;
 
     /**
-     * 入方向值
+     * 入方向值。
      */
     public Double outValue;
 
     /**
-     * 丢失入方向值
+     * 丢失入方向值。
      */
     public Double loseIn;
 
     /**
-     * 丢失出方向值
+     * 丢失出方向值。
      */
     public Double loseOut;
 

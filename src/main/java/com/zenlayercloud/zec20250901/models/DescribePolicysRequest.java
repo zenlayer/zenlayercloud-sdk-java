@@ -5,42 +5,42 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述防护策略列表的请求参数。
+ * 
  */
 public class DescribePolicysRequest extends TeaModel {
 
 
     /**
      * 根据防护策略ID列表进行筛选。
-     * 最大不能超过100个
+     * 最大不能超过100个。
      */
     public List<String> policyIds;
 
     /**
      * 根据防护策略名称过滤。
-     * 该字段支持模糊搜索
+     * 该字段支持模糊搜索。
      */
     public String policyName;
 
     /**
-     * 返回的分页大小
+     * 返回的分页大小。
      */
     public Integer pageSize;
 
     /**
-     * 返回的分页数
+     * 返回的分页数。
      */
     public Integer pageNum;
 
     /**
      * 根据标签键进行搜索。
-     * 最长不得超过20个标签键
+     * 最长不得超过20个标签键。
      */
     public List<String> tagKeys;
 
     /**
      * 根据标签进行搜索。
-     * 最长不得超过20个标签
+     * 最长不得超过20个标签。
      */
     public List<Tag> tags;
 

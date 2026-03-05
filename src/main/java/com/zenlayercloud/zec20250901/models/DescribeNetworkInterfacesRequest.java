@@ -9,75 +9,75 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     /**
      * 根据网卡ID过滤。
-     * 最多传入100个ID
+     * 最多传入100个ID。
      */
     public List<String> nicIds;
 
     /**
      * 根据网卡所属的名称过滤。
-     * 该字段支持模糊搜索
+     * 该字段支持模糊搜索。
      */
     public String name;
 
     /**
-     * 根据网卡所属的节点 ID过滤
+     * 根据网卡所属的节点 ID过滤。
      */
     public String regionId;
 
     /**
-     * 根据网卡所属的VPC ID过滤
+     * 根据网卡所属的VPC ID过滤。
      */
     public String vpcId;
 
     /**
-     * 根据网卡所属的子网ID过滤
+     * 根据网卡所属的子网ID过滤。
      */
     public String subnetId;
 
     /**
-     * 网卡关联的实例ID过滤
+     * 网卡关联的实例ID过滤。
      */
     public String instanceId;
 
     /**
-     * 根据网卡的状态过滤
+     * 根据网卡的状态过滤。
      */
     public String status;
 
     /**
-     * 返回的分页大小
+     * 返回的分页大小。
      */
     public Integer pageSize;
 
     /**
-     * 返回的分页数
+     * 返回的分页数。
      */
     public Integer pageNum;
 
     /**
-     * 根据网卡的类型筛选过滤
+     * 根据网卡的类型筛选过滤。
      */
     public String nicType;
 
     /**
-     * 根据网卡所属的资源组ID过滤
+     * 根据网卡所属的资源组ID过滤。
      */
     public String resourceGroupId;
 
     /**
-     * 根据网卡所属的安全组ID过滤
+     * 根据网卡所属的安全组ID过滤。
      */
     public String securityGroupId;
 
     /**
      * 根据标签键进行搜索。
-     * 最长不得超过20个标签键
+     * 最长不得超过20个标签键。
      */
     public List<String> tagKeys;
 
     /**
      * 根据标签进行搜索。
-     * 最长不得超过20个标签
+     * 最长不得超过20个标签。
      */
     public List<Tag> tags;
 

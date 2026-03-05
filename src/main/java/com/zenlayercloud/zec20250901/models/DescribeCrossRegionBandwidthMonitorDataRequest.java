@@ -4,30 +4,30 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 查询内网跨区域带宽监控指标数据请求。
+ * 
  */
 public class DescribeCrossRegionBandwidthMonitorDataRequest extends TeaModel {
 
 
     /**
-     * 要查询的内网跨区域带宽ID
+     * 要查询的内网跨区域带宽ID。
      */
     public String crossRegionBandwidthId;
 
     /**
-     * 内网跨区域带宽监控指标类型
+     * 内网跨区域带宽监控指标类型。
      */
     public String metricType;
 
     /**
      * 查询开始时间。
-     * 时间格式：yyyy-MM-ddTHH:mm:ssZ
+     * 时间格式：yyyy-MM-ddTHH:mm:ssZ。
      */
     public String startTime;
 
     /**
      * 查询结束时间。
-     * 时间格式：yyyy-MM-ddTHH:mm:ssZ
+     * 时间格式：yyyy-MM-ddTHH:mm:ssZ。
      */
     public String endTime;
 

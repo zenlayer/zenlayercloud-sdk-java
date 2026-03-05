@@ -11,81 +11,81 @@ public class Ipv6CidrInfo extends TeaModel {
 
 
     /**
-     * CIDR ID
+     * CIDR ID。
      */
     public String cidrId;
 
     /**
-     * CIDR所属的区域节点ID
+     * CIDR所属的区域节点ID。
      */
     public String regionId;
 
     /**
-     * CIDR的名称
+     * CIDR的名称。
      */
     public String name;
 
     /**
-     * CIDR地址块，例如：2400:8a00::/28
+     * CIDR地址块，例如：2400:8a00::/28。
      */
     public String cidrBlock;
 
     /**
      * CIDR的来源。
-     * 如CONSOLE（属于zenlayer）或 BYOIP（客户自带IP）
+     * 如CONSOLE（属于zenlayer）或 BYOIP（客户自带IP）。
      */
     public String source;
 
     /**
      * CIDR网络类型。
-     * 表示该CIDR支持的公网IP线路类型
+     * 表示该CIDR支持的公网IP线路类型。
      */
     public String networkLineType;
 
     /**
-     * 子网ID集合
+     * 子网ID集合。
      */
     public List<String> subnetIds;
 
     /**
-     * 网卡ID集合
+     * 网卡ID集合。
      */
     public List<String> nicIds;
 
     /**
      * 子网掩码。
-     * 表示CIDR的网络位长度
+     * 表示CIDR的网络位长度。
      */
     public Integer netmask;
 
     /**
      * Pool的ID。
-     * 表示该CIDR所属的公网IP池
+     * 表示该CIDR所属的公网IP池。
      */
     public String poolId;
 
     /**
-     * CIDR的创建时间
+     * CIDR的创建时间。
      */
     public String createTime;
 
     /**
-     * CIDR的到期时间
+     * CIDR的到期时间。
      */
     public String expiredTime;
 
     /**
-     * 该CIDR所属的资源组
+     * 该CIDR所属的资源组。
      */
     public ResourceGroupInfo resourceGroup;
 
     /**
-     * CIDR的状态
+     * CIDR的状态。
      */
     public String status;
 
     /**
-     * 该CIDR地址段关联的标签
+     * 该CIDR地址段关联的标签。
      */
     public Tags tags;
 

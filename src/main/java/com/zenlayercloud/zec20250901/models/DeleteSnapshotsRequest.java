@@ -8,7 +8,7 @@ public class DeleteSnapshotsRequest extends TeaModel {
 
 
     /**
-     * 快照ID列表
+     * 快照ID列表。
      */
     public List<String> snapshotIds;
 

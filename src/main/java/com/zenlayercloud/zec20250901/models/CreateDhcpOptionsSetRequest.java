@@ -8,51 +8,51 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
 
     /**
      * DHCP 选项集的名称。
-     * 长度为1～64个字符
+     * 长度为1～64个字符。
      */
     public String dhcpOptionsSetName;
 
     /**
      * DNS 服务器 IP。
-     * 最多传入 4 个 DNS 服务器 Ipv4，DNS 服务器 IP 之间用半角逗号（,）隔开
+     * 最多传入 4 个 DNS 服务器 Ipv4，DNS 服务器 IP 之间用半角逗号（,）隔开。
      */
     public String domainNameServers;
 
     /**
      * DNS 服务器 IP。
-     * 最多传入 4 个 DNS 服务器 Ipv6，DNS 服务器 IP 之间用半角逗号（,）隔开
+     * 最多传入 4 个 DNS 服务器 Ipv6，DNS 服务器 IP 之间用半角逗号（,）隔开。
      */
     public String ipv6DomainNameServers;
 
     /**
      * IPv4 DHCP 选项集的租赁时间。
      * 单位：h。
-     * 取值范围：**24~1176**，**87600~175200**
+     * 取值范围：**24~1176**，**87600~175200**。
      */
     public String leaseTime;
 
     /**
      * IPv6 DHCP 选项集的租赁时间。
      * 单位：h。
-     * 取值范围：**24~1176**，**87600~175200**
+     * 取值范围：**24~1176**，**87600~175200**。
      */
     public String ipv6LeaseTime;
 
     /**
      * 创建DHCP 选项集时关联的标签。
-     * 注意：·关联`标签键`不能重复
+     * 注意：·关联`标签键`不能重复。
      */
     public TagAssociation tags;
 
     /**
      * 资源组ID。
-     * 如果不指定，则会创建在默认资源组
+     * 如果不指定，则会创建在默认资源组。
      */
     public String resourceGroupId;
 
     /**
      * DHCP选项集 描述信息。
-     * 最长不超过255个字符
+     * 最长不超过255个字符。
      */
     public String description;
 

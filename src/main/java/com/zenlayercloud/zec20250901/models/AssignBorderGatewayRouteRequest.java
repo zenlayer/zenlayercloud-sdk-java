@@ -8,12 +8,12 @@ public class AssignBorderGatewayRouteRequest extends TeaModel {
 
 
     /**
-     * 边界网关ID
+     * 边界网关ID。
      */
     public String zbgId;
 
     /**
-     * 自定义路由ID集合
+     * 自定义路由ID集合。
      */
     public List<String> advertisedRouteIds;
 

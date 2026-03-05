@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建内网跨区域带宽响应结果。
+ * 
  */
 public class CreateCrossRegionBandwidthResponse extends TeaModel {
 
@@ -15,12 +15,12 @@ public class CreateCrossRegionBandwidthResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 下单编号
+     * 下单编号。
      */
     public String orderNumber;
 
     /**
-     * 内网跨区域带宽唯一ID
+     * 内网跨区域带宽唯一ID。
      */
     public String crossRegionBandwidthId;
 

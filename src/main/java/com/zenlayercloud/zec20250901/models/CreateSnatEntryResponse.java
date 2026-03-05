@@ -12,7 +12,7 @@ public class CreateSnatEntryResponse extends TeaModel {
     public String requestId;
 
     /**
-     * SNAT规则唯一ID
+     * SNAT规则唯一ID。
      */
     public String snatEntryId;
 

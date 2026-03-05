@@ -10,19 +10,19 @@ public class ReplaceIp extends TeaModel {
 
 
     /**
-     * 需要替换的弹性公网IP ID
+     * 需要替换的弹性公网IP ID。
      */
     public String eipId;
 
     /**
      * 原IP。
-     * 当IP是三线IP(IP线路类型为`ThreeLine`)时需要指定
+     * 当IP是三线IP(IP线路类型为`ThreeLine`)时需要指定。
      */
     public String ownIp;
 
     /**
      * 需要变更的目标IP。
-     * 如果未指定，将由系统随机分配
+     * 如果未指定，将由系统随机分配。
      */
     public String targetIp;
 

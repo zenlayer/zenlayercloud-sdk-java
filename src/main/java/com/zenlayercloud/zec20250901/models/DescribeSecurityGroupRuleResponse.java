@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询安全组规则的响应结果
+ * 
  */
 public class DescribeSecurityGroupRuleResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeSecurityGroupRuleResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 入方向规则列表
+     * 入方向规则列表。
      */
     public List<SecurityGroupRuleInfo> ingressRuleList;
 
     /**
-     * 出方向规则列表
+     * 出方向规则列表。
      */
     public List<SecurityGroupRuleInfo> egressRuleList;
 

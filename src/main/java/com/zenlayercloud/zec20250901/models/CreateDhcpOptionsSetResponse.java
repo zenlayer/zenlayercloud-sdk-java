@@ -12,7 +12,7 @@ public class CreateDhcpOptionsSetResponse extends TeaModel {
     public String requestId;
 
     /**
-     * DHCP 选项集ID
+     * DHCP 选项集ID。
      */
     public String dhcpOptionsSetId;
 

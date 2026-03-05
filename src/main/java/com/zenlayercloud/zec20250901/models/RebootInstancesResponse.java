@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 重启虚拟机实例的响应结果
+ * 
  */
 public class RebootInstancesResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class RebootInstancesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 重启操作失败的实例ID列表
+     * 重启操作失败的实例ID列表。
      */
     public List<String> instanceIds;
 

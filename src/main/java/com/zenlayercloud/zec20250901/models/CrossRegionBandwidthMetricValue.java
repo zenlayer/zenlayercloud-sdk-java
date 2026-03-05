@@ -10,17 +10,17 @@ public class CrossRegionBandwidthMetricValue extends TeaModel {
 
 
     /**
-     * 数据点时间
+     * 数据点时间。
      */
     public String time;
 
     /**
-     * 入方向值
+     * 入方向值。
      */
     public Double inValue;
 
     /**
-     * 入方向值
+     * 入方向值。
      */
     public Double outValue;
 

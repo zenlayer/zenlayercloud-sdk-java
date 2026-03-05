@@ -7,7 +7,7 @@ public class DescribeNetworkInterfacePublicIPv6Request extends TeaModel {
 
 
     /**
-     * 网卡ID
+     * 网卡ID。
      */
     public String nicId;
 

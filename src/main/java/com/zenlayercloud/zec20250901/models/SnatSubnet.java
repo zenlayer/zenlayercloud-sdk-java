@@ -10,12 +10,12 @@ public class SnatSubnet extends TeaModel {
 
 
     /**
-     * 子网的ID
+     * 子网的ID。
      */
     public String subnetId;
 
     /**
-     * 子网的CIDR
+     * 子网的CIDR。
      */
     public String cidr;
 

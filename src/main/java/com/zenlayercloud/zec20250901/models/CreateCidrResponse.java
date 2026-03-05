@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述创建CIDR的响应信息。
+ * 
  */
 public class CreateCidrResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class CreateCidrResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 创建的CIDR地址段ID列表
+     * 创建的CIDR地址段ID列表。
      */
     public List<String> cidrIds;
 

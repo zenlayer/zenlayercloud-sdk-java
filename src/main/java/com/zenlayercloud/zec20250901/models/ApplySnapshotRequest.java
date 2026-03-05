@@ -7,12 +7,12 @@ public class ApplySnapshotRequest extends TeaModel {
 
 
     /**
-     * 快照唯一ID
+     * 快照唯一ID。
      */
     public String snapshotId;
 
     /**
-     * 云硬盘ID
+     * 云硬盘ID。
      */
     public String diskId;
 

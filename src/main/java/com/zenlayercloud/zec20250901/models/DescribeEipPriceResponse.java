@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 查询公网弹性IP的价格的响应结果。
+ * 
  */
 public class DescribeEipPriceResponse extends TeaModel {
 
@@ -16,17 +16,17 @@ public class DescribeEipPriceResponse extends TeaModel {
 
     /**
      * 公网弹性IP的保留价格。
-     * 如果是通过cidr创建，则保留价格为null
+     * 如果是通过cidr创建，则保留价格为null。
      */
     public PriceItem eipPrice;
 
     /**
-     * 公网弹性IP的带宽价格
+     * 公网弹性IP的带宽价格。
      */
     public PriceItem bandwidthPrice;
 
     /**
-     * Remote IPT的带宽价格
+     * Remote IPT的带宽价格。
      */
     public PriceItem remoteBandwidthPrice;
 

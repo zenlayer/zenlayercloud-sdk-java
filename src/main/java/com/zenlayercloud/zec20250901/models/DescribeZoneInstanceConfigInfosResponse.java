@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询可用区售卖的机型信息的响应结果
+ * 
  */
 public class DescribeZoneInstanceConfigInfosResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DescribeZoneInstanceConfigInfosResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 实例规格信息
+     * 实例规格信息。
      */
     public List<InstanceTypeQuotaItem> instanceTypeQuotaSet;
 

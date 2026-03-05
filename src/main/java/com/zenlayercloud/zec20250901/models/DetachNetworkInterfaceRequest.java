@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 解绑网卡的请求参数。
+ * 
  */
 public class DetachNetworkInterfaceRequest extends TeaModel {
 
 
     /**
-     * 需要操作的网卡ID
+     * 需要操作的网卡ID。
      */
     public String nicId;
 

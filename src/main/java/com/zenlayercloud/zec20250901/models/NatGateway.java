@@ -11,84 +11,84 @@ public class NatGateway extends TeaModel {
 
 
     /**
-     * NAT网关唯一ID
+     * NAT网关唯一ID。
      */
     public String natGatewayId;
 
     /**
-     * NAT网关所属的VPC网络ID
+     * NAT网关所属的VPC网络ID。
      */
     public String vpcId;
 
     /**
-     * 区域节点ID
+     * 区域节点ID。
      */
     public String regionId;
 
     /**
-     * NAT网关的状态
+     * NAT网关的状态。
      */
     public String status;
 
     /**
-     * NAT网关的名称
+     * NAT网关的名称。
      */
     public String name;
 
     /**
-     * NAT网关所属的Subnet子网ID集合
+     * NAT网关所属的Subnet子网ID集合。
      */
     public List<String> subnetIds;
 
     /**
-     * 是否节点内所有子网关联了NAT网关
+     * 是否节点内所有子网关联了NAT网关。
      */
     public Boolean isAllSubnets;
 
     /**
-     * NAT网关所关联的EIP ID集合
+     * NAT网关所关联的EIP ID集合。
      */
     public List<String> eipIds;
 
     /**
-     * 边界网关ID
+     * 边界网关ID。
      */
     public String zbgId;
 
     /**
-     * 是否开启ICMP代回
+     * 是否开启ICMP代回。
      */
     public Boolean icmpReplyEnabled;
 
     /**
-     * 边界网关关联的安全组ID
+     * 边界网关关联的安全组ID。
      */
     public String securityGroupId;
 
     /**
-     * 资源组ID
+     * 资源组ID。
      */
     public String resourceGroupId;
 
     /**
-     * 资源组名称
+     * 资源组名称。
      */
     public String resourceGroupName;
 
     /**
      * 创建时间。
-     * 按照ISO8601标准表示，并且使用UTC时间, 格式为：YYYY-MM-DDThh:mm:ssZ
+     * 按照ISO8601标准表示，并且使用UTC时间, 格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String createTime;
 
     /**
      * 到期时间。
-     * 按照ISO8601标准表示，并且使用UTC时间, 格式为：YYYY-MM-DDThh:mm:ssZ
+     * 按照ISO8601标准表示，并且使用UTC时间, 格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String expiredTime;
 
     /**
-     * 该CIDR地址段关联的标签
+     * 该CIDR地址段关联的标签。
      */
     public Tags tags;
 

@@ -12,12 +12,12 @@ public class CreateNatGatewayResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 下单编号
+     * 下单编号。
      */
     public String orderNumber;
 
     /**
-     * NAT网关唯一ID
+     * NAT网关唯一ID。
      */
     public String natGatewayId;
 

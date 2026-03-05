@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建边界网关的响应值。
+ * 
  */
 public class CreateBorderGatewayResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class CreateBorderGatewayResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 边界网关的ID
+     * 边界网关的ID。
      */
     public String zbgId;
 

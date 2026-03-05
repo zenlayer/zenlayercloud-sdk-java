@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询支持创建子网区域的响应信息
+ * 
  */
 public class DescribeSubnetRegionsResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DescribeSubnetRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 支持子网的节点信息
+     * 支持子网的节点信息。
      */
     public List<RegionInfo> regionSet;
 

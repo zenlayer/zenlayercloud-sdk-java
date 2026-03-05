@@ -5,20 +5,20 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 云硬盘从主机实例上卸载的请求参数。
+ * 
  */
 public class DetachDisksRequest extends TeaModel {
 
 
     /**
-     * 要卸载的云盘ID列表
+     * 要卸载的云盘ID列表。
      */
     public List<String> diskIds;
 
     /**
      * 是否检测实例的运行状态。
      * 默认为true，即实例关机才允许被卸载。
-     * 否则必须实例关机才能调用本接口
+     * 否则必须实例关机才能调用本接口。
      */
     public Boolean instanceCheckFlag;
 

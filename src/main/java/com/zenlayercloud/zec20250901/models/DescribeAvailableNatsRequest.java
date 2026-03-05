@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 请求可用NAT网关的请求信息。
+ * 
  */
 public class DescribeAvailableNatsRequest extends TeaModel {
 
 
     /**
-     * 要查询需要绑定的边界网关ID
+     * 要查询需要绑定的边界网关ID。
      */
     public String zbgId;
 

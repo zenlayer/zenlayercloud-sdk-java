@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 删除快照的响应信息。
+ * 
  */
 public class DeleteSnapshotsResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DeleteSnapshotsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 操作失败的快照ID
+     * 操作失败的快照ID。
      */
     public List<String> snapshotIds;
 

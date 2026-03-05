@@ -7,60 +7,60 @@ public class InquiryPriceCreateInstanceRequest extends TeaModel {
 
 
     /**
-     * 可用区ID
+     * 可用区ID。
      */
     public String zoneId;
 
     /**
      * 实例机型。
-     * 具体取值可通过调用接口[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)来获得最新的规格表
+     * 具体取值可通过调用接口[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)来获得最新的规格表。
      */
     public String instanceType;
 
     /**
      * 公网IPv4的线路类型。
      * 目前不支持三线IP(`ThreeLine`)。
-     * 已废弃，请使用`networkLineType`
+     * 已废弃，请使用`networkLineType`。
      */
     @Deprecated
     public String eipV4Type;
 
     /**
      * 公网IPv4的线路类型。
-     * 目前不支持三线IP(`ThreeLine`)
+     * 目前不支持三线IP(`ThreeLine`)。
      */
     public String networkLineType;
 
     /**
-     * 公网IP的网络计费类型
+     * 公网IP的网络计费类型。
      */
     public String internetChargeType;
 
     /**
      * 流量包订购大小。
      * 单位为TB。
-     * 该值必须在`internetChargeType = ByTrafficPackage`时才会生效
+     * 该值必须在`internetChargeType = ByTrafficPackage`时才会生效。
      */
     public Double trafficPackageSize;
 
     /**
      * 公网出带宽上限。
-     * 单位：Mbps
+     * 单位：Mbps。
      */
     public Integer bandwidth;
 
     /**
-     * 实例数量
+     * 实例数量。
      */
     public Integer instanceCount;
 
     /**
-     * 系统盘相关信息
+     * 系统盘相关信息。
      */
     public SystemDisk systemDisk;
 
     /**
-     * 数据盘相关信息
+     * 数据盘相关信息。
      */
     public DataDisk dataDisk;
 

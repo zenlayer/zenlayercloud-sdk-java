@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询防护策略详情
+ * 
  */
 public class DescribePolicyDetailResponse extends TeaModel {
 
@@ -16,68 +16,68 @@ public class DescribePolicyDetailResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 防护策略的ID
+     * 防护策略的ID。
      */
     public String policyId;
 
     /**
-     * 防护策略的名称
+     * 防护策略的名称。
      */
     public String policyName;
 
     /**
-     * 防护对象关联IP列表
+     * 防护对象关联IP列表。
      */
     public List<String> attachmentIps;
 
     /**
-     * 创建时间
+     * 创建时间。
      */
     public String createTime;
 
     /**
-     * 黑名单IP列表
+     * 黑名单IP列表。
      */
     public List<String> blackIps;
 
     /**
-     * 白名单IP列表
+     * 白名单IP列表。
      */
     public List<String> whiteIps;
 
     /**
-     * 黑名单超时时间
+     * 黑名单超时时间。
      */
     public Integer blackIpListExpireAt;
 
     /**
      * 开启的封禁协议。
-     * 不能同时开启UDP和TCP
+     * 不能同时开启UDP和TCP。
      */
     public List<String> blockProtocols;
 
     /**
-     * 端口封禁
+     * 端口封禁。
      */
     public List<DdosPolicyPort> ports;
 
     /**
-     * 封禁的区域
+     * 封禁的区域。
      */
     public List<String> blockRegions;
 
     /**
-     * 反射攻击防护过滤的端口列表
+     * 反射攻击防护过滤的端口列表。
      */
     public List<DdosReflectUdpPort> reflectUdpPort;
 
     /**
-     * 源限速配置
+     * 源限速配置。
      */
     public DdosTrafficControl trafficControl;
 
     /**
-     * 指纹过滤相关配置
+     * 指纹过滤相关配置。
      */
     public List<DdosFingerprintRule> fingerPrintRules;
 

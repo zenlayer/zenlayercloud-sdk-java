@@ -13,12 +13,12 @@ public class DescribeEipsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 满足过滤条件的EIP总数
+     * 满足过滤条件的EIP总数。
      */
     public Integer totalCount;
 
     /**
-     * 返回的EIP列表
+     * 返回的EIP列表。
      */
     public List<EipInfo> dataSet;
 

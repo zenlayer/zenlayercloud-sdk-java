@@ -8,12 +8,12 @@ public class AttachDhcpOptionsSetToSubnetRequest extends TeaModel {
 
 
     /**
-     * DHCP 选项集ID
+     * DHCP 选项集ID。
      */
     public String dhcpOptionsSetId;
 
     /**
-     * 要与 DHCP 选项集关联的 Subnet 的 ID集合
+     * 要与 DHCP 选项集关联的 Subnet 的 ID集合。
      */
     public List<String> subnetIds;
 

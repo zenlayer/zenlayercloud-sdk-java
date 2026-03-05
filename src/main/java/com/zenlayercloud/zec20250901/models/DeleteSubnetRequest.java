@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 删除子网的请求参数。
+ * 
  */
 public class DeleteSubnetRequest extends TeaModel {
 
 
     /**
-     * 要删除的子网ID
+     * 要删除的子网ID。
      */
     public String subnetId;
 

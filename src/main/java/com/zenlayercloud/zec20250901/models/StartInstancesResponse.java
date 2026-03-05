@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 启动虚拟机实例的响应结果。
+ * 
  */
 public class StartInstancesResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class StartInstancesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 启动失败的实例ID列表
+     * 启动失败的实例ID列表。
      */
     public List<String> instanceIds;
 

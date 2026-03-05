@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询安全组列表的响应结果。
+ * 
  */
 public class DescribeSecurityGroupsResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeSecurityGroupsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * 安全组的结果数据
+     * 安全组的结果数据。
      */
     public List<SecurityGroupInfo> dataSet;
 

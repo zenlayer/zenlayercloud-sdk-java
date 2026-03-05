@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 描述恢复CIDR请求信息。
+ * 
  */
 public class RenewCidrRequest extends TeaModel {
 
 
     /**
-     * 要恢复的CIDR ID
+     * 要恢复的CIDR ID。
      */
     public String cidrId;
 

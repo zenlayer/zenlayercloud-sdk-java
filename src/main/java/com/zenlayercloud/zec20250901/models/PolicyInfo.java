@@ -10,32 +10,32 @@ public class PolicyInfo extends TeaModel {
 
 
     /**
-     * 防护策略唯一ID
+     * 防护策略唯一ID。
      */
     public String policyId;
 
     /**
-     * 防护策略名称
+     * 防护策略名称。
      */
     public String policyName;
 
     /**
-     * 创建时间
+     * 创建时间。
      */
     public String createTime;
 
     /**
-     * 防护策略所属的资源组ID
+     * 防护策略所属的资源组ID。
      */
     public String resourceGroupId;
 
     /**
-     * 防护策略所属的资源组名称
+     * 防护策略所属的资源组名称。
      */
     public String resourceGroupName;
 
     /**
-     * 防护策略关联的标签
+     * 防护策略关联的标签。
      */
     public Tags tags;
 

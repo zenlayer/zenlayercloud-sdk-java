@@ -8,42 +8,42 @@ public class CreateNatGatewayRequest extends TeaModel {
 
 
     /**
-     * 区域节点ID
+     * 区域节点ID。
      */
     public String regionId;
 
     /**
-     * NAT网关所属的VPC网络ID
+     * NAT网关所属的VPC网络ID。
      */
     public String vpcId;
 
     /**
      * NAT网关的名称。
-     * 长度为2～63个字符
+     * 长度为2～63个字符。
      */
     public String name;
 
     /**
      * NAT网关所属的Subnet子网ID集合。
-     * 如果未指定，则指定区域的所有子网将自动关联NAT网关
+     * 如果未指定，则指定区域的所有子网将自动关联NAT网关。
      */
     public List<String> subnetIds;
 
     /**
      * 安全组ID。
-     * 如果未指定，则指定VPC所属的安全组ID
+     * 如果未指定，则指定VPC所属的安全组ID。
      */
     public String securityGroupId;
 
     /**
      * 资源组ID。
-     * 如果不指定，则会创建在默认资源组
+     * 如果不指定，则会创建在默认资源组。
      */
     public String resourceGroupId;
 
     /**
      * 创建NAT网关时关联的标签。
-     * 注意：·关联`标签键`不能重复
+     * 注意：·关联`标签键`不能重复。
      */
     public TagAssociation tags;
 

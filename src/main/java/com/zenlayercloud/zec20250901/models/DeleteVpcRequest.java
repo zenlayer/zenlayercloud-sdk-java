@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 删除VPC的响应信息。
+ * 
  */
 public class DeleteVpcRequest extends TeaModel {
 
 
     /**
-     * 要删除的VPC ID
+     * 要删除的VPC ID。
      */
     public String vpcId;
 

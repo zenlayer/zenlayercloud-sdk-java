@@ -8,38 +8,38 @@ public class ModifySnatEntryRequest extends TeaModel {
 
 
     /**
-     * SNAT规则 ID
+     * SNAT规则 ID。
      */
     public String snatEntryId;
 
     /**
      * SNAT规则添加的弹性公网IP ID集合。
-     * 如果需要修改为NAT网关所有上弹性公网IP，请指定`isAllEip`=`true`
+     * 如果需要修改为NAT网关所有上弹性公网IP，请指定`isAllEip`=`true`。
      */
     public List<String> eipIds;
 
     /**
-     * 弹性公网IP是否为所有的NAT网关上的公网弹性IP
+     * 弹性公网IP是否为所有的NAT网关上的公网弹性IP。
      */
     public Boolean isAllEip;
 
     /**
      * 源CIDR网段。
-     * 该字段已废弃，请使用`sourceCidrBlocks`
+     * 该字段已废弃，请使用`sourceCidrBlocks`。
      */
     public String cidr;
 
     /**
      * 源CIDR地址段列表。
      * 与`subnetIds`必须指定其中的一种。
-     * 如果使用全地址段，指定为`0.0.0.0/0`
+     * 如果使用全地址段，指定为`0.0.0.0/0`。
      */
     public List<String> sourceCidrBlocks;
 
     /**
      * 要修改子网ID集合。
      * 该参数表示该子网内的实例均可以通过`SNAT`规则访问外部网络。
-     * 与`sourceCidrBlocks`必须指定其中的一种
+     * 与`sourceCidrBlocks`必须指定其中的一种。
      */
     public List<String> subnetIds;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述路由列表的响应信息。
+ * 
  */
 public class DescribeRoutesResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeRoutesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * 路由列表数据
+     * 路由列表数据。
      */
     public List<RouteInfo> dataSet;
 

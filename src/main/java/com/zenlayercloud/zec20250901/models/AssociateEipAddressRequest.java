@@ -5,42 +5,42 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * EIP绑定的请求信息。
+ * 
  */
 public class AssociateEipAddressRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例的ID
+     * 负载均衡实例的ID。
      */
     public String loadBalancerId;
 
     /**
-     * 虚拟网卡的ID
+     * 虚拟网卡的ID。
      */
     public String nicId;
 
     /**
      * 要绑定的网卡上的内网IP地址。
-     * 当IP绑定的是网卡, 则该字段不能为空
+     * 当IP绑定的是网卡, 则该字段不能为空。
      */
     public String lanIp;
 
     /**
-     * NAT网关的ID
+     * NAT网关的ID。
      */
     public String natId;
 
     /**
      * 要绑定的EIP的ID。
-     * EIP 必须是未绑定状态
+     * EIP 必须是未绑定状态。
      */
     public List<String> eipIds;
 
     /**
      * 绑定类型。
      * 当绑定的是网卡时生效。
-     * 默认为普通NAT模式
+     * 默认为普通NAT模式。
      */
     public String bindType;
 

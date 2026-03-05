@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 获取实例VNC地址的请求信息。
+ * 
  */
 public class DescribeVncUrlRequest extends TeaModel {
 
 
     /**
-     * 要查询的实例ID
+     * 要查询的实例ID。
      */
     public String instanceId;
 

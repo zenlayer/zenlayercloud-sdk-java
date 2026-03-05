@@ -4,30 +4,30 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 查询云硬盘监控指标请求。
+ * 
  */
 public class DescribeDiskMonitorDataRequest extends TeaModel {
 
 
     /**
-     * 云硬盘唯一标识ID
+     * 云硬盘唯一标识ID。
      */
     public String diskId;
 
     /**
-     * 云硬盘监控指标类型
+     * 云硬盘监控指标类型。
      */
     public String metricType;
 
     /**
      * 查询开始时间。
-     * 时间格式：yyyy-MM-ddTHH:mm:ssZ
+     * 时间格式：yyyy-MM-ddTHH:mm:ssZ。
      */
     public String startTime;
 
     /**
      * 查询结束时间。
-     * 时间格式：yyyy-MM-ddTHH:mm:ssZ
+     * 时间格式：yyyy-MM-ddTHH:mm:ssZ。
      */
     public String endTime;
 

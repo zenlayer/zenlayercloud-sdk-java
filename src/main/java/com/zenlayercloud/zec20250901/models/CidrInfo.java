@@ -10,94 +10,94 @@ public class CidrInfo extends TeaModel {
 
 
     /**
-     * CIDR ID
+     * CIDR ID。
      */
     public String cidrId;
 
     /**
-     * CIDR所属的区域节点ID
+     * CIDR所属的区域节点ID。
      */
     public String regionId;
 
     /**
-     * CIDR的名称
+     * CIDR的名称。
      */
     public String name;
 
     /**
-     * CIDR地址块，例如：10.0.0.0/16
+     * CIDR地址块，例如：10.0.0.0/16。
      */
     public String cidrBlock;
 
     /**
-     * CIDR中IP地址的总数量
+     * CIDR中IP地址的总数量。
      */
     public Integer totalCount;
 
     /**
-     * CIDR中已被使用的IP地址数量
+     * CIDR中已被使用的IP地址数量。
      */
     public Integer usedCount;
 
     /**
      * CIDR的来源。
-     * 如CONSOLE（属于zenlayer）或 BYOIP（客户自带IP）
+     * 如CONSOLE（属于zenlayer）或 BYOIP（客户自带IP）。
      */
     public String source;
 
     /**
      * EIP网络类型。
      * 表示该CIDR支持的公网IP线路类型。
-     * 已废弃，请参考`networkLineType`
+     * 已废弃，请参考`networkLineType`。
      */
     @Deprecated
     public String eipV4Type;
 
     /**
      * EIP网络类型。
-     * 表示该CIDR支持的公网IP线路类型
+     * 表示该CIDR支持的公网IP线路类型。
      */
     public String networkLineType;
 
     /**
      * 子网掩码。
-     * 表示CIDR的网络位长度
+     * 表示CIDR的网络位长度。
      */
     public Integer netmask;
 
     /**
      * Pool的ID。
-     * 表示该CIDR所属的公网IP池
+     * 表示该CIDR所属的公网IP池。
      */
     public String poolId;
 
     /**
-     * CIDR的创建时间
+     * CIDR的创建时间。
      */
     public String createTime;
 
     /**
-     * CIDR的到期时间
+     * CIDR的到期时间。
      */
     public String expiredTime;
 
     /**
-     * 该CIDR所属的资源组
+     * 该CIDR所属的资源组。
      */
     public String resourceGroupId;
 
     /**
-     * 该CIDR所属资源组的名称
+     * 该CIDR所属资源组的名称。
      */
     public String resourceGroupName;
 
     /**
-     * CIDR的状态
+     * CIDR的状态。
      */
     public String status;
 
     /**
-     * 该CIDR地址段关联的标签
+     * 该CIDR地址段关联的标签。
      */
     public Tags tags;
 

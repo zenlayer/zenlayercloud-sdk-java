@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 恢复云硬盘的请求参数。
+ * 
  */
 public class RenewDiskRequest extends TeaModel {
 
 
     /**
-     * 要恢复的云硬盘ID
+     * 要恢复的云硬盘ID。
      */
     public String diskId;
 

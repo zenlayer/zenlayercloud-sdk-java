@@ -10,23 +10,23 @@ public class StepPrice extends TeaModel {
 
 
     /**
-     * 阶梯的起始值
+     * 阶梯的起始值。
      */
     public Double stepStart;
 
     /**
      * 阶梯的到达值。
-     * 为null代表最后一级阶梯
+     * 为null代表最后一级阶梯。
      */
     public Double stepEnd;
 
     /**
-     * 阶梯单价
+     * 阶梯单价。
      */
     public Double unitPrice;
 
     /**
-     * 阶梯折后价
+     * 阶梯折后价。
      */
     public Double discountUnitPrice;
 

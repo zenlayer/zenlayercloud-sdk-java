@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建防护策略的响应结果。
+ * 
  */
 public class CreatePolicyResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class CreatePolicyResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 防护策略ID
+     * 防护策略ID。
      */
     public String policyId;
 

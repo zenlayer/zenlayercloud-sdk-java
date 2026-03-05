@@ -13,7 +13,7 @@ public class ResetInstancesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 重装操作失败的实例ID列表
+     * 重装操作失败的实例ID列表。
      */
     public List<String> instanceIds;
 

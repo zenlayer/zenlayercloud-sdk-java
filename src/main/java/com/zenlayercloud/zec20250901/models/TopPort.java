@@ -10,12 +10,12 @@ public class TopPort extends TeaModel {
 
 
     /**
-     * 协议
+     * 协议。
      */
     public String protocol;
 
     /**
-     * 端口号
+     * 端口号。
      */
     public Integer port;
 

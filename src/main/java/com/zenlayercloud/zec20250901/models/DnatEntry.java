@@ -10,37 +10,37 @@ public class DnatEntry extends TeaModel {
 
 
     /**
-     * DNAT规则 ID
+     * DNAT规则 ID。
      */
     public String dnatEntryId;
 
     /**
-     * DNAT规则状态
+     * DNAT规则状态。
      */
     public String status;
 
     /**
-     * DNAT规则的内网IP地址
+     * DNAT规则的内网IP地址。
      */
     public String privateIp;
 
     /**
-     * DNAT规则添加的eip ID
+     * DNAT规则添加的eip ID。
      */
     public String eipId;
 
     /**
-     * DNAT规则的协议类型
+     * DNAT规则的协议类型。
      */
     public String protocol;
 
     /**
-     * DNAT规则端口转发的外部端口或端口段，取值范围1-65535
+     * DNAT规则端口转发的外部端口或端口段，取值范围1-65535。
      */
     public String listenerPort;
 
     /**
-     * DNAT规则端口转发的内部端口或端口段，取值范围1-65535
+     * DNAT规则端口转发的内部端口或端口段，取值范围1-65535。
      */
     public String internalPort;
 

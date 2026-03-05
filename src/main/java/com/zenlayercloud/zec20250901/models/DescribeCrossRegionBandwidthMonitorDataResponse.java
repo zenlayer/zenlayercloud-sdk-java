@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询内网跨区域带宽监控指标数据响应。
+ * 
  */
 public class DescribeCrossRegionBandwidthMonitorDataResponse extends TeaModel {
 
@@ -16,47 +16,47 @@ public class DescribeCrossRegionBandwidthMonitorDataResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 入方向最大值
+     * 入方向最大值。
      */
     public Double inMaxValue;
 
     /**
-     * 入方向平均值
+     * 入方向平均值。
      */
     public Double inAvgValue;
 
     /**
-     * 入方向最小值
+     * 入方向最小值。
      */
     public Double inMinValue;
 
     /**
-     * 入方向总和值
+     * 入方向总和值。
      */
     public Double inTotalValue;
 
     /**
-     * 出方向最大值
+     * 出方向最大值。
      */
     public Double outMaxValue;
 
     /**
-     * 出方向平均值
+     * 出方向平均值。
      */
     public Double outAvgValue;
 
     /**
-     * 出方向最小值
+     * 出方向最小值。
      */
     public Double outMinValue;
 
     /**
-     * 出方向总和值
+     * 出方向总和值。
      */
     public Double outTotalValue;
 
     /**
-     * 监控数据集合
+     * 监控数据集合。
      */
     public List<CrossRegionBandwidthMetricValue> dataList;
 

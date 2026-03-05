@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询支持售卖内网跨区域带宽的区域信息响应信息。
+ * 
  */
 public class DescribeCrossRegionBandwidthRegionsResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DescribeCrossRegionBandwidthRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 支持售卖内网跨区域带宽的节点ID集合
+     * 支持售卖内网跨区域带宽的节点ID集合。
      */
     public List<String> regionIds;
 

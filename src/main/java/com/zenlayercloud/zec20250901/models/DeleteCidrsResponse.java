@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 删除CIDR的响应结果。
+ * 
  */
 public class DeleteCidrsResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DeleteCidrsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 操作失败的CIDR ID列表
+     * 操作失败的CIDR ID列表。
      */
     public List<String> failedCidrIds;
 

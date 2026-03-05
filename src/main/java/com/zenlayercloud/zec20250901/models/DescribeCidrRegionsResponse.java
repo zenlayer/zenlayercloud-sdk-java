@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 支持售卖CIDR的响应信息。
+ * 
  */
 public class DescribeCidrRegionsResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DescribeCidrRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 支持售卖CIDR的节点ID
+     * 支持售卖CIDR的节点ID。
      */
     public List<String> regionIds;
 

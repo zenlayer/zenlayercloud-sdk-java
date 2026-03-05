@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建全球VPC的响应结果。
+ * 
  */
 public class CreateVpcResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class CreateVpcResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 创建的VPC ID
+     * 创建的VPC ID。
      */
     public String vpcId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 云硬盘从实例解绑的响应信息。
+ * 
  */
 public class DetachDisksResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DetachDisksResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 解绑失败的云硬盘
+     * 解绑失败的云硬盘。
      */
     public List<String> failedDiskIds;
 

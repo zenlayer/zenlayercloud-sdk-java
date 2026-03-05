@@ -5,28 +5,28 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询实例状态的请求参数。
+ * 
  */
 public class DescribeInstancesStatusRequest extends TeaModel {
 
 
     /**
-     * 要查询的实例ID列表
+     * 要查询的实例ID列表。
      */
     public List<String> instanceIds;
 
     /**
-     * 分页大小
+     * 分页大小。
      */
     public Integer pageSize;
 
     /**
-     * 分页页数
+     * 分页页数。
      */
     public Integer pageNum;
 
     /**
-     * 根据资源组ID过滤
+     * 根据资源组ID过滤。
      */
     public String resourceGroupId;
 

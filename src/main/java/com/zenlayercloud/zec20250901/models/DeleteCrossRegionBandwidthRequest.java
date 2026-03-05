@@ -10,7 +10,7 @@ public class DeleteCrossRegionBandwidthRequest extends TeaModel {
 
 
     /**
-     * 要删除内网跨区域带宽ID
+     * 要删除内网跨区域带宽ID。
      */
     public String crossRegionBandwidthId;
 

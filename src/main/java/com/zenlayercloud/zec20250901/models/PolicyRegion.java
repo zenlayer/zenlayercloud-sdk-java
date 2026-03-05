@@ -10,17 +10,17 @@ public class PolicyRegion extends TeaModel {
 
 
     /**
-     * 区域ID
+     * 区域ID。
      */
     public String regionId;
 
     /**
-     * 国家名称
+     * 国家名称。
      */
     public String regionName;
 
     /**
-     * 地域名称
+     * 地域名称。
      */
     public String areaName;
 

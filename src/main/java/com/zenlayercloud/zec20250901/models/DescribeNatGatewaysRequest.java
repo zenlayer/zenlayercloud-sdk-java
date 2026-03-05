@@ -8,62 +8,61 @@ public class DescribeNatGatewaysRequest extends TeaModel {
 
 
     /**
-     * 节点ID
+     * 节点ID。
      */
     public String regionId;
 
     /**
-     * 根据NAT网关所属的VPC网络 ID过滤
+     * 根据NAT网关所属的VPC网络 ID过滤。
      */
     public String vpcId;
 
     /**
      * NAT网关ID集合。
-     * 实例ID数量上限为100个
+     * 实例ID数量上限为100个。
      */
     public List<String> natGatewayIds;
 
     /**
-     * NAT网关名称
+     * NAT网关名称。
      */
     public String name;
 
     /**
-     * NAT网关状态
+     * NAT网关状态。
      */
     public String status;
 
     /**
-     * 根据NAT网关所属的安全组ID过滤
+     * 根据NAT网关所属的安全组ID过滤。
      */
     public String securityGroupId;
 
     /**
      * 返回的分页大小。
-     * 默认为20，最大为1000
+     * 默认为20，最大为1000。
      */
     public Integer pageSize;
 
     /**
      * 返回的分页页码。
-     * 默认为1
      */
     public Integer pageNum;
 
     /**
-     * 资源组ID
+     * 资源组ID。
      */
     public String resourceGroupId;
 
     /**
      * 根据标签键进行搜索。
-     * 最长不得超过20个标签键
+     * 最长不得超过20个标签键。
      */
     public List<String> tagKeys;
 
     /**
      * 根据标签进行搜索。
-     * 最长不得超过20个标签
+     * 最长不得超过20个标签。
      */
     public List<Tag> tags;
 

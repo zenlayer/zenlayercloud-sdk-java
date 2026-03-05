@@ -11,44 +11,44 @@ public class InstanceTypeQuotaItem extends TeaModel {
 
 
     /**
-     * 可用区ID
+     * 可用区ID。
      */
     public String zoneId;
 
     /**
-     * 实例规格ID
+     * 实例规格ID。
      */
     public String instanceType;
 
     /**
-     * 实例规格的名称
+     * 实例规格的名称。
      */
     public String instanceTypeName;
 
     /**
      * CPU核数。
-     * 单位：核
+     * 单位：核。
      */
     public Integer cpuCount;
 
     /**
      * 实例内存容量。
-     * 单位：GiB
+     * 单位：GiB。
      */
     public Integer memory;
 
     /**
-     * 最大出口带宽限制
+     * 最大出口带宽限制。
      */
     public Integer internetMaxBandwidthOutLimit;
 
     /**
-     * 是否有库存
+     * 是否有库存。
      */
     public Boolean withStock;
 
     /**
-     * 支持的网络计费类型
+     * 支持的网络计费类型。
      */
     public List<String> internetChargeTypes;
 

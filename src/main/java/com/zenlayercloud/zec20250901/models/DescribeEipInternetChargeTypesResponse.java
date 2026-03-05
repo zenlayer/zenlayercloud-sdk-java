@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询EIP支持的网络计费模式的响应值。
+ * 
  */
 public class DescribeEipInternetChargeTypesResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DescribeEipInternetChargeTypesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * IP支持的网络计费方式
+     * IP支持的网络计费方式。
      */
     public List<String> internetChargeTypes;
 

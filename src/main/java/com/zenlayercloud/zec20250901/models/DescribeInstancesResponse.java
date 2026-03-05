@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述实例列表的请求参数。
+ * 
  */
 public class DescribeInstancesResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeInstancesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * 实例列表的数据
+     * 实例列表的数据。
      */
     public List<InstanceInfo> dataSet;
 

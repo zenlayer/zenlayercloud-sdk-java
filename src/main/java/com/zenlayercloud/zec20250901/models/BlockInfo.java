@@ -10,32 +10,32 @@ public class BlockInfo extends TeaModel {
 
 
     /**
-     * ip
+     * ip。
      */
     public String ip;
 
     /**
-     * 单位bps
+     * 单位bps。
      */
     public Long bps;
 
     /**
-     * 单位pps
+     * 单位pps。
      */
     public Long pps;
 
     /**
-     * 单位个
+     * 单位个。
      */
     public Long inCps;
 
     /**
-     * 单位个
+     * 单位个。
      */
     public Long outCps;
 
     /**
-     * 是否启用特定阈值
+     * 是否启用特定阈值。
      */
     public Boolean enable;
 

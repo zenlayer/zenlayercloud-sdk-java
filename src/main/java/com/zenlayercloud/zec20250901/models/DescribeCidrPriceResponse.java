@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 查询CIDR价格的响应信息。
+ * 
  */
 public class DescribeCidrPriceResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class DescribeCidrPriceResponse extends TeaModel {
     public String requestId;
 
     /**
-     * CIDR的价格信息
+     * CIDR的价格信息。
      */
     public PriceItem cidrPrice;
 

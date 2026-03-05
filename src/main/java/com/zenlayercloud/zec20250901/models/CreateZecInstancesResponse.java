@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 创建虚拟机实例的响应结果。
+ * 
  */
 public class CreateZecInstancesResponse extends TeaModel {
 
@@ -16,18 +16,18 @@ public class CreateZecInstancesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 订单编号
+     * 订单编号。
      */
     public String orderNumber;
 
     /**
-     * 虚拟机实例ID列表
+     * 虚拟机实例ID列表。
      */
     public List<String> instanceIdSet;
 
     /**
      * 随机器创建的数据盘id集合。
-     * 如果请求中没有指定数据盘，返回空数组
+     * 如果请求中没有指定数据盘，返回空数组。
      */
     public List<DiskWithInstance> instances;
 

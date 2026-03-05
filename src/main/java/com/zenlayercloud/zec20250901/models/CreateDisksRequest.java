@@ -5,13 +5,13 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 创建云硬盘的请求信息。
+ * 
  */
 public class CreateDisksRequest extends TeaModel {
 
 
     /**
-     * 云硬盘所属的可用区ID
+     * 云硬盘所属的可用区ID。
      */
     public String zoneId;
 
@@ -19,28 +19,28 @@ public class CreateDisksRequest extends TeaModel {
      * 云盘名称。
      * 范围1到64个字符。
      * 仅支持输入字母、数字、-/_和英文句点(.)。
-     * 且必须以数字或字母开头和结尾
+     * 且必须以数字或字母开头和结尾。
      */
     public String diskName;
 
     /**
-     * 云硬盘大小，单位GiB
+     * 云硬盘大小，单位GiB。
      */
     public Integer diskSize;
 
     /**
-     * 需要创建的云硬盘的数量
+     * 需要创建的云硬盘的数量。
      */
     public Integer diskAmount;
 
     /**
-     * 云硬盘挂载的实例ID
+     * 云硬盘挂载的实例ID。
      */
     public String instanceId;
 
     /**
      * 云硬盘所在的资源组ID。
-     * 如不指定则放入默认资源组
+     * 如不指定则放入默认资源组。
      */
     public String resourceGroupId;
 
@@ -48,35 +48,35 @@ public class CreateDisksRequest extends TeaModel {
      * 云硬盘种类。
      * Basic NVMe SSD: 经济型 NVMe SSD。
      * Standard NVMe SSD: 标准型 NVMe SSD。
-     * 默认为Standard NVMe SSD
+     * 默认为Standard NVMe SSD。
      */
     public String diskCategory;
 
     /**
      * 使用快照ID进行创建。
-     * 如果传入则根据此快照创建云硬盘，快照的云盘类型必须为数据盘快照
+     * 如果传入则根据此快照创建云硬盘，快照的云盘类型必须为数据盘快照。
      */
     public String snapshotId;
 
     /**
-     * 市场营销的相关选项
+     * 市场营销的相关选项。
      */
     public MarketingInfo marketingOptions;
 
     /**
      * 创建云硬盘时关联的标签。
-     * 注意：·关联`标签键`不能重复
+     * 注意：·关联`标签键`不能重复。
      */
     public TagAssociation tags;
 
     /**
      * 要绑定的实例ID。
-     * 数量需要与`diskAmount`字段一致
+     * 数量需要与`diskAmount`字段一致。
      */
     public List<String> instanceIds;
 
     /**
-     * 是否开启性能突发
+     * 是否开启性能突发。
      */
     public Boolean burstingEnabled;
 

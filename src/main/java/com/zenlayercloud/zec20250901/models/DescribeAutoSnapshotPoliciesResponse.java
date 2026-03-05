@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询自动快照策略的响应值。
+ * 
  */
 public class DescribeAutoSnapshotPoliciesResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeAutoSnapshotPoliciesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 查询的自动快照策略数据结果
+     * 查询的自动快照策略数据结果。
      */
     public List<AutoSnapshotPolicy> dataSet;
 
     /**
-     * 符合匹配的总数量
+     * 符合匹配的总数量。
      */
     public Integer totalCount;
 

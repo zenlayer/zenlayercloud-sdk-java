@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 公网Ipv6流量包或固定带宽询价的响应信息。
+ * 
  */
 public class InquiryPricePublicIpv6Response extends TeaModel {
 
@@ -15,7 +15,7 @@ public class InquiryPricePublicIpv6Response extends TeaModel {
     public String requestId;
 
     /**
-     * 带宽的价格
+     * 带宽的价格。
      */
     public PriceItem bandwidthPrice;
 

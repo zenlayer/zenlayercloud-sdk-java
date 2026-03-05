@@ -7,7 +7,7 @@ public class RenewIpv6CidrRequest extends TeaModel {
 
 
     /**
-     * IPv6 地址块ID
+     * IPv6 地址块ID。
      */
     public String cidrId;
 

@@ -8,7 +8,7 @@ public class DetachDhcpOptionsSetFromSubnetRequest extends TeaModel {
 
 
     /**
-     * 要与 DHCP 选项集取消关联的 Subnet 的 ID集合
+     * 要与 DHCP 选项集取消关联的 Subnet 的 ID集合。
      */
     public List<String> subnetIds;
 

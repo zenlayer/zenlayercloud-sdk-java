@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述防护策略列表。
+ * 
  */
 public class DescribePolicysResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribePolicysResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * 防护策略列表的数据
+     * 防护策略列表的数据。
      */
     public List<PolicyInfo> dataSet;
 

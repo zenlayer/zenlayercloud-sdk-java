@@ -8,32 +8,32 @@ public class ModifyBorderGatewaysAttributeRequest extends TeaModel {
 
 
     /**
-     * 边界网关的ID列表
+     * 边界网关的ID列表。
      */
     public List<String> zbgIds;
 
     /**
-     * 边界网关的名称
+     * 边界网关的名称。
      */
     public String name;
 
     /**
-     * 路由级别
+     * 路由级别。
      */
     public String routingMode;
 
     /**
-     * 子网控制
+     * 子网控制。
      */
     public String advertisedSubnet;
 
     /**
-     * IPv4 Cidr集合
+     * IPv4 Cidr集合。
      */
     public List<String> advertisedCidrs;
 
     /**
-     * 边界网关的ASN
+     * 边界网关的ASN。
      */
     public Integer asn;
 

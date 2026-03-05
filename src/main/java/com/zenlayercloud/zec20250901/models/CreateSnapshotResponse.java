@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建快照的响应信息。
+ * 
  */
 public class CreateSnapshotResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class CreateSnapshotResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 创建的快照ID
+     * 创建的快照ID。
      */
     public String snapshotId;
 

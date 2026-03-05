@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 删除路由的请求信息。
+ * 
  */
 public class DeleteRouteRequest extends TeaModel {
 
 
     /**
-     * 路由ID
+     * 路由ID。
      */
     public String routeId;
 

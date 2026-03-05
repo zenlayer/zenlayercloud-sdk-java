@@ -10,12 +10,12 @@ public class InstanceStatus extends TeaModel {
 
 
     /**
-     * 实例的ID
+     * 实例的ID。
      */
     public String instanceId;
 
     /**
-     * 实例的状态
+     * 实例的状态。
      */
     public String instanceStatus;
 

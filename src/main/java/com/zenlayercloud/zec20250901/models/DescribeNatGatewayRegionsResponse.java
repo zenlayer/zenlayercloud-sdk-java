@@ -13,7 +13,7 @@ public class DescribeNatGatewayRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 节点ID集合
+     * 节点ID集合。
      */
     public List<String> regionIds;
 

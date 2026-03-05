@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询云硬盘监控数据的响应信息。
+ * 
  */
 public class DescribeDiskMonitorDataResponse extends TeaModel {
 
@@ -16,22 +16,22 @@ public class DescribeDiskMonitorDataResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 数据点的最大值
+     * 数据点的最大值。
      */
     public Double maxValue;
 
     /**
-     * 数据点的最小值
+     * 数据点的最小值。
      */
     public Double minValue;
 
     /**
-     * 数据点的平均值
+     * 数据点的平均值。
      */
     public Double avgValue;
 
     /**
-     * 监控数据集合
+     * 监控数据集合。
      */
     public List<MetricValue> metrics;
 

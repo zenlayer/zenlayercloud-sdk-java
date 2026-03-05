@@ -13,12 +13,12 @@ public class DescribeNatGatewaysResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 满足过滤条件的NAT网关总数
+     * 满足过滤条件的NAT网关总数。
      */
     public Integer totalCount;
 
     /**
-     * 返回的NAT网关列表
+     * 返回的NAT网关列表。
      */
     public List<NatGateway> dataSet;
 

@@ -10,12 +10,12 @@ public class ReflectUdpPortPolicy extends TeaModel {
 
 
     /**
-     * 反射攻击类型
+     * 反射攻击类型。
      */
     public String name;
 
     /**
-     * 反射源端口
+     * 反射源端口。
      */
     public Integer port;
 

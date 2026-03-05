@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 将DHCP选项集关联到Subnet的响应信息。
+ * 
  */
 public class AttachDhcpOptionsSetToSubnetResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class AttachDhcpOptionsSetToSubnetResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 操作失败的subnet ID集合
+     * 操作失败的subnet ID集合。
      */
     public List<String> failedSubnetIds;
 

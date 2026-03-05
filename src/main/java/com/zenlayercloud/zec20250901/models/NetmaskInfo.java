@@ -10,12 +10,12 @@ public class NetmaskInfo extends TeaModel {
 
 
     /**
-     * 掩码大小
+     * 掩码大小。
      */
     public Integer netmask;
 
     /**
-     * CIDR的数量
+     * CIDR的数量。
      */
     public Integer amount;
 

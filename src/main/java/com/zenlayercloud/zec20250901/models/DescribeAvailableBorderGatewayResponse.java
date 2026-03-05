@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 可绑定NAT的边界网关的相应信息。
+ * 
  */
 public class DescribeAvailableBorderGatewayResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class DescribeAvailableBorderGatewayResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 可绑定NAT的边界网关ID
+     * 可绑定NAT的边界网关ID。
      */
     public String zbgId;
 

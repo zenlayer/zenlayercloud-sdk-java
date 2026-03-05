@@ -4,18 +4,18 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 描述创建快照的请求信息。
+ * 
  */
 public class CreateSnapshotRequest extends TeaModel {
 
 
     /**
-     * 云硬盘ID
+     * 云硬盘ID。
      */
     public String diskId;
 
     /**
-     * 快照名称
+     * 快照名称。
      */
     public String snapshotName;
 
@@ -23,7 +23,7 @@ public class CreateSnapshotRequest extends TeaModel {
      * 保留的到期时间。
      * 格式为：yyyy-MM-ddTHH:mm:ssZ。
      * 如果不传，则代表永久保留。
-     * 指定时间必须在当前时间24小时后
+     * 指定时间必须在当前时间24小时后。
      */
     public String retentionTime;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 攻击事件列表。
+ * 
  */
 public class DescribeDDosAllEventListResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeDDosAllEventListResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * 攻击事件列表的数据
+     * 攻击事件列表的数据。
      */
     public List<AttackEventInfo> dataSet;
 

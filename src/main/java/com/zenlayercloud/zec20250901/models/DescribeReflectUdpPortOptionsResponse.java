@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 默认UDP反射源端口列表
+ * 
  */
 public class DescribeReflectUdpPortOptionsResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DescribeReflectUdpPortOptionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 默认UDP反射源端口列表
+     * 默认UDP反射源端口列表。
      */
     public List<ReflectUdpPortPolicy> reflectUdpPorts;
 

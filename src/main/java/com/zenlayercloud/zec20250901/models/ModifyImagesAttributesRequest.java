@@ -8,7 +8,7 @@ public class ModifyImagesAttributesRequest extends TeaModel {
 
 
     /**
-     * 待修改属性的镜像ID列表
+     * 待修改属性的镜像ID列表。
      */
     public List<String> imageIds;
 
@@ -16,7 +16,7 @@ public class ModifyImagesAttributesRequest extends TeaModel {
      * 名称。
      * 范围2到63个字符。
      * 仅支持输入字母、数字、-/_和英文句点(.)。
-     * 且必须以数字或字母开头和结尾
+     * 且必须以数字或字母开头和结尾。
      */
     public String imageName;
 

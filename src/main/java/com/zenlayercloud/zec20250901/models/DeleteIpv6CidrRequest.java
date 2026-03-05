@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 删除IPv6地址块的请求信息。
+ * 
  */
 public class DeleteIpv6CidrRequest extends TeaModel {
 
 
     /**
-     * IPv6 地址块ID
+     * IPv6 地址块ID。
      */
     public String cidrId;
 

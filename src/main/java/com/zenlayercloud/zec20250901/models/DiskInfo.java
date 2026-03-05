@@ -10,109 +10,109 @@ public class DiskInfo extends TeaModel {
 
 
     /**
-     * 云盘的 ID
+     * 云盘的 ID。
      */
     public String diskId;
 
     /**
-     * 云盘的名称
+     * 云盘的名称。
      */
     public String diskName;
 
     /**
-     * 云盘所在的节点ID
+     * 云盘所在的节点ID。
      */
     public String regionId;
 
     /**
-     * 云盘所在节点的可用区ID
+     * 云盘所在节点的可用区ID。
      */
     public String zoneId;
 
     /**
-     * 云盘的类型
+     * 云盘的类型。
      */
     public String diskType;
 
     /**
-     * 是否可卸载
+     * 是否可卸载。
      */
     public Boolean portable;
 
     /**
-     * 云盘的类别
+     * 云盘的类别。
      */
     public String diskCategory;
 
     /**
      * 云盘的大小。
-     * 单位：GiB
+     * 单位：GiB。
      */
     public Integer diskSize;
 
     /**
-     * 云盘的状态
+     * 云盘的状态。
      */
     public String diskStatus;
 
     /**
-     * 云盘绑定实例的ID
+     * 云盘绑定实例的ID。
      */
     public String instanceId;
 
     /**
-     * 云盘绑定实例的名称
+     * 云盘绑定实例的名称。
      */
     public String instanceName;
 
     /**
-     * 创建时间
+     * 创建时间。
      */
     public String createTime;
 
     /**
-     * 到期时间
+     * 到期时间。
      */
     public String expiredTime;
 
     /**
-     * 周期
+     * 周期。
      */
     public Integer period;
 
     /**
-     * 云盘所属的资源组ID
+     * 云盘所属的资源组ID。
      */
     public String resourceGroupId;
 
     /**
-     * 云盘所属的资源组名称
+     * 云盘所属的资源组名称。
      */
     public String resourceGroupName;
 
     /**
      * 云盘序号。
-     * 可能为null，表示取不到值
+     * 可能为null，表示取不到值。
      */
     public String serial;
 
     /**
-     * 是否具体快照能力
+     * 是否具体快照能力。
      */
     public Boolean snapshotAbility;
 
     /**
-     * 云盘关联的自动快照策略ID
+     * 云盘关联的自动快照策略ID。
      */
     public String autoSnapshotPolicyId;
 
     /**
-     * 该云盘关联的标签
+     * 该云盘关联的标签。
      */
     public Tags tags;
 
     /**
-     * 是否开启 Burst
+     * 是否开启 Burst。
      */
     public Boolean burstingEnabled;
 

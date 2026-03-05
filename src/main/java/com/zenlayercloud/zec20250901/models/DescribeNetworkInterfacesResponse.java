@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 网卡列表的响应结果。
+ * 
  */
 public class DescribeNetworkInterfacesResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeNetworkInterfacesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * 网卡的结果集
+     * 网卡的结果集。
      */
     public List<NicInfo> dataSet;
 

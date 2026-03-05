@@ -8,19 +8,19 @@ public class BatchAssignNetworkInterfaceIpv4Request extends TeaModel {
 
 
     /**
-     * 要操作的网卡ID
+     * 要操作的网卡ID。
      */
     public String nicId;
 
     /**
      * 内网IP地址列表。
-     * IP地址必须在网卡所属子网CIDR范围内，且不能是网关/广播/网络地址
+     * IP地址必须在网卡所属子网CIDR范围内，且不能是网关/广播/网络地址。
      */
     public List<String> ipAddresses;
 
     /**
      * 指定额外绑定的内网IP数量。
-     * 该字段和`ipAddresses`必须指定其一，如果都指定，则会以 `ipAddresses` 有效
+     * 该字段和`ipAddresses`必须指定其一，如果都指定，则会以 `ipAddresses` 有效。
      */
     public Integer ipAddressCount;
 

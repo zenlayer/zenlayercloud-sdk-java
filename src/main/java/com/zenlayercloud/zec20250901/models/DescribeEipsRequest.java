@@ -8,92 +8,91 @@ public class DescribeEipsRequest extends TeaModel {
 
 
     /**
-     * 按照 EIP 的唯一 ID 过滤
+     * 按照 EIP 的唯一 ID 过滤。
      */
     public List<String> eipIds;
 
     /**
-     * 按照 EIP 所属节点ID过滤
+     * 按照 EIP 所属节点ID过滤。
      */
     public String regionId;
 
     /**
-     * 按照 EIP 的显示名称过滤，该字段支持模糊匹配
+     * 按照 EIP 的显示名称过滤，该字段支持模糊匹配。
      */
     public String name;
 
     /**
-     * 按照 EIP 的状态过滤
+     * 按照 EIP 的状态过滤。
      */
     public String status;
 
     /**
-     * 按照 EIP 的默认属性进行过滤
+     * 按照 EIP 的默认属性进行过滤。
      */
     public Boolean isDefault;
 
     /**
      * 返回的分页大小。
-     * 默认为20，最大为1000
+     * 默认为20，最大为1000。
      */
     public Integer pageSize;
 
     /**
      * 返回的分页页码。
-     * 默认为1
      */
     public Integer pageNum;
 
     /**
-     * 按照 EIP 绑定的内网 IP 过滤
+     * 按照 EIP 绑定的内网 IP 过滤。
      */
     public String privateIpAddress;
 
     /**
-     * 按照 EIP 的 IP 过滤
+     * 按照 IP地址过滤。
      */
     public String ipAddress;
 
     /**
-     * 按照 EIP 的 IP列表过滤
+     * 按照 EIP 的 IP列表过滤。
      */
     public List<String> ipAddresses;
 
     /**
      * 按照 EIP 绑定的实例 ID 过滤。
-     * 该字段过滤出该实例所绑定的网卡上的 EIP
+     * 该字段过滤出该实例所绑定的网卡上的 EIP。
      */
     public String instanceId;
 
     /**
-     * 按照 EIP 绑定的资源 ID 过滤
+     * 按照 EIP 绑定的资源 ID 过滤。
      */
     public String associatedId;
 
     /**
-     * 按照 EIP 所属的CIDR ID列表 过滤
+     * 按照 EIP 所属的CIDR ID列表 过滤。
      */
     public List<String> cidrIds;
 
     /**
-     * 按照 EIP 所属的资源组ID过滤
+     * 按照 EIP 所属的资源组ID过滤。
      */
     public String resourceGroupId;
 
     /**
      * 根据标签键进行搜索。
-     * 最长不得超过20个标签键
+     * 最长不得超过20个标签键。
      */
     public List<String> tagKeys;
 
     /**
      * 根据标签进行搜索。
-     * 最长不得超过20个标签
+     * 最长不得超过20个标签。
      */
     public List<Tag> tags;
 
     /**
-     * 按照 EIP 的网络计费方式过滤
+     * 按照 EIP 的网络计费方式过滤。
      */
     public String internetChargeType;
 

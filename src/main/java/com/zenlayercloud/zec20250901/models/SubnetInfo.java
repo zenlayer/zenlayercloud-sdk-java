@@ -10,84 +10,84 @@ public class SubnetInfo extends TeaModel {
 
 
     /**
-     * 子网的ID
+     * 子网的ID。
      */
     public String subnetId;
 
     /**
-     * 子网所在节点的ID
+     * 子网所在节点的ID。
      */
     public String regionId;
 
     /**
-     * 子网的名称
+     * 子网的名称。
      */
     public String name;
 
     /**
-     * 子网的CIDR地址
+     * 子网的CIDR地址。
      */
     public String cidrBlock;
 
     /**
-     * 网关地址
+     * 网关地址。
      */
     public String gatewayIpAddress;
 
     /**
      * 子网的IPv6 CIDR地址段。
-     * 如果子网的IP堆栈类型不包括V6,该字段取不到值
+     * 如果子网的IP堆栈类型不包括V6,该字段取不到值。
      */
     public String ipv6CidrBlock;
 
     /**
-     * IPv6的网关地址
+     * IPv6的网关地址。
      */
     public String ipv6GatewayIpAddress;
 
     /**
-     * 子网的IP堆栈类型
+     * 子网的IP堆栈类型。
      */
     public String stackType;
 
     /**
      * 子网上IPv6类型。
-     * 如果子网的IP堆栈类型不包括V6,该字段取不到值
+     * 如果子网的IP堆栈类型不包括V6,该字段取不到值。
      */
     public String ipv6Type;
 
     /**
-     * 子网所属VPC的ID
+     * 子网所属VPC的ID。
      */
     public String vpcId;
 
     /**
-     * 子网所属VPC的名称
+     * 子网所属VPC的名称。
      */
     public String vpcName;
 
     /**
-     * 子网已使用IPv4数量
+     * 子网已使用IPv4数量。
      */
     public Integer usageIpv4Count;
 
     /**
-     * 子网已使用IPv6数量
+     * 子网已使用IPv6数量。
      */
     public Integer usageIpv6Count;
 
     /**
-     * 子网的创建时间
+     * 子网的创建时间。
      */
     public String createTime;
 
     /**
-     * 子网是否为默认
+     * 子网是否为默认。
      */
     public Boolean isDefault;
 
     /**
-     * DHCP选项集ID
+     * DHCP选项集ID。
      */
     public String dhcpOptionsSetId;
 

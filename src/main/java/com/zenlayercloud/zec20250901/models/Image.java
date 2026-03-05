@@ -11,62 +11,62 @@ public class Image extends TeaModel {
 
 
     /**
-     * 镜像ID
+     * 镜像ID。
      */
     public String imageId;
 
     /**
-     * 镜像的名称
+     * 镜像的名称。
      */
     public String imageName;
 
     /**
-     * 镜像的类型
+     * 镜像的类型。
      */
     public String imageType;
 
     /**
-     * 镜像的来源
+     * 镜像的来源。
      */
     public String imageSource;
 
     /**
-     * 镜像的大小
+     * 镜像的大小。
      */
     public String imageSize;
 
     /**
-     * 镜像描述信息
+     * 镜像描述信息。
      */
     public String imageDescription;
 
     /**
-     * 镜像的版本
+     * 镜像的版本。
      */
     public String imageVersion;
 
     /**
-     * 镜像的状态
+     * 镜像的状态。
      */
     public String imageStatus;
 
     /**
-     * 镜像支持的网卡类型
+     * 镜像支持的网卡类型。
      */
     public List<String> nicNetworkType;
 
     /**
-     * 镜像的分类
+     * 镜像的分类。
      */
     public String category;
 
     /**
-     * 操作系统类型
+     * 操作系统类型。
      */
     public String osType;
 
     /**
-     * 实例关联的标签
+     * 实例关联的标签。
      */
     public Tags tags;
 

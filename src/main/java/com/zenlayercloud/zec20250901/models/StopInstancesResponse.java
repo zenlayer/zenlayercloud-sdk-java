@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 关闭虚拟机实例
+ * 
  */
 public class StopInstancesResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class StopInstancesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 操作失败的实例ID列表
+     * 操作失败的实例ID列表。
      */
     public List<String> instanceIds;
 

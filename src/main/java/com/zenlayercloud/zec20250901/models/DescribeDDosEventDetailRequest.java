@@ -4,18 +4,18 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 获取攻击事件详情的请求参数。
+ * 
  */
 public class DescribeDDosEventDetailRequest extends TeaModel {
 
 
     /**
-     * 攻击事件唯一ID
+     * 攻击事件唯一ID。
      */
     public String eventId;
 
     /**
-     * 区域节点ID
+     * 区域节点ID。
      */
     public String regionId;
 

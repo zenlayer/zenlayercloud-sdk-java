@@ -8,7 +8,7 @@ public class DeleteAutoSnapshotPoliciesRequest extends TeaModel {
 
 
     /**
-     * 要删除的自动快照策略ID列表
+     * 要删除的自动快照策略ID列表。
      */
     public List<String> autoSnapshotPolicyIds;
 

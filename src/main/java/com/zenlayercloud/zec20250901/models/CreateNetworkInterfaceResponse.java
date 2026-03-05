@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建辅助网卡的响应结果。
+ * 
  */
 public class CreateNetworkInterfaceResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class CreateNetworkInterfaceResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 创建的辅助网卡ID
+     * 创建的辅助网卡ID。
      */
     public String nicId;
 

@@ -11,48 +11,48 @@ public class SecurityGroupInfo extends TeaModel {
 
 
     /**
-     * 安全组ID
+     * 安全组ID。
      */
     public String securityGroupId;
 
     /**
-     * 安全组名称
+     * 安全组名称。
      */
     public String securityGroupName;
 
     /**
      * 范围。
-     * 目前只有全球范围(`Global`)
+     * 目前只有全球范围(`Global`)。
      */
     public String scope;
 
     /**
-     * 创建时间
+     * 创建时间。
      */
     public String createTime;
 
     /**
-     * 关联的VPC ID列表
+     * 关联的VPC ID列表。
      */
     public List<String> vpcIds;
 
     /**
-     * 是否是默认安全组
+     * 是否是默认安全组。
      */
     public Boolean isDefault;
 
     /**
-     * 关联安全组的网卡ID列表
+     * 关联安全组的网卡ID列表。
      */
     public List<String> nicIdList;
 
     /**
-     * 关联安全组的NAT网关ID列表
+     * 关联安全组的NAT网关ID列表。
      */
     public List<String> natIdList;
 
     /**
-     * 关联安全组的负载均衡ID列表
+     * 关联安全组的负载均衡ID列表。
      */
     public List<String> loadBalancerIdList;
 

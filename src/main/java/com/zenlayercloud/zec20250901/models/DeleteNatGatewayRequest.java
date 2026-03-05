@@ -7,7 +7,7 @@ public class DeleteNatGatewayRequest extends TeaModel {
 
 
     /**
-     * NAT网关 ID
+     * NAT网关 ID。
      */
     public String natGatewayId;
 

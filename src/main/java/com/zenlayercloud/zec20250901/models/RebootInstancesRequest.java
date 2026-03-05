@@ -5,13 +5,13 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 重启虚拟机实例的请求参数。
+ * 
  */
 public class RebootInstancesRequest extends TeaModel {
 
 
     /**
-     * 待重启虚拟机实例ID列表
+     * 待重启虚拟机实例ID列表。
      */
     public List<String> instanceIds;
 

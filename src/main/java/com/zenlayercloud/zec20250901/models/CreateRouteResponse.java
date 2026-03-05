@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建路由的响应信息。
+ * 
  */
 public class CreateRouteResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class CreateRouteResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 创建的路由ID
+     * 创建的路由ID。
      */
     public String routeId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询可供弹性公网IP绑定的网卡及内网IP信息。
+ * 
  */
 public class AvailableLanIpResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class AvailableLanIpResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 可以绑定的网卡及内网信息
+     * 可以绑定的网卡及内网信息。
      */
     public List<PrivateIpInfo> lanIps;
 

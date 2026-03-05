@@ -10,22 +10,22 @@ public class RegionInfo extends TeaModel {
 
 
     /**
-     * 节点ID
+     * 节点ID。
      */
     public String regionId;
 
     /**
-     * 节点名称
+     * 节点名称。
      */
     public String regionName;
 
     /**
-     * 节点标题
+     * 节点标题。
      */
     public String regionTitle;
 
     /**
-     * 是否支持IPv6
+     * 是否支持IPv6。
      */
     public Boolean enablePubIpv6;
 

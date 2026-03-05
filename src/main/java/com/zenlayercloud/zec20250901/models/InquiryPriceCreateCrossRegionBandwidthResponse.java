@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 内网跨区域带宽的询价响应值。
+ * 
  */
 public class InquiryPriceCreateCrossRegionBandwidthResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class InquiryPriceCreateCrossRegionBandwidthResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 内网跨区域带宽的价格
+     * 内网跨区域带宽的价格。
      */
     public PriceItem crossRegionBandwidthPrice;
 

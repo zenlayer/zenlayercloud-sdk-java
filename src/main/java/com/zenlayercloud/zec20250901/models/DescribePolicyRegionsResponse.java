@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 区域封禁可选区域列表
+ * 
  */
 public class DescribePolicyRegionsResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DescribePolicyRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 区域可选列表
+     * 区域可选列表。
      */
     public List<PolicyRegion> regions;
 

@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 防护策略详情的请求参数
+ * 
  */
 public class DescribePolicyDetailRequest extends TeaModel {
 
 
     /**
-     * 防护策略ID
+     * 防护策略ID。
      */
     public String policyId;
 

@@ -8,33 +8,33 @@ public class DescribeBorderGatewaysRequest extends TeaModel {
 
 
     /**
-     * 根据边界网关ID列表过滤
+     * 根据边界网关ID列表过滤。
      */
     public List<String> zbgIds;
 
     /**
      * 根据网关名称过滤。
-     * 支持模糊搜索
+     * 支持模糊搜索。
      */
     public String name;
 
     /**
-     * 根据边界网关所在的节点过滤
+     * 根据边界网关所在的节点过滤。
      */
     public String regionId;
 
     /**
-     * 根据边界网关所属的VPC ID过滤
+     * 根据边界网关所属的VPC ID过滤。
      */
     public String vpcId;
 
     /**
-     * 返回的分页大小
+     * 返回的分页大小。
      */
     public Integer pageSize;
 
     /**
-     * 返回的分页数
+     * 返回的分页数。
      */
     public Integer pageNum;
 

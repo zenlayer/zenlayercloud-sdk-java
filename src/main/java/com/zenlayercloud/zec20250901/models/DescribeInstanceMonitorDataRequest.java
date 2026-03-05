@@ -4,30 +4,30 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 查询实例监控指标请求。
+ * 
  */
 public class DescribeInstanceMonitorDataRequest extends TeaModel {
 
 
     /**
-     * 实例唯一标识ID
+     * 实例唯一标识ID。
      */
     public String instanceId;
 
     /**
-     * 实例监控指标类型
+     * 实例监控指标类型。
      */
     public String metricType;
 
     /**
      * 查询开始时间。
-     * 时间格式：yyyy-MM-ddTHH:mm:ssZ
+     * 时间格式：yyyy-MM-ddTHH:mm:ssZ。
      */
     public String startTime;
 
     /**
      * 查询结束时间。
-     * 时间格式：yyyy-MM-ddTHH:mm:ssZ
+     * 时间格式：yyyy-MM-ddTHH:mm:ssZ。
      */
     public String endTime;
 

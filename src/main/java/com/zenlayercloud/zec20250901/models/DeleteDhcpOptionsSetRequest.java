@@ -7,7 +7,7 @@ public class DeleteDhcpOptionsSetRequest extends TeaModel {
 
 
     /**
-     * DHCP 选项集ID
+     * DHCP 选项集ID。
      */
     public String dhcpOptionsSetId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * EIP绑定云产品的响应信息。
+ * 
  */
 public class AssociateEipAddressResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class AssociateEipAddressResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 绑定失败的IP
+     * 绑定失败的IP。
      */
     public List<String> failedEipIds;
 

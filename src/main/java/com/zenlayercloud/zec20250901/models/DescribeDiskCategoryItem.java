@@ -11,12 +11,12 @@ public class DescribeDiskCategoryItem extends TeaModel {
 
 
     /**
-     * 可用区ID
+     * 可用区ID。
      */
     public String zoneId;
 
     /**
-     * 支持的云硬盘类型
+     * 支持的云硬盘类型。
      */
     public List<String> categorySet;
 

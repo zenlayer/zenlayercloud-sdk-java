@@ -10,12 +10,12 @@ public class BandwidthClusterInfo extends TeaModel {
 
 
     /**
-     * 共享带宽包ID
+     * 共享带宽包ID。
      */
     public String bandwidthClusterId;
 
     /**
-     * 共享带宽包名称
+     * 共享带宽包名称。
      */
     public String bandwidthClusterName;
 

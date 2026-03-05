@@ -13,22 +13,22 @@ public class DescribeNatGatewayDetailResponse extends TeaModel {
     public String requestId;
 
     /**
-     * NAT网关唯一ID
+     * NAT网关唯一ID。
      */
     public String natGatewayId;
 
     /**
-     * NAT网关名称
+     * NAT网关名称。
      */
     public String name;
 
     /**
-     * SNAT网关规则集合
+     * SNAT网关规则集合。
      */
     public List<SnatEntry> snats;
 
     /**
-     * DNAT网关规则集合
+     * DNAT网关规则集合。
      */
     public List<DnatEntry> dnats;
 

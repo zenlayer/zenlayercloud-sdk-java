@@ -11,151 +11,151 @@ public class EipInfo extends TeaModel {
 
 
     /**
-     * EIP 的唯一 ID
+     * EIP 的唯一 ID。
      */
     public String eipId;
 
     /**
-     * EIP 的名称
+     * EIP 的名称。
      */
     public String name;
 
     /**
-     * 节点ID
+     * 节点ID。
      */
     public String regionId;
 
     /**
      * 对端节点ID。
-     * 仅当IP为Remote IP时该字段有效
+     * 仅当IP为Remote IP时该字段有效。
      */
     public String peerRegionId;
 
     /**
-     * 是否是默认类型
+     * 是否是默认类型。
      */
     public Boolean isDefault;
 
     /**
-     * EIP 的状态
+     * EIP 的状态。
      */
     public String status;
 
     /**
-     * 公网IP地址
+     * 公网IP地址。
      */
     public List<String> publicIpAddresses;
 
     /**
-     * EIP 绑定的内网IP地址
+     * EIP 绑定的内网IP地址。
      */
     public String privateIpAddress;
 
     /**
      * EIP网络类型。
      * 表示该CIDR支持的公网IP线路类型。
-     * 已废弃，请参考`networkLineType`
+     * 已废弃，请参考`networkLineType`。
      */
     @Deprecated
     public String eipV4Type;
 
     /**
      * EIP网络类型。
-     * 表示该CIDR支持的公网IP线路类型
+     * 表示该CIDR支持的公网IP线路类型。
      */
     public String networkLineType;
 
     /**
-     * EIP 的网络计费方式
+     * EIP 的网络计费方式。
      */
     public String internetChargeType;
 
     /**
-     * EIP 来自的CIDR地址段ID
+     * EIP 来自的CIDR地址段ID。
      */
     public String cidrId;
 
     /**
      * EIP 关联的网卡ID。
-     * 该字段已废弃，请使用 `associatedId` 字段
+     * 该字段已废弃，请使用 `associatedId` 字段。
      */
     @Deprecated
     public String nicId;
 
     /**
      * EIP 绑定的资源ID。
-     * 可能为负载均衡ID、网卡ID或者NAT网关ID
+     * 可能为负载均衡ID、网卡ID或者NAT网关ID。
      */
     public String associatedId;
 
     /**
      * EIP 资源类型。
-     * 可能为负载均衡ID、网卡ID或者NAT网关ID
+     * 可能为负载均衡ID、网卡ID或者NAT网关ID。
      */
     public String associatedType;
 
     /**
      * EIP 绑定的实例ID。
-     * 当且仅当`associatedType`字段为`NIC`时可能有值
+     * 当且仅当`associatedType`字段为`NIC`时可能有值。
      */
     public String instanceId;
 
     /**
-     * EIP 绑定类型
+     * EIP 绑定类型。
      */
     public String bindType;
 
     /**
      * EIP 流量包大小。
      * 仅当网络计费方式为流量计费时可取到值。
-     * 该字段可能为null
+     * 该字段可能为null。
      */
     public Double flowPackage;
 
     /**
      * EIP 的带宽限速。
-     * 单位为Mbps
+     * 单位为Mbps。
      */
     public Integer bandwidth;
 
     /**
-     * EIP 的地理位置信息
+     * EIP 的地理位置信息。
      */
     public List<EipGeoInfo> eipGeoRefs;
 
     /**
-     * EIP的封堵阈值
+     * EIP的封堵阈值。
      */
     public List<BlockInfo> blockInfoList;
 
     /**
-     * EIP 的创建时间
+     * EIP 的创建时间。
      */
     public String createTime;
 
     /**
      * EIP 的到期时间。
-     * 该字段可能为null
+     * 该字段可能为null。
      */
     public String expiredTime;
 
     /**
-     * EIP 关联的资源组ID
+     * EIP 关联的资源组ID。
      */
     public String resourceGroupId;
 
     /**
-     * EIP 关联的资源组名称
+     * EIP 关联的资源组名称。
      */
     public String resourceGroupName;
 
     /**
-     * EIP 关联的带宽组ID
+     * EIP 关联的带宽组ID。
      */
     public BandwidthClusterInfo bandwidthCluster;
 
     /**
-     * EIP关联的标签
+     * EIP关联的标签。
      */
     public Tags tags;
 

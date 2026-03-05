@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 替换弹性公网IP的响应结果。
+ * 
  */
 public class ReplaceEipAddressResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class ReplaceEipAddressResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 替换失败的IP的ID集合
+     * 替换失败的IP的ID集合。
      */
     public List<String> failedEipIds;
 

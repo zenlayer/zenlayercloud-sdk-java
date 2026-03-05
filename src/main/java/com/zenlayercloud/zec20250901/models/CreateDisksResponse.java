@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 创建云硬盘的响应信息。
+ * 
  */
 public class CreateDisksResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class CreateDisksResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 创建的云硬盘ID列表
+     * 创建的云硬盘ID列表。
      */
     public List<String> diskIds;
 
     /**
-     * 本次创建对应的订单编号
+     * 本次创建对应的订单编号。
      */
     public String orderNumber;
 

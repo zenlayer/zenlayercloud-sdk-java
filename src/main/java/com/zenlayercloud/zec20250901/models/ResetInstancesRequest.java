@@ -8,14 +8,14 @@ public class ResetInstancesRequest extends TeaModel {
 
 
     /**
-     * 待重装的实例ID
+     * 待重装的实例ID。
      */
     public List<String> instanceIds;
 
     /**
      * 实例的新密码。
      * 与keyId必须指定其中的一种（Windows和Generic类型的镜像无法指定密码和key）。
-     * 必须包含以下3种格式的字符：大小写字母: [a-zA-Z]数字: 0-9特殊字符: ~!@$^*-_=+
+     * 必须包含以下3种格式的字符：大小写字母: [a-zA-Z]数字: 0-9特殊字符: ~!@$^*-_=+。
      */
     public String password;
 
@@ -24,34 +24,36 @@ public class ResetInstancesRequest extends TeaModel {
      * 与password必须指定其中的一种（Windows和Generic类型的镜像无法指定密码和key）。
      * 可调用接口DescribeKeyPairs来获得最新的密钥对信息。
      * 关联密钥后，就可以通过对应的私钥来访问实例；密钥与密码不能同时指定，同时Windows操作系统不支持指定密钥。
-     * 示例值：key-YWD2QFOl
+     * 示例值：key-YWD2QFOl。
      */
     public String keyId;
 
     /**
      * 指定重装的的镜像ID。
      * 可以通过[DescribeImages](describeimages.md)取返回信息中的`imageId`字段。
-     * 如果不指定，会根据当前镜像进行重装
+     * 如果不指定，会根据当前镜像进行重装。
      */
     public String imageId;
 
     /**
-     * 操作系统时区设置
+     * 操作系统时区设置。
      */
     public String timezone;
 
     /**
-     * 是否启用 QEMU Guest 代理 (QGA)
+     * 是否启用 QEMU Guest 代理 (QGA)。
      */
     public Boolean enableAgent;
 
     /**
-     * 修改的实例名称
+     * 修改的实例名称。
+     * 2～63个字符。
+     * 仅支持输入字母、数字、-和英文句点(.)。
      */
     public String instanceName;
 
     /**
-     * 初始化命令
+     * 初始化命令。
      */
     public String userData;
 

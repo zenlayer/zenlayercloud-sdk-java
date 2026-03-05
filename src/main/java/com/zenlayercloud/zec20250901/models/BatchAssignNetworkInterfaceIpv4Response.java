@@ -13,7 +13,7 @@ public class BatchAssignNetworkInterfaceIpv4Response extends TeaModel {
     public String requestId;
 
     /**
-     * 绑定的内网IP地址
+     * 绑定的内网IP地址。
      */
     public List<String> ipAddresses;
 

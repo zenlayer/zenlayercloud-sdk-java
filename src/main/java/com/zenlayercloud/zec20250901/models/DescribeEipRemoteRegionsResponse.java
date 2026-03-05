@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询EIP支持的远程指向的节点信息的响应信息。
+ * 
  */
 public class DescribeEipRemoteRegionsResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DescribeEipRemoteRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 支持的远端的节点ID列表
+     * 支持的远端的节点ID列表。
      */
     public List<String> peerRegionIds;
 

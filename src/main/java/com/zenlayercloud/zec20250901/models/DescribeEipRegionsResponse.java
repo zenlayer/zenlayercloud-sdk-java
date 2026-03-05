@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询支持售卖EIP的节点响应结果。
+ * 
  */
 public class DescribeEipRegionsResponse extends TeaModel {
 
@@ -16,7 +16,7 @@ public class DescribeEipRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 支持售卖EIP的节点ID
+     * 支持售卖EIP的节点ID。
      */
     public List<String> regionIds;
 

@@ -15,42 +15,42 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 规格的价格
+     * 规格的价格。
      */
     public PriceItem specPrice;
 
     /**
-     * GPU规格的价格
+     * GPU规格的价格。
      */
     public PriceItem gpuPrice;
 
     /**
-     * 公网IPv4的保留价格
+     * 公网IPv4的保留价格。
      */
     public PriceItem ipv4Price;
 
     /**
-     * 公网IPv4的带宽价格
+     * 公网IPv4的带宽价格。
      */
     public PriceItem ipv4BandwidthPrice;
 
     /**
-     * IPv6的价格
+     * IPv6的价格。
      */
     public PriceItem ipv6Price;
 
     /**
-     * IPv6的带宽价格
+     * IPv6的带宽价格。
      */
     public PriceItem ipv6BandwidthPrice;
 
     /**
-     * 系统盘的价格
+     * 系统盘的价格。
      */
     public PriceItem systemDiskPrice;
 
     /**
-     * 数据盘的价格
+     * 数据盘的价格。
      */
     public PriceItem dataDiskPrice;
 

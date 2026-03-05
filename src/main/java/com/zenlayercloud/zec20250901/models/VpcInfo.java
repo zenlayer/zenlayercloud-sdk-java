@@ -11,68 +11,68 @@ public class VpcInfo extends TeaModel {
 
 
     /**
-     * VPC的ID
+     * VPC的ID。
      */
     public String vpcId;
 
     /**
-     * VPC的名称
+     * VPC的名称。
      */
     public String name;
 
     /**
-     * VPC的IPv4 CIDR
+     * VPC的IPv4 CIDR。
      */
     public String cidrBlock;
 
     /**
      * VPC的内网IPv6 CIDR。
-     * 如果为null,说明未开启IPv6
+     * 如果为null,说明未开启IPv6。
      */
     public String ipv6CidrBlock;
 
     /**
-     * mtu值
+     * mtu值。
      */
     public Integer mtu;
 
     /**
-     * 是否为默认VPC
+     * 是否为默认VPC。
      */
     public Boolean isDefault;
 
     /**
-     * 创建时间
+     * 创建时间。
      */
     public String createTime;
 
     /**
-     * VPC里已使用IPv4数量
+     * VPC里已使用IPv4数量。
      */
     public Integer usageIpv4Count;
 
     /**
-     * VPC里已使用IPv6数量
+     * VPC里已使用IPv6数量。
      */
     public Integer usageIpv6Count;
 
     /**
-     * 关联的安全组ID
+     * 关联的安全组ID。
      */
     public String securityGroupId;
 
     /**
-     * VPC关联的DNS内网权威域名ID
+     * VPC关联的DNS内网权威域名ID。
      */
     public List<String> dnsZoneIds;
 
     /**
-     * VPC关联的资源组信息
+     * VPC关联的资源组信息。
      */
     public ResourceGroupInfo resourceGroup;
 
     /**
-     * 该VPC关联的标签
+     * 该VPC关联的标签。
      */
     public Tags tags;
 

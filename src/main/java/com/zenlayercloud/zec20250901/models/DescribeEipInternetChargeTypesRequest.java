@@ -4,25 +4,25 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 查询EIP支持的IP网络类型的请求信息。
+ * 
  */
 public class DescribeEipInternetChargeTypesRequest extends TeaModel {
 
 
     /**
-     * 查询的节点ID
+     * 查询的节点ID。
      */
     public String regionId;
 
     /**
      * EIP IP线路类型。
-     * 已废弃，请使用`networkLineType`
+     * 已废弃，请使用`networkLineType`。
      */
     @Deprecated
     public String eipV4Type;
 
     /**
-     * EIP IP线路类型
+     * EIP IP线路类型。
      */
     public String networkLineType;
 

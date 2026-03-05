@@ -10,32 +10,32 @@ public class EipGeoInfo extends TeaModel {
 
 
     /**
-     * 从DB-IP(db-ip.com)查询的地理信息
+     * 从DB-IP(db-ip.com)查询的地理信息。
      */
     public String dbIp;
 
     /**
-     * 从ipData(ipdata.co)查询的地理信息
+     * 从ipData(ipdata.co)查询的地理信息。
      */
     public String ipData;
 
     /**
-     * 从IPinfo(ipinfo.io)查询的地理信息
+     * 从IPinfo(ipinfo.io)查询的地理信息。
      */
     public String ipInfo;
 
     /**
-     * 从MaxMind查询的地理信息
+     * 从MaxMind查询的地理信息。
      */
     public String maxMind;
 
     /**
-     * 需要查询EIP的所在的地理信息
+     * 需要查询EIP的所在的地理信息。
      */
     public String standard;
 
     /**
-     * 查询地理信息是否和所在的地理信息一致
+     * 查询地理信息是否和所在的地理信息一致。
      */
     public Boolean isConsistent;
 

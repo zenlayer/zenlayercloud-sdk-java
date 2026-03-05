@@ -10,23 +10,23 @@ public class ZoneInfo extends TeaModel {
 
 
     /**
-     * 可用区ID
+     * 可用区ID。
      */
     public String zoneId;
 
     /**
-     * 可用区所在的节点ID
+     * 可用区所在的节点ID。
      */
     public String regionId;
 
     /**
-     * 可用区名称
+     * 可用区名称。
      */
     public String zoneName;
 
     /**
      * 可用区是否支持安全组。
-     * 该字段已废弃，当前所有节点均支持安全组
+     * 该字段已废弃，当前所有节点均支持安全组。
      */
     @Deprecated
     public Boolean supportSecurityGroup;

@@ -5,18 +5,18 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 修改云盘资源组的请求参数。
+ * 
  */
 public class ModifyDisksResourceGroupRequest extends TeaModel {
 
 
     /**
-     * 要迁移资源组的云盘ID列表
+     * 要迁移资源组的云盘ID列表。
      */
     public List<String> diskIds;
 
     /**
-     * 目标资源组ID
+     * 目标资源组ID。
      */
     public String resourceGroupId;
 

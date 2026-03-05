@@ -4,39 +4,39 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 查询Eip指定时间段内的流量信息的请求信息。
+ * 
  */
 public class DescribeEipTrafficRequest extends TeaModel {
 
 
     /**
-     * 要查询的弹性IP ID
+     * 要查询的弹性IP ID。
      */
     public String eipId;
 
     /**
      * 查询开始时间。
      * 按照ISO8601标准表示，并且使用UTC时间。
-     * 格式为：YYYY-MM-ddTHH:mm:ssZ
+     * 格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String startTime;
 
     /**
      * 查询结束时间。
      * 按照ISO8601标准表示，并且使用UTC时间。
-     * 格式为：YYYY-MM-ddTHH:mm:ssZ
+     * 格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String endTime;
 
     /**
      * 查询数据点间隔。
      * 单位为分钟。
-     * 支持参数：1,5
+     * 支持参数：1,5。
      */
     public Integer step;
 
     /**
-     * 指定IP查询，该字段用于三线IP,可以指定IP地址查询流量
+     * 指定IP查询，该字段用于三线IP,可以指定IP地址查询流量。
      */
     public String wanIp;
 

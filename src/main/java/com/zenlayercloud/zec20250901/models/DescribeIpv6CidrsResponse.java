@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询CIDR IPV6地址的响应信息。
+ * 
  */
 public class DescribeIpv6CidrsResponse extends TeaModel {
 
@@ -16,12 +16,12 @@ public class DescribeIpv6CidrsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 符合条件的数据总数
+     * 符合条件的数据总数。
      */
     public Integer totalCount;
 
     /**
-     * 查询IPV6 CIDR地址的结果数据
+     * 查询IPV6 CIDR地址的结果数据。
      */
     public List<Ipv6CidrInfo> dataSet;
 

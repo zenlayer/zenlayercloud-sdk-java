@@ -10,39 +10,39 @@ public class PublicIpv6CidrAddress extends TeaModel {
 
 
     /**
-     * IPv6 CIDR的ID
+     * IPv6 CIDR的ID。
      */
     public String ipv6CidrId;
 
     /**
-     * IPv6 CIDR的地址
+     * IPv6 CIDR的地址。
      */
     public String ipv6Cidr;
 
     /**
-     * 网卡的主IPv6地址
+     * 网卡的主IPv6地址。
      */
     public String primaryIpv6Address;
 
     /**
-     * IPv6的网络计费类型
+     * IPv6的网络计费类型。
      */
     public String internetChargeType;
 
     /**
      * IPv6的公网带宽限速。
-     * 单位：Mbps
+     * 单位：Mbps。
      */
     public Integer bandwidth;
 
     /**
      * IPv6的流量包大小。
-     * 单位：TB
+     * 单位：TB。
      */
     public Double trafficPackageSize;
 
     /**
-     * 关联的带宽组信息
+     * 关联的带宽组信息。
      */
     public BandwidthClusterInfo bandwidthCluster;
 

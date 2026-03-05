@@ -8,24 +8,24 @@ public class ModifySnapshotsAttributeRequest extends TeaModel {
 
 
     /**
-     * 快照ID列表
+     * 快照ID列表。
      */
     public List<String> snapshotIds;
 
     /**
-     * 快照名称
+     * 快照名称。
      */
     public String snapshotName;
 
     /**
      * 快照过期时间。
      * 格式为：yyyy-MM-ddTHH:mm:ssZ。
-     * 如果改成永久保留，请设置`isPermanent`=`true`，如果设置该时间必须设置为当前时间后24小时
+     * 如果改成永久保留，请设置`isPermanent`=`true`，如果设置该时间必须设置为当前时间后24小时。
      */
     public String retentionTime;
 
     /**
-     * 该定期快照策略创建的快照是否永久保留
+     * 该定期快照策略创建的快照是否永久保留。
      */
     public Boolean isPermanent;
 

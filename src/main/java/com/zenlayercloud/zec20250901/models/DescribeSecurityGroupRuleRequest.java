@@ -7,7 +7,7 @@ public class DescribeSecurityGroupRuleRequest extends TeaModel {
 
 
     /**
-     * 安全组ID
+     * 安全组ID。
      */
     public String securityGroupId;
 

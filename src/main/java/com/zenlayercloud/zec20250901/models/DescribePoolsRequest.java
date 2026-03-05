@@ -5,34 +5,34 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述公网IP池的请求参数。
+ * 
  */
 public class DescribePoolsRequest extends TeaModel {
 
 
     /**
-     * 根据公网IP池的ID
+     * 根据公网IP池的ID。
      */
     public List<String> poolIds;
 
     /**
-     * 根据公网IP池的所在节点ID过滤
+     * 根据公网IP池的所在节点ID过滤。
      */
     public String regionId;
 
     /**
      * 根据公网IP池的名称过滤。
-     * 支持模糊查询
+     * 支持模糊查询。
      */
     public String name;
 
     /**
-     * 返回的分页大小，默认为20，最大为1000
+     * 返回的分页大小，默认为20，最大为1000。
      */
     public Integer pageSize;
 
     /**
-     * 返回的分页数，默认为1
+     * 返回的分页数。
      */
     public Integer pageNum;
 

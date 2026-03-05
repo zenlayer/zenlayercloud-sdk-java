@@ -7,7 +7,7 @@ public class DeleteSecurityGroupRequest extends TeaModel {
 
 
     /**
-     * 要删除的安全组ID
+     * 要删除的安全组ID。
      */
     public String securityGroupId;
 

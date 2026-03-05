@@ -4,18 +4,18 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 网卡绑定实例的请求参数。
+ * 
  */
 public class AttachNetworkInterfaceRequest extends TeaModel {
 
 
     /**
-     * 需要操作的网卡ID
+     * 需要操作的网卡ID。
      */
     public String nicId;
 
     /**
-     * 需要绑定的实例ID
+     * 需要绑定的实例ID。
      */
     public String instanceId;
 

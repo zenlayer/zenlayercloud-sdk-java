@@ -11,12 +11,12 @@ public class DiskWithInstance extends TeaModel {
 
 
     /**
-     * 实例ID
+     * 实例ID。
      */
     public String instanceId;
 
     /**
-     * 随机器创建的数据盘ID集合
+     * 随机器创建的数据盘ID集合。
      */
     public List<String> diskIdSet;
 

@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 解绑边界网关的请求信息。
+ * 
  */
 public class UnassignBorderGatewayRequest extends TeaModel {
 
 
     /**
-     * 要解绑NAT的边界网关ID
+     * 要解绑NAT的边界网关ID。
      */
     public String zbgId;
 

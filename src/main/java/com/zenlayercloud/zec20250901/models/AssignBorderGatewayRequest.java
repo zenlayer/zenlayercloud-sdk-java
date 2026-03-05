@@ -4,18 +4,18 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 边界网关绑定NAT网关的请求信息。
+ * 
  */
 public class AssignBorderGatewayRequest extends TeaModel {
 
 
     /**
-     * 边界网关ID
+     * 边界网关ID。
      */
     public String zbgId;
 
     /**
-     * NAT网关ID
+     * NAT网关ID。
      */
     public String natId;
 
