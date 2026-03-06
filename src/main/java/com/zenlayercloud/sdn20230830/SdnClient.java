@@ -295,6 +295,16 @@ public class SdnClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribeAzureVlanUsageResponse());
     }
 
+    public DescribeCloudAvailableBandwidthTiersResponse describeCloudAvailableBandwidthTiers(DescribeCloudAvailableBandwidthTiersRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeCloudAvailableBandwidthTiers", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeCloudAvailableBandwidthTiersResponse());
+    }
+
+    public ModifyCloudBandwidthResponse modifyCloudBandwidth(ModifyCloudBandwidthRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "ModifyCloudBandwidth", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new ModifyCloudBandwidthResponse());
+    }
+
     public DescribeTencentRegionsResponse describeTencentRegions(DescribeTencentRegionsRequest request) {
         Map<String, ?> rspStr = super.callApi(request, "DescribeTencentRegions", new RuntimeOptions());
         return TeaModel.toModel(rspStr, new DescribeTencentRegionsResponse());

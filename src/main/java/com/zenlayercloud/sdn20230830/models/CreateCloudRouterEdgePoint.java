@@ -142,4 +142,6 @@ public class CreateCloudRouterEdgePoint extends TeaModel {
      * 备用IPSec配置。
      */
     public BackupIPSecConfig backupIpSec;
+
+    public Integer cloudBandwidthMbps;
 }

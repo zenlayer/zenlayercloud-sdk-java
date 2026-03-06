@@ -64,4 +64,9 @@ public class CreateEndpointParam extends TeaModel {
      * 高可用类型
      */
     public String haType;
+
+    /**
+     * 云连接带宽限速。
+     */
+    public Integer cloudBandwidthMbps;
 }

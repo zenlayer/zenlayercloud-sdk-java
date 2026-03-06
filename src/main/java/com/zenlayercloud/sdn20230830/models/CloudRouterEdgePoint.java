@@ -20,6 +20,8 @@ public class CloudRouterEdgePoint extends TeaModel {
      */
     public String edgePointId;
 
+    public String zbgId;
+
     /**
      * 边缘连接点的名称。
      */
