@@ -855,7 +855,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 创建IPv6/IPv4 CIDR地址段。
+         * 创建IPv4 CIDR地址段。
          */
     public CreateCidrResponse createCidr(CreateCidrRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -948,6 +948,42 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new RenewCidrResponse());
+    }
+
+        /**
+         * 返回支持售卖 BYOIP 的区域及对应网段、网络类型等信息。
+         */
+    public DescribeByoipRegionsResponse describeByoipRegions(DescribeByoipRegionsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeByoipRegions",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeByoipRegionsResponse());
+    }
+
+        /**
+         * 根据宣告 IP 段、区域、线路类型等查询 BYOIP 价格。
+         */
+    public DescribeByoipPriceResponse describeByoipPrice(DescribeByoipPriceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeByoipPrice",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeByoipPriceResponse());
+    }
+
+        /**
+         * 提交自带 IP 段（BYOIP）创建 CIDR。返回 RPKI/IRR 校验失败列表。
+         */
+    public CreateByoipResponse createByoip(CreateByoipRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateByoip",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateByoipResponse());
     }
 
         /**

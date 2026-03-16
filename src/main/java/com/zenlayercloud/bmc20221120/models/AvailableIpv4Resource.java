@@ -23,4 +23,9 @@ public class AvailableIpv4Resource extends TeaModel {
      */
     public String sellStatus;
 
+    /**
+     * 取值范围：BGP、Local
+     */
+    public String cidrType;
+
 }

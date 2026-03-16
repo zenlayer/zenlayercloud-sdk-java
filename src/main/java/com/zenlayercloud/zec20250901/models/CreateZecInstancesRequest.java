@@ -125,6 +125,7 @@ public class CreateZecInstancesRequest extends TeaModel {
      * 流量包订购大小。
      * 单位为TB。
      * 该值必须在`internetChargeType = ByTrafficPackage`时才会生效。
+     * 当`IpStackType` = `IPv4_IPv6`时，流量包大小作用于IPv4。
      */
     public Double trafficPackageSize;
 
@@ -153,7 +154,7 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     /**
      * 设置IP堆栈类型。
-     * 如果不指定，子网堆栈类型IPv4或IPv4_IPv6，默认使用IPv4。
+     * 如果不指定，当子网堆栈类型IPv4或IPv4_IPv6时，默认使用IPv4。
      */
     public String ipStackType;
 
@@ -199,6 +200,11 @@ public class CreateZecInstancesRequest extends TeaModel {
      * 初始化命令。
      */
     public String userData;
+
+    /**
+     * 实例选项配置。
+     */
+    public InstanceOptions instanceOptions;
 
     public String getZoneId() {
         return this.zoneId;
@@ -432,6 +438,14 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     public void setUserData(String userData) {
         this.userData = userData;
+    }
+
+    public InstanceOptions getInstanceOptions() {
+        return this.instanceOptions;
+    }
+
+    public void setInstanceOptions(InstanceOptions instanceOptions) {
+        this.instanceOptions = instanceOptions;
     }
 
 }

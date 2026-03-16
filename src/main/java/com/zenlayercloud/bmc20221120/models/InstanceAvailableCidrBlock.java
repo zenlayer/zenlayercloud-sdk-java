@@ -27,6 +27,11 @@ public class InstanceAvailableCidrBlock extends TeaModel {
     public String cidrBlockType;
 
     /**
+     * 取值范围：BGP、Local
+     */
+    public String cidrType;
+
+    /**
      * CIDR。
      */
     public String cidrBlock;

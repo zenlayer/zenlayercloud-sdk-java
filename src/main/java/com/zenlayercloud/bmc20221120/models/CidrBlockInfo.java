@@ -22,6 +22,11 @@ public class CidrBlockInfo extends TeaModel {
     public String cidrBlockType;
 
     /**
+     * 取值范围：BGP、Local
+     */
+    public String cidrType;
+
+    /**
      * Cidr Block名称。
      */
     public String cidrBlockName;

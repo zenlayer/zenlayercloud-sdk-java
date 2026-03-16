@@ -22,6 +22,11 @@ public class CreateIpv4BlockRequest extends TeaModel {
     public String name;
 
     /**
+     * 取值范围：BGP、Local
+     */
+    public String cidrType;
+
+    /**
      * 付费类型。
      * PREPAID：预付费，即包年包月
      * POSTPAID：后付费。

@@ -153,6 +153,11 @@ public class InstanceInfo extends TeaModel {
      */
     public List<String> loadBalancerIds;
 
+    /**
+     * 实例选项配置。
+     */
+    public InstanceOptions instanceOptions;
+
     public String getInstanceId() {
         return this.instanceId;
     }
@@ -375,6 +380,14 @@ public class InstanceInfo extends TeaModel {
 
     public void setLoadBalancerIds(List<String> loadBalancerIds) {
         this.loadBalancerIds = loadBalancerIds;
+    }
+
+    public InstanceOptions getInstanceOptions() {
+        return this.instanceOptions;
+    }
+
+    public void setInstanceOptions(InstanceOptions instanceOptions) {
+        this.instanceOptions = instanceOptions;
     }
 
 }

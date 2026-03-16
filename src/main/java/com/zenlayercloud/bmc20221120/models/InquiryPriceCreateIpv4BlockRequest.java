@@ -24,6 +24,11 @@ public class InquiryPriceCreateIpv4BlockRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * 取值范围：BGP、Local
+     */
+    public String cidrType;
+
+    /**
      * 预付费模式。
      * 即包年包月相关参数设置。
      * 通过该参数可以指定包年包月实例的购买时长等属性。
