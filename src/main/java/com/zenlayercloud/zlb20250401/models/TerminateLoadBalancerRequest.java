@@ -7,7 +7,7 @@ public class TerminateLoadBalancerRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例 ID
+     * 负载均衡实例 ID。
      */
     public String loadBalancerId;
 

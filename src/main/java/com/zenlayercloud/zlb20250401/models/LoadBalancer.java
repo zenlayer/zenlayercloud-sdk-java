@@ -11,68 +11,68 @@ public class LoadBalancer extends TeaModel {
 
 
     /**
-     * 区域节点ID
+     * 区域节点ID。
      */
     public String regionId;
 
     /**
-     * 负载均衡器ID
+     * 负载均衡器ID。
      */
     public String loadBalancerId;
 
     /**
-     * 负载均衡期名称
+     * 负载均衡期名称。
      */
     public String loadBalancerName;
 
     /**
-     * 负载均衡后端服务器所属的VPC网络 ID
+     * 负载均衡后端服务器所属的VPC网络 ID。
      */
     public String vpcId;
 
     /**
-     * 负载均衡实例的状态
+     * 负载均衡实例的状态。
      */
     public String status;
 
     /**
-     * 负载均衡实例的公网 VIP 列表
+     * 负载均衡实例的公网 VIP 列表。
      */
     public List<String> publicIpAddress;
 
     /**
-     * 负载均衡实例的内网 VIP 列表
+     * 负载均衡实例的内网 VIP 列表。
      */
     public List<String> privateIpAddress;
 
     /**
-     * 负载均衡实例的健康检查内网IP列表
+     * 负载均衡实例的健康检查内网IP列表。
      */
     public List<String> healthCheckPrivateIps;
 
     /**
-     * 负载均衡器下监听器的数量
+     * 负载均衡器下监听器的数量。
      */
     public Long listenerCount;
 
     /**
      * 创建时间。
-     * 按照ISO8601标准表示，并且使用UTC时间, 格式为：YYYY-MM-DDThh:mm:ssZ
+     * 按照ISO8601标准表示，并且使用UTC时间, 格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String createTime;
 
     /**
-     * 关联的资源组信息
+     * 关联的资源组信息。
      */
     public ResourceGroupInfo resourceGroup;
 
     /**
-     * 该负载均衡器关联的标签
+     * 该负载均衡器关联的标签。
      */
     public Tags tags;
 
     /**
-     * 负载均衡实例绑定的安全组ID
+     * 负载均衡实例绑定的安全组ID。
      */
     public String securityGroupId;
 

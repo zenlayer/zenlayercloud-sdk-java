@@ -7,12 +7,12 @@ public class DeleteListenerRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例ID
+     * 负载均衡实例ID。
      */
     public String loadBalancerId;
 
     /**
-     * 监听器ID
+     * 监听器ID。
      */
     public String listenerId;
 

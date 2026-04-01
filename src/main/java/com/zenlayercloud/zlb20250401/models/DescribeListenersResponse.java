@@ -16,7 +16,7 @@ public class DescribeListenersResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 监听器列表
+     * 监听器列表。
      */
     public List<Listener> listeners;
 

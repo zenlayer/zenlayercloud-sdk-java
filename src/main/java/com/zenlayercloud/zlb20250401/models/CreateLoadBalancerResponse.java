@@ -13,12 +13,12 @@ public class CreateLoadBalancerResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 下单编号
+     * 下单编号。
      */
     public String orderNumber;
 
     /**
-     * 由负载均衡实例唯一 ID 组成的集合
+     * 由负载均衡实例唯一 ID 组成的集合。
      */
     public List<String> loadBalancerIds;
 

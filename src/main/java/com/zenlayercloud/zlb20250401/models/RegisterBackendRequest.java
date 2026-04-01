@@ -8,18 +8,18 @@ public class RegisterBackendRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例的 ID
+     * 负载均衡实例的 ID。
      */
     public String loadBalancerId;
 
     /**
-     * 负载均衡监听器的 ID
+     * 负载均衡监听器的 ID。
      */
     public String listenerId;
 
     /**
      * 要绑定的后端服务器列表。
-     * 注意：同一个实例在同一个监听器里只能存在一个
+     * 注意：同一个实例在同一个监听器里只能存在一个。
      */
     public List<BackendServer> backendServers;
 

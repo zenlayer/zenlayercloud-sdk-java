@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
-public class DescribeResourceTagsResponse extends TeaModel {
+public class DescribeResourceByTagsResponse extends TeaModel {
 
 
     /**
@@ -20,7 +20,7 @@ public class DescribeResourceTagsResponse extends TeaModel {
     /**
      * 数据列表。
      */
-    public List<ResourceTag> dataSet;
+    public List<ResourceInfo> dataSet;
 
     public String getRequestId() {
         return this.requestId;
@@ -38,11 +38,11 @@ public class DescribeResourceTagsResponse extends TeaModel {
         this.totalCount = totalCount;
     }
 
-    public List<ResourceTag> getDataSet() {
+    public List<ResourceInfo> getDataSet() {
         return this.dataSet;
     }
 
-    public void setDataSet(List<ResourceTag> dataSet) {
+    public void setDataSet(List<ResourceInfo> dataSet) {
         this.dataSet = dataSet;
     }
 

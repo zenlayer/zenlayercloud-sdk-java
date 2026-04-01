@@ -7,29 +7,29 @@ public class CreateListenerRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例 ID
+     * 负载均衡实例 ID。
      */
     public String loadBalancerId;
 
     /**
      * 要创建的监听器名称。
-     * 仅支持字母、数字、连字符 (-) 和句点 (.)，且开头和结尾必须是字母或数字
+     * 仅支持字母、数字、连字符 (-) 和句点 (.)，且开头和结尾必须是字母或数字。
      */
     public String listenerName;
 
     /**
      * 健康检查相关参数。
-     * 如果不传该参数或者healthCheck.enable = false. 将会关闭健康检查
+     * 如果不传该参数或者healthCheck.enable = false. 将会关闭健康检查。
      */
     public HealthCheck healthCheck;
 
     /**
-     * 监听器协议
+     * 监听器协议。
      */
     public String protocol;
 
     /**
-     * 监听器转发的方式
+     * 监听器转发的方式。
      */
     public String scheduler;
 
@@ -38,21 +38,26 @@ public class CreateListenerRequest extends TeaModel {
      * 多个端口使用,分隔。
      * 当端口是范围时用`-`连接，例如：10000-10005。
      * 端口的取值范围为1～65535。
-     * 请注意端口不能和该监听器的其他端口有重叠
+     * 请注意端口不能和该监听器的其他端口有重叠。
      */
     public String port;
 
     /**
      * 工作模式。
      * 如果不传则会根据负载均衡实例所在的区域设定默认值。
-     * 默认值可能为DNAT、FNAT
+     * 默认值可能为DNAT、FNAT。
      */
     public String kind;
 
     /**
-     * 会话保持时间，单位秒
+     * 会话保持时间，单位秒。
      */
     public Integer persistent;
+
+    /**
+     * 空闲超时时间，单位秒。
+     */
+    public Integer idleTimeout;
 
     public String getLoadBalancerId() {
         return this.loadBalancerId;
@@ -116,6 +121,14 @@ public class CreateListenerRequest extends TeaModel {
 
     public void setPersistent(Integer persistent) {
         this.persistent = persistent;
+    }
+
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
+    }
+
+    public void setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
     }
 
 }

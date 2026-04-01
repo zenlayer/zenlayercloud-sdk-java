@@ -10,22 +10,22 @@ public class TagInfo extends TeaModel {
 
 
     /**
-     * 标签键
+     * 标签键。
      */
     public String key;
 
     /**
-     * 标签值
+     * 标签值。
      */
     public String value;
 
     /**
-     * 标签下绑定的资源总数
+     * 标签下绑定的资源总数。
      */
     public Integer bindResourceCount;
 
     /**
-     * 创建时间
+     * 创建时间。
      */
     public String createdDate;
 

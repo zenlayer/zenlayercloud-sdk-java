@@ -8,12 +8,12 @@ public class ModifyLoadBalancersAttributeRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例ID列表
+     * 负载均衡实例ID列表。
      */
     public List<String> loadBalancerIds;
 
     /**
-     * 负载均衡实例的名称
+     * 负载均衡实例的名称。
      */
     public String loadBalancerName;
 

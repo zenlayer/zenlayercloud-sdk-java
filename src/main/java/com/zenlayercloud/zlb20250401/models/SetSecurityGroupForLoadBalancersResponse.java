@@ -13,7 +13,7 @@ public class SetSecurityGroupForLoadBalancersResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 更换失败的负载均衡实例集合
+     * 更换失败的负载均衡实例集合。
      */
     public List<String> failedLoadBalancerIds;
 

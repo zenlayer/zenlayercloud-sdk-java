@@ -8,17 +8,17 @@ public class ModifyBackendRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例 ID
+     * 负载均衡实例 ID。
      */
     public String loadBalancerId;
 
     /**
-     * 负载均衡监听器的 ID
+     * 负载均衡监听器的 ID。
      */
     public String listenerId;
 
     /**
-     * 要修改的后端服务器集合
+     * 要修改的后端服务器集合。
      */
     public List<BackendServer> backendServers;
 

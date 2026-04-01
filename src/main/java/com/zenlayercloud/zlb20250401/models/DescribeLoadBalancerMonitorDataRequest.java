@@ -7,29 +7,29 @@ public class DescribeLoadBalancerMonitorDataRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例 ID
+     * 负载均衡实例 ID。
      */
     public String loadBalancerId;
 
     /**
-     * 负载均衡器的监听器ID
+     * 负载均衡器的监听器ID。
      */
     public String listenerId;
 
     /**
-     * 监控指标类型
+     * 监控指标类型。
      */
     public String metricType;
 
     /**
      * 查询开始时间。
-     * 时间格式：yyyy-MM-ddTHH:mm:ssZ
+     * 时间格式：yyyy-MM-ddTHH:mm:ssZ。
      */
     public String startTime;
 
     /**
      * 查询结束时间。
-     * 时间格式：yyyy-MM-ddTHH:mm:ssZ
+     * 时间格式：yyyy-MM-ddTHH:mm:ssZ。
      */
     public String endTime;
 

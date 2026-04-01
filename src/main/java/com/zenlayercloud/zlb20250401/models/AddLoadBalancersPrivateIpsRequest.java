@@ -9,18 +9,18 @@ public class AddLoadBalancersPrivateIpsRequest extends TeaModel {
 
     /**
      * 要加入的内网Ip。
-     * 单次最多20个
+     * 单次最多20个。
      */
     public List<String> privateIps;
 
     /**
-     * 负载均衡ID
+     * 负载均衡ID。
      */
     public String loadBalancerId;
 
     /**
      * 作为内网ip的subnetId。
-     * 可以通过[DescribeSubnets](../../zec/vpc-network/describesubnets.md)接口获取
+     * 可以通过[DescribeSubnets](../../zec/vpc-network/describesubnets.md)接口获取。
      */
     public String subnetId;
 

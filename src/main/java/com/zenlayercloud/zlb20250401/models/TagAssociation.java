@@ -11,7 +11,7 @@ public class TagAssociation extends TeaModel {
 
 
     /**
-     * 标签对列表
+     * 标签对列表。
      */
     public List<Tag> tags;
 

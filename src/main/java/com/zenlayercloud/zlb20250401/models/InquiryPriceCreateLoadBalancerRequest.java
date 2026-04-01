@@ -7,43 +7,43 @@ public class InquiryPriceCreateLoadBalancerRequest extends TeaModel {
 
 
     /**
-     * 区域节点ID
+     * 区域节点ID。
      */
     public String regionId;
 
     /**
-     * IP网络计费模式
+     * IP网络计费模式。
      */
     public String internetChargeType;
 
     /**
      * IP 的网络类型。
-     * 已废弃，请使用`networkLineType`
+     * 已废弃，请使用`networkLineType`。
      */
     @Deprecated
     public String ipNetworkType;
 
     /**
-     * IP 的网络类型
+     * IP 的网络类型。
      */
     public String networkLineType;
 
     /**
      * EIP的最大出带宽。
      * 单位为Mbps。
-     * 最大限制通常为10000，如果有额外要求， 请联系Support
+     * 最大限制通常为10000，如果有额外要求， 请联系Support。
      */
     public Integer bandwidthMbps;
 
     /**
      * 流量包大小。
-     * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`ByTrafficPackage`, 否则该参数不生效
+     * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`ByTrafficPackage`, 否则该参数不生效。
      */
     public Double trafficPackageSize;
 
     /**
      * 共享带宽包ID。
-     * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`BandwidthCluster`, 否则该参数不生效
+     * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`BandwidthCluster`, 否则该参数不生效。
      */
     public String bandwidthClusterId;
 

@@ -13,12 +13,12 @@ public class DescribeLoadBalancersResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 满足过滤条件的负载均衡实例总数
+     * 满足过滤条件的负载均衡实例总数。
      */
     public Integer totalCount;
 
     /**
-     * 返回的负载均衡实例列表
+     * 返回的负载均衡实例列表。
      */
     public List<LoadBalancer> dataSet;
 

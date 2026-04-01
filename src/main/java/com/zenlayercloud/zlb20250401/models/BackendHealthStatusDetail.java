@@ -10,12 +10,12 @@ public class BackendHealthStatusDetail extends TeaModel {
 
 
     /**
-     * 后端服务器的端口
+     * 后端服务器的端口。
      */
     public Integer port;
 
     /**
-     * 健康检查的状态
+     * 健康检查的状态。
      */
     public String healthStatus;
 

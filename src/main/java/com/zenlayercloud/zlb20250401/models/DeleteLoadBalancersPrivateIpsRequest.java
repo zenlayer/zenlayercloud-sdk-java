@@ -8,12 +8,12 @@ public class DeleteLoadBalancersPrivateIpsRequest extends TeaModel {
 
 
     /**
-     * 要删除的内网IP集合
+     * 要删除的内网IP集合。
      */
     public List<String> privateIps;
 
     /**
-     * 负载均衡ID
+     * 负载均衡ID。
      */
     public String loadBalancerId;
 

@@ -13,7 +13,7 @@ public class DescribeLoadBalancerRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 节点列表
+     * 节点列表。
      */
     public List<Region> regions;
 

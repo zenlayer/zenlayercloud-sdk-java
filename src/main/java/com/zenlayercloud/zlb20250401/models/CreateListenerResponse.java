@@ -12,7 +12,7 @@ public class CreateListenerResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 创建的监听器ID
+     * 创建的监听器ID。
      */
     public String listenerId;
 

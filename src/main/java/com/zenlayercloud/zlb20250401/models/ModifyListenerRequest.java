@@ -7,30 +7,30 @@ public class ModifyListenerRequest extends TeaModel {
 
 
     /**
-     * 负载均衡器ID
+     * 负载均衡器ID。
      */
     public String loadBalancerId;
 
     /**
-     * 负载均衡器的监听器ID
+     * 负载均衡器的监听器ID。
      */
     public String listenerId;
 
     /**
      * 负载均衡器的监听器名称。
-     * 不传则不会进行修改
+     * 不传则不会进行修改。
      */
     public String listenerName;
 
     /**
      * 负载均衡器的监听器健康检查。
-     * 不传则不会进行修改，如果开启或关闭，请设置`HealthCheck.enabled`字段
+     *  不传则不会进行修改，如果开启或关闭，请设置`HealthCheck.enabled`字段。
      */
     public HealthCheck healthCheck;
 
     /**
      * 负载均衡器的监听器调度方式。
-     * 不传则不会进行修改
+     * 不传则不会进行修改。
      */
     public String scheduler;
 
@@ -39,20 +39,25 @@ public class ModifyListenerRequest extends TeaModel {
      * 多个端口使用,分隔。
      * 当端口是范围时用`-`连接，例如：10000-10005。
      * 端口的取值范围为1～65535。
-     * 不指定将不会进行修改
+     * 不指定将不会进行修改。
      */
     public String port;
 
     /**
      * 工作模式。
-     * 如果修改为`DR`模式，如果后端服务器指定了端口将失效，将跟随监听器的端口
+     * 如果修改为`DR`模式，如果后端服务器指定了端口将失效，将跟随监听器的端口。
      */
     public String kind;
 
     /**
-     * 会话保持时间，单位秒
+     * 会话保持时间，单位秒。
      */
     public Integer persistent;
+
+    /**
+     * 空闲超时时间，单位秒。
+     */
+    public Integer idleTimeout;
 
     public String getLoadBalancerId() {
         return this.loadBalancerId;
@@ -116,6 +121,14 @@ public class ModifyListenerRequest extends TeaModel {
 
     public void setPersistent(Integer persistent) {
         this.persistent = persistent;
+    }
+
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
+    }
+
+    public void setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
     }
 
 }

@@ -8,17 +8,17 @@ public class DescribeListenersRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例的ID
+     * 负载均衡实例的ID。
      */
     public String loadBalancerId;
 
     /**
-     * 要查询的负载均衡监听器 ID列表
+     * 要查询的负载均衡监听器 ID列表。
      */
     public List<String> listenerIds;
 
     /**
-     * 要查询的监听器协议类型
+     * 要查询的监听器协议类型。
      */
     public String protocol;
 

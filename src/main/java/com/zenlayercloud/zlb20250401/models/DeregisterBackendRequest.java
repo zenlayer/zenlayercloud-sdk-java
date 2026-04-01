@@ -8,17 +8,17 @@ public class DeregisterBackendRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例 ID
+     * 负载均衡实例 ID。
      */
     public String loadBalancerId;
 
     /**
-     * 负载均衡监听器 ID
+     * 负载均衡监听器 ID。
      */
     public String listenerId;
 
     /**
-     * 要删除的后端服务器列表
+     * 要删除的后端服务器列表。
      */
     public List<BackendServer> backendServers;
 

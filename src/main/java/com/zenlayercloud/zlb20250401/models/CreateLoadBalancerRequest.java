@@ -8,82 +8,82 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
 
     /**
-     * 区域节点ID
+     * 区域节点ID。
      */
     public String regionId;
 
     /**
-     * 负载均衡后端服务器所属的VPC网络 ID
+     * 负载均衡后端服务器所属的VPC网络 ID。
      */
     public String vpcId;
 
     /**
      * 负载均衡实例名称。
-     * 长度为1～64个字符
+     * 长度为1～64个字符。
      */
     public String loadBalancerName;
 
     /**
-     * IP网络计费模式
+     * IP网络计费模式。
      */
     public String internetChargeType;
 
     /**
      * IP 的网络类型。
-     * 已废弃，请使用`networkLineType`
+     * 已废弃，请使用`networkLineType`。
      */
     @Deprecated
     public String ipNetworkType;
 
     /**
-     * IP 的网络类型
+     * IP 的网络类型。
      */
     public String networkLineType;
 
     /**
      * EIP的最大出带宽。
      * 单位为Mbps。
-     * 最大限制通常为10000，如果有额外要求， 请联系Support
+     * 最大限制通常为10000，如果有额外要求， 请联系Support。
      */
     public Integer bandwidthMbps;
 
     /**
      * 流量包大小。
-     * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`ByTrafficPackage`, 否则该参数不生效
+     * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`ByTrafficPackage`, 否则该参数不生效。
      */
     public Double trafficPackageSize;
 
     /**
      * 共享带宽包ID。
-     * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`BandwidthCluster`, 否则该参数不生效
+     * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`BandwidthCluster`, 否则该参数不生效。
      */
     public String bandwidthClusterId;
 
     /**
      * 资源组ID。
-     * 如果不指定，则会创建在默认资源组
+     * 如果不指定，则会创建在默认资源组。
      */
     public String resourceGroupId;
 
     /**
-     * 创建负载均衡的个数
+     * 创建负载均衡的个数。
      */
     public Integer number;
 
     /**
-     * marketingOptions
+     * 市场活动的相关信息。
      */
     public MarketingInfo marketingOptions;
 
     /**
      * 创建负载均衡时关联的标签。
-     * 注意：·关联`标签键`不能重复
+     * 注意：·关联`标签键`不能重复。
      */
     public TagAssociation tags;
 
     /**
      * 健康检查内网源IP所属的subnetId。
-     * 可以通过[DescribeSubnets](../../zec/vpc-network/describesubnets.md)接口获取
+     * 可以通过[DescribeSubnets](../../zec/vpc-network/describesubnets.md)接口获取。
      */
     public String subnetId;
 
@@ -91,13 +91,13 @@ public class CreateLoadBalancerRequest extends TeaModel {
      * 健康检查内网IP地址。
      * 指定`subnetId`时，此参数必填，且数量必须为2。
      * 不指定`subnetId`时，此参数无效。
-     * 不填时系统将自动分配
+     * 不填时系统将自动分配。
      */
     public List<String> healthCheckPrivateIps;
 
     /**
      * 负载均衡实例绑定的安全组ID。
-     * 可以通过[DescribeSecurityGroups](../../zec/security-group/describesecuritygroups.md)接口获取
+     * 可以通过[DescribeSecurityGroups](../../zec/security-group/describesecuritygroups.md)接口获取。
      */
     public String securityGroupId;
 

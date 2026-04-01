@@ -27,6 +27,18 @@ public class ZrmClient extends AbstractClient {
     }
 
         /**
+         * 获取某个资源下绑定的所有标签列表。
+         */
+    public DescribeTagsResponse describeTags(DescribeTagsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeTags",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeTagsResponse());
+    }
+
+        /**
          * 批量创建标签。
          */
     public CreateTagsResponse createTags(CreateTagsRequest request) {
@@ -51,15 +63,27 @@ public class ZrmClient extends AbstractClient {
     }
 
         /**
-         * 标签分页列表。
+         * 获取某个资源下绑定的所有标签列表。
          */
-    public DescribeTagsResponse describeTags(DescribeTagsRequest request) {
+    public DescribeResourceTagsResponse describeResourceTags(DescribeResourceTagsRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "DescribeTags",
+            "DescribeResourceTags",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new DescribeTagsResponse());
+        return TeaModel.toModel(rsp, new DescribeResourceTagsResponse());
+    }
+
+        /**
+         * 修改某个资源的标签。
+         */
+    public ModifyResourceTagsResponse modifyResourceTags(ModifyResourceTagsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyResourceTags",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyResourceTagsResponse());
     }
 
         /**
@@ -87,29 +111,15 @@ public class ZrmClient extends AbstractClient {
     }
 
         /**
-         * 获取某个资源下绑定的所有标签列表。
-         
+         * 获取标签下绑定的所有资源列表。
          */
-    public DescribeResourceTagsResponse describeResourceTags(DescribeResourceTagsRequest request) {
+    public DescribeResourceByTagsResponse describeResourceByTags(DescribeResourceByTagsRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "DescribeResourceTags",
+            "DescribeResourceByTags",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new DescribeResourceTagsResponse());
-    }
-
-        /**
-         * 修改某个资源的标签。
-         
-         */
-    public ModifyResourceTagsResponse modifyResourceTags(ModifyResourceTagsRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyResourceTags",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyResourceTagsResponse());
+        return TeaModel.toModel(rsp, new DescribeResourceByTagsResponse());
     }
 
 }

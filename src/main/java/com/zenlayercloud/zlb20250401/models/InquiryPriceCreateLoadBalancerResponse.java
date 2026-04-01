@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 描述创建负载均衡实例的响应。
+ * 
  */
 public class InquiryPriceCreateLoadBalancerResponse extends TeaModel {
 
@@ -15,22 +15,22 @@ public class InquiryPriceCreateLoadBalancerResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 负载均衡实例的价格
+     * 负载均衡实例的价格。
      */
     public PriceItem loadBalancerInstancePrice;
 
     /**
-     * 弹性IP的价格
+     * 弹性IP的价格。
      */
     public PriceItem eipPrice;
 
     /**
-     * 弹性IP的网络计费的价格
+     * 弹性IP的网络计费的价格。
      */
     public PriceItem eipNetworkPrice;
 
     /**
-     * 负载均衡实例LCU的价格
+     * 负载均衡实例LCU的价格。
      */
     public PriceItem lcuPrice;
 

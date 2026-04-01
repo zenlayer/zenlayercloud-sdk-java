@@ -5,13 +5,13 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 批量删除标签的请求参数。
+ * 
  */
 public class DeleteTagsRequest extends TeaModel {
 
 
     /**
-     * 需要删除的标签
+     * 需要删除的标签。
      */
     public List<Tag> tags;
 

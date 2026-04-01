@@ -13,7 +13,7 @@ public class UnbindSecurityGroupFromLoadBalancersResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 解绑失败的负载均衡实例集合
+     * 解绑失败的负载均衡实例集合。
      */
     public List<String> failedLoadBalancerIds;
 

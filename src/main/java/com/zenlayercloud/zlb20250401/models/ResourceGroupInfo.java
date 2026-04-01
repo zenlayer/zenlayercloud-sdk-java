@@ -10,12 +10,12 @@ public class ResourceGroupInfo extends TeaModel {
 
 
     /**
-     * 资源组ID
+     * 资源组ID。
      */
     public String resourceGroupId;
 
     /**
-     * 资源组名称
+     * 资源组名称。
      */
     public String resourceGroupName;
 

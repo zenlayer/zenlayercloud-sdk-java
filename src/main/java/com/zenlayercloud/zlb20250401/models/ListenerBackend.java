@@ -11,48 +11,48 @@ public class ListenerBackend extends TeaModel {
 
     /**
      * 实例ID。
-     * 可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取
+     * 可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
      */
     public String instanceId;
 
     /**
-     * 实例上绑定网卡的私网IP地址
+     * 实例上绑定网卡的私网IP地址。
      */
     public String privateIpAddress;
 
     /**
      * 后端服务修改后的转发权重。
      * 创建绑定服务器时默认值为100, 修改时如果不指定，则不会进行修改。
-     * 删除时不需要指定该参数
+     * 删除时不需要指定该参数。
      */
     public Integer weight;
 
     /**
      * 请求转发和健康检查的目标端口。
      * 如果为空，将跟随监听器端口配置。
-     * 删除时不需要指定该参数
+     * 删除时不需要指定该参数。
      */
     public Integer backendPort;
 
     /**
-     * 负载均衡监听器 ID
+     * 负载均衡监听器 ID。
      */
     public String listenerId;
 
     /**
-     * 监听器的名称
+     * 监听器的名称。
      */
     public String listenerName;
 
     /**
-     * 监听器协议
+     * 监听器协议。
      */
     public String protocol;
 
     /**
      * 监听器端口。
      * 多个端口使用,分隔。
-     * 当端口是范围时用`-`连接，例如：10000-10005
+     * 当端口是范围时用`-`连接，例如：10000-10005。
      */
     public String listenerPort;
 

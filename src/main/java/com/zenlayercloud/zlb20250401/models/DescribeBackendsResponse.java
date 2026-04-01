@@ -13,7 +13,7 @@ public class DescribeBackendsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 负载均衡的后端服务器列表
+     * 负载均衡的后端服务器列表。
      */
     public List<ListenerBackend> backends;
 

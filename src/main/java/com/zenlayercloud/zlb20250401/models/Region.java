@@ -10,17 +10,17 @@ public class Region extends TeaModel {
 
 
     /**
-     * 节点ID
+     * 节点ID。
      */
     public String regionId;
 
     /**
-     * 节点所属的城市名称
+     * 节点所属的城市名称。
      */
     public String cityName;
 
     /**
-     * 城市对应的三字码
+     * 城市对应的三字码。
      */
     public String cityCode;
 

@@ -31,6 +31,11 @@ public class ZoneInfo extends TeaModel {
     @Deprecated
     public Boolean supportSecurityGroup;
 
+    /**
+     * 可用区所在的时区。
+     */
+    public String timeZone;
+
     public String getZoneId() {
         return this.zoneId;
     }
@@ -63,6 +68,14 @@ public class ZoneInfo extends TeaModel {
     @Deprecated
     public void setSupportSecurityGroup(Boolean supportSecurityGroup) {
         this.supportSecurityGroup = supportSecurityGroup;
+    }
+
+    public String getTimeZone() {
+        return this.timeZone;
+    }
+
+    public void setTimeZone(String timeZone) {
+        this.timeZone = timeZone;
     }
 
 }

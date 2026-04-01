@@ -25,6 +25,8 @@ public class InquiryPriceCreateInstanceResponse  extends TeaModel {
 
     public List<Price> bandwidthPrice;
 
+    public Price eipPrice;
+
     public Price systemDiskPrice;
 
     public Price dataDiskPrice;

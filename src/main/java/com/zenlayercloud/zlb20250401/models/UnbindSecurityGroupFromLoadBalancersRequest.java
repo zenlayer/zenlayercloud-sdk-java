@@ -8,7 +8,7 @@ public class UnbindSecurityGroupFromLoadBalancersRequest extends TeaModel {
 
 
     /**
-     * 要解绑安全组的负载均衡ID集合
+     * 要解绑安全组的负载均衡ID集合。
      */
     public List<String> loadBalancerIds;
 

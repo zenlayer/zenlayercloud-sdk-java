@@ -13,7 +13,7 @@ public class DescribeBackendHealthResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 负载均衡的后端服务器状态
+     * 负载均衡的后端服务器状态。
      */
     public List<ListenerBackendHealth> backends;
 

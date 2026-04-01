@@ -7,13 +7,13 @@ public class DescribeBackendHealthRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例 ID
+     * 负载均衡实例 ID。
      */
     public String loadBalancerId;
 
     /**
      * 负载均衡监听器的 ID。
-     * 如果未指定，则查询所有后端
+     * 如果未指定，则查询所有后端。
      */
     public String listenerId;
 

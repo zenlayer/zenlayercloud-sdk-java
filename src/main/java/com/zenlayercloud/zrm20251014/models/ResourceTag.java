@@ -10,17 +10,17 @@ public class ResourceTag extends TeaModel {
 
 
     /**
-     * 标签键
+     * 标签键。
      */
     public String key;
 
     /**
-     * 标签值
+     * 标签值。
      */
     public String value;
 
     /**
-     * 创建时间
+     * 创建时间。
      */
     public String createdDate;
 

@@ -26,6 +26,11 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
     public Price       instancePrice;
 
     /**
+     * 实例母IP价格。
+     */
+    public Price       primaryIpPrice;
+
+    /**
      * 公网带宽价格。
      * 可能有多个价格，比如流量包计费，包含包的价格和用量超出包后的价格
      */

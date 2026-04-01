@@ -5,39 +5,39 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 标签分页列表的请求参数。
+ * 
  */
 public class DescribeTagsRequest extends TeaModel {
 
 
     /**
-     * 页码，默认值1
+     * 页码。
      */
     public Integer pageNum;
 
     /**
-     * 每页面展示数量，默认值20
+     * 每页面展示数量。
      */
     public Integer pageSize;
 
     /**
-     * 标签键排序方式：ascend（正序），descend（倒序）
+     * 标签键排序方式：ascend（正序），descend（倒序）。
      */
     public String keySort;
 
     /**
      * 创建时间排序方式：ascend（正序），descend（倒序）。
-     * 默认倒序
+     * 默认倒序。
      */
     public String createdDateSort;
 
     /**
-     * 筛选的标签键集合
+     * 筛选的标签键集合。
      */
     public List<String> tagKeys;
 
     /**
-     * 筛选的标签集合
+     * 筛选的标签集合。
      */
     public List<Tag> tags;
 
