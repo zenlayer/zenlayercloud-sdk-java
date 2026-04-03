@@ -154,6 +154,11 @@ public class InstanceInfo extends TeaModel {
     public List<String> loadBalancerIds;
 
     /**
+     * 实例所属的置放组ID。
+     */
+    public String placementGroupId;
+
+    /**
      * 实例选项配置。
      */
     public InstanceOptions instanceOptions;
@@ -380,6 +385,14 @@ public class InstanceInfo extends TeaModel {
 
     public void setLoadBalancerIds(List<String> loadBalancerIds) {
         this.loadBalancerIds = loadBalancerIds;
+    }
+
+    public String getPlacementGroupId() {
+        return this.placementGroupId;
+    }
+
+    public void setPlacementGroupId(String placementGroupId) {
+        this.placementGroupId = placementGroupId;
     }
 
     public InstanceOptions getInstanceOptions() {

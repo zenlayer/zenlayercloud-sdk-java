@@ -37,7 +37,7 @@ public class CreateListenerRequest extends TeaModel {
      * 监听器端口。
      * 多个端口使用,分隔。
      * 当端口是范围时用`-`连接，例如：10000-10005。
-     * 端口的取值范围为1～65535。
+     * 端口的取值范围为0～65535，0代表全范围端口。
      * 请注意端口不能和该监听器的其他端口有重叠。
      */
     public String port;

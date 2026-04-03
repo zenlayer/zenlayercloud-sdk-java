@@ -22,6 +22,7 @@ public class HealthCheck extends TeaModel {
 
     /**
      * 健康检查端口。
+     * 当监听器端口为全端口（0）且健康检查类型为TCP或HTTP时，必须指定该端口。
      * 默认为后端服务的端口，除非您希望指定特定端口，否则建议留空。
      */
     public Integer checkPort;

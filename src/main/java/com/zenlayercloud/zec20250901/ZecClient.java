@@ -351,18 +351,6 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询云盘的列表信息。
-         */
-    public DescribeDisksResponse describeDisks(DescribeDisksRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeDisks",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeDisksResponse());
-    }
-
-        /**
          * 支持售卖云硬盘的节点。
          */
     public DescribeDiskRegionsResponse describeDiskRegions(DescribeDiskRegionsRequest request) {
@@ -375,6 +363,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 获取某个区域支持的云盘类型。
+         */
+    public DescribeDiskCategoryResponse describeDiskCategory(DescribeDiskCategoryRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeDiskCategory",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeDiskCategoryResponse());
+    }
+
+        /**
          * 创建一块或多块云硬盘的询价。
          */
     public InquiryPriceCreateDisksResponse inquiryPriceCreateDisks(InquiryPriceCreateDisksRequest request) {
@@ -384,6 +384,18 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new InquiryPriceCreateDisksResponse());
+    }
+
+        /**
+         * 查询云盘的列表信息。
+         */
+    public DescribeDisksResponse describeDisks(DescribeDisksRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeDisks",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeDisksResponse());
     }
 
         /**
@@ -483,18 +495,6 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 获取某个区域支持的云盘类型。
-         */
-    public DescribeDiskCategoryResponse describeDiskCategory(DescribeDiskCategoryRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeDiskCategory",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeDiskCategoryResponse());
-    }
-
-        /**
          * 查询一段时间的云硬盘的监控指标数据。
          */
     public DescribeDiskMonitorDataResponse describeDiskMonitorData(DescribeDiskMonitorDataRequest request) {
@@ -504,6 +504,18 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeDiskMonitorDataResponse());
+    }
+
+        /**
+         * 查询快照的详细信息。
+         */
+    public DescribeSnapshotsResponse describeSnapshots(DescribeSnapshotsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeSnapshots",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeSnapshotsResponse());
     }
 
         /**
@@ -531,30 +543,6 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 删除指定快照集合。
-         */
-    public DeleteSnapshotsResponse deleteSnapshots(DeleteSnapshotsRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DeleteSnapshots",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DeleteSnapshotsResponse());
-    }
-
-        /**
-         * 查询快照的详细信息。
-         */
-    public DescribeSnapshotsResponse describeSnapshots(DescribeSnapshotsRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeSnapshots",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeSnapshotsResponse());
-    }
-
-        /**
          * 回滚快照到原云盘。
          */
     public ApplySnapshotResponse applySnapshot(ApplySnapshotRequest request) {
@@ -567,6 +555,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 删除指定快照集合。
+         */
+    public DeleteSnapshotsResponse deleteSnapshots(DeleteSnapshotsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteSnapshots",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteSnapshotsResponse());
+    }
+
+        /**
          * 创建一个自动快照策略。
          */
     public CreateAutoSnapshotPolicyResponse createAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest request) {
@@ -576,6 +576,18 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new CreateAutoSnapshotPolicyResponse());
+    }
+
+        /**
+         * 查询自动快照策略的列表数据。
+         */
+    public DescribeAutoSnapshotPoliciesResponse describeAutoSnapshotPolicies(DescribeAutoSnapshotPoliciesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeAutoSnapshotPolicies",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeAutoSnapshotPoliciesResponse());
     }
 
         /**
@@ -600,18 +612,6 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new CancelAutoSnapshotPolicyResponse());
-    }
-
-        /**
-         * 查询自动快照策略的列表数据。
-         */
-    public DescribeAutoSnapshotPoliciesResponse describeAutoSnapshotPolicies(DescribeAutoSnapshotPoliciesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeAutoSnapshotPolicies",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeAutoSnapshotPoliciesResponse());
     }
 
         /**
@@ -951,6 +951,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 提交自带 IP 段（BYOIP）创建 CIDR。返回 RPKI/IRR 校验失败列表。
+         */
+    public CreateByoipResponse createByoip(CreateByoipRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateByoip",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateByoipResponse());
+    }
+
+        /**
          * 返回支持售卖 BYOIP 的区域及对应网段、网络类型等信息。
          */
     public DescribeByoipRegionsResponse describeByoipRegions(DescribeByoipRegionsRequest request) {
@@ -972,18 +984,6 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeByoipPriceResponse());
-    }
-
-        /**
-         * 提交自带 IP 段（BYOIP）创建 CIDR。返回 RPKI/IRR 校验失败列表。
-         */
-    public CreateByoipResponse createByoip(CreateByoipRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "CreateByoip",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new CreateByoipResponse());
     }
 
         /**
@@ -1071,18 +1071,6 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 变更弹性公网IP更网络计费模式。
-         */
-    public ChangeEipInternetChargeTypeResponse changeEipInternetChargeType(ChangeEipInternetChargeTypeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ChangeEipInternetChargeType",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ChangeEipInternetChargeTypeResponse());
-    }
-
-        /**
          * 查询可供弹性公网IP绑定的网卡及内网IP信息。
          */
     public AvailableLanIpResponse availableLanIp(AvailableLanIpRequest request) {
@@ -1131,6 +1119,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 变更弹性公网IP更网络计费模式。
+         */
+    public ChangeEipInternetChargeTypeResponse changeEipInternetChargeType(ChangeEipInternetChargeTypeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ChangeEipInternetChargeType",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ChangeEipInternetChargeTypeResponse());
+    }
+
+        /**
          * 调整弹性公网IP的带宽限速。
          */
     public ModifyEipBandwidthResponse modifyEipBandwidth(ModifyEipBandwidthRequest request) {
@@ -1167,6 +1167,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 指定IP作为出口IP。
+         */
+    public ConfigEipEgressIpResponse configEipEgressIp(ConfigEipEgressIpRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ConfigEipEgressIp",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ConfigEipEgressIpResponse());
+    }
+
+        /**
          * 删除指定的弹性公网IP。
          */
     public DeleteEipResponse deleteEip(DeleteEipRequest request) {
@@ -1176,6 +1188,18 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DeleteEipResponse());
+    }
+
+        /**
+         * 恢复弹性公网IP
+         */
+    public RenewEipResponse renewEip(RenewEipRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "RenewEip",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new RenewEipResponse());
     }
 
         /**
@@ -1200,30 +1224,6 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeEipMonitorDataResponse());
-    }
-
-        /**
-         * 恢复弹性公网IP
-         */
-    public RenewEipResponse renewEip(RenewEipRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "RenewEip",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new RenewEipResponse());
-    }
-
-        /**
-         * 指定IP作为出口IP。
-         */
-    public ConfigEipEgressIpResponse configEipEgressIp(ConfigEipEgressIpRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ConfigEipEgressIp",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ConfigEipEgressIpResponse());
     }
 
         /**
@@ -2136,6 +2136,66 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new UnAssignSecurityGroupVpcResponse());
+    }
+
+        /**
+         * 创建一个置放组。
+         */
+    public CreatePlacementGroupResponse createPlacementGroup(CreatePlacementGroupRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreatePlacementGroup",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreatePlacementGroupResponse());
+    }
+
+        /**
+         * 修改置放组的名称、分区数、亲和度等属性。
+         */
+    public ModifyPlacementGroupAttributesResponse modifyPlacementGroupAttributes(ModifyPlacementGroupAttributesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyPlacementGroupAttributes",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyPlacementGroupAttributesResponse());
+    }
+
+        /**
+         * 查询一个或多个置放组的信息。用户可以根据置放组ID、名称或可用区等条件来查询置放组的详细信息。
+         */
+    public DescribePlacementGroupsResponse describePlacementGroups(DescribePlacementGroupsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribePlacementGroups",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribePlacementGroupsResponse());
+    }
+
+        /**
+         * 删除一个或多个置放组。删除后置放组内所有实例解除放置策略约束。
+         */
+    public DeletePlacementGroupsResponse deletePlacementGroups(DeletePlacementGroupsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeletePlacementGroups",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeletePlacementGroupsResponse());
+    }
+
+        /**
+         * 将实例加入置放组、从一个置放组迁移到另一个、或从置放组移除（placementGroupId 为空表示移除）。
+         */
+    public ModifyInstancePlacementResponse modifyInstancePlacement(ModifyInstancePlacementRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyInstancePlacement",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyInstancePlacementResponse());
     }
 
 }
