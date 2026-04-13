@@ -351,6 +351,30 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 将自定义镜像复制到指定区域列表。
+         */
+    public CopyImageResponse copyImage(CopyImageRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CopyImage",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CopyImageResponse());
+    }
+
+        /**
+         * 删除镜像在指定区域的副本。
+         */
+    public DeleteImageCopyResponse deleteImageCopy(DeleteImageCopyRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteImageCopy",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteImageCopyResponse());
+    }
+
+        /**
          * 支持售卖云硬盘的节点。
          */
     public DescribeDiskRegionsResponse describeDiskRegions(DescribeDiskRegionsRequest request) {
@@ -2187,7 +2211,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 将实例加入置放组、从一个置放组迁移到另一个、或从置放组移除（placementGroupId 为空表示移除）。
+         * 将实例加入置放组、从一个置放组迁移到另一个、或从置放组移除。
          */
     public ModifyInstancePlacementResponse modifyInstancePlacement(ModifyInstancePlacementRequest request) {
         Map<String, ?> rsp = super.callApi(
