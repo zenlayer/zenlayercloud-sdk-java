@@ -1,27 +1,63 @@
-/*
- * Zenlayer.com Inc.
- * Copyright (c) 2014-2024 All Rights Reserved.
- */
 package com.zenlayercloud.ipt20240901.models;
 
 import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
-/**
- * @author wolfgang
- * @date 2024-05-24 09:12:28
- * @version $ Id: RemoteIptDescribePriceResponse.java, v 0.1  wolfgang Exp $
- */
 public class InquiryCreateIPTransitPriceResponse extends TeaModel {
 
-    public Price                  privateConnectPrice;
-    public Price                  iptBandwidthPrice;
-    public List<IpPricesResponse> publicIpPrices;
 
-    public static class IpPricesResponse extends TeaModel {
-        public Price   price;
-        public Integer netmask;
-        public Integer qty;
+    /**
+     * requestId
+     */
+    public String requestId;
+
+    /**
+     * IP Transit 的 专线价格。
+     * 如果IP Transit 和端口位于同一个数据中心，则取值为null。
+     */
+    public PriceItem privateConnectPrice;
+
+    /**
+     * IP Transit 的公网带宽价格。
+     */
+    public PriceItem iptBandwidthPrice;
+
+    /**
+     * IP Transit 的公网IP价格。
+     */
+    public List<IPPrice> publicIpPrices;
+
+    public String getRequestId() {
+        return this.requestId;
     }
+
+    public void setRequestId(String requestId) {
+        this.requestId = requestId;
+    }
+
+    public PriceItem getPrivateConnectPrice() {
+        return this.privateConnectPrice;
+    }
+
+    public void setPrivateConnectPrice(PriceItem privateConnectPrice) {
+        this.privateConnectPrice = privateConnectPrice;
+    }
+
+    public PriceItem getIptBandwidthPrice() {
+        return this.iptBandwidthPrice;
+    }
+
+    public void setIptBandwidthPrice(PriceItem iptBandwidthPrice) {
+        this.iptBandwidthPrice = iptBandwidthPrice;
+    }
+
+    public List<IPPrice> getPublicIpPrices() {
+        return this.publicIpPrices;
+    }
+
+    public void setPublicIpPrices(List<IPPrice> publicIpPrices) {
+        this.publicIpPrices = publicIpPrices;
+    }
+
 }
