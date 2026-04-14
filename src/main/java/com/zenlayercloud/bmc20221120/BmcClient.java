@@ -15,10 +15,12 @@ import com.zenlayercloud.common.Credential;
 import java.util.Map;
 
 /**
+ * For maintaining enhanced SDK consistency. This client is no longer in use, please use {@link  com.zenlayercloud.bmc20260201.BmcClient}.
  * @author wolfgang
  * @date 2022-11-09 19:13:40
  * @version $ Id: BmcClient.java, v 0.1  wolfgang Exp $
  */
+@Deprecated
 public class BmcClient extends AbstractClient {
 
     private static final String VERSION  = "2022-11-20";

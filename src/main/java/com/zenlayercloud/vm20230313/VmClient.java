@@ -15,6 +15,8 @@ import com.zenlayercloud.vm20230313.models.*;
 import java.util.Map;
 
 /**
+ * For maintaining enhanced SDK consistency. This client is no longer in use, please use {@link  com.zenlayercloud.vm20260401.VmClient}.
+ *
  * @author sherlock
  * @version $ Id: VmClient.java, v 0.1  sherlock Exp $
  * @date 2023-03-13 14:43:09
