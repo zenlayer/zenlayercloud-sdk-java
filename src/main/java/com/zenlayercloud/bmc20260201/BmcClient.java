@@ -591,6 +591,18 @@ public class BmcClient extends AbstractClient {
     }
 
         /**
+         * 创建一个BYO IP。
+         */
+    public CreateByoipResponse createByoip(CreateByoipRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateByoip",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateByoipResponse());
+    }
+
+        /**
          * 创建EIP询价。
          */
     public InquiryPriceCreateEipAddressResponse inquiryPriceCreateEipAddress(InquiryPriceCreateEipAddressRequest request) {
