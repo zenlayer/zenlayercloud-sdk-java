@@ -143,6 +143,17 @@ public class CreateInstancesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * CIDR 地址块ID。指定该字段将从CIDR 地址块里分配公网IP
+     */
+    public String cidrBlockId;
+
+    /**
+     * CIDR地址段内的起始IP地址。
+     * 该字段需要配额`cidrBlockId`一起使用，该字段代表将从该地址起始从地址段中给机器分配公网IP。
+     */
+    public String startCidrIpv4;
+
+    /**
      * 市场营销活动相关信息。
      */
     public MarketingInfo marketingOptions;
@@ -359,6 +370,22 @@ public class CreateInstancesRequest extends TeaModel {
 
     public void setClusterId(String clusterId) {
         this.clusterId = clusterId;
+    }
+
+    public String getCidrBlockId() {
+        return this.cidrBlockId;
+    }
+
+    public void setCidrBlockId(String cidrBlockId) {
+        this.cidrBlockId = cidrBlockId;
+    }
+
+    public String getStartCidrIpv4() {
+        return this.startCidrIpv4;
+    }
+
+    public void setStartCidrIpv4(String startCidrIpv4) {
+        this.startCidrIpv4 = startCidrIpv4;
     }
 
     public MarketingInfo getMarketingOptions() {

@@ -14,6 +14,7 @@ public class StopInstancesRequest extends TeaModel {
 
     /**
      * 是否强制关机。
+     * 如果不指定默认为是。
      */
     public Boolean forceShutdown;
 

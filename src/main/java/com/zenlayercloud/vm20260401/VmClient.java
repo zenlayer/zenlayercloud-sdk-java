@@ -27,99 +27,651 @@ public class VmClient extends AbstractClient {
     }
 
         /**
-         * 创建VPC。
+         * 查询可用地区。
          */
-    public CreateVpcResponse createVpc(CreateVpcRequest request) {
+    public DescribeZonesResponse describeZones(DescribeZonesRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "CreateVpc",
+            "DescribeZones",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new CreateVpcResponse());
+        return TeaModel.toModel(rsp, new DescribeZonesResponse());
     }
 
         /**
-         * 创建VPC的子网。
+         * 创建一台虚拟机实例询价。
          */
-    public CreateVpcSubnetResponse createVpcSubnet(CreateVpcSubnetRequest request) {
+    public InquiryPriceCreateInstanceResponse inquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "CreateVpcSubnet",
+            "InquiryPriceCreateInstance",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new CreateVpcSubnetResponse());
+        return TeaModel.toModel(rsp, new InquiryPriceCreateInstanceResponse());
     }
 
         /**
-         * 删除一个VPC子网。
+         * 查询售卖可用区的机型信息。
          */
-    public DeleteVpcSubnetResponse deleteVpcSubnet(DeleteVpcSubnetRequest request) {
+    public DescribeZoneInstanceConfigInfosResponse describeZoneInstanceConfigInfos(DescribeZoneInstanceConfigInfosRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "DeleteVpcSubnet",
+            "DescribeZoneInstanceConfigInfos",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new DeleteVpcSubnetResponse());
+        return TeaModel.toModel(rsp, new DescribeZoneInstanceConfigInfosResponse());
     }
 
         /**
-         * 修改VPC子网的属性（目前只支持修改VPC子网的名称）。
+         * 创建一个或多个指定配置的虚拟机实例。
          */
-    public ModifyVpcSubnetsAttributeResponse modifyVpcSubnetsAttribute(ModifyVpcSubnetsAttributeRequest request) {
+    public CreateInstancesResponse createInstances(CreateInstancesRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "ModifyVpcSubnetsAttribute",
+            "CreateInstances",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new ModifyVpcSubnetsAttributeResponse());
+        return TeaModel.toModel(rsp, new CreateInstancesResponse());
     }
 
         /**
-         * 查询一台或多台指定子网的信息。用户可以根据Subnet ID、VPC ID、Subnet名称等信息来搜索Subnet信息。
+         * 将虚拟机实例操作系统的密码重置为用户指定的密码。
          */
-    public DescribeVpcSubnetsResponse describeVpcSubnets(DescribeVpcSubnetsRequest request) {
+    public ResetInstancesPasswordResponse resetInstancesPassword(ResetInstancesPasswordRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "DescribeVpcSubnets",
+            "ResetInstancesPassword",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new DescribeVpcSubnetsResponse());
+        return TeaModel.toModel(rsp, new ResetInstancesPasswordResponse());
     }
 
         /**
-         * 修改VPC的属性（目前只支持修改VPC的名称）。
+         * 重装一台虚拟机实例上的操作系统。
          */
-    public ModifyVpcsAttributeResponse modifyVpcsAttribute(ModifyVpcsAttributeRequest request) {
+    public ResetInstanceResponse resetInstance(ResetInstanceRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "ModifyVpcsAttribute",
+            "ResetInstance",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new ModifyVpcsAttributeResponse());
+        return TeaModel.toModel(rsp, new ResetInstanceResponse());
     }
 
         /**
-         * 查询一台或多台指定子网的信息。用户可以根据VPC ID、VPC名称等信息来搜索VPC信息。
+         * 修改虚拟机实例所属的资源组。
          */
-    public DescribeVpcsResponse describeVpcs(DescribeVpcsRequest request) {
+    public ModifyInstancesResourceGroupResponse modifyInstancesResourceGroup(ModifyInstancesResourceGroupRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "DescribeVpcs",
+            "ModifyInstancesResourceGroup",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new DescribeVpcsResponse());
+        return TeaModel.toModel(rsp, new ModifyInstancesResourceGroupResponse());
     }
 
         /**
-         * 删除一个VPC。
+         * 查询一台或多台虚拟机实例的信息。用户可以根据实例ID、实例名称或者实例计费模式等条件来查询实例的详细信息。
          */
-    public DeleteVpcResponse deleteVpc(DeleteVpcRequest request) {
+    public DescribeInstancesResponse describeInstances(DescribeInstancesRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "DeleteVpc",
+            "DescribeInstances",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new DeleteVpcResponse());
+        return TeaModel.toModel(rsp, new DescribeInstancesResponse());
+    }
+
+        /**
+         * 查询一台或多台虚拟机实例的状态。
+         */
+    public DescribeInstancesStatusResponse describeInstancesStatus(DescribeInstancesStatusRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeInstancesStatus",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeInstancesStatusResponse());
+    }
+
+        /**
+         * 启动一个或多个虚拟机实例。
+         */
+    public StartInstancesResponse startInstances(StartInstancesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "StartInstances",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new StartInstancesResponse());
+    }
+
+        /**
+         * 获取实例VNC地址。
+         */
+    public DescribeVncUrlResponse describeVncUrl(DescribeVncUrlRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeVncUrl",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeVncUrlResponse());
+    }
+
+        /**
+         * 修改虚拟机实例的属性（目前只支持修改实例的显示名称）。
+         */
+    public ModifyInstancesAttributeResponse modifyInstancesAttribute(ModifyInstancesAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyInstancesAttribute",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyInstancesAttributeResponse());
+    }
+
+        /**
+         * 关闭一个或多个虚拟机实例。
+         */
+    public StopInstancesResponse stopInstances(StopInstancesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "StopInstances",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new StopInstancesResponse());
+    }
+
+        /**
+         * 重启一个或多个虚拟机实例。
+         */
+    public RebootInstancesResponse rebootInstances(RebootInstancesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "RebootInstances",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new RebootInstancesResponse());
+    }
+
+        /**
+         * 修改一台虚拟机实例的机型。
+         */
+    public ModifyInstanceTypeResponse modifyInstanceType(ModifyInstanceTypeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyInstanceType",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyInstanceTypeResponse());
+    }
+
+        /**
+         * 查询实例变配后的机型状态。
+         */
+    public DescribeInstanceTypeStatusResponse describeInstanceTypeStatus(DescribeInstanceTypeStatusRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeInstanceTypeStatus",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeInstanceTypeStatusResponse());
+    }
+
+        /**
+         * 虚拟机实例修改流量包询价。
+         */
+    public InquiryPriceInstanceTrafficPackageResponse inquiryPriceInstanceTrafficPackage(InquiryPriceInstanceTrafficPackageRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceInstanceTrafficPackage",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceInstanceTrafficPackageResponse());
+    }
+
+        /**
+         * 修改虚拟机实例流量包大小。
+         */
+    public ModifyInstanceTrafficPackageResponse modifyInstanceTrafficPackage(ModifyInstanceTrafficPackageRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyInstanceTrafficPackage",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyInstanceTrafficPackageResponse());
+    }
+
+        /**
+         * 取消虚拟机实例流量包降配订单。
+         */
+    public CancelInstanceTrafficPackageDowngradeResponse cancelInstanceTrafficPackageDowngrade(CancelInstanceTrafficPackageDowngradeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CancelInstanceTrafficPackageDowngrade",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CancelInstanceTrafficPackageDowngradeResponse());
+    }
+
+        /**
+         * 修改虚拟机实例的公网出口带宽。
+         */
+    public ModifyInstanceBandwidthResponse modifyInstanceBandwidth(ModifyInstanceBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyInstanceBandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyInstanceBandwidthResponse());
+    }
+
+        /**
+         * 取消虚拟机实例带宽降配订单。
+         */
+    public CancelInstanceBandwidthDowngradeResponse cancelInstanceBandwidthDowngrade(CancelInstanceBandwidthDowngradeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CancelInstanceBandwidthDowngrade",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CancelInstanceBandwidthDowngradeResponse());
+    }
+
+        /**
+         * 查询实例带宽、流量包状态。
+         */
+    public DescribeInstanceInternetStatusResponse describeInstanceInternetStatus(DescribeInstanceInternetStatusRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeInstanceInternetStatus",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeInstanceInternetStatusResponse());
+    }
+
+        /**
+         * 取消虚拟机实例降配订单。
+         */
+    public CancelInstanceDowngradeResponse cancelInstanceDowngrade(CancelInstanceDowngradeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CancelInstanceDowngrade",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CancelInstanceDowngradeResponse());
+    }
+
+        /**
+         * 退还一个虚拟机实例。
+         */
+    public TerminateInstanceResponse terminateInstance(TerminateInstanceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "TerminateInstance",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new TerminateInstanceResponse());
+    }
+
+        /**
+         * 释放一个或多个虚拟机实例。
+         */
+    public ReleaseInstancesResponse releaseInstances(ReleaseInstancesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ReleaseInstances",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ReleaseInstancesResponse());
+    }
+
+        /**
+         * 虚拟机实例修改带宽询价。
+         */
+    public InquiryPriceInstanceBandwidthResponse inquiryPriceInstanceBandwidth(InquiryPriceInstanceBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceInstanceBandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceInstanceBandwidthResponse());
+    }
+
+        /**
+         * 查询实例指定时间段内的流量信息。
+         */
+    public DescribeInstanceTrafficResponse describeInstanceTraffic(DescribeInstanceTrafficRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeInstanceTraffic",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeInstanceTrafficResponse());
+    }
+
+        /**
+         * 查询实例指定时间段内的CPU使用率。
+         */
+    public DescribeInstanceCpuMonitorResponse describeInstanceCpuMonitor(DescribeInstanceCpuMonitorRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeInstanceCpuMonitor",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeInstanceCpuMonitorResponse());
+    }
+
+        /**
+         * 查询云硬盘支持的类型。
+         */
+    public DescribeDiskCategoryResponse describeDiskCategory(DescribeDiskCategoryRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeDiskCategory",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeDiskCategoryResponse());
+    }
+
+        /**
+         * 创建云硬盘询价。
+         */
+    public InquiryPriceCreateDisksResponse inquiryPriceCreateDisks(InquiryPriceCreateDisksRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceCreateDisks",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceCreateDisksResponse());
+    }
+
+        /**
+         * 查询云硬盘列表。
+         */
+    public DescribeDisksResponse describeDisks(DescribeDisksRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeDisks",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeDisksResponse());
+    }
+
+        /**
+         * 创建一个或多个云硬盘。
+         */
+    public CreateDisksResponse createDisks(CreateDisksRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateDisks",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateDisksResponse());
+    }
+
+        /**
+         * 修改一个或多个云硬盘属性。
+         */
+    public ModifyDisksAttributesResponse modifyDisksAttributes(ModifyDisksAttributesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyDisksAttributes",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyDisksAttributesResponse());
+    }
+
+        /**
+         * 挂载云硬盘到云主机实例。
+         */
+    public AttachDisksResponse attachDisks(AttachDisksRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "AttachDisks",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new AttachDisksResponse());
+    }
+
+        /**
+         * 从云主机实例上卸载云硬盘。
+         */
+    public DetachDisksResponse detachDisks(DetachDisksRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DetachDisks",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DetachDisksResponse());
+    }
+
+        /**
+         * 将一个或多个已经挂载到一台实例的云硬盘挂载到另外一台实例上。
+         */
+    public ChangeDisksAttachResponse changeDisksAttach(ChangeDisksAttachRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ChangeDisksAttach",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ChangeDisksAttachResponse());
+    }
+
+        /**
+         * 终止云硬盘。
+         */
+    public TerminateDiskResponse terminateDisk(TerminateDiskRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "TerminateDisk",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new TerminateDiskResponse());
+    }
+
+        /**
+         * 修改云硬盘所属的资源组。
+         */
+    public ModifyDisksResourceGroupResponse modifyDisksResourceGroup(ModifyDisksResourceGroupRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyDisksResourceGroup",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyDisksResourceGroupResponse());
+    }
+
+        /**
+         * 将一个云硬盘扩容到指定大小。
+         */
+    public ResizeDiskResponse resizeDisk(ResizeDiskRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ResizeDisk",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ResizeDiskResponse());
+    }
+
+        /**
+         * 释放云硬盘。
+         */
+    public ReleaseDiskResponse releaseDisk(ReleaseDiskRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ReleaseDisk",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ReleaseDiskResponse());
+    }
+
+        /**
+         * 续费云硬盘。
+         */
+    public RenewDiskResponse renewDisk(RenewDiskRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "RenewDisk",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new RenewDiskResponse());
+    }
+
+        /**
+         * 查询可创建镜像的配额。
+         */
+    public DescribeImageQuotaResponse describeImageQuota(DescribeImageQuotaRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeImageQuota",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeImageQuotaResponse());
+    }
+
+        /**
+         * 查看镜像列表。
+         */
+    public DescribeImagesResponse describeImages(DescribeImagesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeImages",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeImagesResponse());
+    }
+
+        /**
+         * 创建自定义镜像。
+         */
+    public CreateImageResponse createImage(CreateImageRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateImage",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateImageResponse());
+    }
+
+        /**
+         * 修改镜像属性。
+         */
+    public ModifyImagesAttributesResponse modifyImagesAttributes(ModifyImagesAttributesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyImagesAttributes",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyImagesAttributesResponse());
+    }
+
+        /**
+         * 删除一个或多个镜像。
+         */
+    public DeleteImagesResponse deleteImages(DeleteImagesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteImages",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteImagesResponse());
+    }
+
+        /**
+         * 查询一台或多台指定子网的信息。用户可以根据Subnet ID、区域、Subnet名称等信息来搜索Subnet信息。
+         */
+    public DescribeSubnetsResponse describeSubnets(DescribeSubnetsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeSubnets",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeSubnetsResponse());
+    }
+
+        /**
+         * 创建子网。
+         */
+    public CreateSubnetResponse createSubnet(CreateSubnetRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateSubnet",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateSubnetResponse());
+    }
+
+        /**
+         * 修改子网的属性（目前只支持修改子网的名称）。
+         */
+    public ModifySubnetsAttributeResponse modifySubnetsAttribute(ModifySubnetsAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifySubnetsAttribute",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifySubnetsAttributeResponse());
+    }
+
+        /**
+         * 删除一个子网。
+         */
+    public DeleteSubnetResponse deleteSubnet(DeleteSubnetRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteSubnet",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteSubnetResponse());
+    }
+
+        /**
+         * 查询一个或多个指定安全组的信息。用户可以根据安全组ID、安全组名称等信息来搜索安全组信息。
+         */
+    public DescribeSecurityGroupsResponse describeSecurityGroups(DescribeSecurityGroupsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeSecurityGroups",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeSecurityGroupsResponse());
+    }
+
+        /**
+         * 创建安全组。
+         */
+    public CreateSecurityGroupResponse createSecurityGroup(CreateSecurityGroupRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateSecurityGroup",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateSecurityGroupResponse());
+    }
+
+        /**
+         * 修改安全组的属性（目前只支持修改安全组的名称）。
+         */
+    public ModifySecurityGroupsAttributeResponse modifySecurityGroupsAttribute(ModifySecurityGroupsAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifySecurityGroupsAttribute",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifySecurityGroupsAttributeResponse());
+    }
+
+        /**
+         * 删除安全组。
+         */
+    public DeleteSecurityGroupResponse deleteSecurityGroup(DeleteSecurityGroupRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteSecurityGroup",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteSecurityGroupResponse());
     }
 
         /**
@@ -183,42 +735,6 @@ public class VmClient extends AbstractClient {
     }
 
         /**
-         * 创建安全组。
-         */
-    public CreateSecurityGroupResponse createSecurityGroup(CreateSecurityGroupRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "CreateSecurityGroup",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new CreateSecurityGroupResponse());
-    }
-
-        /**
-         * 删除安全组。
-         */
-    public DeleteSecurityGroupResponse deleteSecurityGroup(DeleteSecurityGroupRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DeleteSecurityGroup",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DeleteSecurityGroupResponse());
-    }
-
-        /**
-         * 新增安全组单条规则。
-         */
-    public AuthorizeSecurityGroupRuleResponse authorizeSecurityGroupRule(AuthorizeSecurityGroupRuleRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "AuthorizeSecurityGroupRule",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new AuthorizeSecurityGroupRuleResponse());
-    }
-
-        /**
          * 新增安全组的规则。
          */
     public AuthorizeSecurityGroupRulesResponse authorizeSecurityGroupRules(AuthorizeSecurityGroupRulesRequest request) {
@@ -231,627 +747,15 @@ public class VmClient extends AbstractClient {
     }
 
         /**
-         * 查询一个或多个指定安全组的信息。用户可以根据安全组ID、安全组名称等信息来搜索安全组信息。
+         * 新增安全组单条规则。
          */
-    public DescribeSecurityGroupsResponse describeSecurityGroups(DescribeSecurityGroupsRequest request) {
+    public AuthorizeSecurityGroupRuleResponse authorizeSecurityGroupRule(AuthorizeSecurityGroupRuleRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "DescribeSecurityGroups",
+            "AuthorizeSecurityGroupRule",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new DescribeSecurityGroupsResponse());
-    }
-
-        /**
-         * 修改安全组的属性（目前只支持修改安全组的名称）。
-         */
-    public ModifySecurityGroupsAttributeResponse modifySecurityGroupsAttribute(ModifySecurityGroupsAttributeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifySecurityGroupsAttribute",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifySecurityGroupsAttributeResponse());
-    }
-
-        /**
-         * 删除一个子网。
-         */
-    public DeleteSubnetResponse deleteSubnet(DeleteSubnetRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DeleteSubnet",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DeleteSubnetResponse());
-    }
-
-        /**
-         * 修改子网的属性（目前只支持修改子网的名称）。
-         */
-    public ModifySubnetsAttributeResponse modifySubnetsAttribute(ModifySubnetsAttributeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifySubnetsAttribute",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifySubnetsAttributeResponse());
-    }
-
-        /**
-         * 查询一台或多台指定子网的信息。用户可以根据Subnet ID、区域、Subnet名称等信息来搜索Subnet信息。
-         */
-    public DescribeSubnetsResponse describeSubnets(DescribeSubnetsRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeSubnets",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeSubnetsResponse());
-    }
-
-        /**
-         * 创建子网。
-         */
-    public CreateSubnetResponse createSubnet(CreateSubnetRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "CreateSubnet",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new CreateSubnetResponse());
-    }
-
-        /**
-         * 删除一个或多个镜像。
-         */
-    public DeleteImagesResponse deleteImages(DeleteImagesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DeleteImages",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DeleteImagesResponse());
-    }
-
-        /**
-         * 创建自定义镜像。
-         */
-    public CreateImageResponse createImage(CreateImageRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "CreateImage",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new CreateImageResponse());
-    }
-
-        /**
-         * 查看镜像列表。
-         */
-    public DescribeImagesResponse describeImages(DescribeImagesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeImages",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeImagesResponse());
-    }
-
-        /**
-         * 修改镜像属性。
-         */
-    public ModifyImagesAttributesResponse modifyImagesAttributes(ModifyImagesAttributesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyImagesAttributes",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyImagesAttributesResponse());
-    }
-
-        /**
-         * 查询可创建镜像的配额。
-         */
-    public DescribeImageQuotaResponse describeImageQuota(DescribeImageQuotaRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeImageQuota",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeImageQuotaResponse());
-    }
-
-        /**
-         * 查询可用地区。
-         */
-    public DescribeZonesResponse describeZones(DescribeZonesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeZones",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeZonesResponse());
-    }
-
-        /**
-         * 将虚拟机实例操作系统的密码重置为用户指定的密码。
-         */
-    public ResetInstancesPasswordResponse resetInstancesPassword(ResetInstancesPasswordRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ResetInstancesPassword",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ResetInstancesPasswordResponse());
-    }
-
-        /**
-         * 重装一台虚拟机实例上的操作系统。
-         */
-    public ResetInstanceResponse resetInstance(ResetInstanceRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ResetInstance",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ResetInstanceResponse());
-    }
-
-        /**
-         * 退还一个虚拟机实例。
-         */
-    public TerminateInstanceResponse terminateInstance(TerminateInstanceRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "TerminateInstance",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new TerminateInstanceResponse());
-    }
-
-        /**
-         * 释放一个或多个虚拟机实例。
-         */
-    public ReleaseInstancesResponse releaseInstances(ReleaseInstancesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ReleaseInstances",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ReleaseInstancesResponse());
-    }
-
-        /**
-         * 修改虚拟机实例所属的资源组。
-         */
-    public ModifyInstancesResourceGroupResponse modifyInstancesResourceGroup(ModifyInstancesResourceGroupRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyInstancesResourceGroup",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyInstancesResourceGroupResponse());
-    }
-
-        /**
-         * 取消虚拟机实例流量包降配订单。
-         */
-    public CancelInstanceTrafficPackageDowngradeResponse cancelInstanceTrafficPackageDowngrade(CancelInstanceTrafficPackageDowngradeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "CancelInstanceTrafficPackageDowngrade",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new CancelInstanceTrafficPackageDowngradeResponse());
-    }
-
-        /**
-         * 修改虚拟机实例流量包大小。
-         */
-    public ModifyInstanceTrafficPackageResponse modifyInstanceTrafficPackage(ModifyInstanceTrafficPackageRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyInstanceTrafficPackage",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyInstanceTrafficPackageResponse());
-    }
-
-        /**
-         * 虚拟机实例修改流量包询价。
-         */
-    public InquiryPriceInstanceTrafficPackageResponse inquiryPriceInstanceTrafficPackage(InquiryPriceInstanceTrafficPackageRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "InquiryPriceInstanceTrafficPackage",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new InquiryPriceInstanceTrafficPackageResponse());
-    }
-
-        /**
-         * 获取实例VNC地址。
-         */
-    public DescribeVncUrlResponse describeVncUrl(DescribeVncUrlRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeVncUrl",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeVncUrlResponse());
-    }
-
-        /**
-         * 查询实例指定时间段内的流量信息。
-         */
-    public DescribeInstanceTrafficResponse describeInstanceTraffic(DescribeInstanceTrafficRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeInstanceTraffic",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeInstanceTrafficResponse());
-    }
-
-        /**
-         * 查询实例指定时间段内的CPU使用率。
-         */
-    public DescribeInstanceCpuMonitorResponse describeInstanceCpuMonitor(DescribeInstanceCpuMonitorRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeInstanceCpuMonitor",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeInstanceCpuMonitorResponse());
-    }
-
-        /**
-         * 启动一个或多个虚拟机实例。
-         */
-    public StartInstancesResponse startInstances(StartInstancesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "StartInstances",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new StartInstancesResponse());
-    }
-
-        /**
-         * 创建一个或多个指定配置的虚拟机实例。
-         */
-    public CreateInstancesResponse createInstances(CreateInstancesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "CreateInstances",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new CreateInstancesResponse());
-    }
-
-        /**
-         * 创建一台虚拟机实例询价。
-         */
-    public InquiryPriceCreateInstanceResponse inquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "InquiryPriceCreateInstance",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new InquiryPriceCreateInstanceResponse());
-    }
-
-        /**
-         * 查询一台或多台虚拟机实例的状态。
-         */
-    public DescribeInstancesStatusResponse describeInstancesStatus(DescribeInstancesStatusRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeInstancesStatus",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeInstancesStatusResponse());
-    }
-
-        /**
-         * 修改虚拟机实例的属性（目前只支持修改实例的显示名称）。
-         */
-    public ModifyInstancesAttributeResponse modifyInstancesAttribute(ModifyInstancesAttributeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyInstancesAttribute",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyInstancesAttributeResponse());
-    }
-
-        /**
-         * 查询一台或多台虚拟机实例的信息。用户可以根据实例ID、实例名称或者实例计费模式等条件来查询实例的详细信息。
-         */
-    public DescribeInstancesResponse describeInstances(DescribeInstancesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeInstances",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeInstancesResponse());
-    }
-
-        /**
-         * 关闭一个或多个虚拟机实例。
-         */
-    public StopInstancesResponse stopInstances(StopInstancesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "StopInstances",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new StopInstancesResponse());
-    }
-
-        /**
-         * 重启一个或多个虚拟机实例。
-         */
-    public RebootInstancesResponse rebootInstances(RebootInstancesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "RebootInstances",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new RebootInstancesResponse());
-    }
-
-        /**
-         * 查询售卖可用区的机型信息。
-         */
-    public DescribeZoneInstanceConfigInfosResponse describeZoneInstanceConfigInfos(DescribeZoneInstanceConfigInfosRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeZoneInstanceConfigInfos",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeZoneInstanceConfigInfosResponse());
-    }
-
-        /**
-         * 取消虚拟机实例带宽降配订单。
-         */
-    public CancelInstanceBandwidthDowngradeResponse cancelInstanceBandwidthDowngrade(CancelInstanceBandwidthDowngradeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "CancelInstanceBandwidthDowngrade",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new CancelInstanceBandwidthDowngradeResponse());
-    }
-
-        /**
-         * 修改虚拟机实例的公网出口带宽。
-         */
-    public ModifyInstanceBandwidthResponse modifyInstanceBandwidth(ModifyInstanceBandwidthRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyInstanceBandwidth",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyInstanceBandwidthResponse());
-    }
-
-        /**
-         * 虚拟机实例修改带宽询价。
-         */
-    public InquiryPriceInstanceBandwidthResponse inquiryPriceInstanceBandwidth(InquiryPriceInstanceBandwidthRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "InquiryPriceInstanceBandwidth",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new InquiryPriceInstanceBandwidthResponse());
-    }
-
-        /**
-         * 查询实例带宽、流量包状态。
-         */
-    public DescribeInstanceInternetStatusResponse describeInstanceInternetStatus(DescribeInstanceInternetStatusRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeInstanceInternetStatus",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeInstanceInternetStatusResponse());
-    }
-
-        /**
-         * 修改一台虚拟机实例的机型。
-         */
-    public ModifyInstanceTypeResponse modifyInstanceType(ModifyInstanceTypeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyInstanceType",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyInstanceTypeResponse());
-    }
-
-        /**
-         * 取消虚拟机实例降配订单。
-         */
-    public CancelInstanceDowngradeResponse cancelInstanceDowngrade(CancelInstanceDowngradeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "CancelInstanceDowngrade",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new CancelInstanceDowngradeResponse());
-    }
-
-        /**
-         * 查询实例变配后的机型状态。
-         */
-    public DescribeInstanceTypeStatusResponse describeInstanceTypeStatus(DescribeInstanceTypeStatusRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeInstanceTypeStatus",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeInstanceTypeStatusResponse());
-    }
-
-        /**
-         * 从云主机实例上卸载云硬盘。
-         */
-    public DetachDisksResponse detachDisks(DetachDisksRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DetachDisks",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DetachDisksResponse());
-    }
-
-        /**
-         * 修改一个或多个云硬盘属性。
-         */
-    public ModifyDisksAttributesResponse modifyDisksAttributes(ModifyDisksAttributesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyDisksAttributes",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyDisksAttributesResponse());
-    }
-
-        /**
-         * 创建云硬盘询价。
-         */
-    public InquiryPriceCreateDisksResponse inquiryPriceCreateDisks(InquiryPriceCreateDisksRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "InquiryPriceCreateDisks",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new InquiryPriceCreateDisksResponse());
-    }
-
-        /**
-         * 终止云硬盘。
-         */
-    public TerminateDiskResponse terminateDisk(TerminateDiskRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "TerminateDisk",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new TerminateDiskResponse());
-    }
-
-        /**
-         * 创建一个或多个云硬盘。
-         */
-    public CreateDisksResponse createDisks(CreateDisksRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "CreateDisks",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new CreateDisksResponse());
-    }
-
-        /**
-         * 挂载云硬盘到云主机实例。
-         */
-    public AttachDisksResponse attachDisks(AttachDisksRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "AttachDisks",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new AttachDisksResponse());
-    }
-
-        /**
-         * 查询云硬盘列表。
-         */
-    public DescribeDisksResponse describeDisks(DescribeDisksRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeDisks",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeDisksResponse());
-    }
-
-        /**
-         * 修改云硬盘所属的资源组。
-         */
-    public ModifyDisksResourceGroupResponse modifyDisksResourceGroup(ModifyDisksResourceGroupRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyDisksResourceGroup",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyDisksResourceGroupResponse());
-    }
-
-        /**
-         * 查询云硬盘支持的类型。
-         */
-    public DescribeDiskCategoryResponse describeDiskCategory(DescribeDiskCategoryRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeDiskCategory",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeDiskCategoryResponse());
-    }
-
-        /**
-         * 将一个云硬盘扩容到指定大小。
-         */
-    public ResizeDiskResponse resizeDisk(ResizeDiskRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ResizeDisk",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ResizeDiskResponse());
-    }
-
-        /**
-         * 释放云硬盘。
-         */
-    public ReleaseDiskResponse releaseDisk(ReleaseDiskRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ReleaseDisk",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ReleaseDiskResponse());
-    }
-
-        /**
-         * 续费云硬盘。
-         */
-    public RenewDiskResponse renewDisk(RenewDiskRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "RenewDisk",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new RenewDiskResponse());
-    }
-
-        /**
-         * 将一个或多个已经挂载到一台实例的云硬盘挂载到另外一台实例上。
-         */
-    public ChangeDisksAttachResponse changeDisksAttach(ChangeDisksAttachRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ChangeDisksAttach",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ChangeDisksAttachResponse());
+        return TeaModel.toModel(rsp, new AuthorizeSecurityGroupRuleResponse());
     }
 
 }
