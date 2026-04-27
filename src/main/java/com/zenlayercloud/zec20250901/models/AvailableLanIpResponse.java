@@ -16,7 +16,7 @@ public class AvailableLanIpResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 可以绑定的网卡及内网信息。
+     * 可与指定 EIP 绑定的 vNIC 与内网 IP 组合列表。
      */
     public List<PrivateIpInfo> lanIps;
 

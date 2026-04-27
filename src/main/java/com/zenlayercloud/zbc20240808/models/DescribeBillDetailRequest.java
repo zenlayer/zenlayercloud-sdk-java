@@ -27,4 +27,6 @@ public class DescribeBillDetailRequest extends TeaModel {
      * 资源ID（实例ID）
      */
     public String resourceId;
+
+    public String product;
 }

@@ -1,18 +1,64 @@
-/*
- * Zenlayer.com Inc.
- * Copyright (c) 2014-2025 All Rights Reserved.
- */
 package com.zenlayercloud.user20240529.models;
 
 import com.aliyun.tea.TeaModel;
 
+
 /**
- * @author conan.hou
- * @date 2025-07-23 09:59:01
- * @version $ Id: CreateResourceGroupResponse.java, v 0.1  conan.hou Exp $
+ * 
  */
 public class CreateResourceGroupResponse extends TeaModel {
+
+
+    /**
+     * requestId
+     */
+    public String requestId;
+
+    /**
+     * 资源组唯一ID。
+     */
     public String resourceGroupId;
+
+    /**
+     * 资源组名称。
+     */
     public String name;
+
+    /**
+     * 创建时间。
+     */
     public String createTime;
+
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public void setRequestId(String requestId) {
+        this.requestId = requestId;
+    }
+
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
 }

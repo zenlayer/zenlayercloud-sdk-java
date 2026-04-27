@@ -1,7 +1,3 @@
-/*
- * Zenlayer.com Inc.
- * Copyright (c) 2014-2025 All Rights Reserved.
- */
 package com.zenlayercloud.user20240529.models;
 
 import com.aliyun.tea.TeaModel;
@@ -9,11 +5,35 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * @author conan.hou
- * @date 2025-07-23 09:53:14
- * @version $ Id: AddResourceResourceGroupRequest.java, v 0.1  conan.hou Exp $
+ * 
  */
 public class AddResourceResourceGroupRequest extends TeaModel {
+
+
+    /**
+     * 资源ID列表。
+     */
     public List<String> resources;
-    public    String       resourceGroupId;
+
+    /**
+     * 资源组唯一ID。
+     */
+    public String resourceGroupId;
+
+    public List<String> getResources() {
+        return this.resources;
+    }
+
+    public void setResources(List<String> resources) {
+        this.resources = resources;
+    }
+
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
 }

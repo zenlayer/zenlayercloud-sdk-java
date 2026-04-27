@@ -23,7 +23,6 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     /**
      * 设置操作系统的时区。
-     * 如果未设置默认为节点所在的时区。
      */
     public String timeZone;
 

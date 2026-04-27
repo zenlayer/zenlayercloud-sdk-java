@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 
  */
-public class DescribeResourceGroupsResponse extends TeaModel {
+public class DescribePoliciesResponse extends TeaModel {
 
 
     /**
@@ -16,9 +16,9 @@ public class DescribeResourceGroupsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 资源组列表信息。
+     * 访问策略列表的数据。
      */
-    public List<ResourceGroup> resourceGroups;
+    public List<Policy> policies;
 
     public String getRequestId() {
         return this.requestId;
@@ -28,12 +28,12 @@ public class DescribeResourceGroupsResponse extends TeaModel {
         this.requestId = requestId;
     }
 
-    public List<ResourceGroup> getResourceGroups() {
-        return this.resourceGroups;
+    public List<Policy> getPolicies() {
+        return this.policies;
     }
 
-    public void setResourceGroups(List<ResourceGroup> resourceGroups) {
-        this.resourceGroups = resourceGroups;
+    public void setPolicies(List<Policy> policies) {
+        this.policies = policies;
     }
 
 }

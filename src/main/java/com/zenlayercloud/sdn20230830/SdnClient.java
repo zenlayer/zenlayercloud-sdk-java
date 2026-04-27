@@ -325,4 +325,16 @@ public class SdnClient extends AbstractClient {
         return TeaModel.toModel(rspStr, new DescribeAWSVlanUsageResponse());
     }
 
+
+    public DescribeOracleRegionsResponse describeOracleRegions(DescribeOracleRegionsRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeOracleRegions", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeOracleRegionsResponse());
+    }
+
+
+    public DescribeOracleVlanUsageResponse describeOracleVlanUsage(DescribeOracleVlanUsageRequest request) {
+        Map<String, ?> rspStr = super.callApi(request, "DescribeOracleVlanUsage", new RuntimeOptions());
+        return TeaModel.toModel(rspStr, new DescribeOracleVlanUsageResponse());
+    }
+
 }

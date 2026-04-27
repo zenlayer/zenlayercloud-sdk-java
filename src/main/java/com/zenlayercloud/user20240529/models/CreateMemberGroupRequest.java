@@ -6,11 +6,11 @@ import com.aliyun.tea.TeaModel;
 /**
  * 
  */
-public class CreateResourceGroupRequest extends TeaModel {
+public class CreateMemberGroupRequest extends TeaModel {
 
 
     /**
-     * 资源组名称。
+     * 成员组名称。
      */
     public String name;
 

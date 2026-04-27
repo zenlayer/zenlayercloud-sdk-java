@@ -4,15 +4,10 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 
+ * 描述资源组的信息。
  */
-public class ModifyResourceGroupResponse extends TeaModel {
+public class ResourceGroup extends TeaModel {
 
-
-    /**
-     * requestId
-     */
-    public String requestId;
 
     /**
      * 资源组唯一ID。
@@ -28,14 +23,6 @@ public class ModifyResourceGroupResponse extends TeaModel {
      * 创建时间。
      */
     public String createTime;
-
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public void setRequestId(String requestId) {
-        this.requestId = requestId;
-    }
 
     public String getResourceGroupId() {
         return this.resourceGroupId;

@@ -10,27 +10,29 @@ public class PrivateIpInfo extends TeaModel {
 
 
     /**
-     * 网卡上的内网IP地址。
+     * 该 vNIC 上已分配的内网 IPv4 地址，可用于与指定 EIP 进行绑定。
      */
     public String lanIp;
 
     /**
-     * 网卡ID。
+     * 弹性网卡（vNIC）的 ID。
      */
     public String nicId;
 
     /**
-     * 网卡的名称。
+     * 弹性网卡（vNIC）的名称。
      */
     public String nicName;
 
     /**
-     * 网卡关联的实例ID。
+     * vNIC 所挂载实例的 ID。
+     * 若 vNIC 未挂载至任何实例，则为 null。
      */
     public String instanceId;
 
     /**
-     * 网卡关联的实例名称。
+     * vNIC 所挂载实例的名称。
+     * 若 vNIC 未挂载至任何实例，则为 null。
      */
     public String instanceName;
 
