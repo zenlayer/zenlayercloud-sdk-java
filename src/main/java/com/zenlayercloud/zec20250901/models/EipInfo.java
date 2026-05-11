@@ -119,6 +119,11 @@ public class EipInfo extends TeaModel {
     public Integer bandwidth;
 
     /**
+     * 限速模式。
+     */
+    public String rateLimitMode;
+
+    /**
      * EIP 的地理位置信息。
      */
     public List<EipGeoInfo> eipGeoRefs;
@@ -313,6 +318,14 @@ public class EipInfo extends TeaModel {
 
     public void setBandwidth(Integer bandwidth) {
         this.bandwidth = bandwidth;
+    }
+
+    public String getRateLimitMode() {
+        return this.rateLimitMode;
+    }
+
+    public void setRateLimitMode(String rateLimitMode) {
+        this.rateLimitMode = rateLimitMode;
     }
 
     public List<EipGeoInfo> getEipGeoRefs() {

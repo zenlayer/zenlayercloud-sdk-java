@@ -41,6 +41,11 @@ public class AssignNetworkInterfaceIpv6Request extends TeaModel {
      */
     public String clusterId;
 
+    /**
+     * 限速模式。
+     */
+    public String rateLimitMode;
+
     public String getNicId() {
         return this.nicId;
     }
@@ -79,6 +84,14 @@ public class AssignNetworkInterfaceIpv6Request extends TeaModel {
 
     public void setClusterId(String clusterId) {
         this.clusterId = clusterId;
+    }
+
+    public String getRateLimitMode() {
+        return this.rateLimitMode;
+    }
+
+    public void setRateLimitMode(String rateLimitMode) {
+        this.rateLimitMode = rateLimitMode;
     }
 
 }

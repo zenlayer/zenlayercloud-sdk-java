@@ -36,6 +36,11 @@ public class DescribeCidrsRequest extends TeaModel {
     public String source;
 
     /**
+     * 根据ASN编号进行过滤。
+     */
+    public Integer asn;
+
+    /**
      * 根据资源组ID进行过滤。
      */
     public String resourceGroupId;
@@ -100,6 +105,14 @@ public class DescribeCidrsRequest extends TeaModel {
 
     public void setSource(String source) {
         this.source = source;
+    }
+
+    public Integer getAsn() {
+        return this.asn;
+    }
+
+    public void setAsn(Integer asn) {
+        this.asn = asn;
     }
 
     public String getResourceGroupId() {

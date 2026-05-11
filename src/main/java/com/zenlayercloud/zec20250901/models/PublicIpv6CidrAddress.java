@@ -36,6 +36,11 @@ public class PublicIpv6CidrAddress extends TeaModel {
     public Integer bandwidth;
 
     /**
+     * 限速模式。
+     */
+    public String rateLimitMode;
+
+    /**
      * IPv6的流量包大小。
      * 单位：TB。
      */
@@ -84,6 +89,14 @@ public class PublicIpv6CidrAddress extends TeaModel {
 
     public void setBandwidth(Integer bandwidth) {
         this.bandwidth = bandwidth;
+    }
+
+    public String getRateLimitMode() {
+        return this.rateLimitMode;
+    }
+
+    public void setRateLimitMode(String rateLimitMode) {
+        this.rateLimitMode = rateLimitMode;
     }
 
     public Double getTrafficPackageSize() {

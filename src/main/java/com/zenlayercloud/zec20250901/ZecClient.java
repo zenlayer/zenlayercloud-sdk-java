@@ -51,6 +51,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询各节点VM库存容量级别信息。
+         */
+    public DescribeVmInventoryCapacityResponse describeVmInventoryCapacity(DescribeVmInventoryCapacityRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeVmInventoryCapacity",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeVmInventoryCapacityResponse());
+    }
+
+        /**
          * 查询时区信息。
          */
     public DescribeTimeZonesResponse describeTimeZones(DescribeTimeZonesRequest request) {
@@ -327,6 +339,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询当前账号下的自定义镜像列表。
+         */
+    public DescribeCustomImagesResponse describeCustomImages(DescribeCustomImagesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeCustomImages",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeCustomImagesResponse());
+    }
+
+        /**
          * 修改自定义镜像属性。
          */
     public ModifyImagesAttributesResponse modifyImagesAttributes(ModifyImagesAttributesRequest request) {
@@ -372,18 +396,6 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DeleteImageCopyResponse());
-    }
-
-        /**
-         * 查询当前账号下的自定义镜像列表。
-         */
-    public DescribeCustomImagesResponse describeCustomImages(DescribeCustomImagesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeCustomImages",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeCustomImagesResponse());
     }
 
         /**
@@ -855,6 +867,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 修改指定公网IPv6的带宽限速模式。LOOSE为宽松模式（允许短时突发），STRICT为严格模式（不允许突发）。仅支持已配置固定带宽的IPv6。
+         */
+    public ModifyNetworkInterfacePublicIPv6BandwidthLimitModeResponse modifyNetworkInterfacePublicIPv6BandwidthLimitMode(ModifyNetworkInterfacePublicIPv6BandwidthLimitModeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyNetworkInterfacePublicIPv6BandwidthLimitMode",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyNetworkInterfacePublicIPv6BandwidthLimitModeResponse());
+    }
+
+        /**
          * 查询账户下的公网 IP 池信息，支持按 IP 池 ID、地域或名称进行筛选，支持分页查询。
          */
     public DescribePoolsResponse describePools(DescribePoolsRequest request) {
@@ -1275,6 +1299,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 修改指定弹性公网IP的带宽限速模式。LOOSE为宽松模式（允许短时突发），STRICT为严格模式（不允许突发）。仅支持已配置固定带宽的IP。
+         */
+    public ModifyEipBandwidthLimitModeResponse modifyEipBandwidthLimitMode(ModifyEipBandwidthLimitModeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyEipBandwidthLimitMode",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyEipBandwidthLimitModeResponse());
+    }
+
+        /**
          * 查询路由列表。用户可以根据ID、名称等信息来搜索Route信息。路由列表包括系统生成的以及用户创建的路由。
          */
     public DescribeRoutesResponse describeRoutes(DescribeRoutesRequest request) {
@@ -1632,6 +1668,30 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DeleteBorderGatewayResponse());
+    }
+
+        /**
+         * 查询满足条件的非托管出口IP列表，返回IP基础信息及带宽限速模式。
+         */
+    public DescribeUnmanagedEgressIpsResponse describeUnmanagedEgressIps(DescribeUnmanagedEgressIpsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeUnmanagedEgressIps",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeUnmanagedEgressIpsResponse());
+    }
+
+        /**
+         * 修改指定非托管出口IP的带宽限速模式。LOOSE为宽松模式（允许短时突发），STRICT为严格模式（不允许突发）。仅支持已配置固定带宽的IP。
+         */
+    public ModifyUnmanagedEgressIpBandwidthLimitModeResponse modifyUnmanagedEgressIpBandwidthLimitMode(ModifyUnmanagedEgressIpBandwidthLimitModeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyUnmanagedEgressIpBandwidthLimitMode",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyUnmanagedEgressIpBandwidthLimitModeResponse());
     }
 
         /**
@@ -2247,63 +2307,15 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 从QoS策略组中移除成员。
+         * 查询一个或多个QoS策略组的详细信息。
          */
-    public RemoveQosPolicyGroupMembersResponse removeQosPolicyGroupMembers(RemoveQosPolicyGroupMembersRequest request) {
+    public DescribeQosPolicyGroupsResponse describeQosPolicyGroups(DescribeQosPolicyGroupsRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "RemoveQosPolicyGroupMembers",
+            "DescribeQosPolicyGroups",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new RemoveQosPolicyGroupMembersResponse());
-    }
-
-        /**
-         * 查询QoS策略组的聚合流量监控数据。
-         */
-    public DescribeQosPolicyGroupTrafficResponse describeQosPolicyGroupTraffic(DescribeQosPolicyGroupTrafficRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeQosPolicyGroupTraffic",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeQosPolicyGroupTrafficResponse());
-    }
-
-        /**
-         * 修改QoS策略组的名称或带宽限制。
-         */
-    public ModifyQosPolicyGroupResponse modifyQosPolicyGroup(ModifyQosPolicyGroupRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyQosPolicyGroup",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyQosPolicyGroupResponse());
-    }
-
-        /**
-         * 删除一个QoS策略组。删除前需确保策略组内无成员。
-         */
-    public DeleteQosPolicyGroupResponse deleteQosPolicyGroup(DeleteQosPolicyGroupRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DeleteQosPolicyGroup",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DeleteQosPolicyGroupResponse());
-    }
-
-        /**
-         * 向QoS策略组中添加EIP、IPv6或UNMANAGED出口IP。
-         */
-    public AddQosPolicyGroupMembersResponse addQosPolicyGroupMembers(AddQosPolicyGroupMembersRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "AddQosPolicyGroupMembers",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new AddQosPolicyGroupMembersResponse());
+        return TeaModel.toModel(rsp, new DescribeQosPolicyGroupsResponse());
     }
 
         /**
@@ -2319,15 +2331,63 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询一个或多个QoS策略组的详细信息。
+         * 修改QoS策略组的名称或带宽限制。
          */
-    public DescribeQosPolicyGroupsResponse describeQosPolicyGroups(DescribeQosPolicyGroupsRequest request) {
+    public ModifyQosPolicyGroupResponse modifyQosPolicyGroup(ModifyQosPolicyGroupRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "DescribeQosPolicyGroups",
+            "ModifyQosPolicyGroup",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new DescribeQosPolicyGroupsResponse());
+        return TeaModel.toModel(rsp, new ModifyQosPolicyGroupResponse());
+    }
+
+        /**
+         * 向QoS策略组中添加EIP、IPv6或UNMANAGED出口IP。
+         */
+    public AddQosPolicyGroupMembersResponse addQosPolicyGroupMembers(AddQosPolicyGroupMembersRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "AddQosPolicyGroupMembers",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new AddQosPolicyGroupMembersResponse());
+    }
+
+        /**
+         * 从QoS策略组中移除成员。
+         */
+    public RemoveQosPolicyGroupMembersResponse removeQosPolicyGroupMembers(RemoveQosPolicyGroupMembersRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "RemoveQosPolicyGroupMembers",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new RemoveQosPolicyGroupMembersResponse());
+    }
+
+        /**
+         * 删除一个QoS策略组。删除前需确保策略组内无成员。
+         */
+    public DeleteQosPolicyGroupResponse deleteQosPolicyGroup(DeleteQosPolicyGroupRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteQosPolicyGroup",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteQosPolicyGroupResponse());
+    }
+
+        /**
+         * 查询QoS策略组的聚合流量监控数据。
+         */
+    public DescribeQosPolicyGroupTrafficResponse describeQosPolicyGroupTraffic(DescribeQosPolicyGroupTrafficRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeQosPolicyGroupTraffic",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeQosPolicyGroupTrafficResponse());
     }
 
 }

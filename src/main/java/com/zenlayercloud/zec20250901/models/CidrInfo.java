@@ -97,6 +97,12 @@ public class CidrInfo extends TeaModel {
     public String status;
 
     /**
+     * ASN编号。
+     * 仅当CIDR来源为BYOIP时存在。
+     */
+    public Integer asn;
+
+    /**
      * 该CIDR地址段关联的标签。
      */
     public Tags tags;
@@ -229,6 +235,14 @@ public class CidrInfo extends TeaModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Integer getAsn() {
+        return this.asn;
+    }
+
+    public void setAsn(Integer asn) {
+        this.asn = asn;
     }
 
     public Tags getTags() {

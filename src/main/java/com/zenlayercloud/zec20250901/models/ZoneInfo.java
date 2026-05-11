@@ -36,6 +36,26 @@ public class ZoneInfo extends TeaModel {
      */
     public String timeZone;
 
+    /**
+     * 可用区所在的城市名称。
+     */
+    public String cityName;
+
+    /**
+     * 城市三字码。
+     */
+    public String cityCode;
+
+    /**
+     * 可用区所在的国家，ISO 3166-1 alpha-2 两字母代码（如 US、JP）。
+     */
+    public String countryCode;
+
+    /**
+     * 可用区所在的国家名称。
+     */
+    public String countryName;
+
     public String getZoneId() {
         return this.zoneId;
     }
@@ -76,6 +96,38 @@ public class ZoneInfo extends TeaModel {
 
     public void setTimeZone(String timeZone) {
         this.timeZone = timeZone;
+    }
+
+    public String getCityName() {
+        return this.cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    public String getCityCode() {
+        return this.cityCode;
+    }
+
+    public void setCityCode(String cityCode) {
+        this.cityCode = cityCode;
+    }
+
+    public String getCountryCode() {
+        return this.countryCode;
+    }
+
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+    }
+
+    public String getCountryName() {
+        return this.countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
     }
 
 }

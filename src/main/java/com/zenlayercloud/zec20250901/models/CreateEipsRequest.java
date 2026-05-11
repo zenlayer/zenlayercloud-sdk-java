@@ -117,6 +117,11 @@ public class CreateEipsRequest extends TeaModel {
      */
     public String bindType;
 
+    /**
+     * 限速模式。
+     */
+    public String rateLimitMode;
+
     public String getRegionId() {
         return this.regionId;
     }
@@ -261,6 +266,14 @@ public class CreateEipsRequest extends TeaModel {
 
     public void setBindType(String bindType) {
         this.bindType = bindType;
+    }
+
+    public String getRateLimitMode() {
+        return this.rateLimitMode;
+    }
+
+    public void setRateLimitMode(String rateLimitMode) {
+        this.rateLimitMode = rateLimitMode;
     }
 
 }

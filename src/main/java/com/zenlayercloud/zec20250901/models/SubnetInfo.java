@@ -91,6 +91,12 @@ public class SubnetInfo extends TeaModel {
      */
     public String dhcpOptionsSetId;
 
+    /**
+     * 分配给网卡的IPv6掩码长度。
+     * 如果子网的IP堆栈类型不包括V6,该字段取不到值。
+     */
+    public Integer ipv6MaskLength;
+
     public String getSubnetId() {
         return this.subnetId;
     }
@@ -217,6 +223,14 @@ public class SubnetInfo extends TeaModel {
 
     public void setDhcpOptionsSetId(String dhcpOptionsSetId) {
         this.dhcpOptionsSetId = dhcpOptionsSetId;
+    }
+
+    public Integer getIpv6MaskLength() {
+        return this.ipv6MaskLength;
+    }
+
+    public void setIpv6MaskLength(Integer ipv6MaskLength) {
+        this.ipv6MaskLength = ipv6MaskLength;
     }
 
 }

@@ -10,6 +10,16 @@ public class EipGeoInfo extends TeaModel {
 
 
     /**
+     * 从MaxMind查询的地理信息。
+     */
+    public String maxMind;
+
+    /**
+     * 从IPinfo(ipinfo.io)查询的地理信息。
+     */
+    public String ipInfo;
+
+    /**
      * 从DB-IP(db-ip.com)查询的地理信息。
      */
     public String dbIp;
@@ -20,14 +30,9 @@ public class EipGeoInfo extends TeaModel {
     public String ipData;
 
     /**
-     * 从IPinfo(ipinfo.io)查询的地理信息。
+     * 从IpGeoLocation查询的地理信息。
      */
-    public String ipInfo;
-
-    /**
-     * 从MaxMind查询的地理信息。
-     */
-    public String maxMind;
+    public String ipGeoLocation;
 
     /**
      * 需要查询EIP的所在的地理信息。
@@ -38,6 +43,22 @@ public class EipGeoInfo extends TeaModel {
      * 查询地理信息是否和所在的地理信息一致。
      */
     public Boolean isConsistent;
+
+    public String getMaxMind() {
+        return this.maxMind;
+    }
+
+    public void setMaxMind(String maxMind) {
+        this.maxMind = maxMind;
+    }
+
+    public String getIpInfo() {
+        return this.ipInfo;
+    }
+
+    public void setIpInfo(String ipInfo) {
+        this.ipInfo = ipInfo;
+    }
 
     public String getDbIp() {
         return this.dbIp;
@@ -55,20 +76,12 @@ public class EipGeoInfo extends TeaModel {
         this.ipData = ipData;
     }
 
-    public String getIpInfo() {
-        return this.ipInfo;
+    public String getIpGeoLocation() {
+        return this.ipGeoLocation;
     }
 
-    public void setIpInfo(String ipInfo) {
-        this.ipInfo = ipInfo;
-    }
-
-    public String getMaxMind() {
-        return this.maxMind;
-    }
-
-    public void setMaxMind(String maxMind) {
-        this.maxMind = maxMind;
+    public void setIpGeoLocation(String ipGeoLocation) {
+        this.ipGeoLocation = ipGeoLocation;
     }
 
     public String getStandard() {

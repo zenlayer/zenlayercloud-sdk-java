@@ -31,6 +31,11 @@ public class DescribeIpv6CidrsRequest extends TeaModel {
     public String cidrBlock;
 
     /**
+     * 根据ASN编号进行过滤。
+     */
+    public Integer asn;
+
+    /**
      * 根据资源组ID进行过滤。
      */
     public String resourceGroupId;
@@ -87,6 +92,14 @@ public class DescribeIpv6CidrsRequest extends TeaModel {
 
     public void setCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
+    }
+
+    public Integer getAsn() {
+        return this.asn;
+    }
+
+    public void setAsn(Integer asn) {
+        this.asn = asn;
     }
 
     public String getResourceGroupId() {

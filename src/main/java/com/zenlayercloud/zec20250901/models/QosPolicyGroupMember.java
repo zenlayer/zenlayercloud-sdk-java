@@ -10,7 +10,7 @@ public class QosPolicyGroupMember extends TeaModel {
 
 
     /**
-     * 资源ID（console侧UUID）。
+     * IP 资源 的ID。
      */
     public String resourceId;
 
