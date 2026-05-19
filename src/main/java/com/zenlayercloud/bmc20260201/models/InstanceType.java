@@ -85,6 +85,22 @@ public class InstanceType extends TeaModel {
      */
     public InstanceDiskInfo diskInfo;
 
+    /**
+     * VPU 供应商
+     */
+    public String vpuVendor;
+
+    /**
+     * VPU 型号。示例：T1U
+     */
+    public String vpuCard;
+
+    /**
+     * VPU 数量
+     */
+    public Integer vpuCount;
+
+
     public List<String> getImageIds() {
         return this.imageIds;
     }

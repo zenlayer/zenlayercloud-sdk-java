@@ -45,6 +45,11 @@ public class BackendInfo extends TeaModel {
     public String instanceId;
 
     /**
+     * 实例类型。
+     */
+    public String instanceType;
+
+    /**
      * 实例名称。
      */
     public String instanceName;
@@ -108,6 +113,14 @@ public class BackendInfo extends TeaModel {
 
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
+    }
+
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public void setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
     }
 
     public String getInstanceName() {

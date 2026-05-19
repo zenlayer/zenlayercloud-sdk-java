@@ -24,6 +24,11 @@ public class RegisterBackendRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * 实例类型。
+     */
+    public String instanceType;
+
+    /**
      * 用于保证请求的幂等性。
      */
     public String clientToken;
@@ -60,6 +65,14 @@ public class RegisterBackendRequest extends TeaModel {
 
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
+    }
+
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public void setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
     }
 
     public String getClientToken() {

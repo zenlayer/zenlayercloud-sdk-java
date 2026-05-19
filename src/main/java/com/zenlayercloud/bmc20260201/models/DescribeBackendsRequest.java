@@ -23,6 +23,11 @@ public class DescribeBackendsRequest extends TeaModel {
     public String backendName;
 
     /**
+     * 实例类型。默认为`BM`
+     */
+    public String instanceType;
+
+    /**
      * 返回的分页数。
      */
     public Integer pageNum;
@@ -54,6 +59,14 @@ public class DescribeBackendsRequest extends TeaModel {
 
     public void setBackendName(String backendName) {
         this.backendName = backendName;
+    }
+
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public void setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
     }
 
     public Integer getPageNum() {
