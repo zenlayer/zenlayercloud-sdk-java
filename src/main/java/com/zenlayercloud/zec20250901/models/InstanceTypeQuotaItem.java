@@ -38,6 +38,16 @@ public class InstanceTypeQuotaItem extends TeaModel {
     public Integer memory;
 
     /**
+     * 单张网卡的带宽上限。
+     */
+    public Long bps;
+
+    /**
+     * 单张网卡的收发包上限。
+     */
+    public Long pps;
+
+    /**
      * 最大出口带宽限制。
      */
     public Integer internetMaxBandwidthOutLimit;
@@ -90,6 +100,22 @@ public class InstanceTypeQuotaItem extends TeaModel {
 
     public void setMemory(Integer memory) {
         this.memory = memory;
+    }
+
+    public Long getBps() {
+        return this.bps;
+    }
+
+    public void setBps(Long bps) {
+        this.bps = bps;
+    }
+
+    public Long getPps() {
+        return this.pps;
+    }
+
+    public void setPps(Long pps) {
+        this.pps = pps;
     }
 
     public Integer getInternetMaxBandwidthOutLimit() {

@@ -56,6 +56,11 @@ public class SecurityGroupInfo extends TeaModel {
      */
     public List<String> loadBalancerIdList;
 
+    /**
+     * 关联安全组的高可用虚拟IP ID列表。
+     */
+    public List<String> haVipIdList;
+
     public String getSecurityGroupId() {
         return this.securityGroupId;
     }
@@ -126,6 +131,14 @@ public class SecurityGroupInfo extends TeaModel {
 
     public void setLoadBalancerIdList(List<String> loadBalancerIdList) {
         this.loadBalancerIdList = loadBalancerIdList;
+    }
+
+    public List<String> getHaVipIdList() {
+        return this.haVipIdList;
+    }
+
+    public void setHaVipIdList(List<String> haVipIdList) {
+        this.haVipIdList = haVipIdList;
     }
 
 }

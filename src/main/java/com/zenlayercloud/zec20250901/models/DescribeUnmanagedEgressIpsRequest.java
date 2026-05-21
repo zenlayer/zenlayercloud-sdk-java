@@ -30,7 +30,6 @@ public class DescribeUnmanagedEgressIpsRequest extends TeaModel {
 
     /**
      * 返回的分页页码。
-     * 默认为1。
      */
     public Integer pageNum;
 

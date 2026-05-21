@@ -38,6 +38,11 @@ public class AssociateEipAddressRequest extends TeaModel {
     public List<String> eipIds;
 
     /**
+     * 高可用虚拟IP的ID。
+     */
+    public String haVipId;
+
+    /**
      * 绑定类型。
      * 当绑定的是网卡时生效。
      * 默认为普通NAT模式。
@@ -82,6 +87,14 @@ public class AssociateEipAddressRequest extends TeaModel {
 
     public void setEipIds(List<String> eipIds) {
         this.eipIds = eipIds;
+    }
+
+    public String getHaVipId() {
+        return this.haVipId;
+    }
+
+    public void setHaVipId(String haVipId) {
+        this.haVipId = haVipId;
     }
 
     public String getBindType() {

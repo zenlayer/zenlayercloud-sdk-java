@@ -35,6 +35,11 @@ public class Zone extends TeaModel {
      */
     public Boolean isCloudRouterAvailable;
 
+    /**
+     * 可用区是否支持BYO IP 宣告。
+     */
+    public Boolean isByoipEnabled;
+
     public String getZoneId() {
         return this.zoneId;
     }
@@ -73,6 +78,14 @@ public class Zone extends TeaModel {
 
     public void setIsCloudRouterAvailable(Boolean isCloudRouterAvailable) {
         this.isCloudRouterAvailable = isCloudRouterAvailable;
+    }
+
+    public Boolean getIsByoipEnabled() {
+        return this.isByoipEnabled;
+    }
+
+    public void setIsByoipEnabled(Boolean isByoipEnabled) {
+        this.isByoipEnabled = isByoipEnabled;
     }
 
 }

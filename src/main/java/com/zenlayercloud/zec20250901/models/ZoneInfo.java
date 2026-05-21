@@ -56,6 +56,11 @@ public class ZoneInfo extends TeaModel {
      */
     public String countryName;
 
+    /**
+     * 可用区是否支持高可用虚拟IP（HaVip）。
+     */
+    public Boolean supportHaVip;
+
     public String getZoneId() {
         return this.zoneId;
     }
@@ -128,6 +133,14 @@ public class ZoneInfo extends TeaModel {
 
     public void setCountryName(String countryName) {
         this.countryName = countryName;
+    }
+
+    public Boolean getSupportHaVip() {
+        return this.supportHaVip;
+    }
+
+    public void setSupportHaVip(Boolean supportHaVip) {
+        this.supportHaVip = supportHaVip;
     }
 
 }

@@ -867,7 +867,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 修改指定公网IPv6的带宽限速模式。LOOSE为宽松模式（允许短时突发），STRICT为严格模式（不允许突发）。仅支持已配置固定带宽的IPv6。
+         * 修改指定公网IPv6的带宽限速模式。
          */
     public ModifyNetworkInterfacePublicIPv6BandwidthLimitModeResponse modifyNetworkInterfacePublicIPv6BandwidthLimitMode(ModifyNetworkInterfacePublicIPv6BandwidthLimitModeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1299,7 +1299,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 修改指定弹性公网IP的带宽限速模式。LOOSE为宽松模式（允许短时突发），STRICT为严格模式（不允许突发）。仅支持已配置固定带宽的IP。
+         * 修改指定弹性公网IP的带宽限速模式。
          */
     public ModifyEipBandwidthLimitModeResponse modifyEipBandwidthLimitMode(ModifyEipBandwidthLimitModeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1683,7 +1683,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 修改指定非托管出口IP的带宽限速模式。LOOSE为宽松模式（允许短时突发），STRICT为严格模式（不允许突发）。仅支持已配置固定带宽的IP。
+         * 修改指定非托管出口IP的带宽限速模式。
          */
     public ModifyUnmanagedEgressIpBandwidthLimitModeResponse modifyUnmanagedEgressIpBandwidthLimitMode(ModifyUnmanagedEgressIpBandwidthLimitModeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2388,6 +2388,78 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeQosPolicyGroupTrafficResponse());
+    }
+
+        /**
+         * 创建一个高可用虚拟IP。
+         */
+    public CreateHaVipResponse createHaVip(CreateHaVipRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateHaVip",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateHaVipResponse());
+    }
+
+        /**
+         * 查询一个或多个高可用虚拟IP的详细信息。
+         */
+    public DescribeHaVipsResponse describeHaVips(DescribeHaVipsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeHaVips",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeHaVipsResponse());
+    }
+
+        /**
+         * 修改高可用虚拟IP的名称。
+         */
+    public ModifyHaVipAttributeResponse modifyHaVipAttribute(ModifyHaVipAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyHaVipAttribute",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyHaVipAttributeResponse());
+    }
+
+        /**
+         * 删除高可用虚拟IP。
+         */
+    public DeleteHaVipResponse deleteHaVip(DeleteHaVipRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteHaVip",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteHaVipResponse());
+    }
+
+        /**
+         * 将高可用虚拟IP绑定到一台ZEC实例。
+         */
+    public AssociateHaVipResponse associateHaVip(AssociateHaVipRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "AssociateHaVip",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new AssociateHaVipResponse());
+    }
+
+        /**
+         * 将高可用虚拟IP从实例解绑。
+         */
+    public UnassociateHaVipResponse unassociateHaVip(UnassociateHaVipRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "UnassociateHaVip",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new UnassociateHaVipResponse());
     }
 
 }

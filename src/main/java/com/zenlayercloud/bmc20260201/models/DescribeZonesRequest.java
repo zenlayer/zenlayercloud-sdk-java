@@ -8,7 +8,7 @@ public class DescribeZonesRequest extends TeaModel {
 
     /**
      * 接收的区域地域的语言。可选值如下：
-     * <ul><li>zh-CN：中文</li><li>en-US：英文</li></ul>默认值：en-US。
+     * <ul><li>zh-CN：中文</li><li>en-US：英文</li></ul>
      */
     public String acceptLanguage;
 

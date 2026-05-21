@@ -123,7 +123,7 @@ public class BmcClient extends AbstractClient {
     }
 
         /**
-         * 查询可用区信息。​
+         * 查询可用区信息。
          */
     public DescribeZonesResponse describeZones(DescribeZonesRequest request) {
         Map<String, ?> rsp = super.callApi(

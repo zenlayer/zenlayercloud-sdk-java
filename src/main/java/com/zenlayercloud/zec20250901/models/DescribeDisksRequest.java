@@ -46,13 +46,13 @@ public class DescribeDisksRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * 返回的分页大小。
-     * 默认为20，最大为1000。
+     * 返回的分页数。
      */
     public Integer pageNum;
 
     /**
-     * 返回的分页数。
+     * 返回的分页大小。
+     * 默认为20，最大为1000。
      */
     public Integer pageSize;
 

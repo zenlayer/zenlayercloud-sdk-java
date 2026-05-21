@@ -31,6 +31,13 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
      */
     public String endTime;
 
+    /**
+     * 查询数据点间隔。
+     * 单位为分钟。
+     * 支持参数：1,5。
+     */
+    public Integer step;
+
     public String getEipId() {
         return this.eipId;
     }
@@ -61,6 +68,14 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
 
     public void setEndTime(String endTime) {
         this.endTime = endTime;
+    }
+
+    public Integer getStep() {
+        return this.step;
+    }
+
+    public void setStep(Integer step) {
+        this.step = step;
     }
 
 }
