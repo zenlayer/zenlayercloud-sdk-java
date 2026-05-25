@@ -38,12 +38,12 @@ public class InstanceTypeQuotaItem extends TeaModel {
     public Integer memory;
 
     /**
-     * 单张网卡的带宽上限。
+     * 单张网卡的带宽上限。单位：比特/秒。
      */
     public Long bps;
 
     /**
-     * 单张网卡的收发包上限。
+     * 单张网卡的收发包上限。单位：个/秒。
      */
     public Long pps;
 

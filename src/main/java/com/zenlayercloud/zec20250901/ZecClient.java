@@ -406,6 +406,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询自定义镜像在各个目标区域的复制进度。
+         */
+    public DescribeImageCopyProgressResponse describeImageCopyProgress(DescribeImageCopyProgressRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeImageCopyProgress",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeImageCopyProgressResponse());
+    }
+
+        /**
          * 查询当前账户下支持创建和售卖云硬盘的所有节点（地域/可用区）信息。
          */
     public DescribeDiskRegionsResponse describeDiskRegions(DescribeDiskRegionsRequest request) {
@@ -1702,6 +1714,90 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询一个或多个QoS策略组的详细信息。
+         */
+    public DescribeQosPolicyGroupsResponse describeQosPolicyGroups(DescribeQosPolicyGroupsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeQosPolicyGroups",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeQosPolicyGroupsResponse());
+    }
+
+        /**
+         * 创建一个QoS策略组，将EIP、IPv6或UNMANAGED出口IP纳入同一策略组实施共享带宽限速。
+         */
+    public CreateQosPolicyGroupResponse createQosPolicyGroup(CreateQosPolicyGroupRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateQosPolicyGroup",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateQosPolicyGroupResponse());
+    }
+
+        /**
+         * 修改QoS策略组的名称或带宽限制。
+         */
+    public ModifyQosPolicyGroupResponse modifyQosPolicyGroup(ModifyQosPolicyGroupRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyQosPolicyGroup",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyQosPolicyGroupResponse());
+    }
+
+        /**
+         * 向QoS策略组中添加EIP、IPv6或UNMANAGED出口IP。
+         */
+    public AddQosPolicyGroupMembersResponse addQosPolicyGroupMembers(AddQosPolicyGroupMembersRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "AddQosPolicyGroupMembers",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new AddQosPolicyGroupMembersResponse());
+    }
+
+        /**
+         * 从QoS策略组中移除成员。
+         */
+    public RemoveQosPolicyGroupMembersResponse removeQosPolicyGroupMembers(RemoveQosPolicyGroupMembersRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "RemoveQosPolicyGroupMembers",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new RemoveQosPolicyGroupMembersResponse());
+    }
+
+        /**
+         * 删除一个QoS策略组。删除前需确保策略组内无成员。
+         */
+    public DeleteQosPolicyGroupResponse deleteQosPolicyGroup(DeleteQosPolicyGroupRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteQosPolicyGroup",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteQosPolicyGroupResponse());
+    }
+
+        /**
+         * 查询QoS策略组的聚合流量监控数据。
+         */
+    public DescribeQosPolicyGroupTrafficResponse describeQosPolicyGroupTraffic(DescribeQosPolicyGroupTrafficRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeQosPolicyGroupTraffic",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeQosPolicyGroupTrafficResponse());
+    }
+
+        /**
          * 查询私有网络（VPC）列表，用户可以根据 VPC ID、VPC 名称等信息来筛选过滤VPC信息。
          */
     public DescribeVpcsResponse describeVpcs(DescribeVpcsRequest request) {
@@ -2311,90 +2407,6 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new ModifyInstancePlacementResponse());
-    }
-
-        /**
-         * 查询一个或多个QoS策略组的详细信息。
-         */
-    public DescribeQosPolicyGroupsResponse describeQosPolicyGroups(DescribeQosPolicyGroupsRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeQosPolicyGroups",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeQosPolicyGroupsResponse());
-    }
-
-        /**
-         * 创建一个QoS策略组，将EIP、IPv6或UNMANAGED出口IP纳入同一策略组实施共享带宽限速。
-         */
-    public CreateQosPolicyGroupResponse createQosPolicyGroup(CreateQosPolicyGroupRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "CreateQosPolicyGroup",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new CreateQosPolicyGroupResponse());
-    }
-
-        /**
-         * 修改QoS策略组的名称或带宽限制。
-         */
-    public ModifyQosPolicyGroupResponse modifyQosPolicyGroup(ModifyQosPolicyGroupRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyQosPolicyGroup",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyQosPolicyGroupResponse());
-    }
-
-        /**
-         * 向QoS策略组中添加EIP、IPv6或UNMANAGED出口IP。
-         */
-    public AddQosPolicyGroupMembersResponse addQosPolicyGroupMembers(AddQosPolicyGroupMembersRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "AddQosPolicyGroupMembers",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new AddQosPolicyGroupMembersResponse());
-    }
-
-        /**
-         * 从QoS策略组中移除成员。
-         */
-    public RemoveQosPolicyGroupMembersResponse removeQosPolicyGroupMembers(RemoveQosPolicyGroupMembersRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "RemoveQosPolicyGroupMembers",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new RemoveQosPolicyGroupMembersResponse());
-    }
-
-        /**
-         * 删除一个QoS策略组。删除前需确保策略组内无成员。
-         */
-    public DeleteQosPolicyGroupResponse deleteQosPolicyGroup(DeleteQosPolicyGroupRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DeleteQosPolicyGroup",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DeleteQosPolicyGroupResponse());
-    }
-
-        /**
-         * 查询QoS策略组的聚合流量监控数据。
-         */
-    public DescribeQosPolicyGroupTrafficResponse describeQosPolicyGroupTraffic(DescribeQosPolicyGroupTrafficRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeQosPolicyGroupTraffic",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeQosPolicyGroupTrafficResponse());
     }
 
         /**
