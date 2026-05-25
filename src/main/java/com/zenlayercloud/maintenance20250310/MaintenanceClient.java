@@ -10,6 +10,7 @@ import com.aliyun.teautil.models.RuntimeOptions;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
+import com.zenlayercloud.common.TokenCredential;
 import com.zenlayercloud.maintenance20250310.models.DescribeMaintenanceAlertsRequest;
 import com.zenlayercloud.maintenance20250310.models.DescribeMaintenanceAlertsResponse;
 
@@ -31,6 +32,14 @@ public class MaintenanceClient extends AbstractClient {
     }
 
     public MaintenanceClient(Credential credential) {
+        this(credential, new Config());
+    }
+
+    public MaintenanceClient(TokenCredential credential, Config config) {
+        super(credential, config, Common.isUnset(config.endpoint) ? endpoint : config.endpoint, VERSION, path);
+    }
+
+    public MaintenanceClient(TokenCredential credential) {
         this(credential, new Config());
     }
 

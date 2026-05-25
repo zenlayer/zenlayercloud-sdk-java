@@ -10,6 +10,7 @@ import com.aliyun.teautil.models.RuntimeOptions;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
+import com.zenlayercloud.common.TokenCredential;
 import com.zenlayercloud.vm20230313.models.*;
 
 import java.util.Map;
@@ -32,6 +33,14 @@ public class VmClient extends AbstractClient {
     }
 
     public VmClient(Credential credential) {
+        this(credential, new Config());
+    }
+
+    public VmClient(TokenCredential credential, Config config) {
+        super(credential, config, Common.isUnset(config.endpoint) ? endpoint : config.endpoint, VERSION, path);
+    }
+
+    public VmClient(TokenCredential credential) {
         this(credential, new Config());
     }
 

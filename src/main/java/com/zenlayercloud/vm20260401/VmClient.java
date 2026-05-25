@@ -11,6 +11,7 @@ import com.zenlayercloud.vm20260401.models.*;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
+import com.zenlayercloud.common.TokenCredential;
 
 import java.util.Map;
 
@@ -21,6 +22,12 @@ public class VmClient extends AbstractClient {
     private static final String PATH = "/api/v2/vm";
 
     public VmClient(Credential credential, Config config) {
+        super(credential, config,
+            config.getEndpoint() != null ? config.getEndpoint() : ENDPOINT,
+            VERSION, PATH);
+    }
+
+    public VmClient(TokenCredential credential, Config config) {
         super(credential, config,
             config.getEndpoint() != null ? config.getEndpoint() : ENDPOINT,
             VERSION, PATH);

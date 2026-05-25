@@ -10,6 +10,7 @@ import com.aliyun.teautil.models.RuntimeOptions;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
+import com.zenlayercloud.common.TokenCredential;
 import com.zenlayercloud.zls20230804.models.DescribeLogsRequest;
 import com.zenlayercloud.zls20230804.models.DescribeLogsResponse;
 
@@ -27,6 +28,14 @@ public class ZlsClient extends AbstractClient {
     }
 
     public ZlsClient(Credential credential) {
+        this(credential, new Config());
+    }
+
+    public ZlsClient(TokenCredential credential, Config config) {
+        super(credential, config, Common.isUnset(config.endpoint) ? endpoint : config.endpoint, VERSION, path);
+    }
+
+    public ZlsClient(TokenCredential credential) {
         this(credential, new Config());
     }
 

@@ -10,6 +10,7 @@ import com.aliyun.teautil.models.RuntimeOptions;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
+import com.zenlayercloud.common.TokenCredential;
 
 import com.zenlayercloud.zga20230706.models.CloseAcceleratorAccessControlRequest;
 import com.zenlayercloud.zga20230706.models.CloseAcceleratorAccessControlResponse;
@@ -84,6 +85,14 @@ public class ZgaClient extends AbstractClient {
     }
 
     public ZgaClient(Credential credential) {
+        this(credential, new Config());
+    }
+
+    public ZgaClient(TokenCredential credential, Config config) {
+        super(credential, config, Common.isUnset(config.endpoint) ? endpoint : config.endpoint, VERSION, path);
+    }
+
+    public ZgaClient(TokenCredential credential) {
         this(credential, new Config());
     }
 

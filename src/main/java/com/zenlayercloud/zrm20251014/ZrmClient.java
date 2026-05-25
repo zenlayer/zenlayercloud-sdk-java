@@ -11,6 +11,7 @@ import com.zenlayercloud.zrm20251014.models.*;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
+import com.zenlayercloud.common.TokenCredential;
 
 import java.util.Map;
 
@@ -21,6 +22,12 @@ public class ZrmClient extends AbstractClient {
     private static final String PATH = "/api/v2/zrm";
 
     public ZrmClient(Credential credential, Config config) {
+        super(credential, config,
+            config.getEndpoint() != null ? config.getEndpoint() : ENDPOINT,
+            VERSION, PATH);
+    }
+
+    public ZrmClient(TokenCredential credential, Config config) {
         super(credential, config,
             config.getEndpoint() != null ? config.getEndpoint() : ENDPOINT,
             VERSION, PATH);

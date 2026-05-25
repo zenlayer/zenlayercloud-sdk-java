@@ -28,26 +28,26 @@ public class AbstractClient {
     private final       InterceptorChain interceptorChain = InterceptorChain.create();
     public static final String           SDK_VERSION      = "0.6.8";
 
-    private final Credential _credential;
-    private final String     _endpoint;
-    private final String     _protocol;
-    private final String     _method;
-    private final String     _userAgent;
-    private final Integer    _readTimeout;
-    private final Integer    _connectTimeout;
-    private final String     _httpProxy;
-    private final String     _httpsProxy;
-    private final String     _noProxy;
-    private final String     _socks5Proxy;
-    private final String     _socks5NetWork;
-    private final Integer    _maxIdleConns;
-    private final String     _signatureVersion;
-    private final String     _signatureAlgorithm;
-    private final String     _service;
-    private final String     _apiVersion;
-    private final String     _path;
+    private final CredentialIface _credential;
+    private final String          _endpoint;
+    private final String          _protocol;
+    private final String          _method;
+    private final String          _userAgent;
+    private final Integer         _readTimeout;
+    private final Integer         _connectTimeout;
+    private final String          _httpProxy;
+    private final String          _httpsProxy;
+    private final String          _noProxy;
+    private final String          _socks5Proxy;
+    private final String          _socks5NetWork;
+    private final Integer         _maxIdleConns;
+    private final String          _signatureVersion;
+    private final String          _signatureAlgorithm;
+    private final String          _service;
+    private final String          _apiVersion;
+    private final String          _path;
 
-    public AbstractClient(Credential credential, Config config, String endpoint, String apiVersion, String path) {
+    public AbstractClient(CredentialIface credential, Config config, String endpoint, String apiVersion, String path) {
         this._credential = credential;
         this._protocol = config.protocol;
         this._method = config.method;
@@ -108,11 +108,14 @@ public class AbstractClient {
                 request_.method = _method;
                 request_.pathname = _path;
 
-                request_.headers = TeaConverter.buildMap(new TeaPair("date", com.aliyun.teautil.Common.getDateUTCString()),
-                        new TeaPair("host", _endpoint), new TeaPair("accept", "application/json"),
-                        new TeaPair("x-zc-signature-method", _signatureAlgorithm), new TeaPair("x-zc-signature-version", _signatureVersion),
-                        new TeaPair("x-zc-version", _apiVersion), new TeaPair("x-zc-action", actionName),
-                        new TeaPair("x-zc-service", _service), new TeaPair("x-zc-sdk-lang", "java"),
+                request_.headers = TeaConverter.buildMap(
+                        new TeaPair("date", com.aliyun.teautil.Common.getDateUTCString()),
+                        new TeaPair("host", _endpoint),
+                        new TeaPair("accept", "application/json"),
+                        new TeaPair("x-zc-version", _apiVersion),
+                        new TeaPair("x-zc-action", actionName),
+                        new TeaPair("x-zc-service", _service),
+                        new TeaPair("x-zc-sdk-lang", "java"),
                         new TeaPair("x-zc-sdk-version", SDK_VERSION),
                         new TeaPair("user-agent", com.aliyun.teautil.Common.getUserAgent(_userAgent)));
 
@@ -122,11 +125,16 @@ public class AbstractClient {
                 request_.headers.put("content-type", "application/json; charset=utf-8");
 
                 // build authorization header
-
-                String authorization = ApiUtil.getAuthorization(request_, _endpoint, _signatureAlgorithm, bodyString,
-                        _credential.getAccessKeyId(), _credential.getAccessKeyPassword());
-
-                request_.headers.put("Authorization", authorization);
+                String token = _credential.getToken();
+                if (token != null && !token.isEmpty()) {
+                    request_.headers.put("Authorization", "Bearer " + token);
+                } else {
+                    request_.headers.put("x-zc-signature-method", _signatureAlgorithm);
+                    request_.headers.put("x-zc-signature-version", _signatureVersion);
+                    String authorization = ApiUtil.getAuthorization(request_, _endpoint, _signatureAlgorithm, bodyString,
+                            _credential.getAccessKeyId(), _credential.getAccessKeyPassword());
+                    request_.headers.put("Authorization", authorization);
+                }
 
                 _lastRequest = request_;
                 TeaResponse response_ = Tea.doAction(request_, runtime_, interceptorChain);

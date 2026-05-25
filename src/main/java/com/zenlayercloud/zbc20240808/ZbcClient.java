@@ -11,6 +11,7 @@ import com.zenlayercloud.zbc20240808.models.*;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
+import com.zenlayercloud.common.TokenCredential;
 
 import java.util.Map;
 
@@ -30,6 +31,14 @@ public class ZbcClient extends AbstractClient {
     }
 
     public ZbcClient(Credential credential) {
+        this(credential, new Config());
+    }
+
+    public ZbcClient(TokenCredential credential, Config config) {
+        super(credential, config, Common.isUnset(config.endpoint) ? endpoint : config.endpoint, VERSION, path);
+    }
+
+    public ZbcClient(TokenCredential credential) {
         this(credential, new Config());
     }
 

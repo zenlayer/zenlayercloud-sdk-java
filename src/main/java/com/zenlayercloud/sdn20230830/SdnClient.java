@@ -10,6 +10,7 @@ import com.aliyun.teautil.models.RuntimeOptions;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
+import com.zenlayercloud.common.TokenCredential;
 import com.zenlayercloud.sdn20230830.models.*;
 
 import java.util.Map;
@@ -25,6 +26,14 @@ public class SdnClient extends AbstractClient {
     }
 
     public SdnClient(Credential credential) {
+        this(credential, new Config());
+    }
+
+    public SdnClient(TokenCredential credential, Config config) {
+        super(credential, config, Common.isUnset(config.endpoint) ? endpoint : config.endpoint, VERSION, path);
+    }
+
+    public SdnClient(TokenCredential credential) {
         this(credential, new Config());
     }
 

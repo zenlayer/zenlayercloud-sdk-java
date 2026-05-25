@@ -6,6 +6,7 @@ import com.aliyun.tea.interceptor.ResponseInterceptor;
 import com.aliyun.tea.utils.AttributeMap;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
+import com.zenlayercloud.common.TokenCredential;
 import com.zenlayercloud.zec20240401.ZecClient;
 import com.zenlayercloud.zec20240401.models.*;
 import org.junit.Before;
@@ -25,7 +26,8 @@ public class ZecTest {
 
         // dev team 7b28aa0f-3257-44fb-ac74-e37423553e32 sherlock
 //        Credential credential = new Credential("v3rcxE9t9Dr6M6PZ", "XX9Dxcw9auzpv67RB8nAavPREcu0Lu");
-        Credential credential = new Credential("9RgiuhziMoSFi9q4", "jyEHzjD2PoGYHKIIuEeEPK6hhZdRcA");
+//        Credential credential = new Credential("lJG8i5czGZvdh6Tv", "1J1MHZIYWQI0RpYWpRv8tuIQMkHtBh");
+        TokenCredential credential = new TokenCredential("pat_7bf3653fdfc31ad192f3148b6b2ca573bfd05a1bf4fa9728bfd80795acea88cb");
         config.setEndpoint("portal-dev.hzk8s.com");
 
         // ci team 7b090a2d-d802-4384-877e-410b738f5b55 sherlock-ci

@@ -9,7 +9,7 @@ package com.zenlayercloud.common;
  * @date 2022-11-09 20:17:57
  * @version $ Id: Credential.java, v 0.1  wolfgang Exp $
  */
-public class Credential {
+public class Credential implements CredentialIface {
 
     private String accessKeyId;
     private String accessKeyPassword;
@@ -39,5 +39,10 @@ public class Credential {
 
     public void setAccessKeyPassword(String accessKeyPassword) {
         this.accessKeyPassword = accessKeyPassword;
+    }
+
+    @Override
+    public String getToken() {
+        return null;
     }
 }

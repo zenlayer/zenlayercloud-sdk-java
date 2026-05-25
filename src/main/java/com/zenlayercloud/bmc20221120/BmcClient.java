@@ -11,6 +11,7 @@ import com.zenlayercloud.bmc20221120.models.*;
 import com.zenlayercloud.common.AbstractClient;
 import com.zenlayercloud.common.Config;
 import com.zenlayercloud.common.Credential;
+import com.zenlayercloud.common.TokenCredential;
 
 import java.util.Map;
 
@@ -32,6 +33,14 @@ public class BmcClient extends AbstractClient {
     }
 
     public BmcClient(Credential credential) {
+        this(credential, new Config());
+    }
+
+    public BmcClient(TokenCredential credential, Config config) {
+        super(credential, config, Common.isUnset(config.endpoint) ? endpoint : config.endpoint, VERSION, path);
+    }
+
+    public BmcClient(TokenCredential credential) {
         this(credential, new Config());
     }
 
