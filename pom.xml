@@ -10,7 +10,7 @@
 
     <groupId>com.zenlayer</groupId>
     <artifactId>zenlayercloud-sdk-java</artifactId>
-    <version>0.6.67</version>
+    <version>0.6.68</version>
 
     <name>zenlayercloud-sdk-java</name>
     <url>https://console.zenlayer.com/</url>
@@ -45,12 +45,6 @@
             <groupId>com.aliyun</groupId>
             <artifactId>tea-util</artifactId>
             <version>0.2.14</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>20.0</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
     <licenses>
