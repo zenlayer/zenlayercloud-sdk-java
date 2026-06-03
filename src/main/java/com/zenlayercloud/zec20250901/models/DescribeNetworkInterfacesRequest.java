@@ -81,6 +81,13 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
      */
     public List<Tag> tags;
 
+    /**
+     * 根据网卡堆栈类型筛选。
+     * 枚举值：IPv4 / IPv4_IPv6 / IPv6。
+     * 配合subnetId使用可查出子网内持有IPv6的全部网卡。
+     */
+    public String nicSubnetType;
+
     public List<String> getNicIds() {
         return this.nicIds;
     }
@@ -191,6 +198,14 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     public void setTags(List<Tag> tags) {
         this.tags = tags;
+    }
+
+    public String getNicSubnetType() {
+        return this.nicSubnetType;
+    }
+
+    public void setNicSubnetType(String nicSubnetType) {
+        this.nicSubnetType = nicSubnetType;
     }
 
 }

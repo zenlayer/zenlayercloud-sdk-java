@@ -2,6 +2,7 @@ package com.zenlayercloud.zec20250901.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
 
 /**
  * 
@@ -33,6 +34,11 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
      * 公网IPv4的带宽价格。
      */
     public PriceItem ipv4BandwidthPrice;
+
+    /**
+     * 各流量方向的IPv4带宽价格明细。仅当`internetChargeType`有值时返回。PathBasedBandwidthIP 线路返回多项（ipv4BandwidthPrice 为 null）；其他线路返回单项（trafficType=ALL）。
+     */
+    public List<BandwidthPriceResponseItem> ipv4BandwidthPrices;
 
     /**
      * IPv6的价格。
@@ -92,6 +98,14 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
 
     public void setIpv4BandwidthPrice(PriceItem ipv4BandwidthPrice) {
         this.ipv4BandwidthPrice = ipv4BandwidthPrice;
+    }
+
+    public List<BandwidthPriceResponseItem> getIpv4BandwidthPrices() {
+        return this.ipv4BandwidthPrices;
+    }
+
+    public void setIpv4BandwidthPrices(List<BandwidthPriceResponseItem> ipv4BandwidthPrices) {
+        this.ipv4BandwidthPrices = ipv4BandwidthPrices;
     }
 
     public PriceItem getIpv6Price() {

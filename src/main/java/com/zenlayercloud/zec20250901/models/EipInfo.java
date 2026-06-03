@@ -113,6 +113,13 @@ public class EipInfo extends TeaModel {
     public Double flowPackage;
 
     /**
+     * EIP 多方向流量包列表。
+     * 仅当网络计费方式为流量计费时可取到值。
+     * 该字段可能为null。
+     */
+    public List<FlowPackageResponseItem> flowPackages;
+
+    /**
      * EIP 的带宽限速。
      * 单位为Mbps。
      */
@@ -310,6 +317,14 @@ public class EipInfo extends TeaModel {
 
     public void setFlowPackage(Double flowPackage) {
         this.flowPackage = flowPackage;
+    }
+
+    public List<FlowPackageResponseItem> getFlowPackages() {
+        return this.flowPackages;
+    }
+
+    public void setFlowPackages(List<FlowPackageResponseItem> flowPackages) {
+        this.flowPackages = flowPackages;
     }
 
     public Integer getBandwidth() {

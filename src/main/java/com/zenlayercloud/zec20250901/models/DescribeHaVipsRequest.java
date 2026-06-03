@@ -22,7 +22,7 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String name;
 
     /**
-     * 所在地域ID。
+     * 所在节点ID。
      */
     public String regionId;
 
@@ -37,7 +37,7 @@ public class DescribeHaVipsRequest extends TeaModel {
     public List<String> subnetIds;
 
     /**
-     * 私网IP地址列表。
+     * 私网IP地址列表。最多支持100个地址查询。
      */
     public List<String> ipAddresses;
 
@@ -47,7 +47,7 @@ public class DescribeHaVipsRequest extends TeaModel {
     public List<String> instanceIds;
 
     /**
-     * 分页大小，最大为1000。
+     * 分页大小。
      */
     public Integer pageSize;
 

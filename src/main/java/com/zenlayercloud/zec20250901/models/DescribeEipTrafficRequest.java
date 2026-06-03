@@ -40,6 +40,12 @@ public class DescribeEipTrafficRequest extends TeaModel {
      */
     public String wanIp;
 
+    /**
+     * 流量方向。
+     * 仅 PathBasedBandwidthIP 类型有效；不传则返回全部方向数据。
+     */
+    public String direction;
+
     public String getEipId() {
         return this.eipId;
     }
@@ -78,6 +84,14 @@ public class DescribeEipTrafficRequest extends TeaModel {
 
     public void setWanIp(String wanIp) {
         this.wanIp = wanIp;
+    }
+
+    public String getDirection() {
+        return this.direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
     }
 
 }

@@ -23,12 +23,12 @@ public class CreateSubnetRequest extends TeaModel {
     public String name;
 
     /**
-     * 子网所在的节点ID。
+     * 子网所在节点的ID。必须是VPC所在节点之一。
      */
     public String regionId;
 
     /**
-     * 子网的IP堆栈类型。
+     * 子网的IP堆栈类型。可选值：IPv4（仅IPv4）、IPv4_IPv6（IPv4和IPv6双栈）、IPv6（仅IPv6）。
      */
     public String stackType;
 

@@ -32,7 +32,7 @@ public class VpcInfo extends TeaModel {
     public String ipv6CidrBlock;
 
     /**
-     * mtu值。
+     * VPC的MTU（最大传输单元），单位字节。
      */
     public Integer mtu;
 
@@ -47,12 +47,12 @@ public class VpcInfo extends TeaModel {
     public String createTime;
 
     /**
-     * VPC里已使用IPv4数量。
+     * VPC内已分配的IPv4地址数量。
      */
     public Integer usageIpv4Count;
 
     /**
-     * VPC里已使用IPv6数量。
+     * VPC内已分配的IPv6地址数量。
      */
     public Integer usageIpv6Count;
 

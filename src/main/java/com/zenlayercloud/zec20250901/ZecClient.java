@@ -322,6 +322,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询变更虚拟机实例规格后的新规格价格。
+         */
+    public InquiryPriceModifyInstanceTypeResponse inquiryPriceModifyInstanceType(InquiryPriceModifyInstanceTypeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceModifyInstanceType",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceModifyInstanceTypeResponse());
+    }
+
+        /**
          * 查询某节点支持的镜像列表。
          */
     public DescribeImagesResponse describeImages(DescribeImagesRequest request) {
@@ -571,6 +583,18 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeDiskMonitorDataResponse());
+    }
+
+        /**
+         * 查询云硬盘扩容后的新价格。
+         */
+    public InquiryPriceResizeDiskResponse inquiryPriceResizeDisk(InquiryPriceResizeDiskRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceResizeDisk",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceResizeDiskResponse());
     }
 
         /**
@@ -895,6 +919,42 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new ModifyNetworkInterfacePublicIPv6BandwidthLimitModeResponse());
+    }
+
+        /**
+         * 查询调整IPv6带宽后的价格。
+         */
+    public InquiryPriceModifyIpv6BandwidthResponse inquiryPriceModifyIpv6Bandwidth(InquiryPriceModifyIpv6BandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceModifyIpv6Bandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceModifyIpv6BandwidthResponse());
+    }
+
+        /**
+         * 查询变更IPv6网络计费模式后的价格。
+         */
+    public InquiryPriceChangeIpv6InternetChargeTypeResponse inquiryPriceChangeIpv6InternetChargeType(InquiryPriceChangeIpv6InternetChargeTypeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceChangeIpv6InternetChargeType",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceChangeIpv6InternetChargeTypeResponse());
+    }
+
+        /**
+         * 删除网卡IPv6。
+         */
+    public UnassignNetworkInterfaceIpv6Response unassignNetworkInterfaceIpv6(UnassignNetworkInterfaceIpv6Request request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "UnassignNetworkInterfaceIpv6",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new UnassignNetworkInterfaceIpv6Response());
     }
 
         /**
@@ -1330,6 +1390,42 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询调整EIP带宽后的价格。
+         */
+    public InquiryPriceModifyEipBandwidthResponse inquiryPriceModifyEipBandwidth(InquiryPriceModifyEipBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceModifyEipBandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceModifyEipBandwidthResponse());
+    }
+
+        /**
+         * 查询调整EIP流量包后的价格。
+         */
+    public InquiryPriceModifyEipFlowPackageResponse inquiryPriceModifyEipFlowPackage(InquiryPriceModifyEipFlowPackageRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceModifyEipFlowPackage",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceModifyEipFlowPackageResponse());
+    }
+
+        /**
+         * 查询变更EIP网络计费模式后的价格。
+         */
+    public InquiryPriceChangeEipInternetChargeTypeResponse inquiryPriceChangeEipInternetChargeType(InquiryPriceChangeEipInternetChargeTypeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceChangeEipInternetChargeType",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceChangeEipInternetChargeTypeResponse());
+    }
+
+        /**
          * 查询路由列表。用户可以根据ID、名称等信息来搜索Route信息。路由列表包括系统生成的以及用户创建的路由。
          */
     public DescribeRoutesResponse describeRoutes(DescribeRoutesRequest request) {
@@ -1711,6 +1807,30 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new ModifyUnmanagedEgressIpBandwidthLimitModeResponse());
+    }
+
+        /**
+         * 查询调整非托管出口IP带宽后的价格。
+         */
+    public InquiryPriceModifyUnmanagedEgressIpBandwidthResponse inquiryPriceModifyUnmanagedEgressIpBandwidth(InquiryPriceModifyUnmanagedEgressIpBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceModifyUnmanagedEgressIpBandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceModifyUnmanagedEgressIpBandwidthResponse());
+    }
+
+        /**
+         * 查询变更非托管出口IP网络计费模式后的价格。
+         */
+    public InquiryPriceChangeUnmanagedEgressIpInternetChargeTypeResponse inquiryPriceChangeUnmanagedEgressIpInternetChargeType(InquiryPriceChangeUnmanagedEgressIpInternetChargeTypeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceChangeUnmanagedEgressIpInternetChargeType",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceChangeUnmanagedEgressIpInternetChargeTypeResponse());
     }
 
         /**

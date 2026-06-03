@@ -38,6 +38,12 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
      */
     public Integer step;
 
+    /**
+     * 流量方向。
+     * 仅 PathBasedBandwidthIP 类型有效；不传则返回全部方向数据。
+     */
+    public String direction;
+
     public String getEipId() {
         return this.eipId;
     }
@@ -76,6 +82,14 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
 
     public void setStep(Integer step) {
         this.step = step;
+    }
+
+    public String getDirection() {
+        return this.direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
     }
 
 }

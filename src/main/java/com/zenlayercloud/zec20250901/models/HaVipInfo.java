@@ -21,7 +21,7 @@ public class HaVipInfo extends TeaModel {
     public String name;
 
     /**
-     * 地域ID。
+     * HaVip所在节点的ID。
      */
     public String regionId;
 
@@ -51,12 +51,12 @@ public class HaVipInfo extends TeaModel {
     public List<String> associatedInstances;
 
     /**
-     * 当前主实例ID，未绑定实例时为null。
+     * 当前持有该VIP流量的主实例ID。未绑定实例或无主实例时为null。
      */
     public String masterInstanceId;
 
     /**
-     * 关联的弹性公网IP信息列表，未绑定时为空列表。
+     * 绑定的弹性公网IP列表。未绑定时返回空列表。
      */
     public List<HaVipEipAttachment> associatedEips;
 

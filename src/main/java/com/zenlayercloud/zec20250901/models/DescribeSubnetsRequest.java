@@ -42,7 +42,7 @@ public class DescribeSubnetsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * VPC的ID集合。
+     * 根据所属VPC的ID进行筛选。最多支持100个VPC ID。
      */
     public List<String> vpcIds;
 

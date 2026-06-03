@@ -166,7 +166,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 批量解绑负载器均衡的安全组。
+         * 将一个或多个负载均衡实例与其绑定的安全组解除关联。
          */
     public UnbindSecurityGroupFromLoadBalancersResponse unbindSecurityGroupFromLoadBalancers(UnbindSecurityGroupFromLoadBalancersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -190,7 +190,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 查询创建负载均衡监听器。
+         * 在指定的网络型负载均衡实例中创建一个监听器，支持 TCP、UDP 协议。创建时可配置监听端口、调度算法、转发模式及健康检查策略。
          */
     public CreateListenerResponse createListener(CreateListenerRequest request) {
         Map<String, ?> rsp = super.callApi(

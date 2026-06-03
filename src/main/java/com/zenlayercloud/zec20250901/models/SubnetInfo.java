@@ -25,7 +25,7 @@ public class SubnetInfo extends TeaModel {
     public String name;
 
     /**
-     * 子网的CIDR地址。
+     * 子网的IPv4 CIDR地址段。
      */
     public String cidrBlock;
 
@@ -35,8 +35,7 @@ public class SubnetInfo extends TeaModel {
     public String gatewayIpAddress;
 
     /**
-     * 子网的IPv6 CIDR地址段。
-     * 如果子网的IP堆栈类型不包括V6,该字段取不到值。
+     * 子网的IPv6 CIDR地址段。当IP堆栈类型不包含IPv6时为null。
      */
     public String ipv6CidrBlock;
 
@@ -51,8 +50,7 @@ public class SubnetInfo extends TeaModel {
     public String stackType;
 
     /**
-     * 子网上IPv6类型。
-     * 如果子网的IP堆栈类型不包括V6,该字段取不到值。
+     * 子网的IPv6类型。可选值：Private（内网）、Public（公网）。当IP堆栈类型不包含IPv6时为null。
      */
     public String ipv6Type;
 
@@ -82,7 +80,7 @@ public class SubnetInfo extends TeaModel {
     public String createTime;
 
     /**
-     * 子网是否为默认。
+     * 是否为默认子网。
      */
     public Boolean isDefault;
 
@@ -92,8 +90,7 @@ public class SubnetInfo extends TeaModel {
     public String dhcpOptionsSetId;
 
     /**
-     * 分配给网卡的IPv6掩码长度。
-     * 如果子网的IP堆栈类型不包括V6,该字段取不到值。
+     * 分配给虚拟机的IPv6前缀长度。当IP堆栈类型不包含IPv6时为null。
      */
     public Integer ipv6MaskLength;
 

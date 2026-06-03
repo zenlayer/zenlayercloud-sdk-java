@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 
  */
-public class DescribeEipPriceResponse extends TeaModel {
+public class InquiryPriceModifyEipFlowPackageResponse extends TeaModel {
 
 
     /**
@@ -17,23 +17,25 @@ public class DescribeEipPriceResponse extends TeaModel {
 
     /**
      * 公网弹性IP的保留价格。
-     * 如果是通过cidr创建，则保留价格为null。
+     * 通过CIDR创建的IP保留价格为null。
      */
     public PriceItem eipPrice;
 
     /**
      * 公网弹性IP的带宽价格。
+     * PathBasedBandwidthIP线路时为null，详见`bandwidthPrices`。
      */
     public PriceItem bandwidthPrice;
 
     /**
      * 各流量方向的带宽价格明细。
-     * PathBasedBandwidthIP 线路返回多项（bandwidthPrice 为 null）；其他线路返回单项（trafficType=ALL）。
+     * PathBasedBandwidthIP线路返回多项；其他线路返回单项（trafficType=ALL）。
      */
     public List<BandwidthPriceResponseItem> bandwidthPrices;
 
     /**
      * Remote IPT的带宽价格。
+     * EIP未开启Remote IPT时为null。
      */
     public PriceItem remoteBandwidthPrice;
 

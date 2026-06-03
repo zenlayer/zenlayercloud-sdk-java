@@ -49,6 +49,7 @@ public class CreateEipsRequest extends TeaModel {
      * 主公网IP的运营商。
      * 该字段仅作用于三线IP(`ThreeLine`)。
      */
+    @Deprecated
     public String primaryIsp;
 
     /**
@@ -172,10 +173,12 @@ public class CreateEipsRequest extends TeaModel {
         this.networkLineType = networkLineType;
     }
 
+    @Deprecated
     public String getPrimaryIsp() {
         return this.primaryIsp;
     }
 
+    @Deprecated
     public void setPrimaryIsp(String primaryIsp) {
         this.primaryIsp = primaryIsp;
     }
