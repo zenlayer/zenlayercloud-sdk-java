@@ -898,6 +898,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 删除网卡IPv6。
+         */
+    public UnassignNetworkInterfaceIpv6Response unassignNetworkInterfaceIpv6(UnassignNetworkInterfaceIpv6Request request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "UnassignNetworkInterfaceIpv6",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new UnassignNetworkInterfaceIpv6Response());
+    }
+
+        /**
          * 查询一段时间内的网卡监控指标数据。包含带宽、包量、丢包、错误包等指标。
          */
     public DescribeNetworkInterfaceMonitorDataResponse describeNetworkInterfaceMonitorData(DescribeNetworkInterfaceMonitorDataRequest request) {
@@ -943,18 +955,6 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new InquiryPriceChangeIpv6InternetChargeTypeResponse());
-    }
-
-        /**
-         * 删除网卡IPv6。
-         */
-    public UnassignNetworkInterfaceIpv6Response unassignNetworkInterfaceIpv6(UnassignNetworkInterfaceIpv6Request request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "UnassignNetworkInterfaceIpv6",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new UnassignNetworkInterfaceIpv6Response());
     }
 
         /**

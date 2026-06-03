@@ -36,7 +36,7 @@ public class DescribeEipTrafficRequest extends TeaModel {
     public Integer step;
 
     /**
-     * 指定IP查询，该字段用于三线IP,可以指定IP地址查询流量。
+     * 指定IP查询，可以指定IP地址查询流量。
      */
     public String wanIp;
 

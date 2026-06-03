@@ -26,12 +26,12 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
     public PriceItem gpuPrice;
 
     /**
-     * 公网IPv4的保留价格。
+     * 公网IPv4的保留价格。仅当`internetChargeType`有值时返回。
      */
     public PriceItem ipv4Price;
 
     /**
-     * 公网IPv4的带宽价格。
+     * 公网IPv4的带宽价格。仅当`internetChargeType`有值时返回。
      */
     public PriceItem ipv4BandwidthPrice;
 
@@ -41,12 +41,12 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
     public List<BandwidthPriceResponseItem> ipv4BandwidthPrices;
 
     /**
-     * IPv6的价格。
+     * 公网IPv6的价格。仅当`internetChargeType`有值时返回。
      */
     public PriceItem ipv6Price;
 
     /**
-     * IPv6的带宽价格。
+     * 公网IPv6的带宽价格。仅当`internetChargeType`有值时返回。
      */
     public PriceItem ipv6BandwidthPrice;
 

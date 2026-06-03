@@ -26,13 +26,12 @@ public class InquiryPriceCreateInstanceRequest extends TeaModel {
     public String eipV4Type;
 
     /**
-     * 公网IPv4的线路类型。
-     * 目前不支持三线IP(`ThreeLine`)。
+     * 公网IPv4的线路类型。当`internetChargeType`有值时必填。
      */
     public String networkLineType;
 
     /**
-     * 公网IP的网络计费类型。
+     * 公网IP的网络计费类型。如果不指定，则不会询价公网IP。
      */
     public String internetChargeType;
 

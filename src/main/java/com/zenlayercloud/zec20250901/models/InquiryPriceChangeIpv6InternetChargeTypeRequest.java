@@ -33,12 +33,6 @@ public class InquiryPriceChangeIpv6InternetChargeTypeRequest extends TeaModel {
      */
     public Double flowPackage;
 
-    /**
-     * 共享带宽包ID。
-     * 网络计费方式为共享带宽包计费（`BandwidthCluster`）时需指定。
-     */
-    public String clusterId;
-
     public String getIpv6Id() {
         return this.ipv6Id;
     }
@@ -69,14 +63,6 @@ public class InquiryPriceChangeIpv6InternetChargeTypeRequest extends TeaModel {
 
     public void setFlowPackage(Double flowPackage) {
         this.flowPackage = flowPackage;
-    }
-
-    public String getClusterId() {
-        return this.clusterId;
-    }
-
-    public void setClusterId(String clusterId) {
-        this.clusterId = clusterId;
     }
 
 }
