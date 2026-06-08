@@ -70,6 +70,18 @@ public class VmClient extends AbstractClient {
     }
 
         /**
+         * 获取可用区库存。
+         */
+    public DescribeVmInventoryCapacityResponse describeVmInventoryCapacity(DescribeVmInventoryCapacityRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeVmInventoryCapacity",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeVmInventoryCapacityResponse());
+    }
+
+        /**
          * 创建一个或多个指定配置的虚拟机实例。
          */
     public CreateInstancesResponse createInstances(CreateInstancesRequest request) {

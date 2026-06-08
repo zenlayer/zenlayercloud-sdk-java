@@ -41,6 +41,11 @@ public class ResetInstanceRequest extends TeaModel {
      */
     public String lanName;
 
+    /**
+     * 初始化脚本。
+     */
+    public String initScript;
+
     public String getInstanceId() {
         return this.instanceId;
     }
@@ -95,6 +100,14 @@ public class ResetInstanceRequest extends TeaModel {
 
     public void setLanName(String lanName) {
         this.lanName = lanName;
+    }
+
+    public String getInitScript() {
+        return this.initScript;
+    }
+
+    public void setInitScript(String initScript) {
+        this.initScript = initScript;
     }
 
 }
