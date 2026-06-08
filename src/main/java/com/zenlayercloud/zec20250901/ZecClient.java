@@ -2554,7 +2554,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 修改高可用虚拟IP的名称。
+         * 修改高可用虚拟IP的名称或绑定的安全组。
          */
     public ModifyHaVipAttributeResponse modifyHaVipAttribute(ModifyHaVipAttributeRequest request) {
         Map<String, ?> rsp = super.callApi(

@@ -34,6 +34,21 @@ public class BillingItem extends TeaModel {
      */
     public String usage;
 
+    /**
+     * 模型名称。
+     */
+    public String modelName;
+
+    /**
+     * 单价（字符串，保留精度）。
+     */
+    public String unitPrice;
+
+    /**
+     * 原价（字符串，保留精度）。
+     */
+    public String originalPrice;
+
     public String getGatewayUuid() {
         return this.gatewayUuid;
     }
@@ -72,6 +87,30 @@ public class BillingItem extends TeaModel {
 
     public void setUsage(String usage) {
         this.usage = usage;
+    }
+
+    public String getModelName() {
+        return this.modelName;
+    }
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
+
+    public String getUnitPrice() {
+        return this.unitPrice;
+    }
+
+    public void setUnitPrice(String unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
+    public String getOriginalPrice() {
+        return this.originalPrice;
+    }
+
+    public void setOriginalPrice(String originalPrice) {
+        this.originalPrice = originalPrice;
     }
 
 }
