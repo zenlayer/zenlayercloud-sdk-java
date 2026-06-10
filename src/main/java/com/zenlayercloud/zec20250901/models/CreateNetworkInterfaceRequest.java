@@ -2,6 +2,7 @@ package com.zenlayercloud.zec20250901.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
 
 /**
  * 
@@ -67,6 +68,17 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
      * 当子网的堆栈类型包括V6且为公网时，且网络计费方式是共享带宽包计费(`BandwidthCluster`)需要指定。
      */
     public String clusterId;
+
+    /**
+     * 公网IP的绑定模式。
+     * 当分配公网IP时需要指定。
+     */
+    public String eipBindType;
+
+    /**
+     * 配置在网卡的公网IP ID集合。
+     */
+    public List<String> eipIds;
 
     /**
      * 市场营销相关的选项。
@@ -149,6 +161,22 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     public void setClusterId(String clusterId) {
         this.clusterId = clusterId;
+    }
+
+    public String getEipBindType() {
+        return this.eipBindType;
+    }
+
+    public void setEipBindType(String eipBindType) {
+        this.eipBindType = eipBindType;
+    }
+
+    public List<String> getEipIds() {
+        return this.eipIds;
+    }
+
+    public void setEipIds(List<String> eipIds) {
+        this.eipIds = eipIds;
     }
 
     public MarketingInfo getMarketingOptions() {

@@ -143,6 +143,11 @@ public class CreateZecInstancesRequest extends TeaModel {
     public String eipBindType;
 
     /**
+     * 配置在实例主网卡的公网IP ID集合。
+     */
+    public List<String> eipIds;
+
+    /**
      * 公网IPv4的线路类型。
      * 当分配公网IP时需要指定。
      * 请确保所选子网的堆栈类型支持`IPv4`。
@@ -364,6 +369,14 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     public void setEipBindType(String eipBindType) {
         this.eipBindType = eipBindType;
+    }
+
+    public List<String> getEipIds() {
+        return this.eipIds;
+    }
+
+    public void setEipIds(List<String> eipIds) {
+        this.eipIds = eipIds;
     }
 
     @Deprecated

@@ -28,6 +28,11 @@ public class ModifyBorderGatewaysAttributeRequest extends TeaModel {
     public String advertisedSubnet;
 
     /**
+     * Subnet子网ID集合。
+     */
+    public List<String> advertisedSubnetIds;
+
+    /**
      * IPv4 Cidr集合。
      */
     public List<String> advertisedCidrs;
@@ -67,6 +72,14 @@ public class ModifyBorderGatewaysAttributeRequest extends TeaModel {
 
     public void setAdvertisedSubnet(String advertisedSubnet) {
         this.advertisedSubnet = advertisedSubnet;
+    }
+
+    public List<String> getAdvertisedSubnetIds() {
+        return this.advertisedSubnetIds;
+    }
+
+    public void setAdvertisedSubnetIds(List<String> advertisedSubnetIds) {
+        this.advertisedSubnetIds = advertisedSubnetIds;
     }
 
     public List<String> getAdvertisedCidrs() {
