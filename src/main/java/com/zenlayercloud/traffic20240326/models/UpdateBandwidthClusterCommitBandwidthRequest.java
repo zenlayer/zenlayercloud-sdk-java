@@ -16,6 +16,12 @@ public class UpdateBandwidthClusterCommitBandwidthRequest extends TeaModel {
      */
     public Integer commitBandwidthMbps;
 
+    /**
+     * 国际线路保底带宽。
+     * 仅 PathBasedBandwidth 线路使用。
+     */
+    public Integer internationalCommitBandwidthMbps;
+
     public String getBandwidthClusterId() {
         return this.bandwidthClusterId;
     }
@@ -30,6 +36,14 @@ public class UpdateBandwidthClusterCommitBandwidthRequest extends TeaModel {
 
     public void setCommitBandwidthMbps(Integer commitBandwidthMbps) {
         this.commitBandwidthMbps = commitBandwidthMbps;
+    }
+
+    public Integer getInternationalCommitBandwidthMbps() {
+        return this.internationalCommitBandwidthMbps;
+    }
+
+    public void setInternationalCommitBandwidthMbps(Integer internationalCommitBandwidthMbps) {
+        this.internationalCommitBandwidthMbps = internationalCommitBandwidthMbps;
     }
 
 }

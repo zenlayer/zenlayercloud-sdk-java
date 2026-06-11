@@ -33,6 +33,13 @@ public class DescribeBandwidthClusterTrafficRequest extends TeaModel {
      */
     public String city;
 
+    /**
+     * 按流量类型进行过滤。
+     * 可选值：`LOCAL`（本地）、`INTERNATIONAL`（国际）。
+     * 仅 PathBasedBandwidth 类型的带宽包支持该参数。
+     */
+    public String trafficType;
+
     public String getBandwidthClusterId() {
         return this.bandwidthClusterId;
     }
@@ -63,6 +70,14 @@ public class DescribeBandwidthClusterTrafficRequest extends TeaModel {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getTrafficType() {
+        return this.trafficType;
+    }
+
+    public void setTrafficType(String trafficType) {
+        this.trafficType = trafficType;
     }
 
 }

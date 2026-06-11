@@ -54,6 +54,13 @@ public class BandwidthClusterInfo extends TeaModel {
     public Integer commitBandwidthMbps;
 
     /**
+     * 国际保底带宽。
+     * 单位：Mbps。
+     * 仅 PathBasedBandwidth 类型返回。
+     */
+    public Integer internationalCommitBandwidthMbps;
+
+    /**
      * 所属区域。
      */
     public String location;
@@ -73,6 +80,16 @@ public class BandwidthClusterInfo extends TeaModel {
      * 城市信息。
      */
     public List<CityInfo> cities;
+
+    /**
+     * 共享带宽包关联的标签。
+     */
+    public Tags tags;
+
+    /**
+     * 共享带宽包所属的资源组。
+     */
+    public ResourceGroupInfo resourceGroup;
 
     public String getBandwidthClusterId() {
         return this.bandwidthClusterId;
@@ -140,6 +157,14 @@ public class BandwidthClusterInfo extends TeaModel {
         this.commitBandwidthMbps = commitBandwidthMbps;
     }
 
+    public Integer getInternationalCommitBandwidthMbps() {
+        return this.internationalCommitBandwidthMbps;
+    }
+
+    public void setInternationalCommitBandwidthMbps(Integer internationalCommitBandwidthMbps) {
+        this.internationalCommitBandwidthMbps = internationalCommitBandwidthMbps;
+    }
+
     public String getLocation() {
         return this.location;
     }
@@ -170,6 +195,22 @@ public class BandwidthClusterInfo extends TeaModel {
 
     public void setCities(List<CityInfo> cities) {
         this.cities = cities;
+    }
+
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    public void setTags(Tags tags) {
+        this.tags = tags;
+    }
+
+    public ResourceGroupInfo getResourceGroup() {
+        return this.resourceGroup;
+    }
+
+    public void setResourceGroup(ResourceGroupInfo resourceGroup) {
+        this.resourceGroup = resourceGroup;
     }
 
 }

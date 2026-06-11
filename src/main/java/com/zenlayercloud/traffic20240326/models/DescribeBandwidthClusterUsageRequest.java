@@ -19,7 +19,6 @@ public class DescribeBandwidthClusterUsageRequest extends TeaModel {
 
     /**
      * 返回的分页数。
-     * 默认为1。
      */
     public Integer pageNum;
 

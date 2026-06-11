@@ -38,6 +38,23 @@ public class DescribeBandwidthClustersRequest extends TeaModel {
      */
     public Integer pageSize;
 
+    /**
+     * 根据资源组ID过滤。
+     */
+    public String resourceGroupId;
+
+    /**
+     * 根据标签键进行搜索。
+     * 最长不得超过20个标签键。
+     */
+    public List<String> tagKeys;
+
+    /**
+     * 根据标签进行搜索。
+     * 最长不得超过20个标签。
+     */
+    public List<Tag> tags;
+
     public List<String> getBandwidthClusterIds() {
         return this.bandwidthClusterIds;
     }
@@ -76,6 +93,30 @@ public class DescribeBandwidthClustersRequest extends TeaModel {
 
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+    }
+
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+    public List<String> getTagKeys() {
+        return this.tagKeys;
+    }
+
+    public void setTagKeys(List<String> tagKeys) {
+        this.tagKeys = tagKeys;
+    }
+
+    public List<Tag> getTags() {
+        return this.tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
     }
 
 }

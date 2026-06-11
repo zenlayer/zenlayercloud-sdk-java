@@ -24,6 +24,12 @@ public class BandwidthClusterUsageData extends TeaModel {
     public Double value;
 
     /**
+     * 分类型带宽值列表。
+     * 仅 PathBasedBandwidth 类型填充。
+     */
+    public List<TrafficTypeValue> typeValues;
+
+    /**
      * 带宽详情列表。
      */
     public List<BandwidthClusterUsageDetail> details;
@@ -42,6 +48,14 @@ public class BandwidthClusterUsageData extends TeaModel {
 
     public void setValue(Double value) {
         this.value = value;
+    }
+
+    public List<TrafficTypeValue> getTypeValues() {
+        return this.typeValues;
+    }
+
+    public void setTypeValues(List<TrafficTypeValue> typeValues) {
+        this.typeValues = typeValues;
     }
 
     public List<BandwidthClusterUsageDetail> getDetails() {

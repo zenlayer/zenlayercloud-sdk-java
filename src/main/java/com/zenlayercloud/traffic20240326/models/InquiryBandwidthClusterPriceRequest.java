@@ -22,6 +22,13 @@ public class InquiryBandwidthClusterPriceRequest extends TeaModel {
     public Integer commitBandwidthMbps;
 
     /**
+     * 国际线路保底带宽值。
+     * 单位: Mbps。
+     * 仅 PathBasedBandwidth 使用。
+     */
+    public Integer internationalCommitBandwidthMbps;
+
+    /**
      * IP 网络类型。
      */
     public String networkType;
@@ -51,6 +58,14 @@ public class InquiryBandwidthClusterPriceRequest extends TeaModel {
 
     public void setCommitBandwidthMbps(Integer commitBandwidthMbps) {
         this.commitBandwidthMbps = commitBandwidthMbps;
+    }
+
+    public Integer getInternationalCommitBandwidthMbps() {
+        return this.internationalCommitBandwidthMbps;
+    }
+
+    public void setInternationalCommitBandwidthMbps(Integer internationalCommitBandwidthMbps) {
+        this.internationalCommitBandwidthMbps = internationalCommitBandwidthMbps;
     }
 
     public String getNetworkType() {

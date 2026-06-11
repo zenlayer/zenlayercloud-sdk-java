@@ -16,6 +16,12 @@ public class InquiryBandwidthClusterPriceResponse extends TeaModel {
      */
     public PriceItem price;
 
+    /**
+     * 国际线路价格信息。
+     * 仅 PathBasedBandwidth 线路返回。
+     */
+    public PriceItem internationalPrice;
+
     public String getRequestId() {
         return this.requestId;
     }
@@ -30,6 +36,14 @@ public class InquiryBandwidthClusterPriceResponse extends TeaModel {
 
     public void setPrice(PriceItem price) {
         this.price = price;
+    }
+
+    public PriceItem getInternationalPrice() {
+        return this.internationalPrice;
+    }
+
+    public void setInternationalPrice(PriceItem internationalPrice) {
+        this.internationalPrice = internationalPrice;
     }
 
 }

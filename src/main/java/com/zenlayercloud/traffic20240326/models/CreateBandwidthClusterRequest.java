@@ -22,6 +22,13 @@ public class CreateBandwidthClusterRequest extends TeaModel {
     public Integer commitBandwidthMbps;
 
     /**
+     * 国际线路保底带宽值。
+     * 单位: Mbps。
+     * 仅 PathBasedBandwidth 线路使用。
+     */
+    public Integer internationalCommitBandwidthMbps;
+
+    /**
      * IP网络类型。
      * 城市共享带宽包该字段必填。
      */
@@ -51,6 +58,16 @@ public class CreateBandwidthClusterRequest extends TeaModel {
      */
     public String product;
 
+    /**
+     * 创建后共享带宽包所在的资源组ID，如不指定则放入默认资源组。
+     */
+    public String resourceGroupId;
+
+    /**
+     * 创建共享带宽包时关联的标签。
+     */
+    public TagAssociation tags;
+
     public String getAreaCode() {
         return this.areaCode;
     }
@@ -65,6 +82,14 @@ public class CreateBandwidthClusterRequest extends TeaModel {
 
     public void setCommitBandwidthMbps(Integer commitBandwidthMbps) {
         this.commitBandwidthMbps = commitBandwidthMbps;
+    }
+
+    public Integer getInternationalCommitBandwidthMbps() {
+        return this.internationalCommitBandwidthMbps;
+    }
+
+    public void setInternationalCommitBandwidthMbps(Integer internationalCommitBandwidthMbps) {
+        this.internationalCommitBandwidthMbps = internationalCommitBandwidthMbps;
     }
 
     public String getNetworkLineType() {
@@ -107,6 +132,22 @@ public class CreateBandwidthClusterRequest extends TeaModel {
 
     public void setProduct(String product) {
         this.product = product;
+    }
+
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+    public TagAssociation getTags() {
+        return this.tags;
+    }
+
+    public void setTags(TagAssociation tags) {
+        this.tags = tags;
     }
 
 }
