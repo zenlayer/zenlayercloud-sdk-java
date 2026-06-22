@@ -20,6 +20,12 @@ public class InquiryPriceModifyInstanceTypeResponse extends TeaModel {
     public PriceItem specPrice;
 
     /**
+     * 变更后 GPU 规格的价格。
+     * GPU 实例变配时返回，VM 实例变配时为 null。
+     */
+    public PriceItem gpuPrice;
+
+    /**
      * 系统盘的价格。
      */
     public PriceItem systemDiskPrice;
@@ -38,6 +44,14 @@ public class InquiryPriceModifyInstanceTypeResponse extends TeaModel {
 
     public void setSpecPrice(PriceItem specPrice) {
         this.specPrice = specPrice;
+    }
+
+    public PriceItem getGpuPrice() {
+        return this.gpuPrice;
+    }
+
+    public void setGpuPrice(PriceItem gpuPrice) {
+        this.gpuPrice = gpuPrice;
     }
 
     public PriceItem getSystemDiskPrice() {

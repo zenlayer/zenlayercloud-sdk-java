@@ -75,12 +75,32 @@ public class Config  {
     @NameInMap("requestClient")
     public String requestClient;
 
+    /**
+     * Maximum number of retries when the server returns the REQUEST_LIMIT_EXCEEDED
+     * error code (HTTP 429). Defaults to 3. Set to 0 to disable.
+     */
+    @NameInMap("rateLimitMaxRetries")
+    public Integer rateLimitMaxRetries;
+
+    /**
+     * Backoff strategy: given the zero-based retry index, returns the wait time in
+     * seconds before the next retry. Defaults to exponential backoff (1s, 2s, 4s, ...).
+     */
+    public RetryDurationFunction rateLimitRetryDuration;
+
     public Config() {
         this.method = REQ_POST;
         this.protocol = REQ_HTTPS;
         this.endpoint = null;
         this.signatureAlgorithm = REQ_SIGNATURE_ALGORITHM;
         this.signatureVersion = REQ_SIGNATURE_VERSION;
+        this.rateLimitMaxRetries = 3;
+        this.rateLimitRetryDuration = new RetryDurationFunction() {
+            @Override
+            public int getDurationSeconds(int retryIndex) {
+                return (int) Math.pow(2, retryIndex);
+            }
+        };
     }
 
     public String getProtocol() {
@@ -193,5 +213,21 @@ public class Config  {
 
     public void setSignatureAlgorithm(String signatureAlgorithm) {
         this.signatureAlgorithm = signatureAlgorithm;
+    }
+
+    public Integer getRateLimitMaxRetries() {
+        return rateLimitMaxRetries;
+    }
+
+    public void setRateLimitMaxRetries(Integer rateLimitMaxRetries) {
+        this.rateLimitMaxRetries = rateLimitMaxRetries;
+    }
+
+    public RetryDurationFunction getRateLimitRetryDuration() {
+        return rateLimitRetryDuration;
+    }
+
+    public void setRateLimitRetryDuration(RetryDurationFunction rateLimitRetryDuration) {
+        this.rateLimitRetryDuration = rateLimitRetryDuration;
     }
 }

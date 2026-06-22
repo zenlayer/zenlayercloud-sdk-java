@@ -71,5 +71,34 @@ public class Example {
 }
 ```
 
+# Rate Limit Retries
+
+When the server returns the `REQUEST_LIMIT_EXCEEDED` error code (HTTP 429), the SDK will automatically retry the
+request with an exponential backoff (1s, 2s, 4s, ...). This behavior is **enabled by default** with a maximum of
+**3 retries**, so most callers do not need any extra configuration. A `WARN` log is emitted on each retry via SLF4J
+under the logger name `com.zenlayercloud.common.AbstractClient`.
+
+You can customize the maximum retries and the backoff strategy on `Config`, or disable it entirely by setting it
+to `0`:
+
+```java
+import com.zenlayercloud.common.Config;
+import com.zenlayercloud.common.RetryDurationFunction;
+
+Config config = new Config();
+
+// Customize: retry up to 5 times with a constant 2-second wait
+config.setRateLimitMaxRetries(5);
+config.setRateLimitRetryDuration(new RetryDurationFunction() {
+    @Override
+    public int getDurationSeconds(int retryIndex) {
+        return 2;
+    }
+});
+
+// Or disable rate limit retries
+config.setRateLimitMaxRetries(0);
+```
+
 ---
 Quick Start[(Chinese)](./README-CN.md)

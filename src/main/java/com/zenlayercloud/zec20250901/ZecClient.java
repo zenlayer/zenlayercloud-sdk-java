@@ -334,6 +334,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询可用区售卖的 GPU 规格信息
+         */
+    public DescribeZoneGpuInstanceConfigInfosResponse describeZoneGpuInstanceConfigInfos(DescribeZoneGpuInstanceConfigInfosRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeZoneGpuInstanceConfigInfos",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeZoneGpuInstanceConfigInfosResponse());
+    }
+
+        /**
          * 查询某节点支持的镜像列表。
          */
     public DescribeImagesResponse describeImages(DescribeImagesRequest request) {
@@ -1423,6 +1435,18 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new InquiryPriceChangeEipInternetChargeTypeResponse());
+    }
+
+        /**
+         * 调整弹性公网IP流量包。
+         */
+    public ModifyEipTrafficPackageResponse modifyEipTrafficPackage(ModifyEipTrafficPackageRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyEipTrafficPackage",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyEipTrafficPackageResponse());
     }
 
         /**

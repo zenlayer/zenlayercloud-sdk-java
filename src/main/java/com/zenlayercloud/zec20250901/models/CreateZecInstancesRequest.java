@@ -143,7 +143,10 @@ public class CreateZecInstancesRequest extends TeaModel {
     public String eipBindType;
 
     /**
-     * 配置在实例主网卡的公网IP ID集合。
+     * 分配已有的EIP到实例上。
+     * IP数量必须和创建的实例数量一致。
+     * 如果指定该字段，则不会新建EIP, 相关字段将无效（`networkLineType`)。 
+     * 请确保创建的网卡`ipStackType` 包含`IPv4`。
      */
     public List<String> eipIds;
 

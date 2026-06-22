@@ -76,7 +76,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String eipBindType;
 
     /**
-     * 配置在网卡的公网IP ID集合。
+     * 分配已有的EIP到网卡上。
+     * IP数量必须和创建的网卡数量一致。
+     * 请确保创建的网卡`ipStackType` 包含`IPv4`。
      */
     public List<String> eipIds;
 

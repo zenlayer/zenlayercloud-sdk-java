@@ -70,5 +70,32 @@ public class Example {
 
 ```
 
+# 限流重试
+
+当服务端返回 `REQUEST_LIMIT_EXCEEDED` 错误码（HTTP 429）时，SDK 会自动按指数退避（1s、2s、4s ……）进行重试。该行为**默认开启**，
+默认最大重试次数为 **3 次**，多数调用方无需额外配置。每次重试都会通过 SLF4J 输出 `WARN` 级别日志，
+logger 名为 `com.zenlayercloud.common.AbstractClient`。
+
+如需自定义重试次数或退避策略，可通过 `Config` 调整；将重试次数设置为 `0` 即可关闭限流重试：
+
+```java
+import com.zenlayercloud.common.Config;
+import com.zenlayercloud.common.RetryDurationFunction;
+
+Config config = new Config();
+
+// 自定义：最多重试 5 次，每次等待固定 2 秒
+config.setRateLimitMaxRetries(5);
+config.setRateLimitRetryDuration(new RetryDurationFunction() {
+    @Override
+    public int getDurationSeconds(int retryIndex) {
+        return 2;
+    }
+});
+
+// 或者关闭限流重试
+config.setRateLimitMaxRetries(0);
+```
+
 ---
 快速使用[(English)](./README.md)

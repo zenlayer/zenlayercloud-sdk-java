@@ -16,6 +16,8 @@ import com.aliyun.tea.interceptor.ResponseInterceptor;
 import com.aliyun.tea.interceptor.RuntimeOptionsInterceptor;
 import com.aliyun.teautil.Common;
 import com.aliyun.teautil.models.RuntimeOptions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
@@ -25,6 +27,10 @@ import java.util.Map;
  * @version $ Id: AbstractClient.java, v 0.1  wolfgang Exp $
  */
 public class AbstractClient {
+    private static final Logger logger = LoggerFactory.getLogger(AbstractClient.class);
+
+    private static final String REQUEST_LIMIT_EXCEEDED = "REQUEST_LIMIT_EXCEEDED";
+
     private final       InterceptorChain interceptorChain = InterceptorChain.create();
     public static final String           SDK_VERSION      = "0.6.8";
 
@@ -46,6 +52,8 @@ public class AbstractClient {
     private final String          _service;
     private final String          _apiVersion;
     private final String          _path;
+    private final int                   _rateLimitMaxRetries;
+    private final RetryDurationFunction _rateLimitRetryDuration;
 
     public AbstractClient(CredentialIface credential, Config config, String endpoint, String apiVersion, String path) {
         this._credential = credential;
@@ -66,10 +74,45 @@ public class AbstractClient {
         this._apiVersion = apiVersion;
         this._service = path.replace("/api/v2/", "");
         this._path = path;
-
+        this._rateLimitMaxRetries = config.rateLimitMaxRetries == null ? 0 : Math.max(config.rateLimitMaxRetries, 0);
+        this._rateLimitRetryDuration = config.rateLimitRetryDuration == null
+                ? new RetryDurationFunction() {
+                    @Override
+                    public int getDurationSeconds(int retryIndex) {
+                        return (int) Math.pow(2, retryIndex);
+                    }
+                }
+                : config.rateLimitRetryDuration;
     }
 
     protected java.util.Map<String, ?> callApi(TeaModel request, String actionName, RuntimeOptions runtime) {
+        ZenlayerSdkException lastException = null;
+        for (int idx = 0; idx <= _rateLimitMaxRetries; idx++) {
+            try {
+                return doCallApi(request, actionName, runtime);
+            } catch (ZenlayerSdkException e) {
+                if (idx < _rateLimitMaxRetries && REQUEST_LIMIT_EXCEEDED.equals(e.getCode())) {
+                    lastException = e;
+                    int duration = _rateLimitRetryDuration.getDurationSeconds(idx);
+                    logger.warn("rate limit exceeded, retrying ({}/{}) in {} seconds: {}",
+                            idx, _rateLimitMaxRetries, duration, e.getMessage());
+                    if (duration > 0) {
+                        try {
+                            Thread.sleep(duration * 1000L);
+                        } catch (InterruptedException ie) {
+                            Thread.currentThread().interrupt();
+                            throw new ZenlayerSdkException(ie);
+                        }
+                    }
+                    continue;
+                }
+                throw e;
+            }
+        }
+        throw lastException;
+    }
+
+    private java.util.Map<String, ?> doCallApi(TeaModel request, String actionName, RuntimeOptions runtime) {
         if (com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request))) {
             throw new ZenlayerSdkException("'request' can not be unset");
         }
