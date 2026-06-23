@@ -15,7 +15,7 @@ public class InquiryPriceModifyInstanceTypeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * 变更的目标实例规格。
+     * 变更的目标实例规格。普通实例取值可通过[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)获得；GPU 实例取值可通过[DescribeZoneGpuInstanceConfigInfos](describezoneGpuinstanceconfiginfos.md)获得。
      */
     public String instanceType;
 

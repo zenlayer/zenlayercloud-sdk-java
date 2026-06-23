@@ -12,14 +12,12 @@ public class InquiryPriceCreateInstanceRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * 实例机型。
-     * 具体取值可通过调用接口[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)来获得最新的规格表。
+     * 实例机型。普通实例取值可通过[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)获得；GPU 实例取值可通过[DescribeZoneGpuInstanceConfigInfos](describezoneGpuinstanceconfiginfos.md)获得。
      */
     public String instanceType;
 
     /**
      * 公网IPv4的线路类型。
-     * 目前不支持三线IP(`ThreeLine`)。
      * 已废弃，请使用`networkLineType`。
      */
     @Deprecated

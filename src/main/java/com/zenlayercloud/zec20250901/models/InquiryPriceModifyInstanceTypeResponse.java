@@ -15,7 +15,7 @@ public class InquiryPriceModifyInstanceTypeResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 变更后规格的价格。
+     * 变更后规格的价格。VM 实例变配时返回，GPU 实例变配时为 null。
      */
     public PriceItem specPrice;
 

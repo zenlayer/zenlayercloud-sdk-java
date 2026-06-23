@@ -23,12 +23,12 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     /**
      * 设置操作系统的时区。
+     * 如果未指定，将使用区域所在的时区。
      */
     public String timeZone;
 
     /**
-     * 实例机型。
-     * 具体取值可通过调用接口[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)来获得最新的规格表。
+     * 实例机型。普通实例取值可通过[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)获得；GPU 实例取值可通过[DescribeZoneGpuInstanceConfigInfos](describezoneGpuinstanceconfiginfos.md)获得。
      */
     public String instanceType;
 
@@ -154,7 +154,6 @@ public class CreateZecInstancesRequest extends TeaModel {
      * 公网IPv4的线路类型。
      * 当分配公网IP时需要指定。
      * 请确保所选子网的堆栈类型支持`IPv4`。
-     * 目前不支持三线IP随实例一起创建。
      * 已废弃，请使用`networkLineType`。
      */
     @Deprecated
@@ -170,12 +169,11 @@ public class CreateZecInstancesRequest extends TeaModel {
      * 公网IPv4的线路类型。
      * 当分配公网IP时需要指定。
      * 请确保所选子网的堆栈类型支持`IPv4`。
-     * 目前不支持三线IP随实例一起创建。
      */
     public String networkLineType;
 
     /**
-     * 共享带宽包ID。
+     * 公网IPv4/IPv6加入的共享带宽包ID。
      * 当网络计费方式是共享带宽包计费(`BandwidthCluster`)时需要指定。
      */
     public String clusterId;

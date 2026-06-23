@@ -322,7 +322,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询变更虚拟机实例规格后的新规格价格。
+         * 查询变更实例规格后的价格。
          */
     public InquiryPriceModifyInstanceTypeResponse inquiryPriceModifyInstanceType(InquiryPriceModifyInstanceTypeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -967,6 +967,18 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new InquiryPriceChangeIpv6InternetChargeTypeResponse());
+    }
+
+        /**
+         * 调整公网IPv6的带宽限速。
+         */
+    public ModifyIpv6BandwidthResponse modifyIpv6Bandwidth(ModifyIpv6BandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyIpv6Bandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyIpv6BandwidthResponse());
     }
 
         /**
