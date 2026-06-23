@@ -273,4 +273,16 @@ public class AigwClient extends AbstractClient {
         return TeaModel.toModel(rsp, new DescribeAiModelDailyCacheHitRateResponse());
     }
 
+        /**
+         * 查询AI网关日用量数据
+         */
+    public DescribeAiModelDailyUsageResponse describeAiModelDailyUsage(DescribeAiModelDailyUsageRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeAiModelDailyUsage",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeAiModelDailyUsageResponse());
+    }
+
 }
