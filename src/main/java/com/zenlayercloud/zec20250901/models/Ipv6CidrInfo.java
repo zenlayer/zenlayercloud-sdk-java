@@ -95,6 +95,11 @@ public class Ipv6CidrInfo extends TeaModel {
      */
     public Tags tags;
 
+    /**
+     * ASN 观测结果。
+     */
+    public AsnObservationDetail asnObservation;
+
     public String getCidrId() {
         return this.cidrId;
     }
@@ -221,6 +226,14 @@ public class Ipv6CidrInfo extends TeaModel {
 
     public void setTags(Tags tags) {
         this.tags = tags;
+    }
+
+    public AsnObservationDetail getAsnObservation() {
+        return this.asnObservation;
+    }
+
+    public void setAsnObservation(AsnObservationDetail asnObservation) {
+        this.asnObservation = asnObservation;
     }
 
 }

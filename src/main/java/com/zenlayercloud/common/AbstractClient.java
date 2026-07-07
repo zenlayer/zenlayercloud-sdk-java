@@ -30,6 +30,8 @@ public class AbstractClient {
     private static final Logger logger = LoggerFactory.getLogger(AbstractClient.class);
 
     private static final String REQUEST_LIMIT_EXCEEDED = "REQUEST_LIMIT_EXCEEDED";
+    private static final String SECURITY_CHALLENGE     = "SECURITY_CHALLENGE";
+    private static final String REQUEST_BLOCKED        = "REQUEST_BLOCKED";
 
     private final       InterceptorChain interceptorChain = InterceptorChain.create();
     public static final String           SDK_VERSION      = "0.6.8";
@@ -187,6 +189,17 @@ public class AbstractClient {
                     return TeaConverter.buildMap(new TeaPair("headers", response_.headers));
                 }
 
+                if (response_.statusCode == 403 && "challenge".equals(response_.headers.get("cf-mitigated"))) {
+                    throw new ZenlayerSdkException("",
+                            "Request was intercepted by a security challenge (HTTP 403). " +
+                            "This is a network-layer block, not an API error. Contact support if it persists.",
+                            SECURITY_CHALLENGE);
+                }
+                if (response_.statusCode == 451) {
+                    throw new ZenlayerSdkException("",
+                            "Request was blocked by a security policy (HTTP 451). Contact support to investigate.",
+                            REQUEST_BLOCKED);
+                }
                 if (Common.is4xx(response_.statusCode) || com.aliyun.teautil.Common.is5xx(response_.statusCode)) {
                     Object _res = Common.readAsJSON(response_.body);
                     java.util.Map<String, Object> err = Common.assertAsMap(_res);

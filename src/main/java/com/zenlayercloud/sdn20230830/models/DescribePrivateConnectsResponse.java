@@ -135,7 +135,11 @@ public class DescribePrivateConnectsResponse extends TeaModel {
              * 公有云账号ID。Google 云此处为 pairing key.
              */
             public String cloudAccountId;
- 
+
+            /**
+             * 共享通道ID。公有云接入点对应的云侧连接标识，仅公有云类型接入点时有值。
+             */
+            public String sharedChannelId;
         }
 
     }

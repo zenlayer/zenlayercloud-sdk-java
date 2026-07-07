@@ -36,6 +36,11 @@ public class Image extends TeaModel {
     public String imageSize;
 
     /**
+     * 创建实例系统盘所需最小容量，单位GiB。
+     */
+    public Integer minDiskSize;
+
+    /**
      * 镜像描述信息。
      */
     public String imageDescription;
@@ -108,6 +113,14 @@ public class Image extends TeaModel {
 
     public void setImageSize(String imageSize) {
         this.imageSize = imageSize;
+    }
+
+    public Integer getMinDiskSize() {
+        return this.minDiskSize;
+    }
+
+    public void setMinDiskSize(Integer minDiskSize) {
+        this.minDiskSize = minDiskSize;
     }
 
     public String getImageDescription() {

@@ -171,6 +171,11 @@ public class EipInfo extends TeaModel {
      */
     public Tags tags;
 
+    /**
+     * EIP的带宽、流量包操作状态。
+     */
+    public OperationInfo operationInfo;
+
     public String getEipId() {
         return this.eipId;
     }
@@ -405,6 +410,14 @@ public class EipInfo extends TeaModel {
 
     public void setTags(Tags tags) {
         this.tags = tags;
+    }
+
+    public OperationInfo getOperationInfo() {
+        return this.operationInfo;
+    }
+
+    public void setOperationInfo(OperationInfo operationInfo) {
+        this.operationInfo = operationInfo;
     }
 
 }

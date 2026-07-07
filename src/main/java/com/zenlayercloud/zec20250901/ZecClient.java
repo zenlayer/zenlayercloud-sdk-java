@@ -898,6 +898,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询变更IPv6网络计费模式后的价格。
+         */
+    public InquiryPriceChangeIpv6InternetChargeTypeResponse inquiryPriceChangeIpv6InternetChargeType(InquiryPriceChangeIpv6InternetChargeTypeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceChangeIpv6InternetChargeType",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceChangeIpv6InternetChargeTypeResponse());
+    }
+
+        /**
          * 给网卡添加IPv6。
          */
     public AssignNetworkInterfaceIpv6Response assignNetworkInterfaceIpv6(AssignNetworkInterfaceIpv6Request request) {
@@ -955,18 +967,6 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new InquiryPriceModifyIpv6BandwidthResponse());
-    }
-
-        /**
-         * 查询变更IPv6网络计费模式后的价格。
-         */
-    public InquiryPriceChangeIpv6InternetChargeTypeResponse inquiryPriceChangeIpv6InternetChargeType(InquiryPriceChangeIpv6InternetChargeTypeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "InquiryPriceChangeIpv6InternetChargeType",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new InquiryPriceChangeIpv6InternetChargeTypeResponse());
     }
 
         /**
@@ -1159,6 +1159,18 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeByoipPriceResponse());
+    }
+
+        /**
+         * 查询EIP支持的IP线路类型列表，可按节点过滤。
+         */
+    public DescribeEipNetworkLineTypesResponse describeEipNetworkLineTypes(DescribeEipNetworkLineTypesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeEipNetworkLineTypes",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeEipNetworkLineTypesResponse());
     }
 
         /**

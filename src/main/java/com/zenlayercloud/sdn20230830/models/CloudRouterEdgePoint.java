@@ -92,4 +92,9 @@ public class CloudRouterEdgePoint extends TeaModel {
      */
     public String createTime;
 
+    /**
+     * 共享通道ID。公有云接入点对应的云侧连接标识，仅公有云类型接入点时有值。
+     */
+    public String sharedChannelId;
+
 }

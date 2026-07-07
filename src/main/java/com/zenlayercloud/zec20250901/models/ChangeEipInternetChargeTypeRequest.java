@@ -20,6 +20,25 @@ public class ChangeEipInternetChargeTypeRequest extends TeaModel {
     public String internetChargeType;
 
     /**
+     * 流量包大小。
+     * 单位：TB。
+     * 网络计费方式为流量包计费（`ByTrafficPackage`）时需指定。
+     */
+    public Double flowPackage;
+
+    /**
+     * 带宽限速。
+     * 单位：Mbps。
+     * 网络计费方式为按带宽计费（`ByBandwidth`）时需指定。
+     */
+    public Integer bandwidth;
+
+    /**
+     * 带宽峰值上限（Mbps）。
+     */
+    public Integer bandwidthCap;
+
+    /**
      * 共享带宽包ID。
      * 如果要变更为共享带宽包计费，则需要指定。
      */
@@ -39,6 +58,30 @@ public class ChangeEipInternetChargeTypeRequest extends TeaModel {
 
     public void setInternetChargeType(String internetChargeType) {
         this.internetChargeType = internetChargeType;
+    }
+
+    public Double getFlowPackage() {
+        return this.flowPackage;
+    }
+
+    public void setFlowPackage(Double flowPackage) {
+        this.flowPackage = flowPackage;
+    }
+
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public void setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+    }
+
+    public Integer getBandwidthCap() {
+        return this.bandwidthCap;
+    }
+
+    public void setBandwidthCap(Integer bandwidthCap) {
+        this.bandwidthCap = bandwidthCap;
     }
 
     public String getClusterId() {

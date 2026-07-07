@@ -51,6 +51,11 @@ public class PublicIpv6CidrAddress extends TeaModel {
      */
     public BandwidthClusterInfo bandwidthCluster;
 
+    /**
+     * IPv6的带宽、流量包操作状态。
+     */
+    public OperationInfo operationInfo;
+
     public String getIpv6CidrId() {
         return this.ipv6CidrId;
     }
@@ -113,6 +118,14 @@ public class PublicIpv6CidrAddress extends TeaModel {
 
     public void setBandwidthCluster(BandwidthClusterInfo bandwidthCluster) {
         this.bandwidthCluster = bandwidthCluster;
+    }
+
+    public OperationInfo getOperationInfo() {
+        return this.operationInfo;
+    }
+
+    public void setOperationInfo(OperationInfo operationInfo) {
+        this.operationInfo = operationInfo;
     }
 
 }
