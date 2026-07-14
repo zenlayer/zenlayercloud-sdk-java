@@ -65,8 +65,7 @@ public class CreateEipsRequest extends TeaModel {
     public String cidrId;
 
     /**
-     * 从CIDR里指定公网起始IP地址开始创建弹性IP。
-     * 该字段仅在指定`cidrId`时生效。
+     * 指定公网起始IP地址开始创建弹性IP。
      */
     public String publicIp;
 

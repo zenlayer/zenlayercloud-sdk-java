@@ -60,6 +60,11 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
      */
     public PriceItem dataDiskPrice;
 
+    /**
+     * 数据盘的价格明细，与请求中的`dataDisks`按顺序一一对应。
+     */
+    public List<PriceItem> dataDiskPrices;
+
     public String getRequestId() {
         return this.requestId;
     }
@@ -138,6 +143,14 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
 
     public void setDataDiskPrice(PriceItem dataDiskPrice) {
         this.dataDiskPrice = dataDiskPrice;
+    }
+
+    public List<PriceItem> getDataDiskPrices() {
+        return this.dataDiskPrices;
+    }
+
+    public void setDataDiskPrices(List<PriceItem> dataDiskPrices) {
+        this.dataDiskPrices = dataDiskPrices;
     }
 
 }

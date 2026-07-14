@@ -2,6 +2,7 @@ package com.zenlayercloud.zec20250901.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
 
 public class InquiryPriceCreateInstanceRequest extends TeaModel {
 
@@ -60,6 +61,12 @@ public class InquiryPriceCreateInstanceRequest extends TeaModel {
      * 数据盘相关信息。
      */
     public DataDisk dataDisk;
+
+    /**
+     * 数据盘相关信息，支持传入多块数据盘。
+     * 若不指定该参数，则回退使用`dataDisk`。
+     */
+    public List<DataDisk> dataDisks;
 
     public String getZoneId() {
         return this.zoneId;
@@ -141,6 +148,14 @@ public class InquiryPriceCreateInstanceRequest extends TeaModel {
 
     public void setDataDisk(DataDisk dataDisk) {
         this.dataDisk = dataDisk;
+    }
+
+    public List<DataDisk> getDataDisks() {
+        return this.dataDisks;
+    }
+
+    public void setDataDisks(List<DataDisk> dataDisks) {
+        this.dataDisks = dataDisks;
     }
 
 }

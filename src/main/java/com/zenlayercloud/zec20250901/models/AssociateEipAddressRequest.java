@@ -44,8 +44,8 @@ public class AssociateEipAddressRequest extends TeaModel {
 
     /**
      * 绑定类型。
-     * 当绑定的是网卡时生效。
-     * 默认为普通NAT模式。
+     * 绑定网卡时生效，默认为普通NAT模式。
+     * 绑定高可用虚拟IP(haVip)时仅支持FullNat（普通NAT）模式，传其他值本次请求的EIP将全部绑定失败。
      */
     public String bindType;
 

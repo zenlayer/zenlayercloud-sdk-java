@@ -982,6 +982,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 调整公网IPv6流量包。
+         */
+    public ModifyIpv6TrafficPackageResponse modifyIpv6TrafficPackage(ModifyIpv6TrafficPackageRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyIpv6TrafficPackage",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyIpv6TrafficPackageResponse());
+    }
+
+        /**
          * 查询账户下的公网 IP 池信息，支持按 IP 池 ID、地域或名称进行筛选，支持分页查询。
          */
     public DescribePoolsResponse describePools(DescribePoolsRequest request) {
