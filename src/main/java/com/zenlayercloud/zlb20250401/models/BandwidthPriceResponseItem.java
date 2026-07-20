@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 
+ * 带宽价格明细。
  */
 public class BandwidthPriceResponseItem extends TeaModel {
 

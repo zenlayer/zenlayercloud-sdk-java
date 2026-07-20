@@ -29,9 +29,7 @@ public class InquiryPriceCreateLoadBalancerRequest extends TeaModel {
     public String networkLineType;
 
     /**
-     * EIP的最大出带宽。
-     * 单位为Mbps。
-     * 最大限制通常为10000，如果有额外要求， 请联系Support。
+     * EIP的最大出带宽。单位为Mbps。最大限制通常为10000，如果有额外要求，请联系Support。当`internetChargeType`为`ByBandwidth`时，此参数必填。
      */
     public Integer bandwidthMbps;
 
