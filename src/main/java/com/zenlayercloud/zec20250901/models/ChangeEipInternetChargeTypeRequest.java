@@ -40,7 +40,7 @@ public class ChangeEipInternetChargeTypeRequest extends TeaModel {
 
     /**
      * 共享带宽包ID。
-     * 如果要变更为共享带宽包计费，则需要指定。
+     * 变更为共享带宽包计费时需指定。
      */
     public String clusterId;
 

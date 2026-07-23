@@ -31,7 +31,8 @@ public class Image extends TeaModel {
     public String imageSource;
 
     /**
-     * 镜像的大小。
+     * 镜像的大小，单位GiB。
+     * 当镜像为自定义镜像时此字段可能为null，当镜像状态处于`AVAILABLE`后有值。
      */
     public String imageSize;
 

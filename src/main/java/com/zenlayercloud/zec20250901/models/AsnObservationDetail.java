@@ -36,17 +36,17 @@ public class AsnObservationDetail extends TeaModel {
     public List<Integer> primaryAsns;
 
     /**
-     * 二级数据源名称，如 BGP Tool。
+     * 该字段已下线，恒为 null。
      */
     public String secondarySource;
 
     /**
-     * 二级数据源查询状态。
+     * 该字段已下线，恒为 null。
      */
     public String secondaryStatus;
 
     /**
-     * 二级数据源观测到的 ASN 列表。
+     * 该字段已下线，恒为 null。
      */
     public List<Integer> secondaryAsns;
 

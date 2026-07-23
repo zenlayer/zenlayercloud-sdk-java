@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述一个IP Transit资源相关的信息。包括关联的端口，所属资源组等信息。
+ * IP Transit信息。
  */
 public class IPTransit extends TeaModel {
 
@@ -16,75 +16,72 @@ public class IPTransit extends TeaModel {
     public String iptId;
 
     /**
-     * IP Transit 名称。
+     * IP Transit名称。
      */
     public String iptName;
 
     /**
-     * IP Transit 描述信息。
+     * IP Transit描述。
      */
     public String iptDescription;
 
     /**
-     * IP Transit 对应的数据中心。
+     * IP Transit所在数据中心。
      */
     public DatacenterInfo dataCenter;
 
     /**
-     * 连接的端口ID。
+     * 对端数据中心端口 ID。
      */
     public String peerPortId;
 
     /**
-     * 连接的端口名称。
+     * 对端数据中心端口名称。
      */
     public String peerPortName;
 
     /**
-     * 端口侧所属数据中心。
+     * 对端数据中心端口所在数据中心。
      */
     public DatacenterInfo peerDataCenter;
 
     /**
-     * 交付类型。
+     * 开通方式。
      */
     public String deliveryType;
 
     /**
-     * IP Transit 所属资源组ID。
+     * 资源组 ID。
      */
     public String resourceGroupId;
 
     /**
-     * IP Transit 所属资源组名称。
+     * 资源组名称。
      */
     public String resourceGroupName;
 
     /**
      * 创建时间。
-     * 格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String createTime;
 
     /**
-     * 路由类型。
+     * 路由模式。
      */
     public String routingType;
 
     /**
-     * 带宽计费方式。
+     * 网络计费方式。
      */
     public String internetType;
 
     /**
-     * 带宽限速。
-     * 单位Mbps。
+     * 带宽（Mbps）。
      */
     public Integer bandwidth;
 
     /**
-     * 承诺保底带宽。
-     * 仅当带宽计费方式为ByInstanceBandwidth95 可取到值。
+     * 保底带宽（Mbps）。
      */
     public Integer commitBandwidth;
 
@@ -94,39 +91,71 @@ public class IPTransit extends TeaModel {
     public BFDConfig bfd;
 
     /**
-     * BGP相关配置。
+     * BGP 相关配置。
      */
     public RiptBgpConfig bgp;
 
     /**
-     * 互联IP地址信息。
+     * 互联地址配置。
      */
     public Interconnect interconnect;
 
     /**
-     * IP Transit 互联的专线ID。
+     * 关联的 VLL ID。
      */
     public String privateConnectId;
 
     /**
-     * IP Transit 互联的专线名称。
+     * 关联的 VLL 名称。
      */
     public String privateConnectName;
 
     /**
-     * 公网IP信息。
+     * 公网 IPv4 地址列表。
      */
     public List<IPAddress> publicIpv4Addresses;
 
     /**
-     * IP Transit 的业务状态。
+     * 业务状态。
      */
     public String iptStatus;
+
+    /**
+     * 链路连通性状态。
+     */
+    public String connectivityStatus;
 
     /**
      * 该IP Transit关联的标签。
      */
     public Tags tags;
+
+    /**
+     * 公网 IP 地址列表。
+     */
+    public List<IPTransitIpAddress> publicIpAddresses;
+
+    /**
+     * 高可用模式。
+     */
+    public String haMode;
+
+    /**
+     * ZBG 区域 ID。
+     * ZBG 场景下的 IP Transit 将返回此字段。
+     */
+    public String zbgRegionId;
+
+    /**
+     * 对端数据中心端口类型。
+     */
+    public String peerPortType;
+
+    /**
+     * HA 子链路列表。
+     * 非 HA 模式下为 null；HA 模式下含两个子链路对象。
+     */
+    public List<HaLink> haLinks;
 
     public String getIptId() {
         return this.iptId;
@@ -304,12 +333,60 @@ public class IPTransit extends TeaModel {
         this.iptStatus = iptStatus;
     }
 
+    public String getConnectivityStatus() {
+        return this.connectivityStatus;
+    }
+
+    public void setConnectivityStatus(String connectivityStatus) {
+        this.connectivityStatus = connectivityStatus;
+    }
+
     public Tags getTags() {
         return this.tags;
     }
 
     public void setTags(Tags tags) {
         this.tags = tags;
+    }
+
+    public List<IPTransitIpAddress> getPublicIpAddresses() {
+        return this.publicIpAddresses;
+    }
+
+    public void setPublicIpAddresses(List<IPTransitIpAddress> publicIpAddresses) {
+        this.publicIpAddresses = publicIpAddresses;
+    }
+
+    public String getHaMode() {
+        return this.haMode;
+    }
+
+    public void setHaMode(String haMode) {
+        this.haMode = haMode;
+    }
+
+    public String getZbgRegionId() {
+        return this.zbgRegionId;
+    }
+
+    public void setZbgRegionId(String zbgRegionId) {
+        this.zbgRegionId = zbgRegionId;
+    }
+
+    public String getPeerPortType() {
+        return this.peerPortType;
+    }
+
+    public void setPeerPortType(String peerPortType) {
+        this.peerPortType = peerPortType;
+    }
+
+    public List<HaLink> getHaLinks() {
+        return this.haLinks;
+    }
+
+    public void setHaLinks(List<HaLink> haLinks) {
+        this.haLinks = haLinks;
     }
 
 }

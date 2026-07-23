@@ -4,20 +4,30 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 描述IP Transit 互联IP地址的信息。
+ * 互联地址配置。
  */
 public class Interconnect extends TeaModel {
 
 
     /**
-     * 运营商侧的IPv4地址。
+     * Zenlayer 侧 IPv4 互联地址。
      */
     public String vendorIpv4Address;
 
     /**
-     * 用户侧的IPv4地址。
+     * 客户侧 IPv4 互联地址。
      */
     public String customerIpv4Address;
+
+    /**
+     * Zenlayer 侧 IPv6 互联地址。
+     */
+    public String vendorIpv6Address;
+
+    /**
+     * 客户侧 IPv6 互联地址。
+     */
+    public String customerIpv6Address;
 
     public String getVendorIpv4Address() {
         return this.vendorIpv4Address;
@@ -33,6 +43,22 @@ public class Interconnect extends TeaModel {
 
     public void setCustomerIpv4Address(String customerIpv4Address) {
         this.customerIpv4Address = customerIpv4Address;
+    }
+
+    public String getVendorIpv6Address() {
+        return this.vendorIpv6Address;
+    }
+
+    public void setVendorIpv6Address(String vendorIpv6Address) {
+        this.vendorIpv6Address = vendorIpv6Address;
+    }
+
+    public String getCustomerIpv6Address() {
+        return this.customerIpv6Address;
+    }
+
+    public void setCustomerIpv6Address(String customerIpv6Address) {
+        this.customerIpv6Address = customerIpv6Address;
     }
 
 }

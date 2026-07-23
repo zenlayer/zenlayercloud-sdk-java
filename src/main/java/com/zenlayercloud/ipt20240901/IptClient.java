@@ -34,7 +34,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 本接口用于连接IP Transit 服务支持的数据中心。
+         * 查询IP Transit可连接数据中心
          */
     public DescribeIPTransitDatacentersResponse describeIPTransitDatacenters(DescribeIPTransitDatacentersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -46,7 +46,31 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 创建一条IP Transit 的询价。
+         * 查询IP Transit可用 ASN
+         */
+    public DescribeIPTransitAvailableAsnsResponse describeIPTransitAvailableAsns(DescribeIPTransitAvailableAsnsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeIPTransitAvailableAsns",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeIPTransitAvailableAsnsResponse());
+    }
+
+        /**
+         * 查询IP Transit可用公网地址段
+         */
+    public DescribeIPTransitAvailableCidrBlocksResponse describeIPTransitAvailableCidrBlocks(DescribeIPTransitAvailableCidrBlocksRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeIPTransitAvailableCidrBlocks",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeIPTransitAvailableCidrBlocksResponse());
+    }
+
+        /**
+         * iP Transit创建询价
          */
     public InquiryCreateIPTransitPriceResponse inquiryCreateIPTransitPrice(InquiryCreateIPTransitPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -58,7 +82,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 创建一条IP Transit。
+         * 创建IP Transit
          */
     public CreateIPTransitResponse createIPTransit(CreateIPTransitRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -70,7 +94,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 本接口用于查询IP Transit资源列表。
+         * 查询IP Transit列表
          */
     public DescribeIPTransitsResponse describeIPTransits(DescribeIPTransitsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -82,7 +106,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 修改一条IP Transit的带宽限速。
+         * 修改IP Transit带宽
          */
     public ModifyIPTransitBandwidthResponse modifyIPTransitBandwidth(ModifyIPTransitBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -94,7 +118,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 修改IP Transit的基本信息，包括名称和备注。
+         * 修改IP Transit属性
          */
     public ModifyIPTransitsAttributeResponse modifyIPTransitsAttribute(ModifyIPTransitsAttributeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -106,7 +130,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 删除一条IP Transit。
+         * 删除IP Transit
          */
     public DeleteIPTransitResponse deleteIPTransit(DeleteIPTransitRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -118,7 +142,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 查询IP Transit在指定时间段内的带宽数据。
+         * 查询IP Transit流量
          */
     public DescribeIPTransitTrafficResponse describeIPTransitTraffic(DescribeIPTransitTrafficRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -127,6 +151,30 @@ public class IptClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeIPTransitTrafficResponse());
+    }
+
+        /**
+         * IP Transit变配询价
+         */
+    public InquiryModifyIPTransitPriceResponse inquiryModifyIPTransitPrice(InquiryModifyIPTransitPriceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryModifyIPTransitPrice",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryModifyIPTransitPriceResponse());
+    }
+
+        /**
+         * 修改IP Transit配置
+         */
+    public ModifyIPTransitConfigResponse modifyIPTransitConfig(ModifyIPTransitConfigRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyIPTransitConfig",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyIPTransitConfigResponse());
     }
 
 }

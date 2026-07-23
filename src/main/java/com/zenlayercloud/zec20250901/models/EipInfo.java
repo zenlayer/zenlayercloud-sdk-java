@@ -176,6 +176,12 @@ public class EipInfo extends TeaModel {
      */
     public OperationInfo operationInfo;
 
+    /**
+     * 掩码长度。
+     * 32 表示单 IP，25–31 表示 IP 块。
+     */
+    public Integer prefixLength;
+
     public String getEipId() {
         return this.eipId;
     }
@@ -418,6 +424,14 @@ public class EipInfo extends TeaModel {
 
     public void setOperationInfo(OperationInfo operationInfo) {
         this.operationInfo = operationInfo;
+    }
+
+    public Integer getPrefixLength() {
+        return this.prefixLength;
+    }
+
+    public void setPrefixLength(Integer prefixLength) {
+        this.prefixLength = prefixLength;
     }
 
 }

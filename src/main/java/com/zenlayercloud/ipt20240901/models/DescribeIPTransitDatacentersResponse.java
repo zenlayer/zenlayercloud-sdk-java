@@ -4,6 +4,9 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeIPTransitDatacentersResponse extends TeaModel {
 
 
@@ -13,7 +16,7 @@ public class DescribeIPTransitDatacentersResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 结果集。
+     * 可连接数据中心结果集。
      */
     public List<IPTransitDatacenter> supportSet;
 

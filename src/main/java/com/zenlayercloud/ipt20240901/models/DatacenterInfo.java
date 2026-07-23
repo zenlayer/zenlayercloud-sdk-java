@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 描述数据中心的信息。
+ * 数据中心的基本信息。
  */
 public class DatacenterInfo extends TeaModel {
 
@@ -25,27 +25,27 @@ public class DatacenterInfo extends TeaModel {
     public String dcAddress;
 
     /**
-     * 城市名称。
+     * 数据中心所在城市名称。
      */
     public String cityName;
 
     /**
-     * 国家名称。
+     * 数据中心所在国家名称。
      */
     public String countryName;
 
     /**
-     * 地区名称。
+     * 数据中心所在区域名称。
      */
     public String areaName;
 
     /**
-     * 数据中心所在地理位置的维度。
+     * 数据中心所在地纬度。
      */
     public Double latitude;
 
     /**
-     * 数据中心所在地理位置的经度。
+     * 数据中心所在地经度。
      */
     public Double longitude;
 

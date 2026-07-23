@@ -49,7 +49,7 @@ public class DescribeEipsRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * 按照 IP地址过滤。
+     * 按照 EIP 的 IP 过滤。
      */
     public String ipAddress;
 
@@ -95,6 +95,12 @@ public class DescribeEipsRequest extends TeaModel {
      * 按照 EIP 的网络计费方式过滤。
      */
     public String internetChargeType;
+
+    /**
+     * 按照 EIP 的掩码长度过滤。
+     * 32 表示单 IP，24–31 表示网段。
+     */
+    public Integer prefixLength;
 
     public List<String> getEipIds() {
         return this.eipIds;
@@ -230,6 +236,14 @@ public class DescribeEipsRequest extends TeaModel {
 
     public void setInternetChargeType(String internetChargeType) {
         this.internetChargeType = internetChargeType;
+    }
+
+    public Integer getPrefixLength() {
+        return this.prefixLength;
+    }
+
+    public void setPrefixLength(Integer prefixLength) {
+        this.prefixLength = prefixLength;
     }
 
 }

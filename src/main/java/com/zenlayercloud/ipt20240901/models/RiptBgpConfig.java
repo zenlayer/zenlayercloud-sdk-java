@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * BGP相关配置。
+ * BGP相关配置
  */
 public class RiptBgpConfig extends TeaModel {
 

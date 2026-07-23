@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 描述支持IP Transit的数据中心信息，包括数据中心的基本信息以及支持的路由类型等。
+ * 可连接数据中心信息。
  */
 public class IPTransitDatacenter extends TeaModel {
 
@@ -16,7 +16,7 @@ public class IPTransitDatacenter extends TeaModel {
     public DatacenterInfo dataCenter;
 
     /**
-     * 支持的路由类型配置。
+     * 该数据中心可用的路由模式列表。
      */
     public List<RemoteIptAvailableRoutingType> availableRoutingTypes;
 

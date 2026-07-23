@@ -72,6 +72,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     /**
      * 公网IP的绑定模式。
      * 当分配公网IP时需要指定。
+     * 绑定网段(Block)型EIP时只能使用`Passthrough`，必须显式指定（不能省略，省略等价于`FullNat`会被拒绝）。
      */
     public String eipBindType;
 

@@ -34,6 +34,12 @@ public class CreateEipsRequest extends TeaModel {
     public Integer amount;
 
     /**
+     * 掩码长度，取值范围24–32，默认32。
+     * 指定小于32时，创建EIP Block资源，必须同时指定`cidrId`，且不能小于所选CIDR自身的掩码长度。
+     */
+    public Integer prefixLength;
+
+    /**
      * 公网弹性IP的线路类型。
      * 已废弃，请使用`networkLineType`。
      */
@@ -47,7 +53,6 @@ public class CreateEipsRequest extends TeaModel {
 
     /**
      * 主公网IP的运营商。
-     * 该字段仅作用于三线IP(`ThreeLine`)。
      */
     @Deprecated
     public String primaryIsp;
@@ -65,7 +70,9 @@ public class CreateEipsRequest extends TeaModel {
     public String cidrId;
 
     /**
-     * 指定公网起始IP地址开始创建弹性IP。
+     * 指定公网起始地址开始创建弹性IP。
+     * 不指定`cidrId`时，从公网IP池按此地址开始顺序分配（仅支持`prefixLength`为32）；指定`cidrId`时，从该CIDR内按此地址开始分配。
+     * `prefixLength`为32时填纯IPv4地址；`prefixLength`小于32时必须同时指定`cidrId`，填带掩码的起始网段（掩码须与`prefixLength`一致，如`88.0.5.64/26`）。
      */
     public String publicIp;
 
@@ -75,16 +82,16 @@ public class CreateEipsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * 公网IPv6的流量包大小。
+     * 弹性公网IP的流量包大小。
      * 单位为TB。
      * 值要求为0或0.1的倍数。
-     * 当子网的堆栈类型包括V6且为公网时，且网络计费方式是流量计费(`ByTrafficPackage`)需要指定。
+     * 当网络计费方式为流量计费(`ByTrafficPackage`)时需要指定。
      */
     public Double flowPackage;
 
     /**
-     * 公网IPv6所指定的共享带宽包ID。
-     * 当子网的堆栈类型包括V6且为公网时，且网络计费方式是共享带宽包计费(`BandwidthCluster`)需要指定。
+     * 共享带宽包ID。
+     * 当网络计费方式为共享带宽包计费(`BandwidthCluster`)时需要指定。
      */
     public String clusterId;
 
@@ -119,6 +126,7 @@ public class CreateEipsRequest extends TeaModel {
 
     /**
      * 限速模式。
+     * `STRICT`严格模式必须同时指定`bandwidth`。
      */
     public String rateLimitMode;
 
@@ -152,6 +160,14 @@ public class CreateEipsRequest extends TeaModel {
 
     public void setAmount(Integer amount) {
         this.amount = amount;
+    }
+
+    public Integer getPrefixLength() {
+        return this.prefixLength;
+    }
+
+    public void setPrefixLength(Integer prefixLength) {
+        this.prefixLength = prefixLength;
     }
 
     @Deprecated

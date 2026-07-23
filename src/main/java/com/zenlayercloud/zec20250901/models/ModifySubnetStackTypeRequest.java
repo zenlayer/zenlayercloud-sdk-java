@@ -16,14 +16,13 @@ public class ModifySubnetStackTypeRequest extends TeaModel {
 
     /**
      * 子网堆栈类型。
-     * `IPv4_IPv6`：开启 IPv6，公网或内网由`ipv6Type`指定。
-     * `IPv4`：关闭 IPv6，公网和内网 IPv6 类型的子网均支持；关闭前须确保子网内所有网卡已通过 `UnassignNetworkInterfaceIpv6` 删除其 IPv6 地址。
+     * `IPv4_IPv6`：开启公网IPv6；`IPv4`：关闭公网IPv6（仅支持公网IPv6类型的子网，且子网内所有网卡须已通过UnassignNetworkInterfaceIpv6删除IPv6）。
      */
     public String stackType;
 
     /**
-     * IPv6 的类型，当`stackType`为`IPv4_IPv6`时必填。
-     * `Public`：公网 IPv6；`Private`：内网 IPv6。
+     * IPv6的类型。
+     * 当`stackType`为`IPv4_IPv6`时必填。
      */
     public String ipv6Type;
 

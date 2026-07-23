@@ -37,7 +37,8 @@ public class DescribeHaVipsRequest extends TeaModel {
     public List<String> subnetIds;
 
     /**
-     * 私网IP地址列表。最多支持100个地址查询。
+     * 私网IP地址列表。
+     * 最多支持100个地址查询。
      */
     public List<String> ipAddresses;
 

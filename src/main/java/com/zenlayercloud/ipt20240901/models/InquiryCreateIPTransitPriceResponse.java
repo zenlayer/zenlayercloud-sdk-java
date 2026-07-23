@@ -4,6 +4,9 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class InquiryCreateIPTransitPriceResponse extends TeaModel {
 
 
@@ -13,20 +16,26 @@ public class InquiryCreateIPTransitPriceResponse extends TeaModel {
     public String requestId;
 
     /**
-     * IP Transit 的 专线价格。
-     * 如果IP Transit 和端口位于同一个数据中心，则取值为null。
+     * 二层网络专线价格。
+     * 可能为空。
      */
     public PriceItem privateConnectPrice;
 
     /**
-     * IP Transit 的公网带宽价格。
+     * IP Transit带宽价格。
      */
     public PriceItem iptBandwidthPrice;
 
     /**
-     * IP Transit 的公网IP价格。
+     * 公网 IP 价格列表。
      */
     public List<IPPrice> publicIpPrices;
+
+    /**
+     * 公网互联 IP 价格。
+     * 仅 publicInterconnectNetmask 非空时返回。
+     */
+    public IPPrice publicInterconnectIpPrice;
 
     public String getRequestId() {
         return this.requestId;
@@ -58,6 +67,14 @@ public class InquiryCreateIPTransitPriceResponse extends TeaModel {
 
     public void setPublicIpPrices(List<IPPrice> publicIpPrices) {
         this.publicIpPrices = publicIpPrices;
+    }
+
+    public IPPrice getPublicInterconnectIpPrice() {
+        return this.publicInterconnectIpPrice;
+    }
+
+    public void setPublicInterconnectIpPrice(IPPrice publicInterconnectIpPrice) {
+        this.publicInterconnectIpPrice = publicInterconnectIpPrice;
     }
 
 }

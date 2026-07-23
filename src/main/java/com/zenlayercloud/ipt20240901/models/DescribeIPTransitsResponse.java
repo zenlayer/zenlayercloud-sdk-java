@@ -4,6 +4,9 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeIPTransitsResponse extends TeaModel {
 
 
@@ -18,7 +21,7 @@ public class DescribeIPTransitsResponse extends TeaModel {
     public Integer totalCount;
 
     /**
-     * IP Transit列表结果集。
+     * IP Transit结果集。
      */
     public List<IPTransit> dataSet;
 

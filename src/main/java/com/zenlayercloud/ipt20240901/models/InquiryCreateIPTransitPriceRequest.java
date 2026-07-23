@@ -4,22 +4,25 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class InquiryCreateIPTransitPriceRequest extends TeaModel {
 
 
     /**
-     * 端口的ID。
+     * 对端数据中心端口 ID。
      */
     public String peerPortId;
 
     /**
-     * IP Transit 目的地数据中心ID。
-     * 如果不指定，则代表和端口位于同一个数据中心。
+     * 本端数据中心 ID。
+     * 为空代表本地连接（Local IPT）。
      */
     public String iptDcId;
 
     /**
-     * IP Transit的带宽计费方式。
+     * 网络计费方式。
      */
     public String internetType;
 
@@ -33,20 +36,20 @@ public class InquiryCreateIPTransitPriceRequest extends TeaModel {
     /**
      * 带宽限速。
      * 单位Mbps。
-     * 最小值不能低于10Mbps。
+     * 最小值不能低于5Mbps。
+     * 默认值为5Mbps。
+     * 95 计费下必须大于等于 `commitBandwidth`。
      */
     public Integer bandwidth;
 
     /**
-     * 路由类型。
+     * 路由模式。
      */
     public String routingType;
 
     /**
-     * 公网IPv4地址。
-     * 网段范围：24～30
-     * 有且仅当路由类型是Static 或 Gateway时必须指定。
-     * 目前只允许指定一个公网CIDR。
+     * 公网 IPv4 地址段大小列表。
+     * 与 `publicIpList` 互斥，优先级更低。
      */
     public List<Integer> publicIPv4BlockSize;
 
@@ -54,6 +57,37 @@ public class InquiryCreateIPTransitPriceRequest extends TeaModel {
      * BGP入站路由类型。
      */
     public String bgpRouteType;
+
+    /**
+     * IP 类型（IPV4 / IPV6）。
+     * 默认 IPV4。
+     */
+    public String ipType;
+
+    /**
+     * 公网 IP 分配列表。
+     * 与 `publicIPv4BlockSize` 互斥，优先级更高。
+     * 传此字段时 `publicIPv4BlockSize` 被忽略。
+     */
+    public List<IPTransitIpRequest> publicIpList;
+
+    /**
+     * ZBG 接入节点 ID。
+     * 非空时走 Router RIPT 询价流程。
+     */
+    public String zbgRegionId;
+
+    /**
+     * HA 高可用配置。
+     * 非空时询价包含 2 条 VLL 价格。
+     */
+    public IPTransitHaConfig haConfig;
+
+    /**
+     * 公网互联块掩码。
+     * 非空时响应包含公网互联 IP 块价格。
+     */
+    public Integer publicInterconnectNetmask;
 
     public String getPeerPortId() {
         return this.peerPortId;
@@ -117,6 +151,46 @@ public class InquiryCreateIPTransitPriceRequest extends TeaModel {
 
     public void setBgpRouteType(String bgpRouteType) {
         this.bgpRouteType = bgpRouteType;
+    }
+
+    public String getIpType() {
+        return this.ipType;
+    }
+
+    public void setIpType(String ipType) {
+        this.ipType = ipType;
+    }
+
+    public List<IPTransitIpRequest> getPublicIpList() {
+        return this.publicIpList;
+    }
+
+    public void setPublicIpList(List<IPTransitIpRequest> publicIpList) {
+        this.publicIpList = publicIpList;
+    }
+
+    public String getZbgRegionId() {
+        return this.zbgRegionId;
+    }
+
+    public void setZbgRegionId(String zbgRegionId) {
+        this.zbgRegionId = zbgRegionId;
+    }
+
+    public IPTransitHaConfig getHaConfig() {
+        return this.haConfig;
+    }
+
+    public void setHaConfig(IPTransitHaConfig haConfig) {
+        this.haConfig = haConfig;
+    }
+
+    public Integer getPublicInterconnectNetmask() {
+        return this.publicInterconnectNetmask;
+    }
+
+    public void setPublicInterconnectNetmask(Integer publicInterconnectNetmask) {
+        this.publicInterconnectNetmask = publicInterconnectNetmask;
     }
 
 }

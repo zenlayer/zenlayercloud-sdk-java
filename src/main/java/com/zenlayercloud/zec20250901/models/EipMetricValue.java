@@ -20,7 +20,7 @@ public class EipMetricValue extends TeaModel {
     public Double inValue;
 
     /**
-     * 出方向值。
+     * 入方向值。
      */
     public Double outValue;
 

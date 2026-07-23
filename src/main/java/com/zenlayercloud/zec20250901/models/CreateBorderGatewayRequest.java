@@ -45,6 +45,7 @@ public class CreateBorderGatewayRequest extends TeaModel {
 
     /**
      * 子网ID集合。
+     * 若要该字段生效,需将该字段(`advertisedSubnet`)值设置为PART。
      */
     public List<String> advertisedSubnetIds;
 

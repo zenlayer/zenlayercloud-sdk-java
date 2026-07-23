@@ -4,24 +4,27 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 带宽数据。
+ * 描述带宽的数据点信息。
  */
 public class TrafficData extends TeaModel {
 
 
     /**
-     * 入口带宽。单位：bps。
+     * 入方向带宽值。
+     * 单位：bps。
      */
     public Long internetRX;
 
     /**
-     * 出口带宽。单位：bps。
+     * 出方向带宽值。
+     * 单位：bps。
      */
     public Long internetTX;
 
     /**
      * 数据时间。
-     * 格式为：YYYY-MM-DDThh:mm:ssZ。
+     * 按照ISO8601标准表示，并且使用UTC时间。
+     * 格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String time;
 

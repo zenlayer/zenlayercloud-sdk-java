@@ -4,30 +4,29 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 后付费阶梯价格。描述了价格的一个阶梯的信息。
+ * 描述阶梯价格的信息。
  */
 public class StepPrice extends TeaModel {
 
 
     /**
-     * 阶梯用量的开始。
+     * 阶梯的起始值。
      */
     public Double stepStart;
 
     /**
-     * 阶梯用量的结束。
+     * 阶梯的到达值。
+     * 为null代表最后一级阶梯。
      */
     public Double stepEnd;
 
     /**
-     * 当前阶梯的单元原始价格。
-     * 后付费模式使用。
+     * 阶梯单价。
      */
     public Double unitPrice;
 
     /**
-     * 当前阶梯的单元折后价格。
-     * 后付费模式使用。
+     * 阶梯折后价。
      */
     public Double discountUnitPrice;
 

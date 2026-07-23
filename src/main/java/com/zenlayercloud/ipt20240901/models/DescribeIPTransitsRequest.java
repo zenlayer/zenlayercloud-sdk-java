@@ -4,53 +4,55 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeIPTransitsRequest extends TeaModel {
 
 
     /**
-     * IP Transit ID列表。
-     * 最大支持长度为100。
+     * IP Transit ID 列表。
+     * 最多支持 100 个 ID 查询。
      */
     public List<String> iptIds;
 
     /**
-     * IPT 名称。
-     * 支持模糊搜索。
+     * IP Transit名称。
+     * 模糊匹配。
      */
     public String iptName;
 
     /**
-     * 资源组ID。
+     * 资源组 ID。
+     * 不传则返回该用户可见的所有资源组内的IP Transit。
      */
     public String resourceGroupId;
 
     /**
-     * 端口ID。
-     * 通过该字段可以筛选与指定端口有关的IP Transit。
+     * 对端数据中心端口 ID 过滤。
      */
     public String peerPortId;
 
     /**
-     * 数据中心ID。
-     * 具体取值可通过调用接口DescribeDataCenters来获得最新的数据中心列表。
+     * 本端数据中心 ID 过滤。
      */
     public String iptDcId;
 
     /**
      * 返回的分页大小。
-     * 默认为20，最大为1000。
+     * 默认为 20，最大为 1000。
      */
     public Integer pageSize;
 
     /**
      * 返回的分页数。
-     * 默认为1。
+     * 默认为 1。
      */
     public Integer pageNum;
 
     /**
-     * 根据标签进行搜索。
-     * 最长不得超过20个标签。
+     * 根据标签键进行搜索。
+     * 最长不得超过20个标签键。
      */
     public List<String> tagKeys;
 

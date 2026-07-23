@@ -3,6 +3,9 @@ package com.zenlayercloud.ipt20240901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class CreateIPTransitResponse extends TeaModel {
 
 
@@ -12,12 +15,12 @@ public class CreateIPTransitResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 创建时产生的订单编号。
+     * 订单号。
      */
     public String orderNumber;
 
     /**
-     * IP Transit 的 ID。
+     * IP Transit ID。
      */
     public String iptId;
 

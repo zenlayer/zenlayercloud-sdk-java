@@ -28,6 +28,7 @@ public class DescribeInstancesRequest extends TeaModel {
 
     /**
      * 根据实例关联的IPv4过滤。
+     * 若指定为网段(CIDR)形式，掩码长度必须在20–31之间。
      */
     public String ipv4Address;
 

@@ -45,7 +45,8 @@ public class UnmanagedEgressIpInfo extends TeaModel {
     public String internetChargeType;
 
     /**
-     * 带宽上限，单位 Mbps。资源未单独配置带宽时返回团队默认带宽上限。
+     * 带宽上限，单位 Mbps。
+     * 资源未单独配置带宽时返回团队默认带宽上限。
      */
     public Integer bandwidthCap;
 

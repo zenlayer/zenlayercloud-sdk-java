@@ -24,6 +24,7 @@ public class CreatePlacementGroupRequest extends TeaModel {
 
     /**
      * 置放组的分区数。
+     * 最小是2，默认为3。
      * 决定置放组最大可关联实例数。
      */
     public Integer partitionNum;

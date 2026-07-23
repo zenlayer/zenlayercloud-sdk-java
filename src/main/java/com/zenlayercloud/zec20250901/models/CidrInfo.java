@@ -2,6 +2,7 @@ package com.zenlayercloud.zec20250901.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
 
 /**
  * CIDR信息详情。
@@ -36,7 +37,9 @@ public class CidrInfo extends TeaModel {
 
     /**
      * CIDR中已被使用的IP地址数量。
+     * 已废弃，请参考`availableCount`。
      */
+    @Deprecated
     public Integer usedCount;
 
     /**
@@ -109,8 +112,21 @@ public class CidrInfo extends TeaModel {
 
     /**
      * ASN 观测结果。
+     * 仅当CIDR来源为BYOIP时存在。
      */
     public AsnObservationDetail asnObservation;
+
+    /**
+     * 该 CIDR 当前可创建的网段清单，按掩码长度分组统计数量。
+     * 用于创建网段 EIP 前确认某个掩码长度是否还有可用网段。
+     * 无可用网段时为空列表。
+     */
+    public List<AvailableCidrInfo> availableCidr;
+
+    /**
+     * CIDR中当前可用的IP地址数量（= totalCount − 实际已占用地址数，网段(Block)型EIP按其掩码长度占用的全部地址计算）。
+     */
+    public Integer availableCount;
 
     public String getCidrId() {
         return this.cidrId;
@@ -152,10 +168,12 @@ public class CidrInfo extends TeaModel {
         this.totalCount = totalCount;
     }
 
+    @Deprecated
     public Integer getUsedCount() {
         return this.usedCount;
     }
 
+    @Deprecated
     public void setUsedCount(Integer usedCount) {
         this.usedCount = usedCount;
     }
@@ -264,6 +282,22 @@ public class CidrInfo extends TeaModel {
 
     public void setAsnObservation(AsnObservationDetail asnObservation) {
         this.asnObservation = asnObservation;
+    }
+
+    public List<AvailableCidrInfo> getAvailableCidr() {
+        return this.availableCidr;
+    }
+
+    public void setAvailableCidr(List<AvailableCidrInfo> availableCidr) {
+        this.availableCidr = availableCidr;
+    }
+
+    public Integer getAvailableCount() {
+        return this.availableCount;
+    }
+
+    public void setAvailableCount(Integer availableCount) {
+        this.availableCount = availableCount;
     }
 
 }

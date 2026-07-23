@@ -4,25 +4,25 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class ModifyIPTransitsAttributeRequest extends TeaModel {
 
 
     /**
      * IP Transit ID 列表。
-     * 数量不得超过100。
+     * 最多支持 100 个。
      */
     public List<String> iptIds;
 
     /**
      * IP Transit名称。
-     * 不得超过255个字符。
-     * 名称和描述信息至少需要有一项指定。
      */
     public String iptName;
 
     /**
-     * IP Transit 描述信息。
-     * 名称和描述信息至少需要有一项指定。
+     * IP Transit描述。
      */
     public String iptDescription;
 

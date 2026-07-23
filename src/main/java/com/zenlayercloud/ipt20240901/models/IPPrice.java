@@ -4,25 +4,30 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * IP价格信息。
+ * IP 价格信息。
  */
 public class IPPrice extends TeaModel {
 
 
     /**
-     * IP CIDR 的价格信息。
+     * 价格详情。
      */
     public PriceItem price;
 
     /**
-     * IP CIDR 的网段。
+     * 掩码长度。
      */
     public Integer netmask;
 
     /**
-     * IP CIDR 的数量。
+     * 数量。
      */
     public Integer qty;
+
+    /**
+     * IP 网络类型。
+     */
+    public String ipNetworkType;
 
     public PriceItem getPrice() {
         return this.price;
@@ -46,6 +51,14 @@ public class IPPrice extends TeaModel {
 
     public void setQty(Integer qty) {
         this.qty = qty;
+    }
+
+    public String getIpNetworkType() {
+        return this.ipNetworkType;
+    }
+
+    public void setIpNetworkType(String ipNetworkType) {
+        this.ipNetworkType = ipNetworkType;
     }
 
 }

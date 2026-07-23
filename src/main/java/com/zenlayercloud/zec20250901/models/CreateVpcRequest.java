@@ -18,12 +18,14 @@ public class CreateVpcRequest extends TeaModel {
     public String name;
 
     /**
-     * VPC的CIDR地址段。必须属于以下4种内网地址段之一：10.0.0.0/9、10.128.0.0/9、172.16.0.0/12 或 192.168.0.0/16。
+     * VPC的CIDR地址段。
+     * 必须属于以下4种内网地址段之一：10.0.0.0/9、10.128.0.0/9、172.16.0.0/12 或 192.168.0.0/16。
      */
     public String cidrBlock;
 
     /**
-     * VPC的MTU（最大传输单元）。支持：1300、1500、9000。
+     * VPC的MTU（最大传输单元）。
+     * 支持：1300、1500、9000。
      */
     public Integer mtu;
 
@@ -41,7 +43,8 @@ public class CreateVpcRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * 创建VPC时关联的标签。同一资源中标签键不能重复。
+     * 创建VPC时关联的标签。
+     * 同一资源中标签键不能重复。
      */
     public TagAssociation tags;
 

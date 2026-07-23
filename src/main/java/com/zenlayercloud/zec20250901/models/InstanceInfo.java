@@ -26,8 +26,7 @@ public class InstanceInfo extends TeaModel {
     public String zoneId;
 
     /**
-     * CPU 规格。
-     * 如果是GPU实例，该字段取值为null。
+     * 规格唯一ID。
      */
     public String instanceType;
 

@@ -15,14 +15,15 @@ public class ReplaceIp extends TeaModel {
     public String eipId;
 
     /**
-     * 原IP。
-     * 当IP是三线IP(IP线路类型为`ThreeLine`)时需要指定。
+     * 原IP地址。
+     * 当弹性公网IP包含多个地址时需要指定。
      */
     public String ownIp;
 
     /**
      * 需要变更的目标IP。
      * 如果未指定，将由系统随机分配。
+     * 不能以`.0`或`.255`结尾（网络地址/广播地址不可用）。
      */
     public String targetIp;
 

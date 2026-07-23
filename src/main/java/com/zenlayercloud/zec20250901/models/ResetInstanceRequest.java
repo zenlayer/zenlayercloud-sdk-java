@@ -32,7 +32,7 @@ public class ResetInstanceRequest extends TeaModel {
 
     /**
      * 指定重装的的镜像ID。
-     * 可以通过[DescribeImages](describeimages.md)取返回信息中的`imageId`字段。
+     * 可以通过[DescribeImages](../image/describeimages.md)取返回信息中的`imageId`字段。
      * 如果不指定，会根据当前镜像进行重装。
      */
     public String imageId;

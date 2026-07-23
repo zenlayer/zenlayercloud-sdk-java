@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 描述实例选项相关配置。
+ * 实例选项配置。
  */
 public class InstanceOptions extends TeaModel {
 
