@@ -28,8 +28,7 @@ public class CreateZecInstancesRequest extends TeaModel {
     public String timeZone;
 
     /**
-     * 实例机型。
-     * 普通实例取值可通过[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)获得；GPU 实例取值可通过[DescribeZoneGpuInstanceConfigInfos](describezonegpuinstanceconfiginfos.md)获得。
+     * 实例机型。普通实例取值可通过[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)获得；GPU 实例取值可通过[DescribeZoneGpuInstanceConfigInfos](describezonegpuinstanceconfiginfos.md)获得。
      */
     public String instanceType;
 
@@ -82,9 +81,7 @@ public class CreateZecInstancesRequest extends TeaModel {
     public SystemDisk systemDisk;
 
     /**
-     * 实例数据盘配置信息。
-     * 若不指定该参数，则默认不额外购买数据盘。
-     * 列表中每一项对应一块独立的数据盘，数据盘总数量受团队配额限制。
+     * 实例数据盘配置信息。若不指定该参数，则默认不额外购买数据盘。列表中每一项对应一块独立的数据盘，数据盘总数量受团队配额限制。
      */
     public List<DataDisk> dataDisks;
 

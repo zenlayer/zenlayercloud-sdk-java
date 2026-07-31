@@ -21,10 +21,10 @@ public class ModifyEipBandwidthRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * 保底带宽。
-     * 单位Mbps。
-     * 有且仅当为Remote IP，且为选择带宽包计费, 需要指定专线部分的保底带宽。
+     * 已废弃，该参数不再生效，传值将被忽略。
+     * 已配置突发带宽的 EIP 保持原值不变；若本次 `bandwidth` 超过原突发带宽，突发带宽将自动上调至与 `bandwidth` 一致。
      */
+    @Deprecated
     public Integer commitBandwidth;
 
     public String getEipId() {
@@ -43,10 +43,12 @@ public class ModifyEipBandwidthRequest extends TeaModel {
         this.bandwidth = bandwidth;
     }
 
+    @Deprecated
     public Integer getCommitBandwidth() {
         return this.commitBandwidth;
     }
 
+    @Deprecated
     public void setCommitBandwidth(Integer commitBandwidth) {
         this.commitBandwidth = commitBandwidth;
     }

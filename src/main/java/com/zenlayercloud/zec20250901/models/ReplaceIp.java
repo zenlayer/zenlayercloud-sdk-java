@@ -16,8 +16,9 @@ public class ReplaceIp extends TeaModel {
 
     /**
      * 原IP地址。
-     * 当弹性公网IP包含多个地址时需要指定。
+     * 已废弃。
      */
+    @Deprecated
     public String ownIp;
 
     /**
@@ -35,10 +36,12 @@ public class ReplaceIp extends TeaModel {
         this.eipId = eipId;
     }
 
+    @Deprecated
     public String getOwnIp() {
         return this.ownIp;
     }
 
+    @Deprecated
     public void setOwnIp(String ownIp) {
         this.ownIp = ownIp;
     }

@@ -26,32 +26,29 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
     public PriceItem gpuPrice;
 
     /**
-     * 公网IPv4的保留价格。
-     * 仅当`internetChargeType`有值时返回。
+     * 公网IPv4的保留价格。仅当`internetChargeType`有值时返回。
      */
     public PriceItem ipv4Price;
 
     /**
-     * 公网IPv4的带宽价格。
-     * 仅当`internetChargeType`有值时返回。
+     * 公网IPv4的带宽价格。仅当`internetChargeType`有值时返回。
      */
     public PriceItem ipv4BandwidthPrice;
 
     /**
      * 各流量方向的IPv4带宽价格明细。
+     * 仅当`internetChargeType`有值时返回。
      * PathBasedBandwidthIP 线路返回多项（ipv4BandwidthPrice 为 null）；其他线路该字段为 null，带宽价格见 ipv4BandwidthPrice。
      */
     public List<BandwidthPriceResponseItem> ipv4BandwidthPrices;
 
     /**
-     * 公网IPv6的价格。
-     * 仅当`internetChargeType`有值时返回。
+     * 公网IPv6的价格。仅当`internetChargeType`有值时返回。
      */
     public PriceItem ipv6Price;
 
     /**
-     * 公网IPv6的带宽价格。
-     * 仅当`internetChargeType`有值时返回。
+     * 公网IPv6的带宽价格。仅当`internetChargeType`有值时返回。
      */
     public PriceItem ipv6BandwidthPrice;
 
@@ -61,9 +58,7 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
     public PriceItem systemDiskPrice;
 
     /**
-     * 数据盘的价格。
-     * 仅当配置1块数据盘时返回。
-     * 完整价格明细见`dataDiskPrices`。
+     * 数据盘的价格。仅当配置1块数据盘时返回。完整价格明细见`dataDiskPrices`。
      */
     public PriceItem dataDiskPrice;
 

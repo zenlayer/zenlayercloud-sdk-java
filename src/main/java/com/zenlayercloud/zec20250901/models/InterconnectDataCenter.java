@@ -10,7 +10,7 @@ public class InterconnectDataCenter extends TeaModel {
 
 
     /**
-     * 数据中心UUID。
+     * 数据中心ID。
      */
     public String dcId;
 

@@ -119,7 +119,7 @@ public class CreateEipsRequest extends TeaModel {
 
     /**
      * 绑定类型。
-     * 当指定定`instanceIds`时生效。
+     * 当指定`instanceIds`时生效。
      * 默认为普通NAT模式。
      */
     public String bindType;

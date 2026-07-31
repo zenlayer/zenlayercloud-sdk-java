@@ -10,14 +10,12 @@ public class OperationInfo extends TeaModel {
 
 
     /**
-     * 操作动作。
-     * 取值范围：`ModifyBandwidth`（调整带宽）、`ModifyFlowPackage`（调整流量包）。
+     * 操作动作。取值范围：`ModifyBandwidth`（调整带宽）、`ModifyFlowPackage`（调整流量包）。
      */
     public String operation;
 
     /**
-     * 操作状态。
-     * 取值范围：`OPERATING`（操作中）、`FAILED`（操作失败）。
+     * 操作状态。取值范围：`OPERATING`（操作中）、`FAILED`（操作失败）。
      */
     public String status;
 

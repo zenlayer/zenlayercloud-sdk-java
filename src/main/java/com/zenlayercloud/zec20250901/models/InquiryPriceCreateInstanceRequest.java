@@ -13,8 +13,7 @@ public class InquiryPriceCreateInstanceRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * 实例机型。
-     * 普通实例取值可通过[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)获得；GPU 实例取值可通过[DescribeZoneGpuInstanceConfigInfos](describezonegpuinstanceconfiginfos.md)获得。
+     * 实例机型。普通实例取值可通过[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)获得；GPU 实例取值可通过[DescribeZoneGpuInstanceConfigInfos](describezonegpuinstanceconfiginfos.md)获得。
      */
     public String instanceType;
 
@@ -26,14 +25,12 @@ public class InquiryPriceCreateInstanceRequest extends TeaModel {
     public String eipV4Type;
 
     /**
-     * 公网IPv4的线路类型。
-     * 当`internetChargeType`有值时必填。
+     * 公网IPv4的线路类型。当`internetChargeType`有值时必填。
      */
     public String networkLineType;
 
     /**
-     * 公网IP的网络计费类型。
-     * 如果不指定，则不会询价公网IP。
+     * 公网IP的网络计费类型。如果不指定，则不会询价公网IP。
      */
     public String internetChargeType;
 
@@ -61,8 +58,7 @@ public class InquiryPriceCreateInstanceRequest extends TeaModel {
     public SystemDisk systemDisk;
 
     /**
-     * 数据盘相关信息。
-     * 只能配置1块数据盘，配置多块数据盘请使用`dataDisks`；同时指定时以`dataDisks`为准。
+     * 数据盘相关信息。只能配置1块数据盘，配置多块数据盘请使用`dataDisks`；同时指定时以`dataDisks`为准。
      */
     public DataDisk dataDisk;
 

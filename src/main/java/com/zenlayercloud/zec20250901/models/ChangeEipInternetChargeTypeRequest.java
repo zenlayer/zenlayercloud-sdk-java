@@ -34,8 +34,9 @@ public class ChangeEipInternetChargeTypeRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * 带宽峰值上限（Mbps）。
+     * 已废弃，该参数不再生效。
      */
+    @Deprecated
     public Integer bandwidthCap;
 
     /**
@@ -76,10 +77,12 @@ public class ChangeEipInternetChargeTypeRequest extends TeaModel {
         this.bandwidth = bandwidth;
     }
 
+    @Deprecated
     public Integer getBandwidthCap() {
         return this.bandwidthCap;
     }
 
+    @Deprecated
     public void setBandwidthCap(Integer bandwidthCap) {
         this.bandwidthCap = bandwidthCap;
     }

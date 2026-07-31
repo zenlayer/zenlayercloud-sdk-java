@@ -111,8 +111,7 @@ public class CidrInfo extends TeaModel {
     public Tags tags;
 
     /**
-     * ASN 观测结果。
-     * 仅当CIDR来源为BYOIP时存在。
+     * ASN 观测结果。仅当CIDR来源为BYOIP时存在。
      */
     public AsnObservationDetail asnObservation;
 

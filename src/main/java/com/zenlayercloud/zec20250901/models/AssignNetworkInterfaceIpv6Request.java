@@ -43,7 +43,7 @@ public class AssignNetworkInterfaceIpv6Request extends TeaModel {
 
     /**
      * 限速模式。
-     * `STRICT`严格模式必须同时指定`bandwidth`。
+     * 严格模式(`STRICT`) 必须同时指定 `bandwidth`。
      */
     public String rateLimitMode;
 
