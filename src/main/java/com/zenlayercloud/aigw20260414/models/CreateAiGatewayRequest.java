@@ -25,6 +25,16 @@ public class CreateAiGatewayRequest extends TeaModel {
     public String gatewayName;
 
     /**
+     * 日额度限制。
+     */
+    public Integer dailyLimit;
+
+    /**
+     * 月额度限制。
+     */
+    public Integer monthlyLimit;
+
+    /**
      * token配额。
      */
     public Integer tokenLimit;
@@ -72,6 +82,22 @@ public class CreateAiGatewayRequest extends TeaModel {
 
     public void setGatewayName(String gatewayName) {
         this.gatewayName = gatewayName;
+    }
+
+    public Integer getDailyLimit() {
+        return this.dailyLimit;
+    }
+
+    public void setDailyLimit(Integer dailyLimit) {
+        this.dailyLimit = dailyLimit;
+    }
+
+    public Integer getMonthlyLimit() {
+        return this.monthlyLimit;
+    }
+
+    public void setMonthlyLimit(Integer monthlyLimit) {
+        this.monthlyLimit = monthlyLimit;
     }
 
     public Integer getTokenLimit() {
