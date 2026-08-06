@@ -17,7 +17,7 @@ public class MarketingInfo extends TeaModel {
 
     /**
      * 是否使用POC代金券。
-     *  如果系统不存在POC代金券，相关创建流程会失败。
+     * 如果系统不存在POC代金券，相关创建流程会失败。
      */
     public Boolean usePocVoucher;
 

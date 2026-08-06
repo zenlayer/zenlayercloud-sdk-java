@@ -10,7 +10,7 @@ public class Region extends TeaModel {
 
 
     /**
-     * 节点ID。
+     * 支持售卖的区域。
      */
     public String regionId;
 

@@ -346,6 +346,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询可用区售卖的加速卡规格信息。
+         */
+    public DescribeZoneAcceleratorConfigInfosResponse describeZoneAcceleratorConfigInfos(DescribeZoneAcceleratorConfigInfosRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeZoneAcceleratorConfigInfos",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeZoneAcceleratorConfigInfosResponse());
+    }
+
+        /**
          * 查询某节点支持的镜像列表。
          */
     public DescribeImagesResponse describeImages(DescribeImagesRequest request) {
@@ -991,6 +1003,18 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new ModifyIpv6TrafficPackageResponse());
+    }
+
+        /**
+         * 变更网卡当前的主内网IPv4地址。
+         */
+    public ReplaceNetworkInterfacePrimaryIpv4Response replaceNetworkInterfacePrimaryIpv4(ReplaceNetworkInterfacePrimaryIpv4Request request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ReplaceNetworkInterfacePrimaryIpv4",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ReplaceNetworkInterfacePrimaryIpv4Response());
     }
 
         /**
@@ -2131,6 +2155,30 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DeleteSubnetResponse());
+    }
+
+        /**
+         * 在同一个VPC下批量创建多个子网。
+         */
+    public CreateSubnetsResponse createSubnets(CreateSubnetsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateSubnets",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateSubnetsResponse());
+    }
+
+        /**
+         * 删除一个或多个子网。
+         */
+    public DeleteSubnetsResponse deleteSubnets(DeleteSubnetsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteSubnets",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteSubnetsResponse());
     }
 
         /**

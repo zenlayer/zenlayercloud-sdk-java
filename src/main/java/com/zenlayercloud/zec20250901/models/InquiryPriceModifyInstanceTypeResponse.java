@@ -16,15 +16,21 @@ public class InquiryPriceModifyInstanceTypeResponse extends TeaModel {
 
     /**
      * 变更后规格的价格。
-     * VM 实例变配时返回，GPU 实例变配时为 null。
+     * VM 实例变配时返回，GPU/加速卡实例变配时为 null。
      */
     public PriceItem specPrice;
 
     /**
      * 变更后 GPU 规格的价格。
-     * GPU 实例变配时返回，VM 实例变配时为 null。
+     * GPU 实例变配时返回，VM/加速卡实例变配时为 null。
      */
     public PriceItem gpuPrice;
+
+    /**
+     * 变更后加速卡规格的价格。
+     * 加速卡实例变配时返回，VM/GPU 实例变配时为 null。
+     */
+    public PriceItem acceleratorPrice;
 
     /**
      * 系统盘的价格。
@@ -53,6 +59,14 @@ public class InquiryPriceModifyInstanceTypeResponse extends TeaModel {
 
     public void setGpuPrice(PriceItem gpuPrice) {
         this.gpuPrice = gpuPrice;
+    }
+
+    public PriceItem getAcceleratorPrice() {
+        return this.acceleratorPrice;
+    }
+
+    public void setAcceleratorPrice(PriceItem acceleratorPrice) {
+        this.acceleratorPrice = acceleratorPrice;
     }
 
     public PriceItem getSystemDiskPrice() {

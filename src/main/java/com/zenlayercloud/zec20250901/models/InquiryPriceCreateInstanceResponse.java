@@ -26,6 +26,11 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
     public PriceItem gpuPrice;
 
     /**
+     * 加速卡规格的价格。
+     */
+    public PriceItem acceleratorPrice;
+
+    /**
      * 公网IPv4的保留价格。仅当`internetChargeType`有值时返回。
      */
     public PriceItem ipv4Price;
@@ -89,6 +94,14 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
 
     public void setGpuPrice(PriceItem gpuPrice) {
         this.gpuPrice = gpuPrice;
+    }
+
+    public PriceItem getAcceleratorPrice() {
+        return this.acceleratorPrice;
+    }
+
+    public void setAcceleratorPrice(PriceItem acceleratorPrice) {
+        this.acceleratorPrice = acceleratorPrice;
     }
 
     public PriceItem getIpv4Price() {

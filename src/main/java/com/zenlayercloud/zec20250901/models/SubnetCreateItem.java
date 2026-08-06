@@ -1,0 +1,129 @@
+package com.zenlayercloud.zec20250901.models;
+
+import com.aliyun.tea.TeaModel;
+
+
+/**
+ * 批量创建子网的单项参数。
+ */
+public class SubnetCreateItem extends TeaModel {
+
+
+    /**
+     * 子网名称。
+     * 范围2到63个字符。
+     * 仅支持输入字母、数字、-和英文句点(.)。
+     * 且必须以数字或字母开头和结尾。
+     */
+    public String name;
+
+    /**
+     * 子网所在节点的ID。
+     * 必须是VPC所在节点之一。
+     */
+    public String regionId;
+
+    /**
+     * 子网的IP堆栈类型。
+     * 可选值：IPv4（仅IPv4）、IPv4_IPv6（IPv4和IPv6双栈）、IPv6（仅IPv6）。
+     */
+    public String stackType;
+
+    /**
+     * 子网的IPv4 CIDR地址段。
+     * 如果指定堆栈类型`stackType` 包含 `IPv4`, 则该字段必填。
+     * 指定的CIDR地址段必须属于VPC的CIDR范围内，且不能与VPC下已有子网或本次批量请求中的其他子网CIDR重叠。
+     */
+    public String cidrBlock;
+
+    /**
+     * IPv6的类型。
+     * 如果指定堆栈类型`stackType` 包含 `IPv6`, 则该字段必填。
+     */
+    public String ipv6Type;
+
+    /**
+     * 要绑定的DHCP 选项集ID。
+     */
+    public String dhcpOptionsSetId;
+
+    /**
+     * 公网IPv6 CIDR ID。
+     * 该字段仅当`ipv6Type`是公网(`Public`)时允许指定。
+     * 如果不指定，将从系统默认IP池里分配。
+     */
+    public String ipv6CidrBlockId;
+
+    /**
+     * 分配给虚拟机（VM）的IPv6 CIDR前缀的大小。
+     * 该参数必须与`ipv6CidrBlockId`参数配合使用。
+     * 当未显式传递时，默认值为96。
+     * 最小必须大于或等于指定`ipv6CidrBlockId`的前缀，最大不能超过96。
+     */
+    public Integer ipv6MaskLength;
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public void setRegionId(String regionId) {
+        this.regionId = regionId;
+    }
+
+    public String getStackType() {
+        return this.stackType;
+    }
+
+    public void setStackType(String stackType) {
+        this.stackType = stackType;
+    }
+
+    public String getCidrBlock() {
+        return this.cidrBlock;
+    }
+
+    public void setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
+    }
+
+    public String getIpv6Type() {
+        return this.ipv6Type;
+    }
+
+    public void setIpv6Type(String ipv6Type) {
+        this.ipv6Type = ipv6Type;
+    }
+
+    public String getDhcpOptionsSetId() {
+        return this.dhcpOptionsSetId;
+    }
+
+    public void setDhcpOptionsSetId(String dhcpOptionsSetId) {
+        this.dhcpOptionsSetId = dhcpOptionsSetId;
+    }
+
+    public String getIpv6CidrBlockId() {
+        return this.ipv6CidrBlockId;
+    }
+
+    public void setIpv6CidrBlockId(String ipv6CidrBlockId) {
+        this.ipv6CidrBlockId = ipv6CidrBlockId;
+    }
+
+    public Integer getIpv6MaskLength() {
+        return this.ipv6MaskLength;
+    }
+
+    public void setIpv6MaskLength(Integer ipv6MaskLength) {
+        this.ipv6MaskLength = ipv6MaskLength;
+    }
+
+}

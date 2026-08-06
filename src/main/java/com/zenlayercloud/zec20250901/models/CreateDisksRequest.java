@@ -11,6 +11,12 @@ public class CreateDisksRequest extends TeaModel {
 
 
     /**
+     * 后付费云硬盘的承诺周期。
+     * 仅在需要指定承诺周期时传递。
+     */
+    public ChargePostpaid instanceChargePostpaid;
+
+    /**
      * 云硬盘所属的可用区ID。
      */
     public String zoneId;
@@ -20,8 +26,16 @@ public class CreateDisksRequest extends TeaModel {
      * 范围1到64个字符。
      * 仅支持输入字母、数字、-/_和英文句点(.)。
      * 且必须以数字或字母开头和结尾。
+     * 当不传`diskNames`时必填。
      */
     public String diskName;
+
+    /**
+     * 每块云硬盘各自的名称。
+     * 数量需要与`diskAmount`字段一致，命名规则同`diskName`。
+     * 不传则本批次云硬盘均使用`diskName`命名。
+     */
+    public List<String> diskNames;
 
     /**
      * 云硬盘大小，单位GiB。
@@ -39,6 +53,12 @@ public class CreateDisksRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * 要绑定的实例ID。
+     * 数量需要与`diskAmount`字段一致，每个云硬盘各绑定一个不同实例；与`instanceId`同时传递时以`instanceId`为准。
+     */
+    public List<String> instanceIds;
+
+    /**
      * 云硬盘所在的资源组ID。
      * 如不指定则放入默认资源组。
      */
@@ -46,8 +66,8 @@ public class CreateDisksRequest extends TeaModel {
 
     /**
      * 云硬盘种类。
-     * Basic NVMe SSD: 经济型 NVMe SSD。
-     * Standard NVMe SSD: 标准型 NVMe SSD。
+     * Basic NVMe SSD/BASIC_NVME_SSD: 经济型 NVMe SSD。
+     * Standard NVMe SSD/NVME_SSD: 标准型 NVMe SSD。
      * 默认为Standard NVMe SSD。
      */
     public String diskCategory;
@@ -70,15 +90,17 @@ public class CreateDisksRequest extends TeaModel {
     public TagAssociation tags;
 
     /**
-     * 要绑定的实例ID。
-     * 数量需要与`diskAmount`字段一致。
-     */
-    public List<String> instanceIds;
-
-    /**
      * 是否开启性能突发。
      */
     public Boolean burstingEnabled;
+
+    public ChargePostpaid getInstanceChargePostpaid() {
+        return this.instanceChargePostpaid;
+    }
+
+    public void setInstanceChargePostpaid(ChargePostpaid instanceChargePostpaid) {
+        this.instanceChargePostpaid = instanceChargePostpaid;
+    }
 
     public String getZoneId() {
         return this.zoneId;
@@ -94,6 +116,14 @@ public class CreateDisksRequest extends TeaModel {
 
     public void setDiskName(String diskName) {
         this.diskName = diskName;
+    }
+
+    public List<String> getDiskNames() {
+        return this.diskNames;
+    }
+
+    public void setDiskNames(List<String> diskNames) {
+        this.diskNames = diskNames;
     }
 
     public Integer getDiskSize() {
@@ -118,6 +148,14 @@ public class CreateDisksRequest extends TeaModel {
 
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
+    }
+
+    public List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public void setInstanceIds(List<String> instanceIds) {
+        this.instanceIds = instanceIds;
     }
 
     public String getResourceGroupId() {
@@ -158,14 +196,6 @@ public class CreateDisksRequest extends TeaModel {
 
     public void setTags(TagAssociation tags) {
         this.tags = tags;
-    }
-
-    public List<String> getInstanceIds() {
-        return this.instanceIds;
-    }
-
-    public void setInstanceIds(List<String> instanceIds) {
-        this.instanceIds = instanceIds;
     }
 
     public Boolean getBurstingEnabled() {
