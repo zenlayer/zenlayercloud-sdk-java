@@ -14,8 +14,25 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * 负载均衡后端服务器所属的VPC网络 ID。
+     * `vpcId`和`subnetId`至少指定一个。
+     * 仅指定`subnetId`时，取该子网所属的VPC。
      */
     public String vpcId;
+
+    /**
+     * 子网ID。
+     * 可以通过[DescribeSubnets](../../zec/vpc-network/describesubnets.md)接口获取。
+     * `vpcId`和`subnetId`至少指定一个。
+     * 该子网需与`regionId`同区域、支持IPv4，同时指定`vpcId`时还须属于该VPC。
+     */
+    public String subnetId;
+
+    /**
+     * 健康检查内网源IP地址，数量必须为2。
+     * 指定`subnetId`时，不填则从该子网中随机分配2个可用的内网IPv4地址作为健康检查源IP，每个负载均衡实例占用2个地址，该子网剩余可用内网IPv4地址不足时将返回`INVALID_SUBNET_IPV4_INSUFFICIENT`。
+     * 不指定`subnetId`时，此参数无效。
+     */
+    public List<String> healthCheckPrivateIps;
 
     /**
      * 负载均衡实例名称。
@@ -80,20 +97,6 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public TagAssociation tags;
 
     /**
-     * 健康检查内网源IP所属的subnetId。
-     * 可以通过[DescribeSubnets](../../zec/vpc-network/describesubnets.md)接口获取。
-     */
-    public String subnetId;
-
-    /**
-     * 健康检查内网IP地址。
-     * 指定`subnetId`时，此参数必填，且数量必须为2。
-     * 不指定`subnetId`时，此参数无效。
-     * 不填时系统将自动分配。
-     */
-    public List<String> healthCheckPrivateIps;
-
-    /**
      * 负载均衡实例绑定的安全组ID。
      * 可以通过[DescribeSecurityGroups](../../zec/security-group/describesecuritygroups.md)接口获取。
      */
@@ -113,6 +116,22 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
+    }
+
+    public String getSubnetId() {
+        return this.subnetId;
+    }
+
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+    }
+
+    public List<String> getHealthCheckPrivateIps() {
+        return this.healthCheckPrivateIps;
+    }
+
+    public void setHealthCheckPrivateIps(List<String> healthCheckPrivateIps) {
+        this.healthCheckPrivateIps = healthCheckPrivateIps;
     }
 
     public String getLoadBalancerName() {
@@ -203,22 +222,6 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public void setTags(TagAssociation tags) {
         this.tags = tags;
-    }
-
-    public String getSubnetId() {
-        return this.subnetId;
-    }
-
-    public void setSubnetId(String subnetId) {
-        this.subnetId = subnetId;
-    }
-
-    public List<String> getHealthCheckPrivateIps() {
-        return this.healthCheckPrivateIps;
-    }
-
-    public void setHealthCheckPrivateIps(List<String> healthCheckPrivateIps) {
-        this.healthCheckPrivateIps = healthCheckPrivateIps;
     }
 
     public String getSecurityGroupId() {

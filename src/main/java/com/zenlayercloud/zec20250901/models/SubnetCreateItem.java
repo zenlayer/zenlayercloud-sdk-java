@@ -12,7 +12,7 @@ public class SubnetCreateItem extends TeaModel {
     /**
      * 子网名称。
      * 范围2到63个字符。
-     * 仅支持输入字母、数字、-和英文句点(.)。
+     * 仅支持输入字母、数字、连字符(-)、下划线(_)、斜杠(/)、英文句点(.)和空格。
      * 且必须以数字或字母开头和结尾。
      */
     public String name;

@@ -23,10 +23,8 @@ public class CreateDisksRequest extends TeaModel {
 
     /**
      * 云盘名称。
-     * 范围1到64个字符。
-     * 仅支持输入字母、数字、-/_和英文句点(.)。
-     * 且必须以数字或字母开头和结尾。
-     * 当不传`diskNames`时必填。
+     * 该参数需以数字或字母开头，最多支持64个字符。
+     * 仅支持字母、数字、连字符(-)和英文句点(.)。
      */
     public String diskName;
 
@@ -53,8 +51,8 @@ public class CreateDisksRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * 要绑定的实例ID。
-     * 数量需要与`diskAmount`字段一致，每个云硬盘各绑定一个不同实例；与`instanceId`同时传递时以`instanceId`为准。
+     * 要绑定的实例 ID。
+     * 数量需要与 `diskAmount` 字段一致。
      */
     public List<String> instanceIds;
 
@@ -66,9 +64,10 @@ public class CreateDisksRequest extends TeaModel {
 
     /**
      * 云硬盘种类。
-     * Basic NVMe SSD/BASIC_NVME_SSD: 经济型 NVMe SSD。
-     * Standard NVMe SSD/NVME_SSD: 标准型 NVMe SSD。
-     * 默认为Standard NVMe SSD。
+     * Basic NVMe SSD：经济型 NVMe SSD。
+     * Standard NVMe SSD：标准型 NVMe SSD。
+     * 默认值：Standard NVMe SSD。
+     * 调用 DescribeDiskCategory 获取云硬盘种类。
      */
     public String diskCategory;
 

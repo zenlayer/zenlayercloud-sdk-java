@@ -35,7 +35,7 @@ public class CreateEipsRequest extends TeaModel {
 
     /**
      * 掩码长度，取值范围24–32，默认32。
-     * 指定小于32时，创建EIP Block资源，必须同时指定`cidrId`，且不能小于所选CIDR自身的掩码长度。
+     * 指定小于32时，将创建EIP Block资源，此时必须同时指定`cidrId`，且取值不能小于所选CIDR自身的掩码长度。
      */
     public Integer prefixLength;
 

@@ -53,6 +53,7 @@ public class CreateListenerRequest extends TeaModel {
 
     /**
      * 会话保持时间，单位秒。
+     * 与`algoOpts`（调度算法高级选项）互斥：该监听器设置了`algoOpts`时不可传非0值。
      */
     public Integer persistent;
 
@@ -60,6 +61,14 @@ public class CreateListenerRequest extends TeaModel {
      * 空闲超时时间，单位秒。
      */
     public Integer idleTimeout;
+
+    /**
+     * 调度算法高级选项。
+     * 仅当工作模式（`kind`）为`DR`且调度算法（`scheduler`）为`mh`时可设置，其它组合传入将报错。
+     * 创建时传`None`等价于不设置该字段。
+     * 开启后与会话保持（`persistent`）互斥，不可同时设置非0值。
+     */
+    public String algoOpts;
 
     public String getLoadBalancerId() {
         return this.loadBalancerId;
@@ -131,6 +140,14 @@ public class CreateListenerRequest extends TeaModel {
 
     public void setIdleTimeout(Integer idleTimeout) {
         this.idleTimeout = idleTimeout;
+    }
+
+    public String getAlgoOpts() {
+        return this.algoOpts;
+    }
+
+    public void setAlgoOpts(String algoOpts) {
+        this.algoOpts = algoOpts;
     }
 
 }

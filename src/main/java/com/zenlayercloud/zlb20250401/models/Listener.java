@@ -57,8 +57,16 @@ public class Listener extends TeaModel {
 
     /**
      * 会话保持时间，单位秒。
+     * 与`algoOpts`（调度算法高级选项）互斥，该监听器开启`algoOpts`时该字段恒为空/0。
      */
     public Integer persistent;
+
+    /**
+     * 调度算法高级选项。
+     * 仅当工作模式（`kind`）为`DR`且调度算法（`scheduler`）为`mh`时才可能有值；未开启时该字段为空，查询接口不会返回`None`。
+     * 开启后与会话保持（`persistent`）互斥。
+     */
+    public String algoOpts;
 
     /**
      * 空闲超时时间，单位秒。
@@ -135,6 +143,14 @@ public class Listener extends TeaModel {
 
     public void setPersistent(Integer persistent) {
         this.persistent = persistent;
+    }
+
+    public String getAlgoOpts() {
+        return this.algoOpts;
+    }
+
+    public void setAlgoOpts(String algoOpts) {
+        this.algoOpts = algoOpts;
     }
 
     public Integer getIdleTimeout() {

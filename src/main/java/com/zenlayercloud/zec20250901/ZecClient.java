@@ -1510,6 +1510,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 修改弹性公网IP（EIP）的自定义封堵阈值。
+         */
+    public ModifyEipBlockThresholdResponse modifyEipBlockThreshold(ModifyEipBlockThresholdRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyEipBlockThreshold",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyEipBlockThresholdResponse());
+    }
+
+        /**
          * 查询路由列表。用户可以根据ID、名称等信息来搜索Route信息。路由列表包括系统生成的以及用户创建的路由。
          */
     public DescribeRoutesResponse describeRoutes(DescribeRoutesRequest request) {

@@ -15,10 +15,8 @@ public class CreateSubnetRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * 子网名称。
-     * 范围2到63个字符。
-     * 仅支持输入字母、数字、-和英文句点(.)。
-     * 且必须以数字或字母开头和结尾。
+     * 子网名称，用于展示。
+     * 该参数需以数字或字母开头和结尾，长度为2到63个字符，仅支持字母、数字、连字符(-)和英文句点(.)。
      */
     public String name;
 
