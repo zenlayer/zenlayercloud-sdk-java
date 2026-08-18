@@ -15,7 +15,17 @@ public class ModifyAiGatewayTokenLimitRequest extends TeaModel {
     public String gatewayUuid;
 
     /**
-     * Token限制（访问限制）。
+     * 日额度限制。
+     */
+    public Integer dailyLimit;
+
+    /**
+     * 月额度限制。
+     */
+    public Integer monthlyLimit;
+
+    /**
+     * token配额。
      */
     public Integer tokenLimit;
 
@@ -25,6 +35,22 @@ public class ModifyAiGatewayTokenLimitRequest extends TeaModel {
 
     public void setGatewayUuid(String gatewayUuid) {
         this.gatewayUuid = gatewayUuid;
+    }
+
+    public Integer getDailyLimit() {
+        return this.dailyLimit;
+    }
+
+    public void setDailyLimit(Integer dailyLimit) {
+        this.dailyLimit = dailyLimit;
+    }
+
+    public Integer getMonthlyLimit() {
+        return this.monthlyLimit;
+    }
+
+    public void setMonthlyLimit(Integer monthlyLimit) {
+        this.monthlyLimit = monthlyLimit;
     }
 
     public Integer getTokenLimit() {

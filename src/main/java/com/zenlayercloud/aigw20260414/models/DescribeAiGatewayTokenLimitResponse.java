@@ -19,6 +19,16 @@ public class DescribeAiGatewayTokenLimitResponse extends TeaModel {
      */
     public Integer tokenLimit;
 
+    /**
+     * 日额度限制。
+     */
+    public Integer dailyLimit;
+
+    /**
+     * 月额度限制。
+     */
+    public Integer monthlyLimit;
+
     public String getRequestId() {
         return this.requestId;
     }
@@ -33,6 +43,22 @@ public class DescribeAiGatewayTokenLimitResponse extends TeaModel {
 
     public void setTokenLimit(Integer tokenLimit) {
         this.tokenLimit = tokenLimit;
+    }
+
+    public Integer getDailyLimit() {
+        return this.dailyLimit;
+    }
+
+    public void setDailyLimit(Integer dailyLimit) {
+        this.dailyLimit = dailyLimit;
+    }
+
+    public Integer getMonthlyLimit() {
+        return this.monthlyLimit;
+    }
+
+    public void setMonthlyLimit(Integer monthlyLimit) {
+        this.monthlyLimit = monthlyLimit;
     }
 
 }
