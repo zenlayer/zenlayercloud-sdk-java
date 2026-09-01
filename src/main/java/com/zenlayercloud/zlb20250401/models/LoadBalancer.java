@@ -56,6 +56,12 @@ public class LoadBalancer extends TeaModel {
     public Long listenerCount;
 
     /**
+     * 负载均衡器下所有监听器绑定的后端服务器数量之和。
+     * 按后端服务器的内网IP统计，同一台服务器的多个内网IP分别计数。
+     */
+    public Integer backendServerCount;
+
+    /**
      * 创建时间。
      * 按照ISO8601标准表示，并且使用UTC时间, 格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
@@ -146,6 +152,14 @@ public class LoadBalancer extends TeaModel {
 
     public void setListenerCount(Long listenerCount) {
         this.listenerCount = listenerCount;
+    }
+
+    public Integer getBackendServerCount() {
+        return this.backendServerCount;
+    }
+
+    public void setBackendServerCount(Integer backendServerCount) {
+        this.backendServerCount = backendServerCount;
     }
 
     public String getCreateTime() {

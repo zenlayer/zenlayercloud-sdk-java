@@ -5,38 +5,38 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * 查询执行记录列表的请求信息。
+ * 
  */
 public class DescribeCommandInvocationsRequest extends TeaModel {
 
 
     /**
-     * 根据命令ID进行筛选
+     * 根据命令ID进行筛选。
      */
     public List<String> commandIds;
 
     /**
-     * 根据执行记录ID筛选
+     * 根据执行记录ID筛选。
      */
     public List<String> invocationIds;
 
     /**
-     * 根据执行的实例ID筛选
+     * 根据执行的实例ID筛选。
      */
     public List<String> instanceIds;
 
     /**
-     * 根据执行的总状态筛选
+     * 根据执行的总状态筛选。
      */
     public List<String> invocationStatuses;
 
     /**
-     * 返回的分页大小，默认为20，最大为10000
+     * 返回的分页大小，默认为20，最大为10000。
      */
     public Integer pageSize;
 
     /**
-     * 返回的分页数，默认为1
+     * 返回的分页数，默认为1。
      */
     public Integer pageNum;
 

@@ -25,7 +25,7 @@ public class TagInfo extends TeaModel {
     public Integer bindResourceCount;
 
     /**
-     * 创建时间。
+     * 标签创建时间。
      */
     public String createdDate;
 

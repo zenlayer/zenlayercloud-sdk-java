@@ -20,7 +20,7 @@ public class ResourceTag extends TeaModel {
     public String value;
 
     /**
-     * 创建时间。
+     * 标签创建时间。
      */
     public String createdDate;
 

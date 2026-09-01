@@ -13,12 +13,12 @@ public class DescribeCommandInvocationsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 命令执行记录列表
+     * 命令执行记录列表。
      */
     public List<CommandInvocation> dataSet;
 
     /**
-     * 匹配条件的命令执行记录总数
+     * 匹配条件的命令执行记录总数。
      */
     public Integer totalCount;
 

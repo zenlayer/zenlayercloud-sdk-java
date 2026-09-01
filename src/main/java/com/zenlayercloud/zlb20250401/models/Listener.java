@@ -39,7 +39,7 @@ public class Listener extends TeaModel {
     public HealthCheck healthCheck;
 
     /**
-     * 监听器转发的方式。
+     * 监听器的调度算法。
      */
     public String scheduler;
 

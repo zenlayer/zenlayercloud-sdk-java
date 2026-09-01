@@ -15,8 +15,9 @@ public class ModifySubnetAttributeRequest extends TeaModel {
     public String subnetId;
 
     /**
-     * 子网名称。
-     * 该参数必须以数字或字母开头和结尾，仅支持字母、数字、连字符(-)和英文句点(.)。
+     * 子网的名称。
+     * 仅支持输入字母、数字、连字符(-)、下划线(_)、斜杠(/)、英文句点(.)和空格。
+     * 且必须以数字或字母开头和结尾。
      */
     public String subnetName;
 

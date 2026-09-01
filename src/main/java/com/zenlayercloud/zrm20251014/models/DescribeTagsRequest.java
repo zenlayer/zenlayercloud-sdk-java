@@ -11,12 +11,12 @@ public class DescribeTagsRequest extends TeaModel {
 
 
     /**
-     * 页码。
+     * 页码，默认值1。
      */
     public Integer pageNum;
 
     /**
-     * 每页面展示数量。
+     * 每页面展示数量，默认值20。
      */
     public Integer pageSize;
 

@@ -4,41 +4,41 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建命令的请求参数。
+ * 
  */
 public class CreateCommandRequest extends TeaModel {
 
 
     /**
      * 命令名称。
-     * 长度不能超过64个字符
+     * 长度不能超过64个字符。
      */
     public String name;
 
     /**
-     * 命令内容。
-     * 长度不能超过4096个字符
+     * 命令内容，需使用Base64编码后传入。
+     * 解码后长度不能超过16K(16384)个字符。
      */
     public String content;
 
     /**
-     * 命令类型
+     * 命令类型。
      */
     public String type;
 
     /**
      * 命令描述信息。
-     * 最长不超过255个字符
+     * 最长不超过255个字符。
      */
     public String description;
 
     /**
-     * 命令关联的资源组ID
+     * 命令关联的资源组ID。
      */
     public String resourceGroupId;
 
     /**
-     * 命令绑定的标签信息
+     * 命令绑定的标签信息。
      */
     public TagAssociation tags;
 

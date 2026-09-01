@@ -4,31 +4,31 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 修改命令的请求参数。
+ * 
  */
 public class ModifyCommandRequest extends TeaModel {
 
 
     /**
-     * 需要修改的命令ID
+     * 需要修改的命令ID。
      */
     public String commandId;
 
     /**
      * 命令名称。
-     * 长度不能超过64个字符
+     * 长度不能超过64个字符。
      */
     public String name;
 
     /**
-     * 命令内容。
-     * 长度不能超过4096个字符
+     * 命令内容，需使用Base64编码后传入。
+     * 解码后长度不能超过16K(16384)个字符。
      */
     public String content;
 
     /**
      * 命令的描述信息。
-     * 长度不能超过255个字符
+     * 长度不能超过255个字符。
      */
     public String description;
 

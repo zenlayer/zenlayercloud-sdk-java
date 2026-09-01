@@ -55,7 +55,7 @@ public class ResetInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * 初始化命令。
+     * 实例初始化自定义脚本，需使用Base64编码后传入，解码后大小不超过64KB。
      */
     public String userData;
 

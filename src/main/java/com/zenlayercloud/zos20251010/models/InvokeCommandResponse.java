@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 执行命令的响应信息。
+ * 
  */
 public class InvokeCommandResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class InvokeCommandResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 命令执行记录编号
+     * 命令执行记录编号。
      */
     public String invocationId;
 

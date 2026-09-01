@@ -20,6 +20,12 @@ public class InquiryPriceModifyUnmanagedEgressIpBandwidthResponse extends TeaMod
      */
     public PriceItem bandwidthPrice;
 
+    /**
+     * 变更前各计费项当前生效的价格，字段与上方一一对应，用于对比出哪些计费项发生了调价。
+     * 无订单时为 null。
+     */
+    public UnmanagedEgressIpPreviousPrices previousPrices;
+
     public String getRequestId() {
         return this.requestId;
     }
@@ -34,6 +40,14 @@ public class InquiryPriceModifyUnmanagedEgressIpBandwidthResponse extends TeaMod
 
     public void setBandwidthPrice(PriceItem bandwidthPrice) {
         this.bandwidthPrice = bandwidthPrice;
+    }
+
+    public UnmanagedEgressIpPreviousPrices getPreviousPrices() {
+        return this.previousPrices;
+    }
+
+    public void setPreviousPrices(UnmanagedEgressIpPreviousPrices previousPrices) {
+        this.previousPrices = previousPrices;
     }
 
 }

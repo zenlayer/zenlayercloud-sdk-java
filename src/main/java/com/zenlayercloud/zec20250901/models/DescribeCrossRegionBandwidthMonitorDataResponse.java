@@ -56,6 +56,36 @@ public class DescribeCrossRegionBandwidthMonitorDataResponse extends TeaModel {
     public Double outTotalValue;
 
     /**
+     * 入方向丢弃量最大值。
+     */
+    public Double loseInMaxValue;
+
+    /**
+     * 入方向丢弃量最小值。
+     */
+    public Double loseInMinValue;
+
+    /**
+     * 入方向丢弃量总和值。
+     */
+    public Double loseInTotalValue;
+
+    /**
+     * 出方向丢弃量最大值。
+     */
+    public Double loseOutMaxValue;
+
+    /**
+     * 出方向丢弃量最小值。
+     */
+    public Double loseOutMinValue;
+
+    /**
+     * 出方向丢弃量总和值。
+     */
+    public Double loseOutTotalValue;
+
+    /**
      * 监控数据集合。
      */
     public List<CrossRegionBandwidthMetricValue> dataList;
@@ -130,6 +160,54 @@ public class DescribeCrossRegionBandwidthMonitorDataResponse extends TeaModel {
 
     public void setOutTotalValue(Double outTotalValue) {
         this.outTotalValue = outTotalValue;
+    }
+
+    public Double getLoseInMaxValue() {
+        return this.loseInMaxValue;
+    }
+
+    public void setLoseInMaxValue(Double loseInMaxValue) {
+        this.loseInMaxValue = loseInMaxValue;
+    }
+
+    public Double getLoseInMinValue() {
+        return this.loseInMinValue;
+    }
+
+    public void setLoseInMinValue(Double loseInMinValue) {
+        this.loseInMinValue = loseInMinValue;
+    }
+
+    public Double getLoseInTotalValue() {
+        return this.loseInTotalValue;
+    }
+
+    public void setLoseInTotalValue(Double loseInTotalValue) {
+        this.loseInTotalValue = loseInTotalValue;
+    }
+
+    public Double getLoseOutMaxValue() {
+        return this.loseOutMaxValue;
+    }
+
+    public void setLoseOutMaxValue(Double loseOutMaxValue) {
+        this.loseOutMaxValue = loseOutMaxValue;
+    }
+
+    public Double getLoseOutMinValue() {
+        return this.loseOutMinValue;
+    }
+
+    public void setLoseOutMinValue(Double loseOutMinValue) {
+        this.loseOutMinValue = loseOutMinValue;
+    }
+
+    public Double getLoseOutTotalValue() {
+        return this.loseOutTotalValue;
+    }
+
+    public void setLoseOutTotalValue(Double loseOutTotalValue) {
+        this.loseOutTotalValue = loseOutTotalValue;
     }
 
     public List<CrossRegionBandwidthMetricValue> getDataList() {

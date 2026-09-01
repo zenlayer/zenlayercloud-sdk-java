@@ -13,12 +13,12 @@ public class DescribeTagsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 列表总数量。
+     * 符合条件的标签总数量。
      */
     public Integer totalCount;
 
     /**
-     * 数据列表。
+     * 标签列表。
      */
     public List<TagInfo> dataSet;
 

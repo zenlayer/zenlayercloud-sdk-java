@@ -11,13 +11,13 @@ public class Tag extends TeaModel {
 
     /**
      * 标签键。
-     * 长度限制：1～64个字符
+     * 长度限制：1～64个字符。
      */
     public String key;
 
     /**
      * 标签值。
-     * 长度限制：1～64个字符
+     * 长度限制：1～64个字符。
      */
     public String value;
 

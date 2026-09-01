@@ -34,21 +34,7 @@ public class ZosClient extends AbstractClient {
     }
 
         /**
-         * 创建命令。
-         
-         */
-    public CreateCommandResponse createCommand(CreateCommandRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "CreateCommand",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new CreateCommandResponse());
-    }
-
-        /**
          * 查询命令列表。
-         
          */
     public DescribeCommandsResponse describeCommands(DescribeCommandsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -60,8 +46,31 @@ public class ZosClient extends AbstractClient {
     }
 
         /**
+         * 创建命令。
+         */
+    public CreateCommandResponse createCommand(CreateCommandRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateCommand",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateCommandResponse());
+    }
+
+        /**
+         * 执行一个已经创建并保存的命令。
+         */
+    public InvokeCommandResponse invokeCommand(InvokeCommandRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InvokeCommand",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InvokeCommandResponse());
+    }
+
+        /**
          * 修改命令。
-         
          */
     public ModifyCommandResponse modifyCommand(ModifyCommandRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -74,7 +83,6 @@ public class ZosClient extends AbstractClient {
 
         /**
          * 删除命令。
-         
          */
     public DeleteCommandResponse deleteCommand(DeleteCommandRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -83,19 +91,6 @@ public class ZosClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DeleteCommandResponse());
-    }
-
-        /**
-         * 执行一个已经创建并保存的命令。
-         
-         */
-    public InvokeCommandResponse invokeCommand(InvokeCommandRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "InvokeCommand",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new InvokeCommandResponse());
     }
 
         /**

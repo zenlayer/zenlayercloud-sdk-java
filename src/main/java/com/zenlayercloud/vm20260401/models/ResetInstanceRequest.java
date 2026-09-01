@@ -42,7 +42,7 @@ public class ResetInstanceRequest extends TeaModel {
     public String lanName;
 
     /**
-     * 初始化脚本。
+     * 初始化脚本，需进行Base64编码后传入，脚本内容大小不超过32KB。
      */
     public String initScript;
 

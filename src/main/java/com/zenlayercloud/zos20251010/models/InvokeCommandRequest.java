@@ -8,20 +8,20 @@ public class InvokeCommandRequest extends TeaModel {
 
 
     /**
-     * 需要执行的命令ID
+     * 需要执行的命令ID。
      */
     public String commandId;
 
     /**
      * 执行的实例ID列表。
      * 目前只支持ZEC实例。
-     * 最多不得超过200个实例
+     * 最多不得超过200个实例。
      */
     public List<String> instanceIds;
 
     /**
      * 每台实例执行命令的超时时间。
-     * 单位秒
+     * 单位秒。
      */
     public Integer timeout;
 

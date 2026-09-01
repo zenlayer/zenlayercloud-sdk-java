@@ -13,12 +13,12 @@ public class DescribeResourceByTagsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 列表总数量。
+     * 绑定了指定标签的资源总数量。
      */
     public Integer totalCount;
 
     /**
-     * 数据列表。
+     * 绑定了指定标签的资源列表。
      */
     public List<ResourceInfo> dataSet;
 

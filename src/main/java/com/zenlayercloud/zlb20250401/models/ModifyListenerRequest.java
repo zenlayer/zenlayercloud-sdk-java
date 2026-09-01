@@ -29,7 +29,7 @@ public class ModifyListenerRequest extends TeaModel {
     public HealthCheck healthCheck;
 
     /**
-     * 负载均衡器的监听器调度方式。
+     * 监听器的调度算法。
      * 不传则不会进行修改。
      */
     public String scheduler;
@@ -49,7 +49,7 @@ public class ModifyListenerRequest extends TeaModel {
      * 工作模式。
      * 如果修改为`DR`模式，如果后端服务器指定了端口将失效，将跟随监听器的端口。
      * 修改后必须与该负载均衡器下其他监听器的工作模式保持一致。
-     * DR模式下监听器不支持设置为全端口（0）。
+     * DR模式下监听器不支持设置为全端口（0）；监听器当前端口已是全端口（0）时，也不允许修改为`DR`。
      */
     public String kind;
 

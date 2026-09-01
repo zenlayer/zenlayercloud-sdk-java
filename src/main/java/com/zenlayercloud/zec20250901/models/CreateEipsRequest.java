@@ -34,8 +34,8 @@ public class CreateEipsRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * 掩码长度，取值范围24–32，默认32。
-     * 指定小于32时，将创建EIP Block资源，此时必须同时指定`cidrId`，且取值不能小于所选CIDR自身的掩码长度。
+     * 掩码长度，取值范围20–32，默认32。
+     * 指定小于32时，创建EIP Block资源，必须同时指定`cidrId`，且不能小于所选CIDR自身的掩码长度。
      */
     public Integer prefixLength;
 
@@ -73,6 +73,7 @@ public class CreateEipsRequest extends TeaModel {
      * 指定公网起始地址开始创建弹性IP。
      * 不指定`cidrId`时，从公网IP池按此地址开始顺序分配（仅支持`prefixLength`为32）；指定`cidrId`时，从该CIDR内按此地址开始分配。
      * `prefixLength`为32时填纯IPv4地址；`prefixLength`小于32时必须同时指定`cidrId`，填带掩码的起始网段（掩码须与`prefixLength`一致，如`88.0.5.64/26`）。
+     * 指定`cidrId`时，该起始地址/网段必须是所选CIDR当前可分配的候选之一。
      */
     public String publicIp;
 
@@ -86,6 +87,7 @@ public class CreateEipsRequest extends TeaModel {
      * 单位为TB。
      * 值要求为0或0.1的倍数。
      * 当网络计费方式为流量计费(`ByTrafficPackage`)时需要指定。
+     * 仅当计费周期为月时支持设置，小时计费不支持。
      */
     public Double flowPackage;
 
@@ -112,8 +114,14 @@ public class CreateEipsRequest extends TeaModel {
     public TagAssociation tags;
 
     /**
+     * 要绑定的实例ID。
+     * 本批次创建的EIP全部绑定到该实例。
+     */
+    public String instanceId;
+
+    /**
      * 要绑定的实例ID集合。
-     * 数量需要与`amount`字段一致。
+     * 数量需要与`amount`字段一致，每个EIP各绑定一个不同实例；与`instanceId`同时传递时以`instanceId`为准。
      */
     public List<String> instanceIds;
 
@@ -121,6 +129,7 @@ public class CreateEipsRequest extends TeaModel {
      * 绑定类型。
      * 当指定`instanceIds`时生效。
      * 默认为普通NAT模式。
+     * `prefixLength`小于32（EIP Block）时只能为`Passthrough`。
      */
     public String bindType;
 
@@ -268,6 +277,14 @@ public class CreateEipsRequest extends TeaModel {
 
     public void setTags(TagAssociation tags) {
         this.tags = tags;
+    }
+
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public void setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
     }
 
     public List<String> getInstanceIds() {

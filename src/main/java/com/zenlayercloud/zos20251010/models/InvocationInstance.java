@@ -10,52 +10,52 @@ public class InvocationInstance extends TeaModel {
 
 
     /**
-     * 执行ID
+     * 执行ID。
      */
     public String instanceId;
 
     /**
-     * 实例的名称
+     * 实例的名称。
      */
     public String instanceName;
 
     /**
-     * 实例是否存在
+     * 实例是否存在。
      */
     public Boolean instanceExist;
 
     /**
-     * 实例执行任务的状态
+     * 实例执行任务的状态。
      */
     public String taskStatus;
 
     /**
-     * 命令进程的退出代码
+     * 命令进程的退出代码。
      */
     public Integer exitCode;
 
     /**
-     * 命令执行失败原因的代号
+     * 命令执行失败原因的代号。
      */
     public String errorCode;
 
     /**
-     * 命令执行的标准输出(stdout)
+     * 命令执行的标准输出(stdout)。
      */
     public String output;
 
     /**
-     * 命令执行的标准错误输出(stderr)
+     * 命令执行的标准错误输出(stderr)。
      */
     public String outputError;
 
     /**
-     * 命令执行的开始时间
+     * 命令执行的开始时间。
      */
     public String execStartTime;
 
     /**
-     * 命令执行的结束时间
+     * 命令执行的结束时间。
      */
     public String execEndTime;
 

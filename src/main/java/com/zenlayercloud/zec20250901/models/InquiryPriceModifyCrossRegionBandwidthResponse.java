@@ -19,6 +19,12 @@ public class InquiryPriceModifyCrossRegionBandwidthResponse extends TeaModel {
      */
     public PriceItem crossRegionBandwidthPrice;
 
+    /**
+     * 变更前各计费项当前生效的价格，字段与上方一一对应，用于对比出哪些计费项发生了调价。
+     * 无订单时为 null。
+     */
+    public CrossRegionBandwidthPreviousPrices previousPrices;
+
     public String getRequestId() {
         return this.requestId;
     }
@@ -33,6 +39,14 @@ public class InquiryPriceModifyCrossRegionBandwidthResponse extends TeaModel {
 
     public void setCrossRegionBandwidthPrice(PriceItem crossRegionBandwidthPrice) {
         this.crossRegionBandwidthPrice = crossRegionBandwidthPrice;
+    }
+
+    public CrossRegionBandwidthPreviousPrices getPreviousPrices() {
+        return this.previousPrices;
+    }
+
+    public void setPreviousPrices(CrossRegionBandwidthPreviousPrices previousPrices) {
+        this.previousPrices = previousPrices;
     }
 
 }

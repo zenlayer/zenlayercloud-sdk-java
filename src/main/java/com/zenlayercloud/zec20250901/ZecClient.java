@@ -46,6 +46,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询节点信息。包括名称、所属的行政区划等。
+         */
+    public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeRegions",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeRegionsResponse());
+    }
+
+        /**
          * 查询可用区售卖的机型信息。
          */
     public DescribeZoneInstanceConfigInfosResponse describeZoneInstanceConfigInfos(DescribeZoneInstanceConfigInfosRequest request) {
@@ -322,7 +334,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询变更实例规格后的价格。
+         * 查询变更实例规格后的价格，同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceModifyInstanceTypeResponse inquiryPriceModifyInstanceType(InquiryPriceModifyInstanceTypeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -610,7 +622,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询云硬盘扩容后的新价格。
+         * 查询云硬盘扩容后的新价格。同时通过 previousPrices 返回扩容前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceResizeDiskResponse inquiryPriceResizeDisk(InquiryPriceResizeDiskRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -910,7 +922,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询变更IPv6网络计费模式后的价格。
+         * 查询变更IPv6网络计费模式后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceChangeIpv6InternetChargeTypeResponse inquiryPriceChangeIpv6InternetChargeType(InquiryPriceChangeIpv6InternetChargeTypeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -970,7 +982,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询调整IPv6带宽后的价格。
+         * 查询调整IPv6带宽后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceModifyIpv6BandwidthResponse inquiryPriceModifyIpv6Bandwidth(InquiryPriceModifyIpv6BandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1462,7 +1474,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询调整EIP带宽后的价格。
+         * 查询调整EIP带宽后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceModifyEipBandwidthResponse inquiryPriceModifyEipBandwidth(InquiryPriceModifyEipBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1474,7 +1486,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询调整EIP流量包后的价格。
+         * 查询调整EIP流量包后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceModifyEipFlowPackageResponse inquiryPriceModifyEipFlowPackage(InquiryPriceModifyEipFlowPackageRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1486,7 +1498,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询变更EIP网络计费模式后的价格。
+         * 查询变更EIP网络计费模式后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceChangeEipInternetChargeTypeResponse inquiryPriceChangeEipInternetChargeType(InquiryPriceChangeEipInternetChargeTypeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1618,7 +1630,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 调整内网跨区域带宽询价。
+         * 调整内网跨区域带宽询价。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceModifyCrossRegionBandwidthResponse inquiryPriceModifyCrossRegionBandwidth(InquiryPriceModifyCrossRegionBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1918,7 +1930,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询调整非托管出口IP带宽后的价格。
+         * 查询调整非托管出口IP带宽后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceModifyUnmanagedEgressIpBandwidthResponse inquiryPriceModifyUnmanagedEgressIpBandwidth(InquiryPriceModifyUnmanagedEgressIpBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1930,7 +1942,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询变更非托管出口IP网络计费模式后的价格。
+         * 查询变更非托管出口IP网络计费模式后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceChangeUnmanagedEgressIpInternetChargeTypeResponse inquiryPriceChangeUnmanagedEgressIpInternetChargeType(InquiryPriceChangeUnmanagedEgressIpInternetChargeTypeRequest request) {
         Map<String, ?> rsp = super.callApi(

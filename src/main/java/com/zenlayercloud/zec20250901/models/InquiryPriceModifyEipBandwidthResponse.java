@@ -39,6 +39,12 @@ public class InquiryPriceModifyEipBandwidthResponse extends TeaModel {
      */
     public PriceItem remoteBandwidthPrice;
 
+    /**
+     * 变更前各计费项当前生效的价格，字段与上方一一对应，用于对比出哪些计费项发生了调价。
+     * 无订单时为 null。
+     */
+    public EipPreviousPrices previousPrices;
+
     public String getRequestId() {
         return this.requestId;
     }
@@ -77,6 +83,14 @@ public class InquiryPriceModifyEipBandwidthResponse extends TeaModel {
 
     public void setRemoteBandwidthPrice(PriceItem remoteBandwidthPrice) {
         this.remoteBandwidthPrice = remoteBandwidthPrice;
+    }
+
+    public EipPreviousPrices getPreviousPrices() {
+        return this.previousPrices;
+    }
+
+    public void setPreviousPrices(EipPreviousPrices previousPrices) {
+        this.previousPrices = previousPrices;
     }
 
 }

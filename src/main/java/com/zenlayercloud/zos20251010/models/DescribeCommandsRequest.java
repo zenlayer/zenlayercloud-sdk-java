@@ -12,40 +12,40 @@ public class DescribeCommandsRequest extends TeaModel {
 
     /**
      * 根据命令ID进行筛选。
-     * 最长不超过100个
+     * 最长不超过100个。
      */
     public List<String> commandIds;
 
     /**
      * 根据命令名称进行筛选。
-     * 该字段支持模糊搜索
+     * 该字段支持模糊搜索。
      */
     public String name;
 
     /**
-     * 根据命令类型进行筛选
+     * 根据命令类型进行筛选。
      */
     public List<String> types;
 
     /**
-     * 返回的分页大小，默认为20，最大为1000
+     * 返回的分页大小，默认为20，最大为1000。
      */
     public Integer pageSize;
 
     /**
-     * 返回的分页数，默认为1
+     * 返回的分页数，默认为1。
      */
     public Integer pageNum;
 
     /**
      * 根据标签键进行搜索。
-     * 最长不得超过20个标签键
+     * 最长不得超过20个标签键。
      */
     public List<String> tagKeys;
 
     /**
      * 根据标签进行搜索。
-     * 最长不得超过20个标签
+     * 最长不得超过20个标签。
      */
     public List<Tag> tags;
 

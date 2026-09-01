@@ -11,7 +11,7 @@ public class BackendServer extends TeaModel {
 
     /**
      * 实例ID。
-     * 如果是zec实例作为后端服务器，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
+     * 如果是zec实例作为后端服务器，可通过调用 ~~DescribeInstances~~ 从返回的 instanceId 字段获取。
      * 解绑时，对于存在实例ID的，该字段必传。
      */
     public String instanceId;

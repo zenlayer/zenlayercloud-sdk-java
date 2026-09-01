@@ -29,7 +29,7 @@ public class CreateListenerRequest extends TeaModel {
     public String protocol;
 
     /**
-     * 监听器转发的方式。
+     * 监听器的调度算法。
      */
     public String scheduler;
 

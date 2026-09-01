@@ -13,12 +13,12 @@ public class DescribeCommandsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 命令列表
+     * 命令列表。
      */
     public List<Command> dataSet;
 
     /**
-     * 匹配条件的命令总数
+     * 匹配条件的命令总数。
      */
     public Integer totalCount;
 

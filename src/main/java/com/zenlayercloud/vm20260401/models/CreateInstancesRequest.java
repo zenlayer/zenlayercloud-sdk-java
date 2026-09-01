@@ -107,11 +107,12 @@ public class CreateInstancesRequest extends TeaModel {
 
     /**
      * 是否开启CPU穿透。
+     * 默认不开放该权限，如需开放请联系Zenlayer Support。
      */
     public Boolean cpuPassThrough;
 
     /**
-     * 初始化脚本。
+     * 初始化脚本，需进行Base64编码后传入，脚本内容大小不超过32KB。
      */
     public String initScript;
 
@@ -143,7 +144,8 @@ public class CreateInstancesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * CIDR 地址块ID。指定该字段将从CIDR 地址块里分配公网IP
+     * CIDR 地址块ID。
+     * 指定该字段将从CIDR 地址块里分配公网IP。
      */
     public String cidrBlockId;
 

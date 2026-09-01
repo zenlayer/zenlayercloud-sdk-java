@@ -24,6 +24,12 @@ public class InquiryPriceChangeIpv6InternetChargeTypeResponse extends TeaModel {
      */
     public PriceItem bandwidthPrice;
 
+    /**
+     * 变更前各计费项当前生效的价格，字段与上方一一对应，用于对比出哪些计费项发生了调价。
+     * 无订单时为 null。
+     */
+    public Ipv6PreviousPrices previousPrices;
+
     public String getRequestId() {
         return this.requestId;
     }
@@ -46,6 +52,14 @@ public class InquiryPriceChangeIpv6InternetChargeTypeResponse extends TeaModel {
 
     public void setBandwidthPrice(PriceItem bandwidthPrice) {
         this.bandwidthPrice = bandwidthPrice;
+    }
+
+    public Ipv6PreviousPrices getPreviousPrices() {
+        return this.previousPrices;
+    }
+
+    public void setPreviousPrices(Ipv6PreviousPrices previousPrices) {
+        this.previousPrices = previousPrices;
     }
 
 }

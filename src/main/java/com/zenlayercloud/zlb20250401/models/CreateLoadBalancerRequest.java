@@ -21,7 +21,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * 子网ID。
-     * 可以通过[DescribeSubnets](../../zec/vpc-network/describesubnets.md)接口获取。
+     * 可以通过调用 ~~DescribeSubnets~~ 获取。
      * `vpcId`和`subnetId`至少指定一个。
      * 该子网需与`regionId`同区域、支持IPv4，同时指定`vpcId`时还须属于该VPC。
      */
@@ -29,7 +29,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * 健康检查内网源IP地址，数量必须为2。
-     * 指定`subnetId`时，不填则从该子网中随机分配2个可用的内网IPv4地址作为健康检查源IP，每个负载均衡实例占用2个地址，该子网剩余可用内网IPv4地址不足时将返回`INVALID_SUBNET_IPV4_INSUFFICIENT`。
+     * 指定`subnetId`时，不填则从该子网中随机分配2个可用的内网IPv4地址作为健康检查源IP，每个负载均衡实例占用2个地址，该子网剩余可用内网IPv4地址不足时将返回`INVALID_SUBNET_IPV4_INSUFFICIENT`，分配结果可调用 ~~DescribeLoadBalancers~~ 查询。
      * 不指定`subnetId`时，此参数无效。
      */
     public List<String> healthCheckPrivateIps;
@@ -41,7 +41,16 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String loadBalancerName;
 
     /**
+     * 指定绑定到新建负载均衡实例的已有弹性公网IP的ID列表。
+     * 支持单IP（掩码`/32`）与网段类型的EIP，可调用 ~~zec:DescribeEips~~ 查询。
+     * 所有EIP需与`regionId`同区域且处于未绑定状态。
+     * 指定此参数时，`internetChargeType`、`networkLineType`、`bandwidthMbps`、`trafficPackageSize`、`bandwidthClusterId`均不生效，系统不再为该实例新建EIP，且`number`只能为1。
+     */
+    public List<String> eipIds;
+
+    /**
      * IP网络计费模式。
+     * 指定`eipIds`时该参数不生效。
      */
     public String internetChargeType;
 
@@ -65,6 +74,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     /**
      * 流量包大小。
      * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`ByTrafficPackage`, 否则该参数不生效。
+     * 仅当计费周期为月时支持设置，小时计费不支持。
      */
     public Double trafficPackageSize;
 
@@ -98,7 +108,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * 负载均衡实例绑定的安全组ID。
-     * 可以通过[DescribeSecurityGroups](../../zec/security-group/describesecuritygroups.md)接口获取。
+     * 可以通过调用 ~~DescribeSecurityGroups~~ 获取。
      */
     public String securityGroupId;
 
@@ -140,6 +150,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public void setLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
+    }
+
+    public List<String> getEipIds() {
+        return this.eipIds;
+    }
+
+    public void setEipIds(List<String> eipIds) {
+        this.eipIds = eipIds;
     }
 
     public String getInternetChargeType() {

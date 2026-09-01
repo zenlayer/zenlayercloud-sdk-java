@@ -11,47 +11,47 @@ public class CommandInvocation extends TeaModel {
 
 
     /**
-     * 执行ID
+     * 执行ID。
      */
     public String invocationId;
 
     /**
-     * 命令的ID
+     * 命令的ID。
      */
     public String commandId;
 
     /**
-     * 命令的名称
+     * 命令的名称。
      */
     public String commandName;
 
     /**
-     * 命令的类型
+     * 命令的类型。
      */
     public String commandType;
 
     /**
-     * 执行的内容
+     * 执行的内容。
      */
     public String content;
 
     /**
-     * 超时时间
+     * 超时时间。
      */
     public Integer timeout;
 
     /**
-     * 命令执行的创建时间
+     * 命令执行的创建时间。
      */
     public String createTime;
 
     /**
-     * 命令的执行的总执行状态
+     * 命令的执行的总执行状态。
      */
     public String invocationStatus;
 
     /**
-     * 命令执行实例列表
+     * 命令执行实例列表。
      */
     public List<InvocationInstance> invocationInstances;
 

@@ -32,9 +32,21 @@ public class InquiryPriceResizeDiskResponse extends TeaModel {
     public PriceItem gpuPrice;
 
     /**
+     * 系统盘扩容时，对应实例的加速卡价格。
+     * 仅当云硬盘为系统盘且实例类型为加速卡时返回。
+     */
+    public PriceItem acceleratorPrice;
+
+    /**
      * 扩容后云硬盘的性能配置信息。
      */
     public DiskPerfItem diskPerf;
+
+    /**
+     * 扩容前各计费项当前生效的价格，字段与上方一一对应，用于对比出哪些计费项发生了调价。
+     * 无订单时为 null。
+     */
+    public ResizeDiskPreviousPrices previousPrices;
 
     public String getRequestId() {
         return this.requestId;
@@ -68,12 +80,28 @@ public class InquiryPriceResizeDiskResponse extends TeaModel {
         this.gpuPrice = gpuPrice;
     }
 
+    public PriceItem getAcceleratorPrice() {
+        return this.acceleratorPrice;
+    }
+
+    public void setAcceleratorPrice(PriceItem acceleratorPrice) {
+        this.acceleratorPrice = acceleratorPrice;
+    }
+
     public DiskPerfItem getDiskPerf() {
         return this.diskPerf;
     }
 
     public void setDiskPerf(DiskPerfItem diskPerf) {
         this.diskPerf = diskPerf;
+    }
+
+    public ResizeDiskPreviousPrices getPreviousPrices() {
+        return this.previousPrices;
+    }
+
+    public void setPreviousPrices(ResizeDiskPreviousPrices previousPrices) {
+        this.previousPrices = previousPrices;
     }
 
 }

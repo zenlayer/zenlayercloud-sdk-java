@@ -34,7 +34,7 @@ public class ZrmClient extends AbstractClient {
     }
 
         /**
-         * 获取某个资源下绑定的所有标签列表。
+         * 标签分页列表。
          */
     public DescribeTagsResponse describeTags(DescribeTagsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -127,6 +127,30 @@ public class ZrmClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeResourceByTagsResponse());
+    }
+
+        /**
+         * 查询当前支持的资源类型，支持按所属服务与资源类型筛选。
+         */
+    public DescribeResourceTypesResponse describeResourceTypes(DescribeResourceTypesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeResourceTypes",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeResourceTypesResponse());
+    }
+
+        /**
+         * 按资源唯一标识或资源名称搜索当前Team下的所有资源。
+         */
+    public DescribeResourcesResponse describeResources(DescribeResourcesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeResources",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeResourcesResponse());
     }
 
 }

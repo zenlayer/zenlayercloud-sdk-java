@@ -10,6 +10,7 @@ public class AddLoadBalancersPrivateIpsRequest extends TeaModel {
     /**
      * 要加入的内网Ip。
      * 单次最多20个。
+     * 需在`subnetId`对应子网的CIDR范围内，且未被其它资源占用。
      */
     public List<String> privateIps;
 
@@ -20,7 +21,8 @@ public class AddLoadBalancersPrivateIpsRequest extends TeaModel {
 
     /**
      * 作为内网ip的subnetId。
-     * 可以通过[DescribeSubnets](../../zec/vpc-network/describesubnets.md)接口获取。
+     * 可以通过调用 ~~DescribeSubnets~~ 获取。
+     * 该子网所属的区域和VPC需与负载均衡实例一致。
      */
     public String subnetId;
 

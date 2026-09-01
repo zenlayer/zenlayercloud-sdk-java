@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 创建命令的响应结果。
+ * 
  */
 public class CreateCommandResponse extends TeaModel {
 
@@ -15,7 +15,7 @@ public class CreateCommandResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 创建的命令ID
+     * 创建的命令ID。
      */
     public String commandId;
 

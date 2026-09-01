@@ -15,20 +15,20 @@ public class CreateSubnetRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * 子网名称，用于展示。
-     * 该参数需以数字或字母开头和结尾，长度为2到63个字符，仅支持字母、数字、连字符(-)和英文句点(.)。
+     * 子网名称。
+     * 范围2到63个字符。
+     * 仅支持输入字母、数字、连字符(-)、下划线(_)、斜杠(/)、英文句点(.)和空格。
+     * 且必须以数字或字母开头和结尾。
      */
     public String name;
 
     /**
-     * 子网所在节点的ID。
-     * 必须是VPC所在节点之一。
+     * 子网所在节点的ID。必须是VPC所在节点之一。
      */
     public String regionId;
 
     /**
-     * 子网的IP堆栈类型。
-     * 可选值：IPv4（仅IPv4）、IPv4_IPv6（IPv4和IPv6双栈）、IPv6（仅IPv6）。
+     * 子网的IP堆栈类型。可选值：IPv4（仅IPv4）、IPv4_IPv6（IPv4和IPv6双栈）、IPv6（仅IPv6）。
      */
     public String stackType;
 

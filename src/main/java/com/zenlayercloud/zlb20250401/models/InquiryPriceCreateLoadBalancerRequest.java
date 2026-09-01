@@ -13,6 +13,7 @@ public class InquiryPriceCreateLoadBalancerRequest extends TeaModel {
 
     /**
      * IP网络计费模式。
+     * **使用已有EIP创建负载均衡时请勿传本参数**——不传表示本次不新建EIP，询价结果中不含EIP相关费用；传了则按新建EIP计价，会多算一份EIP费用。
      */
     public String internetChargeType;
 
@@ -36,6 +37,7 @@ public class InquiryPriceCreateLoadBalancerRequest extends TeaModel {
     /**
      * 流量包大小。
      * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`ByTrafficPackage`, 否则该参数不生效。
+     * 仅当计费周期为月时支持设置，小时计费不支持。
      */
     public Double trafficPackageSize;
 
