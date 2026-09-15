@@ -31,12 +31,26 @@ public class LoadBalancer extends TeaModel {
     public String vpcId;
 
     /**
+     * 负载均衡实例所属的子网 ID。
+     * 健康检查内网 IP 分配在该子网；`ipStackType`为`IPv6`时，公网 IPv6 网段也分配在该子网。
+     * 创建时未指定子网的实例该字段为空。
+     */
+    public String subnetId;
+
+    /**
+     * IP堆栈类型。
+     * 负载均衡实例只支持单栈，即`IPv4`或`IPv6`。
+     */
+    public String ipStackType;
+
+    /**
      * 负载均衡实例的状态。
      */
     public String status;
 
     /**
      * 负载均衡实例的公网 VIP 列表。
+     * `IPv4`类型返回单个地址（如`128.0.0.1`）；`IPv6`类型返回带掩码的网段（如`2001:db8::/96`），而非网段内的单个地址。
      */
     public List<String> publicIpAddress;
 
@@ -112,6 +126,22 @@ public class LoadBalancer extends TeaModel {
 
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
+    }
+
+    public String getSubnetId() {
+        return this.subnetId;
+    }
+
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+    }
+
+    public String getIpStackType() {
+        return this.ipStackType;
+    }
+
+    public void setIpStackType(String ipStackType) {
+        this.ipStackType = ipStackType;
     }
 
     public String getStatus() {

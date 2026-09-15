@@ -22,6 +22,18 @@ public class RemoteIptAvailableRoutingType extends TeaModel {
     public List<String> availableBgpRouteTypes;
 
     /**
+     * 可选的 BGP 档位列表。
+     * 仅 `routingType` 为 BGP 时有值。
+     */
+    public List<String> availableBgpTiers;
+
+    /**
+     * 各 BGP 档位对应的 Zenlayer 侧（对端）AS 号，供客户本地路由器 BGP 邻居配置。
+     * 仅 `routingType` 为 BGP 时有值。
+     */
+    public List<RiptPeerAsn> peerAsns;
+
+    /**
      * 开通方式。
      */
     public String deliveryType;
@@ -46,6 +58,22 @@ public class RemoteIptAvailableRoutingType extends TeaModel {
 
     public void setAvailableBgpRouteTypes(List<String> availableBgpRouteTypes) {
         this.availableBgpRouteTypes = availableBgpRouteTypes;
+    }
+
+    public List<String> getAvailableBgpTiers() {
+        return this.availableBgpTiers;
+    }
+
+    public void setAvailableBgpTiers(List<String> availableBgpTiers) {
+        this.availableBgpTiers = availableBgpTiers;
+    }
+
+    public List<RiptPeerAsn> getPeerAsns() {
+        return this.peerAsns;
+    }
+
+    public void setPeerAsns(List<RiptPeerAsn> peerAsns) {
+        this.peerAsns = peerAsns;
     }
 
     public String getDeliveryType() {

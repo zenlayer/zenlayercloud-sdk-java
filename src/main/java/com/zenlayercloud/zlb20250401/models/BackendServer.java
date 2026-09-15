@@ -18,6 +18,7 @@ public class BackendServer extends TeaModel {
 
     /**
      * 实例上绑定网卡的私网IP地址。
+     * 负载均衡实例的`ipStackType`为`IPv6`时，此处填该实例网卡上的IPv6地址（公网或内网均可），且必须同时指定`instanceId`，不支持只填IP地址。
      */
     public String privateIpAddress;
 

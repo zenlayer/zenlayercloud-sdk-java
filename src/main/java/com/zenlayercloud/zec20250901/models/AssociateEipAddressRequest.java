@@ -12,6 +12,7 @@ public class AssociateEipAddressRequest extends TeaModel {
 
     /**
      * 负载均衡实例的ID。
+     * 仅`ipStackType`为`IPv4`的负载均衡可绑定弹性IP——负载均衡只支持单栈，`IPv6`的公网地址通过`AssignLoadBalancerIpv6`接口分配。
      */
     public String loadBalancerId;
 
@@ -44,8 +45,8 @@ public class AssociateEipAddressRequest extends TeaModel {
 
     /**
      * 绑定类型。
-     * 绑定网卡时生效，默认为普通NAT模式。
-     * 绑定高可用虚拟IP(haVip)时仅支持FullNat（普通NAT）模式，传其他值本次请求的EIP将全部绑定失败。
+     * 当绑定的是网卡时生效。
+     * 默认为普通NAT模式。
      */
     public String bindType;
 

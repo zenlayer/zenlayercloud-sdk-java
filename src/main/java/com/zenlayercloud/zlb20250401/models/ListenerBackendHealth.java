@@ -29,6 +29,7 @@ public class ListenerBackendHealth extends TeaModel {
 
     /**
      * 实例上绑定网卡的私网IP地址。
+     * 负载均衡实例的`ipStackType`为`IPv6`时，返回的是该实例网卡上的IPv6地址。
      */
     public String privateIpAddress;
 

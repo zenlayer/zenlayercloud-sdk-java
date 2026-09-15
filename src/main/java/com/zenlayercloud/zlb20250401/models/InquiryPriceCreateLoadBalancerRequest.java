@@ -12,6 +12,13 @@ public class InquiryPriceCreateLoadBalancerRequest extends TeaModel {
     public String regionId;
 
     /**
+     * IP堆栈类型。
+     * 负载均衡实例只支持单栈，即`IPv4`或`IPv6`，不支持双栈。
+     * 指定为`IPv6`时不支持配置公网网络参数（`internetChargeType`、`networkLineType`、`bandwidthMbps`、`trafficPackageSize`、`bandwidthClusterId`）——IPv6负载均衡的公网地址通过`AssignLoadBalancerIpv6`接口单独分配。
+     */
+    public String ipStackType;
+
+    /**
      * IP网络计费模式。
      * **使用已有EIP创建负载均衡时请勿传本参数**——不传表示本次不新建EIP，询价结果中不含EIP相关费用；传了则按新建EIP计价，会多算一份EIP费用。
      */
@@ -53,6 +60,14 @@ public class InquiryPriceCreateLoadBalancerRequest extends TeaModel {
 
     public void setRegionId(String regionId) {
         this.regionId = regionId;
+    }
+
+    public String getIpStackType() {
+        return this.ipStackType;
+    }
+
+    public void setIpStackType(String ipStackType) {
+        this.ipStackType = ipStackType;
     }
 
     public String getInternetChargeType() {

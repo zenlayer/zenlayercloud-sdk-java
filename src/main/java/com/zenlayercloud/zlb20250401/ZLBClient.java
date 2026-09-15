@@ -82,7 +82,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 修改负载均衡实例的属性。目前仅支持修改负载均衡实例的名称。
+         * 修改负载均衡实例的属性。
          */
     public ModifyLoadBalancersAttributeResponse modifyLoadBalancersAttribute(ModifyLoadBalancersAttributeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -178,6 +178,18 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
+         * 为负载均衡实例分配公网IPv6。
+         */
+    public AssignLoadBalancerIpv6Response assignLoadBalancerIpv6(AssignLoadBalancerIpv6Request request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "AssignLoadBalancerIpv6",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new AssignLoadBalancerIpv6Response());
+    }
+
+        /**
          * 本接口接口可根据负载均衡器 ID、监听器的协议作为过滤条件获取监听器列表。如果不指定任何过滤条件，则返回指定负载均衡实例下的所有监听器。
          */
     public DescribeListenersResponse describeListeners(DescribeListenersRequest request) {
@@ -202,7 +214,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 修改负载均衡监听器的属性，包括监听器的名称、健康检查参数、转发方式等。不支持修改监听器的监听协议。
+         * 修改负载均衡监听器的属性，包括监听器的名称、健康检查参数、转发方式等。
          */
     public ModifyListenerResponse modifyListener(ModifyListenerRequest request) {
         Map<String, ?> rsp = super.callApi(

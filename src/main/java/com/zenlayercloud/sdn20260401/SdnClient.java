@@ -34,6 +34,138 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
+         * 查询数据中心列表
+         */
+    public DescribeDatacentersResponse describeDatacenters(DescribeDatacentersRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeDatacenters",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeDatacentersResponse());
+    }
+
+        /**
+         * 查询边缘网关数据中心列表
+         */
+    public DescribeVirtualEdgeDatacentersResponse describeVirtualEdgeDatacenters(DescribeVirtualEdgeDatacentersRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeVirtualEdgeDatacenters",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeVirtualEdgeDatacentersResponse());
+    }
+
+        /**
+         * 查询边界网关数据中心列表
+         */
+    public DescribeBorderGatewayDatacentersResponse describeBorderGatewayDatacenters(DescribeBorderGatewayDatacentersRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeBorderGatewayDatacenters",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeBorderGatewayDatacentersResponse());
+    }
+
+        /**
+         * 查询 VPC 数据中心列表
+         */
+    public DescribeVPCDatacentersResponse describeVPCDatacenters(DescribeVPCDatacentersRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeVPCDatacenters",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeVPCDatacentersResponse());
+    }
+
+        /**
+         * 查询含服务的数据中心列表
+         */
+    public DescribeDatacentersWithServiceResponse describeDatacentersWithService(DescribeDatacentersWithServiceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeDatacentersWithService",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeDatacentersWithServiceResponse());
+    }
+
+        /**
+         * 云连接带宽询价
+         */
+    public QueryCloudOnrampPriceResponse queryCloudOnrampPrice(QueryCloudOnrampPriceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "QueryCloudOnrampPrice",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new QueryCloudOnrampPriceResponse());
+    }
+
+        /**
+         * 数据中心端口询价
+         */
+    public QueryDataCenterPortPriceResponse queryDataCenterPortPrice(QueryDataCenterPortPriceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "QueryDataCenterPortPrice",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new QueryDataCenterPortPriceResponse());
+    }
+
+        /**
+         * 数据中心端口批量询价
+         */
+    public QueryDataCenterPortPricesResponse queryDataCenterPortPrices(QueryDataCenterPortPricesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "QueryDataCenterPortPrices",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new QueryDataCenterPortPricesResponse());
+    }
+
+        /**
+         * 二层网络专线询价
+         */
+    public QueryPrivateConnectPriceResponse queryPrivateConnectPrice(QueryPrivateConnectPriceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "QueryPrivateConnectPrice",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new QueryPrivateConnectPriceResponse());
+    }
+
+        /**
+         * 二层专线带宽询价
+         */
+    public QueryPrivateConnectBandwidthPriceResponse queryPrivateConnectBandwidthPrice(QueryPrivateConnectBandwidthPriceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "QueryPrivateConnectBandwidthPrice",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new QueryPrivateConnectBandwidthPriceResponse());
+    }
+
+        /**
+         * 三层骨干带宽询价
+         */
+    public QueryCloudRouterBandwidthPriceResponse queryCloudRouterBandwidthPrice(QueryCloudRouterBandwidthPriceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "QueryCloudRouterBandwidthPrice",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new QueryCloudRouterBandwidthPriceResponse());
+    }
+
+        /**
          * 创建端口
          */
     public CreatePortResponse createPort(CreatePortRequest request) {
@@ -139,78 +271,6 @@ public class SdnClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribePortUsableVlanResponse());
-    }
-
-        /**
-         * 云连接带宽询价
-         */
-    public QueryCloudOnrampPriceResponse queryCloudOnrampPrice(QueryCloudOnrampPriceRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "QueryCloudOnrampPrice",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new QueryCloudOnrampPriceResponse());
-    }
-
-        /**
-         * 数据中心端口询价
-         */
-    public QueryDataCenterPortPriceResponse queryDataCenterPortPrice(QueryDataCenterPortPriceRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "QueryDataCenterPortPrice",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new QueryDataCenterPortPriceResponse());
-    }
-
-        /**
-         * 数据中心端口批量询价
-         */
-    public QueryDataCenterPortPricesResponse queryDataCenterPortPrices(QueryDataCenterPortPricesRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "QueryDataCenterPortPrices",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new QueryDataCenterPortPricesResponse());
-    }
-
-        /**
-         * 二层网络专线询价
-         */
-    public QueryPrivateConnectPriceResponse queryPrivateConnectPrice(QueryPrivateConnectPriceRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "QueryPrivateConnectPrice",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new QueryPrivateConnectPriceResponse());
-    }
-
-        /**
-         * 二层专线带宽询价
-         */
-    public QueryPrivateConnectBandwidthPriceResponse queryPrivateConnectBandwidthPrice(QueryPrivateConnectBandwidthPriceRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "QueryPrivateConnectBandwidthPrice",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new QueryPrivateConnectBandwidthPriceResponse());
-    }
-
-        /**
-         * 三层骨干带宽询价
-         */
-    public QueryCloudRouterBandwidthPriceResponse queryCloudRouterBandwidthPrice(QueryCloudRouterBandwidthPriceRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "QueryCloudRouterBandwidthPrice",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new QueryCloudRouterBandwidthPriceResponse());
     }
 
         /**
@@ -430,6 +490,174 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
+         * 查询火山引擎接入点VLAN使用情况。
+         */
+    public DescribeVolcengineVlanUsageResponse describeVolcengineVlanUsage(DescribeVolcengineVlanUsageRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeVolcengineVlanUsage",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeVolcengineVlanUsageResponse());
+    }
+
+        /**
+         * 查询火山引擎接入点区域。
+         */
+    public DescribeVolcengineRegionsResponse describeVolcengineRegions(DescribeVolcengineRegionsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeVolcengineRegions",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeVolcengineRegionsResponse());
+    }
+
+        /**
+         * 查询可加入的数据中心端口
+         */
+    public DescribePrivateConnectAvailablePortsResponse describePrivateConnectAvailablePorts(DescribePrivateConnectAvailablePortsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribePrivateConnectAvailablePorts",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribePrivateConnectAvailablePortsResponse());
+    }
+
+        /**
+         * 获取二层网络专线列表
+         */
+    public DescribePrivateConnectsResponse describePrivateConnects(DescribePrivateConnectsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribePrivateConnects",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribePrivateConnectsResponse());
+    }
+
+        /**
+         * 二层网络专线询价
+         */
+    public InquiryCreatePrivateConnectPriceResponse inquiryCreatePrivateConnectPrice(InquiryCreatePrivateConnectPriceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryCreatePrivateConnectPrice",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryCreatePrivateConnectPriceResponse());
+    }
+
+        /**
+         * 创建二层网络专线
+         */
+    public CreatePrivateConnectResponse createPrivateConnect(CreatePrivateConnectRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreatePrivateConnect",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreatePrivateConnectResponse());
+    }
+
+        /**
+         * 修改二层网络专线属性
+         */
+    public ModifyPrivateConnectsAttributeResponse modifyPrivateConnectsAttribute(ModifyPrivateConnectsAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyPrivateConnectsAttribute",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyPrivateConnectsAttributeResponse());
+    }
+
+        /**
+         * 修改二层网络专线带宽
+         */
+    public ModifyPrivateConnectBandwidthResponse modifyPrivateConnectBandwidth(ModifyPrivateConnectBandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyPrivateConnectBandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyPrivateConnectBandwidthResponse());
+    }
+
+        /**
+         * 恢复二层网络专线
+         */
+    public RenewPrivateConnectResponse renewPrivateConnect(RenewPrivateConnectRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "RenewPrivateConnect",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new RenewPrivateConnectResponse());
+    }
+
+        /**
+         * 删除二层网络专线
+         */
+    public DeletePrivateConnectResponse deletePrivateConnect(DeletePrivateConnectRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeletePrivateConnect",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeletePrivateConnectResponse());
+    }
+
+        /**
+         * 销毁二层网络专线
+         */
+    public DestroyPrivateConnectResponse destroyPrivateConnect(DestroyPrivateConnectRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DestroyPrivateConnect",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DestroyPrivateConnectResponse());
+    }
+
+        /**
+         * 查询二层网络专线流量
+         */
+    public DescribePrivateConnectTrafficResponse describePrivateConnectTraffic(DescribePrivateConnectTrafficRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribePrivateConnectTraffic",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribePrivateConnectTrafficResponse());
+    }
+
+        /**
+         * 查询可用端口
+         */
+    public DescribeCloudRouterAvailablePortsResponse describeCloudRouterAvailablePorts(DescribeCloudRouterAvailablePortsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeCloudRouterAvailablePorts",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeCloudRouterAvailablePortsResponse());
+    }
+
+        /**
+         * 查询可用VPC
+         */
+    public DescribeCloudRouterAvailableVpcsResponse describeCloudRouterAvailableVpcs(DescribeCloudRouterAvailableVpcsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeCloudRouterAvailableVpcs",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeCloudRouterAvailableVpcsResponse());
+    }
+
+        /**
          * 创建三层网络
          */
     public CreateCloudRouterResponse createCloudRouter(CreateCloudRouterRequest request) {
@@ -442,15 +670,15 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 删除连接点
+         * 查询三层网络列表
          */
-    public DeleteCloudRouterEdgePointResponse deleteCloudRouterEdgePoint(DeleteCloudRouterEdgePointRequest request) {
+    public DescribeCloudRoutersResponse describeCloudRouters(DescribeCloudRoutersRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "DeleteCloudRouterEdgePoint",
+            "DescribeCloudRouters",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new DeleteCloudRouterEdgePointResponse());
+        return TeaModel.toModel(rsp, new DescribeCloudRoutersResponse());
     }
 
         /**
@@ -478,39 +706,15 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询可用VPC
+         * 删除连接点
          */
-    public DescribeCloudRouterAvailableVpcsResponse describeCloudRouterAvailableVpcs(DescribeCloudRouterAvailableVpcsRequest request) {
+    public DeleteCloudRouterEdgePointResponse deleteCloudRouterEdgePoint(DeleteCloudRouterEdgePointRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "DescribeCloudRouterAvailableVpcs",
+            "DeleteCloudRouterEdgePoint",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new DescribeCloudRouterAvailableVpcsResponse());
-    }
-
-        /**
-         * 查询连接点流量
-         */
-    public DescribeCloudRouterEdgePointTrafficResponse describeCloudRouterEdgePointTraffic(DescribeCloudRouterEdgePointTrafficRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeCloudRouterEdgePointTraffic",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeCloudRouterEdgePointTrafficResponse());
-    }
-
-        /**
-         * 查询数据中心间流量
-         */
-    public DescribeCloudRouterDCToDCTrafficResponse describeCloudRouterDCToDCTraffic(DescribeCloudRouterDCToDCTrafficRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeCloudRouterDCToDCTraffic",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeCloudRouterDCToDCTrafficResponse());
+        return TeaModel.toModel(rsp, new DeleteCloudRouterEdgePointResponse());
     }
 
         /**
@@ -562,219 +766,27 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 恢复三层网络
+         * 查询连接点流量
          */
-    public RenewCloudRouterResponse renewCloudRouter(RenewCloudRouterRequest request) {
+    public DescribeCloudRouterEdgePointTrafficResponse describeCloudRouterEdgePointTraffic(DescribeCloudRouterEdgePointTrafficRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "RenewCloudRouter",
+            "DescribeCloudRouterEdgePointTraffic",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new RenewCloudRouterResponse());
+        return TeaModel.toModel(rsp, new DescribeCloudRouterEdgePointTrafficResponse());
     }
 
         /**
-         * 查询可用端口
+         * 查询数据中心间流量
          */
-    public DescribeCloudRouterAvailablePortsResponse describeCloudRouterAvailablePorts(DescribeCloudRouterAvailablePortsRequest request) {
+    public DescribeCloudRouterDCToDCTrafficResponse describeCloudRouterDCToDCTraffic(DescribeCloudRouterDCToDCTrafficRequest request) {
         Map<String, ?> rsp = super.callApi(
             request,
-            "DescribeCloudRouterAvailablePorts",
+            "DescribeCloudRouterDCToDCTraffic",
             new RuntimeOptions()
         );
-        return TeaModel.toModel(rsp, new DescribeCloudRouterAvailablePortsResponse());
-    }
-
-        /**
-         * 查询三层网络列表
-         */
-    public DescribeCloudRoutersResponse describeCloudRouters(DescribeCloudRoutersRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeCloudRouters",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeCloudRoutersResponse());
-    }
-
-        /**
-         * 查询数据中心列表
-         */
-    public DescribeDatacentersResponse describeDatacenters(DescribeDatacentersRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeDatacenters",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeDatacentersResponse());
-    }
-
-        /**
-         * 查询边缘网关数据中心列表
-         */
-    public DescribeVirtualEdgeDatacentersResponse describeVirtualEdgeDatacenters(DescribeVirtualEdgeDatacentersRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeVirtualEdgeDatacenters",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeVirtualEdgeDatacentersResponse());
-    }
-
-        /**
-         * 查询边界网关数据中心列表
-         */
-    public DescribeBorderGatewayDatacentersResponse describeBorderGatewayDatacenters(DescribeBorderGatewayDatacentersRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeBorderGatewayDatacenters",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeBorderGatewayDatacentersResponse());
-    }
-
-        /**
-         * 查询 VPC 数据中心列表
-         */
-    public DescribeVPCDatacentersResponse describeVPCDatacenters(DescribeVPCDatacentersRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeVPCDatacenters",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeVPCDatacentersResponse());
-    }
-
-        /**
-         * 查询含服务的数据中心列表
-         */
-    public DescribeDatacentersWithServiceResponse describeDatacentersWithService(DescribeDatacentersWithServiceRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeDatacentersWithService",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeDatacentersWithServiceResponse());
-    }
-
-        /**
-         * 获取二层网络专线列表
-         */
-    public DescribePrivateConnectsResponse describePrivateConnects(DescribePrivateConnectsRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribePrivateConnects",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribePrivateConnectsResponse());
-    }
-
-        /**
-         * 创建二层网络专线
-         */
-    public CreatePrivateConnectResponse createPrivateConnect(CreatePrivateConnectRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "CreatePrivateConnect",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new CreatePrivateConnectResponse());
-    }
-
-        /**
-         * 修改二层网络专线带宽
-         */
-    public ModifyPrivateConnectBandwidthResponse modifyPrivateConnectBandwidth(ModifyPrivateConnectBandwidthRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyPrivateConnectBandwidth",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyPrivateConnectBandwidthResponse());
-    }
-
-        /**
-         * 查询二层网络专线流量
-         */
-    public DescribePrivateConnectTrafficResponse describePrivateConnectTraffic(DescribePrivateConnectTrafficRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribePrivateConnectTraffic",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribePrivateConnectTrafficResponse());
-    }
-
-        /**
-         * 删除二层网络专线
-         */
-    public DeletePrivateConnectResponse deletePrivateConnect(DeletePrivateConnectRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DeletePrivateConnect",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DeletePrivateConnectResponse());
-    }
-
-        /**
-         * 销毁二层网络专线
-         */
-    public DestroyPrivateConnectResponse destroyPrivateConnect(DestroyPrivateConnectRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DestroyPrivateConnect",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DestroyPrivateConnectResponse());
-    }
-
-        /**
-         * 查询可加入的数据中心端口
-         */
-    public DescribePrivateConnectAvailablePortsResponse describePrivateConnectAvailablePorts(DescribePrivateConnectAvailablePortsRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribePrivateConnectAvailablePorts",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribePrivateConnectAvailablePortsResponse());
-    }
-
-        /**
-         * 修改二层网络专线属性
-         */
-    public ModifyPrivateConnectsAttributeResponse modifyPrivateConnectsAttribute(ModifyPrivateConnectsAttributeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyPrivateConnectsAttribute",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyPrivateConnectsAttributeResponse());
-    }
-
-        /**
-         * 恢复二层网络专线
-         */
-    public RenewPrivateConnectResponse renewPrivateConnect(RenewPrivateConnectRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "RenewPrivateConnect",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new RenewPrivateConnectResponse());
-    }
-
-        /**
-         * 二层网络专线询价
-         */
-    public InquiryCreatePrivateConnectPriceResponse inquiryCreatePrivateConnectPrice(InquiryCreatePrivateConnectPriceRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "InquiryCreatePrivateConnectPrice",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new InquiryCreatePrivateConnectPriceResponse());
+        return TeaModel.toModel(rsp, new DescribeCloudRouterDCToDCTrafficResponse());
     }
 
 }

@@ -1,9 +1,9 @@
-package com.zenlayercloud.sdn20260401.models;
+package com.zenlayercloud.zlb20250401.models;
 
 import com.aliyun.tea.TeaModel;
 
 
-public class RenewCloudRouterResponse extends TeaModel {
+public class AssignLoadBalancerIpv6Response extends TeaModel {
 
 
     /**

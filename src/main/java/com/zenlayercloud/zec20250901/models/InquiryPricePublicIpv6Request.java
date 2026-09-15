@@ -27,6 +27,12 @@ public class InquiryPricePublicIpv6Request extends TeaModel {
      */
     public Integer bandwidth;
 
+    /**
+     * 询价的公网IPv6数量。
+     * 价格按数量累计。
+     */
+    public Integer amount;
+
     public String getRegionId() {
         return this.regionId;
     }
@@ -49,6 +55,14 @@ public class InquiryPricePublicIpv6Request extends TeaModel {
 
     public void setBandwidth(Integer bandwidth) {
         this.bandwidth = bandwidth;
+    }
+
+    public Integer getAmount() {
+        return this.amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
     }
 
 }

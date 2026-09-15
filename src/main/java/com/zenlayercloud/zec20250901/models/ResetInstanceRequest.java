@@ -50,12 +50,12 @@ public class ResetInstanceRequest extends TeaModel {
     /**
      * 修改的实例名称。
      * 2～63个字符。
-     * 仅支持输入字母、数字、-和英文句点(.)。
+     * 仅支持输入字母、数字、英文句点(.)、下划线(_)、斜杠(/)和连字符(-)，且必须以字母或数字开头和结尾。
      */
     public String instanceName;
 
     /**
-     * 实例初始化自定义脚本，需使用Base64编码后传入，解码后大小不超过64KB。
+     * 实例初始化自定义脚本，需使用Base64编码后传入，解码后大小需小于64KiB。
      */
     public String userData;
 

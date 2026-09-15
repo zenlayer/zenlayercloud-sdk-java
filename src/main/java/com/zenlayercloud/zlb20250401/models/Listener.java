@@ -20,6 +20,12 @@ public class Listener extends TeaModel {
     public String listenerName;
 
     /**
+     * 所属负载均衡实例的IP堆栈类型。
+     * 监听器本身没有堆栈类型，该值取自其所属的负载均衡实例。
+     */
+    public String ipStackType;
+
+    /**
      * 监听器协议。
      */
     public String protocol;
@@ -87,6 +93,14 @@ public class Listener extends TeaModel {
 
     public void setListenerName(String listenerName) {
         this.listenerName = listenerName;
+    }
+
+    public String getIpStackType() {
+        return this.ipStackType;
+    }
+
+    public void setIpStackType(String ipStackType) {
+        this.ipStackType = ipStackType;
     }
 
     public String getProtocol() {

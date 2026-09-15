@@ -898,66 +898,6 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询指定弹性网卡（vNIC）上已分配的公网 IPv6 地址及其计费、带宽配置信息。
-         */
-    public DescribeNetworkInterfacePublicIPv6Response describeNetworkInterfacePublicIPv6(DescribeNetworkInterfacePublicIPv6Request request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DescribeNetworkInterfacePublicIPv6",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DescribeNetworkInterfacePublicIPv6Response());
-    }
-
-        /**
-         * 公网Ipv6流量包或固定带宽询价。
-         */
-    public InquiryPricePublicIpv6Response inquiryPricePublicIpv6(InquiryPricePublicIpv6Request request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "InquiryPricePublicIpv6",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new InquiryPricePublicIpv6Response());
-    }
-
-        /**
-         * 查询变更IPv6网络计费模式后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
-         */
-    public InquiryPriceChangeIpv6InternetChargeTypeResponse inquiryPriceChangeIpv6InternetChargeType(InquiryPriceChangeIpv6InternetChargeTypeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "InquiryPriceChangeIpv6InternetChargeType",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new InquiryPriceChangeIpv6InternetChargeTypeResponse());
-    }
-
-        /**
-         * 给网卡添加IPv6。
-         */
-    public AssignNetworkInterfaceIpv6Response assignNetworkInterfaceIpv6(AssignNetworkInterfaceIpv6Request request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "AssignNetworkInterfaceIpv6",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new AssignNetworkInterfaceIpv6Response());
-    }
-
-        /**
-         * 删除网卡IPv6。
-         */
-    public UnassignNetworkInterfaceIpv6Response unassignNetworkInterfaceIpv6(UnassignNetworkInterfaceIpv6Request request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "UnassignNetworkInterfaceIpv6",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new UnassignNetworkInterfaceIpv6Response());
-    }
-
-        /**
          * 查询一段时间内的网卡监控指标数据。包含带宽、包量、丢包、错误包等指标。
          */
     public DescribeNetworkInterfaceMonitorDataResponse describeNetworkInterfaceMonitorData(DescribeNetworkInterfaceMonitorDataRequest request) {
@@ -967,54 +907,6 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeNetworkInterfaceMonitorDataResponse());
-    }
-
-        /**
-         * 修改指定公网IPv6的带宽限速模式。
-         */
-    public ModifyNetworkInterfacePublicIPv6BandwidthLimitModeResponse modifyNetworkInterfacePublicIPv6BandwidthLimitMode(ModifyNetworkInterfacePublicIPv6BandwidthLimitModeRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyNetworkInterfacePublicIPv6BandwidthLimitMode",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyNetworkInterfacePublicIPv6BandwidthLimitModeResponse());
-    }
-
-        /**
-         * 查询调整IPv6带宽后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
-         */
-    public InquiryPriceModifyIpv6BandwidthResponse inquiryPriceModifyIpv6Bandwidth(InquiryPriceModifyIpv6BandwidthRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "InquiryPriceModifyIpv6Bandwidth",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new InquiryPriceModifyIpv6BandwidthResponse());
-    }
-
-        /**
-         * 调整公网IPv6的带宽限速。
-         */
-    public ModifyIpv6BandwidthResponse modifyIpv6Bandwidth(ModifyIpv6BandwidthRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyIpv6Bandwidth",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyIpv6BandwidthResponse());
-    }
-
-        /**
-         * 调整公网IPv6流量包。
-         */
-    public ModifyIpv6TrafficPackageResponse modifyIpv6TrafficPackage(ModifyIpv6TrafficPackageRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "ModifyIpv6TrafficPackage",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new ModifyIpv6TrafficPackageResponse());
     }
 
         /**
@@ -2743,6 +2635,210 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new UnassociateHaVipResponse());
+    }
+
+        /**
+         * 给网卡添加IPv6。
+         */
+    public AssignNetworkInterfaceIpv6Response assignNetworkInterfaceIpv6(AssignNetworkInterfaceIpv6Request request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "AssignNetworkInterfaceIpv6",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new AssignNetworkInterfaceIpv6Response());
+    }
+
+        /**
+         * 删除网卡IPv6。
+         */
+    public UnassignNetworkInterfaceIpv6Response unassignNetworkInterfaceIpv6(UnassignNetworkInterfaceIpv6Request request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "UnassignNetworkInterfaceIpv6",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new UnassignNetworkInterfaceIpv6Response());
+    }
+
+        /**
+         * 调整公网IPv6的带宽限速。
+         */
+    public ModifyIpv6BandwidthResponse modifyIpv6Bandwidth(ModifyIpv6BandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyIpv6Bandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyIpv6BandwidthResponse());
+    }
+
+        /**
+         * 调整公网IPv6流量包。
+         */
+    public ModifyIpv6TrafficPackageResponse modifyIpv6TrafficPackage(ModifyIpv6TrafficPackageRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyIpv6TrafficPackage",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyIpv6TrafficPackageResponse());
+    }
+
+        /**
+         * 批量删除公网 IPv6。逐个独立处理，部分失败不影响其余项，失败项通过 failedIpv6Addresses 返回其错误码与错误信息。
+         */
+    public DeleteIpv6AddressesResponse deleteIpv6Addresses(DeleteIpv6AddressesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteIpv6Addresses",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteIpv6AddressesResponse());
+    }
+
+        /**
+         * 公网Ipv6流量包或固定带宽询价。
+         */
+    public InquiryPricePublicIpv6Response inquiryPricePublicIpv6(InquiryPricePublicIpv6Request request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPricePublicIpv6",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPricePublicIpv6Response());
+    }
+
+        /**
+         * 查询调整IPv6带宽后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
+         */
+    public InquiryPriceModifyIpv6BandwidthResponse inquiryPriceModifyIpv6Bandwidth(InquiryPriceModifyIpv6BandwidthRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceModifyIpv6Bandwidth",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceModifyIpv6BandwidthResponse());
+    }
+
+        /**
+         * 查询变更IPv6网络计费模式后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
+         */
+    public InquiryPriceChangeIpv6InternetChargeTypeResponse inquiryPriceChangeIpv6InternetChargeType(InquiryPriceChangeIpv6InternetChargeTypeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryPriceChangeIpv6InternetChargeType",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryPriceChangeIpv6InternetChargeTypeResponse());
+    }
+
+        /**
+         * 修改指定公网IPv6的带宽限速模式。
+         */
+    public ModifyNetworkInterfacePublicIPv6BandwidthLimitModeResponse modifyNetworkInterfacePublicIPv6BandwidthLimitMode(ModifyNetworkInterfacePublicIPv6BandwidthLimitModeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyNetworkInterfacePublicIPv6BandwidthLimitMode",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyNetworkInterfacePublicIPv6BandwidthLimitModeResponse());
+    }
+
+        /**
+         * 指定条件查询已分配的公网 IPv6 信息。用户可以根据 ID、名称、绑定的资源等信息来搜索。
+         */
+    public DescribeIpv6AddressesResponse describeIpv6Addresses(DescribeIpv6AddressesRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeIpv6Addresses",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeIpv6AddressesResponse());
+    }
+
+        /**
+         * 查询指定弹性网卡（vNIC）上已分配的公网 IPv6 地址及其计费、带宽配置信息。
+         */
+    public DescribeNetworkInterfacePublicIPv6Response describeNetworkInterfacePublicIPv6(DescribeNetworkInterfacePublicIPv6Request request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeNetworkInterfacePublicIPv6",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeNetworkInterfacePublicIPv6Response());
+    }
+
+        /**
+         * 返回可作为 BYOIP 起源ASN使用的ASN号列表。
+         */
+    public DescribeUsableByoAsnsResponse describeUsableByoAsns(DescribeUsableByoAsnsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeUsableByoAsns",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeUsableByoAsnsResponse());
+    }
+
+        /**
+         * 确认指定自带ASN在 RIR 上的 export 声明是否已生效。
+         */
+    public VerifyByoAsnResponse verifyByoAsn(VerifyByoAsnRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "VerifyByoAsn",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new VerifyByoAsnResponse());
+    }
+
+        /**
+         * 为指定自带ASN重新签发校验码，旧校验码同时失效。
+         */
+    public RegenerateByoAsnVerifyCodeResponse regenerateByoAsnVerifyCode(RegenerateByoAsnVerifyCodeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "RegenerateByoAsnVerifyCode",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new RegenerateByoAsnVerifyCodeResponse());
+    }
+
+        /**
+         * 提交自带ASN并获取用于归属校验的校验码。
+         */
+    public CreateByoAsnResponse createByoAsn(CreateByoAsnRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateByoAsn",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateByoAsnResponse());
+    }
+
+        /**
+         * 删除指定自带ASN。删除前需确保该ASN下没有已宣告的 BYOIP 段。
+         */
+    public DeleteByoAsnResponse deleteByoAsn(DeleteByoAsnRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteByoAsn",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteByoAsnResponse());
+    }
+
+        /**
+         * 查询一个或多个自带ASN的详细信息。
+         */
+    public DescribeByoAsnsResponse describeByoAsns(DescribeByoAsnsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeByoAsns",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeByoAsnsResponse());
     }
 
 }

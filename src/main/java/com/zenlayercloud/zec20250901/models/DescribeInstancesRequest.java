@@ -27,6 +27,18 @@ public class DescribeInstancesRequest extends TeaModel {
     public String imageId;
 
     /**
+     * 根据实例规格ID精确过滤，如`z2a.cpu.1`。
+     * 取值与返回结果中的`instanceType`一致，可直接回传。
+     */
+    public String instanceType;
+
+    /**
+     * 根据实例的机型系列精确过滤，如`z2a`。
+     * 一个机型系列下包含多种规格，指定后返回该系列下的全部实例。
+     */
+    public String instanceTypeSeries;
+
+    /**
      * 根据实例关联的IPv4过滤。
      * 若指定为网段(CIDR)形式，掩码长度必须在20–31之间。
      */
@@ -97,6 +109,22 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public void setImageId(String imageId) {
         this.imageId = imageId;
+    }
+
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public void setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+    }
+
+    public String getInstanceTypeSeries() {
+        return this.instanceTypeSeries;
+    }
+
+    public void setInstanceTypeSeries(String instanceTypeSeries) {
+        this.instanceTypeSeries = instanceTypeSeries;
     }
 
     public String getIpv4Address() {

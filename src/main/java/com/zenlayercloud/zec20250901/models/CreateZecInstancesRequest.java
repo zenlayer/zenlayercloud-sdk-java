@@ -35,13 +35,13 @@ public class CreateZecInstancesRequest extends TeaModel {
     /**
      * 实例显示名称。
      * 范围2到63个字符。
-     * 仅支持输入字母、数字、-和英文句点(.)。
+     * 仅支持输入字母、数字、英文句点(.)、下划线(_)、斜杠(/)和连字符(-)。
      * 且必须以数字或字母开头和结尾。
      * 购买多台实例，可以指定模式串[begin_number,bits]。
      * begin_number：有序数值的起始值，取值支持[0,99999]，默认值为0。
      * bits：有序数值所占的位数，取值支持[1,6]，默认值为6。
      * 注意模式串中不得有空格。
-     * 购买1台时，例如server-[3,3]实例显示为server003；购买2台时，实例显示名分别为server003，server004。
+     * 购买1台时，例如server-[3,3]实例显示为server-003；购买2台时，实例显示名分别为server-003，server-004。
      * 支持指定多个模式串，如server-[3,3]-[1,1]。
      * 默认值为 instance。
      */
@@ -202,7 +202,8 @@ public class CreateZecInstancesRequest extends TeaModel {
     public TagAssociation tags;
 
     /**
-     * 实例初始化自定义脚本，需使用Base64编码后传入，解码后大小不超过64KB。
+     * 实例初始化自定义脚本。
+     * 需使用Base64编码后传入，解码后大小需小于64KiB。
      */
     public String userData;
 

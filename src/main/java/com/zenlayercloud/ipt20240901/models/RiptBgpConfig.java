@@ -16,6 +16,13 @@ public class RiptBgpConfig extends TeaModel {
     public String routeType;
 
     /**
+     * BGP 档位。
+     * STANDARD-普通 BGP，PREMIUM-优质 BGP。
+     * 不传默认优质档（与拆分前行为一致）。
+     */
+    public String tier;
+
+    /**
      * 宣告出站路由的ASN号。
      */
     public Long asn;
@@ -41,6 +48,14 @@ public class RiptBgpConfig extends TeaModel {
 
     public void setRouteType(String routeType) {
         this.routeType = routeType;
+    }
+
+    public String getTier() {
+        return this.tier;
+    }
+
+    public void setTier(String tier) {
+        this.tier = tier;
     }
 
     public Long getAsn() {

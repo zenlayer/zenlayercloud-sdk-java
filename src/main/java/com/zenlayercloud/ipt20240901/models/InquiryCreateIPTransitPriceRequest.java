@@ -59,6 +59,13 @@ public class InquiryCreateIPTransitPriceRequest extends TeaModel {
     public String bgpRouteType;
 
     /**
+     * BGP 档位。
+     * 不传默认 PREMIUM（优质档）。
+     * `zbgRegionId` 非空（基于 router 的 IP Transit）时不支持 STANDARD。
+     */
+    public String bgpTier;
+
+    /**
      * IP 类型（IPV4 / IPV6）。
      * 默认 IPV4。
      */
@@ -151,6 +158,14 @@ public class InquiryCreateIPTransitPriceRequest extends TeaModel {
 
     public void setBgpRouteType(String bgpRouteType) {
         this.bgpRouteType = bgpRouteType;
+    }
+
+    public String getBgpTier() {
+        return this.bgpTier;
+    }
+
+    public void setBgpTier(String bgpTier) {
+        this.bgpTier = bgpTier;
     }
 
     public String getIpType() {

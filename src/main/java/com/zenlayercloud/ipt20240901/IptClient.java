@@ -34,7 +34,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 查询IP Transit可连接数据中心
+         * 查询IP Transit可连接数据中心。
          */
     public DescribeIPTransitDatacentersResponse describeIPTransitDatacenters(DescribeIPTransitDatacentersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -46,7 +46,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 查询IP Transit可用 ASN
+         * 查询IP Transit可用 ASN。
          */
     public DescribeIPTransitAvailableAsnsResponse describeIPTransitAvailableAsns(DescribeIPTransitAvailableAsnsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -58,7 +58,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 查询IP Transit可用公网地址段
+         * 查询IP Transit可用公网地址段。
          */
     public DescribeIPTransitAvailableCidrBlocksResponse describeIPTransitAvailableCidrBlocks(DescribeIPTransitAvailableCidrBlocksRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -70,7 +70,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * iP Transit创建询价
+         * IP Transit创建询价。
          */
     public InquiryCreateIPTransitPriceResponse inquiryCreateIPTransitPrice(InquiryCreateIPTransitPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -82,7 +82,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 创建IP Transit
+         * 创建IP Transit。
          */
     public CreateIPTransitResponse createIPTransit(CreateIPTransitRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -94,7 +94,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 查询IP Transit列表
+         * 查询IP Transit列表。
          */
     public DescribeIPTransitsResponse describeIPTransits(DescribeIPTransitsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -106,7 +106,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 修改IP Transit带宽
+         * 修改IP Transit带宽。
          */
     public ModifyIPTransitBandwidthResponse modifyIPTransitBandwidth(ModifyIPTransitBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -118,7 +118,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 修改IP Transit属性
+         * 修改IP Transit属性。
          */
     public ModifyIPTransitsAttributeResponse modifyIPTransitsAttribute(ModifyIPTransitsAttributeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -130,7 +130,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 删除IP Transit
+         * 删除IP Transit。
          */
     public DeleteIPTransitResponse deleteIPTransit(DeleteIPTransitRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -142,7 +142,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 查询IP Transit流量
+         * 查询IP Transit流量。
          */
     public DescribeIPTransitTrafficResponse describeIPTransitTraffic(DescribeIPTransitTrafficRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -154,7 +154,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * IP Transit变配询价
+         * IP Transit变配询价。
          */
     public InquiryModifyIPTransitPriceResponse inquiryModifyIPTransitPrice(InquiryModifyIPTransitPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -166,7 +166,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 修改IP Transit配置
+         * 修改IP Transit配置。
          */
     public ModifyIPTransitConfigResponse modifyIPTransitConfig(ModifyIPTransitConfigRequest request) {
         Map<String, ?> rsp = super.callApi(

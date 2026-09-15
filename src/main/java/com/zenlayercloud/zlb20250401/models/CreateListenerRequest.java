@@ -48,6 +48,7 @@ public class CreateListenerRequest extends TeaModel {
      * 工作模式。
      * 若该负载均衡器已有监听器，默认沿用其工作模式；否则根据负载均衡实例所在的区域设定默认值（默认值可能为DNAT、FNAT）。
      * 同一负载均衡器下所有监听器工作模式必须一致，DR模式下监听器不支持设置为全端口（0）。
+     * 负载均衡实例的`ipStackType`为`IPv6`时只支持`DR`，不指定时默认为`DR`。
      */
     public String kind;
 

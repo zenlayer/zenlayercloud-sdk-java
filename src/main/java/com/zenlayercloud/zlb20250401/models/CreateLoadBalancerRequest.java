@@ -23,7 +23,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
      * 子网ID。
      * 可以通过调用 ~~DescribeSubnets~~ 获取。
      * `vpcId`和`subnetId`至少指定一个。
-     * 该子网需与`regionId`同区域、支持IPv4，同时指定`vpcId`时还须属于该VPC。
+     * 该子网需与`regionId`同区域，同时指定`vpcId`时还须属于该VPC。
+     * `ipStackType`为`IPv4`时该子网需支持IPv4，此参数可不指定（由系统在该VPC内选择）；为`IPv6`时该子网需含公网IPv6网段（内网IPv6不满足），且**此参数必填**——公网IPv6 VIP与健康检查段都从该子网分配，不指定将返回`MISSING_PARAMETER`。
      */
     public String subnetId;
 
@@ -31,6 +32,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
      * 健康检查内网源IP地址，数量必须为2。
      * 指定`subnetId`时，不填则从该子网中随机分配2个可用的内网IPv4地址作为健康检查源IP，每个负载均衡实例占用2个地址，该子网剩余可用内网IPv4地址不足时将返回`INVALID_SUBNET_IPV4_INSUFFICIENT`，分配结果可调用 ~~DescribeLoadBalancers~~ 查询。
      * 不指定`subnetId`时，此参数无效。
+     * 仅`ipStackType`为`IPv4`时可指定：为`IPv6`时健康检查段由系统从该子网的公网IPv6网段自动分配，指定本参数将返回`INVALID_PARAMETER_CONFLICT`。
      */
     public List<String> healthCheckPrivateIps;
 
@@ -41,10 +43,18 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String loadBalancerName;
 
     /**
+     * IP堆栈类型。
+     * 负载均衡实例只支持单栈，即`IPv4`或`IPv6`，不支持双栈。
+     * 指定为`IPv6`时不支持配置公网网络参数（`internetChargeType`、`networkLineType`、`bandwidthMbps`、`trafficPackageSize`、`bandwidthClusterId`），也不能指定`eipIds`——EIP均为IPv4，IPv6负载均衡的公网地址通过`AssignLoadBalancerIpv6`接口单独分配。
+     */
+    public String ipStackType;
+
+    /**
      * 指定绑定到新建负载均衡实例的已有弹性公网IP的ID列表。
      * 支持单IP（掩码`/32`）与网段类型的EIP，可调用 ~~zec:DescribeEips~~ 查询。
      * 所有EIP需与`regionId`同区域且处于未绑定状态。
      * 指定此参数时，`internetChargeType`、`networkLineType`、`bandwidthMbps`、`trafficPackageSize`、`bandwidthClusterId`均不生效，系统不再为该实例新建EIP，且`number`只能为1。
+     * 仅`ipStackType`为`IPv4`时可指定。
      */
     public List<String> eipIds;
 
@@ -150,6 +160,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public void setLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
+    }
+
+    public String getIpStackType() {
+        return this.ipStackType;
+    }
+
+    public void setIpStackType(String ipStackType) {
+        this.ipStackType = ipStackType;
     }
 
     public List<String> getEipIds() {

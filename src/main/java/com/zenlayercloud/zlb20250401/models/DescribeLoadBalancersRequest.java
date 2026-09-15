@@ -18,6 +18,12 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * 根据IP堆栈类型过滤。
+     * 负载均衡实例只支持单栈，即`IPv4`或`IPv6`。
+     */
+    public String ipStackType;
+
+    /**
      * 负载均衡实例ID集合。
      * 实例ID数量上限为100个。
      */
@@ -76,6 +82,14 @@ public class DescribeLoadBalancersRequest extends TeaModel {
 
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
+    }
+
+    public String getIpStackType() {
+        return this.ipStackType;
+    }
+
+    public void setIpStackType(String ipStackType) {
+        this.ipStackType = ipStackType;
     }
 
     public List<String> getLoadBalancerIds() {
