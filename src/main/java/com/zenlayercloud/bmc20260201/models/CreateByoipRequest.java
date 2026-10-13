@@ -26,6 +26,12 @@ public class CreateByoipRequest extends TeaModel {
      */
     public String publicVirtualInterfaceId;
 
+    /**
+     * 创建byoip时关联的标签。
+     * 注意：关联`标签键`不能重复。
+     */
+    public TagAssociation tags;
+
     public String getIpType() {
         return this.ipType;
     }
@@ -56,6 +62,14 @@ public class CreateByoipRequest extends TeaModel {
 
     public void setPublicVirtualInterfaceId(String publicVirtualInterfaceId) {
         this.publicVirtualInterfaceId = publicVirtualInterfaceId;
+    }
+
+    public TagAssociation getTags() {
+        return this.tags;
+    }
+
+    public void setTags(TagAssociation tags) {
+        this.tags = tags;
     }
 
 }

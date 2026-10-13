@@ -26,13 +26,13 @@ public class LoadBalancer extends TeaModel {
     public String loadBalancerName;
 
     /**
-     * 负载均衡后端服务器所属的VPC网络 ID。
+     * 负载均衡后端服务器所属的VPC网络ID。
      */
     public String vpcId;
 
     /**
-     * 负载均衡实例所属的子网 ID。
-     * 健康检查内网 IP 分配在该子网；`ipStackType`为`IPv6`时，公网 IPv6 网段也分配在该子网。
+     * 负载均衡实例所属的子网ID。
+     * 健康检查内网IP分配在该子网；`ipStackType`为`IPv6`时，公网IPv6网段也分配在该子网。
      * 创建时未指定子网的实例该字段为空。
      */
     public String subnetId;
@@ -49,13 +49,13 @@ public class LoadBalancer extends TeaModel {
     public String status;
 
     /**
-     * 负载均衡实例的公网 VIP 列表。
+     * 负载均衡实例的公网VIP列表。
      * `IPv4`类型返回单个地址（如`128.0.0.1`）；`IPv6`类型返回带掩码的网段（如`2001:db8::/96`），而非网段内的单个地址。
      */
     public List<String> publicIpAddress;
 
     /**
-     * 负载均衡实例的内网 VIP 列表。
+     * 负载均衡实例的内网VIP列表。
      */
     public List<String> privateIpAddress;
 
@@ -77,7 +77,7 @@ public class LoadBalancer extends TeaModel {
 
     /**
      * 创建时间。
-     * 按照ISO8601标准表示，并且使用UTC时间, 格式为：YYYY-MM-ddTHH:mm:ssZ。
+     * 按照ISO8601标准表示，使用UTC时间，格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String createTime;
 

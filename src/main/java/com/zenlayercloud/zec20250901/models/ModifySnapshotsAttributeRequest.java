@@ -4,11 +4,15 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class ModifySnapshotsAttributeRequest extends TeaModel {
 
 
     /**
      * 快照ID列表。
+     * 可通过调用 ~~DescribeSnapshots~~ 获取。
      */
     public List<String> snapshotIds;
 
@@ -20,7 +24,8 @@ public class ModifySnapshotsAttributeRequest extends TeaModel {
     /**
      * 快照过期时间。
      * 格式为：yyyy-MM-ddTHH:mm:ssZ。
-     * 如果改成永久保留，请设置`isPermanent`=`true`，如果设置该时间必须设置为当前时间后24小时。
+     * 需要永久保留时，请设置`isPermanent`=`true`。
+     * 指定该时间时，必须晚于当前时间24小时。
      */
     public String retentionTime;
 

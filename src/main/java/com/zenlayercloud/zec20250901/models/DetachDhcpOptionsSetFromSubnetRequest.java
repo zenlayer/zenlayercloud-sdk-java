@@ -4,11 +4,15 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DetachDhcpOptionsSetFromSubnetRequest extends TeaModel {
 
 
     /**
-     * 要与 DHCP 选项集取消关联的 Subnet 的 ID集合。
+     * 要与DHCP选项集取消关联的子网ID集合。
+     * 可通过调用 ~~DescribeSubnets~~ 获取。
      */
     public List<String> subnetIds;
 

@@ -11,13 +11,14 @@ public class DescribeDiskCategoryRequest extends TeaModel {
 
     /**
      * 根据可用区ID筛选。
+     * 可通过调用 ~~DescribeZones~~ 获取。
      */
     public String zoneId;
 
     /**
      * 根据云硬盘种类筛选。
-     * Basic NVMe SSD: 经济型 NVMe SSD。
-     * Standard NVMe SSD: 标准型 NVMe SSD。
+     * Basic NVMe SSD: 经济型NVMe SSD。
+     * Standard NVMe SSD: 标准型NVMe SSD。
      * 默认为Standard NVMe SSD。
      */
     public String diskCategory;

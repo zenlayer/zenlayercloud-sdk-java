@@ -17,6 +17,7 @@ public class DescribePoolsRequest extends TeaModel {
 
     /**
      * 根据公网IP池的所在节点ID过滤。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 

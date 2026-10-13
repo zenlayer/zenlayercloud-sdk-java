@@ -11,6 +11,7 @@ public class DescribeEipPriceRequest extends TeaModel {
 
     /**
      * 创建EIP所在的节点ID。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 
@@ -53,6 +54,7 @@ public class DescribeEipPriceRequest extends TeaModel {
     /**
      * 指定CIDR ID，使用CIDR内分配弹性IP。
      * 该字段和`eipV4Type`不能同时指定。
+     * 可通过调用 ~~DescribeCidrs~~ 获取。
      */
     public String cidrId;
 

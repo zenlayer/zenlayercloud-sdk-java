@@ -11,20 +11,19 @@ public class DescribeEipTrafficRequest extends TeaModel {
 
     /**
      * 要查询的弹性IP ID。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public String eipId;
 
     /**
      * 查询开始时间。
-     * 按照ISO8601标准表示，并且使用UTC时间。
-     * 格式为：YYYY-MM-ddTHH:mm:ssZ。
+     * 按照ISO8601标准表示，使用UTC时间，格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String startTime;
 
     /**
      * 查询结束时间。
-     * 按照ISO8601标准表示，并且使用UTC时间。
-     * 格式为：YYYY-MM-ddTHH:mm:ssZ。
+     * 按照ISO8601标准表示，使用UTC时间，格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String endTime;
 
@@ -42,7 +41,7 @@ public class DescribeEipTrafficRequest extends TeaModel {
 
     /**
      * 流量方向。
-     * 仅 PathBasedBandwidthIP 类型有效；不传则返回全部方向数据。
+     * 仅PathBasedBandwidthIP类型有效；不传则返回全部方向数据。
      */
     public String direction;
 

@@ -16,7 +16,7 @@ public class DescribeCrossRegionBandwidthRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 支持售卖内网跨区域带宽的节点ID集合。
+     * 支持售卖VPC跨区域带宽的节点ID集合。
      */
     public List<String> regionIds;
 

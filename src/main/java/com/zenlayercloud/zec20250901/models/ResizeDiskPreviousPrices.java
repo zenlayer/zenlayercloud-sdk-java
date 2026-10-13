@@ -16,13 +16,13 @@ public class ResizeDiskPreviousPrices extends TeaModel {
 
     /**
      * 扩容前对应实例的规格价格。
-     * 仅系统盘扩容且实例类型为 VM 时返回。
+     * 仅系统盘扩容且实例类型为VM时返回。
      */
     public PriceItem specPrice;
 
     /**
-     * 扩容前对应实例的 GPU 价格。
-     * 仅系统盘扩容且实例类型为 GPU 时返回。
+     * 扩容前对应实例的GPU价格。
+     * 仅系统盘扩容且实例类型为GPU时返回。
      */
     public PriceItem gpuPrice;
 

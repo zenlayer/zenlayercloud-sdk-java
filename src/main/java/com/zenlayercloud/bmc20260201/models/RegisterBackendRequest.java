@@ -19,7 +19,7 @@ public class RegisterBackendRequest extends TeaModel {
     public String backendName;
 
     /**
-     * 裸金属实例ID。
+     * 裸金属或虚拟机实例ID。
      */
     public String instanceId;
 

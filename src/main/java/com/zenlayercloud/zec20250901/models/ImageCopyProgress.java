@@ -10,7 +10,7 @@ public class ImageCopyProgress extends TeaModel {
 
 
     /**
-     * 目标区域 ID。
+     * 目标区域ID。
      */
     public String destRegionId;
 

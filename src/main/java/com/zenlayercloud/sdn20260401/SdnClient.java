@@ -34,7 +34,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询数据中心列表
+         * 查询数据中心列表。
          */
     public DescribeDatacentersResponse describeDatacenters(DescribeDatacentersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -46,7 +46,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询边缘网关数据中心列表
+         * 查询边缘网关数据中心列表。
          */
     public DescribeVirtualEdgeDatacentersResponse describeVirtualEdgeDatacenters(DescribeVirtualEdgeDatacentersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -58,7 +58,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询边界网关数据中心列表
+         * 查询边界网关数据中心列表。
          */
     public DescribeBorderGatewayDatacentersResponse describeBorderGatewayDatacenters(DescribeBorderGatewayDatacentersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -70,7 +70,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询 VPC 数据中心列表
+         * 查询 VPC 数据中心列表。
          */
     public DescribeVPCDatacentersResponse describeVPCDatacenters(DescribeVPCDatacentersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -82,7 +82,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询含服务的数据中心列表
+         * 查询含服务的数据中心列表。
          */
     public DescribeDatacentersWithServiceResponse describeDatacentersWithService(DescribeDatacentersWithServiceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -94,7 +94,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 云连接带宽询价
+         * 云连接带宽询价。
          */
     public QueryCloudOnrampPriceResponse queryCloudOnrampPrice(QueryCloudOnrampPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -106,7 +106,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 数据中心端口询价
+         * 数据中心端口询价。
          */
     public QueryDataCenterPortPriceResponse queryDataCenterPortPrice(QueryDataCenterPortPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -118,7 +118,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 数据中心端口批量询价
+         * 数据中心端口批量询价。
          */
     public QueryDataCenterPortPricesResponse queryDataCenterPortPrices(QueryDataCenterPortPricesRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -130,7 +130,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 二层网络专线询价
+         * 二层网络专线询价。
          */
     public QueryPrivateConnectPriceResponse queryPrivateConnectPrice(QueryPrivateConnectPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -142,7 +142,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 二层专线带宽询价
+         * 二层专线带宽询价。
          */
     public QueryPrivateConnectBandwidthPriceResponse queryPrivateConnectBandwidthPrice(QueryPrivateConnectBandwidthPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -154,7 +154,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 三层骨干带宽询价
+         * 三层骨干带宽询价。
          */
     public QueryCloudRouterBandwidthPriceResponse queryCloudRouterBandwidthPrice(QueryCloudRouterBandwidthPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -166,7 +166,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 创建端口
+         * 创建端口。
          */
     public CreatePortResponse createPort(CreatePortRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -178,7 +178,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 销毁端口
+         * 销毁端口。
          */
     public DestroyPortResponse destroyPort(DestroyPortRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -190,7 +190,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 终止端口
+         * 终止端口。
          */
     public TerminatePortResponse terminatePort(TerminatePortRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -202,7 +202,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 恢复端口
+         * 恢复端口。
          */
     public RenewPortResponse renewPort(RenewPortRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -214,7 +214,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 修改端口属性
+         * 修改端口属性。
          */
     public ModifyPortAttributeResponse modifyPortAttribute(ModifyPortAttributeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -226,7 +226,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 获取端口列表
+         * 获取端口列表。
          */
     public DescribePortsResponse describePorts(DescribePortsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -238,7 +238,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 获取数据中心在售端口类型及价格
+         * 获取数据中心在售端口类型及价格。
          */
     public DescribeDataCenterPortPriceResponse describeDataCenterPortPrice(DescribeDataCenterPortPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -250,7 +250,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询端口流量
+         * 查询端口流量。
          */
     public DescribePortTrafficResponse describePortTraffic(DescribePortTrafficRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -262,7 +262,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询端口可用vlan
+         * 查询端口可用vlan。
          */
     public DescribePortUsableVlanResponse describePortUsableVlan(DescribePortUsableVlanRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -274,7 +274,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询Google接入点VLAN使用情况
+         * 查询Google接入点VLAN使用情况。
          */
     public DescribeGoogleVlanUsageResponse describeGoogleVlanUsage(DescribeGoogleVlanUsageRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -286,7 +286,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询腾讯云接入点VLAN使用情况
+         * 查询腾讯云接入点VLAN使用情况。
          */
     public DescribeTencentVlanUsageResponse describeTencentVlanUsage(DescribeTencentVlanUsageRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -298,7 +298,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询阿里云接入点VLAN使用情况
+         * 查询阿里云接入点VLAN使用情况。
          */
     public DescribeAliCloudVlanUsageResponse describeAliCloudVlanUsage(DescribeAliCloudVlanUsageRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -310,7 +310,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询华为云接入点VLAN使用情况
+         * 查询华为云接入点VLAN使用情况。
          */
     public DescribeHuaweiCloudVlanUsageResponse describeHuaweiCloudVlanUsage(DescribeHuaweiCloudVlanUsageRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -322,7 +322,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询Azure接入点VLAN使用情况
+         * 查询Azure接入点VLAN使用情况。
          */
     public DescribeAzureVlanUsageResponse describeAzureVlanUsage(DescribeAzureVlanUsageRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -334,7 +334,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询Oracle接入点VLAN使用情况
+         * 查询Oracle接入点VLAN使用情况。
          */
     public DescribeOracleVlanUsageResponse describeOracleVlanUsage(DescribeOracleVlanUsageRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -346,7 +346,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询BytePlus接入点VLAN使用情况
+         * 查询BytePlus接入点VLAN使用情况。
          */
     public DescribeBytePlusVlanUsageResponse describeBytePlusVlanUsage(DescribeBytePlusVlanUsageRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -358,7 +358,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 修改云连接带宽
+         * 修改云连接带宽。
          */
     public ModifyCloudBandwidthResponse modifyCloudBandwidth(ModifyCloudBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -370,7 +370,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询云连接可用带宽阶梯
+         * 查询云连接可用带宽阶梯。
          */
     public DescribeCloudAvailableBandwidthTiersResponse describeCloudAvailableBandwidthTiers(DescribeCloudAvailableBandwidthTiersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -382,7 +382,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询AWS接入点区域
+         * 查询AWS接入点区域。
          */
     public DescribeAWSRegionsResponse describeAWSRegions(DescribeAWSRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -394,7 +394,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询腾讯云接入点区域
+         * 查询腾讯云接入点区域。
          */
     public DescribeTencentRegionsResponse describeTencentRegions(DescribeTencentRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -406,7 +406,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询Google接入点区域
+         * 查询Google接入点区域。
          */
     public DescribeGoogleRegionsResponse describeGoogleRegions(DescribeGoogleRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -418,7 +418,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询Azure接入点区域
+         * 查询Azure接入点区域。
          */
     public DescribeAzureRegionsResponse describeAzureRegions(DescribeAzureRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -430,7 +430,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询Oracle接入点区域
+         * 查询Oracle接入点区域。
          */
     public DescribeOracleRegionsResponse describeOracleRegions(DescribeOracleRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -442,7 +442,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询阿里云接入点区域
+         * 查询阿里云接入点区域。
          */
     public DescribeAliCloudRegionsResponse describeAliCloudRegions(DescribeAliCloudRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -454,7 +454,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询华为云接入点区域
+         * 查询华为云接入点区域。
          */
     public DescribeHuaweiCloudRegionsResponse describeHuaweiCloudRegions(DescribeHuaweiCloudRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -466,7 +466,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询BytePlus接入点区域
+         * 查询BytePlus接入点区域。
          */
     public DescribeBytePlusRegionsResponse describeBytePlusRegions(DescribeBytePlusRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -478,7 +478,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询AWS接入点VLAN使用情况
+         * 查询AWS接入点VLAN使用情况。
          */
     public DescribeAWSVlanUsageResponse describeAWSVlanUsage(DescribeAWSVlanUsageRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -514,7 +514,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询可加入的数据中心端口
+         * 查询可加入的数据中心端口。
          */
     public DescribePrivateConnectAvailablePortsResponse describePrivateConnectAvailablePorts(DescribePrivateConnectAvailablePortsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -526,7 +526,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 获取二层网络专线列表
+         * 获取二层网络专线列表。
          */
     public DescribePrivateConnectsResponse describePrivateConnects(DescribePrivateConnectsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -538,7 +538,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 二层网络专线询价
+         * 二层网络专线询价。
          */
     public InquiryCreatePrivateConnectPriceResponse inquiryCreatePrivateConnectPrice(InquiryCreatePrivateConnectPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -550,7 +550,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 创建二层网络专线
+         * 创建二层网络专线。
          */
     public CreatePrivateConnectResponse createPrivateConnect(CreatePrivateConnectRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -562,7 +562,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 修改二层网络专线属性
+         * 修改二层网络专线属性。
          */
     public ModifyPrivateConnectsAttributeResponse modifyPrivateConnectsAttribute(ModifyPrivateConnectsAttributeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -574,7 +574,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 修改二层网络专线带宽
+         * 修改二层网络专线带宽。
          */
     public ModifyPrivateConnectBandwidthResponse modifyPrivateConnectBandwidth(ModifyPrivateConnectBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -586,7 +586,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 恢复二层网络专线
+         * 恢复二层网络专线。
          */
     public RenewPrivateConnectResponse renewPrivateConnect(RenewPrivateConnectRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -598,7 +598,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 删除二层网络专线
+         * 删除二层网络专线。
          */
     public DeletePrivateConnectResponse deletePrivateConnect(DeletePrivateConnectRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -610,7 +610,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 销毁二层网络专线
+         * 销毁二层网络专线。
          */
     public DestroyPrivateConnectResponse destroyPrivateConnect(DestroyPrivateConnectRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -622,7 +622,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询二层网络专线流量
+         * 查询二层网络专线流量。
          */
     public DescribePrivateConnectTrafficResponse describePrivateConnectTraffic(DescribePrivateConnectTrafficRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -634,7 +634,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询可用端口
+         * 查询可用端口。
          */
     public DescribeCloudRouterAvailablePortsResponse describeCloudRouterAvailablePorts(DescribeCloudRouterAvailablePortsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -646,7 +646,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询可用VPC
+         * 查询可用VPC。
          */
     public DescribeCloudRouterAvailableVpcsResponse describeCloudRouterAvailableVpcs(DescribeCloudRouterAvailableVpcsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -658,7 +658,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 创建三层网络
+         * 创建三层网络。
          */
     public CreateCloudRouterResponse createCloudRouter(CreateCloudRouterRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -670,7 +670,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询三层网络列表
+         * 查询三层网络列表。
          */
     public DescribeCloudRoutersResponse describeCloudRouters(DescribeCloudRoutersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -682,7 +682,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 新增连接点
+         * 新增连接点。
          */
     public AddCloudRouterEdgePointsResponse addCloudRouterEdgePoints(AddCloudRouterEdgePointsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -694,7 +694,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 修改三层网络属性
+         * 修改三层网络属性。
          */
     public ModifyCloudRoutersAttributeResponse modifyCloudRoutersAttribute(ModifyCloudRoutersAttributeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -706,7 +706,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 删除连接点
+         * 删除连接点。
          */
     public DeleteCloudRouterEdgePointResponse deleteCloudRouterEdgePoint(DeleteCloudRouterEdgePointRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -718,7 +718,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 修改连接点带宽
+         * 修改连接点带宽。
          */
     public ModifyCloudRouterEdgePointBandwidthResponse modifyCloudRouterEdgePointBandwidth(ModifyCloudRouterEdgePointBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -730,7 +730,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 修改连接点配置
+         * 修改连接点配置。
          */
     public ModifyCloudRouterEdgePointResponse modifyCloudRouterEdgePoint(ModifyCloudRouterEdgePointRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -742,7 +742,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 删除三层网络
+         * 删除三层网络。
          */
     public DeleteCloudRouterResponse deleteCloudRouter(DeleteCloudRouterRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -754,7 +754,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 销毁三层网络
+         * 销毁三层网络。
          */
     public DestroyCloudRouterResponse destroyCloudRouter(DestroyCloudRouterRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -766,7 +766,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询连接点流量
+         * 查询连接点流量。
          */
     public DescribeCloudRouterEdgePointTrafficResponse describeCloudRouterEdgePointTraffic(DescribeCloudRouterEdgePointTrafficRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -778,7 +778,7 @@ public class SdnClient extends AbstractClient {
     }
 
         /**
-         * 查询数据中心间流量
+         * 查询数据中心间流量。
          */
     public DescribeCloudRouterDCToDCTrafficResponse describeCloudRouterDCToDCTraffic(DescribeCloudRouterDCToDCTrafficRequest request) {
         Map<String, ?> rsp = super.callApi(

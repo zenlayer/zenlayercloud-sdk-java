@@ -15,7 +15,7 @@ public class InstanceTypePreviousPrices extends TeaModel {
     public PriceItem specPrice;
 
     /**
-     * 变更前 GPU 规格的价格。
+     * 变更前GPU规格的价格。
      */
     public PriceItem gpuPrice;
 

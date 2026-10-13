@@ -4,16 +4,21 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class InquiryPriceCreateInstanceRequest extends TeaModel {
 
 
     /**
      * 可用区ID。
+     * 可通过调用 ~~DescribeZones~~ 获取。
      */
     public String zoneId;
 
     /**
-     * 实例机型。普通实例取值可通过[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)获得；GPU 实例取值可通过[DescribeZoneGpuInstanceConfigInfos](describezonegpuinstanceconfiginfos.md)获得。
+     * 实例机型。
+     * 普通实例取值可通过 ~~DescribeZoneInstanceConfigInfos~~ 获得；GPU实例取值可通过 ~~DescribeZoneGpuInstanceConfigInfos~~ 获得。
      */
     public String instanceType;
 

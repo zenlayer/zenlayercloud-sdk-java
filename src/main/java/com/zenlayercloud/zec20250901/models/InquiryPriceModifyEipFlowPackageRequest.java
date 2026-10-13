@@ -11,6 +11,7 @@ public class InquiryPriceModifyEipFlowPackageRequest extends TeaModel {
 
     /**
      * 要操作的公网弹性IP。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public String eipId;
 

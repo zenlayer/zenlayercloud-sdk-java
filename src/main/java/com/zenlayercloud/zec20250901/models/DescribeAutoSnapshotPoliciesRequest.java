@@ -17,6 +17,7 @@ public class DescribeAutoSnapshotPoliciesRequest extends TeaModel {
 
     /**
      * 根据自动快照策略的可用区ID进行过滤。
+     * 可通过调用 ~~DescribeZones~~ 获取。
      */
     public List<String> zoneIds;
 

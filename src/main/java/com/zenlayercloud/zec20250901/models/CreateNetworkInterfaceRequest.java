@@ -20,13 +20,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     /**
      * 子网的ID。
+     * 可通过调用 ~~DescribeSubnets~~ 获取。
      */
     public String subnetId;
 
     /**
      * 网卡的IP堆栈类型。
-     * 如果不指定，会根据子网堆栈类型决定：如果子网是V4,则网卡为V4，如果子网是V6,则网卡为V6。
-     * 如果网卡要V4&V6，请指定该参数。
+     * 如果不指定，会根据子网堆栈类型决定：子网为IPv4时网卡为IPv4，子网为IPv6时网卡为IPv6。
+     * 需要双栈网卡时，请显式指定该参数。
      */
     public String nicStackType;
 
@@ -39,6 +40,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
      * 指定安全组ID。
      * 目前一个网卡只能关联1个安全组。
      * 如果未指定，会默认用VPC关联下的安全组。
+     * 可通过调用 ~~DescribeSecurityGroups~~ 获取。
      */
     public String securityGroupId;
 
@@ -59,13 +61,13 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
      * 公网IPv6的流量包大小。
      * 单位为TB。
      * 值要求为0或0.1的倍数。
-     * 当子网的堆栈类型包括V6且为公网时，且网络计费方式是流量计费(`ByTrafficPackage`)需要指定。
+     * 当子网堆栈类型包含IPv6且为公网，且网络计费方式为流量计费（`ByTrafficPackage`）时，需要指定该参数。
      */
     public Double packageSize;
 
     /**
      * 公网IPv6所指定的共享带宽包ID。
-     * 当子网的堆栈类型包括V6且为公网时，且网络计费方式是共享带宽包计费(`BandwidthCluster`)需要指定。
+     * 当子网堆栈类型包含IPv6且为公网，且网络计费方式为共享带宽包计费（`BandwidthCluster`）时，需要指定该参数。
      */
     public String clusterId;
 
@@ -79,7 +81,8 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     /**
      * 分配已有的EIP到网卡上。
      * IP数量必须和创建的网卡数量一致。
-     * 请确保创建的网卡`ipStackType` 包含`IPv4`。
+     * 请确保创建的网卡`ipStackType`包含`IPv4`。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public List<String> eipIds;
 

@@ -118,7 +118,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 本接口用户删除一个指定的负载均衡器实例。
+         * 删除一个指定的负载均衡实例。
          */
     public TerminateLoadBalancerResponse terminateLoadBalancer(TerminateLoadBalancerRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -130,7 +130,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 将在回收站的负载均衡实例进行恢复。
+         * 恢复处于回收状态的负载均衡实例，使其重新可用。
          */
     public RestoreLoadBalancerResponse restoreLoadBalancer(RestoreLoadBalancerRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -142,7 +142,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 查询负载均衡监控指标数据，包括并发连接数, 新建连接数以及网络带宽等指标数据。
+         * 查询负载均衡监控指标数据，包括并发连接数、新建连接数以及网络带宽等指标数据。
          */
     public DescribeLoadBalancerMonitorDataResponse describeLoadBalancerMonitorData(DescribeLoadBalancerMonitorDataRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -154,7 +154,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 批量更换负载器均衡的安全组。
+         * 批量更换负载均衡实例绑定的安全组。
          */
     public SetSecurityGroupForLoadBalancersResponse setSecurityGroupForLoadBalancers(SetSecurityGroupForLoadBalancersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -166,7 +166,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 批量解绑负载器均衡的安全组。
+         * 批量解绑负载均衡实例绑定的安全组。
          */
     public UnbindSecurityGroupFromLoadBalancersResponse unbindSecurityGroupFromLoadBalancers(UnbindSecurityGroupFromLoadBalancersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -190,7 +190,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 本接口接口可根据负载均衡器 ID、监听器的协议作为过滤条件获取监听器列表。如果不指定任何过滤条件，则返回指定负载均衡实例下的所有监听器。
+         * 可根据负载均衡器ID、监听器的协议作为过滤条件获取监听器列表。如果不指定任何过滤条件，则返回指定负载均衡实例下的所有监听器。
          */
     public DescribeListenersResponse describeListeners(DescribeListenersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -202,7 +202,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 查询创建负载均衡监听器。
+         * 创建负载均衡的监听器。
          */
     public CreateListenerResponse createListener(CreateListenerRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -226,7 +226,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 查询删除一个负载均衡监听器。
+         * 删除一个负载均衡监听器。
          */
     public DeleteListenerResponse deleteListener(DeleteListenerRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -238,7 +238,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 查询负载均衡实例的绑定的后端服务列表。
+         * 查询负载均衡实例已绑定的后端服务及其转发配置。
          */
     public DescribeBackendsResponse describeBackends(DescribeBackendsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -262,7 +262,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 修改一台或多台绑定在指定监听器上的后端服务的配置，包括权重和和后端服务器转发端口。
+         * 修改一台或多台绑定在指定监听器上的后端服务的配置，包括权重和转发端口。
          */
     public ModifyBackendResponse modifyBackend(ModifyBackendRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -286,7 +286,7 @@ public class ZLBClient extends AbstractClient {
     }
 
         /**
-         * 查询负载均衡实例的绑定的后端服务列表。
+         * 查询负载均衡实例已绑定的后端服务的健康检查状态。
          */
     public DescribeBackendHealthResponse describeBackendHealth(DescribeBackendHealthRequest request) {
         Map<String, ?> rsp = super.callApi(

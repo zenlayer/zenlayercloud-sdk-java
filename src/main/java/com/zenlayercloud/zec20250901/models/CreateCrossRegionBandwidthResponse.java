@@ -20,7 +20,7 @@ public class CreateCrossRegionBandwidthResponse extends TeaModel {
     public String orderNumber;
 
     /**
-     * 内网跨区域带宽唯一ID。
+     * VPC跨区域带宽唯一ID。
      */
     public String crossRegionBandwidthId;
 

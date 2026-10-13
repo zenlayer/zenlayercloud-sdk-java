@@ -47,7 +47,7 @@ public class ZoneInfo extends TeaModel {
     public String cityCode;
 
     /**
-     * 可用区所在的国家，ISO 3166-1 alpha-2 两字母代码（如 US、JP）。
+     * 可用区所在的国家，ISO 3166-1 alpha-2两字母代码（如US、JP）。
      */
     public String countryCode;
 

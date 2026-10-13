@@ -4,6 +4,9 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeBackendsResponse extends TeaModel {
 
 

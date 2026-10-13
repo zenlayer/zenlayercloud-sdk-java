@@ -12,12 +12,13 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     /**
      * 可用区ID。
+     * 可通过调用 ~~DescribeZones~~ 获取。
      */
     public String zoneId;
 
     /**
      * 指定有效的镜像ID。
-     * 可以通过[DescribeImages](../image/describeimages.md)取返回信息中的imageId字段。
+     * 可以通过调用 ~~DescribeImages~~ 从返回的imageId字段获取。
      */
     public String imageId;
 
@@ -28,7 +29,8 @@ public class CreateZecInstancesRequest extends TeaModel {
     public String timeZone;
 
     /**
-     * 实例机型。普通实例取值可通过[DescribeZoneInstanceConfigInfos](describezoneinstanceconfiginfos.md)获得；GPU 实例取值可通过[DescribeZoneGpuInstanceConfigInfos](describezonegpuinstanceconfiginfos.md)获得。
+     * 实例机型。
+     * 普通实例取值可通过 ~~DescribeZoneInstanceConfigInfos~~ 获得；GPU实例取值可通过 ~~DescribeZoneGpuInstanceConfigInfos~~ 获得。
      */
     public String instanceType;
 
@@ -43,21 +45,21 @@ public class CreateZecInstancesRequest extends TeaModel {
      * 注意模式串中不得有空格。
      * 购买1台时，例如server-[3,3]实例显示为server-003；购买2台时，实例显示名分别为server-003，server-004。
      * 支持指定多个模式串，如server-[3,3]-[1,1]。
-     * 默认值为 instance。
+     * 默认值为instance。
      */
     public String instanceName;
 
     /**
      * 实例的密码。
      * 与keyId必须指定其中的一种（Windows和Generic类型的镜像无法指定密码和key）。
-     * 必须包含以下3种格式的字符：大小写字母: [a-zA-Z]数字: 0-9特殊字符: ~!@$^*-_=+。
+     * 必须同时包含以下3类字符：大小写字母（a-z、A-Z）、数字（0-9）、特殊字符（~!@$^*-_=+）。
      */
     public String password;
 
     /**
      * 密钥ID。
      * 与password必须指定其中的一种（Windows和Generic类型的镜像无法指定密码和key）。
-     * 可调用接口DescribeKeyPairs来获得最新的密钥对信息。
+     * 可调用 ~~ccs:DescribeKeyPairs~~ 来获得最新的密钥对信息。
      * 关联密钥后，就可以通过对应的私钥来访问实例；密钥与密码不能同时指定，同时Windows操作系统不支持指定密钥。
      * 示例值：key-YWD2QFOl。
      */
@@ -89,17 +91,26 @@ public class CreateZecInstancesRequest extends TeaModel {
      * 要配置在实例主网卡的安全组ID。
      * 目前只能关联1个安全组。
      * 如果未指定，会默认用VPC关联的安全组。
+     * 可通过调用 ~~DescribeSecurityGroups~~ 获取。
      */
     public String securityGroupId;
 
     /**
+     * 创建实例时加入的置放组ID。
+     * 如不指定则不加入任何置放组。
+     * 置放组须与实例所属可用区一致。
+     */
+    public String placementGroupId;
+
+    /**
      * 子网ID。
+     * 可通过调用 ~~DescribeSubnets~~ 获取。
      */
     public String subnetId;
 
     /**
      * 分配的内网起始IP。
-     * 如果内网IP被使用,则会往后分配。
+     * 如果该IP已被占用，则依次向后分配。
      */
     public String lanIp;
 
@@ -123,7 +134,7 @@ public class CreateZecInstancesRequest extends TeaModel {
      * 流量包订购大小。
      * 单位为TB。
      * 该值必须在`internetChargeType = ByTrafficPackage`时才会生效。
-     * 当`IpStackType` = `IPv4_IPv6`时，流量包大小作用于IPv4。
+     * 当`ipStackType`为`IPv4_IPv6`时，流量包大小作用于IPv4。
      */
     public Double trafficPackageSize;
 
@@ -144,8 +155,9 @@ public class CreateZecInstancesRequest extends TeaModel {
     /**
      * 分配已有的EIP到实例上。
      * IP数量必须和创建的实例数量一致。
-     * 如果指定该字段，则不会新建EIP, 相关字段将无效（`networkLineType`)。
-     * 请确保创建的网卡`ipStackType` 包含`IPv4`。
+     * 如果指定该字段，则不会新建EIP，`networkLineType`等相关字段将不生效。
+     * 请确保创建的网卡`ipStackType`包含`IPv4`。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public List<String> eipIds;
 
@@ -306,6 +318,14 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     public void setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
+    }
+
+    public String getPlacementGroupId() {
+        return this.placementGroupId;
+    }
+
+    public void setPlacementGroupId(String placementGroupId) {
+        this.placementGroupId = placementGroupId;
     }
 
     public String getSubnetId() {

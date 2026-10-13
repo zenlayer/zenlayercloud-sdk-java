@@ -3,11 +3,15 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class DeleteDhcpOptionsSetRequest extends TeaModel {
 
 
     /**
-     * DHCP 选项集ID。
+     * DHCP选项集ID。
+     * 可通过调用 ~~DescribeDhcpOptionsSets~~ 获取。
      */
     public String dhcpOptionsSetId;
 

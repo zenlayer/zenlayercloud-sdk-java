@@ -18,7 +18,7 @@ public class IPTransitDatacenter extends TeaModel {
     /**
      * 该数据中心可用的路由模式列表。
      */
-    public List<RemoteIptAvailableRoutingType> availableRoutingTypes;
+    public List<IPTransitAvailableRoutingType> availableRoutingTypes;
 
     public DatacenterInfo getDataCenter() {
         return this.dataCenter;
@@ -28,11 +28,11 @@ public class IPTransitDatacenter extends TeaModel {
         this.dataCenter = dataCenter;
     }
 
-    public List<RemoteIptAvailableRoutingType> getAvailableRoutingTypes() {
+    public List<IPTransitAvailableRoutingType> getAvailableRoutingTypes() {
         return this.availableRoutingTypes;
     }
 
-    public void setAvailableRoutingTypes(List<RemoteIptAvailableRoutingType> availableRoutingTypes) {
+    public void setAvailableRoutingTypes(List<IPTransitAvailableRoutingType> availableRoutingTypes) {
         this.availableRoutingTypes = availableRoutingTypes;
     }
 

@@ -16,7 +16,7 @@ public class DescribeZoneGpuInstanceConfigInfosResponse extends TeaModel {
     public String requestId;
 
     /**
-     * GPU 规格售卖信息列表。
+     * GPU规格售卖信息列表。
      */
     public List<GpuInstanceTypeQuotaItem> instanceTypeQuotaSet;
 

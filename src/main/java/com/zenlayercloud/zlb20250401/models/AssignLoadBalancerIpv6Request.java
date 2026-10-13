@@ -12,6 +12,7 @@ public class AssignLoadBalancerIpv6Request extends TeaModel {
     /**
      * 要分配公网IPv6的负载均衡实例ID。
      * 仅`ipStackType`为`IPv6`的负载均衡实例可用。
+     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
      */
     public String loadBalancerId;
 

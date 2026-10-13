@@ -3,11 +3,15 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class CreateQosPolicyGroupRequest extends TeaModel {
 
 
     /**
      * QoS策略组所在地域ID。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 

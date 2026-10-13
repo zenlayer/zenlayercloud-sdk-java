@@ -11,6 +11,7 @@ public class ModifyIpv6TrafficPackageRequest extends TeaModel {
 
     /**
      * IPv6唯一标识ID。
+     * 可通过调用 ~~DescribeIpv6Addresses~~ 获取。
      */
     public String ipv6Id;
 

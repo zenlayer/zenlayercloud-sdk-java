@@ -10,7 +10,7 @@ public class DiskInfo extends TeaModel {
 
 
     /**
-     * 云盘的 ID。
+     * 云盘的ID。
      */
     public String diskId;
 
@@ -112,7 +112,7 @@ public class DiskInfo extends TeaModel {
     public Tags tags;
 
     /**
-     * 是否开启 Burst。
+     * 是否开启Burst。
      */
     public Boolean burstingEnabled;
 

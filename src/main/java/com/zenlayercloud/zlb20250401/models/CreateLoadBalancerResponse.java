@@ -4,6 +4,9 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class CreateLoadBalancerResponse extends TeaModel {
 
 
@@ -18,7 +21,7 @@ public class CreateLoadBalancerResponse extends TeaModel {
     public String orderNumber;
 
     /**
-     * 由负载均衡实例唯一 ID 组成的集合。
+     * 由负载均衡实例唯一ID组成的集合。
      */
     public List<String> loadBalancerIds;
 

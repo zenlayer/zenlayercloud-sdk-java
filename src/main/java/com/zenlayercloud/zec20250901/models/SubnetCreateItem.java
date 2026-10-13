@@ -20,6 +20,7 @@ public class SubnetCreateItem extends TeaModel {
     /**
      * 子网所在节点的ID。
      * 必须是VPC所在节点之一。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 
@@ -31,19 +32,20 @@ public class SubnetCreateItem extends TeaModel {
 
     /**
      * 子网的IPv4 CIDR地址段。
-     * 如果指定堆栈类型`stackType` 包含 `IPv4`, 则该字段必填。
+     * 当`stackType`包含`IPv4`时，该字段必填。
      * 指定的CIDR地址段必须属于VPC的CIDR范围内，且不能与VPC下已有子网或本次批量请求中的其他子网CIDR重叠。
      */
     public String cidrBlock;
 
     /**
      * IPv6的类型。
-     * 如果指定堆栈类型`stackType` 包含 `IPv6`, 则该字段必填。
+     * 当`stackType`包含`IPv6`时，该字段必填。
      */
     public String ipv6Type;
 
     /**
-     * 要绑定的DHCP 选项集ID。
+     * 要绑定的DHCP选项集ID。
+     * 可通过调用 ~~DescribeDhcpOptionsSets~~ 获取。
      */
     public String dhcpOptionsSetId;
 

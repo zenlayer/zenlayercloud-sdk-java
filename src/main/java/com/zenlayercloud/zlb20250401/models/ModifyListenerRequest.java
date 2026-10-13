@@ -3,16 +3,21 @@ package com.zenlayercloud.zlb20250401.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class ModifyListenerRequest extends TeaModel {
 
 
     /**
      * 负载均衡器ID。
+     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
      */
     public String loadBalancerId;
 
     /**
      * 负载均衡器的监听器ID。
+     * 可通过调用 ~~DescribeListeners~~ 获取。
      */
     public String listenerId;
 
@@ -24,7 +29,7 @@ public class ModifyListenerRequest extends TeaModel {
 
     /**
      * 负载均衡器的监听器健康检查。
-     * 不传则不会进行修改，如果开启或关闭，请设置`HealthCheck.enabled`字段。
+     * 不传则不会修改，如果开启或关闭，请设置`HealthCheck.enabled`字段。
      */
     public HealthCheck healthCheck;
 
@@ -36,7 +41,7 @@ public class ModifyListenerRequest extends TeaModel {
 
     /**
      * 监听器端口。
-     * 多个端口使用,分隔。
+     * 多个端口使用半角逗号（,）分隔。
      * 当端口是范围时用`-`连接，例如：10000-10005。
      * 端口的取值范围为0～65535，0代表全范围端口。
      * 不指定将不会进行修改。
@@ -47,7 +52,7 @@ public class ModifyListenerRequest extends TeaModel {
 
     /**
      * 工作模式。
-     * 如果修改为`DR`模式，如果后端服务器指定了端口将失效，将跟随监听器的端口。
+     * 修改为`DR`模式后，后端服务器上已指定的端口将失效，一律跟随监听器端口。
      * 修改后必须与该负载均衡器下其他监听器的工作模式保持一致。
      * DR模式下监听器不支持设置为全端口（0）；监听器当前端口已是全端口（0）时，也不允许修改为`DR`。
      * 负载均衡实例的`ipStackType`为`IPv6`时只支持`DR`。

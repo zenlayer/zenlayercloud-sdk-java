@@ -10,13 +10,13 @@ public class InstanceTypeCapacityItem extends TeaModel {
 
 
     /**
-     * CPU 实例类型，如 z2a、z2i、z4a。
+     * CPU实例类型，如z2a、z2i、z4a。
      */
     public String instanceType;
 
     /**
-     * GPU 型号，如 z4a.g.C49。
-     * 仅 GPU 实例返回此字段。
+     * GPU型号，如z4a.g.C49。
+     * 仅GPU实例返回此字段。
      */
     public String gpuSpec;
 

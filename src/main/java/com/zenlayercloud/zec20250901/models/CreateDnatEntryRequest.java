@@ -3,16 +3,21 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class CreateDnatEntryRequest extends TeaModel {
 
 
     /**
-     * NAT网关 ID。
+     * NAT网关ID。
+     * 可通过调用 ~~DescribeNatGateways~~ 获取。
      */
     public String natGatewayId;
 
     /**
      * DNAT规则添加的弹性公网ID。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public String eipId;
 

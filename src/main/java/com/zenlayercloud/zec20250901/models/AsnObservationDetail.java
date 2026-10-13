@@ -5,14 +5,14 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * ASN 观测详情。
+ * ASN观测详情。
  */
 public class AsnObservationDetail extends TeaModel {
 
 
     /**
      * ASN 验证状态。
-     * RIPE 观测到的任一 ASN 与申报 ASN 一致即为 agreed。
+     * RIPE 仅观测到一个 Origin ASN 且与申报 ASN 一致为 agreed；观测到多个 Origin ASN 且其中包含申报 ASN 为 moas。
      */
     public String verificationStatus;
 
@@ -22,7 +22,7 @@ public class AsnObservationDetail extends TeaModel {
     public String observedPrefix;
 
     /**
-     * 主数据源名称，如 RIPE。
+     * 主数据源名称，如RIPE。
      */
     public String primarySource;
 
@@ -32,22 +32,22 @@ public class AsnObservationDetail extends TeaModel {
     public String primaryStatus;
 
     /**
-     * 主数据源观测到的 ASN 列表。
+     * 主数据源观测到的ASN列表。
      */
     public List<Integer> primaryAsns;
 
     /**
-     * 该字段已下线，恒为 null。
+     * 该字段已下线，恒为null。
      */
     public String secondarySource;
 
     /**
-     * 该字段已下线，恒为 null。
+     * 该字段已下线，恒为null。
      */
     public String secondaryStatus;
 
     /**
-     * 该字段已下线，恒为 null。
+     * 该字段已下线，恒为null。
      */
     public List<Integer> secondaryAsns;
 

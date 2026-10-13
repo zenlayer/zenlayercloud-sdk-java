@@ -16,7 +16,7 @@ public class DescribeByoipRegionsResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 支持售卖 BYOIP 的区域列表。
+     * 支持售卖BYOIP的区域列表。
      */
     public List<Region> regions;
 

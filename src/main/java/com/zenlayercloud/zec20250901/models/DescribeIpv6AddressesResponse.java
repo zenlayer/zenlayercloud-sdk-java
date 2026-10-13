@@ -4,6 +4,9 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeIpv6AddressesResponse extends TeaModel {
 
 
@@ -13,12 +16,12 @@ public class DescribeIpv6AddressesResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 满足过滤条件的公网 IPv6 总数。
+     * 满足过滤条件的公网IPv6总数。
      */
     public Integer totalCount;
 
     /**
-     * 返回的公网 IPv6 列表。
+     * 返回的公网IPv6列表。
      */
     public List<Ipv6AddressInfo> dataSet;
 

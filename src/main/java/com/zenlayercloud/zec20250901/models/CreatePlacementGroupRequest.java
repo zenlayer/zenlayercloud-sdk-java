@@ -12,6 +12,7 @@ public class CreatePlacementGroupRequest extends TeaModel {
     /**
      * 置放组所属可用区ID。
      * 置放组的管理范围为zone维度。
+     * 可通过调用 ~~DescribeZones~~ 获取。
      */
     public String zoneId;
 
@@ -24,7 +25,7 @@ public class CreatePlacementGroupRequest extends TeaModel {
 
     /**
      * 置放组的分区数。
-     * 最小是2，默认为3。
+     * 最小是2。
      * 决定置放组最大可关联实例数。
      */
     public Integer partitionNum;

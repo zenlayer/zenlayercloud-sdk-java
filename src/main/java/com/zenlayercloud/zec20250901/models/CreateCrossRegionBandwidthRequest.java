@@ -10,17 +10,20 @@ public class CreateCrossRegionBandwidthRequest extends TeaModel {
 
 
     /**
-     * 创建内网跨区域带宽所在的VPC ID。
+     * 创建VPC跨区域带宽所在的VPC ID。
+     * 可通过调用 ~~DescribeVpcs~~ 获取。
      */
     public String vpcId;
 
     /**
      * 网络计费类型。
+     * 只支持`ByBandwidth`（固定带宽计费）和`ByInstanceBandwidth95`（单实例95计费）两种取值。
+     * 当取值为`ByInstanceBandwidth95`时，突发带宽`bandwidthCap`为必填。
      */
     public String internetChargeType;
 
     /**
-     * 内网跨区域带宽的名称。
+     * VPC跨区域带宽的名称。
      * 范围2到63个字符。
      * 仅支持输入字母、数字、-/_和英文句点(.)。
      * 且必须以数字或字母开头和结尾。

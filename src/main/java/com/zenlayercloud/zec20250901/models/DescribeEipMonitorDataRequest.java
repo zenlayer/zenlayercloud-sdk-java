@@ -11,6 +11,7 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
 
     /**
      * EIP唯一标识ID。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public String eipId;
 
@@ -40,7 +41,7 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
 
     /**
      * 流量方向。
-     * 仅 PathBasedBandwidthIP 类型有效；不传则返回全部方向数据。
+     * 仅PathBasedBandwidthIP类型有效；不传则返回全部方向数据。
      */
     public String direction;
 

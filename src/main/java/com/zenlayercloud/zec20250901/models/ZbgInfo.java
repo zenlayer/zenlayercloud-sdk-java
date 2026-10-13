@@ -41,6 +41,11 @@ public class ZbgInfo extends TeaModel {
     public String interConnectCidr;
 
     /**
+     * 互联IP网段当前是否允许修改，已加入Cloud Router时为false。
+     */
+    public Boolean interconnectCidrEditable;
+
+    /**
      * 创建时间。
      */
     public String createTime;
@@ -126,6 +131,14 @@ public class ZbgInfo extends TeaModel {
 
     public void setInterConnectCidr(String interConnectCidr) {
         this.interConnectCidr = interConnectCidr;
+    }
+
+    public Boolean getInterconnectCidrEditable() {
+        return this.interconnectCidrEditable;
+    }
+
+    public void setInterconnectCidrEditable(Boolean interconnectCidrEditable) {
+        this.interconnectCidrEditable = interconnectCidrEditable;
     }
 
     public String getCreateTime() {

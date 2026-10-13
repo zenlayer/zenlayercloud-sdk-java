@@ -4,38 +4,42 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeIpv6AddressesRequest extends TeaModel {
 
 
     /**
-     * 按照公网 IPv6 的唯一 ID 过滤。
+     * 按照公网IPv6的唯一ID过滤。
      * 最大不能超过100个。
      */
     public List<String> ipv6Ids;
 
     /**
-     * 按照公网 IPv6 所属节点ID过滤。
+     * 按照公网IPv6所属节点ID过滤。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 
     /**
-     * 按照公网 IPv6 的 CIDR 地址段过滤，该字段支持模糊匹配。
+     * 按照公网IPv6的CIDR地址段过滤，该字段支持模糊匹配。
      */
     public String ipv6Cidr;
 
     /**
-     * 按照公网 IPv6 的状态过滤。
+     * 按照公网IPv6的状态过滤。
      */
     public String status;
 
     /**
-     * 按照公网 IPv6 绑定的资源 ID 过滤。
+     * 按照公网IPv6绑定的资源ID过滤。
      * 取值可以是网卡ID或负载均衡ID。
      */
     public List<String> associatedIds;
 
     /**
-     * 按照公网 IPv6 所属的资源组ID过滤。
+     * 按照公网IPv6所属的资源组ID过滤。
      */
     public String resourceGroupId;
 

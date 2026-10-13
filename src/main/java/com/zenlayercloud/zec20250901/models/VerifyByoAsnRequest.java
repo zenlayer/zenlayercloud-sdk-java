@@ -10,7 +10,8 @@ public class VerifyByoAsnRequest extends TeaModel {
 
 
     /**
-     * 待校验的 BYO ASN 的ID。
+     * 待校验的BYO ASN的ID。
+     * 可通过调用 ~~DescribeByoAsns~~ 获取。
      */
     public String byoAsnId;
 

@@ -4,18 +4,18 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 公网弹性IP可以绑定的网卡及内网信息
+ * 公网弹性IP可以绑定的网卡及内网信息。
  */
 public class PrivateIpInfo extends TeaModel {
 
 
     /**
-     * 该 vNIC 上已分配的内网 IPv4 地址，可用于与指定 EIP 进行绑定。
+     * 该vNIC上已分配的内网IPv4地址，可用于与指定EIP进行绑定。
      */
     public String lanIp;
 
     /**
-     * 弹性网卡（vNIC）的 ID。
+     * 弹性网卡（vNIC）的ID。
      */
     public String nicId;
 
@@ -25,14 +25,14 @@ public class PrivateIpInfo extends TeaModel {
     public String nicName;
 
     /**
-     * vNIC 所挂载实例的 ID。
-     * 若 vNIC 未挂载至任何实例，则为 null。
+     * vNIC所挂载实例的ID。
+     * 若vNIC未挂载至任何实例，则为null。
      */
     public String instanceId;
 
     /**
-     * vNIC 所挂载实例的名称。
-     * 若 vNIC 未挂载至任何实例，则为 null。
+     * vNIC所挂载实例的名称。
+     * 若vNIC未挂载至任何实例，则为null。
      */
     public String instanceName;
 

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * IP Transit可用路由模式信息。
  */
-public class RemoteIptAvailableRoutingType extends TeaModel {
+public class IPTransitAvailableRoutingType extends TeaModel {
 
 
     /**

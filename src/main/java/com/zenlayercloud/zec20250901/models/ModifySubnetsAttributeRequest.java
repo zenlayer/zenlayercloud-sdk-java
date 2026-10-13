@@ -12,6 +12,7 @@ public class ModifySubnetsAttributeRequest extends TeaModel {
 
     /**
      * 需要修改的子网ID列表。
+     * 可通过调用 ~~DescribeSubnets~~ 获取。
      */
     public List<String> subnetIds;
 

@@ -11,6 +11,7 @@ public class DescribeEipInternetChargeTypesRequest extends TeaModel {
 
     /**
      * 查询的节点ID。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 

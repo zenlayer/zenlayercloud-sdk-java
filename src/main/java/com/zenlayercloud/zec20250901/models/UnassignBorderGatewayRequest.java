@@ -11,6 +11,7 @@ public class UnassignBorderGatewayRequest extends TeaModel {
 
     /**
      * 要解绑NAT的边界网关ID。
+     * 可通过调用 ~~DescribeBorderGateways~~ 获取。
      */
     public String zbgId;
 

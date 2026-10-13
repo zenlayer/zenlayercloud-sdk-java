@@ -11,13 +11,13 @@ public class DataDisk extends TeaModel {
 
     /**
      * 数据盘ID。
-     * 该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`CreateInstances`等写接口的入参。
+     * 该参数仅作为 ~~DescribeInstances~~ 等查询类接口的返回参数，不可用于 ~~CreateZecInstances~~ 等写接口的入参。
      */
     public String diskId;
 
     /**
      * 云盘的名称。
-     * 该参数目前仅用于DescribeInstances等查询类接口的返回参数。
+     * 该参数仅作为 ~~DescribeInstances~~ 等查询类接口的返回参数。
      */
     public String diskName;
 
@@ -29,15 +29,14 @@ public class DataDisk extends TeaModel {
 
     /**
      * 数据盘数量。
-     * 该参数仅用于`CreateInstances`,`InquiryPriceCreateInstance`等接口的入参使用。
+     * 该参数仅用于 ~~CreateZecInstances~~、~~InquiryPriceCreateInstance~~ 等接口的入参。
      */
     public Integer diskAmount;
 
     /**
-     * 是否可拆卸。
-     * 该参数仅用于查询的回参，不用于入参。
-     * true代表不会随着实例删除而删除。
-     * false代表会随着实例删除而删除。
+     * 云硬盘是否可卸载。
+     * 该参数仅作为查询类接口的返回参数，不用于入参。
+     * `true`：不随实例删除而删除；`false`：随实例删除而删除。
      */
     public Boolean portable;
 
@@ -48,9 +47,8 @@ public class DataDisk extends TeaModel {
 
     /**
      * 云硬盘种类。
-     * Basic NVMe SSD: 经济型 NVMe SSD。
-     * Standard NVMe SSD: 标准型 NVMe SSD。
-     * 默认为Standard NVMe SSD。
+     * Basic NVMe SSD: 经济型NVMe SSD。
+     * Standard NVMe SSD: 标准型NVMe SSD。
      */
     public String diskCategory;
 

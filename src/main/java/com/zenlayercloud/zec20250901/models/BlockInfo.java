@@ -4,13 +4,13 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * ip封堵信息详情
+ * ip封堵信息详情。
  */
 public class BlockInfo extends TeaModel {
 
 
     /**
-     * ip。
+     * 被封堵的IP地址。
      */
     public String ip;
 

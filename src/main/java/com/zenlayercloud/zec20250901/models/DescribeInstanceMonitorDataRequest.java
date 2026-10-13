@@ -11,6 +11,7 @@ public class DescribeInstanceMonitorDataRequest extends TeaModel {
 
     /**
      * 实例唯一标识ID。
+     * 可通过调用 ~~DescribeInstances~~ 获取。
      */
     public String instanceId;
 

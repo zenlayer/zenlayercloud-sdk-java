@@ -140,6 +140,11 @@ public class CreateCloudRouterEdgePoint extends TeaModel {
      */
     public List<IPSecStaticRoute> ipSecStaticRoutes;
 
+    /**
+     * 市场活动相关信息，含是否使用 POC 代金券。
+     */
+    public MarketingInfo marketingInfo;
+
     public String getEdgePointName() {
         return this.edgePointName;
     }
@@ -330,6 +335,14 @@ public class CreateCloudRouterEdgePoint extends TeaModel {
 
     public void setIpSecStaticRoutes(List<IPSecStaticRoute> ipSecStaticRoutes) {
         this.ipSecStaticRoutes = ipSecStaticRoutes;
+    }
+
+    public MarketingInfo getMarketingInfo() {
+        return this.marketingInfo;
+    }
+
+    public void setMarketingInfo(MarketingInfo marketingInfo) {
+        this.marketingInfo = marketingInfo;
     }
 
 }

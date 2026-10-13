@@ -36,7 +36,7 @@ public class NatGateway extends TeaModel {
     public String name;
 
     /**
-     * NAT网关所属的Subnet子网ID集合。
+     * NAT网关关联的子网ID集合。
      */
     public List<String> subnetIds;
 
@@ -77,13 +77,13 @@ public class NatGateway extends TeaModel {
 
     /**
      * 创建时间。
-     * 按照ISO8601标准表示，并且使用UTC时间, 格式为：YYYY-MM-ddTHH:mm:ssZ。
+     * 按照ISO8601标准表示，使用UTC时间，格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String createTime;
 
     /**
      * 到期时间。
-     * 按照ISO8601标准表示，并且使用UTC时间, 格式为：YYYY-MM-ddTHH:mm:ssZ。
+     * 按照ISO8601标准表示，使用UTC时间，格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String expiredTime;
 

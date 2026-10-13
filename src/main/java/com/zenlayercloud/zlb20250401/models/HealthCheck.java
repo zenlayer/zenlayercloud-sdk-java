@@ -16,26 +16,26 @@ public class HealthCheck extends TeaModel {
 
     /**
      * 健康检查使用的协议。
-     * 当开启健康检查时， 该字段必填。
+     * 当开启健康检查时，该字段必填。
      */
     public String checkType;
 
     /**
      * 健康检查端口。
-     * 默认为后端服务的端口，除非您希望指定特定端口，否则建议留空。
-     * 当监听器端口为全端口（0）或范围端口且健康检查类型为`TCP`或`HTTP_GET`时，必须指定该端口。
+     * 不指定时使用后端服务的端口，一般无需指定。
+     * 当监听器端口为全端口（0）或范围端口，且健康检查类型为`TCP`或`HTTP_GET`时，该字段必填。
      */
     public Integer checkPort;
 
     /**
      * 健康检查的检查间隔时间。
-     * 单位:秒。
+     * 单位：秒。
      */
     public Integer checkDelayLoop;
 
     /**
      * 健康检查的连接超时时间。
-     * 单位:秒。
+     * 单位：秒。
      */
     public Integer checkConnTimeout;
 
@@ -46,7 +46,7 @@ public class HealthCheck extends TeaModel {
 
     /**
      * 健康检查重试的间隔时间。
-     * 单位:秒。
+     * 单位：秒。
      */
     public Integer checkDelayTry;
 

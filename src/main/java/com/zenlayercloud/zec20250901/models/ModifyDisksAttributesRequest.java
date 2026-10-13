@@ -12,6 +12,7 @@ public class ModifyDisksAttributesRequest extends TeaModel {
 
     /**
      * 需要修改的云盘ID列表。
+     * 可通过调用 ~~DescribeDisks~~ 获取。
      */
     public List<String> diskIds;
 

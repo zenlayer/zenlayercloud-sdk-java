@@ -11,7 +11,7 @@ public class VmRegionCapacityItem extends TeaModel {
 
 
     /**
-     * 节点 ID，格式如 asia-north-1。
+     * 节点ID，格式如asia-north-1。
      */
     public String regionId;
 
@@ -22,7 +22,7 @@ public class VmRegionCapacityItem extends TeaModel {
     public String capacity;
 
     /**
-     * 各实例类型的库存容量明细，不含库存为 0 的条目。
+     * 各实例类型的库存容量明细，不含库存为0的条目。
      */
     public List<InstanceTypeCapacityItem> instanceTypes;
 

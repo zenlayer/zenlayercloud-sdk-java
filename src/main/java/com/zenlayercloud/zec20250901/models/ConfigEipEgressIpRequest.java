@@ -11,6 +11,7 @@ public class ConfigEipEgressIpRequest extends TeaModel {
 
     /**
      * 要作为出口的公网弹性IP。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public String eipId;
 

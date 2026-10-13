@@ -11,6 +11,7 @@ public class ModifyPlacementGroupAttributesRequest extends TeaModel {
 
     /**
      * 置放组ID。
+     * 可通过调用 ~~DescribePlacementGroups~~ 获取。
      */
     public String placementGroupId;
 

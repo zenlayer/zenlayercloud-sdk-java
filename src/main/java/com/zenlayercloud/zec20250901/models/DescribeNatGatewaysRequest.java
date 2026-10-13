@@ -4,16 +4,21 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeNatGatewaysRequest extends TeaModel {
 
 
     /**
      * 节点ID。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 
     /**
-     * 根据NAT网关所属的VPC网络 ID过滤。
+     * 根据NAT网关所属的VPC网络ID过滤。
+     * 可通过调用 ~~DescribeVpcs~~ 获取。
      */
     public String vpcId;
 
@@ -35,6 +40,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
 
     /**
      * 根据NAT网关所属的安全组ID过滤。
+     * 可通过调用 ~~DescribeSecurityGroups~~ 获取。
      */
     public String securityGroupId;
 

@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 基于DB-IP/ipdata/... 第三方IP数据库服务商查询到的 IP 地理信息结果。
+ * 基于DB-IP/ipdata/... 第三方IP数据库服务商查询到的IP地理信息结果。
  */
 public class EipGeoInfo extends TeaModel {
 

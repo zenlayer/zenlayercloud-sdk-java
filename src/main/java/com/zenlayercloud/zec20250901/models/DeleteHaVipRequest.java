@@ -11,6 +11,7 @@ public class DeleteHaVipRequest extends TeaModel {
 
     /**
      * 高可用虚拟IP的ID。
+     * 可通过调用 ~~DescribeHaVips~~ 获取。
      */
     public String haVipId;
 

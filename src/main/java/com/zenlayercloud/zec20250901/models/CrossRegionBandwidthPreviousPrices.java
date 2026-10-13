@@ -10,7 +10,7 @@ public class CrossRegionBandwidthPreviousPrices extends TeaModel {
 
 
     /**
-     * 变更前内网跨区域带宽的价格。
+     * 变更前VPC跨区域带宽的价格。
      */
     public PriceItem crossRegionBandwidthPrice;
 

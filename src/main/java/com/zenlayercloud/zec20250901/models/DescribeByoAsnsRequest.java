@@ -11,7 +11,7 @@ public class DescribeByoAsnsRequest extends TeaModel {
 
 
     /**
-     * BYO ASN 的ID列表。
+     * BYO ASN的ID列表。
      * 最多支持100个ID查询。
      */
     public List<String> byoAsnIds;

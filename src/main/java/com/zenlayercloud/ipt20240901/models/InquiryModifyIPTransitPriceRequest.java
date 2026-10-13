@@ -51,6 +51,12 @@ public class InquiryModifyIPTransitPriceRequest extends TeaModel {
      */
     public String ipNetworkType;
 
+    /**
+     * 市场活动相关信息，含是否使用 POC 代金券。
+     * type=ADD_CIDR_BLOCK 时有效；询价口径需与实际下单一致。
+     */
+    public MarketingInfo marketingInfo;
+
     public String getIptId() {
         return this.iptId;
     }
@@ -105,6 +111,14 @@ public class InquiryModifyIPTransitPriceRequest extends TeaModel {
 
     public void setIpNetworkType(String ipNetworkType) {
         this.ipNetworkType = ipNetworkType;
+    }
+
+    public MarketingInfo getMarketingInfo() {
+        return this.marketingInfo;
+    }
+
+    public void setMarketingInfo(MarketingInfo marketingInfo) {
+        this.marketingInfo = marketingInfo;
     }
 
 }

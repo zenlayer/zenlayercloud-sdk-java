@@ -4,25 +4,25 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 描述 GPU 规格在某可用区的售卖信息。
+ * 描述GPU规格在某可用区的售卖信息。
  */
 public class GpuInstanceTypeQuotaItem extends TeaModel {
 
 
     /**
-     * 可用区 ID。
+     * 可用区ID。
      */
     public String zoneId;
 
     /**
-     * GPU 规格 ID。
+     * GPU规格ID。
      * 例如：z3a.g.C49.c8m32.1。
-     * 变更规格时将此值传入 ModifyInstanceType 的 instanceType 参数。
+     * 变更规格时将此值传入 ~~ModifyInstanceType~~ 的instanceType参数。
      */
     public String instanceType;
 
     /**
-     * CPU 核数。
+     * CPU核数。
      * 单位：核。
      */
     public Integer cpuCount;
@@ -34,12 +34,12 @@ public class GpuInstanceTypeQuotaItem extends TeaModel {
     public Integer memory;
 
     /**
-     * GPU 卡数。
+     * GPU卡数。
      */
     public Integer gpuAmount;
 
     /**
-     * GPU 规格描述。
+     * GPU规格描述。
      */
     public String instanceTypeName;
 
@@ -56,7 +56,9 @@ public class GpuInstanceTypeQuotaItem extends TeaModel {
     public Long pps;
 
     /**
-     * GPU 系列库存档位。
+     * GPU系列库存档位。
+     * 表示该GPU系列在对应可用区所在区域的库存量级：`LIMITED`（小于1000）、`NORMAL`（1000–2000）、`SUFFICIENT`（2000–5000）、`ABUNDANT`（不小于5000）。
+     * GPU实例数量远低于上述阈值，实际可用时通常为`LIMITED`。
      */
     public String inventoryCapacity;
 

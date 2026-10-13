@@ -42,7 +42,7 @@ public class RouteInfo extends TeaModel {
 
     /**
      * 源IP地址。
-     * 当`路由类型`是`RouteTypePolicy(策略路由)`时可取值。
+     * 仅当路由类型为`RouteTypePolicy`（策略路由）时有值。
      */
     public String sourceCidrBlock;
 

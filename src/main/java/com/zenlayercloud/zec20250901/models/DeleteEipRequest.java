@@ -11,6 +11,7 @@ public class DeleteEipRequest extends TeaModel {
 
     /**
      * 要删除弹性公网IP的ID。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public String eipId;
 

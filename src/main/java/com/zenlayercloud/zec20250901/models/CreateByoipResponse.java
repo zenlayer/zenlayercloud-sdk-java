@@ -16,17 +16,17 @@ public class CreateByoipResponse extends TeaModel {
     public String requestId;
 
     /**
-     * RPKI 校验失败的 BYOIP 列表。
+     * RPKI校验失败的BYOIP列表。
      */
     public List<String> rpkiFailedList;
 
     /**
-     * IRR 校验失败的 BYOIP 列表。
+     * IRR校验失败的BYOIP列表。
      */
     public List<String> irrFailedList;
 
     /**
-     * 创建成功的 BYOIP ID 列表。
+     * 创建成功的BYOIP ID列表。
      */
     public List<String> byoipIds;
 

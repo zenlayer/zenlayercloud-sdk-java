@@ -101,6 +101,13 @@ public class PortInfo extends TeaModel {
      */
     public Tags tags;
 
+    /**
+     * 数据中心端口归属的 LAG。
+     * 端口未加入 LAG 时为空。
+     * 端口加入 LAG 后只能使用该 LAG 创建业务，不能再单独使用 LAG 的成员口创建业务。
+     */
+    public LagInfo lag;
+
     public String getPortId() {
         return this.portId;
     }
@@ -243,6 +250,14 @@ public class PortInfo extends TeaModel {
 
     public void setTags(Tags tags) {
         this.tags = tags;
+    }
+
+    public LagInfo getLag() {
+        return this.lag;
+    }
+
+    public void setLag(LagInfo lag) {
+        this.lag = lag;
     }
 
 }

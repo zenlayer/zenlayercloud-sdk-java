@@ -4,11 +4,15 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DeleteSnapshotsRequest extends TeaModel {
 
 
     /**
      * 快照ID列表。
+     * 可通过调用 ~~DescribeSnapshots~~ 获取。
      */
     public List<String> snapshotIds;
 

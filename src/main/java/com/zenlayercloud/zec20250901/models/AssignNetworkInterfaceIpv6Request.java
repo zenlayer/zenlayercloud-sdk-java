@@ -11,6 +11,7 @@ public class AssignNetworkInterfaceIpv6Request extends TeaModel {
 
     /**
      * 要添加IPv6的网卡ID。
+     * 可通过调用 ~~DescribeNetworkInterfaces~~ 获取。
      */
     public String nicId;
 
@@ -31,19 +32,19 @@ public class AssignNetworkInterfaceIpv6Request extends TeaModel {
      * 公网IPv6的流量包大小。
      * 单位为TB。
      * 值要求为0或0.1的倍数。
-     * 当子网的堆栈类型包括V6且为公网时，且网络计费方式是流量计费(`ByTrafficPackage`)需要指定。
+     * 当子网堆栈类型包含IPv6且为公网，且网络计费方式为流量计费（`ByTrafficPackage`）时，需要指定该参数。
      */
     public Double packageSize;
 
     /**
      * 公网IPv6所指定的共享带宽包ID。
-     * 当子网的堆栈类型包括V6且为公网时，且网络计费方式是共享带宽包计费(`BandwidthCluster`)需要指定。
+     * 当子网堆栈类型包含IPv6且为公网，且网络计费方式为共享带宽包计费（`BandwidthCluster`）时，需要指定该参数。
      */
     public String clusterId;
 
     /**
      * 限速模式。
-     * 严格模式(`STRICT`) 必须同时指定 `bandwidth`。
+     * 严格模式(`STRICT`)必须同时指定`bandwidth`。
      */
     public String rateLimitMode;
 

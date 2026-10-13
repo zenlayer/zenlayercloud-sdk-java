@@ -11,6 +11,7 @@ public class DeleteVpcRequest extends TeaModel {
 
     /**
      * 要删除的VPC ID。
+     * 可通过调用 ~~DescribeVpcs~~ 获取。
      */
     public String vpcId;
 

@@ -12,6 +12,7 @@ public class ModifyDisksResourceGroupRequest extends TeaModel {
 
     /**
      * 要迁移资源组的云盘ID列表。
+     * 可通过调用 ~~DescribeDisks~~ 获取。
      */
     public List<String> diskIds;
 

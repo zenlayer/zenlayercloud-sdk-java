@@ -31,7 +31,7 @@ public class InstanceInfo extends TeaModel {
     public String instanceType;
 
     /**
-     * CPU 核数。
+     * CPU核数。
      * 单位：个。
      */
     public Integer cpu;
@@ -108,7 +108,7 @@ public class InstanceInfo extends TeaModel {
     public Boolean enableAgent;
 
     /**
-     * 是否开启QGA 监控采集。
+     * 是否开启QGA监控采集。
      */
     public Boolean enableAgentMonitor;
 

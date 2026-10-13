@@ -4,11 +4,14 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class AddLoadBalancersPrivateIpsRequest extends TeaModel {
 
 
     /**
-     * 要加入的内网Ip。
+     * 要加入的内网IP。
      * 单次最多20个。
      * 需在`subnetId`对应子网的CIDR范围内，且未被其它资源占用。
      */
@@ -16,12 +19,13 @@ public class AddLoadBalancersPrivateIpsRequest extends TeaModel {
 
     /**
      * 负载均衡ID。
+     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
      */
     public String loadBalancerId;
 
     /**
-     * 作为内网ip的subnetId。
-     * 可以通过调用 ~~DescribeSubnets~~ 获取。
+     * 作为内网IP所在的子网ID。
+     * 可以通过调用 ~~zec:DescribeSubnets~~ 获取。
      * 该子网所属的区域和VPC需与负载均衡实例一致。
      */
     public String subnetId;

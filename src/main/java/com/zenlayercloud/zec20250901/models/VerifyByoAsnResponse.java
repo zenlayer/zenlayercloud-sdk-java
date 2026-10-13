@@ -15,7 +15,7 @@ public class VerifyByoAsnResponse extends TeaModel {
     public String requestId;
 
     /**
-     * BYO ASN 的ID。
+     * BYO ASN的ID。
      */
     public String byoAsnId;
 
@@ -26,19 +26,19 @@ public class VerifyByoAsnResponse extends TeaModel {
 
     /**
      * 校验后的状态。
-     * `AVAILABLE`表示归属确认通过，该ASN已可用于创建 BYOIP；仍为`VERIFYING`表示尚未检测到 export 声明，可稍后重试。
+     * `AVAILABLE`表示归属确认通过，该ASN已可用于创建BYOIP；仍为`VERIFYING`表示尚未检测到export声明，可稍后重试。
      */
     public String status;
 
     /**
      * 校验码。
-     * 需要客户将其写入 RIR 上该ASN的 aut-num 对象。
+     * 需要客户将其写入RIR上该ASN的aut-num对象。
      */
     public String verifyCode;
 
     /**
-     * 完整的 export 声明语句。
-     * 客户直接复制该语句写入 RIR 上该ASN的 aut-num 对象即可。
+     * 完整的export声明语句。
+     * 客户直接复制该语句写入RIR上该ASN的aut-num对象即可。
      */
     public String exportDeclaration;
 

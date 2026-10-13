@@ -11,6 +11,7 @@ public class ModifyVpcAttributeRequest extends TeaModel {
 
     /**
      * VPC的ID。
+     * 可通过调用 ~~DescribeVpcs~~ 获取。
      */
     public String vpcId;
 
@@ -23,26 +24,27 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     public String vpcName;
 
     /**
-     * 需要修改的IPv4 CIDR。
-     * 掩码范围为9到29，且必须填写网段的起始地址，例如 `10.0.0.0/16`。
-     * 支持配置多个网段，多个网段之间以英文逗号分隔，例如：`21.0.0.0/9,22.0.0.0/9`，各网段之间不能重叠。
-     * 单个VPC的网段数量上限由配额 `ZEC_CIDR_IPv4_Blocks_per_VPC` 控制，默认为5个，可申请提升。
-     * 不能与以下保留网段重叠：`0.0.0.0/8`、`100.64.0.0/10`、`127.0.0.0/8`、`169.254.0.0/16`、`224.0.0.0/4`。
-     * 该字段为全量覆盖：需要保留的网段也要一并传入，未传入的网段视为移除。
-     * 修改后VPC下每一个子网都必须仍落在新的CIDR范围内，否则请求会被拒绝；因此没有子网的网段可以自由缩小或移除。
+     * 需要修改的主IPv4 CIDR。
+     * 本字段只修改主网段，附属网段请通过 ~~AssociateVpcCidrBlock~~ 与 ~~UnassociateVpcCidrBlock~~ 增删。
+     * 掩码范围为9到29，且必须填写网段的起始地址，例如`10.0.0.0/16`。
+     * 主网段只能在原网段范围内放大或缩小，即新网段必须与原主网段有重叠；换成与原主网段不相干的网段会被拒绝，主网段也不支持删除。
+     * 缩小时，原本落在主网段内的子网必须仍落在新的主网段内，否则请求会被拒绝；附属网段下的子网不受影响。
+     * 不能与该VPC已有的附属网段重叠，也不能与以下保留网段重叠：`0.0.0.0/8`、`100.64.0.0/10`、`127.0.0.0/8`、`169.254.0.0/16`、`224.0.0.0/4`。
+     * 不传该字段表示不修改主网段。
      * 默认VPC不支持修改CIDR。
      */
     public String cidrBlock;
 
     /**
      * 是否开启IPv6内网CIDR。
-     * 当前仅允许打开(`true`)，一旦设置IPv6, 将无法关闭。
+     * 当前仅允许打开(`true`)，一旦开启将无法关闭。
      */
     public Boolean enableIPv6;
 
     /**
      * 修改VPC绑定的安全组ID。
      * 如果不指定，则不会修改。
+     * 可通过调用 ~~DescribeSecurityGroups~~ 获取。
      */
     public String securityGroupId;
 

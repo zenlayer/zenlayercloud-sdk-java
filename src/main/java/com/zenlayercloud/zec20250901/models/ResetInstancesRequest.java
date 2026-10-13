@@ -4,33 +4,37 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class ResetInstancesRequest extends TeaModel {
 
 
     /**
      * 待重装的实例ID。
+     * 可通过调用 ~~DescribeInstances~~ 获取。
      */
     public List<String> instanceIds;
 
     /**
      * 实例的新密码。
      * 与keyId必须指定其中的一种（Windows和Generic类型的镜像无法指定密码和key）。
-     * 必须包含以下3种格式的字符：大小写字母: [a-zA-Z]数字: 0-9特殊字符: ~!@$^*-_=+。
+     * 必须同时包含以下3类字符：大小写字母（a-z、A-Z）、数字（0-9）、特殊字符（~!@$^*-_=+）。
      */
     public String password;
 
     /**
      * 密钥ID。
      * 与password必须指定其中的一种（Windows和Generic类型的镜像无法指定密码和key）。
-     * 可调用接口DescribeKeyPairs来获得最新的密钥对信息。
+     * 可调用 ~~ccs:DescribeKeyPairs~~ 来获得最新的密钥对信息。
      * 关联密钥后，就可以通过对应的私钥来访问实例；密钥与密码不能同时指定，同时Windows操作系统不支持指定密钥。
      * 示例值：key-YWD2QFOl。
      */
     public String keyId;
 
     /**
-     * 指定重装的的镜像ID。
-     * 可以通过[DescribeImages](../image/describeimages.md)取返回信息中的`imageId`字段。
+     * 指定重装的镜像ID。
+     * 可以通过调用 ~~DescribeImages~~ 从返回的imageId字段获取。
      * 如果不指定，会根据当前镜像进行重装。
      */
     public String imageId;
@@ -41,7 +45,7 @@ public class ResetInstancesRequest extends TeaModel {
     public String timezone;
 
     /**
-     * 是否启用 QEMU Guest 代理 (QGA)。
+     * 是否启用QEMU Guest代理(QGA)。
      */
     public Boolean enableAgent;
 

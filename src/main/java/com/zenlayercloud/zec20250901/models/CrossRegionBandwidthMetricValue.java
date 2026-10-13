@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 描述内网跨区域带宽的监控指标数据。
+ * 描述VPC跨区域带宽的监控指标数据。
  */
 public class CrossRegionBandwidthMetricValue extends TeaModel {
 

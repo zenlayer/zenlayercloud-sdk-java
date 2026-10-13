@@ -12,6 +12,7 @@ public class DescribeEipNetworkLineTypesRequest extends TeaModel {
     /**
      * 节点ID。
      * 不传则返回所有节点支持的线路类型。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 

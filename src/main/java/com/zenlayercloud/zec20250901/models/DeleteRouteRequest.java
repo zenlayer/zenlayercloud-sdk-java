@@ -11,6 +11,7 @@ public class DeleteRouteRequest extends TeaModel {
 
     /**
      * 路由ID。
+     * 可通过调用 ~~DescribeRoutes~~ 获取。
      */
     public String routeId;
 

@@ -26,7 +26,7 @@ public class InquiryPriceModifyIpv6BandwidthResponse extends TeaModel {
 
     /**
      * 变更前各计费项当前生效的价格，字段与上方一一对应，用于对比出哪些计费项发生了调价。
-     * 无订单时为 null。
+     * 无订单时为null。
      */
     public Ipv6PreviousPrices previousPrices;
 

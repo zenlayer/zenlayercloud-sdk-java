@@ -12,6 +12,7 @@ public class ModifyVpcsAttributeRequest extends TeaModel {
 
     /**
      * 需要修改的VPC ID列表。
+     * 可通过调用 ~~DescribeVpcs~~ 获取。
      */
     public List<String> vpcIds;
 

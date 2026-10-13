@@ -18,10 +18,9 @@ public class CreateVpcRequest extends TeaModel {
     public String name;
 
     /**
-     * VPC的CIDR地址段，该VPC下所有子网必须落在此网段内。
-     * 掩码范围为9到29，且必须填写网段的起始地址，例如 `10.0.0.0/16`。
-     * 支持配置多个网段，多个网段之间以英文逗号分隔，例如：`21.0.0.0/9,22.0.0.0/9`，各网段之间不能重叠。
-     * 单个VPC的网段数量上限由配额 `ZEC_CIDR_IPv4_Blocks_per_VPC` 控制，默认为5个，可申请提升。
+     * VPC的主IPv4 CIDR地址段。
+     * 创建完成后可调用 ~~AssociateVpcCidrBlock~~ 添加附属网段。
+     * 掩码范围为9到29，且必须填写网段的起始地址，例如`10.0.0.0/16`。
      * 不能与以下保留网段重叠：`0.0.0.0/8`、`100.64.0.0/10`、`127.0.0.0/8`、`169.254.0.0/16`、`224.0.0.0/4`。
      */
     public String cidrBlock;
@@ -34,7 +33,6 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * 是否开启内网IPv6。
      * 一旦开启，后续无法关闭。
-     * 默认为关闭。
      */
     public Boolean enablePriIpv6;
 

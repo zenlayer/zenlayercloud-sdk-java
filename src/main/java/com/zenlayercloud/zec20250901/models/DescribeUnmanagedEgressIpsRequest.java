@@ -4,6 +4,9 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeUnmanagedEgressIpsRequest extends TeaModel {
 
 
@@ -14,11 +17,13 @@ public class DescribeUnmanagedEgressIpsRequest extends TeaModel {
 
     /**
      * 按照节点ID过滤。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 
     /**
      * 按照所属VPC的唯一ID过滤。
+     * 可通过调用 ~~DescribeVpcs~~ 获取。
      */
     public String vpcId;
 

@@ -3,16 +3,20 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class ModifyDnatEntryRequest extends TeaModel {
 
 
     /**
-     * DNAT规则 ID。
+     * DNAT规则ID。
      */
     public String dnatEntryId;
 
     /**
      * 修改DNAT关联的弹性公网IP ID。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public String eipId;
 

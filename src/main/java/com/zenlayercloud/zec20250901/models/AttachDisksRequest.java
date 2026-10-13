@@ -12,11 +12,13 @@ public class AttachDisksRequest extends TeaModel {
 
     /**
      * 需要挂载的云硬盘ID列表。
+     * 可通过调用 ~~DescribeDisks~~ 获取。
      */
     public List<String> diskIds;
 
     /**
      * 被挂载的实例ID。
+     * 可通过调用 ~~DescribeInstances~~ 获取。
      */
     public String instanceId;
 

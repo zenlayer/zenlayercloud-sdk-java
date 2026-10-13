@@ -11,6 +11,7 @@ public class CreateCidrRequest extends TeaModel {
 
     /**
      * 节点ID。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 

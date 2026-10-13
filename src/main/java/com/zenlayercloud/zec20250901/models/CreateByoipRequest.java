@@ -11,7 +11,7 @@ public class CreateByoipRequest extends TeaModel {
 
 
     /**
-     * 待创建的 BYOIP 列表。
+     * 待创建的BYOIP列表。
      */
     public List<ByoipCreateItem> byoipList;
 
@@ -21,13 +21,13 @@ public class CreateByoipRequest extends TeaModel {
     public MarketingInfo marketingInfo;
 
     /**
-     * 创建后 BYOIP 所在的资源组ID。
+     * 创建后BYOIP所在的资源组ID。
      * 如不指定则放入默认资源组。
      */
     public String resourceGroupId;
 
     /**
-     * 创建 BYOIP 时关联的标签。
+     * 创建BYOIP时关联的标签。
      * 注意：关联「标签键」不能重复。
      */
     public TagAssociation tags;

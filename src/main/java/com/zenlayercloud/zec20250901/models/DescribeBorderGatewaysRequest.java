@@ -4,6 +4,9 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeBorderGatewaysRequest extends TeaModel {
 
 
@@ -20,11 +23,13 @@ public class DescribeBorderGatewaysRequest extends TeaModel {
 
     /**
      * 根据边界网关所在的节点过滤。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 
     /**
      * 根据边界网关所属的VPC ID过滤。
+     * 可通过调用 ~~DescribeVpcs~~ 获取。
      */
     public String vpcId;
 

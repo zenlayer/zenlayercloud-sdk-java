@@ -43,7 +43,7 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
     /**
      * 各流量方向的IPv4带宽价格明细。
      * 仅当`internetChargeType`有值时返回。
-     * PathBasedBandwidthIP 线路返回多项（ipv4BandwidthPrice 为 null）；其他线路该字段为 null，带宽价格见 ipv4BandwidthPrice。
+     * PathBasedBandwidthIP线路返回多项（ipv4BandwidthPrice为null）；其他线路该字段为null，带宽价格见ipv4BandwidthPrice。
      */
     public List<BandwidthPriceResponseItem> ipv4BandwidthPrices;
 

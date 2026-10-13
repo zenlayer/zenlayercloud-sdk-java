@@ -11,6 +11,7 @@ public class ReplaceNetworkInterfacePrimaryIpv4Request extends TeaModel {
 
     /**
      * 需要变更的网卡ID。
+     * 可通过调用 ~~DescribeNetworkInterfaces~~ 获取。
      */
     public String nicId;
 
@@ -23,8 +24,8 @@ public class ReplaceNetworkInterfacePrimaryIpv4Request extends TeaModel {
 
     /**
      * 是否在变更成功后自动重启已绑定的运行中实例，使新的主内网IPv4地址在实例内立即生效。
-     * 默认为true。
-     * 如果网卡未绑定实例、绑定的实例未处于运行中、或本次未产生实际变更（如指定了与当前相同的IP），则不会触发重启。
+     * 传false时不会自动重启，需自行重启实例后新IP才会生效。
+     * 如果网卡未绑定实例、绑定的实例未处于运行中、或本次未产生实际变更（如指定了与当前相同的IP），则无论本参数取值如何都不会触发重启。
      */
     public Boolean rebootInstance;
 

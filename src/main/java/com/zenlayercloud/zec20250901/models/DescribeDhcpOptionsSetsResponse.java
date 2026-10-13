@@ -4,6 +4,9 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeDhcpOptionsSetsResponse extends TeaModel {
 
 
@@ -18,7 +21,7 @@ public class DescribeDhcpOptionsSetsResponse extends TeaModel {
     public Integer totalCount;
 
     /**
-     * DHCP 选项集列表的数据。
+     * DHCP选项集列表的数据。
      */
     public List<DhcpOptionsSet> dataSet;
 

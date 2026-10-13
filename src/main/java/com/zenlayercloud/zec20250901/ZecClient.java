@@ -58,7 +58,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询可用区售卖的机型信息。
+         * 查询可用区售卖的机型规格及价格信息。
          */
     public DescribeZoneInstanceConfigInfosResponse describeZoneInstanceConfigInfos(DescribeZoneInstanceConfigInfosRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -82,7 +82,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询时区信息。
+         * 查询创建实例时可选的时区列表。
          */
     public DescribeTimeZonesResponse describeTimeZones(DescribeTimeZonesRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -94,7 +94,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 创建虚拟机实例询价。
+         * 查询创建虚拟机实例的价格。
          */
     public InquiryPriceCreateInstanceResponse inquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -130,7 +130,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 批量查询一个或多个弹性计算实例的当前运行状态，支持按实例 ID 列表和资源组筛选，支持分页查询。
+         * 批量查询一个或多个弹性计算实例的当前运行状态，支持按实例ID列表和资源组筛选，支持分页查询。
          */
     public DescribeInstancesStatusResponse describeInstancesStatus(DescribeInstancesStatusRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -226,7 +226,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 为指定弹性计算实例开启 IP 转发，开启后该实例可作为路由器或网关转发来自其他资源的网络流量。
+         * 为指定弹性计算实例开启IP转发，开启后该实例可作为路由器或网关转发来自其他资源的网络流量。
          */
     public StartIpForwardResponse startIpForward(StartIpForwardRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -238,7 +238,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 为指定弹性计算实例关闭 IP 转发功能，关闭后该实例将不再转发非本机目的地的网络流量。
+         * 为指定弹性计算实例关闭IP转发功能，关闭后该实例将不再转发非本机目的地的网络流量。
          */
     public StopIpForwardResponse stopIpForward(StopIpForwardRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -250,7 +250,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 为指定弹性计算实例开启 QEMU Guest Agent（QGA）监控数据采集，开启后可通过监控接口获取实例内部性能指标数据。
+         * 为指定弹性计算实例开启QEMU Guest Agent（QGA）监控数据采集，开启后可通过监控接口获取实例内部性能指标数据。
          */
     public StartAgentMonitorResponse startAgentMonitor(StartAgentMonitorRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -262,7 +262,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 为指定弹性计算实例关闭 QEMU Guest Agent（QGA）监控数据采集功能，关闭后将无法通过监控接口获取实例内部性能数据。
+         * 为指定弹性计算实例关闭QEMU Guest Agent（QGA）监控数据采集功能，关闭后将无法通过监控接口获取实例内部性能数据。
          */
     public StopAgentMonitorResponse stopAgentMonitor(StopAgentMonitorRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -310,7 +310,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 获取实例VNC地址。
+         * 查询指定实例的VNC登录地址。
          */
     public DescribeVncUrlResponse describeVncUrl(DescribeVncUrlRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -322,7 +322,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询一段时间的实例的监控指标数据。包括CPU,内存等相关指标数据。
+         * 查询一段时间的实例的监控指标数据。包括CPU、内存等相关指标数据。
          */
     public DescribeInstanceMonitorDataResponse describeInstanceMonitorData(DescribeInstanceMonitorDataRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -334,7 +334,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询变更实例规格后的价格，同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
+         * 查询变更实例规格后的价格，同时通过previousPrices返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceModifyInstanceTypeResponse inquiryPriceModifyInstanceType(InquiryPriceModifyInstanceTypeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -346,7 +346,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询可用区售卖的 GPU 规格信息。
+         * 查询可用区售卖的GPU规格信息。
          */
     public DescribeZoneGpuInstanceConfigInfosResponse describeZoneGpuInstanceConfigInfos(DescribeZoneGpuInstanceConfigInfosRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -358,7 +358,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询可用区售卖的加速卡规格信息。
+         * 查询可用区售卖的加速卡规格及价格信息。
          */
     public DescribeZoneAcceleratorConfigInfosResponse describeZoneAcceleratorConfigInfos(DescribeZoneAcceleratorConfigInfosRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -466,7 +466,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询支持售卖云硬盘的节点信息。
+         * 查询支持售卖云硬盘的节点列表。
          */
     public DescribeDiskRegionsResponse describeDiskRegions(DescribeDiskRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -478,7 +478,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询可用区支持的云盘类型。
+         * 查询指定可用区支持售卖的云硬盘类型。
          */
     public DescribeDiskCategoryResponse describeDiskCategory(DescribeDiskCategoryRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -526,7 +526,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 云硬盘挂载到实例上。
+         * 将一块或多块云硬盘挂载到指定实例上。
          */
     public AttachDisksResponse attachDisks(AttachDisksRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -574,7 +574,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 删除释放一块云硬盘。
+         * 释放一块云硬盘。
          */
     public ReleaseDiskResponse releaseDisk(ReleaseDiskRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -622,7 +622,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询云硬盘扩容后的新价格。同时通过 previousPrices 返回扩容前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
+         * 查询云硬盘扩容后的新价格。同时通过previousPrices返回扩容前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceResizeDiskResponse inquiryPriceResizeDisk(InquiryPriceResizeDiskRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -670,7 +670,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 回滚快照到原云盘。
+         * 将快照回滚到其所属的云硬盘。
          */
     public ApplySnapshotResponse applySnapshot(ApplySnapshotRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -718,7 +718,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 云硬盘添加到指定的自动快照策略。
+         * 将一块或多块云硬盘添加到指定的自动快照策略。
          */
     public ApplyAutoSnapshotPolicyResponse applyAutoSnapshotPolicy(ApplyAutoSnapshotPolicyRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -730,7 +730,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 云硬盘从指定的自动快照策略中移除。
+         * 将一块或多块云硬盘从指定的自动快照策略中移除。
          */
     public CancelAutoSnapshotPolicyResponse cancelAutoSnapshotPolicy(CancelAutoSnapshotPolicyRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -766,7 +766,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 支持售卖网卡的区域信息。
+         * 查询支持创建网卡的节点列表。
          */
     public DescribeNetworkInterfaceRegionsResponse describeNetworkInterfaceRegions(DescribeNetworkInterfaceRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -778,7 +778,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询一个或多个指定网卡的信息。用户可以根据 网卡ID、网卡名称等信息来搜索网卡信息。
+         * 查询一个或多个指定网卡的信息。用户可以根据网卡ID、网卡名称等信息搜索。
          */
     public DescribeNetworkInterfacesResponse describeNetworkInterfaces(DescribeNetworkInterfacesRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -838,7 +838,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 网卡绑定实例。
+         * 将一张网卡绑定到指定实例上。
          */
     public AttachNetworkInterfaceResponse attachNetworkInterface(AttachNetworkInterfaceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -862,7 +862,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 网卡绑定内网IPv4。
+         * 为指定网卡分配一个内网IPv4地址。
          */
     public AssignNetworkInterfaceIpv4Response assignNetworkInterfaceIpv4(AssignNetworkInterfaceIpv4Request request) {
         Map<String, ?> rsp = super.callApi(
@@ -922,7 +922,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询账户下的公网 IP 池信息，支持按 IP 池 ID、地域或名称进行筛选，支持分页查询。
+         * 查询账户下的公网IP池信息，支持按IP池ID、地域或名称进行筛选，支持分页查询。
          */
     public DescribePoolsResponse describePools(DescribePoolsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -934,7 +934,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 支持售卖CIDR的节点信息。
+         * 查询支持售卖CIDR的节点信息。
          */
     public DescribeCidrRegionsResponse describeCidrRegions(DescribeCidrRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -946,7 +946,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询 IPv4 CIDR 地址块售卖价格。
+         * 查询创建IPv4 CIDR地址块的价格。
          */
     public DescribeCidrPriceResponse describeCidrPrice(DescribeCidrPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -958,7 +958,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询IPv4 CIDR地址块列表。
+         * 查询一个或多个IPv4 CIDR地址块的详细信息。
          */
     public DescribeCidrsResponse describeCidrs(DescribeCidrsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -982,7 +982,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 修改IPv4 CIDR地址段的属性。 目前只能修改名称。
+         * 修改IPv4 CIDR地址段的属性。目前只能修改名称。
          */
     public ModifyCidrAttributeResponse modifyCidrAttribute(ModifyCidrAttributeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1018,7 +1018,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 将一个处于回收站的IPv6 CIDR地址段恢复回正常。
+         * 恢复处于回收状态的IPv6 CIDR地址段，使其重新可用。
          */
     public RenewIpv6CidrResponse renewIpv6Cidr(RenewIpv6CidrRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1030,7 +1030,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询账户下的 IPv6 CIDR 地址块信息，支持按 CIDR ID、地域、名称、地址段筛选，支持标签过滤和分页查询。
+         * 查询账户下的IPv6 CIDR地址块信息，支持按CIDR ID、地域、名称、地址段筛选，支持标签过滤和分页查询。
          */
     public DescribeIpv6CidrsResponse describeIpv6Cidrs(DescribeIpv6CidrsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1042,7 +1042,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 删除IPv6 CIDR地址块。
+         * 删除指定的IPv6 CIDR地址块。
          */
     public DeleteIpv6CidrResponse deleteIpv6Cidr(DeleteIpv6CidrRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1054,7 +1054,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 将一个处于回收站的IPv4 CIDR地址段恢复回正常。
+         * 恢复处于回收状态的IPv4 CIDR地址段，使其重新可用。
          */
     public RenewCidrResponse renewCidr(RenewCidrRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1066,7 +1066,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 提交自带 IP 段（BYOIP）创建 CIDR。返回 RPKI/IRR 校验失败列表。
+         * 提交自带IP段（BYOIP）创建CIDR。返回RPKI/IRR校验失败列表。
          */
     public CreateByoipResponse createByoip(CreateByoipRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1078,7 +1078,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 返回支持售卖 BYOIP 的区域及对应网段、网络类型等信息。
+         * 返回支持售卖BYOIP的区域及对应网段、网络类型等信息。
          */
     public DescribeByoipRegionsResponse describeByoipRegions(DescribeByoipRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1090,7 +1090,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 根据宣告 IP 段、区域、线路类型等查询 BYOIP 价格。
+         * 根据宣告IP段、区域、线路类型等查询BYOIP价格。
          */
     public DescribeByoipPriceResponse describeByoipPrice(DescribeByoipPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1126,7 +1126,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询 EIP 支持的网络计费模式。
+         * 查询EIP支持的网络计费模式。
          */
     public DescribeEipInternetChargeTypesResponse describeEipInternetChargeTypes(DescribeEipInternetChargeTypesRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1150,7 +1150,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 创建公网弹性IP询价。
+         * 查询创建弹性公网IP的价格。
          */
     public DescribeEipPriceResponse describeEipPrice(DescribeEipPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1198,7 +1198,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询可与指定弹性公网 IP（EIP）进行绑定的弹性网卡（vNIC）及其内网 IPv4 地址列表。
+         * 查询可与指定弹性公网IP（EIP）进行绑定的弹性网卡（vNIC）及其内网IPv4地址列表。
          */
     public AvailableLanIpResponse availableLanIp(AvailableLanIpRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1246,7 +1246,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 变更弹性公网IP更网络计费模式。
+         * 变更弹性公网IP的网络计费模式。
          */
     public ChangeEipInternetChargeTypeResponse changeEipInternetChargeType(ChangeEipInternetChargeTypeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1294,7 +1294,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 指定IP作为出口IP。
+         * 将绑定在网卡上的指定弹性公网IP设置为该网卡的出口IP。
          */
     public ConfigEipEgressIpResponse configEipEgressIp(ConfigEipEgressIpRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1318,7 +1318,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 恢复弹性公网IP。
+         * 恢复处于回收状态的弹性公网IP，使其重新可用。
          */
     public RenewEipResponse renewEip(RenewEipRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1330,7 +1330,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询指定弹性公网 IP 在指定时间段内的流量监控数据，支持按统计粒度（step）聚合，可按出口公网 IP 过滤。
+         * 查询指定弹性公网IP在指定时间段内的流量监控数据，支持按统计粒度（step）聚合，可按出口公网IP过滤。
          */
     public DescribeEipTrafficResponse describeEipTraffic(DescribeEipTrafficRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1366,7 +1366,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询调整EIP带宽后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
+         * 查询调整EIP带宽后的价格。同时通过previousPrices返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceModifyEipBandwidthResponse inquiryPriceModifyEipBandwidth(InquiryPriceModifyEipBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1378,7 +1378,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询调整EIP流量包后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
+         * 查询调整EIP流量包后的价格。同时通过previousPrices返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceModifyEipFlowPackageResponse inquiryPriceModifyEipFlowPackage(InquiryPriceModifyEipFlowPackageRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1390,7 +1390,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询变更EIP网络计费模式后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
+         * 查询变更EIP网络计费模式后的价格。同时通过previousPrices返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceChangeEipInternetChargeTypeResponse inquiryPriceChangeEipInternetChargeType(InquiryPriceChangeEipInternetChargeTypeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1423,6 +1423,30 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new ModifyEipBlockThresholdResponse());
+    }
+
+        /**
+         * 查询一段时间的弹性公网IP并发连接数（Concurrent Connections）监控数据；也可传实例ID，查询其名下所有EIP的聚合数据。
+         */
+    public DescribeEipConcurrentConnsMonitorDataResponse describeEipConcurrentConnsMonitorData(DescribeEipConcurrentConnsMonitorDataRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeEipConcurrentConnsMonitorData",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeEipConcurrentConnsMonitorDataResponse());
+    }
+
+        /**
+         * 查询一段时间的弹性公网IP每秒新建连接数（CPS，All/In/Out）监控数据；也可传实例ID，查询其名下所有EIP的聚合数据。
+         */
+    public DescribeEipNewConnsMonitorDataResponse describeEipNewConnsMonitorData(DescribeEipNewConnsMonitorDataRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeEipNewConnsMonitorData",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeEipNewConnsMonitorDataResponse());
     }
 
         /**
@@ -1474,7 +1498,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询支持售卖内网跨区域带宽的区域信息。
+         * 查询支持售卖VPC跨区域带宽的区域信息。
          */
     public DescribeCrossRegionBandwidthRegionsResponse describeCrossRegionBandwidthRegions(DescribeCrossRegionBandwidthRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1486,7 +1510,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 创建内网跨区域带宽询价。
+         * 查询创建VPC跨区域带宽的价格。
          */
     public InquiryPriceCreateCrossRegionBandwidthResponse inquiryPriceCreateCrossRegionBandwidth(InquiryPriceCreateCrossRegionBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1498,7 +1522,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 创建内网跨区域带宽。
+         * 创建VPC跨区域带宽。
          */
     public CreateCrossRegionBandwidthResponse createCrossRegionBandwidth(CreateCrossRegionBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1510,7 +1534,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询内网跨区域带宽列表。
+         * 查询VPC跨区域带宽列表。
          */
     public DescribeCrossRegionBandwidthResponse describeCrossRegionBandwidth(DescribeCrossRegionBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1522,7 +1546,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 调整内网跨区域带宽询价。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
+         * 查询调整VPC跨区域带宽后的价格。同时通过previousPrices返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceModifyCrossRegionBandwidthResponse inquiryPriceModifyCrossRegionBandwidth(InquiryPriceModifyCrossRegionBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1534,7 +1558,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 修改内网跨区域带宽属性（名称）。
+         * 修改VPC跨区域带宽属性（名称）。
          */
     public ModifyCrossRegionBandwidthAttributeResponse modifyCrossRegionBandwidthAttribute(ModifyCrossRegionBandwidthAttributeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1546,7 +1570,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 调整内网跨区域带宽。
+         * 调整VPC跨区域带宽。
          */
     public ModifyCrossRegionBandwidthResponse modifyCrossRegionBandwidth(ModifyCrossRegionBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1558,7 +1582,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 删除内网跨区域带宽。
+         * 删除VPC跨区域带宽。
          */
     public DeleteCrossRegionBandwidthResponse deleteCrossRegionBandwidth(DeleteCrossRegionBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1570,7 +1594,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 恢复内网跨区域带宽。
+         * 恢复VPC跨区域带宽。
          */
     public RenewCrossRegionBandwidthResponse renewCrossRegionBandwidth(RenewCrossRegionBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1582,7 +1606,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询内网跨区域带宽监控指标数据。
+         * 查询VPC跨区域带宽监控指标数据。
          */
     public DescribeCrossRegionBandwidthMonitorDataResponse describeCrossRegionBandwidthMonitorData(DescribeCrossRegionBandwidthMonitorDataRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1630,7 +1654,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 将DHCP选项集关联到Subnet。
+         * 将DHCP选项集关联到一个或多个子网。
          */
     public AttachDhcpOptionsSetToSubnetResponse attachDhcpOptionsSetToSubnet(AttachDhcpOptionsSetToSubnetRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1642,7 +1666,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 将DHCP选项集与Subnet取消关联。
+         * 将DHCP选项集与一个或多个子网取消关联。
          */
     public DetachDhcpOptionsSetFromSubnetResponse detachDhcpOptionsSetFromSubnet(DetachDhcpOptionsSetFromSubnetRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1714,7 +1738,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 获取可绑定边界网关的NAT网关列表。
+         * 查询可绑定边界网关的NAT网关列表。
          */
     public DescribeAvailableNatsResponse describeAvailableNats(DescribeAvailableNatsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1726,7 +1750,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 边界网关绑定NAT网关。
+         * 将NAT网关绑定到指定边界网关。
          */
     public AssignBorderGatewayResponse assignBorderGateway(AssignBorderGatewayRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1738,7 +1762,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 解除指定边界网关（ZBG）与 NAT 网关的绑定关系，解绑后边界网关将不再为该 NAT 网关广播路由。
+         * 解除指定边界网关（ZBG）与NAT网关的绑定关系，解绑后边界网关将不再为该NAT网关广播路由。
          */
     public UnassignBorderGatewayResponse unassignBorderGateway(UnassignBorderGatewayRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1750,7 +1774,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 边界网关绑定自定义路由。即自定义路由发布到zbg网关。
+         * 将自定义路由绑定到指定边界网关，即把该路由发布到边界网关。
          */
     public AssignBorderGatewayRouteResponse assignBorderGatewayRoute(AssignBorderGatewayRouteRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1762,7 +1786,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 边界网关路由宣告中移除指定的自定义路由。
+         * 从边界网关的路由宣告中移除指定的自定义路由。
          */
     public UnassignBorderGatewayRouteResponse unassignBorderGatewayRoute(UnassignBorderGatewayRouteRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1786,7 +1810,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询当前账号下边界网关可支持互联的节点与数据中心信息。边界网关可绑定 CloudRouter 以实现 VPC 的 L3 互联，本接口返回支持此功能的节点列表，可按节点ID或数据中心进行过滤。
+         * 查询当前账号下边界网关可支持互联的节点与数据中心信息。边界网关可绑定CloudRouter以实现VPC的L3互联，本接口返回支持此功能的节点列表，可按节点ID或数据中心进行过滤。
          */
     public DescribeInterconnectBorderGatewayRegionsResponse describeInterconnectBorderGatewayRegions(DescribeInterconnectBorderGatewayRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1795,6 +1819,18 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeInterconnectBorderGatewayRegionsResponse());
+    }
+
+        /**
+         * 修改边界网关的互联IP网段。
+         */
+    public ModifyBorderGatewayInterconnectCidrResponse modifyBorderGatewayInterconnectCidr(ModifyBorderGatewayInterconnectCidrRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyBorderGatewayInterconnectCidr",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyBorderGatewayInterconnectCidrResponse());
     }
 
         /**
@@ -1822,7 +1858,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询调整非托管出口IP带宽后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
+         * 查询调整非托管出口IP带宽后的价格。同时通过previousPrices返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceModifyUnmanagedEgressIpBandwidthResponse inquiryPriceModifyUnmanagedEgressIpBandwidth(InquiryPriceModifyUnmanagedEgressIpBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1834,7 +1870,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询变更非托管出口IP网络计费模式后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
+         * 查询变更非托管出口IP网络计费模式后的价格。同时通过previousPrices返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceChangeUnmanagedEgressIpInternetChargeTypeResponse inquiryPriceChangeUnmanagedEgressIpInternetChargeType(InquiryPriceChangeUnmanagedEgressIpInternetChargeTypeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1930,7 +1966,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询私有网络（VPC）列表，用户可以根据 VPC ID、VPC 名称等信息来筛选过滤VPC信息。
+         * 查询私有网络（VPC）列表，用户可以根据VPC ID、VPC名称等信息筛选。
          */
     public DescribeVpcsResponse describeVpcs(DescribeVpcsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1978,7 +2014,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 删除VPC。
+         * 删除指定的VPC。
          */
     public DeleteVpcResponse deleteVpc(DeleteVpcRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -1990,7 +2026,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询支持创建子网区域以及是否IPv6。
+         * 查询支持创建子网的节点，以及各节点是否支持IPv6。
          */
     public DescribeSubnetRegionsResponse describeSubnetRegions(DescribeSubnetRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2002,7 +2038,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询子网列表信息。可以根据子网ID, 名称等信息筛选查询子网。
+         * 查询子网列表信息。可以根据子网ID、名称等信息筛选子网。
          */
     public DescribeSubnetsResponse describeSubnets(DescribeSubnetsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2050,7 +2086,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 修改指定子网的 IP 地址堆栈类型（IPv4 / IPv4_IPv6 / IPv6）。变更为双栈或纯 IPv6 时须配置 IPv6 类型及对应的 CIDR 地址块。
+         * 修改指定子网的IP地址堆栈类型（IPv4 / IPv4_IPv6 / IPv6）。变更为双栈或纯IPv6时须配置IPv6类型及对应的CIDR地址块。
          */
     public ModifySubnetStackTypeResponse modifySubnetStackType(ModifySubnetStackTypeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2098,7 +2134,31 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 支持售卖NAT网关的区域信息。
+         * 为指定VPC添加一个附属IPv4网段。
+         */
+    public AssociateVpcCidrBlockResponse associateVpcCidrBlock(AssociateVpcCidrBlockRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "AssociateVpcCidrBlock",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new AssociateVpcCidrBlockResponse());
+    }
+
+        /**
+         * 移除指定VPC的一个附属IPv4网段。
+         */
+    public UnassociateVpcCidrBlockResponse unassociateVpcCidrBlock(UnassociateVpcCidrBlockRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "UnassociateVpcCidrBlock",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new UnassociateVpcCidrBlockResponse());
+    }
+
+        /**
+         * 查询支持售卖NAT网关的区域信息。
          */
     public DescribeNatGatewayRegionsResponse describeNatGatewayRegions(DescribeNatGatewayRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2110,7 +2170,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 获取可绑定NAT的边界网关。
+         * 查询可绑定NAT网关的边界网关列表。
          */
     public DescribeAvailableBorderGatewayResponse describeAvailableBorderGateway(DescribeAvailableBorderGatewayRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2146,7 +2206,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询NAT网关列表。
+         * 查询一个或多个NAT网关的详细信息。
          */
     public DescribeNatGatewaysResponse describeNatGateways(DescribeNatGatewaysRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2158,7 +2218,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询NAT网关详情规则表。
+         * 查询指定NAT网关的详情，包含其DNAT与SNAT规则。
          */
     public DescribeNatGatewayDetailResponse describeNatGatewayDetail(DescribeNatGatewayDetailRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2170,7 +2230,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 修改指定 NAT 网关的名称、关联子网、ICMP 回应及安全组配置。
+         * 修改指定NAT网关的名称、关联子网、ICMP回应及安全组配置。
          */
     public ModifyNatGatewayAttributeResponse modifyNatGatewayAttribute(ModifyNatGatewayAttributeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2278,7 +2338,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 创建防护策略。
+         * 创建一个DDoS防护策略。
          */
     public CreatePolicyResponse createPolicy(CreatePolicyRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2290,7 +2350,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询账户下的 DDoS 防护策略信息，支持按策略 ID、策略名称筛选，支持标签过滤和分页查询。
+         * 查询账户下的DDoS防护策略信息，支持按策略ID、策略名称筛选，支持标签过滤和分页查询。
          */
     public DescribePolicysResponse describePolicys(DescribePolicysRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2302,7 +2362,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询指定 DDoS 防护策略的详细配置，包括黑白名单、封禁协议、区域封禁、特征过滤及流量控制规则等。
+         * 查询指定DDoS防护策略的详细配置，包括黑白名单、封禁协议、区域封禁、特征过滤及流量控制规则等。
          */
     public DescribePolicyDetailResponse describePolicyDetail(DescribePolicyDetailRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2314,7 +2374,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 修改指定 DDoS 防护策略的配置，包括策略名称、IP 黑白名单、封禁协议、区域封禁、特征过滤及流量控制规则。
+         * 修改指定DDoS防护策略的配置，包括策略名称、IP黑白名单、封禁协议、区域封禁、特征过滤及流量控制规则。
          */
     public ModifyPolicyResponse modifyPolicy(ModifyPolicyRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2326,7 +2386,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 防护对象关联防护策略。
+         * 将一个或多个IP添加到指定DDoS防护策略的防护对象中。
          */
     public AttachToPolicyResponse attachToPolicy(AttachToPolicyRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2338,7 +2398,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 防护对象取消关联防护策略。
+         * 将一个或多个IP从指定DDoS防护策略的防护对象中移除。
          */
     public DetachFromPolicyResponse detachFromPolicy(DetachFromPolicyRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2350,7 +2410,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询 DDoS 防护策略中区域封禁功能支持的可选地区列表，用于配置防护策略 `blockRegions` 参数前的参考。
+         * 查询DDoS防护策略中区域封禁功能支持的可选地区列表，用于配置防护策略`blockRegions`参数前的参考。
          */
     public DescribePolicyRegionsResponse describePolicyRegions(DescribePolicyRegionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2362,7 +2422,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询 DDoS 防护策略中 UDP 反射攻击防护功能的默认封禁源端口列表，用于配置防护策略 `reflectUdpPort` 参数前的参考。
+         * 查询DDoS防护策略中UDP反射攻击防护功能的默认封禁源端口列表，用于配置防护策略`reflectUdpPort`参数前的参考。
          */
     public DescribeReflectUdpPortOptionsResponse describeReflectUdpPortOptions(DescribeReflectUdpPortOptionsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2374,7 +2434,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 删除防护策略。
+         * 删除指定的DDoS防护策略。
          */
     public DeletePolicyResponse deletePolicy(DeletePolicyRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2386,7 +2446,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 获取攻击事件详情。
+         * 查询指定DDoS攻击事件的详细信息。
          */
     public DescribeDDosEventDetailResponse describeDDosEventDetail(DescribeDDosEventDetailRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2398,7 +2458,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 获取攻击事件列表。
+         * 查询DDoS攻击事件列表。
          */
     public DescribeDDosAllEventListResponse describeDDosAllEventList(DescribeDDosAllEventListRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2410,7 +2470,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询账户下的安全组信息，支持按安全组 ID 或名称进行筛选，支持分页查询。
+         * 查询账户下的安全组信息，支持按安全组ID或名称进行筛选，支持分页查询。
          */
     public DescribeSecurityGroupsResponse describeSecurityGroups(DescribeSecurityGroupsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2482,7 +2542,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * VPC更换绑定安全组。
+         * 为指定VPC更换绑定的安全组。
          */
     public AssignSecurityGroupVpcResponse assignSecurityGroupVpc(AssignSecurityGroupVpcRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2494,7 +2554,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * VPC解绑安全组。
+         * 解除指定VPC与安全组的绑定关系。
          */
     public UnAssignSecurityGroupVpcResponse unAssignSecurityGroupVpc(UnAssignSecurityGroupVpcRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2506,7 +2566,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 创建置放组。
+         * 创建一个置放组。
          */
     public CreatePlacementGroupResponse createPlacementGroup(CreatePlacementGroupRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2638,7 +2698,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 给网卡添加IPv6。
+         * 为指定网卡分配IPv6地址。
          */
     public AssignNetworkInterfaceIpv6Response assignNetworkInterfaceIpv6(AssignNetworkInterfaceIpv6Request request) {
         Map<String, ?> rsp = super.callApi(
@@ -2650,7 +2710,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 删除网卡IPv6。
+         * 释放指定网卡上的IPv6地址。
          */
     public UnassignNetworkInterfaceIpv6Response unassignNetworkInterfaceIpv6(UnassignNetworkInterfaceIpv6Request request) {
         Map<String, ?> rsp = super.callApi(
@@ -2686,7 +2746,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 批量删除公网 IPv6。逐个独立处理，部分失败不影响其余项，失败项通过 failedIpv6Addresses 返回其错误码与错误信息。
+         * 批量删除公网IPv6。逐个独立处理，部分失败不影响其余项，失败项通过failedIpv6Addresses返回其错误码与错误信息。
          */
     public DeleteIpv6AddressesResponse deleteIpv6Addresses(DeleteIpv6AddressesRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2698,7 +2758,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 公网Ipv6流量包或固定带宽询价。
+         * 查询分配公网IPv6的价格，支持流量包与固定带宽两种计费方式。
          */
     public InquiryPricePublicIpv6Response inquiryPricePublicIpv6(InquiryPricePublicIpv6Request request) {
         Map<String, ?> rsp = super.callApi(
@@ -2710,7 +2770,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询调整IPv6带宽后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
+         * 查询调整IPv6带宽后的价格。同时通过previousPrices返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceModifyIpv6BandwidthResponse inquiryPriceModifyIpv6Bandwidth(InquiryPriceModifyIpv6BandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2722,7 +2782,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询变更IPv6网络计费模式后的价格。同时通过 previousPrices 返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
+         * 查询变更IPv6网络计费模式后的价格。同时通过previousPrices返回变更前各计费项当前生效的价格，用于对比出哪些计费项发生了调价。
          */
     public InquiryPriceChangeIpv6InternetChargeTypeResponse inquiryPriceChangeIpv6InternetChargeType(InquiryPriceChangeIpv6InternetChargeTypeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2746,7 +2806,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 指定条件查询已分配的公网 IPv6 信息。用户可以根据 ID、名称、绑定的资源等信息来搜索。
+         * 指定条件查询已分配的公网IPv6信息。用户可以根据ID、名称、绑定的资源等信息来搜索。
          */
     public DescribeIpv6AddressesResponse describeIpv6Addresses(DescribeIpv6AddressesRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2758,7 +2818,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询指定弹性网卡（vNIC）上已分配的公网 IPv6 地址及其计费、带宽配置信息。
+         * 查询指定弹性网卡（vNIC）上已分配的公网IPv6地址及其计费、带宽配置信息。
          */
     public DescribeNetworkInterfacePublicIPv6Response describeNetworkInterfacePublicIPv6(DescribeNetworkInterfacePublicIPv6Request request) {
         Map<String, ?> rsp = super.callApi(
@@ -2770,7 +2830,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 返回可作为 BYOIP 起源ASN使用的ASN号列表。
+         * 返回可作为BYOIP起源ASN使用的ASN号列表。
          */
     public DescribeUsableByoAsnsResponse describeUsableByoAsns(DescribeUsableByoAsnsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2782,7 +2842,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 确认指定自带ASN在 RIR 上的 export 声明是否已生效。
+         * 确认指定自带ASN在RIR上的export声明是否已生效。
          */
     public VerifyByoAsnResponse verifyByoAsn(VerifyByoAsnRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2818,7 +2878,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 删除指定自带ASN。删除前需确保该ASN下没有已宣告的 BYOIP 段。
+         * 删除指定自带ASN。删除前需确保该ASN下没有已宣告的BYOIP段。
          */
     public DeleteByoAsnResponse deleteByoAsn(DeleteByoAsnRequest request) {
         Map<String, ?> rsp = super.callApi(

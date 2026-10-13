@@ -12,6 +12,7 @@ public class ReleaseInstancesRequest extends TeaModel {
 
     /**
      * 要释放的实例ID列表。
+     * 可通过调用 ~~DescribeInstances~~ 获取。
      */
     public List<String> instanceIds;
 

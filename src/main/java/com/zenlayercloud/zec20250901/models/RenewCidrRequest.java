@@ -11,6 +11,7 @@ public class RenewCidrRequest extends TeaModel {
 
     /**
      * 要恢复的CIDR ID。
+     * 可通过调用 ~~DescribeCidrs~~ 获取。
      */
     public String cidrId;
 

@@ -28,6 +28,7 @@ public class DescribeSubnetsRequest extends TeaModel {
 
     /**
      * 根据子网所在的节点进行筛选。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 
@@ -42,12 +43,15 @@ public class DescribeSubnetsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * 根据所属VPC的ID进行筛选。最多支持100个VPC ID。
+     * 根据所属VPC的ID进行筛选。
+     * 最多支持100个VPC ID。
+     * 可通过调用 ~~DescribeVpcs~~ 获取。
      */
     public List<String> vpcIds;
 
     /**
-     * 子网绑定的DHCP 选项集ID。
+     * 子网绑定的DHCP选项集ID。
+     * 可通过调用 ~~DescribeDhcpOptionsSets~~ 获取。
      */
     public String dhcpOptionsSetId;
 

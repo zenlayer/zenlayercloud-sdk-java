@@ -16,7 +16,7 @@ public class FlowPackageResponseItem extends TeaModel {
     public String trafficType;
 
     /**
-     * 该方向的流量包大小，单位 TB。
+     * 该方向的流量包大小，单位TB。
      */
     public Double flowPackage;
 

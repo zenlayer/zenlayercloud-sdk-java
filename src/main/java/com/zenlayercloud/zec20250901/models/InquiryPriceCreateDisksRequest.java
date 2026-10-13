@@ -11,6 +11,7 @@ public class InquiryPriceCreateDisksRequest extends TeaModel {
 
     /**
      * 可用区ID。
+     * 可通过调用 ~~DescribeZones~~ 获取。
      */
     public String zoneId;
 
@@ -27,9 +28,8 @@ public class InquiryPriceCreateDisksRequest extends TeaModel {
 
     /**
      * 云硬盘种类。
-     * Basic NVMe SSD: 经济型 NVMe SSD。
-     * Standard NVMe SSD: 标准型 NVMe SSD。
-     * 默认为Standard NVMe SSD。
+     * Basic NVMe SSD: 经济型NVMe SSD。
+     * Standard NVMe SSD: 标准型NVMe SSD。
      */
     public String diskCategory;
 

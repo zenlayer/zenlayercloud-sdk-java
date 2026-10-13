@@ -3,11 +3,15 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class CreateImageRequest extends TeaModel {
 
 
     /**
      * 需要制作镜像的实例ID。
+     * 可通过调用 ~~DescribeInstances~~ 获取。
      */
     public String instanceId;
 

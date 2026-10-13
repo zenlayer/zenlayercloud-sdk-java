@@ -10,7 +10,8 @@ public class DescribeAvailableBorderGatewayRequest extends TeaModel {
 
 
     /**
-     * NAT网关 ID。
+     * NAT网关ID。
+     * 可通过调用 ~~DescribeNatGateways~~ 获取。
      */
     public String natGatewayId;
 

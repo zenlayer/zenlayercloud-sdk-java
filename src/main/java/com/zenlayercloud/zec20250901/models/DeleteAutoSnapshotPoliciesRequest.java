@@ -4,11 +4,15 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DeleteAutoSnapshotPoliciesRequest extends TeaModel {
 
 
     /**
      * 要删除的自动快照策略ID列表。
+     * 可通过调用 ~~DescribeAutoSnapshotPolicies~~ 获取。
      */
     public List<String> autoSnapshotPolicyIds;
 

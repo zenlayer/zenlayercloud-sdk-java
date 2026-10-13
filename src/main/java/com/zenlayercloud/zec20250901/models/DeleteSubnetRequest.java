@@ -11,6 +11,7 @@ public class DeleteSubnetRequest extends TeaModel {
 
     /**
      * 要删除的子网ID。
+     * 可通过调用 ~~DescribeSubnets~~ 获取。
      */
     public String subnetId;
 

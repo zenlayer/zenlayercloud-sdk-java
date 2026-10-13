@@ -3,11 +3,14 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class DeleteDnatEntryRequest extends TeaModel {
 
 
     /**
-     * DNAT规则 ID。
+     * DNAT规则ID。
      */
     public String dnatEntryId;
 

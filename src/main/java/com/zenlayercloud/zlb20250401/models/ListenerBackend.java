@@ -11,7 +11,7 @@ public class ListenerBackend extends TeaModel {
 
     /**
      * 实例ID。
-     * 可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
+     * 可通过调用 ~~zec:DescribeInstances~~ 从返回的instanceId字段获取。
      */
     public String instanceId;
 
@@ -23,7 +23,7 @@ public class ListenerBackend extends TeaModel {
 
     /**
      * 后端服务修改后的转发权重。
-     * 创建绑定服务器时默认值为100, 修改时如果不指定，则不会进行修改。
+     * 创建绑定服务器时默认值为100；修改时如果不指定，则不会修改。
      * 删除时不需要指定该参数。
      */
     public Integer weight;
@@ -36,7 +36,7 @@ public class ListenerBackend extends TeaModel {
     public Integer backendPort;
 
     /**
-     * 负载均衡监听器 ID。
+     * 负载均衡监听器ID。
      */
     public String listenerId;
 
@@ -52,7 +52,7 @@ public class ListenerBackend extends TeaModel {
 
     /**
      * 监听器端口。
-     * 多个端口使用,分隔。
+     * 多个端口使用半角逗号（,）分隔。
      * 当端口是范围时用`-`连接，例如：10000-10005。
      */
     public String listenerPort;

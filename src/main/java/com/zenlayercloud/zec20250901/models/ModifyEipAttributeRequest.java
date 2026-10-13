@@ -11,6 +11,7 @@ public class ModifyEipAttributeRequest extends TeaModel {
 
     /**
      * 公网弹性IP的ID。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public String eipId;
 

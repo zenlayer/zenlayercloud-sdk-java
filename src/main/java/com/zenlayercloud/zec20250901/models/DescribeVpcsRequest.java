@@ -4,6 +4,9 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeVpcsRequest extends TeaModel {
 
 
@@ -22,6 +25,7 @@ public class DescribeVpcsRequest extends TeaModel {
     /**
      * 根据VPC的IPv4 CIDR过滤。
      * 支持模糊查询。
+     * 主网段与附属网段都会参与匹配，即命中任一网段的VPC都会被返回。
      */
     public String cidrBlock;
 

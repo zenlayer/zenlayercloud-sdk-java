@@ -11,6 +11,7 @@ public class DescribeNetworkInterfaceMonitorDataRequest extends TeaModel {
 
     /**
      * 网卡唯一标识ID。
+     * 可通过调用 ~~DescribeNetworkInterfaces~~ 获取。
      */
     public String nicId;
 

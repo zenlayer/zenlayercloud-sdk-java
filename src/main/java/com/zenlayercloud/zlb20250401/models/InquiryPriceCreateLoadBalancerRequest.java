@@ -3,18 +3,22 @@ package com.zenlayercloud.zlb20250401.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class InquiryPriceCreateLoadBalancerRequest extends TeaModel {
 
 
     /**
      * 区域节点ID。
+     * 可通过调用 ~~zec:DescribeRegions~~ 获取。
      */
     public String regionId;
 
     /**
      * IP堆栈类型。
      * 负载均衡实例只支持单栈，即`IPv4`或`IPv6`，不支持双栈。
-     * 指定为`IPv6`时不支持配置公网网络参数（`internetChargeType`、`networkLineType`、`bandwidthMbps`、`trafficPackageSize`、`bandwidthClusterId`）——IPv6负载均衡的公网地址通过`AssignLoadBalancerIpv6`接口单独分配。
+     * 指定为`IPv6`时不支持配置公网网络参数（`internetChargeType`、`networkLineType`、`bandwidthMbps`、`trafficPackageSize`、`bandwidthClusterId`）——IPv6负载均衡的公网地址通过 ~~zlb:AssignLoadBalancerIpv6~~ 接口单独分配。
      */
     public String ipStackType;
 
@@ -25,14 +29,14 @@ public class InquiryPriceCreateLoadBalancerRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * IP 的网络类型。
+     * IP的网络类型。
      * 已废弃，请使用`networkLineType`。
      */
     @Deprecated
     public String ipNetworkType;
 
     /**
-     * IP 的网络类型。
+     * IP的网络类型。
      */
     public String networkLineType;
 
@@ -43,14 +47,14 @@ public class InquiryPriceCreateLoadBalancerRequest extends TeaModel {
 
     /**
      * 流量包大小。
-     * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`ByTrafficPackage`, 否则该参数不生效。
+     * 指定此参数时，IP网络计费模式(`internetChargeType`)需为`ByTrafficPackage`，否则该参数不生效。
      * 仅当计费周期为月时支持设置，小时计费不支持。
      */
     public Double trafficPackageSize;
 
     /**
      * 共享带宽包ID。
-     * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`BandwidthCluster`, 否则该参数不生效。
+     * 指定此参数时，IP网络计费模式(`internetChargeType`)需为`BandwidthCluster`，否则该参数不生效。
      */
     public String bandwidthClusterId;
 

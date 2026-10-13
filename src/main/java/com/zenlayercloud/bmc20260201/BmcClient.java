@@ -430,6 +430,30 @@ public class BmcClient extends AbstractClient {
     }
 
         /**
+         * 设置裸金属实例的IPMI控制台登录密码。
+         */
+    public ResetInstanceIpmiPasswordResponse resetInstanceIpmiPassword(ResetInstanceIpmiPasswordRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ResetInstanceIpmiPassword",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ResetInstanceIpmiPasswordResponse());
+    }
+
+        /**
+         * 查询裸金属实例的IPMI控制台访问地址。
+         */
+    public DescribeInstanceIpmiUrlResponse describeInstanceIpmiUrl(DescribeInstanceIpmiUrlRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeInstanceIpmiUrl",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeInstanceIpmiUrlResponse());
+    }
+
+        /**
          * 查询可售的Ipv4 Cidr Block资源。
          */
     public DescribeAvailableIpv4ResourcesResponse describeAvailableIpv4Resources(DescribeAvailableIpv4ResourcesRequest request) {
@@ -982,7 +1006,7 @@ public class BmcClient extends AbstractClient {
     }
 
         /**
-         * 创建将一台后端服务绑定到负载均衡的监听器。
+         * 创建将一台后端服务器(vm或bmc实例)绑定到负载均衡的监听器。
          */
     public RegisterBackendResponse registerBackend(RegisterBackendRequest request) {
         Map<String, ?> rsp = super.callApi(

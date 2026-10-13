@@ -11,12 +11,13 @@ public class DescribeIpv6CidrsRequest extends TeaModel {
 
 
     /**
-     * 一个或多个待操作的Cidr ID，根据cidrId进行过滤。
+     * 根据IPv6 CIDR地址块ID进行过滤。
      */
     public List<String> cidrIds;
 
     /**
      * 根据CIDR所在的节点ID进行过滤。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 

@@ -21,10 +21,16 @@ public class VpcInfo extends TeaModel {
     public String name;
 
     /**
-     * VPC的IPv4 CIDR。
-     * 如果VPC存在多个网段，则多个网段以英文逗号分隔，例如：`21.0.0.0/8,22.0.0.0/8`。
+     * VPC的主IPv4 CIDR。
+     * 只包含主网段，附属网段见 `secondaryCidrBlocks`。
      */
     public String cidrBlock;
+
+    /**
+     * VPC的附属IPv4 CIDR列表。
+     * 如果没有附属网段，则为空列表。
+     */
+    public List<String> secondaryCidrBlocks;
 
     /**
      * VPC的内网IPv6 CIDR。
@@ -99,6 +105,14 @@ public class VpcInfo extends TeaModel {
 
     public void setCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
+    }
+
+    public List<String> getSecondaryCidrBlocks() {
+        return this.secondaryCidrBlocks;
+    }
+
+    public void setSecondaryCidrBlocks(List<String> secondaryCidrBlocks) {
+        this.secondaryCidrBlocks = secondaryCidrBlocks;
     }
 
     public String getIpv6CidrBlock() {

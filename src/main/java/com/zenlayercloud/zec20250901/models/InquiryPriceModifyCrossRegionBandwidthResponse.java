@@ -15,13 +15,13 @@ public class InquiryPriceModifyCrossRegionBandwidthResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 内网跨区域带宽的价格。
+     * VPC跨区域带宽的价格。
      */
     public PriceItem crossRegionBandwidthPrice;
 
     /**
      * 变更前各计费项当前生效的价格，字段与上方一一对应，用于对比出哪些计费项发生了调价。
-     * 无订单时为 null。
+     * 无订单时为null。
      */
     public CrossRegionBandwidthPreviousPrices previousPrices;
 

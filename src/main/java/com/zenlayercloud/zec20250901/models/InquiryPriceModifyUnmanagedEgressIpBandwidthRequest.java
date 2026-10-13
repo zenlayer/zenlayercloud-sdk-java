@@ -11,6 +11,7 @@ public class InquiryPriceModifyUnmanagedEgressIpBandwidthRequest extends TeaMode
 
     /**
      * 要操作的非托管出口IP。
+     * 可通过调用 ~~DescribeUnmanagedEgressIps~~ 获取。
      */
     public String unmanagedEgressIpId;
 

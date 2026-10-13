@@ -12,6 +12,7 @@ public class StopInstancesRequest extends TeaModel {
 
     /**
      * 待关闭的实例ID。
+     * 可通过调用 ~~DescribeInstances~~ 获取。
      */
     public List<String> instanceIds;
 

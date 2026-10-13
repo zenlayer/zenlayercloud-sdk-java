@@ -32,7 +32,7 @@ public class InquiryPriceCreateLoadBalancerResponse extends TeaModel {
 
     /**
      * 各流量方向的带宽价格明细。
-     * PathBasedBandwidthIP 线路返回多项（eipNetworkPrice 为 null）；其他线路返回单项（trafficType=ALL）。
+     * PathBasedBandwidthIP线路返回多项（eipNetworkPrice为null）；其他线路返回单项（trafficType=ALL）。
      */
     public List<BandwidthPriceResponseItem> eipNetworkPrices;
 

@@ -13,6 +13,7 @@ public class CreateSubnetsRequest extends TeaModel {
     /**
      * 需要添加子网的VPC ID。
      * 批量创建的子网均属于同一个VPC。
+     * 可通过调用 ~~DescribeVpcs~~ 获取。
      */
     public String vpcId;
 

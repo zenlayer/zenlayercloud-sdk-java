@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 支持售卖 BYOIP 的区域。
+ * 支持售卖BYOIP的区域。
  */
 public class Region extends TeaModel {
 

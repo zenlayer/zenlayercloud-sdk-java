@@ -12,11 +12,13 @@ public class CreateBorderGatewayRequest extends TeaModel {
 
     /**
      * 节点ID。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 
     /**
      * VPC ID。
+     * 可通过调用 ~~DescribeVpcs~~ 获取。
      */
     public String vpcId;
 
@@ -44,8 +46,9 @@ public class CreateBorderGatewayRequest extends TeaModel {
     public String advertisedSubnet;
 
     /**
-     * 子网ID集合。
-     * 若要该字段生效,需将该字段(`advertisedSubnet`)值设置为PART。
+     * 要宣告的子网ID集合。
+     * 仅当`advertisedSubnet`取值为`PART`时该字段生效。
+     * 可通过调用 ~~DescribeSubnets~~ 获取。
      */
     public List<String> advertisedSubnetIds;
 
@@ -58,6 +61,12 @@ public class CreateBorderGatewayRequest extends TeaModel {
      * 自定义路由ID集合。
      */
     public List<String> advertisedRouteIds;
+
+    /**
+     * 互联IP网段。
+     * 仅支持169.254.x.x/27，留空则自动分配。
+     */
+    public String interConnectCidr;
 
     public String getRegionId() {
         return this.regionId;
@@ -129,6 +138,14 @@ public class CreateBorderGatewayRequest extends TeaModel {
 
     public void setAdvertisedRouteIds(List<String> advertisedRouteIds) {
         this.advertisedRouteIds = advertisedRouteIds;
+    }
+
+    public String getInterConnectCidr() {
+        return this.interConnectCidr;
+    }
+
+    public void setInterConnectCidr(String interConnectCidr) {
+        this.interConnectCidr = interConnectCidr;
     }
 
 }

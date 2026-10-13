@@ -10,7 +10,7 @@ public class TopPort extends TeaModel {
 
 
     /**
-     * 协议。
+     * 攻击流量的协议。
      */
     public String protocol;
 

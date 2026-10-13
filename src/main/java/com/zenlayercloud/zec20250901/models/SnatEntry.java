@@ -11,13 +11,14 @@ public class SnatEntry extends TeaModel {
 
 
     /**
-     * SNAT规则 ID。
+     * SNAT规则ID。
      */
     public String snatEntryId;
 
     /**
-     * CIDR网段，不传默认是0.0.0.0/0。
-     * `cidrs` 和 `snatSubnets` 不会同时存在。
+     * CIDR网段。
+     * 不传时默认为`0.0.0.0/0`。
+     * `cidrs`和`snatSubnets`不会同时存在。
      */
     public List<String> cidrs;
 

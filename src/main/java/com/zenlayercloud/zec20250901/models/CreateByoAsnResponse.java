@@ -15,7 +15,7 @@ public class CreateByoAsnResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 新建 BYO ASN 的ID。
+     * 新建BYO ASN的ID。
      */
     public String byoAsnId;
 
@@ -31,13 +31,13 @@ public class CreateByoAsnResponse extends TeaModel {
 
     /**
      * 校验码。
-     * 需要客户将其写入 RIR 上该ASN的 aut-num 对象。
+     * 需要客户将其写入RIR上该ASN的aut-num对象。
      */
     public String verifyCode;
 
     /**
-     * 完整的 export 声明语句。
-     * 客户直接复制该语句写入 RIR 上该ASN的 aut-num 对象即可。
+     * 完整的export声明语句。
+     * 客户直接复制该语句写入RIR上该ASN的aut-num对象即可。
      */
     public String exportDeclaration;
 

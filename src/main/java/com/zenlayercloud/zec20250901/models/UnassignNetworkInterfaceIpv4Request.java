@@ -4,17 +4,21 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class UnassignNetworkInterfaceIpv4Request extends TeaModel {
 
 
     /**
      * 网卡ID。
+     * 可通过调用 ~~DescribeNetworkInterfaces~~ 获取。
      */
     public String nicId;
 
     /**
      * 需要解绑的IPv4地址。
-     * 该字段已过时，请使用`ipAddresses`，如果两者均指定， 则以`ipAddresses`为准。
+     * 该字段已过时，请使用`ipAddresses`，如果两者均指定，则以`ipAddresses`为准。
      */
     @Deprecated
     public String ipAddress;

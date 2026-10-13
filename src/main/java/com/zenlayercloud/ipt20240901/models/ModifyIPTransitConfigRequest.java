@@ -63,6 +63,12 @@ public class ModifyIPTransitConfigRequest extends TeaModel {
      */
     public String ipNetworkType;
 
+    /**
+     * 市场活动相关信息，含是否使用 POC 代金券。
+     * type=ADD_CIDR_BLOCK 时有效；系统不存在可用 POC 代金券时，本次追加 IP 的下单会失败。
+     */
+    public MarketingInfo marketingInfo;
+
     public String getIptId() {
         return this.iptId;
     }
@@ -133,6 +139,14 @@ public class ModifyIPTransitConfigRequest extends TeaModel {
 
     public void setIpNetworkType(String ipNetworkType) {
         this.ipNetworkType = ipNetworkType;
+    }
+
+    public MarketingInfo getMarketingInfo() {
+        return this.marketingInfo;
+    }
+
+    public void setMarketingInfo(MarketingInfo marketingInfo) {
+        this.marketingInfo = marketingInfo;
     }
 
 }

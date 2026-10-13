@@ -21,13 +21,13 @@ public class InquiryPriceResizeDiskResponse extends TeaModel {
 
     /**
      * 系统盘扩容时，对应实例的规格价格。
-     * 仅当云硬盘为系统盘且实例类型为 VM 时返回。
+     * 仅当云硬盘为系统盘且实例类型为VM时返回。
      */
     public PriceItem specPrice;
 
     /**
-     * 系统盘扩容时，对应实例的 GPU 价格。
-     * 仅当云硬盘为系统盘且实例类型为 GPU 时返回。
+     * 系统盘扩容时，对应实例的GPU价格。
+     * 仅当云硬盘为系统盘且实例类型为GPU时返回。
      */
     public PriceItem gpuPrice;
 
@@ -44,7 +44,7 @@ public class InquiryPriceResizeDiskResponse extends TeaModel {
 
     /**
      * 扩容前各计费项当前生效的价格，字段与上方一一对应，用于对比出哪些计费项发生了调价。
-     * 无订单时为 null。
+     * 无订单时为null。
      */
     public ResizeDiskPreviousPrices previousPrices;
 

@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * BYOIP 询价单项。
+ * BYOIP询价单项。
  */
 public class ByoipPriceItem extends TeaModel {
 
@@ -21,6 +21,7 @@ public class ByoipPriceItem extends TeaModel {
 
     /**
      * 区域id。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 

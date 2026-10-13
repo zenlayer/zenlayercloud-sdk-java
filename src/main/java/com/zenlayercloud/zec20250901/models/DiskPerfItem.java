@@ -10,7 +10,7 @@ public class DiskPerfItem extends TeaModel {
 
 
     /**
-     * 未开启突发时的最大 IOPS。
+     * 未开启突发时的最大IOPS。
      */
     public Integer maxIops;
 
@@ -20,7 +20,7 @@ public class DiskPerfItem extends TeaModel {
     public Integer maxBandwidth;
 
     /**
-     * 开启突发后的 IOPS。
+     * 开启突发后的IOPS。
      */
     public Integer iopsBurst;
 

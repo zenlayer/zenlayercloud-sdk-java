@@ -11,13 +11,14 @@ public class ResetInstancePasswordRequest extends TeaModel {
 
     /**
      * 待操作的实例ID。
+     * 可通过调用 ~~DescribeInstances~~ 获取。
      */
     public String instanceId;
 
     /**
      * 密码。
      * 必须是8-16位。
-     * 必须包含以下3种格式的字符：大小写字母: [a-zA-Z]数字: 0-9特殊字符: ~!@$^*-_=+。
+     * 必须同时包含以下3类字符：大小写字母（a-z、A-Z）、数字（0-9）、特殊字符（~!@$^*-_=+）。
      */
     public String password;
 

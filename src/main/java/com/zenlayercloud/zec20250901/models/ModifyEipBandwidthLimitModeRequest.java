@@ -3,11 +3,15 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class ModifyEipBandwidthLimitModeRequest extends TeaModel {
 
 
     /**
      * 弹性公网IP的唯一ID。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public String eipId;
 

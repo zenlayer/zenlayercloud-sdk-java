@@ -10,26 +10,26 @@ public class AcceleratorTypeQuotaItem extends TeaModel {
 
 
     /**
-     * 可用区 ID。
+     * 可用区ID。
      */
     public String zoneId;
 
     /**
-     * 加速卡规格 ID。
+     * 加速卡规格ID。
      * 例如：z2a.v.T1U.c16m64.1。
-     * 创建实例时将此值传入 CreateZecInstances 的 instanceType 参数。
+     * 创建实例时将此值传入 ~~CreateZecInstances~~ 的instanceType参数。
      */
     public String instanceType;
 
     /**
      * 加速卡类型。
      * 取值范围：VPU。
-     * 未来可能扩展 TPU/NPU/LPU 等。
+     * 未来可能扩展TPU/NPU/LPU等。
      */
     public String acceleratorType;
 
     /**
-     * CPU 核数。
+     * CPU核数。
      * 单位：核。
      */
     public Integer cpuCount;
@@ -63,7 +63,8 @@ public class AcceleratorTypeQuotaItem extends TeaModel {
     public Long pps;
 
     /**
-     * 加速卡系列库存档位。
+     * 加速卡系列库存档位，表示该加速卡系列在对应可用区所在区域的库存量级：`LIMITED`（小于1000）、`NORMAL`（1000–2000）、`SUFFICIENT`（2000–5000）、`ABUNDANT`（不小于5000）。
+     * 加速卡实例数量远低于上述阈值，实际可用时通常为`LIMITED`。
      */
     public String inventoryCapacity;
 

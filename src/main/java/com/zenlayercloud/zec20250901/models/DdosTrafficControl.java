@@ -10,42 +10,42 @@ public class DdosTrafficControl extends TeaModel {
 
 
     /**
-     * 是否开启 bps 限速。
+     * 是否开启bps限速。
      */
     public Boolean bpsEnabled;
 
     /**
-     * bps 限速值。
+     * bps限速值。
      */
     public Long bps;
 
     /**
-     * 是否开启 pps 限速。
+     * 是否开启pps限速。
      */
     public Boolean ppsEnabled;
 
     /**
-     * pps 限速值。
+     * pps限速值。
      */
     public Long pps;
 
     /**
-     * 是否开启 sync bps 限速。
+     * 是否开启sync bps限速。
      */
     public Boolean synBPSEnabled;
 
     /**
-     * syn bps 限速值。
+     * syn bps限速值。
      */
     public Long synBPS;
 
     /**
-     * 是否开启 sync pps 限速。
+     * 是否开启sync pps限速。
      */
     public Boolean synPPSEnabled;
 
     /**
-     * syn pps 限速值。
+     * syn pps限速值。
      */
     public Long synPPS;
 

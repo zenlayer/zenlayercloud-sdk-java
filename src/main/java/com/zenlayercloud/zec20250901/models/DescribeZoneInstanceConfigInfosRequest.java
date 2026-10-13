@@ -12,6 +12,7 @@ public class DescribeZoneInstanceConfigInfosRequest extends TeaModel {
     /**
      * 要查询的可用区ID。
      * 例如：asia-east-1a。
+     * 可通过调用 ~~DescribeZones~~ 获取。
      */
     public String zoneId;
 

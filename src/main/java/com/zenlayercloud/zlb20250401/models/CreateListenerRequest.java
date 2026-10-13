@@ -3,23 +3,27 @@ package com.zenlayercloud.zlb20250401.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class CreateListenerRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例 ID。
+     * 负载均衡实例ID。
+     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
      */
     public String loadBalancerId;
 
     /**
      * 要创建的监听器名称。
-     * 仅支持字母、数字、连字符 (-) 和句点 (.)，且开头和结尾必须是字母或数字。
+     * 仅支持字母、数字、连字符(-)和句点(.)，且开头和结尾必须是字母或数字。
      */
     public String listenerName;
 
     /**
      * 健康检查相关参数。
-     * 如果不传该参数或者healthCheck.enable = false. 将会关闭健康检查。
+     * 不传该参数、或将`healthCheck.enabled`设为`false`时，关闭健康检查。
      */
     public HealthCheck healthCheck;
 
@@ -35,7 +39,7 @@ public class CreateListenerRequest extends TeaModel {
 
     /**
      * 监听器端口。
-     * 多个端口使用,分隔。
+     * 多个端口使用半角逗号（,）分隔。
      * 当端口是范围时用`-`连接，例如：10000-10005。
      * 端口的取值范围为0～65535，0代表全范围端口。
      * 请注意端口不能和该监听器的其他端口有重叠。

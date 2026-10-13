@@ -12,6 +12,7 @@ public class UnassignBorderGatewayRouteRequest extends TeaModel {
 
     /**
      * 边界网关ID。
+     * 可通过调用 ~~DescribeBorderGateways~~ 获取。
      */
     public String zbgId;
 

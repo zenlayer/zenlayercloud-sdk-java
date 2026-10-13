@@ -11,6 +11,7 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
 
     /**
      * 云硬盘唯一标识ID。
+     * 可通过调用 ~~DescribeDisks~~ 获取。
      */
     public String diskId;
 

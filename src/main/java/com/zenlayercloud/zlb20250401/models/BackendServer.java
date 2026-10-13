@@ -4,14 +4,14 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 后端服务器信息
+ * 后端服务器信息。
  */
 public class BackendServer extends TeaModel {
 
 
     /**
      * 实例ID。
-     * 如果是zec实例作为后端服务器，可通过调用 ~~DescribeInstances~~ 从返回的 instanceId 字段获取。
+     * 如果是zec实例作为后端服务器，可通过调用 ~~zec:DescribeInstances~~ 从返回的instanceId字段获取。
      * 解绑时，对于存在实例ID的，该字段必传。
      */
     public String instanceId;
@@ -24,7 +24,7 @@ public class BackendServer extends TeaModel {
 
     /**
      * 后端服务修改后的转发权重。
-     * 创建绑定服务器时默认值为100, 修改时如果不指定，则不会进行修改。
+     * 创建绑定服务器时默认值为100；修改时如果不指定，则不会修改。
      * 删除时不需要指定该参数。
      */
     public Integer weight;

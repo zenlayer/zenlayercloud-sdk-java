@@ -3,11 +3,15 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class ConfigEipProbeRequest extends TeaModel {
 
 
     /**
      * 配置公网探测的EIP ID。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public String eipId;
 
@@ -17,7 +21,8 @@ public class ConfigEipProbeRequest extends TeaModel {
     public Boolean disableIcmp;
 
     /**
-     * TCP探测端口, [1-65535]。
+     * TCP探测端口。
+     * 取值范围：1~65535。
      * 不传表示不开启。
      */
     public Integer tcpPort;

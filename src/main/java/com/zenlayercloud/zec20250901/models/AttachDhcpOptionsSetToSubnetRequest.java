@@ -4,16 +4,21 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class AttachDhcpOptionsSetToSubnetRequest extends TeaModel {
 
 
     /**
-     * DHCP 选项集ID。
+     * DHCP选项集ID。
+     * 可通过调用 ~~DescribeDhcpOptionsSets~~ 获取。
      */
     public String dhcpOptionsSetId;
 
     /**
-     * 要与 DHCP 选项集关联的 Subnet 的 ID集合。
+     * 要与DHCP选项集关联的子网ID集合。
+     * 可通过调用 ~~DescribeSubnets~~ 获取。
      */
     public List<String> subnetIds;
 

@@ -3,17 +3,22 @@ package com.zenlayercloud.zlb20250401.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class DescribeBackendHealthRequest extends TeaModel {
 
 
     /**
-     * 负载均衡实例 ID。
+     * 负载均衡实例ID。
+     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
      */
     public String loadBalancerId;
 
     /**
-     * 负载均衡监听器的 ID。
+     * 负载均衡监听器的ID。
      * 如果未指定，则查询所有后端。
+     * 可通过调用 ~~DescribeListeners~~ 获取。
      */
     public String listenerId;
 

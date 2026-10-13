@@ -12,6 +12,7 @@ public class ModifyNetworkInterfacesAttributeRequest extends TeaModel {
 
     /**
      * 需要修改的网卡ID列表。
+     * 可通过调用 ~~DescribeNetworkInterfaces~~ 获取。
      */
     public List<String> nicIds;
 

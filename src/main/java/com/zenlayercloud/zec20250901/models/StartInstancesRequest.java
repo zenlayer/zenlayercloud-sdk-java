@@ -12,6 +12,7 @@ public class StartInstancesRequest extends TeaModel {
 
     /**
      * 要启动的实例ID。
+     * 可通过调用 ~~DescribeInstances~~ 获取。
      */
     public List<String> instanceIds;
 

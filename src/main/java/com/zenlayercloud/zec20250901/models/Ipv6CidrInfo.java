@@ -32,7 +32,7 @@ public class Ipv6CidrInfo extends TeaModel {
 
     /**
      * CIDR的来源。
-     * 如CONSOLE（属于zenlayer）或 BYOIP（客户自带IP）。
+     * 如CONSOLE（属于zenlayer）或BYOIP（客户自带IP）。
      */
     public String source;
 
@@ -96,7 +96,7 @@ public class Ipv6CidrInfo extends TeaModel {
     public Tags tags;
 
     /**
-     * ASN 观测结果。
+     * ASN观测结果。
      */
     public AsnObservationDetail asnObservation;
 

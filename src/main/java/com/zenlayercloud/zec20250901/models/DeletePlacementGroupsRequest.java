@@ -12,6 +12,7 @@ public class DeletePlacementGroupsRequest extends TeaModel {
 
     /**
      * 要删除的置放组ID列表。
+     * 可通过调用 ~~DescribePlacementGroups~~ 获取。
      */
     public List<String> placementGroupIds;
 

@@ -3,12 +3,15 @@ package com.zenlayercloud.zec20250901.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class ResizeDiskRequest extends TeaModel {
 
 
     /**
      * 云硬盘ID。
-     * 通过DescribeDisks接口查询。
+     * 通过 ~~DescribeDisks~~ 接口查询。
      */
     public String diskId;
 

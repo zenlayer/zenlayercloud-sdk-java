@@ -21,7 +21,7 @@ public class DescribeByoAsnsResponse extends TeaModel {
     public Integer totalCount;
 
     /**
-     * BYO ASN 结果集。
+     * BYO ASN结果集。
      */
     public List<ByoAsnInfo> dataSet;
 

@@ -15,7 +15,7 @@ public class InquiryPriceCreateCrossRegionBandwidthResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 内网跨区域带宽的价格。
+     * VPC跨区域带宽的价格。
      */
     public PriceItem crossRegionBandwidthPrice;
 

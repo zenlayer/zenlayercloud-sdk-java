@@ -44,7 +44,7 @@ public class CidrInfo extends TeaModel {
 
     /**
      * CIDR的来源。
-     * 如CONSOLE（属于zenlayer）或 BYOIP（客户自带IP）。
+     * 如CONSOLE（属于zenlayer）或BYOIP（客户自带IP）。
      */
     public String source;
 
@@ -111,13 +111,14 @@ public class CidrInfo extends TeaModel {
     public Tags tags;
 
     /**
-     * ASN 观测结果。仅当CIDR来源为BYOIP时存在。
+     * ASN观测结果。
+     * 仅当CIDR来源为BYOIP时存在。
      */
     public AsnObservationDetail asnObservation;
 
     /**
-     * 该 CIDR 当前可创建的网段清单，按掩码长度分组统计数量。
-     * 用于创建网段 EIP 前确认某个掩码长度是否还有可用网段。
+     * 该CIDR当前可创建的网段清单，按掩码长度分组统计数量。
+     * 用于创建网段EIP前确认某个掩码长度是否还有可用网段。
      * 无可用网段时为空列表。
      */
     public List<AvailableCidrInfo> availableCidr;

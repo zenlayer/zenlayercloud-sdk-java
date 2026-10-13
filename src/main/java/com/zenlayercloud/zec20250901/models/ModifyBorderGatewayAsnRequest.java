@@ -11,6 +11,7 @@ public class ModifyBorderGatewayAsnRequest extends TeaModel {
 
     /**
      * 要修改的边界网关ID。
+     * 可通过调用 ~~DescribeBorderGateways~~ 获取。
      */
     public String zbgId;
 

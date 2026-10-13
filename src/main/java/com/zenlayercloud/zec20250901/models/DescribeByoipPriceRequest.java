@@ -11,7 +11,7 @@ public class DescribeByoipPriceRequest extends TeaModel {
 
 
     /**
-     * 待询价的 BYOIP 列表。
+     * 待询价的BYOIP列表。
      */
     public List<ByoipPriceItem> byoipList;
 

@@ -12,6 +12,7 @@ public class DescribeSubnetRegionsRequest extends TeaModel {
 
     /**
      * 根据节点ID过滤。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public List<String> regionIds;
 

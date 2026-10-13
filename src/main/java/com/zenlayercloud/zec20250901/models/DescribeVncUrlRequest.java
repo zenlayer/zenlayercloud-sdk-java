@@ -11,6 +11,7 @@ public class DescribeVncUrlRequest extends TeaModel {
 
     /**
      * 要查询的实例ID。
+     * 可通过调用 ~~DescribeInstances~~ 获取。
      */
     public String instanceId;
 

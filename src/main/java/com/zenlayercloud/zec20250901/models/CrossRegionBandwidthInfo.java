@@ -4,75 +4,75 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 描述内网跨区域带宽的基本信息。
+ * 描述VPC跨区域带宽的基本信息。
  */
 public class CrossRegionBandwidthInfo extends TeaModel {
 
 
     /**
-     * 内网跨区域带宽的唯一ID。
+     * VPC跨区域带宽的唯一ID。
      */
     public String crossRegionBandwidthId;
 
     /**
-     * 内网跨区域带宽的名称。
+     * VPC跨区域带宽的名称。
      */
     public String crossRegionBandwidthName;
 
     /**
-     * 内网跨区域带宽的状态。
+     * VPC跨区域带宽的状态。
      */
     public String status;
 
     /**
-     * 内网跨区域带宽所属的VPC ID。
+     * VPC跨区域带宽所属的VPC ID。
      */
     public String vpcId;
 
     /**
-     * 内网跨区域带宽的其中一端的区域连接点（A）。
+     * VPC跨区域带宽的其中一端的区域连接点（A）。
      */
     public String regionA;
 
     /**
-     * 内网跨区域带宽的另一端的区域连接点（Z）。
+     * VPC跨区域带宽的另一端的区域连接点（Z）。
      */
     public String regionZ;
 
     /**
-     * 内网跨区域带宽的带宽|保底带宽。
+     * VPC跨区域带宽的带宽|保底带宽。
      */
     public Integer bandwidth;
 
     /**
-     * 内网跨区域带宽的突发带宽。
+     * VPC跨区域带宽的突发带宽。
      * 该字段可能为null。
      */
     public Integer bandwidthCap;
 
     /**
-     * 内网跨区域带宽的创建时间。
+     * VPC跨区域带宽的创建时间。
      */
     public String createTime;
 
     /**
-     * 内网跨区域带宽的网络模型。
+     * VPC跨区域带宽的网络模型。
      */
     public String internetChargeType;
 
     /**
-     * 内网跨区域带宽的到期时间。
+     * VPC跨区域带宽的到期时间。
      * 该字段可能为null。
      */
     public String expiredTime;
 
     /**
-     * 内网跨区域带宽的所属的资源组。
+     * VPC跨区域带宽的所属的资源组。
      */
     public String resourceGroupId;
 
     /**
-     * 内网跨区域带宽的所属资源组的名称。
+     * VPC跨区域带宽的所属资源组的名称。
      */
     public String resourceGroupName;
 

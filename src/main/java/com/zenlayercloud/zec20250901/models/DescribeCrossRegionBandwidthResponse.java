@@ -16,12 +16,12 @@ public class DescribeCrossRegionBandwidthResponse extends TeaModel {
     public String requestId;
 
     /**
-     * 匹配筛选条件的内网跨区域带宽的总数量。
+     * 匹配筛选条件的VPC跨区域带宽的总数量。
      */
     public Integer totalCount;
 
     /**
-     * 返回分页的内网跨区域带宽的集合数据。
+     * 返回分页的VPC跨区域带宽的集合数据。
      */
     public List<CrossRegionBandwidthInfo> dataSet;
 

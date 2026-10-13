@@ -4,16 +4,20 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeListenersRequest extends TeaModel {
 
 
     /**
      * 负载均衡实例的ID。
+     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
      */
     public String loadBalancerId;
 
     /**
-     * 要查询的负载均衡监听器 ID列表。
+     * 要查询的负载均衡监听器ID列表。
      */
     public List<String> listenerIds;
 

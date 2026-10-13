@@ -4,24 +4,29 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class CreateLoadBalancerRequest extends TeaModel {
 
 
     /**
      * 区域节点ID。
+     * 可通过调用 ~~zec:DescribeRegions~~ 获取。
      */
     public String regionId;
 
     /**
-     * 负载均衡后端服务器所属的VPC网络 ID。
+     * 负载均衡后端服务器所属的VPC网络ID。
      * `vpcId`和`subnetId`至少指定一个。
      * 仅指定`subnetId`时，取该子网所属的VPC。
+     * 可通过调用 ~~zec:DescribeVpcs~~ 获取。
      */
     public String vpcId;
 
     /**
      * 子网ID。
-     * 可以通过调用 ~~DescribeSubnets~~ 获取。
+     * 可以通过调用 ~~zec:DescribeSubnets~~ 获取。
      * `vpcId`和`subnetId`至少指定一个。
      * 该子网需与`regionId`同区域，同时指定`vpcId`时还须属于该VPC。
      * `ipStackType`为`IPv4`时该子网需支持IPv4，此参数可不指定（由系统在该VPC内选择）；为`IPv6`时该子网需含公网IPv6网段（内网IPv6不满足），且**此参数必填**——公网IPv6 VIP与健康检查段都从该子网分配，不指定将返回`MISSING_PARAMETER`。
@@ -45,7 +50,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     /**
      * IP堆栈类型。
      * 负载均衡实例只支持单栈，即`IPv4`或`IPv6`，不支持双栈。
-     * 指定为`IPv6`时不支持配置公网网络参数（`internetChargeType`、`networkLineType`、`bandwidthMbps`、`trafficPackageSize`、`bandwidthClusterId`），也不能指定`eipIds`——EIP均为IPv4，IPv6负载均衡的公网地址通过`AssignLoadBalancerIpv6`接口单独分配。
+     * 指定为`IPv6`时不支持配置公网网络参数（`internetChargeType`、`networkLineType`、`bandwidthMbps`、`trafficPackageSize`、`bandwidthClusterId`），也不能指定`eipIds`——EIP均为IPv4，IPv6负载均衡的公网地址通过 ~~zlb:AssignLoadBalancerIpv6~~ 接口单独分配。
      */
     public String ipStackType;
 
@@ -65,14 +70,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * IP 的网络类型。
+     * IP的网络类型。
      * 已废弃，请使用`networkLineType`。
      */
     @Deprecated
     public String ipNetworkType;
 
     /**
-     * IP 的网络类型。
+     * IP的网络类型。
      */
     public String networkLineType;
 
@@ -83,14 +88,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * 流量包大小。
-     * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`ByTrafficPackage`, 否则该参数不生效。
+     * 指定此参数时，IP网络计费模式(`internetChargeType`)需为`ByTrafficPackage`，否则该参数不生效。
      * 仅当计费周期为月时支持设置，小时计费不支持。
      */
     public Double trafficPackageSize;
 
     /**
      * 共享带宽包ID。
-     * 指定此参数时，IP网络计费模式(`internetChargeType`) 需为`BandwidthCluster`, 否则该参数不生效。
+     * 指定此参数时，IP网络计费模式(`internetChargeType`)需为`BandwidthCluster`，否则该参数不生效。
      */
     public String bandwidthClusterId;
 
@@ -118,7 +123,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * 负载均衡实例绑定的安全组ID。
-     * 可以通过调用 ~~DescribeSecurityGroups~~ 获取。
+     * 可以通过调用 ~~zec:DescribeSecurityGroups~~ 获取。
      */
     public String securityGroupId;
 

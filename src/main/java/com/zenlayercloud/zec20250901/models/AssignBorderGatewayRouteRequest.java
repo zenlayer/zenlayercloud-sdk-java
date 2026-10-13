@@ -4,11 +4,15 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class AssignBorderGatewayRouteRequest extends TeaModel {
 
 
     /**
      * 边界网关ID。
+     * 可通过调用 ~~DescribeBorderGateways~~ 获取。
      */
     public String zbgId;
 

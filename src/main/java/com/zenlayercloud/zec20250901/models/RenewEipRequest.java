@@ -11,6 +11,7 @@ public class RenewEipRequest extends TeaModel {
 
     /**
      * 要恢复弹性公网IP的ID。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public String eipId;
 

@@ -16,7 +16,7 @@ public class DescribeByoipPriceResponse extends TeaModel {
     public String requestId;
 
     /**
-     * BYOIP 价格列表。
+     * BYOIP价格列表。
      */
     public List<PriceItem> byoipPrices;
 

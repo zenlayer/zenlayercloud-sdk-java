@@ -10,7 +10,7 @@ public class DnatEntry extends TeaModel {
 
 
     /**
-     * DNAT规则 ID。
+     * DNAT规则ID。
      */
     public String dnatEntryId;
 

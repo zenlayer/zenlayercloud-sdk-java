@@ -11,12 +11,13 @@ public class ChangeEipBindTypeRequest extends TeaModel {
 
     /**
      * 要更换绑定模式的EIP ID。
+     * 可通过调用 ~~DescribeEips~~ 获取。
      */
     public String eipId;
 
     /**
      * 绑定类型。
-     * 当绑定的是网卡或 HaVip 时生效。
+     * 当绑定的是网卡或HaVip时生效。
      * 默认为普通NAT模式。
      */
     public String bindType;

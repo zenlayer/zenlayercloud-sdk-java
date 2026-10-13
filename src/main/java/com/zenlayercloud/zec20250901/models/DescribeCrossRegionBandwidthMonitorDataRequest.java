@@ -10,12 +10,13 @@ public class DescribeCrossRegionBandwidthMonitorDataRequest extends TeaModel {
 
 
     /**
-     * 要查询的内网跨区域带宽ID。
+     * 要查询的VPC跨区域带宽ID。
+     * 可通过调用 ~~DescribeCrossRegionBandwidth~~ 获取。
      */
     public String crossRegionBandwidthId;
 
     /**
-     * 内网跨区域带宽监控指标类型。
+     * VPC跨区域带宽监控指标类型。
      */
     public String metricType;
 

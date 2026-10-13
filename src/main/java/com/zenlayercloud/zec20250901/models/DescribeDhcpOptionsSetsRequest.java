@@ -4,23 +4,27 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class DescribeDhcpOptionsSetsRequest extends TeaModel {
 
 
     /**
-     * DHCP 选项集的 ID。
-     * 最多支持输入 20 个 DHCP 选项集的 ID。
+     * DHCP选项集的ID。
+     * 最多支持输入20个DHCP选项集的ID。
      */
     public List<String> dhcpOptionsSetIds;
 
     /**
-     * DHCP 选项集的名称。
+     * DHCP选项集的名称。
      * 该字段支持模糊搜索。
      */
     public String dhcpOptionsSetName;
 
     /**
-     * 关联的子网 ID。
+     * 关联的子网ID。
+     * 可通过调用 ~~DescribeSubnets~~ 获取。
      */
     public String subnetId;
 

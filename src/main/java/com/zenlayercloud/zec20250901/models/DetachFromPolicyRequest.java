@@ -12,6 +12,7 @@ public class DetachFromPolicyRequest extends TeaModel {
 
     /**
      * 防护策略ID。
+     * 可通过调用 ~~DescribePolicys~~ 获取。
      */
     public String policyId;
 

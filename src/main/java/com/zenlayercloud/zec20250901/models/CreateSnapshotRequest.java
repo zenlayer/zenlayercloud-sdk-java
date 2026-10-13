@@ -11,6 +11,7 @@ public class CreateSnapshotRequest extends TeaModel {
 
     /**
      * 云硬盘ID。
+     * 可通过调用 ~~DescribeDisks~~ 获取。
      */
     public String diskId;
 

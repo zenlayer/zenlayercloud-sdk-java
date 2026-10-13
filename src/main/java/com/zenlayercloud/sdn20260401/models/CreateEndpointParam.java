@@ -34,6 +34,7 @@ public class CreateEndpointParam extends TeaModel {
 
     /**
      * 云连接高可用类型。
+     * 连接点为 Azure 云连接时必传，取值需为该数据中心实际支持的类型，可通过 `DescribeAzureRegions` 返回的 `haTypes` 获取。
      */
     public String haType;
 

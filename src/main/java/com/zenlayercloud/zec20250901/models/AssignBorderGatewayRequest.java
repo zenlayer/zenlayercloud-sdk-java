@@ -11,11 +11,13 @@ public class AssignBorderGatewayRequest extends TeaModel {
 
     /**
      * 边界网关ID。
+     * 可通过调用 ~~DescribeBorderGateways~~ 获取。
      */
     public String zbgId;
 
     /**
      * NAT网关ID。
+     * 可通过调用 ~~DescribeNatGateways~~ 获取。
      */
     public String natId;
 

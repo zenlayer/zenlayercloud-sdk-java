@@ -12,6 +12,7 @@ public class DescribeInstancesStatusRequest extends TeaModel {
 
     /**
      * 要查询的实例ID列表。
+     * 可通过调用 ~~DescribeInstances~~ 获取。
      */
     public List<String> instanceIds;
 

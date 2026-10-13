@@ -68,7 +68,7 @@ public class NicInfo extends TeaModel {
     public String ipv6Cidr;
 
     /**
-     * 网卡上的辅助 IPv4 地址。
+     * 网卡上的辅助IPv4地址。
      */
     public List<String> secondaryIpv4s;
 

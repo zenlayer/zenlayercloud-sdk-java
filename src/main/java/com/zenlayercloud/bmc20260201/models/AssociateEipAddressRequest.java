@@ -3,6 +3,9 @@ package com.zenlayercloud.bmc20260201.models;
 import com.aliyun.tea.TeaModel;
 
 
+/**
+ * 
+ */
 public class AssociateEipAddressRequest extends TeaModel {
 
 

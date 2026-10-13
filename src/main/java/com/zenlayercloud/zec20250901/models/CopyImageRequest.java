@@ -4,16 +4,20 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class CopyImageRequest extends TeaModel {
 
 
     /**
-     * 自定义镜像 ID。
+     * 自定义镜像ID。
+     * 可通过调用 ~~DescribeImages~~ 获取。
      */
     public String imageId;
 
     /**
-     * 目标区域 ID 列表。
+     * 目标区域ID列表。
      */
     public List<String> regionIdList;
 

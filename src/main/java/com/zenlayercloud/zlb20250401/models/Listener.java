@@ -10,7 +10,7 @@ public class Listener extends TeaModel {
 
 
     /**
-     * 负载均衡监听器 ID。
+     * 负载均衡监听器ID。
      */
     public String listenerId;
 
@@ -32,7 +32,7 @@ public class Listener extends TeaModel {
 
     /**
      * 监听器端口。
-     * 多个端口使用,分隔。
+     * 多个端口使用半角逗号（,）分隔。
      * 当端口是范围时用`-`连接，例如：10000-10005。
      * 端口的取值范围为0～65535，0代表全范围端口。
      * 如果传多个单独的端口连续，将会被自动聚合为范围端口。
@@ -56,8 +56,7 @@ public class Listener extends TeaModel {
 
     /**
      * 创建时间。
-     * 按照ISO8601标准表示，并且使用UTC时间。
-     * 格式为：YYYY-MM-ddTHH:mm:ssZ。
+     * 按照ISO8601标准表示，使用UTC时间，格式为：YYYY-MM-ddTHH:mm:ssZ。
      */
     public String createTime;
 

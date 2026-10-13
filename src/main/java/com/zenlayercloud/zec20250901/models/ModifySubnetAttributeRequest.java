@@ -11,6 +11,7 @@ public class ModifySubnetAttributeRequest extends TeaModel {
 
     /**
      * 子网的ID。
+     * 可通过调用 ~~DescribeSubnets~~ 获取。
      */
     public String subnetId;
 

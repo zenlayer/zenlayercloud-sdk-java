@@ -4,11 +4,15 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class ModifyBorderGatewaysAttributeRequest extends TeaModel {
 
 
     /**
      * 边界网关的ID列表。
+     * 可通过调用 ~~DescribeBorderGateways~~ 获取。
      */
     public List<String> zbgIds;
 
@@ -28,8 +32,9 @@ public class ModifyBorderGatewaysAttributeRequest extends TeaModel {
     public String advertisedSubnet;
 
     /**
-     * Subnet子网ID集合。
-     * 若要该字段生效,需将该字段(`advertisedSubnet`)值设置为PART。
+     * 要宣告的子网ID集合。
+     * 仅当`advertisedSubnet`取值为`PART`时该字段生效。
+     * 可通过调用 ~~DescribeSubnets~~ 获取。
      */
     public List<String> advertisedSubnetIds;
 

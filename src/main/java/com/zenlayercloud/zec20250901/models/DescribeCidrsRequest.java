@@ -17,6 +17,7 @@ public class DescribeCidrsRequest extends TeaModel {
 
     /**
      * 根据CIDR所在的节点ID进行过滤。
+     * 可通过调用 ~~DescribeRegions~~ 获取。
      */
     public String regionId;
 

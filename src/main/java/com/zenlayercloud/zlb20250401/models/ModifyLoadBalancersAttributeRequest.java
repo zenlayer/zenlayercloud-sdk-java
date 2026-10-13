@@ -4,11 +4,15 @@ import com.aliyun.tea.TeaModel;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class ModifyLoadBalancersAttributeRequest extends TeaModel {
 
 
     /**
      * 负载均衡实例ID列表。
+     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
      */
     public List<String> loadBalancerIds;
 

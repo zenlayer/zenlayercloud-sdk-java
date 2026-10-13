@@ -11,6 +11,7 @@ public class InquiryPriceChangeIpv6InternetChargeTypeRequest extends TeaModel {
 
     /**
      * 要操作的公网IPv6。
+     * 可通过调用 ~~DescribeIpv6Addresses~~ 获取。
      */
     public String ipv6Id;
 

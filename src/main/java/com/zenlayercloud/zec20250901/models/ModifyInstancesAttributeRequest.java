@@ -12,6 +12,7 @@ public class ModifyInstancesAttributeRequest extends TeaModel {
 
     /**
      * 待修改属性的实例ID列表。
+     * 可通过调用 ~~DescribeInstances~~ 获取。
      */
     public List<String> instanceIds;
 

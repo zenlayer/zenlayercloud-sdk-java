@@ -11,6 +11,7 @@ public class DeleteNetworkInterfaceRequest extends TeaModel {
 
     /**
      * 要删除的网卡ID。
+     * 可通过调用 ~~DescribeNetworkInterfaces~~ 获取。
      */
     public String nicId;
 
