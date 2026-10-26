@@ -12,13 +12,13 @@ public class AttachDhcpOptionsSetToSubnetRequest extends TeaModel {
 
     /**
      * DHCP选项集ID。
-     * 可通过调用 ~~DescribeDhcpOptionsSets~~ 获取。
+     * 可通过调用 **DescribeDhcpOptionsSets** 获取。
      */
     public String dhcpOptionsSetId;
 
     /**
      * 要与DHCP选项集关联的子网ID集合。
-     * 可通过调用 ~~DescribeSubnets~~ 获取。
+     * 可通过调用 **DescribeSubnets** 获取。
      */
     public List<String> subnetIds;
 

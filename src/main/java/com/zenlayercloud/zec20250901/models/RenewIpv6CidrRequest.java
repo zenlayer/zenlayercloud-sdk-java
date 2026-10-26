@@ -11,7 +11,7 @@ public class RenewIpv6CidrRequest extends TeaModel {
 
     /**
      * IPv6地址块ID。
-     * 可通过调用 ~~DescribeCidrs~~ 获取。
+     * 可通过调用 **DescribeCidrs** 获取。
      */
     public String cidrId;
 

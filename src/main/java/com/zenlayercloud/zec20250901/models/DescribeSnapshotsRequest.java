@@ -17,7 +17,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     /**
      * 快照所属的可用区ID。
-     * 可通过调用 ~~DescribeZones~~ 获取。
+     * 可通过调用 **DescribeZones** 获取。
      */
     public String zoneId;
 
@@ -28,7 +28,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     /**
      * 按照快照所属的云硬盘ID过滤。
-     * 可通过调用 ~~DescribeDisks~~ 获取。
+     * 可通过调用 **DescribeDisks** 获取。
      */
     public List<String> diskIds;
 

@@ -11,7 +11,7 @@ public class ModifyCidrAttributeRequest extends TeaModel {
 
     /**
      * 要修改CIDR地址段的ID。
-     * 可通过调用 ~~DescribeCidrs~~ 获取。
+     * 可通过调用 **DescribeCidrs** 获取。
      */
     public String cidrId;
 

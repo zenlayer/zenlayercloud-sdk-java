@@ -12,7 +12,7 @@ public class DeleteImagesRequest extends TeaModel {
 
     /**
      * 镜像ID列表。
-     * 可通过调用 ~~DescribeImages~~ 获取。
+     * 可通过调用 **DescribeImages** 获取。
      */
     public List<String> imageIds;
 

@@ -17,7 +17,7 @@ public class DeleteLoadBalancersPrivateIpsRequest extends TeaModel {
 
     /**
      * 负载均衡ID。
-     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
+     * 可通过调用 **DescribeLoadBalancers** 获取。
      */
     public String loadBalancerId;
 

@@ -11,7 +11,7 @@ public class DescribeDiskCategoryRequest extends TeaModel {
 
     /**
      * 根据可用区ID筛选。
-     * 可通过调用 ~~DescribeZones~~ 获取。
+     * 可通过调用 **DescribeZones** 获取。
      */
     public String zoneId;
 

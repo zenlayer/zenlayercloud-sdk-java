@@ -58,6 +58,14 @@ public class HealthCheck extends TeaModel {
     public String checkHttpGetUrl;
 
     /**
+     * 健康检查请求的 Host。
+     * 仅适用于HTTP_GET的协议。
+     * 长度不超过255个字符，由英文句点（.）分隔的若干段组成，每段1～63个字符，仅支持字母、数字、连字符（-）和下划线（_），每段不能以连字符开头或结尾，整体不能以句点开头或结尾；不包含端口。
+     * 不指定时不设置 Host。
+     */
+    public String checkHttpGetHost;
+
+    /**
      * 健康检查状态码。
      * 仅适用于HTTP_GET的协议。
      */
@@ -130,6 +138,14 @@ public class HealthCheck extends TeaModel {
 
     public void setCheckHttpGetUrl(String checkHttpGetUrl) {
         this.checkHttpGetUrl = checkHttpGetUrl;
+    }
+
+    public String getCheckHttpGetHost() {
+        return this.checkHttpGetHost;
+    }
+
+    public void setCheckHttpGetHost(String checkHttpGetHost) {
+        this.checkHttpGetHost = checkHttpGetHost;
     }
 
     public Integer getCheckHttpStatusCode() {

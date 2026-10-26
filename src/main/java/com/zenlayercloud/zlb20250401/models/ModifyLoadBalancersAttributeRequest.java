@@ -12,7 +12,7 @@ public class ModifyLoadBalancersAttributeRequest extends TeaModel {
 
     /**
      * 负载均衡实例ID列表。
-     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
+     * 可通过调用 **DescribeLoadBalancers** 获取。
      */
     public List<String> loadBalancerIds;
 

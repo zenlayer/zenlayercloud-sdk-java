@@ -12,13 +12,13 @@ public class CreateBorderGatewayRequest extends TeaModel {
 
     /**
      * 节点ID。
-     * 可通过调用 ~~DescribeRegions~~ 获取。
+     * 可通过调用 **DescribeRegions** 获取。
      */
     public String regionId;
 
     /**
      * VPC ID。
-     * 可通过调用 ~~DescribeVpcs~~ 获取。
+     * 可通过调用 **DescribeVpcs** 获取。
      */
     public String vpcId;
 
@@ -48,7 +48,7 @@ public class CreateBorderGatewayRequest extends TeaModel {
     /**
      * 要宣告的子网ID集合。
      * 仅当`advertisedSubnet`取值为`PART`时该字段生效。
-     * 可通过调用 ~~DescribeSubnets~~ 获取。
+     * 可通过调用 **DescribeSubnets** 获取。
      */
     public List<String> advertisedSubnetIds;
 

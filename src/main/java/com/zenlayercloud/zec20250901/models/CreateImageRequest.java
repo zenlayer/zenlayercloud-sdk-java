@@ -11,7 +11,7 @@ public class CreateImageRequest extends TeaModel {
 
     /**
      * 需要制作镜像的实例ID。
-     * 可通过调用 ~~DescribeInstances~~ 获取。
+     * 可通过调用 **DescribeInstances** 获取。
      */
     public String instanceId;
 

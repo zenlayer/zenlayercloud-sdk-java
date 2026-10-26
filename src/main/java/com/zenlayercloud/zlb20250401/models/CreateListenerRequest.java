@@ -11,7 +11,7 @@ public class CreateListenerRequest extends TeaModel {
 
     /**
      * 负载均衡实例ID。
-     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
+     * 可通过调用 **DescribeLoadBalancers** 获取。
      */
     public String loadBalancerId;
 
@@ -74,6 +74,13 @@ public class CreateListenerRequest extends TeaModel {
      * 开启后与会话保持（`persistent`）互斥，不可同时设置非0值。
      */
     public String algoOpts;
+
+    /**
+     * 是否开启ProxyProtocol，开启后将通过ProxyProtocol协议携带客户端地址到后端服务器。
+     * `2`表示开启，`0`表示关闭，不传等价于关闭。
+     * 仅当负载均衡实例的`ipStackType`为`IPv4`、监听协议为`TCP`且工作模式（`kind`）为`FNAT`或`DNAT`时可开启，其它组合传`2`将报错。
+     */
+    public Integer proxyProtocol;
 
     public String getLoadBalancerId() {
         return this.loadBalancerId;
@@ -153,6 +160,14 @@ public class CreateListenerRequest extends TeaModel {
 
     public void setAlgoOpts(String algoOpts) {
         this.algoOpts = algoOpts;
+    }
+
+    public Integer getProxyProtocol() {
+        return this.proxyProtocol;
+    }
+
+    public void setProxyProtocol(Integer proxyProtocol) {
+        this.proxyProtocol = proxyProtocol;
     }
 
 }

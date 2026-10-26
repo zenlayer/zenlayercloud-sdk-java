@@ -11,7 +11,7 @@ public class ResetInstancePasswordRequest extends TeaModel {
 
     /**
      * 待操作的实例ID。
-     * 可通过调用 ~~DescribeInstances~~ 获取。
+     * 可通过调用 **DescribeInstances** 获取。
      */
     public String instanceId;
 

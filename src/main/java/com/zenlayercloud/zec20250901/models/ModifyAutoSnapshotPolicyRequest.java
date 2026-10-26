@@ -12,7 +12,7 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * 自动快照策略的ID。
-     * 可通过调用 ~~DescribeAutoSnapshotPolicies~~ 获取。
+     * 可通过调用 **DescribeAutoSnapshotPolicies** 获取。
      */
     public String autoSnapshotPolicyId;
 

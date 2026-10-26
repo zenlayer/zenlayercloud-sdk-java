@@ -12,7 +12,7 @@ public class ResetInstancesRequest extends TeaModel {
 
     /**
      * 待重装的实例ID。
-     * 可通过调用 ~~DescribeInstances~~ 获取。
+     * 可通过调用 **DescribeInstances** 获取。
      */
     public List<String> instanceIds;
 
@@ -26,7 +26,7 @@ public class ResetInstancesRequest extends TeaModel {
     /**
      * 密钥ID。
      * 与password必须指定其中的一种（Windows和Generic类型的镜像无法指定密码和key）。
-     * 可调用 ~~ccs:DescribeKeyPairs~~ 来获得最新的密钥对信息。
+     * 可调用 **ccs:DescribeKeyPairs** 来获得最新的密钥对信息。
      * 关联密钥后，就可以通过对应的私钥来访问实例；密钥与密码不能同时指定，同时Windows操作系统不支持指定密钥。
      * 示例值：key-YWD2QFOl。
      */
@@ -34,7 +34,7 @@ public class ResetInstancesRequest extends TeaModel {
 
     /**
      * 指定重装的镜像ID。
-     * 可以通过调用 ~~DescribeImages~~ 从返回的imageId字段获取。
+     * 可以通过调用 **DescribeImages** 从返回的imageId字段获取。
      * 如果不指定，会根据当前镜像进行重装。
      */
     public String imageId;

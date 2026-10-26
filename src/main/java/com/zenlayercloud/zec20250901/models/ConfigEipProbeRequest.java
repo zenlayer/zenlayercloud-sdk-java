@@ -11,7 +11,7 @@ public class ConfigEipProbeRequest extends TeaModel {
 
     /**
      * 配置公网探测的EIP ID。
-     * 可通过调用 ~~DescribeEips~~ 获取。
+     * 可通过调用 **DescribeEips** 获取。
      */
     public String eipId;
 

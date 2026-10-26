@@ -20,6 +20,25 @@ public class RegionItem extends TeaModel {
     public String regionName;
 
     /**
+     * 节点所在城市。
+     * 例如 asia-east-1 对应 Shanghai。
+     * 区域配置缺失时为null。
+     */
+    public String location;
+
+    /**
+     * 节点所属大区的标识。
+     * 例如 EMEA。
+     */
+    public String wideRegionName;
+
+    /**
+     * 节点所属大区的展示名。
+     * 例如 Europe and Middle East。
+     */
+    public String wideRegionTitle;
+
+    /**
      * 节点所属的行政区划。
      * 区域配置缺失时为null。
      */
@@ -39,6 +58,30 @@ public class RegionItem extends TeaModel {
 
     public void setRegionName(String regionName) {
         this.regionName = regionName;
+    }
+
+    public String getLocation() {
+        return this.location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getWideRegionName() {
+        return this.wideRegionName;
+    }
+
+    public void setWideRegionName(String wideRegionName) {
+        this.wideRegionName = wideRegionName;
+    }
+
+    public String getWideRegionTitle() {
+        return this.wideRegionTitle;
+    }
+
+    public void setWideRegionTitle(String wideRegionTitle) {
+        this.wideRegionTitle = wideRegionTitle;
     }
 
     public String getAdministrativeRegion() {

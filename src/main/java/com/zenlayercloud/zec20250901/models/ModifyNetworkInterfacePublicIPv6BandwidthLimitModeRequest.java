@@ -11,7 +11,7 @@ public class ModifyNetworkInterfacePublicIPv6BandwidthLimitModeRequest extends T
 
     /**
      * IPv6 CIDR的ID。
-     * 可通过调用 ~~DescribeIpv6Cidrs~~ 获取。
+     * 可通过调用 **DescribeIpv6Cidrs** 获取。
      */
     public String ipv6CidrId;
 

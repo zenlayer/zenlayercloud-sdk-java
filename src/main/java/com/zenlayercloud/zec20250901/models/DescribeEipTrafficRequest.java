@@ -11,7 +11,7 @@ public class DescribeEipTrafficRequest extends TeaModel {
 
     /**
      * 要查询的弹性IP ID。
-     * 可通过调用 ~~DescribeEips~~ 获取。
+     * 可通过调用 **DescribeEips** 获取。
      */
     public String eipId;
 

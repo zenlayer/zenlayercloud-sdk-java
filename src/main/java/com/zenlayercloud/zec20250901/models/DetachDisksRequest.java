@@ -12,7 +12,7 @@ public class DetachDisksRequest extends TeaModel {
 
     /**
      * 要卸载的云盘ID列表。
-     * 可通过调用 ~~DescribeDisks~~ 获取。
+     * 可通过调用 **DescribeDisks** 获取。
      */
     public List<String> diskIds;
 

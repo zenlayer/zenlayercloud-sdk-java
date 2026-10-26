@@ -11,7 +11,7 @@ public class ModifyUnmanagedEgressIpBandwidthLimitModeRequest extends TeaModel {
 
     /**
      * 非托管出口IP的唯一ID。
-     * 可通过调用 ~~DescribeUnmanagedEgressIps~~ 获取。
+     * 可通过调用 **DescribeUnmanagedEgressIps** 获取。
      */
     public String unmanagedEgressIpId;
 

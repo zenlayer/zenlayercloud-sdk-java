@@ -24,25 +24,25 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     /**
      * 根据网卡所属的节点ID过滤。
-     * 可通过调用 ~~DescribeRegions~~ 获取。
+     * 可通过调用 **DescribeRegions** 获取。
      */
     public String regionId;
 
     /**
      * 根据网卡所属的VPC ID过滤。
-     * 可通过调用 ~~DescribeVpcs~~ 获取。
+     * 可通过调用 **DescribeVpcs** 获取。
      */
     public String vpcId;
 
     /**
      * 根据网卡所属的子网ID过滤。
-     * 可通过调用 ~~DescribeSubnets~~ 获取。
+     * 可通过调用 **DescribeSubnets** 获取。
      */
     public String subnetId;
 
     /**
      * 网卡关联的实例ID过滤。
-     * 可通过调用 ~~DescribeInstances~~ 获取。
+     * 可通过调用 **DescribeInstances** 获取。
      */
     public String instanceId;
 
@@ -73,7 +73,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     /**
      * 根据网卡所属的安全组ID过滤。
-     * 可通过调用 ~~DescribeSecurityGroups~~ 获取。
+     * 可通过调用 **DescribeSecurityGroups** 获取。
      */
     public String securityGroupId;
 

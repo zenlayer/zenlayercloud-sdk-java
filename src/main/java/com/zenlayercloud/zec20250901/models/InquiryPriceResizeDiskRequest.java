@@ -11,13 +11,14 @@ public class InquiryPriceResizeDiskRequest extends TeaModel {
 
     /**
      * 云硬盘ID。
-     * 可通过调用 ~~DescribeDisks~~ 获取。
+     * 可通过调用 **DescribeDisks** 获取。
      */
     public String diskId;
 
     /**
      * 云硬盘扩容后的目标大小。
      * 单位：GiB。
+     * 不能小于当前云硬盘大小。
      */
     public Integer diskSize;
 

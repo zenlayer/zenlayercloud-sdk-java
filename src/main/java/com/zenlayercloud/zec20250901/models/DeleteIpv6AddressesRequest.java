@@ -12,7 +12,7 @@ public class DeleteIpv6AddressesRequest extends TeaModel {
 
     /**
      * 要删除的公网IPv6的ID列表。
-     * 可通过调用 ~~DescribeIpv6Addresses~~ 获取。
+     * 可通过调用 **DescribeIpv6Addresses** 获取。
      */
     public List<String> ipv6Ids;
 

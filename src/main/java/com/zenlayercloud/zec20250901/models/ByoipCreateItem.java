@@ -22,7 +22,7 @@ public class ByoipCreateItem extends TeaModel {
 
     /**
      * 区域id。
-     * 可通过调用 ~~DescribeRegions~~ 获取。
+     * 可通过调用 **DescribeRegions** 获取。
      */
     public String regionId;
 

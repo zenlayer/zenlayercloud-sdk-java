@@ -11,7 +11,7 @@ public class DeleteCidrRequest extends TeaModel {
 
     /**
      * 要删除的CIDR ID。
-     * 可通过调用 ~~DescribeCidrs~~ 获取。
+     * 可通过调用 **DescribeCidrs** 获取。
      */
     public String cidrId;
 

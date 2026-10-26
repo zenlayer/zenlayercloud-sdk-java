@@ -12,13 +12,13 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     /**
      * 可用区ID。
-     * 可通过调用 ~~DescribeZones~~ 获取。
+     * 可通过调用 **DescribeZones** 获取。
      */
     public String zoneId;
 
     /**
      * 指定有效的镜像ID。
-     * 可以通过调用 ~~DescribeImages~~ 从返回的imageId字段获取。
+     * 可以通过调用 **DescribeImages** 从返回的imageId字段获取。
      */
     public String imageId;
 
@@ -30,7 +30,7 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     /**
      * 实例机型。
-     * 普通实例取值可通过 ~~DescribeZoneInstanceConfigInfos~~ 获得；GPU实例取值可通过 ~~DescribeZoneGpuInstanceConfigInfos~~ 获得。
+     * 普通实例取值可通过 **DescribeZoneInstanceConfigInfos** 获得；GPU实例取值可通过 **DescribeZoneGpuInstanceConfigInfos** 获得。
      */
     public String instanceType;
 
@@ -59,7 +59,7 @@ public class CreateZecInstancesRequest extends TeaModel {
     /**
      * 密钥ID。
      * 与password必须指定其中的一种（Windows和Generic类型的镜像无法指定密码和key）。
-     * 可调用 ~~ccs:DescribeKeyPairs~~ 来获得最新的密钥对信息。
+     * 可调用 **ccs:DescribeKeyPairs** 来获得最新的密钥对信息。
      * 关联密钥后，就可以通过对应的私钥来访问实例；密钥与密码不能同时指定，同时Windows操作系统不支持指定密钥。
      * 示例值：key-YWD2QFOl。
      */
@@ -91,7 +91,7 @@ public class CreateZecInstancesRequest extends TeaModel {
      * 要配置在实例主网卡的安全组ID。
      * 目前只能关联1个安全组。
      * 如果未指定，会默认用VPC关联的安全组。
-     * 可通过调用 ~~DescribeSecurityGroups~~ 获取。
+     * 可通过调用 **DescribeSecurityGroups** 获取。
      */
     public String securityGroupId;
 
@@ -104,7 +104,7 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     /**
      * 子网ID。
-     * 可通过调用 ~~DescribeSubnets~~ 获取。
+     * 可通过调用 **DescribeSubnets** 获取。
      */
     public String subnetId;
 
@@ -157,7 +157,7 @@ public class CreateZecInstancesRequest extends TeaModel {
      * IP数量必须和创建的实例数量一致。
      * 如果指定该字段，则不会新建EIP，`networkLineType`等相关字段将不生效。
      * 请确保创建的网卡`ipStackType`包含`IPv4`。
-     * 可通过调用 ~~DescribeEips~~ 获取。
+     * 可通过调用 **DescribeEips** 获取。
      */
     public List<String> eipIds;
 

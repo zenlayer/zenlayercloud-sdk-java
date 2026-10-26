@@ -16,7 +16,7 @@ public class ModifyDnatEntryRequest extends TeaModel {
 
     /**
      * 修改DNAT关联的弹性公网IP ID。
-     * 可通过调用 ~~DescribeEips~~ 获取。
+     * 可通过调用 **DescribeEips** 获取。
      */
     public String eipId;
 

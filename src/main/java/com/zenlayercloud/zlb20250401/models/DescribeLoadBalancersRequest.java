@@ -12,13 +12,13 @@ public class DescribeLoadBalancersRequest extends TeaModel {
 
     /**
      * 节点ID。
-     * 可通过调用 ~~zec:DescribeRegions~~ 获取。
+     * 可通过调用 **zec:DescribeRegions** 获取。
      */
     public String regionId;
 
     /**
      * 根据负载均衡后端服务器所属的VPC网络ID过滤。
-     * 可通过调用 ~~zec:DescribeVpcs~~ 获取。
+     * 可通过调用 **zec:DescribeVpcs** 获取。
      */
     public String vpcId;
 
@@ -70,7 +70,7 @@ public class DescribeLoadBalancersRequest extends TeaModel {
 
     /**
      * 负载均衡实例绑定的安全组ID。
-     * 可通过调用 ~~zec:DescribeSecurityGroups~~ 获取。
+     * 可通过调用 **zec:DescribeSecurityGroups** 获取。
      */
     public String securityGroupId;
 

@@ -11,7 +11,7 @@ public class DescribeNetworkInterfacePublicIPv6Request extends TeaModel {
 
     /**
      * 网卡ID。
-     * 可通过调用 ~~DescribeNetworkInterfaces~~ 获取。
+     * 可通过调用 **DescribeNetworkInterfaces** 获取。
      */
     public String nicId;
 

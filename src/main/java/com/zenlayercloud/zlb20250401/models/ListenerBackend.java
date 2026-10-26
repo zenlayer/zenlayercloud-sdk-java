@@ -11,7 +11,7 @@ public class ListenerBackend extends TeaModel {
 
     /**
      * 实例ID。
-     * 可通过调用 ~~zec:DescribeInstances~~ 从返回的instanceId字段获取。
+     * 可通过调用 **zec:DescribeInstances** 从返回的instanceId字段获取。
      */
     public String instanceId;
 

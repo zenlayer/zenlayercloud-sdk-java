@@ -18,7 +18,7 @@ public class DescribeRoutesRequest extends TeaModel {
 
     /**
      * 根据路由关联的VPC ID过滤。
-     * 可通过调用 ~~DescribeVpcs~~ 获取。
+     * 可通过调用 **DescribeVpcs** 获取。
      */
     public String vpcId;
 

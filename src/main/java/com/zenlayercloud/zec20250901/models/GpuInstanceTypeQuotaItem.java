@@ -17,7 +17,7 @@ public class GpuInstanceTypeQuotaItem extends TeaModel {
     /**
      * GPU规格ID。
      * 例如：z3a.g.C49.c8m32.1。
-     * 变更规格时将此值传入 ~~ModifyInstanceType~~ 的instanceType参数。
+     * 变更规格时将此值传入 **ModifyInstanceType** 的instanceType参数。
      */
     public String instanceType;
 

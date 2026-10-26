@@ -12,7 +12,7 @@ public class ModifySnapshotsAttributeRequest extends TeaModel {
 
     /**
      * 快照ID列表。
-     * 可通过调用 ~~DescribeSnapshots~~ 获取。
+     * 可通过调用 **DescribeSnapshots** 获取。
      */
     public List<String> snapshotIds;
 

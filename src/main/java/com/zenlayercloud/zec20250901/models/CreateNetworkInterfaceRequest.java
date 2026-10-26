@@ -20,7 +20,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     /**
      * 子网的ID。
-     * 可通过调用 ~~DescribeSubnets~~ 获取。
+     * 可通过调用 **DescribeSubnets** 获取。
      */
     public String subnetId;
 
@@ -40,7 +40,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
      * 指定安全组ID。
      * 目前一个网卡只能关联1个安全组。
      * 如果未指定，会默认用VPC关联下的安全组。
-     * 可通过调用 ~~DescribeSecurityGroups~~ 获取。
+     * 可通过调用 **DescribeSecurityGroups** 获取。
      */
     public String securityGroupId;
 
@@ -82,7 +82,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
      * 分配已有的EIP到网卡上。
      * IP数量必须和创建的网卡数量一致。
      * 请确保创建的网卡`ipStackType`包含`IPv4`。
-     * 可通过调用 ~~DescribeEips~~ 获取。
+     * 可通过调用 **DescribeEips** 获取。
      */
     public List<String> eipIds;
 

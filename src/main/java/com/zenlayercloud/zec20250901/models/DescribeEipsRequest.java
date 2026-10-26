@@ -17,7 +17,7 @@ public class DescribeEipsRequest extends TeaModel {
 
     /**
      * 按照EIP所属节点ID过滤。
-     * 可通过调用 ~~DescribeRegions~~ 获取。
+     * 可通过调用 **DescribeRegions** 获取。
      */
     public String regionId;
 
@@ -35,6 +35,12 @@ public class DescribeEipsRequest extends TeaModel {
      * 按照EIP的默认属性进行过滤。
      */
     public Boolean isDefault;
+
+    /**
+     * 按照EIP是否为自定义地址过滤。
+     * true 表示只返回从默认EIP池中手动指定公网IP的EIP。
+     */
+    public Boolean isCustomized;
 
     /**
      * 返回的分页大小。
@@ -65,7 +71,7 @@ public class DescribeEipsRequest extends TeaModel {
     /**
      * 按照EIP绑定的实例ID过滤。
      * 该字段过滤出该实例所绑定的网卡上的EIP。
-     * 可通过调用 ~~DescribeInstances~~ 获取。
+     * 可通过调用 **DescribeInstances** 获取。
      */
     public String instanceId;
 
@@ -76,7 +82,7 @@ public class DescribeEipsRequest extends TeaModel {
 
     /**
      * 按照EIP所属的CIDR ID过滤。
-     * 可通过调用 ~~DescribeCidrs~~ 获取。
+     * 可通过调用 **DescribeCidrs** 获取。
      */
     public List<String> cidrIds;
 
@@ -146,6 +152,14 @@ public class DescribeEipsRequest extends TeaModel {
 
     public void setIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
+    }
+
+    public Boolean getIsCustomized() {
+        return this.isCustomized;
+    }
+
+    public void setIsCustomized(Boolean isCustomized) {
+        this.isCustomized = isCustomized;
     }
 
     public Integer getPageSize() {

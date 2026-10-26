@@ -37,6 +37,12 @@ public class EipInfo extends TeaModel {
     public Boolean isDefault;
 
     /**
+     * 是否为自定义地址。
+     * true 表示该EIP的公网IP是从默认EIP池中手动指定的，计入自定义地址EIP配额；来自CIDR的EIP恒为false。
+     */
+    public Boolean isCustomized;
+
+    /**
      * EIP的状态。
      */
     public String status;
@@ -220,6 +226,14 @@ public class EipInfo extends TeaModel {
 
     public void setIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
+    }
+
+    public Boolean getIsCustomized() {
+        return this.isCustomized;
+    }
+
+    public void setIsCustomized(Boolean isCustomized) {
+        this.isCustomized = isCustomized;
     }
 
     public String getStatus() {

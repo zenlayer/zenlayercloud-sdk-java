@@ -12,13 +12,13 @@ public class DeleteImageCopyRequest extends TeaModel {
 
     /**
      * 自定义镜像ID。
-     * 可通过调用 ~~DescribeImages~~ 获取。
+     * 可通过调用 **DescribeImages** 获取。
      */
     public String imageId;
 
     /**
      * 待删除副本的区域ID列表。
-     * 可通过调用 ~~DescribeRegions~~ 获取。
+     * 可通过调用 **DescribeRegions** 获取。
      */
     public List<String> regionIds;
 

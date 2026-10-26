@@ -1102,6 +1102,78 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询指定掩码和数量的IPv6 CIDR地址块价格。
+         */
+    public DescribeIpv6CidrPriceResponse describeIpv6CidrPrice(DescribeIpv6CidrPriceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeIpv6CidrPrice",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeIpv6CidrPriceResponse());
+    }
+
+        /**
+         * 修改IPv6 CIDR地址段的属性。 目前只能修改名称。
+         */
+    public ModifyIpv6CidrAttributeResponse modifyIpv6CidrAttribute(ModifyIpv6CidrAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyIpv6CidrAttribute",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyIpv6CidrAttributeResponse());
+    }
+
+        /**
+         * 购买指定掩码和数量的IPv6 CIDR地址段。
+         */
+    public CreateIpv6CidrResponse createIpv6Cidr(CreateIpv6CidrRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateIpv6Cidr",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateIpv6CidrResponse());
+    }
+
+        /**
+         * 查询指定节点当前可售的IPv6 CIDR掩码档位、库存与单价。
+         */
+    public DescribeIpv6CidrNetmasksResponse describeIpv6CidrNetmasks(DescribeIpv6CidrNetmasksRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeIpv6CidrNetmasks",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeIpv6CidrNetmasksResponse());
+    }
+
+        /**
+         * 查询支持售卖IPv6 CIDR地址块的节点信息。
+         */
+    public DescribeIpv6CidrRegionsResponse describeIpv6CidrRegions(DescribeIpv6CidrRegionsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeIpv6CidrRegions",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeIpv6CidrRegionsResponse());
+    }
+
+        /**
+         * 查询各区域各线路的BYOIP支持状态，包括已支持、计划支持和暂不支持。
+         */
+    public DescribeByoipRegionAvailabilityResponse describeByoipRegionAvailability(DescribeByoipRegionAvailabilityRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeByoipRegionAvailability",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeByoipRegionAvailabilityResponse());
+    }
+
+        /**
          * 查询EIP支持的IP线路类型列表，可按节点过滤。
          */
     public DescribeEipNetworkLineTypesResponse describeEipNetworkLineTypes(DescribeEipNetworkLineTypesRequest request) {
@@ -1447,6 +1519,18 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new DescribeEipNewConnsMonitorDataResponse());
+    }
+
+        /**
+         * 批量修改多个弹性公网IP（EIP）的自定义封堵阈值，所有EIP使用同一组阈值。
+         */
+    public ModifyEipsBlockThresholdResponse modifyEipsBlockThreshold(ModifyEipsBlockThresholdRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyEipsBlockThreshold",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyEipsBlockThresholdResponse());
     }
 
         /**
@@ -2338,6 +2422,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询一段时间的NAT网关每秒新建连接数（CPS，All/In/Out）监控数据。
+         */
+    public DescribeNatGatewayNewConnsMonitorDataResponse describeNatGatewayNewConnsMonitorData(DescribeNatGatewayNewConnsMonitorDataRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeNatGatewayNewConnsMonitorData",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeNatGatewayNewConnsMonitorDataResponse());
+    }
+
+        /**
          * 创建一个DDoS防护策略。
          */
     public CreatePolicyResponse createPolicy(CreatePolicyRequest request) {
@@ -2470,7 +2566,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 查询账户下的安全组信息，支持按安全组ID或名称进行筛选，支持分页查询。
+         * 查询账户下的安全组信息，支持按安全组ID、名称或是否为默认安全组进行筛选，支持分页查询。
          */
     public DescribeSecurityGroupsResponse describeSecurityGroups(DescribeSecurityGroupsRequest request) {
         Map<String, ?> rsp = super.callApi(

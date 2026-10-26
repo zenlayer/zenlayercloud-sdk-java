@@ -11,7 +11,7 @@ public class SystemDisk extends TeaModel {
 
     /**
      * 系统盘ID。
-     * 该参数仅作为 ~~DescribeInstances~~ 等查询类接口的返回参数，不可用于 ~~CreateZecInstances~~ 等写接口的入参。
+     * 该参数仅作为 **DescribeInstances** 等查询类接口的返回参数，不可用于 **CreateZecInstances** 等写接口的入参。
      */
     public String diskId;
 

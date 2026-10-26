@@ -19,13 +19,13 @@ public class AddLoadBalancersPrivateIpsRequest extends TeaModel {
 
     /**
      * 负载均衡ID。
-     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
+     * 可通过调用 **DescribeLoadBalancers** 获取。
      */
     public String loadBalancerId;
 
     /**
      * 作为内网IP所在的子网ID。
-     * 可以通过调用 ~~zec:DescribeSubnets~~ 获取。
+     * 可以通过调用 **zec:DescribeSubnets** 获取。
      * 该子网所属的区域和VPC需与负载均衡实例一致。
      */
     public String subnetId;

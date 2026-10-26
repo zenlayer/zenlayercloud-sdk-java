@@ -12,7 +12,7 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     /**
      * VPC的ID。
      * 默认VPC不支持添加附属网段。
-     * 可通过调用 ~~DescribeVpcs~~ 获取。
+     * 可通过调用 **DescribeVpcs** 获取。
      */
     public String vpcId;
 

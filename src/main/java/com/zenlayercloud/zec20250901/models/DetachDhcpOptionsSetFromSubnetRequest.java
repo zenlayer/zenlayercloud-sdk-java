@@ -12,7 +12,7 @@ public class DetachDhcpOptionsSetFromSubnetRequest extends TeaModel {
 
     /**
      * 要与DHCP选项集取消关联的子网ID集合。
-     * 可通过调用 ~~DescribeSubnets~~ 获取。
+     * 可通过调用 **DescribeSubnets** 获取。
      */
     public List<String> subnetIds;
 

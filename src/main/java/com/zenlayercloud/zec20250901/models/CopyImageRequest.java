@@ -12,7 +12,7 @@ public class CopyImageRequest extends TeaModel {
 
     /**
      * 自定义镜像ID。
-     * 可通过调用 ~~DescribeImages~~ 获取。
+     * 可通过调用 **DescribeImages** 获取。
      */
     public String imageId;
 

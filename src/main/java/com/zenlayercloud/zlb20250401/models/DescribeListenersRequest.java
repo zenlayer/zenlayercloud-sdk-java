@@ -12,7 +12,7 @@ public class DescribeListenersRequest extends TeaModel {
 
     /**
      * 负载均衡实例的ID。
-     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
+     * 可通过调用 **DescribeLoadBalancers** 获取。
      */
     public String loadBalancerId;
 

@@ -11,7 +11,7 @@ public class DeleteByoAsnRequest extends TeaModel {
 
     /**
      * 待删除的BYO ASN的ID。
-     * 可通过调用 ~~DescribeByoAsns~~ 获取。
+     * 可通过调用 **DescribeByoAsns** 获取。
      */
     public String byoAsnId;
 

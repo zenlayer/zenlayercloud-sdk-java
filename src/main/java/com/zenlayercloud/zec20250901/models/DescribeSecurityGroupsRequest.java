@@ -22,6 +22,12 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public String securityGroupName;
 
     /**
+     * 根据是否为默认安全组筛选。
+     * 不传时不限。
+     */
+    public Boolean isDefault;
+
+    /**
      * 返回的分页大小。
      */
     public Integer pageSize;
@@ -45,6 +51,14 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     public void setSecurityGroupName(String securityGroupName) {
         this.securityGroupName = securityGroupName;
+    }
+
+    public Boolean getIsDefault() {
+        return this.isDefault;
+    }
+
+    public void setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
     }
 
     public Integer getPageSize() {

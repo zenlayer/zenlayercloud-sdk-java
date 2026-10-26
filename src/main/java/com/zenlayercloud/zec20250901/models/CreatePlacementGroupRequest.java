@@ -12,7 +12,7 @@ public class CreatePlacementGroupRequest extends TeaModel {
     /**
      * 置放组所属可用区ID。
      * 置放组的管理范围为zone维度。
-     * 可通过调用 ~~DescribeZones~~ 获取。
+     * 可通过调用 **DescribeZones** 获取。
      */
     public String zoneId;
 

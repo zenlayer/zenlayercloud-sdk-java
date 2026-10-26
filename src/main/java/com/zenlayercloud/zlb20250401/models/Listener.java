@@ -74,6 +74,13 @@ public class Listener extends TeaModel {
     public String algoOpts;
 
     /**
+     * 是否开启ProxyProtocol。
+     * `2`表示开启，`0`表示关闭。
+     * 仅IPv4负载均衡实例的`TCP`协议、`FNAT`/`DNAT`工作模式监听器才可能开启，历史监听器均为关闭。
+     */
+    public Integer proxyProtocol;
+
+    /**
      * 空闲超时时间，单位秒。
      */
     public Integer idleTimeout;
@@ -164,6 +171,14 @@ public class Listener extends TeaModel {
 
     public void setAlgoOpts(String algoOpts) {
         this.algoOpts = algoOpts;
+    }
+
+    public Integer getProxyProtocol() {
+        return this.proxyProtocol;
+    }
+
+    public void setProxyProtocol(Integer proxyProtocol) {
+        this.proxyProtocol = proxyProtocol;
     }
 
     public Integer getIdleTimeout() {

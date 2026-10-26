@@ -11,7 +11,7 @@ public class ModifyVpcAttributeRequest extends TeaModel {
 
     /**
      * VPC的ID。
-     * 可通过调用 ~~DescribeVpcs~~ 获取。
+     * 可通过调用 **DescribeVpcs** 获取。
      */
     public String vpcId;
 
@@ -25,7 +25,7 @@ public class ModifyVpcAttributeRequest extends TeaModel {
 
     /**
      * 需要修改的主IPv4 CIDR。
-     * 本字段只修改主网段，附属网段请通过 ~~AssociateVpcCidrBlock~~ 与 ~~UnassociateVpcCidrBlock~~ 增删。
+     * 本字段只修改主网段，附属网段请通过 **AssociateVpcCidrBlock** 与 **UnassociateVpcCidrBlock** 增删。
      * 掩码范围为9到29，且必须填写网段的起始地址，例如`10.0.0.0/16`。
      * 主网段只能在原网段范围内放大或缩小，即新网段必须与原主网段有重叠；换成与原主网段不相干的网段会被拒绝，主网段也不支持删除。
      * 缩小时，原本落在主网段内的子网必须仍落在新的主网段内，否则请求会被拒绝；附属网段下的子网不受影响。
@@ -44,7 +44,7 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     /**
      * 修改VPC绑定的安全组ID。
      * 如果不指定，则不会修改。
-     * 可通过调用 ~~DescribeSecurityGroups~~ 获取。
+     * 可通过调用 **DescribeSecurityGroups** 获取。
      */
     public String securityGroupId;
 

@@ -12,7 +12,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
 
     /**
      * NAT网关ID。
-     * 可通过调用 ~~DescribeNatGateways~~ 获取。
+     * 可通过调用 **DescribeNatGateways** 获取。
      */
     public String natGatewayId;
 
@@ -24,7 +24,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
 
     /**
      * NAT网关的子网ID。
-     * 可通过调用 ~~DescribeSubnets~~ 获取。
+     * 可通过调用 **DescribeSubnets** 获取。
      */
     public List<String> subnetIds;
 
@@ -43,7 +43,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
      * 修改NAT网关绑定的目标安全组ID。
      * 目前一张NAT网关只能关联一个安全组。
      * 指定该字段会解绑NAT网关原来的安全组。
-     * 可通过调用 ~~DescribeSecurityGroups~~ 获取。
+     * 可通过调用 **DescribeSecurityGroups** 获取。
      */
     public String securityGroupId;
 

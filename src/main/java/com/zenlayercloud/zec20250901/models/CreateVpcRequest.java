@@ -19,7 +19,7 @@ public class CreateVpcRequest extends TeaModel {
 
     /**
      * VPC的主IPv4 CIDR地址段。
-     * 创建完成后可调用 ~~AssociateVpcCidrBlock~~ 添加附属网段。
+     * 创建完成后可调用 **AssociateVpcCidrBlock** 添加附属网段。
      * 掩码范围为9到29，且必须填写网段的起始地址，例如`10.0.0.0/16`。
      * 不能与以下保留网段重叠：`0.0.0.0/8`、`100.64.0.0/10`、`127.0.0.0/8`、`169.254.0.0/16`、`224.0.0.0/4`。
      */

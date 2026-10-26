@@ -12,13 +12,13 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * 区域节点ID。
-     * 可通过调用 ~~DescribeRegions~~ 获取。
+     * 可通过调用 **DescribeRegions** 获取。
      */
     public String regionId;
 
     /**
      * NAT网关所属的VPC网络ID。
-     * 可通过调用 ~~DescribeVpcs~~ 获取。
+     * 可通过调用 **DescribeVpcs** 获取。
      */
     public String vpcId;
 
@@ -31,14 +31,14 @@ public class CreateNatGatewayRequest extends TeaModel {
     /**
      * NAT网关关联的子网ID集合。
      * 如果未指定，则指定区域的所有子网将自动关联NAT网关。
-     * 可通过调用 ~~DescribeSubnets~~ 获取。
+     * 可通过调用 **DescribeSubnets** 获取。
      */
     public List<String> subnetIds;
 
     /**
      * 安全组ID。
      * 如果未指定，则指定VPC所属的安全组ID。
-     * 可通过调用 ~~DescribeSecurityGroups~~ 获取。
+     * 可通过调用 **DescribeSecurityGroups** 获取。
      */
     public String securityGroupId;
 

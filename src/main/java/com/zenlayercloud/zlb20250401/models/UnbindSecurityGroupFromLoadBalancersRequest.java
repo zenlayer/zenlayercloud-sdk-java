@@ -12,7 +12,7 @@ public class UnbindSecurityGroupFromLoadBalancersRequest extends TeaModel {
 
     /**
      * 要解绑安全组的负载均衡ID集合。
-     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
+     * 可通过调用 **DescribeLoadBalancers** 获取。
      */
     public List<String> loadBalancerIds;
 

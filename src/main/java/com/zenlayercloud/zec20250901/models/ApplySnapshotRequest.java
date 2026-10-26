@@ -11,13 +11,13 @@ public class ApplySnapshotRequest extends TeaModel {
 
     /**
      * 快照唯一ID。
-     * 可通过调用 ~~DescribeSnapshots~~ 获取。
+     * 可通过调用 **DescribeSnapshots** 获取。
      */
     public String snapshotId;
 
     /**
      * 云硬盘ID。
-     * 可通过调用 ~~DescribeDisks~~ 获取。
+     * 可通过调用 **DescribeDisks** 获取。
      */
     public String diskId;
 

@@ -13,7 +13,7 @@ public class DescribeZoneGpuInstanceConfigInfosRequest extends TeaModel {
      * 要查询的可用区ID。
      * 例如：na-us-la-2a。
      * 不传时返回所有可用区的GPU规格。
-     * 可通过调用 ~~DescribeZones~~ 获取。
+     * 可通过调用 **DescribeZones** 获取。
      */
     public String zoneId;
 

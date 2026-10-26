@@ -13,7 +13,7 @@ public class DescribeEipConcurrentConnsMonitorDataRequest extends TeaModel {
      * EIP唯一标识ID。
      * 网络类型为PathBasedBandwidthIP的EIP不支持查询此指标，返回错误。
      * 与 instanceId 二选一。
-     * 可通过调用 ~~DescribeEips~~ 获取。
+     * 可通过调用 **DescribeEips** 获取。
      */
     public String eipId;
 
@@ -21,7 +21,7 @@ public class DescribeEipConcurrentConnsMonitorDataRequest extends TeaModel {
      * 实例ID。
      * 查询该实例绑定的所有IPv4 EIP的聚合数据（不含IPv6，且排除PathBasedBandwidthIP类型）。
      * 与 eipId 二选一。
-     * 可通过调用 ~~DescribeInstances~~ 获取。
+     * 可通过调用 **DescribeInstances** 获取。
      */
     public String instanceId;
 

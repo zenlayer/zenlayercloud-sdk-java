@@ -12,7 +12,7 @@ public class BatchAssignNetworkInterfaceIpv4Request extends TeaModel {
 
     /**
      * 要操作的网卡ID。
-     * 可通过调用 ~~DescribeNetworkInterfaces~~ 获取。
+     * 可通过调用 **DescribeNetworkInterfaces** 获取。
      */
     public String nicId;
 

@@ -12,13 +12,13 @@ public class SetSecurityGroupForLoadBalancersRequest extends TeaModel {
 
     /**
      * 要更换的安全组ID。
-     * 可以通过调用 ~~zec:DescribeSecurityGroups~~ 获取。
+     * 可以通过调用 **zec:DescribeSecurityGroups** 获取。
      */
     public String securityGroupId;
 
     /**
      * 要更换安全组的负载均衡ID集合。
-     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
+     * 可通过调用 **DescribeLoadBalancers** 获取。
      */
     public List<String> loadBalancerIds;
 

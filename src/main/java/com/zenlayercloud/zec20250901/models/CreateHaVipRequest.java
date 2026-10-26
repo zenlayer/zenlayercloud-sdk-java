@@ -11,7 +11,7 @@ public class CreateHaVipRequest extends TeaModel {
 
     /**
      * HaVip所属子网ID。
-     * 可通过调用 ~~DescribeSubnets~~ 获取。
+     * 可通过调用 **DescribeSubnets** 获取。
      */
     public String subnetId;
 
@@ -31,7 +31,7 @@ public class CreateHaVipRequest extends TeaModel {
     /**
      * 安全组ID。
      * 不填时使用VPC默认安全组。
-     * 可通过调用 ~~DescribeSecurityGroups~~ 获取。
+     * 可通过调用 **DescribeSecurityGroups** 获取。
      */
     public String securityGroupId;
 

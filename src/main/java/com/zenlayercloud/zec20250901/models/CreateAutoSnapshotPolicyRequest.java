@@ -12,7 +12,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * 可用区ID。
-     * 可通过调用 ~~DescribeZones~~ 获取。
+     * 可通过调用 **DescribeZones** 获取。
      */
     public String zoneId;
 

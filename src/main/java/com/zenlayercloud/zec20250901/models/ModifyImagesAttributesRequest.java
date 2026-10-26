@@ -12,7 +12,7 @@ public class ModifyImagesAttributesRequest extends TeaModel {
 
     /**
      * 待修改属性的镜像ID列表。
-     * 可通过调用 ~~DescribeImages~~ 获取。
+     * 可通过调用 **DescribeImages** 获取。
      */
     public List<String> imageIds;
 

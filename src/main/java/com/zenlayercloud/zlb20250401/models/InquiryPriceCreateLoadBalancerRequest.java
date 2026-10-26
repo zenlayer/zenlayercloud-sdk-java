@@ -11,14 +11,14 @@ public class InquiryPriceCreateLoadBalancerRequest extends TeaModel {
 
     /**
      * 区域节点ID。
-     * 可通过调用 ~~zec:DescribeRegions~~ 获取。
+     * 可通过调用 **zec:DescribeRegions** 获取。
      */
     public String regionId;
 
     /**
      * IP堆栈类型。
      * 负载均衡实例只支持单栈，即`IPv4`或`IPv6`，不支持双栈。
-     * 指定为`IPv6`时不支持配置公网网络参数（`internetChargeType`、`networkLineType`、`bandwidthMbps`、`trafficPackageSize`、`bandwidthClusterId`）——IPv6负载均衡的公网地址通过 ~~zlb:AssignLoadBalancerIpv6~~ 接口单独分配。
+     * 指定为`IPv6`时不支持配置公网网络参数（`internetChargeType`、`networkLineType`、`bandwidthMbps`、`trafficPackageSize`、`bandwidthClusterId`）——IPv6负载均衡的公网地址通过 **zlb:AssignLoadBalancerIpv6** 接口单独分配。
      */
     public String ipStackType;
 

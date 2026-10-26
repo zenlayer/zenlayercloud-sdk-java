@@ -59,6 +59,11 @@ public class Ipv6CidrInfo extends TeaModel {
     public Integer netmask;
 
     /**
+     * 该CIDR拆分成子网时使用的掩码长度。
+     */
+    public Integer subnetMaskLength;
+
+    /**
      * Pool的ID。
      * 表示该CIDR所属的公网IP池。
      */
@@ -170,6 +175,14 @@ public class Ipv6CidrInfo extends TeaModel {
 
     public void setNetmask(Integer netmask) {
         this.netmask = netmask;
+    }
+
+    public Integer getSubnetMaskLength() {
+        return this.subnetMaskLength;
+    }
+
+    public void setSubnetMaskLength(Integer subnetMaskLength) {
+        this.subnetMaskLength = subnetMaskLength;
     }
 
     public String getPoolId() {

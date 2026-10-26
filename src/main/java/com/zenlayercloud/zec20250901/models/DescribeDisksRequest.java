@@ -37,13 +37,13 @@ public class DescribeDisksRequest extends TeaModel {
 
     /**
      * 根据云盘挂载的实例ID进行筛选。
-     * 可通过调用 ~~DescribeInstances~~ 获取。
+     * 可通过调用 **DescribeInstances** 获取。
      */
     public String instanceId;
 
     /**
      * 根据云盘所在的可用区进行筛选。
-     * 可通过调用 ~~DescribeZones~~ 获取。
+     * 可通过调用 **DescribeZones** 获取。
      */
     public String zoneId;
 
@@ -60,7 +60,7 @@ public class DescribeDisksRequest extends TeaModel {
 
     /**
      * 根据云盘所在的节点ID进行筛选。
-     * 可通过调用 ~~DescribeRegions~~ 获取。
+     * 可通过调用 **DescribeRegions** 获取。
      */
     public String regionId;
 

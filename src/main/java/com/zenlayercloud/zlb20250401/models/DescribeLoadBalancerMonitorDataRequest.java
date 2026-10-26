@@ -11,13 +11,13 @@ public class DescribeLoadBalancerMonitorDataRequest extends TeaModel {
 
     /**
      * 负载均衡实例ID。
-     * 可通过调用 ~~DescribeLoadBalancers~~ 获取。
+     * 可通过调用 **DescribeLoadBalancers** 获取。
      */
     public String loadBalancerId;
 
     /**
      * 负载均衡器的监听器ID。
-     * 可通过调用 ~~DescribeListeners~~ 获取。
+     * 可通过调用 **DescribeListeners** 获取。
      */
     public String listenerId;
 

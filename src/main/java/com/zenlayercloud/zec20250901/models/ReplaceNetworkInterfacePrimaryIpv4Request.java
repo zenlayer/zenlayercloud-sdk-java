@@ -11,7 +11,7 @@ public class ReplaceNetworkInterfacePrimaryIpv4Request extends TeaModel {
 
     /**
      * 需要变更的网卡ID。
-     * 可通过调用 ~~DescribeNetworkInterfaces~~ 获取。
+     * 可通过调用 **DescribeNetworkInterfaces** 获取。
      */
     public String nicId;
 

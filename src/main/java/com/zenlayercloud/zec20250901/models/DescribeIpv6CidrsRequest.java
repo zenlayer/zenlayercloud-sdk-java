@@ -17,7 +17,7 @@ public class DescribeIpv6CidrsRequest extends TeaModel {
 
     /**
      * 根据CIDR所在的节点ID进行过滤。
-     * 可通过调用 ~~DescribeRegions~~ 获取。
+     * 可通过调用 **DescribeRegions** 获取。
      */
     public String regionId;
 
@@ -30,6 +30,12 @@ public class DescribeIpv6CidrsRequest extends TeaModel {
      * 根据CIDR地址进行过滤。
      */
     public String cidrBlock;
+
+    /**
+     * 根据CIDR来源进行过滤。
+     * CONSOLE表示从Zenlayer购买，BYOIP表示客户自带IP。
+     */
+    public String source;
 
     /**
      * 根据ASN编号进行过滤。
@@ -93,6 +99,14 @@ public class DescribeIpv6CidrsRequest extends TeaModel {
 
     public void setCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
+    }
+
+    public String getSource() {
+        return this.source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
     }
 
     public Integer getAsn() {

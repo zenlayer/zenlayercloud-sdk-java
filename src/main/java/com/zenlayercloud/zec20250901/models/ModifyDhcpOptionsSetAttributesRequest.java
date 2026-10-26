@@ -11,7 +11,7 @@ public class ModifyDhcpOptionsSetAttributesRequest extends TeaModel {
 
     /**
      * DHCP选项集ID。
-     * 可通过调用 ~~DescribeDhcpOptionsSets~~ 获取。
+     * 可通过调用 **DescribeDhcpOptionsSets** 获取。
      */
     public String dhcpOptionsSetId;
 

@@ -12,13 +12,13 @@ public class CancelAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * 自动快照策略ID。
-     * 可通过调用 ~~DescribeAutoSnapshotPolicies~~ 获取。
+     * 可通过调用 **DescribeAutoSnapshotPolicies** 获取。
      */
     public String autoSnapshotPolicyId;
 
     /**
      * 要移除的磁盘ID列表。
-     * 可通过调用 ~~DescribeDisks~~ 获取。
+     * 可通过调用 **DescribeDisks** 获取。
      */
     public List<String> diskIds;
 
