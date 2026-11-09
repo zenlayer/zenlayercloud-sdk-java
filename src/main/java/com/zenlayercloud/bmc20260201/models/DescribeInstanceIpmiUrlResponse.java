@@ -13,7 +13,7 @@ public class DescribeInstanceIpmiUrlResponse extends TeaModel {
 
     /**
      * IPMI控制台访问地址。
-     * 登录用户名固定为operator，密码为通过 ~~ResetInstanceIpmiPassword~~ 设置的密码。
+     * 登录用户名固定为operator，密码为通过 **ResetInstanceIpmiPassword** 设置的密码。
      */
     public String url;
 

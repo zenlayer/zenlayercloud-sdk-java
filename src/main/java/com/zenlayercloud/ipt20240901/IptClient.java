@@ -34,7 +34,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 查询IP Transit可连接数据中心。
+         * 查询Internet可连接数据中心。本接口已弃用，请改用 **sdn:DescribeInternetDatacenters**。
          */
     public DescribeIPTransitDatacentersResponse describeIPTransitDatacenters(DescribeIPTransitDatacentersRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -46,7 +46,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 查询IP Transit可用 ASN。
+         * 查询Internet可用 ASN。本接口已弃用，请改用 **sdn:DescribeInternetAvailableAsns**。
          */
     public DescribeIPTransitAvailableAsnsResponse describeIPTransitAvailableAsns(DescribeIPTransitAvailableAsnsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -58,7 +58,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 查询IP Transit可用公网地址段。
+         * 查询Internet可用公网地址段。本接口已弃用，请改用 **sdn:DescribeInternetAvailableCidrBlocks**。
          */
     public DescribeIPTransitAvailableCidrBlocksResponse describeIPTransitAvailableCidrBlocks(DescribeIPTransitAvailableCidrBlocksRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -70,7 +70,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * IP Transit创建询价。
+         * Internet创建询价。本接口已弃用，请改用 **sdn:InquiryCreateInternetPrice**。
          */
     public InquiryCreateIPTransitPriceResponse inquiryCreateIPTransitPrice(InquiryCreateIPTransitPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -82,7 +82,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 创建IP Transit。
+         * 创建Internet。本接口已弃用，请改用 **sdn:CreateInternet**。
          */
     public CreateIPTransitResponse createIPTransit(CreateIPTransitRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -94,7 +94,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 查询IP Transit列表。
+         * 查询Internet列表。本接口已弃用，请改用 **sdn:DescribeInternets**。
          */
     public DescribeIPTransitsResponse describeIPTransits(DescribeIPTransitsRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -106,7 +106,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 修改IP Transit带宽。
+         * 修改Internet带宽。本接口已弃用，请改用 **sdn:ModifyInternetConfig**（`type=BANDWIDTH`）。
          */
     public ModifyIPTransitBandwidthResponse modifyIPTransitBandwidth(ModifyIPTransitBandwidthRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -118,7 +118,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 修改IP Transit属性。
+         * 修改Internet属性。本接口已弃用，请改用 **sdn:ModifyInternetsAttribute**。
          */
     public ModifyIPTransitsAttributeResponse modifyIPTransitsAttribute(ModifyIPTransitsAttributeRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -130,7 +130,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 删除IP Transit。
+         * 删除Internet。本接口已弃用，请改用 **sdn:DeleteInternet**。
          */
     public DeleteIPTransitResponse deleteIPTransit(DeleteIPTransitRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -142,7 +142,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 查询IP Transit流量。
+         * 查询Internet流量。本接口已弃用，请改用 **sdn:DescribeInternetTraffic**。
          */
     public DescribeIPTransitTrafficResponse describeIPTransitTraffic(DescribeIPTransitTrafficRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -154,7 +154,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * IP Transit变配询价。
+         * Internet变配询价。本接口已弃用，请改用 **sdn:InquiryModifyInternetPrice**。
          */
     public InquiryModifyIPTransitPriceResponse inquiryModifyIPTransitPrice(InquiryModifyIPTransitPriceRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -166,7 +166,7 @@ public class IptClient extends AbstractClient {
     }
 
         /**
-         * 修改IP Transit配置。
+         * 修改Internet配置。本接口已弃用，请改用 **sdn:ModifyInternetConfig**。
          */
     public ModifyIPTransitConfigResponse modifyIPTransitConfig(ModifyIPTransitConfigRequest request) {
         Map<String, ?> rsp = super.callApi(

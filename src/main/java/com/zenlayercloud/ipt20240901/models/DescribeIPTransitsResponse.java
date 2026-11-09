@@ -21,7 +21,7 @@ public class DescribeIPTransitsResponse extends TeaModel {
     public Integer totalCount;
 
     /**
-     * IP Transit结果集。
+     * Internet结果集。
      */
     public List<IPTransit> dataSet;
 

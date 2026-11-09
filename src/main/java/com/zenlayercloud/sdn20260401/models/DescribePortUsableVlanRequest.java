@@ -17,7 +17,7 @@ public class DescribePortUsableVlanRequest extends TeaModel {
 
     /**
      * 数据中心ID。
-     * 可通过 ~~DescribeDataCenters~~ 接口获取。
+     * 可通过 **DescribeDataCenters** 接口获取。
      * 数据中心端口或数据中心至少传一个。
      */
     public String dcId;

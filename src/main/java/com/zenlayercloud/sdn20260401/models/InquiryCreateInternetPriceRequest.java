@@ -1,0 +1,211 @@
+package com.zenlayercloud.sdn20260401.models;
+
+import com.aliyun.tea.TeaModel;
+
+import java.util.List;
+
+/**
+ * 
+ */
+public class InquiryCreateInternetPriceRequest extends TeaModel {
+
+
+    /**
+     * 对端数据中心端口 ID。
+     */
+    public String peerPortId;
+
+    /**
+     * 本端数据中心 ID。
+     * 为空代表本地连接（Local Internet）。
+     */
+    public String internetDcId;
+
+    /**
+     * 网络计费方式。
+     */
+    public String internetType;
+
+    /**
+     * 保底带宽。
+     * 单位Mbps。
+     * 有且仅当internetType=ByInstanceBandwidth95时该字段必传。
+     */
+    public Integer commitBandwidth;
+
+    /**
+     * 带宽限速。
+     * 单位Mbps。
+     * 最小值不能低于5Mbps。
+     * 默认值为5Mbps。
+     * 95 计费下必须大于等于 `commitBandwidth`。
+     */
+    public Integer bandwidth;
+
+    /**
+     * 路由模式。
+     */
+    public String routingType;
+
+    /**
+     * 公网 IPv4 地址段大小列表。
+     * 与 `publicIpList` 互斥，优先级更低。
+     */
+    public List<Integer> publicIPv4BlockSize;
+
+    /**
+     * BGP入站路由类型。
+     */
+    public String bgpRouteType;
+
+    /**
+     * BGP 档位。
+     * 不传默认 PREMIUM（优质档）。
+     * `zbgRegionId` 非空（基于 Router 的 Internet）时不支持 STANDARD。
+     */
+    public String bgpTier;
+
+    /**
+     * IP 类型（IPV4 / IPV6）。
+     * 默认 IPV4。
+     */
+    public String ipType;
+
+    /**
+     * 公网 IP 分配列表。
+     * 与 `publicIPv4BlockSize` 互斥，优先级更高。
+     * 传此字段时 `publicIPv4BlockSize` 被忽略。
+     */
+    public List<InternetIpRequest> publicIpList;
+
+    /**
+     * ZBG 接入节点 ID。
+     * 非空时走基于 Router 的 Internet 询价流程。
+     */
+    public String zbgRegionId;
+
+    /**
+     * HA 高可用配置。
+     * 非空时询价包含 2 条 VLL 价格。
+     */
+    public InternetHaConfig haConfig;
+
+    /**
+     * 公网互联块掩码。
+     * 非空时响应包含公网互联 IP 块价格。
+     */
+    public Integer publicInterconnectNetmask;
+
+    public String getPeerPortId() {
+        return this.peerPortId;
+    }
+
+    public void setPeerPortId(String peerPortId) {
+        this.peerPortId = peerPortId;
+    }
+
+    public String getInternetDcId() {
+        return this.internetDcId;
+    }
+
+    public void setInternetDcId(String internetDcId) {
+        this.internetDcId = internetDcId;
+    }
+
+    public String getInternetType() {
+        return this.internetType;
+    }
+
+    public void setInternetType(String internetType) {
+        this.internetType = internetType;
+    }
+
+    public Integer getCommitBandwidth() {
+        return this.commitBandwidth;
+    }
+
+    public void setCommitBandwidth(Integer commitBandwidth) {
+        this.commitBandwidth = commitBandwidth;
+    }
+
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public void setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+    }
+
+    public String getRoutingType() {
+        return this.routingType;
+    }
+
+    public void setRoutingType(String routingType) {
+        this.routingType = routingType;
+    }
+
+    public List<Integer> getPublicIPv4BlockSize() {
+        return this.publicIPv4BlockSize;
+    }
+
+    public void setPublicIPv4BlockSize(List<Integer> publicIPv4BlockSize) {
+        this.publicIPv4BlockSize = publicIPv4BlockSize;
+    }
+
+    public String getBgpRouteType() {
+        return this.bgpRouteType;
+    }
+
+    public void setBgpRouteType(String bgpRouteType) {
+        this.bgpRouteType = bgpRouteType;
+    }
+
+    public String getBgpTier() {
+        return this.bgpTier;
+    }
+
+    public void setBgpTier(String bgpTier) {
+        this.bgpTier = bgpTier;
+    }
+
+    public String getIpType() {
+        return this.ipType;
+    }
+
+    public void setIpType(String ipType) {
+        this.ipType = ipType;
+    }
+
+    public List<InternetIpRequest> getPublicIpList() {
+        return this.publicIpList;
+    }
+
+    public void setPublicIpList(List<InternetIpRequest> publicIpList) {
+        this.publicIpList = publicIpList;
+    }
+
+    public String getZbgRegionId() {
+        return this.zbgRegionId;
+    }
+
+    public void setZbgRegionId(String zbgRegionId) {
+        this.zbgRegionId = zbgRegionId;
+    }
+
+    public InternetHaConfig getHaConfig() {
+        return this.haConfig;
+    }
+
+    public void setHaConfig(InternetHaConfig haConfig) {
+        this.haConfig = haConfig;
+    }
+
+    public Integer getPublicInterconnectNetmask() {
+        return this.publicInterconnectNetmask;
+    }
+
+    public void setPublicInterconnectNetmask(Integer publicInterconnectNetmask) {
+        this.publicInterconnectNetmask = publicInterconnectNetmask;
+    }
+
+}

@@ -41,6 +41,18 @@ public class InquiryPriceCreateLoadBalancerResponse extends TeaModel {
      */
     public PriceItem lcuPrice;
 
+    /**
+     * 公网IPv6网段的价格。
+     * 仅`ipStackType`为`IPv6`且指定了`internetChargeType`时返回，公网IPv6网段免费，价格恒为0。
+     */
+    public PriceItem ipv6Price;
+
+    /**
+     * 公网IPv6的网络计费的价格。
+     * 仅`ipStackType`为`IPv6`且指定了`internetChargeType`时返回；共享带宽包计费(`BandwidthCluster`)时为空。
+     */
+    public PriceItem ipv6NetworkPrice;
+
     public String getRequestId() {
         return this.requestId;
     }
@@ -87,6 +99,22 @@ public class InquiryPriceCreateLoadBalancerResponse extends TeaModel {
 
     public void setLcuPrice(PriceItem lcuPrice) {
         this.lcuPrice = lcuPrice;
+    }
+
+    public PriceItem getIpv6Price() {
+        return this.ipv6Price;
+    }
+
+    public void setIpv6Price(PriceItem ipv6Price) {
+        this.ipv6Price = ipv6Price;
+    }
+
+    public PriceItem getIpv6NetworkPrice() {
+        return this.ipv6NetworkPrice;
+    }
+
+    public void setIpv6NetworkPrice(PriceItem ipv6NetworkPrice) {
+        this.ipv6NetworkPrice = ipv6NetworkPrice;
     }
 
 }

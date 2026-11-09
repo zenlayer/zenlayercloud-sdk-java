@@ -11,12 +11,12 @@ public class CreateIPTransitRequest extends TeaModel {
 
 
     /**
-     * IP Transit名称。
+     * Internet名称。
      */
     public String iptName;
 
     /**
-     * IP Transit描述。
+     * Internet描述。
      */
     public String iptDescription;
 
@@ -32,8 +32,8 @@ public class CreateIPTransitRequest extends TeaModel {
 
     /**
      * 本端数据中心 ID。
-     * 为空代表本地连接（Local IPT）。
-     * 传 `haConfig` 创建高可用 IP Transit 时必传。
+     * 为空代表本地连接（Local Internet）。
+     * 传 `haConfig` 创建高可用 Internet 时必传。
      */
     public String iptDcId;
 
@@ -67,7 +67,7 @@ public class CreateIPTransitRequest extends TeaModel {
 
     /**
      * BFD 配置。
-     * 传 `haConfig` 创建高可用 IP Transit 时必传，且后续不允许关闭。
+     * 传 `haConfig` 创建高可用 Internet 时必传，且后续不允许关闭。
      */
     public BFDConfig bfd;
 
@@ -97,8 +97,8 @@ public class CreateIPTransitRequest extends TeaModel {
 
     /**
      * ZBG 接入节点 ID。
-     * 非空时走 Router RIPT 流程，与 `haConfig` 互斥。
-     * 调用 ~~zec:DescribeInterconnectBorderGatewayRegions~~ 以获取可用的节点信息。
+     * 非空时走基于 Router 的 Internet 流程，与 `haConfig` 互斥。
+     * 调用 **zec:DescribeInterconnectBorderGatewayRegions** 以获取可用的节点信息。
      */
     public String zbgRegionId;
 
@@ -111,7 +111,7 @@ public class CreateIPTransitRequest extends TeaModel {
     /**
      * 公网互联块掩码。
      * 非空启用公网地址互联，仅 BGP / Static 路由支持。
-     * 合法值见 ~~DescribeIPTransitDatacenters~~ 响应中 availableRoutingTypes[].publicInterconnectNetmasks。
+     * 合法值见 **DescribeIPTransitDatacenters** 响应中 availableRoutingTypes[].publicInterconnectNetmasks。
      */
     public Integer publicInterconnectNetmask;
 

@@ -17,6 +17,14 @@ public class AssignLoadBalancerIpv6Request extends TeaModel {
     public String loadBalancerId;
 
     /**
+     * 公网IPv6的来源子网ID。
+     * 该子网须属于负载均衡实例所在的VPC、与负载均衡实例同区域，且含公网IPv6网段（内网IPv6不满足）。
+     * 同一负载均衡实例的公网IPv6可分配自同一VPC下的多个子网。
+     * 可通过调用 **zec:DescribeSubnets** 获取。
+     */
+    public String subnetId;
+
+    /**
      * 本次分配的公网IPv6数量。
      * 子网剩余可用公网IPv6不足时将返回`INVALID_SUBNET_IPV6_INSUFFICIENT`。
      */
@@ -60,6 +68,14 @@ public class AssignLoadBalancerIpv6Request extends TeaModel {
 
     public void setLoadBalancerId(String loadBalancerId) {
         this.loadBalancerId = loadBalancerId;
+    }
+
+    public String getSubnetId() {
+        return this.subnetId;
+    }
+
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
     }
 
     public Integer getVipCount() {

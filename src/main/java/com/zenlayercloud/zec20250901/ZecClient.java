@@ -922,6 +922,42 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 授权其他账号把一张网卡绑定到它自己的实例上。
+         */
+    public CreateNetworkInterfacePermissionResponse createNetworkInterfacePermission(CreateNetworkInterfacePermissionRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateNetworkInterfacePermission",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateNetworkInterfacePermissionResponse());
+    }
+
+        /**
+         * 查询网卡授权给其他账号的记录。
+         */
+    public DescribeNetworkInterfacePermissionsResponse describeNetworkInterfacePermissions(DescribeNetworkInterfacePermissionsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeNetworkInterfacePermissions",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeNetworkInterfacePermissionsResponse());
+    }
+
+        /**
+         * 删除一条网卡授权。
+         */
+    public DeleteNetworkInterfacePermissionResponse deleteNetworkInterfacePermission(DeleteNetworkInterfacePermissionRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteNetworkInterfacePermission",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteNetworkInterfacePermissionResponse());
+    }
+
+        /**
          * 查询账户下的公网IP池信息，支持按IP池ID、地域或名称进行筛选，支持分页查询。
          */
     public DescribePoolsResponse describePools(DescribePoolsRequest request) {

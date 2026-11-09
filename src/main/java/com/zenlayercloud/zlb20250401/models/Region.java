@@ -24,6 +24,11 @@ public class Region extends TeaModel {
      */
     public String cityCode;
 
+    /**
+     * 该区域是否支持负载均衡内网IP。
+     */
+    public Boolean supportPrivateIp;
+
     public String getRegionId() {
         return this.regionId;
     }
@@ -46,6 +51,14 @@ public class Region extends TeaModel {
 
     public void setCityCode(String cityCode) {
         this.cityCode = cityCode;
+    }
+
+    public Boolean getSupportPrivateIp() {
+        return this.supportPrivateIp;
+    }
+
+    public void setSupportPrivateIp(Boolean supportPrivateIp) {
+        this.supportPrivateIp = supportPrivateIp;
     }
 
 }

@@ -10,7 +10,7 @@ public class DescribeIPTransitTrafficRequest extends TeaModel {
 
 
     /**
-     * IP Transit ID。
+     * Internet ID。
      */
     public String iptId;
 

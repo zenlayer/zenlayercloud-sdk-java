@@ -76,6 +76,7 @@ public class ModifyListenerRequest extends TeaModel {
      * 不传表示不修改该字段；传`None`表示显式清空已开启的选项。
      * 校验按修改后生效的最终状态判定：若该监听器已开启此选项，把`kind`或`scheduler`改为其它组合时也需一并传`None`。
      * 开启后与会话保持（`persistent`）互斥：若该监听器已开启此选项，把`persistent`改为非0值同样会报错，需一并传`None`将其清空。
+     * 负载均衡已绑定内网IP时不支持开启。
      */
     public String algoOpts;
 

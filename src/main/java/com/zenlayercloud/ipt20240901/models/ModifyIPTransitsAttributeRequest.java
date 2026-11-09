@@ -11,18 +11,18 @@ public class ModifyIPTransitsAttributeRequest extends TeaModel {
 
 
     /**
-     * IP Transit ID 列表。
+     * Internet ID 列表。
      * 最多支持 100 个。
      */
     public List<String> iptIds;
 
     /**
-     * IP Transit名称。
+     * Internet名称。
      */
     public String iptName;
 
     /**
-     * IP Transit描述。
+     * Internet描述。
      */
     public String iptDescription;
 

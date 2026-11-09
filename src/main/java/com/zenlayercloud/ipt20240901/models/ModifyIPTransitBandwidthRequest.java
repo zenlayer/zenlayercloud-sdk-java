@@ -10,7 +10,7 @@ public class ModifyIPTransitBandwidthRequest extends TeaModel {
 
 
     /**
-     * IP Transit ID。
+     * Internet ID。
      */
     public String iptId;
 

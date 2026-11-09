@@ -1,0 +1,93 @@
+package com.zenlayercloud.sdn20260401.models;
+
+import com.aliyun.tea.TeaModel;
+
+import java.util.List;
+
+/**
+ * BGP相关配置
+ */
+public class InternetBgpConfig extends TeaModel {
+
+
+    /**
+     * 入站路由类型。
+     */
+    public String routeType;
+
+    /**
+     * BGP 档位。
+     * STANDARD-普通 BGP，PREMIUM-优质 BGP。
+     * 不传默认优质档（与拆分前行为一致）。
+     */
+    public String tier;
+
+    /**
+     * 宣告出站路由的ASN号。
+     */
+    public Long asn;
+
+    /**
+     * 加密认证秘钥。
+     */
+    public String password;
+
+    /**
+     * 宣告出站路由的ASN号列表。
+     */
+    public List<Long> asnList;
+
+    /**
+     * 宣告出站路由的AS-SET列表。
+     */
+    public List<String> asSetList;
+
+    public String getRouteType() {
+        return this.routeType;
+    }
+
+    public void setRouteType(String routeType) {
+        this.routeType = routeType;
+    }
+
+    public String getTier() {
+        return this.tier;
+    }
+
+    public void setTier(String tier) {
+        this.tier = tier;
+    }
+
+    public Long getAsn() {
+        return this.asn;
+    }
+
+    public void setAsn(Long asn) {
+        this.asn = asn;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<Long> getAsnList() {
+        return this.asnList;
+    }
+
+    public void setAsnList(List<Long> asnList) {
+        this.asnList = asnList;
+    }
+
+    public List<String> getAsSetList() {
+        return this.asSetList;
+    }
+
+    public void setAsSetList(List<String> asSetList) {
+        this.asSetList = asSetList;
+    }
+
+}

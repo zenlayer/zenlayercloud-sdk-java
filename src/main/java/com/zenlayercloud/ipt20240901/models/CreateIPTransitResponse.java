@@ -20,7 +20,7 @@ public class CreateIPTransitResponse extends TeaModel {
     public String orderNumber;
 
     /**
-     * IP Transit ID。
+     * Internet ID。
      */
     public String iptId;
 

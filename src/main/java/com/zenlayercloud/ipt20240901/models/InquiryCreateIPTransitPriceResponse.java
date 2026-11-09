@@ -22,7 +22,7 @@ public class InquiryCreateIPTransitPriceResponse extends TeaModel {
     public PriceItem privateConnectPrice;
 
     /**
-     * IP Transit带宽价格。
+     * Internet带宽价格。
      */
     public PriceItem iptBandwidthPrice;
 

@@ -31,10 +31,11 @@ public class LoadBalancer extends TeaModel {
     public String vpcId;
 
     /**
-     * 负载均衡实例所属的子网ID。
-     * 健康检查内网IP分配在该子网；`ipStackType`为`IPv6`时，公网IPv6网段也分配在该子网。
-     * 创建时未指定子网的实例该字段为空。
+     * 已废弃。
+     * 仅对`IPv4`负载均衡有意义：创建时指定的子网，健康检查源IP分配在该子网，未指定时为空。
+     * `IPv6`负载均衡不使用该字段，新建实例恒为空；其公网VIP可分配自同一VPC下的多个子网。
      */
+    @Deprecated
     public String subnetId;
 
     /**
@@ -128,10 +129,12 @@ public class LoadBalancer extends TeaModel {
         this.vpcId = vpcId;
     }
 
+    @Deprecated
     public String getSubnetId() {
         return this.subnetId;
     }
 
+    @Deprecated
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }

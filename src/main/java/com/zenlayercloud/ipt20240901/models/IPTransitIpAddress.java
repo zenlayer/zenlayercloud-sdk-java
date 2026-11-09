@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * IP Transit公网 IP 地址信息。
+ * Internet公网 IP 地址信息。
  */
 public class IPTransitIpAddress extends TeaModel {
 

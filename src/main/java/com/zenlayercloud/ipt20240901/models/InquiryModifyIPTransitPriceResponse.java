@@ -17,7 +17,7 @@ public class InquiryModifyIPTransitPriceResponse extends TeaModel {
 
     /**
      * 专线（VLL）价格。
-     * BANDWIDTH 类型时可能有值，Router RIPT 为空。
+     * BANDWIDTH 类型时可能有值，基于 Router 的 Internet 为空。
      */
     public PriceItem privateConnectPrice;
 
@@ -28,7 +28,7 @@ public class InquiryModifyIPTransitPriceResponse extends TeaModel {
     public Integer privateConnectBandwidth;
 
     /**
-     * RIPT 带宽价格。
+     * Internet 带宽价格。
      */
     public PriceItem iptPrice;
 

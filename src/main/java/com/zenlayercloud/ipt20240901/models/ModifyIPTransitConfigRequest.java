@@ -10,7 +10,7 @@ public class ModifyIPTransitConfigRequest extends TeaModel {
 
 
     /**
-     * IP Transit 实例 ID。
+     * Internet 实例 ID。
      */
     public String iptId;
 
@@ -35,7 +35,7 @@ public class ModifyIPTransitConfigRequest extends TeaModel {
     /**
      * BFD 配置。
      * type=BFD 时填写；传 null 表示关闭 BFD。
-     * 高可用 IP Transit 不允许关闭 BFD。
+     * 高可用 Internet 不允许关闭 BFD。
      */
     public BFDConfig bfd;
 

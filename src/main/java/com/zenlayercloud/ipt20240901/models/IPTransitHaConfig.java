@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * IP Transit HA配置信息。
+ * Internet HA配置信息。
  */
 public class IPTransitHaConfig extends TeaModel {
 

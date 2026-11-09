@@ -11,7 +11,7 @@ public class CreatePortRequest extends TeaModel {
 
     /**
      * 数据中心ID。
-     * 可通过 ~~DescribeDataCenters~~ 接口获取。
+     * 可通过 **DescribeDataCenters** 接口获取。
      */
     public String dcId;
 
@@ -29,7 +29,7 @@ public class CreatePortRequest extends TeaModel {
 
     /**
      * 数据中心端口规格。
-     * 可通过 ~~DescribeDataCenterPortPrice~~ 接口获取，取值：1G | 10G | 40G | 100G | 400G。
+     * 可通过 **DescribeDataCenterPortPrice** 接口获取，取值：1G | 10G | 40G | 100G | 400G。
      */
     public String portType;
 

@@ -5,28 +5,28 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * IP Transit信息。
+ * Internet信息。
  */
 public class IPTransit extends TeaModel {
 
 
     /**
-     * IP Transit ID。
+     * Internet ID。
      */
     public String iptId;
 
     /**
-     * IP Transit名称。
+     * Internet名称。
      */
     public String iptName;
 
     /**
-     * IP Transit描述。
+     * Internet描述。
      */
     public String iptDescription;
 
     /**
-     * IP Transit所在数据中心。
+     * Internet所在数据中心。
      */
     public DatacenterInfo dataCenter;
 
@@ -142,7 +142,7 @@ public class IPTransit extends TeaModel {
 
     /**
      * ZBG 区域 ID。
-     * ZBG 场景下的 IP Transit 将返回此字段。
+     * ZBG 场景下的 Internet 将返回此字段。
      */
     public String zbgRegionId;
 

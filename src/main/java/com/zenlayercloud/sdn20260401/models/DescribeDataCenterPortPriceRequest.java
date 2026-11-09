@@ -11,7 +11,7 @@ public class DescribeDataCenterPortPriceRequest extends TeaModel {
 
     /**
      * 数据中心ID。
-     * 可通过 ~~DescribeDataCenters~~ 接口获取。
+     * 可通过 **DescribeDataCenters** 接口获取。
      */
     public String dcId;
 

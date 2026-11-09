@@ -36,7 +36,7 @@ public class DescribePortsRequest extends TeaModel {
 
     /**
      * 数据中心ID。
-     * 可通过 ~~DescribeDataCenters~~ 接口获取。
+     * 可通过 **DescribeDataCenters** 接口获取。
      */
     public String dcId;
 
@@ -45,6 +45,12 @@ public class DescribePortsRequest extends TeaModel {
      * 最长不超过 64 个字符，支持模糊匹配、忽略大小写。
      */
     public String cityName;
+
+    /**
+     * LAG ID 列表。
+     * 传入后只返回归属于这些 LAG 的成员口，最大支持长度为 100。
+     */
+    public List<String> lagIds;
 
     /**
      * 资源组 ID。
@@ -110,6 +116,14 @@ public class DescribePortsRequest extends TeaModel {
 
     public void setCityName(String cityName) {
         this.cityName = cityName;
+    }
+
+    public List<String> getLagIds() {
+        return this.lagIds;
+    }
+
+    public void setLagIds(List<String> lagIds) {
+        this.lagIds = lagIds;
     }
 
     public String getResourceGroupId() {

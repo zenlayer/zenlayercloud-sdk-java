@@ -29,9 +29,20 @@ public class CreateLoadBalancerRequest extends TeaModel {
      * 可以通过调用 **zec:DescribeSubnets** 获取。
      * `vpcId`和`subnetId`至少指定一个。
      * 该子网需与`regionId`同区域，同时指定`vpcId`时还须属于该VPC。
-     * `ipStackType`为`IPv4`时该子网需支持IPv4，此参数可不指定（由系统在该VPC内选择）；为`IPv6`时该子网需含公网IPv6网段（内网IPv6不满足），且**此参数必填**——公网IPv6 VIP与健康检查段都从该子网分配，不指定将返回`MISSING_PARAMETER`。
+     * `ipStackType`为`IPv4`时该子网需支持IPv4，用于分配健康检查内网IP，此参数可不指定（由系统在该VPC内选择）；为`IPv6`时该参数仅表示公网IPv6的来源子网：指定了`internetChargeType`时**必填**，且该子网需含公网IPv6网段（内网IPv6不满足），不指定将返回`MISSING_PARAMETER`；未指定`internetChargeType`时不生效。
      */
     public String subnetId;
+
+    /**
+     * 内网VIP的来源子网ID。
+     * 可以通过调用 **zec:DescribeSubnets** 获取。
+     * 指定后，每个负载均衡实例创建时从该子网自动分配1个内网VIP；不指定则创建时不分配内网VIP，可在创建后调用 **AddLoadBalancersPrivateIps** 添加。
+     * 该子网需支持IPv4，与`regionId`同区域且属于负载均衡所在的VPC。
+     * 仅`ipStackType`为`IPv4`时可指定。
+     * `regionId`所在地域需支持负载均衡内网IP，可调用 **DescribeLoadBalancerRegions** 查看`supportPrivateIp`；不支持时返回`OPERATION_DENIED_LB_REGION_NOT_SUPPORT_PRIVATE_IP`。
+     * 内网VIP与公网IP共同占用单个负载均衡的VIP配额。
+     */
+    public String privateIpSubnetId;
 
     /**
      * 健康检查内网源IP地址，数量必须为2。
@@ -50,7 +61,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
     /**
      * IP堆栈类型。
      * 负载均衡实例只支持单栈，即`IPv4`或`IPv6`，不支持双栈。
-     * 指定为`IPv6`时不支持配置公网网络参数（`internetChargeType`、`networkLineType`、`bandwidthMbps`、`trafficPackageSize`、`bandwidthClusterId`），也不能指定`eipIds`——EIP均为IPv4，IPv6负载均衡的公网地址通过 **zlb:AssignLoadBalancerIpv6** 接口单独分配。
+     * 指定为`IPv6`时：指定`internetChargeType`表示创建时一并为每个实例分配1个公网IPv6网段，线路固定为BGP，此时`subnetId`必填、不能指定`networkLineType`；不指定则创建时不分配公网IPv6，之后可通过 **zlb:AssignLoadBalancerIpv6** 接口分配。
+     * `IPv6`不能指定`eipIds`——EIP均为IPv4。
      */
     public String ipStackType;
 
@@ -66,6 +78,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     /**
      * IP网络计费模式。
      * 指定`eipIds`时该参数不生效。
+     * `ipStackType`为`IPv6`时作用于创建时分配的公网IPv6。
      */
     public String internetChargeType;
 
@@ -78,6 +91,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * IP的网络类型。
+     * 仅`ipStackType`为`IPv4`时可指定；`IPv6`的线路固定为BGP，指定将返回`INVALID_PARAMETER_CONFLICT`。
      */
     public String networkLineType;
 
@@ -149,6 +163,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
+    }
+
+    public String getPrivateIpSubnetId() {
+        return this.privateIpSubnetId;
+    }
+
+    public void setPrivateIpSubnetId(String privateIpSubnetId) {
+        this.privateIpSubnetId = privateIpSubnetId;
     }
 
     public List<String> getHealthCheckPrivateIps() {

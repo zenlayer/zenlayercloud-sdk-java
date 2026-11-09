@@ -789,4 +789,136 @@ public class SdnClient extends AbstractClient {
         return TeaModel.toModel(rsp, new DescribeCloudRouterDCToDCTrafficResponse());
     }
 
+        /**
+         * Internet创建询价。
+         */
+    public InquiryCreateInternetPriceResponse inquiryCreateInternetPrice(InquiryCreateInternetPriceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryCreateInternetPrice",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryCreateInternetPriceResponse());
+    }
+
+        /**
+         * 查询Internet流量。
+         */
+    public DescribeInternetTrafficResponse describeInternetTraffic(DescribeInternetTrafficRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeInternetTraffic",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeInternetTrafficResponse());
+    }
+
+        /**
+         * 修改Internet属性。
+         */
+    public ModifyInternetsAttributeResponse modifyInternetsAttribute(ModifyInternetsAttributeRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyInternetsAttribute",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyInternetsAttributeResponse());
+    }
+
+        /**
+         * 删除Internet。
+         */
+    public DeleteInternetResponse deleteInternet(DeleteInternetRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DeleteInternet",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DeleteInternetResponse());
+    }
+
+        /**
+         * 修改Internet配置。
+         */
+    public ModifyInternetConfigResponse modifyInternetConfig(ModifyInternetConfigRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ModifyInternetConfig",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ModifyInternetConfigResponse());
+    }
+
+        /**
+         * 查询Internet可用 ASN。
+         */
+    public DescribeInternetAvailableAsnsResponse describeInternetAvailableAsns(DescribeInternetAvailableAsnsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeInternetAvailableAsns",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeInternetAvailableAsnsResponse());
+    }
+
+        /**
+         * 查询Internet可连接数据中心。
+         */
+    public DescribeInternetDatacentersResponse describeInternetDatacenters(DescribeInternetDatacentersRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeInternetDatacenters",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeInternetDatacentersResponse());
+    }
+
+        /**
+         * 查询Internet可用公网地址段。
+         */
+    public DescribeInternetAvailableCidrBlocksResponse describeInternetAvailableCidrBlocks(DescribeInternetAvailableCidrBlocksRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeInternetAvailableCidrBlocks",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeInternetAvailableCidrBlocksResponse());
+    }
+
+        /**
+         * Internet变配询价。
+         */
+    public InquiryModifyInternetPriceResponse inquiryModifyInternetPrice(InquiryModifyInternetPriceRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "InquiryModifyInternetPrice",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new InquiryModifyInternetPriceResponse());
+    }
+
+        /**
+         * 创建Internet。
+         */
+    public CreateInternetResponse createInternet(CreateInternetRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "CreateInternet",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new CreateInternetResponse());
+    }
+
+        /**
+         * 查询Internet列表。
+         */
+    public DescribeInternetsResponse describeInternets(DescribeInternetsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeInternets",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeInternetsResponse());
+    }
+
 }

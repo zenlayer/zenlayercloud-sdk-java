@@ -18,7 +18,7 @@ public class InquiryPriceCreateLoadBalancerRequest extends TeaModel {
     /**
      * IP堆栈类型。
      * 负载均衡实例只支持单栈，即`IPv4`或`IPv6`，不支持双栈。
-     * 指定为`IPv6`时不支持配置公网网络参数（`internetChargeType`、`networkLineType`、`bandwidthMbps`、`trafficPackageSize`、`bandwidthClusterId`）——IPv6负载均衡的公网地址通过 **zlb:AssignLoadBalancerIpv6** 接口单独分配。
+     * 指定为`IPv6`且指定`internetChargeType`时，按创建时一并分配1个公网IPv6网段计价（网段免费，返回`ipv6Price`与`ipv6NetworkPrice`），线路固定为BGP，不能指定`networkLineType`。
      */
     public String ipStackType;
 
@@ -37,6 +37,7 @@ public class InquiryPriceCreateLoadBalancerRequest extends TeaModel {
 
     /**
      * IP的网络类型。
+     * 仅`ipStackType`为`IPv4`时可指定；`IPv6`的线路固定为BGP，指定将返回`INVALID_PARAMETER_CONFLICT`。
      */
     public String networkLineType;
 

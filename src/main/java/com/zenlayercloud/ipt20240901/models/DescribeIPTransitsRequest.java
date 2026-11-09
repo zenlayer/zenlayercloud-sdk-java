@@ -11,20 +11,20 @@ public class DescribeIPTransitsRequest extends TeaModel {
 
 
     /**
-     * IP Transit ID 列表。
+     * Internet ID 列表。
      * 最多支持 100 个 ID 查询。
      */
     public List<String> iptIds;
 
     /**
-     * IP Transit名称。
+     * Internet名称。
      * 模糊匹配。
      */
     public String iptName;
 
     /**
      * 资源组 ID。
-     * 不传则返回该用户可见的所有资源组内的IP Transit。
+     * 不传则返回该用户可见的所有资源组内的Internet。
      */
     public String resourceGroupId;
 

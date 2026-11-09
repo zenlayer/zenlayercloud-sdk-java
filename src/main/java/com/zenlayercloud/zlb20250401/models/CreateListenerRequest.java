@@ -72,6 +72,7 @@ public class CreateListenerRequest extends TeaModel {
      * 仅当工作模式（`kind`）为`DR`且调度算法（`scheduler`）为`mh`时可设置，其它组合传入将报错。
      * 创建时传`None`等价于不设置该字段。
      * 开启后与会话保持（`persistent`）互斥，不可同时设置非0值。
+     * 负载均衡已绑定内网IP时不支持开启。
      */
     public String algoOpts;
 

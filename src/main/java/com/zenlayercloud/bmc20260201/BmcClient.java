@@ -454,6 +454,18 @@ public class BmcClient extends AbstractClient {
     }
 
         /**
+         * 按平台分配的IP重新配置裸金属实例的网络。
+         */
+    public ResetInstanceIpResponse resetInstanceIp(ResetInstanceIpRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "ResetInstanceIp",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new ResetInstanceIpResponse());
+    }
+
+        /**
          * 查询可售的Ipv4 Cidr Block资源。
          */
     public DescribeAvailableIpv4ResourcesResponse describeAvailableIpv4Resources(DescribeAvailableIpv4ResourcesRequest request) {

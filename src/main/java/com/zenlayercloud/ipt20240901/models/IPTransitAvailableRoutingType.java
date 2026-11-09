@@ -5,7 +5,7 @@ import com.aliyun.tea.TeaModel;
 import java.util.List;
 
 /**
- * IP Transit可用路由模式信息。
+ * Internet可用路由模式信息。
  */
 public class IPTransitAvailableRoutingType extends TeaModel {
 

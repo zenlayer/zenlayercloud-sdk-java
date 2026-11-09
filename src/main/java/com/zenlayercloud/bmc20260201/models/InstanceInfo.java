@@ -184,7 +184,7 @@ public class InstanceInfo extends TeaModel {
 
     /**
      * IPMI控制台是否已开启。
-     * 通过 ~~ResetInstanceIpmiPassword~~ 设置IPMI密码后开启，登录用户名固定为operator；重装系统后会关闭，需要重新设置密码。
+     * 通过 **ResetInstanceIpmiPassword** 设置IPMI密码后开启，登录用户名固定为operator；重装系统后会关闭，需要重新设置密码。
      */
     public Boolean ipmiEnabled;
 

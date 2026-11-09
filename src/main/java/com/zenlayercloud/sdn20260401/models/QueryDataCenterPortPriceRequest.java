@@ -11,13 +11,13 @@ public class QueryDataCenterPortPriceRequest extends TeaModel {
 
     /**
      * 数据中心ID。
-     * 具体取值可通过调用接口~~DescribeDataCenters~~来获得最新的数据中心列表。
+     * 具体取值可通过调用接口**DescribeDataCenters**来获得最新的数据中心列表。
      */
     public String dcId;
 
     /**
      * 数据中心端口规格。
-     * 具体取值可通过调用接口~~DescribeDataCenterPortPrice~~来获得最新的数据中心端口规格表。
+     * 具体取值可通过调用接口**DescribeDataCenterPortPrice**来获得最新的数据中心端口规格表。
      */
     public String portType;
 

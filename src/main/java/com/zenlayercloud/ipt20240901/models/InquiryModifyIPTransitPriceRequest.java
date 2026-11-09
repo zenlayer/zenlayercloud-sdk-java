@@ -10,7 +10,7 @@ public class InquiryModifyIPTransitPriceRequest extends TeaModel {
 
 
     /**
-     * IP Transit 实例 ID。
+     * Internet 实例 ID。
      */
     public String iptId;
 

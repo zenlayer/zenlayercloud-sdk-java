@@ -17,7 +17,7 @@ public class InquiryCreateIPTransitPriceRequest extends TeaModel {
 
     /**
      * 本端数据中心 ID。
-     * 为空代表本地连接（Local IPT）。
+     * 为空代表本地连接（Local Internet）。
      */
     public String iptDcId;
 
@@ -61,7 +61,7 @@ public class InquiryCreateIPTransitPriceRequest extends TeaModel {
     /**
      * BGP 档位。
      * 不传默认 PREMIUM（优质档）。
-     * `zbgRegionId` 非空（基于 router 的 IP Transit）时不支持 STANDARD。
+     * `zbgRegionId` 非空（基于 Router 的 Internet）时不支持 STANDARD。
      */
     public String bgpTier;
 
@@ -80,7 +80,7 @@ public class InquiryCreateIPTransitPriceRequest extends TeaModel {
 
     /**
      * ZBG 接入节点 ID。
-     * 非空时走 Router RIPT 询价流程。
+     * 非空时走基于 Router 的 Internet 询价流程。
      */
     public String zbgRegionId;
 
