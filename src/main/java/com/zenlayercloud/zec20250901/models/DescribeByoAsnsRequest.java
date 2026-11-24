@@ -27,6 +27,11 @@ public class DescribeByoAsnsRequest extends TeaModel {
     public String status;
 
     /**
+     * 根据来源类型进行过滤。
+     */
+    public String type;
+
+    /**
      * 根据资源组ID进行过滤。
      */
     public String resourceGroupId;
@@ -89,6 +94,14 @@ public class DescribeByoAsnsRequest extends TeaModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getType() {
+        return this.type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getResourceGroupId() {

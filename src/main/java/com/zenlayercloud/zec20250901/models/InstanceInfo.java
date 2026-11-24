@@ -74,8 +74,15 @@ public class InstanceInfo extends TeaModel {
 
     /**
      * 实例上挂载的数据盘信息。
+     * 不包含本地盘，本地盘见`localDisks`。
      */
     public List<DataDisk> dataDisks;
+
+    /**
+     * 实例上的本地盘信息。
+     * 本地盘随实例创建和删除，不支持卸载、扩容和快照。
+     */
+    public List<LocalDisk> localDisks;
 
     /**
      * 实例上公网IPv4列表。
@@ -264,6 +271,14 @@ public class InstanceInfo extends TeaModel {
 
     public void setDataDisks(List<DataDisk> dataDisks) {
         this.dataDisks = dataDisks;
+    }
+
+    public List<LocalDisk> getLocalDisks() {
+        return this.localDisks;
+    }
+
+    public void setLocalDisks(List<LocalDisk> localDisks) {
+        this.localDisks = localDisks;
     }
 
     public List<String> getPublicIpAddresses() {

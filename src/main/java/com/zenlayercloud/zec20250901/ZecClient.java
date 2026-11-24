@@ -634,6 +634,18 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
+         * 查询指定可用区可售的本地盘规格。本地盘只能在创建实例时购买，按固定容量档位售卖。
+         */
+    public DescribeLocalDiskSpecsResponse describeLocalDiskSpecs(DescribeLocalDiskSpecsRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "DescribeLocalDiskSpecs",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new DescribeLocalDiskSpecsResponse());
+    }
+
+        /**
          * 查询快照的详细信息。
          */
     public DescribeSnapshotsResponse describeSnapshots(DescribeSnapshotsRequest request) {
@@ -1102,7 +1114,7 @@ public class ZecClient extends AbstractClient {
     }
 
         /**
-         * 提交自带IP段（BYOIP）创建CIDR。返回RPKI/IRR校验失败列表。
+         * 提交自带IP段（BYOIP）创建CIDR。返回RPKI校验失败列表。
          */
     public CreateByoipResponse createByoip(CreateByoipRequest request) {
         Map<String, ?> rsp = super.callApi(
@@ -2275,6 +2287,30 @@ public class ZecClient extends AbstractClient {
             new RuntimeOptions()
         );
         return TeaModel.toModel(rsp, new UnassociateVpcCidrBlockResponse());
+    }
+
+        /**
+         * 为公网IPv6子网添加一个或多个IPv6网段。
+         */
+    public AssociateSubnetIpv6CidrBlocksResponse associateSubnetIpv6CidrBlocks(AssociateSubnetIpv6CidrBlocksRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "AssociateSubnetIpv6CidrBlocks",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new AssociateSubnetIpv6CidrBlocksResponse());
+    }
+
+        /**
+         * 释放子网的一个IPv6网段。
+         */
+    public UnassociateSubnetIpv6CidrBlockResponse unassociateSubnetIpv6CidrBlock(UnassociateSubnetIpv6CidrBlockRequest request) {
+        Map<String, ?> rsp = super.callApi(
+            request,
+            "UnassociateSubnetIpv6CidrBlock",
+            new RuntimeOptions()
+        );
+        return TeaModel.toModel(rsp, new UnassociateSubnetIpv6CidrBlockResponse());
     }
 
         /**

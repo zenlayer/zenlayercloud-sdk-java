@@ -32,12 +32,14 @@ public class ByoAsnInfo extends TeaModel {
     /**
      * 校验码。
      * 需要客户将其写入RIR上该ASN的aut-num对象。
+     * 来源类型为`AUTHORIZED`时为空。
      */
     public String verifyCode;
 
     /**
      * 完整的export声明语句。
      * 客户直接复制该语句写入RIR上该ASN的aut-num对象即可。
+     * 来源类型为`AUTHORIZED`时为空。
      */
     public String exportDeclaration;
 

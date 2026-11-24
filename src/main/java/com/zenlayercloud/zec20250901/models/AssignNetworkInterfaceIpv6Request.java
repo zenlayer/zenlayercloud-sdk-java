@@ -16,6 +16,21 @@ public class AssignNetworkInterfaceIpv6Request extends TeaModel {
     public String nicId;
 
     /**
+     * IPv6地址的来源网段，必须是网卡所在子网的IPv6网段之一。
+     * 如果不指定，将从子网的主网段分配。
+     * 可通过调用 **DescribeSubnets** 的`ipv6CidrBlocks`获取。
+     */
+    public String subnetIpv6CidrBlock;
+
+    /**
+     * 要添加的IPv6数量。
+     * 默认为1，单次最多50个。
+     * 单张网卡的IPv6数量上限由实例规格决定。
+     * 公网IPv6时，每个IPv6按相同的计费配置分别计费。
+     */
+    public Integer amount;
+
+    /**
      * 公网IPv6的网络计费方式。
      * 当子网的堆栈类型包括V6且为公网时，需要指定。
      */
@@ -54,6 +69,22 @@ public class AssignNetworkInterfaceIpv6Request extends TeaModel {
 
     public void setNicId(String nicId) {
         this.nicId = nicId;
+    }
+
+    public String getSubnetIpv6CidrBlock() {
+        return this.subnetIpv6CidrBlock;
+    }
+
+    public void setSubnetIpv6CidrBlock(String subnetIpv6CidrBlock) {
+        this.subnetIpv6CidrBlock = subnetIpv6CidrBlock;
+    }
+
+    public Integer getAmount() {
+        return this.amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
     }
 
     public String getInternetChargeType() {

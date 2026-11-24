@@ -68,6 +68,13 @@ public class NicInfo extends TeaModel {
     public String ipv6Cidr;
 
     /**
+     * 网卡上的全部IPv6 CIDR。
+     * `primaryIpv6`、`ipv6Cidr`取其中第一个的值。
+     * 如果堆栈类型是V4,该值为空列表。
+     */
+    public List<NicIpv6CidrBlockInfo> ipv6CidrBlocks;
+
+    /**
      * 网卡上的辅助IPv4地址。
      */
     public List<String> secondaryIpv4s;
@@ -203,6 +210,14 @@ public class NicInfo extends TeaModel {
 
     public void setIpv6Cidr(String ipv6Cidr) {
         this.ipv6Cidr = ipv6Cidr;
+    }
+
+    public List<NicIpv6CidrBlockInfo> getIpv6CidrBlocks() {
+        return this.ipv6CidrBlocks;
+    }
+
+    public void setIpv6CidrBlocks(List<NicIpv6CidrBlockInfo> ipv6CidrBlocks) {
+        this.ipv6CidrBlocks = ipv6CidrBlocks;
     }
 
     public List<String> getSecondaryIpv4s() {

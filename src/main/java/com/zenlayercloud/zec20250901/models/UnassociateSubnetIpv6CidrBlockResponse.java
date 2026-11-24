@@ -1,9 +1,9 @@
-package com.zenlayercloud.user20240529.models;
+package com.zenlayercloud.zec20250901.models;
 
 import com.aliyun.tea.TeaModel;
 
 
-public class InviteMemberResponse extends TeaModel {
+public class UnassociateSubnetIpv6CidrBlockResponse extends TeaModel {
 
 
     /**

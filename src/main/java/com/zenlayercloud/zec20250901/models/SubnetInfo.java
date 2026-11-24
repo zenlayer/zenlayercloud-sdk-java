@@ -2,6 +2,7 @@ package com.zenlayercloud.zec20250901.models;
 
 import com.aliyun.tea.TeaModel;
 
+import java.util.List;
 
 /**
  * 描述子网的基本信息。
@@ -35,7 +36,9 @@ public class SubnetInfo extends TeaModel {
     public String gatewayIpAddress;
 
     /**
-     * 子网的IPv6 CIDR地址段。当IP堆栈类型不包含IPv6时为null。
+     * 子网主IPv6网段。
+     * 全部网段见`ipv6CidrBlocks`。
+     * 当IP堆栈类型不包含IPv6时为null。
      */
     public String ipv6CidrBlock;
 
@@ -93,6 +96,13 @@ public class SubnetInfo extends TeaModel {
      * 分配给虚拟机的IPv6前缀长度。当IP堆栈类型不包含IPv6时为null。
      */
     public Integer ipv6MaskLength;
+
+    /**
+     * 子网的全部IPv6网段。
+     * `ipv6CidrBlock`、`ipv6GatewayIpAddress`、`ipv6MaskLength`取其中主网段的值。
+     * 当IP堆栈类型不包含IPv6时为空列表。
+     */
+    public List<SubnetIpv6CidrBlockInfo> ipv6CidrBlocks;
 
     public String getSubnetId() {
         return this.subnetId;
@@ -228,6 +238,14 @@ public class SubnetInfo extends TeaModel {
 
     public void setIpv6MaskLength(Integer ipv6MaskLength) {
         this.ipv6MaskLength = ipv6MaskLength;
+    }
+
+    public List<SubnetIpv6CidrBlockInfo> getIpv6CidrBlocks() {
+        return this.ipv6CidrBlocks;
+    }
+
+    public void setIpv6CidrBlocks(List<SubnetIpv6CidrBlockInfo> ipv6CidrBlocks) {
+        this.ipv6CidrBlocks = ipv6CidrBlocks;
     }
 
 }

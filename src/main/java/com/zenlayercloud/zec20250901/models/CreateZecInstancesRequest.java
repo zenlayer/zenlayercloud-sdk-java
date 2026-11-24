@@ -88,6 +88,15 @@ public class CreateZecInstancesRequest extends TeaModel {
     public List<DataDisk> dataDisks;
 
     /**
+     * 实例本地盘配置信息。
+     * 若不指定该参数，则不购买本地盘。
+     * 本地盘只能在创建实例时购买，随实例删除而删除，不支持卸载、扩容和快照。
+     * 列表中每一项对应一种规格，可通过`diskAmount`指定同规格的数量。
+     * 可售规格可通过调用 **DescribeLocalDiskSpecs** 获取，本地盘数量与容量计入团队的云盘配额。
+     */
+    public List<LocalDisk> localDisks;
+
+    /**
      * 要配置在实例主网卡的安全组ID。
      * 目前只能关联1个安全组。
      * 如果未指定，会默认用VPC关联的安全组。
@@ -310,6 +319,14 @@ public class CreateZecInstancesRequest extends TeaModel {
 
     public void setDataDisks(List<DataDisk> dataDisks) {
         this.dataDisks = dataDisks;
+    }
+
+    public List<LocalDisk> getLocalDisks() {
+        return this.localDisks;
+    }
+
+    public void setLocalDisks(List<LocalDisk> localDisks) {
+        this.localDisks = localDisks;
     }
 
     public String getSecurityGroupId() {

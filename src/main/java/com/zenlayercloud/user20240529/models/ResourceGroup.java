@@ -4,7 +4,7 @@ import com.aliyun.tea.TeaModel;
 
 
 /**
- * 描述资源组的信息。
+ * 描述资源组的响应信息。包括资源组ID，名称等。
  */
 public class ResourceGroup extends TeaModel {
 

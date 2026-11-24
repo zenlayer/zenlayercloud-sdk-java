@@ -58,42 +58,6 @@ public class UserClient extends AbstractClient {
     }
 
         /**
-         * 邀请单个成员信息。
-         */
-    public InviteMemberResponse inviteMember(InviteMemberRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "InviteMember",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new InviteMemberResponse());
-    }
-
-        /**
-         * 删除一个成员信息。
-         */
-    public DeleteMemberResponse deleteMember(DeleteMemberRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "DeleteMember",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new DeleteMemberResponse());
-    }
-
-        /**
-         * 重新发送一个成员信息的邮件。
-         */
-    public SendInviteMemberEmailResponse sendInviteMemberEmail(SendInviteMemberEmailRequest request) {
-        Map<String, ?> rsp = super.callApi(
-            request,
-            "SendInviteMemberEmail",
-            new RuntimeOptions()
-        );
-        return TeaModel.toModel(rsp, new SendInviteMemberEmailResponse());
-    }
-
-        /**
          * 查询成员组列表。用户可以根据名称信息来搜索成员组信息。
          */
     public DescribeMemberGroupsResponse describeMemberGroups(DescribeMemberGroupsRequest request) {

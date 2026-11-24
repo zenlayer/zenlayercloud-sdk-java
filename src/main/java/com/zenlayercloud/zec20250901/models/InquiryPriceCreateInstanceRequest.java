@@ -73,6 +73,13 @@ public class InquiryPriceCreateInstanceRequest extends TeaModel {
      */
     public List<DataDisk> dataDisks;
 
+    /**
+     * 本地盘相关信息。
+     * 若不指定该参数，则不询价本地盘。
+     * 可售规格可通过调用 **DescribeLocalDiskSpecs** 获取。
+     */
+    public List<LocalDisk> localDisks;
+
     public String getZoneId() {
         return this.zoneId;
     }
@@ -161,6 +168,14 @@ public class InquiryPriceCreateInstanceRequest extends TeaModel {
 
     public void setDataDisks(List<DataDisk> dataDisks) {
         this.dataDisks = dataDisks;
+    }
+
+    public List<LocalDisk> getLocalDisks() {
+        return this.localDisks;
+    }
+
+    public void setLocalDisks(List<LocalDisk> localDisks) {
+        this.localDisks = localDisks;
     }
 
 }

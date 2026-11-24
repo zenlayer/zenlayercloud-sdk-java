@@ -58,9 +58,9 @@ public class SubnetCreateItem extends TeaModel {
 
     /**
      * 分配给虚拟机（VM）的IPv6 CIDR前缀的大小。
-     * 该参数必须与`ipv6CidrBlockId`参数配合使用。
      * 当未显式传递时，默认值为96。
-     * 最小必须大于或等于指定`ipv6CidrBlockId`的前缀，最大不能超过96。
+     * 最小必须大于或等于子网IPv6网段的前缀（指定`ipv6CidrBlockId`时为该CIDR的子网前缀；内网IPv6或从系统默认IP池分配时为64），最大不能超过96。
+     * 设置后不支持修改。
      */
     public Integer ipv6MaskLength;
 

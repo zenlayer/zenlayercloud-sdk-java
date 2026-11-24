@@ -72,6 +72,12 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
      */
     public List<PriceItem> dataDiskPrices;
 
+    /**
+     * 本地盘的价格明细，与请求中的`localDisks`按顺序一一对应。
+     * 仅当请求指定`localDisks`时返回。
+     */
+    public List<PriceItem> localDiskPrices;
+
     public String getRequestId() {
         return this.requestId;
     }
@@ -166,6 +172,14 @@ public class InquiryPriceCreateInstanceResponse extends TeaModel {
 
     public void setDataDiskPrices(List<PriceItem> dataDiskPrices) {
         this.dataDiskPrices = dataDiskPrices;
+    }
+
+    public List<PriceItem> getLocalDiskPrices() {
+        return this.localDiskPrices;
+    }
+
+    public void setLocalDiskPrices(List<PriceItem> localDiskPrices) {
+        this.localDiskPrices = localDiskPrices;
     }
 
 }

@@ -41,8 +41,15 @@ public class DiskInfo extends TeaModel {
 
     /**
      * 云盘的类别。
+     * 本地盘（`diskType`为`LOCAL`）不返回该字段，种类见`localDiskCategory`。
      */
     public String diskCategory;
+
+    /**
+     * 本地盘种类。
+     * 仅本地盘（`diskType`为`LOCAL`）返回。
+     */
+    public String localDiskCategory;
 
     /**
      * 云盘的大小。
@@ -170,6 +177,14 @@ public class DiskInfo extends TeaModel {
 
     public void setDiskCategory(String diskCategory) {
         this.diskCategory = diskCategory;
+    }
+
+    public String getLocalDiskCategory() {
+        return this.localDiskCategory;
+    }
+
+    public void setLocalDiskCategory(String localDiskCategory) {
+        this.localDiskCategory = localDiskCategory;
     }
 
     public Integer getDiskSize() {

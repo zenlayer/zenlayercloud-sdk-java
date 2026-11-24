@@ -82,7 +82,7 @@ public class Permission extends TeaModel {
 
     /**
      * 权限类别。
-     * 成员：SELF，成员组：USER_GROUP
+     * 成员：BY_SELF，成员组：BY_MEMBER_GROUP
      */
     public String associated;
 

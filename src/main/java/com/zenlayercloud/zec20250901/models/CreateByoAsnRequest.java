@@ -11,7 +11,7 @@ public class CreateByoAsnRequest extends TeaModel {
 
     /**
      * 待接入的公网ASN号。
-     * 支持2字节与4字节ASN，最大值4294967295。
+     * 支持2字节与4字节ASN，取值范围1~4294967295。
      */
     public Long asn;
 

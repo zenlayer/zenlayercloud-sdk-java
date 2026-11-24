@@ -17,8 +17,15 @@ public class DiskWithInstance extends TeaModel {
 
     /**
      * 随机器创建的数据盘ID集合。
+     * 不包含本地盘。
      */
     public List<String> diskIdSet;
+
+    /**
+     * 随机器创建的本地盘ID集合。
+     * 如果请求中没有指定本地盘，返回空数组。
+     */
+    public List<String> localDiskIdSet;
 
     public String getInstanceId() {
         return this.instanceId;
@@ -34,6 +41,14 @@ public class DiskWithInstance extends TeaModel {
 
     public void setDiskIdSet(List<String> diskIdSet) {
         this.diskIdSet = diskIdSet;
+    }
+
+    public List<String> getLocalDiskIdSet() {
+        return this.localDiskIdSet;
+    }
+
+    public void setLocalDiskIdSet(List<String> localDiskIdSet) {
+        this.localDiskIdSet = localDiskIdSet;
     }
 
 }
